@@ -10,6 +10,7 @@ Você deve fazer um projeto que tenha os seguintes pacotes:
 * **controller:** o pacote que controla o fluxo de informação entre o view, e a lógica do programa
 * **teste:** o pacote para testar cada parte do programa separadamente
 
+
 ## Exercício 1 (Entidade)
 
 No pacote **entidades**, faça uma classe que represente o objeto filme, com os seguintes elementos:
@@ -19,3 +20,8 @@ No pacote **entidades**, faça uma classe que represente o objeto filme, com os 
 No pacote **testes** faça uma classe chamada **TesteFilme** com um método **main** que
 * cria e imprime alguns filmes
 * cria e imprime uma lista de filmes
+
+
+## Exercício 2 (Dao)
+
+Faça uma classe que extende a seguinte interface:
