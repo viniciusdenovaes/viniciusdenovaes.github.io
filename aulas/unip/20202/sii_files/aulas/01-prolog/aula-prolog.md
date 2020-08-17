@@ -15,3 +15,5 @@ Diferente da paradigama da liguagem procedural, onde se escreve cada comando do 
 na linguagem declarativa o problema é *declarado* através de uma descrição do problema usando fatos e regras de dedução.
 
 Definidos os fatos e regras, podemos fazer perguntas para o programa, obtendo uma resposta, mais de uma resposta, ou até nenhuma resposta.
+
+## Fatos e Regras
