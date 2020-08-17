@@ -41,10 +41,10 @@ A sua classe **DaoCsv** deve ler e salvar a coleção de filmes em um arquivo no
 Para um teste inicial você pode usar o seguinte arquivo:
 
 ```csv
-E.T., 1982
-Amistad, 1997
-Indiana Jones, 1984
-Jaws, 1975
+E.T.,1982
+Amistad,1997
+Indiana Jones,1984
+Jaws,1975
 ```
 
 Faça uma classe chamada **TesteDao** com um método **main** que leia os files na memória, adicione um outro filme, e guarde a nova coleção de filmes na memória.
