@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Aula 03 - Layouts</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Vinicius de Novaes Pereira</div>
+<div class="menu-item"><a href="../../../../../index.html" class="current">home</a></div>
+<div class="menu-category">Aulas</div>
+<div class="menu-item"><a href="../../../../../class_unip.html">Unip</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Aula 03 - Layouts</h1>
+<div id="subtitle"><a href="../../../../../index.html">Vinicius de Novaes Pereira</a></div>
+</div>
+<p>Esta aula é uma lista, não exaustiva, de alguns administradores de layouts que podem ser usados no Swing.</p>
+<p>Esta aula é baseada no tutorial oficial da Oracle sobre layouts: <a href="https://docs.oracle.com/javase/tutorial/uiswing/layout/visual.html">https://docs.oracle.com/javase/tutorial/uiswing/layout/visual.html</a></p>
+<p>Para configurar o layout de um container você precisa usar o método <tt>setLayout(LayoutManager)</tt> com algumas variações.</p>
+<p>O layout padrão de um JFrame é o BorderLayout, o do JPanel é o FlowLayout. Mas, apesar de existir um padrão, é recomendável que você sempre escolha o layout.</p>
+<h2><a href="https://docs.oracle.com/javase/tutorial/uiswing/layout/border.html">BorderLayout</a></h2>
+<p>O <a href="https://docs.oracle.com/javase/tutorial/uiswing/layout/border.html">BorderLayout</a> organiza o layout do seu container em 5 partes, como visto na figura abaixo.</p>
+<table class="imgtable"><tr><td>
+<img src="BorderLayoutDemo.png" alt="" />&nbsp;</td>
+<td align="left"></td></tr></table>
+<p>Para setar o layout use o método Container.setLayout(new BorderLayout())</p>
+<ul>
+<li><p>Para inserir um <tt>component</tt> na parte <b>central</b> do container use o método <tt>add(component, BorderLayout.CENTER)</tt></p>
+</li>
+<li><p>Para inserir um <tt>component</tt> na parte <b>norte</b> do container use o método <tt>add(component, BorderLayout.PAGE_START)</tt></p>
+</li>
+<li><p>Para inserir um <tt>component</tt> na parte <b>sul</b> do container use o método <tt>add(component, BorderLayout.PAGE_END)</tt></p>
+</li>
+<li><p>Para inserir um <tt>component</tt> na parte <b>leste</b> do container use o método <tt>add(component, BorderLayout.LINE_START)</tt></p>
+</li>
+<li><p>Para inserir um <tt>component</tt> na parte <b>oeste</b> do container use o método <tt>add(component, BorderLayout.LINE_END)</tt></p>
+</li>
+</ul>
+<p>Teremos também o seguinte constructor:</p>
+<ul>
+<li><p><tt>BorderLayout(int horizontalGap, int verticalGap)</tt>: Define gaps entre os componentes</p>
+</li>
+</ul>
+<p>Teremos também os seguintes métodos mais comuns:</p>
+<ul>
+<li><p><tt>setHgap(int)</tt>: Define um espaço horizontal entre os componentes</p>
+</li>
+<li><p><tt>setVgap(int)</tt>: Define um espaço vertical entre os componentes</p>
+</li>
+</ul>
+<h2><a href="https://docs.oracle.com/javase/tutorial/uiswing/layout/flow.html">FlowLayout</a></h2>
+<p>O <a href="https://docs.oracle.com/javase/tutorial/uiswing/layout/flow.html">FlowLayout</a> organiza os componentes da esquerda para a direita, de cima para baixo. Os componentes podem ainda ser centralizados (<b>CENTER</b>), alinhados à esquerda (<b>LEADING</b>) ou alinhados à direita (<b>TRAILING</b>).</p>
+<p>Para configurar um container com o FlowLayout use o método <tt>setLayout(new FlowLayout)</tt>.</p>
+<p>Para adicionar um <tt>componente</tt> no container use o método <tt>add(componente)</tt></p>
+<p>Teremos os seguintes constructors:</p>
+<ul>
+<li><p><tt>FlowLayout()</tt>: Define um FlowLayout com alinhamento central, horizontal e vertical gap de 5 pixels</p>
+</li>
+<li><p><tt>FlowLayout(int align)</tt>: Define um FlowLayout com o alinhamento indicado, horizontal e vertical gap de 5 pixels. Os alinhamentos poderão ser: </p>
+<ul>
+<li><p><tt>FlowLayout.CENTER</tt>: Para um alinhamento centralizado</p>
+</li>
+<li><p><tt>FlowLayout.LEADING</tt>: Para um alinhamento alinhado à esquerda</p>
+</li>
+<li><p><tt>FlowLayout.TRAILING</tt>: Para um alinhamento alinhado à direita</p>
+</li></ul>
+</li>
+<li><p><tt>FlowLayout(int align, int hgap, int vgap)</tt>: Define um FlowLayout com o alinhamento indicado; e horizontal e vertical gaps indicados por hgap e vgap respectivamente.</p>
+</li>
+</ul>
+<h2><a href="https://docs.oracle.com/javase/tutorial/uiswing/layout/box.html">BoxLayout</a></h2>
+<p>O <a href="https://docs.oracle.com/javase/tutorial/uiswing/layout/box.html">BoxLayout</a> empilha componentes de cima para baixo (PAGE_AXIS) ou da esquerda para a direita (LINE_AXIS). 
+Além disso tem a opção de introduzir elementos invisíveis para complementar a sua interface.</p>
+<p>Teremos <b>um</b> constructor:</p>
+<ul>
+<li><p><tt>BoxLayout(Container target, int axis)</tt>: 
+Define um BoxLayout no <tt>Container target</tt>; 
+com direção da esquerda para a direita com <tt>axis = BoxLayout.LINE_AXIS</tt>, ou direção de cima para baixo com <tt>axis = BoxLayout.PAGE_AXIS</tt>.</p>
+</li>
+</ul>
+<p>Também temos a possibilidade de incluir elementos invisíveis para complementar a interface: </p>
+<p><table border="1" summary="Details about creating invisible components with Box or Box.Filler">
+<caption align="bottom">Tabela retirada do <a href="https://docs.oracle.com/javase/tutorial/uiswing/layout/box.html">Tutorial da Oracle</a></caption>
+<tbody>
+<tr>
+<th>Tipo</th>
+<th>Forma</th>
+<th>Como Criar</th>
+</tr>
+<tr>
+<td>rigid area</td>
+<td>
+<img src="7fill.gif" width="42" height="42"><br></td>
+<td><code>Box.createRigidArea(size)</code></td>
+</tr>
+<tr>
+<td>glue, horizontal</td>
+<td>
+<img src="9fill.gif" width="60" height="13"><br></td>
+<td><code>Box.createHorizontalGlue()</code></td>
+</tr>
+<tr>
+<td>glue, vertical</td>
+<td>
+<img src="8fill.gif" width="13" height="60"><br></td>
+<td><code>Box.createVerticalGlue()</code></td>
+</tr>
+</tbody>
+</table>
+</p>
+<h2><a href="https://docs.oracle.com/javase/tutorial/uiswing/layout/grid.html">GridLayout</a></h2>
+<p>O <a href="https://docs.oracle.com/javase/tutorial/uiswing/layout/grid.html">GridLayout</a> organiza os componentes em forma de grade, da esquerda para a direita e de cima para baixo (nesta ordem).</p>
+<p>No constructor deve ser dado a quantidade de linha e colunas que a interface deve ter.
+Uma, mas não ambos valores podem ser zero, o que faz com que qualquer quantidade de objetos possam ser postos nesta linha ou coluna.</p>
+<p>Os componentes incluídos terão todos o mesmo tamanho.</p>
+<p>Teremos os seguintes constructors:</p>
+<ul>
+<li><p><tt>GridLayout(int rows, int cols)</tt>: A interface terá <tt>rows</tt> linhas e <tt>cols</tt> colunas;</p>
+</li>
+<li><p><tt>GridLayout(int rows, int cols, int hgap, int vgap)</tt>: Teremos um espaço horizontal de <tt>hgap</tt> pixels e um espaço vertical de <tt>vgap</tt> pixels entre os elementos.</p>
+</li>
+</ul>
+<h2><a href="https://docs.oracle.com/javase/tutorial/uiswing/layout/gridbag.html">GridBagLayout</a></h2>
+<p>O <a href="https://docs.oracle.com/javase/tutorial/uiswing/layout/gridbag.html">GridBagLayout</a> organiza os elementos em grade de uma forma mais flexível que o GridLayout.</p>
+<p>Quando um elemento é adicionado ao container deve-se passar um GridBagConstrain com algumas configurações:</p>
+<ul>
+<li><p>gridx, gridy: Especifica a linha e coluna que o componente irá se originar.</p>
+</li>
+<li><p>gridwidth, gridheight: Especifica o tamanho de linhas e colunas que o componente irá ocupar</p>
+</li>
+<li><p>fill: O componente irá preencher o espaço total da linha (<tt>fill = GridBagConstraints.HORIZONTAL</tt>), coluna (<tt>fill = GridBagConstraints.VERTICAL</tt>); ou ambos (<tt>fill = GridBagConstraints.BOTH</tt>).</p>
+</li>
+<li><p>ipadx, ipady: Adiciona tamanho ao componente</p>
+</li>
+<li><p>insets: Adiciona um espaço externo que o componente deve ocupar, o valor deve ser dado pelo objeto <tt>new Insets(int top, int left, int bottom, int right)</tt></p>
+</li>
+<li><p>weightx, weighty: Especifica, comparativamente, o quanto o componente deve mudar de tamanho caso o tamanho da tela seja alterado, deve receber valores de 0.0 a 1.0.</p>
+</li>
+<li><p>anchor: Especifica on o componente deve se alinhar</p>
+</li>
+</ul>
+<p><table summary="" cellpadding="10">
+<tbody><tr>
+<td>FIRST_LINE_START</td>
+<td>PAGE_START</td>
+<td align="right">FIRST_LINE_END</td>
+</tr>
+<tr>
+<td>LINE_START</td>
+<td align="center">CENTER</td>
+<td align="right">LINE_END</td>
+</tr>
+<tr>
+<td>LAST_LINE_START</td>
+<td>PAGE_END</td>
+<td align="right">LAST_LINE_END</td>
+</tr>
+</tbody></table></p>
+<div id="footer">
+<div id="footer-text">
+Page generated 2019-08-27 15:44:12 -03, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>
