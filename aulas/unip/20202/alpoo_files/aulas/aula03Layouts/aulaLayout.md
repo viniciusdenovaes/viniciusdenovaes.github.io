@@ -15,11 +15,11 @@ O [BorderLayout](https://docs.oracle.com/javase/tutorial/uiswing/layout/border.h
 ![](BorderLayoutDemo.png)
 
 Para setar o layout use o método Container.setLayout(new BorderLayout())
- - Para inserir um `component` na parte *central* do container use o método `add(component, BorderLayout.CENTER)`
- - Para inserir um `component` na parte *norte* do container use o método `add(component, BorderLayout.PAGE_START)`
- - Para inserir um `component` na parte *sul* do container use o método `add(component, BorderLayout.PAGE_END)`
- - Para inserir um `component` na parte *leste* do container use o método `add(component, BorderLayout.LINE_START)`
- - Para inserir um `component` na parte *oeste* do container use o método `add(component, BorderLayout.LINE_END)`
+ - Para inserir um `component` na parte **central** do container use o método `add(component, BorderLayout.CENTER)`
+ - Para inserir um `component` na parte **norte** do container use o método `add(component, BorderLayout.PAGE_START)`
+ - Para inserir um `component` na parte **sul** do container use o método `add(component, BorderLayout.PAGE_END)`
+ - Para inserir um `component` na parte **leste** do container use o método `add(component, BorderLayout.LINE_START)`
+ - Para inserir um `component` na parte **oeste** do container use o método `add(component, BorderLayout.LINE_END)`
 
 
 Teremos também o seguinte constructor:

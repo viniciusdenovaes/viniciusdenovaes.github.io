@@ -6,16 +6,15 @@ Nesta aula vamos aprender a fazer uma conexão com um banco de dados relacional 
 Com a conexão, vamos aprender a atualizar e fazer pesquisa.
 
 
-== Conexão
+## Conexão
 
-Para fazer uma conexão com o Baco de Dados é preciso baixar o driver do banco de dados que será usado, neste caso usaremos o [https://jdbc.postgresql.org/download.html driver do Postgresql]
+Para fazer uma conexão com o Baco de Dados é preciso baixar o driver do banco de dados que será usado, neste caso usaremos o [driver do Postgresql](https://jdbc.postgresql.org/download.html)
 
-Para criar uma +Connection+ usaremos o método +DriverManager.getConnection(URL, USER, PASSWORD)+ que receberá, a url do banco de dados, o nome de usuário e a senha.
+Para criar uma `Connection` usaremos o método `DriverManager.getConnection(URL, USER, PASSWORD)` que receberá, a url do banco de dados, o nome de usuário e a senha.
 
 Por exemplo, para conectar ao banco de dados "NomeDoBancoDeDados", com o usuário "postgres", e a senha "123456".
 
-~~~
-{}{}
+```java
 public class TesteJDBC {
 
 	public final static String DATABASE = "Teste";
@@ -33,24 +32,21 @@ public class TesteJDBC {
 
 	}
 }
-~~~
+```
 
 
-== Atualização
+## Atualização
 
-Para fazer uma atualização usaremos o método +executeUpdate(String update)+ da classe +Statement+.
-No lugar de +update+ é preciso colocar o comando da atualização.
+Para fazer uma atualização usaremos o método `executeUpdate(String update)` da classe `Statement`.
+No lugar de `update` é preciso colocar o comando da atualização.
 
-Para criar um +Statement+ é preciso criar um pela conexão com o método +connection.createStatement()+.
+Para criar um `Statement` é preciso criar um pela conexão com o método `connection.createStatement()`.
 
 Por exemplo, para adicionar um aluno com ra "112" e nome "Fulano Sicrano" na tabela abaixo
 
-~~~
-{}{img_left}{tabelaAlunos.png}{}{}{}{}
-~~~
+![Tabela de Alunos](tabelaAlunos.png)
 
-~~~
-{}{}
+```java
 	static public void addAluno() {
 
 		final String update = "INSERT INTO alunos VALUES ('112', 'Fulano Sicrano')";
@@ -67,27 +63,26 @@ Por exemplo, para adicionar um aluno com ra "112" e nome "Fulano Sicrano" na tab
 		}
 
 	}
-~~~
+```
 
-== Pesquisa
+## Pesquisa
 
-Para fazer uma pesquisa usaremos o método +executeQuery(String query)+ da classe +Statement+.
-No lugar de +query+ é preciso colocar o comando da pesquisa.
+Para fazer uma pesquisa usaremos o método `executeQuery(String query)` da classe `Statement`.
+No lugar de `query` é preciso colocar o comando da pesquisa.
 
-O método +executeQuery+ retornará um objeto que implementa a interface +ResultSet+.
+O método `executeQuery` retornará um objeto que implementa a interface `ResultSet`.
 
-Para iterar sobre o +ResultSet+ usaremos o método +next()+.
+Para iterar sobre o `ResultSet` usaremos o método `next()`.
 
-Para receber o valor da i-ésima coluna usaremos o método +getXxx(int i)+,
-ou podemos receber o valor da coluna de nome "nome" usando o método +getXxx(String nome)+.
+Para receber o valor da i-ésima coluna usaremos o método `getXxx(int i)`,
+ou podemos receber o valor da coluna de nome "nome" usando o método `getXxx(String nome)`.
 
-Nestes casos +Xxx+ deve ser substituído por
- - +String+ caso o valor seja uma string,
- - +Int+ caso seja um número inteiro, e
- - +Double+ caso seja um número real.
+Nestes casos `Xxx` deve ser substituído por
+ - `String` caso o valor seja uma string,
+ - `Int` caso seja um número inteiro, e
+ - `Double` caso seja um número real.
 
-~~~
-{}{}
+```java
 	static public void listaAlunos() {
 
 		final String querry = "SELECT * FROM alunos";
@@ -105,30 +100,29 @@ Nestes casos +Xxx+ deve ser substituído por
 		}
 
 	}
-~~~
+```
 
 
 
-== PreparedStatement (*{{<a style="color:red;">IMPORTANTE!!!</a>}}*)
+## PreparedStatement (*<a style="color:red;">IMPORTANTE!!!</a>*)
 
 Raramente iremos precisar fazer uma atualização ou uma busca usando argumentos pré-programados.
 Normalmente é o usuário final quem deve fornecer quais argumentos usar na nossa busca ou atualização.
 
-Neste caso *nunca* devemos concatenar uma String de um comando com uma String fornecida pelo usuário.
-Sob o risco do sistema sofrer um [https://en.wikipedia.org/wiki/SQL_injection /*injection atack*/].
+Neste caso **nunca** devemos concatenar uma String de um comando com uma String fornecida pelo usuário.
+Sob o risco do sistema sofrer um [_**injection atack**_](https://en.wikipedia.org/wiki/SQL_injection).
 
-O recomendável para esta situação é usar a classe +PreparedStatement+
+O recomendável para esta situação é usar a classe `PreparedStatement`
 
-Um objeto que implementa a interface +PreparedStatement+ é retornado pelo método +connection.prepareStatement(String query)+.
-A +String query+ que o método recebe deve ter o símbolo +'?'+ no lugar onde o argumento será inserido no comando SQL.
+Um objeto que implementa a interface `PreparedStatement` é retornado pelo método `connection.prepareStatement(String query)`.
+A `String query` que o método recebe deve ter o símbolo `'?'` no lugar onde o argumento será inserido no comando SQL.
 
-Para inserir um valor na +query+ é preciso usar o método +setXxx(int i, Xxx x)+;
-onde +Xxx+ será +String+, +Double+ ou +Int+;
-+i+ para indicar qual i-ésimo '?' será substituído;
-+x+ com o valor que deve entrar no lugar.
+Para inserir um valor na `query` é preciso usar o método `setXxx(int i, Xxx x)`;
+onde `Xxx` será `String`, `Double` ou `Int`;
+`i` para indicar qual i-ésimo '?' será substituído;
+`x` com o valor que deve entrar no lugar.
 
-~~~
-{}{}
+```java
 	static public void addAluno(String ra, String nome) {
 
 		final String query = "INSERT INTO alunos VALUES (?, ?)";
@@ -148,11 +142,10 @@ onde +Xxx+ será +String+, +Double+ ou +Int+;
 			e.printStackTrace();
 		}
 	}
-~~~
+```
 
 
-~~~
-{}{}
+```java
 
 	static public void buscaAluno(String nome) {
 
@@ -172,4 +165,4 @@ onde +Xxx+ será +String+, +Double+ ou +Int+;
 		}
 
 	}
-~~~
+```
