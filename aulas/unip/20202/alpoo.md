@@ -17,9 +17,13 @@
 * [Aula 03: Layouts](alpoo_files/aulas/aula03Layouts/aulaLayout.md)
 * [Aula 04: JDBC](alpoo_files/aulas/aula04JDBC/aulaJDBC.md)
 
-## Laboratórios
+## Laboratórios Diurno
 
 * [Laboratório 00: Revisão](alpoo_files/labs/00/lab00.md)
+
+## Laboratórios Noturno
+
+* [Laboratório 00: Revisão](alpoo_files/noturno/labs/00/lab00.md)
 
 ## Perguntas:
 
