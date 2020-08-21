@@ -20,3 +20,12 @@
 ## Laboratórios
 
 * [Laboratório 00: Revisão](alpoo_files/labs/00/lab00.md)
+
+## Perguntas:
+
+* O Android Studio é como se fosse o React ou o Vue no Java?
+* Qual é a diferença entre API e biblioteca?
+
+## Referências
+
+* Core Java (Horstmann, Cay)

@@ -21,9 +21,9 @@ Para configurar o tamanho e localização da janela os seguintes métodos podem 
 ### Como configurar o comportamento de fechar
 
 Uma das maneira de configurar o comportamento da janela quando o botão de fechar é clicado é através do método `setDefaultCloseOperation(int operation);`, a operação especificada pode ser uma entre:
- - `JFrame.EXIT_ON_CLOSE`: Para o programa
+ - `JFrame.EXIT_ON_CLOSE`: Termina o programa
  - `JFrame.HIDE_ON_CLOSE`: Esconde a janela, porém o programa continua funcinando (é a opção padrão)
- - `JFrame.DISPOSE_ON_CLOSE`: Destrói a janela, caso todas janela sejam destruídas o programa para
+ - `JFrame.DISPOSE_ON_CLOSE`: Destrói a janela, caso todas janela sejam destruídas o programa termina
  - `JFrame.DO_NOTHING_ON_CLOSE`: Ignora o botão de fechar
 
 Existem outas formas mais interessantes de configurar o comportamento usando `WindowListener`, sendo possível chamar qualquer método quando o usuário tentar fechar a janela.
