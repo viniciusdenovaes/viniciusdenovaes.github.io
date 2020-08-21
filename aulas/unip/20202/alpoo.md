@@ -21,7 +21,7 @@
 
 * [Laboratório 00: Revisão](alpoo_files/labs/00/lab00.md)
 
-## Laboratórios Noturno
+## Laboratórios Noturno (Turma coordenada: Elio, Hermano, Vitor, Vinicius)
 
 * [Laboratório 00: Revisão](alpoo_files/noturno/labs/00/lab00.md)
 
