@@ -1,5 +1,15 @@
 # ALPOO
 
+## Ementa do Curso
+
+* Ferramentas usadas
+  * Interface gráfica com usuário final: awt e swing
+  * Manipulação de dados persistentes: JDBC (Postgree)
+* Desgin Patterns (Desgin de arquitetura)
+  * MVC (Model View Controller)
+  * DAO (Data Access Object)
+
+
 ## Aulas
 
 * [Aula 01: JFrame](alpoo_files/aulas/aula01JFrame/aulaJFrame.md)
