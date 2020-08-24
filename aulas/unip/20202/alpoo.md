@@ -20,6 +20,7 @@
 ## Laboratórios Diurno
 
 * [Laboratório 00: Revisão](alpoo_files/labs/00/lab00.md)
+* [Laboratório 01: JFrame](alpoo_files/labs/01/lab01.md)
 
 ## Laboratórios Noturno (Turma coordenada: Elio, Hermano, Vitor, Vinicius)
 
