@@ -18,19 +18,11 @@
 * [Aula 04: Layouts](alpoo_files/aulas/aula04Layouts/aulaLayout.md)
 * [Aula 05: JDBC](alpoo_files/aulas/aula05JDBC/aulaJDBC.md)
 
-## Laboratórios Diurno
+## Laboratórios
 
 * [Laboratório 00: Revisão](alpoo_files/labs/00/lab00.md)
 * [Laboratório 01: JFrame](alpoo_files/labs/01/lab01.md)
 
-## Laboratórios Noturno (Turma coordenada: Elio, Hermano, Vitor, Vinicius)
-
-* [Laboratório 00: Revisão](alpoo_files/noturno/labs/00/lab00.md)
-
-## Perguntas:
-
-* O Android Studio é como se fosse o React ou o Vue no Java?
-* Qual é a diferença entre API e biblioteca?
 
 ## Referências
 
