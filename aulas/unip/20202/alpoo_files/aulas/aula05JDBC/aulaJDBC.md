@@ -1,4 +1,4 @@
-# Aula 04 - JDBC
+# Aula 05 - JDBC
 
 
 Nesta aula vamos aprender a fazer uma conexão com um banco de dados relacional (PostgreSQL).
