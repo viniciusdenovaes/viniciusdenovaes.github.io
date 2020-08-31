@@ -1,0 +1,534 @@
+<!DOCTYPE html><html><head>
+      <title>aula-prolog</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////home/vinicius/.atom/packages/markdown-preview-enhanced/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="prolog">Prolog</h1>
+
+<h2 class="mume-header" id="como-instalar-prolog">Como instalar prolog</h2>
+
+<p>O programa que usarei para interpretar a linguagem prolog ser&#xE1; o <a href="https://www.swi-prolog.org/">swi-prolog</a>.</p>
+<p>Este programa pode ser facilmente instalado no Windows, Linux e Mac.</p>
+<p>Basta acessar a p&#xE1;gina de downloads (<a href="https://www.swi-prolog.org/download/stable">https://www.swi-prolog.org/download/stable</a>) e escolher o programa para o seu sistema operacional.</p>
+<h2 class="mume-header" id="introdu%C3%A7%C3%A3o">Introdu&#xE7;&#xE3;o</h2>
+
+<p>Prolog usa o paradigma de linguagem declarativa.<br>
+Diferente da paradigama da liguagem procedural, onde se escreve cada comando do que o computador deve fazer;<br>
+na linguagem declarativa o problema &#xE9; <em>declarado</em> atrav&#xE9;s de uma descri&#xE7;&#xE3;o do problema usando fatos e regras de dedu&#xE7;&#xE3;o.</p>
+<p>Definidos os fatos e regras, podemos fazer perguntas para o programa, obtendo uma resposta, mais de uma resposta, ou at&#xE9; nenhuma resposta.</p>
+<h2 class="mume-header" id="fatos-e-regras">Fatos e Regras</h2>
+
+<p>Para entendermos o que s&#xE3;o fatos e regras vamos considerar o seguinte cen&#xE1;rio:</p>
+<h6 class="mume-header" id="cen%C3%A1rio-1">Cen&#xE1;rio 1</h6>
+
+<ul>
+<li>Maria &#xE9; legal</li>
+<li>Jo&#xE3;o &#xE9; legal</li>
+</ul>
+<p>Podemos representar este cen&#xE1;rio com os fatos</p>
+<pre data-role="codeBlock" data-info="Prolog" class="language-prolog"><span class="token function">legal</span><span class="token punctuation">(</span>maria<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">legal</span><span class="token punctuation">(</span>joao<span class="token punctuation">)</span><span class="token operator">.</span>
+</pre><p>A sintaxe <code>f(x)</code> denota um fato <code>f</code> sobre o sujeito x<code>. Chamamos a fun&#xE7;&#xE3;o</code>f` de predicado.</p>
+<p>Podemos ent&#xE3;o perguntar se Maria &#xE9; legal:</p>
+<pre data-role="codeBlock" data-info="Prolog" class="language-prolog"><span class="token operator">?-</span> <span class="token function">legal</span><span class="token punctuation">(</span>maria<span class="token punctuation">)</span><span class="token operator">.</span>
+true<span class="token operator">.</span>
+</pre><h6 class="mume-header" id="cen%C3%A1rio-2">Cen&#xE1;rio 2</h6>
+
+<ul>
+<li>Maria gosta de Jo&#xE3;o</li>
+<li>Jo&#xE3;o gosta de Maria</li>
+</ul>
+<p>Podemos representar este cen&#xE1;rio com os fatos</p>
+<pre data-role="codeBlock" data-info="Prolog" class="language-prolog"><span class="token function">gosta</span><span class="token punctuation">(</span>maria<span class="token punctuation">,</span> joao<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">gosta</span><span class="token punctuation">(</span>joao<span class="token punctuation">,</span> maria<span class="token punctuation">)</span><span class="token operator">.</span>
+</pre><p>Da mesma forma que podemos representar um fato com um sujeito, tamb&#xE9;m podemos representar com mais de um: <code>f(x, y). Neste caso chamamos a fun&#xE7;&#xE3;o</code>f` de rela&#xE7;&#xE3;o.</p>
+<p>Podemos ent&#xE3;o perguntar se Maria gosta de Jo&#xE3;o:</p>
+<pre data-role="codeBlock" data-info="Prolog" class="language-prolog"><span class="token operator">?-</span> <span class="token function">gosta</span><span class="token punctuation">(</span>maria<span class="token punctuation">,</span> joao<span class="token punctuation">)</span><span class="token operator">.</span>
+true<span class="token operator">.</span>
+</pre><h6 class="mume-header" id="cen%C3%A1rio-3">Cen&#xE1;rio 3</h6>
+
+<ul>
+<li>Maria &#xE9; legal</li>
+<li>Jo&#xE3;o &#xE9; legal</li>
+<li>Maria gosta de Jo&#xE3;o se Jo&#xE3;o &#xE9; legal</li>
+</ul>
+<p>Podemos representar este cen&#xE1;rio com os fatos e uma regra:</p>
+<pre data-role="codeBlock" data-info="Prolog" class="language-prolog"><span class="token function">legal</span><span class="token punctuation">(</span>maria<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">legal</span><span class="token punctuation">(</span>joao<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">gosta</span><span class="token punctuation">(</span>maria<span class="token punctuation">,</span> joao<span class="token punctuation">)</span> <span class="token operator">:-</span> <span class="token function">legal</span><span class="token punctuation">(</span>joao<span class="token punctuation">)</span><span class="token operator">.</span>
+</pre><p>Uma regra &#xE9; denotada pelo s&#xED;mbolo <code>a :- b</code> com o sentido de &quot;<strong>a</strong> &#xE9; verdade se <strong>b</strong> &#xE9; verdade&quot;.</p>
+<p>Podemos ent&#xE3;o perguntar se Maria gosta de Jo&#xE3;o e vice versa:</p>
+<pre data-role="codeBlock" data-info="Prolog" class="language-prolog"><span class="token operator">?-</span> <span class="token function">gosta</span><span class="token punctuation">(</span>maria<span class="token punctuation">,</span> joao<span class="token punctuation">)</span><span class="token operator">.</span>
+true<span class="token operator">.</span>
+<span class="token operator">?-</span> <span class="token function">gosta</span><span class="token punctuation">(</span>joao<span class="token punctuation">,</span> maria<span class="token punctuation">)</span><span class="token operator">.</span>
+false<span class="token operator">.</span>
+</pre><h6 class="mume-header" id="cen%C3%A1rio-4">Cen&#xE1;rio 4</h6>
+
+<ul>
+<li>Maria &#xE9; legal</li>
+<li>Jo&#xE3;o &#xE9; legal</li>
+<li>Maria gosta de todo mundo que &#xE9; legal</li>
+</ul>
+<p>Podemos representar este cen&#xE1;rio com os fatos e uma regra:</p>
+<pre data-role="codeBlock" data-info="Prolog" class="language-prolog"><span class="token function">legal</span><span class="token punctuation">(</span>maria<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">legal</span><span class="token punctuation">(</span>joao<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">gosta</span><span class="token punctuation">(</span>maria<span class="token punctuation">,</span> <span class="token variable">X</span><span class="token punctuation">)</span> <span class="token operator">:-</span> <span class="token function">legal</span><span class="token punctuation">(</span><span class="token variable">X</span><span class="token punctuation">)</span><span class="token operator">.</span>
+</pre><p>Aqui usamos uma vari&#xE1;vel <code>X</code>, que pode ter o valor de qualquer sujeito.</p>
+<p><strong>Vari&#xE1;veis s&#xE3;o denotadas por qualquer palavra que comece com letra mai&#xFA;scula.</strong></p>
+<pre data-role="codeBlock" data-info="Prolog" class="language-prolog"><span class="token operator">?-</span> <span class="token function">gosta</span><span class="token punctuation">(</span>maria<span class="token punctuation">,</span> joao<span class="token punctuation">)</span><span class="token operator">.</span>
+true<span class="token operator">.</span>
+<span class="token operator">?-</span> <span class="token function">gosta</span><span class="token punctuation">(</span>joao<span class="token punctuation">,</span> maria<span class="token punctuation">)</span><span class="token operator">.</span>
+false<span class="token operator">.</span>
+</pre><h6 class="mume-header" id="cen%C3%A1rio-5">Cen&#xE1;rio 5</h6>
+
+<ul>
+<li>Maria &#xE9; legal</li>
+<li>Jo&#xE3;o &#xE9; legal</li>
+<li>Qualquer pesso gosta de todo mundo que &#xE9; legal</li>
+</ul>
+<p>Podemos representar este cen&#xE1;rio com os fatos e uma regra:</p>
+<pre data-role="codeBlock" data-info="Prolog" class="language-prolog"><span class="token function">legal</span><span class="token punctuation">(</span>maria<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">legal</span><span class="token punctuation">(</span>joao<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">gosta</span><span class="token punctuation">(</span><span class="token variable">Y</span><span class="token punctuation">,</span> <span class="token variable">X</span><span class="token punctuation">)</span> <span class="token operator">:-</span> <span class="token function">legal</span><span class="token punctuation">(</span><span class="token variable">X</span><span class="token punctuation">)</span><span class="token operator">.</span>
+</pre><p>OBS: Este exemplo dar&#xE1; um <em>warning</em> avisando que a vari&#xE1;vel <code>Y</code> est&#xE1; livre (n&#xE3;o est&#xE1; ligada a nenhuma outra vari&#xE1;vel <code>Y</code>). Para evitar o <em>warning</em> substitua o <code>Y</code>por <code>_</code>.</p>
+<pre data-role="codeBlock" data-info="Prolog" class="language-prolog"><span class="token function">legal</span><span class="token punctuation">(</span>maria<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">legal</span><span class="token punctuation">(</span>joao<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">gosta</span><span class="token punctuation">(</span><span class="token variable">_</span><span class="token punctuation">,</span> <span class="token variable">X</span><span class="token punctuation">)</span> <span class="token operator">:-</span> <span class="token function">legal</span><span class="token punctuation">(</span><span class="token variable">X</span><span class="token punctuation">)</span><span class="token operator">.</span>
+</pre><pre data-role="codeBlock" data-info="Prolog" class="language-prolog"><span class="token operator">?-</span> <span class="token function">gosta</span><span class="token punctuation">(</span>maria<span class="token punctuation">,</span> joao<span class="token punctuation">)</span><span class="token operator">.</span>
+true<span class="token operator">.</span>
+<span class="token operator">?-</span> <span class="token function">gosta</span><span class="token punctuation">(</span>joao<span class="token punctuation">,</span> maria<span class="token punctuation">)</span><span class="token operator">.</span>
+true<span class="token operator">.</span>
+</pre><h6 class="mume-header" id="cen%C3%A1rio-6">Cen&#xE1;rio 6</h6>
+
+<ul>
+<li>Maria &#xE9; legal</li>
+<li>Maria &#xE9; bondosa</li>
+<li>Jo&#xE3;o &#xE9; legal</li>
+<li>Qualquer pesso gosta de todo mundo que &#xE9; legal e bondoso</li>
+</ul>
+<p>Podemos representar este cen&#xE1;rio com os fatos e uma regra:</p>
+<pre data-role="codeBlock" data-info="Prolog" class="language-prolog"><span class="token function">legal</span><span class="token punctuation">(</span>maria<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">bondoso</span><span class="token punctuation">(</span>maria<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">legal</span><span class="token punctuation">(</span>joao<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">gosta</span><span class="token punctuation">(</span><span class="token variable">Y</span><span class="token punctuation">,</span> <span class="token variable">X</span><span class="token punctuation">)</span> <span class="token operator">:-</span> <span class="token function">legal</span><span class="token punctuation">(</span><span class="token variable">X</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">bondoso</span><span class="token punctuation">(</span><span class="token variable">X</span><span class="token punctuation">)</span><span class="token operator">.</span>
+</pre><p>Em uma regra, para representar a conjun&#xE7;&#xE3;o use o operador <code>,</code> entre dois fatos.</p>
+<pre data-role="codeBlock" data-info="Prolog" class="language-prolog"><span class="token operator">?-</span> <span class="token function">gosta</span><span class="token punctuation">(</span>maria<span class="token punctuation">,</span> joao<span class="token punctuation">)</span><span class="token operator">.</span>
+false<span class="token operator">.</span>
+<span class="token operator">?-</span> <span class="token function">gosta</span><span class="token punctuation">(</span>joao<span class="token punctuation">,</span> maria<span class="token punctuation">)</span><span class="token operator">.</span>
+true<span class="token operator">.</span>
+</pre><h6 class="mume-header" id="cen%C3%A1rio-7">Cen&#xE1;rio 7</h6>
+
+<ul>
+<li>Maria &#xE9; legal</li>
+<li>Maria &#xE9; bondosa</li>
+<li>Jo&#xE3;o &#xE9; legal</li>
+<li>Qualquer pesso gosta de todo mundo que &#xE9; legal <strong>ou</strong> bondoso</li>
+</ul>
+<p>Podemos representar este cen&#xE1;rio com os fatos e uma regra:</p>
+<pre data-role="codeBlock" data-info="Prolog" class="language-prolog"><span class="token function">legal</span><span class="token punctuation">(</span>maria<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">bondoso</span><span class="token punctuation">(</span>maria<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">legal</span><span class="token punctuation">(</span>joao<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">gosta</span><span class="token punctuation">(</span><span class="token variable">Y</span><span class="token punctuation">,</span> <span class="token variable">X</span><span class="token punctuation">)</span> <span class="token operator">:-</span> <span class="token function">legal</span><span class="token punctuation">(</span><span class="token variable">X</span><span class="token punctuation">)</span><span class="token operator">;</span> <span class="token function">bondoso</span><span class="token punctuation">(</span><span class="token variable">X</span><span class="token punctuation">)</span><span class="token operator">.</span>
+</pre><p>Em uma regra, para representar a disjun&#xE7;&#xE3;o use o operador <code>;</code> entre dois fatos.</p>
+<pre data-role="codeBlock" data-info="Prolog" class="language-prolog"><span class="token operator">?-</span> <span class="token function">gosta</span><span class="token punctuation">(</span>maria<span class="token punctuation">,</span> joao<span class="token punctuation">)</span><span class="token operator">.</span>
+true<span class="token operator">.</span>
+<span class="token operator">?-</span> <span class="token function">gosta</span><span class="token punctuation">(</span>joao<span class="token punctuation">,</span> maria<span class="token punctuation">)</span><span class="token operator">.</span>
+true<span class="token operator">.</span>
+</pre><h2 class="mume-header" id="ordem-de-verifica%C3%A7%C3%A3o">Ordem de Verifica&#xE7;&#xE3;o</h2>
+
+<p>Em uma regra, as afirma&#xE7;&#xF5;es da direita s&#xE3;o avaliadas da esquerda para a direita.</p>
+<p>Em uma conjun&#xE7;&#xE3;o, se a afirma&#xE7;&#xE3;o da esquerda for falsa, a da direita n&#xE3;o ser&#xE1; avaliada. Por exemplo, na regra <code>a :- b, c</code> se o fato <code>b</code> for falso, o fato <code>c</code> n&#xE3;o ser&#xE1; avaliado.</p>
+<p>Em uma disjun&#xE7;&#xE3;o, se a afirma&#xE7;&#xE3;o da esquerda for verdadeira, a da direita n&#xE3;o ser&#xE1; avaliada automaticamente. Por exemplo, na regra <code>a :- b, c</code> se o fato <code>b</code> for falso, o fato <code>c</code> n&#xE3;o ser&#xE1; avaliado imediatamente. Ser&#xE1; exposto ao usu&#xE1;rio que a regra &#xE9; verdadeira, se o usu&#xE1;rio quiser continuar a verifica&#xE7;&#xE3;o ele deve pressionar <code>;</code>, caso queira terminar ele deve pressionar <code>.</code>.</p>
+<h2 class="mume-header" id="exerc%C3%ADcio-1">Exerc&#xED;cio 1</h2>
+
+<p>considere o seguinte cen&#xE1;rio de uma &#xE1;rvore de ancestralidade:</p>
+<p engine="dot"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Ancestralidade Pages: 1 -->
+<svg width="376pt" height="188pt" viewBox="0.00 0.00 375.97 188.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184)">
+<title>Ancestralidade</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-184 371.9696,-184 371.9696,4 -4,4"/>
+<!-- Ana -->
+<g id="node1" class="node">
+<title>Ana</title>
+<ellipse fill="none" stroke="#000000" cx="83.1041" cy="-162" rx="27.2467" ry="18"/>
+<text text-anchor="middle" x="83.1041" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">Ana</text>
+</g>
+<!-- Chico -->
+<g id="node2" class="node">
+<title>Chico</title>
+<ellipse fill="none" stroke="#000000" cx="34.1041" cy="-90" rx="34.2084" ry="18"/>
+<text text-anchor="middle" x="34.1041" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">Chico</text>
+</g>
+<!-- Ana&#45;&gt;Chico -->
+<g id="edge1" class="edge">
+<title>Ana-&gt;Chico</title>
+<path fill="none" stroke="#000000" d="M71.7393,-145.3008C65.7042,-136.4329 58.1593,-125.3465 51.4127,-115.4332"/>
+<polygon fill="#000000" stroke="#000000" points="54.2672,-113.4066 45.7474,-107.1086 48.4802,-117.345 54.2672,-113.4066"/>
+</g>
+<!-- Daiana -->
+<g id="node4" class="node">
+<title>Daiana</title>
+<ellipse fill="none" stroke="#000000" cx="206.1041" cy="-90" rx="38.2607" ry="18"/>
+<text text-anchor="middle" x="206.1041" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">Daiana</text>
+</g>
+<!-- Ana&#45;&gt;Daiana -->
+<g id="edge3" class="edge">
+<title>Ana-&gt;Daiana</title>
+<path fill="none" stroke="#000000" d="M103.6915,-149.9488C122.6854,-138.8304 151.2079,-122.1343 173.3325,-109.1834"/>
+<polygon fill="#000000" stroke="#000000" points="175.2093,-112.1404 182.0713,-104.068 171.673,-106.0993 175.2093,-112.1404"/>
+</g>
+<!-- Fernanda -->
+<g id="node5" class="node">
+<title>Fernanda</title>
+<ellipse fill="none" stroke="#000000" cx="93.1041" cy="-18" rx="46.9304" ry="18"/>
+<text text-anchor="middle" x="93.1041" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">Fernanda</text>
+</g>
+<!-- Chico&#45;&gt;Fernanda -->
+<g id="edge5" class="edge">
+<title>Chico-&gt;Fernanda</title>
+<path fill="none" stroke="#000000" d="M47.7881,-73.3008C55.0219,-64.4731 64.0571,-53.4471 72.1523,-43.5682"/>
+<polygon fill="#000000" stroke="#000000" points="75.0399,-45.5664 78.671,-35.6132 69.6256,-41.1296 75.0399,-45.5664"/>
+</g>
+<!-- Beto -->
+<g id="node3" class="node">
+<title>Beto</title>
+<ellipse fill="none" stroke="#000000" cx="181.1041" cy="-162" rx="29.0529" ry="18"/>
+<text text-anchor="middle" x="181.1041" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">Beto</text>
+</g>
+<!-- Beto&#45;&gt;Chico -->
+<g id="edge2" class="edge">
+<title>Beto-&gt;Chico</title>
+<path fill="none" stroke="#000000" d="M158.1353,-150.75C134.154,-139.004 96.2623,-120.4449 68.6663,-106.9284"/>
+<polygon fill="#000000" stroke="#000000" points="69.8944,-103.6327 59.3743,-102.3772 66.8153,-109.9192 69.8944,-103.6327"/>
+</g>
+<!-- Beto&#45;&gt;Daiana -->
+<g id="edge4" class="edge">
+<title>Beto-&gt;Daiana</title>
+<path fill="none" stroke="#000000" d="M187.2838,-144.2022C190.0783,-136.1541 193.4447,-126.4588 196.5531,-117.5067"/>
+<polygon fill="#000000" stroke="#000000" points="199.9349,-118.4374 199.9087,-107.8425 193.3222,-116.1412 199.9349,-118.4374"/>
+</g>
+<!-- Helena -->
+<g id="node8" class="node">
+<title>Helena</title>
+<ellipse fill="none" stroke="#000000" cx="230.1041" cy="-18" rx="38.2607" ry="18"/>
+<text text-anchor="middle" x="230.1041" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">Helena</text>
+</g>
+<!-- Daiana&#45;&gt;Helena -->
+<g id="edge8" class="edge">
+<title>Daiana-&gt;Helena</title>
+<path fill="none" stroke="#000000" d="M212.0366,-72.2022C214.7194,-64.1541 217.9511,-54.4588 220.9352,-45.5067"/>
+<polygon fill="#000000" stroke="#000000" points="224.3146,-46.4362 224.1565,-35.8425 217.6738,-44.2226 224.3146,-46.4362"/>
+</g>
+<!-- Ellen -->
+<g id="node6" class="node">
+<title>Ellen</title>
+<ellipse fill="none" stroke="#000000" cx="118.1041" cy="-90" rx="31.3371" ry="18"/>
+<text text-anchor="middle" x="118.1041" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">Ellen</text>
+</g>
+<!-- Ellen&#45;&gt;Fernanda -->
+<g id="edge6" class="edge">
+<title>Ellen-&gt;Fernanda</title>
+<path fill="none" stroke="#000000" d="M111.9243,-72.2022C109.1508,-64.2146 105.8139,-54.6045 102.7251,-45.7087"/>
+<polygon fill="#000000" stroke="#000000" points="105.9729,-44.3918 99.3864,-36.0931 99.3602,-46.6879 105.9729,-44.3918"/>
+</g>
+<!-- Ganymede -->
+<g id="node7" class="node">
+<title>Ganymede</title>
+<ellipse fill="none" stroke="#000000" cx="315.1041" cy="-90" rx="52.7315" ry="18"/>
+<text text-anchor="middle" x="315.1041" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">Ganymede</text>
+</g>
+<!-- Ganymede&#45;&gt;Helena -->
+<g id="edge7" class="edge">
+<title>Ganymede-&gt;Helena</title>
+<path fill="none" stroke="#000000" d="M294.9602,-72.937C283.5231,-63.2491 269.0663,-51.0033 256.7057,-40.5332"/>
+<polygon fill="#000000" stroke="#000000" points="258.8313,-37.7468 248.9386,-33.954 254.3069,-43.0882 258.8313,-37.7468"/>
+</g>
+</g>
+</svg>
+</p><p><strong>Desconsiderando o g&#xEA;nero dos sujeitos</strong>. Represente o fato <code>pai_mae(x, y)</code> para representar a rela&#xE7;&#xE3;o de que <code>x</code> &#xE9; pai ou m&#xE3;e de <code>y</code></p>
+<p>Baseado nesta rela&#xE7;&#xE3;o, represente as regras para</p>
+<ul>
+<li><code>avo(x, y)</code>: para representar que <code>x</code> &#xE9; av&#xF4; ou av&#xF3; de <code>y</code></li>
+<li><code>tioa(x, y)</code>: para representar que <code>x</code> &#xE9; tio ou tia de <code>y</code></li>
+<li><code>primoa(x, y)</code>: para representar que <code>x</code> &#xE9; primo ou prima de <code>y</code></li>
+<li><code>irmao(x, y)</code>: para representar que <code>x</code> &#xE9; irm&#xE3;o ou irm&#xE3; de <code>y</code></li>
+<li><code>primoa(x, y)</code>: para representar que <code>x</code> &#xE9; primo ou prima de <code>y</code></li>
+<li><code>ancestral(x, y)</code>: para representar que <code>x</code> &#xE9; ancestral de <code>y</code></li>
+<li><code>descendente(x, y)</code>: para representar que <code>x</code> &#xE9; descendente de <code>y</code></li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
