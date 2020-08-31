@@ -43,8 +43,9 @@ A janela deve ter um botão que imprime na saída padrão a cor escolhida pelo u
 ## Exercício 9
 
 Fazer uma janela onde o usuário deve escolher um lanche, um ponto da carne, e ingredientes adicionais.
-O lanche deve ser exatamente um entre "Basico", "Cheese" e "Big".
-O ponto deve ser exatamente um entre "Mal Passado", "No Ponto", e "Bem Passado".
-O cliente pode escolher zero ou mais de um entre os ingredientes adicionais: "Queijo", "Maionese", "Carne".
+
+* O lanche deve ser exatamente um entre "Basico", "Cheese" e "Big".
+* O ponto deve ser exatamente um entre "Mal Passado", "No Ponto", e "Bem Passado".
+* O cliente pode escolher zero ou mais de um entre os ingredientes adicionais: "Queijo", "Maionese", "Carne".
 
 A janela deve ter um botão que escreve na saída padrão o lanche escolhido e a janela é fechada. Ou se o usuário esqueceu de marcar algum item obrigatório.
