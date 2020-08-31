@@ -22,6 +22,7 @@
 
 * [Laboratório 00: Revisão](alpoo_files/labs/00/lab00.md)
 * [Laboratório 01: JFrame](alpoo_files/labs/01/lab01.md)
+* [Laboratório 02: Compomentes](alpoo_files/labs/02/lab02.md)
 
 
 ## Referências
