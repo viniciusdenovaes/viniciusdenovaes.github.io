@@ -49,3 +49,5 @@ Fazer uma janela onde o usuário deve escolher um lanche, um ponto da carne, e i
 * O cliente pode escolher zero ou mais de um entre os ingredientes adicionais: "Queijo", "Maionese", "Carne".
 
 A janela deve ter um botão que escreve na saída padrão o lanche escolhido e a janela é fechada. Ou se o usuário esqueceu de marcar algum item obrigatório.
+
+OBS: você pode usar o código abaixo para fazer a interface gráfica deste exercício. Mas ainda precisará programar o funcionamento dos botões.
