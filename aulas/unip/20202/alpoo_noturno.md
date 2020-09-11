@@ -11,3 +11,4 @@
 
 * [Laboratório 00: Revisão](alpoo_noturno_files/labs/00/lab00.md)
 * [Laboratório 01: JFrame](alpoo_noturno_files/labs/01/lab01.md)
+* [Laboratório 02: Interface Gráfica](alpoo_noturno_files/labs/02/lab02.md)
