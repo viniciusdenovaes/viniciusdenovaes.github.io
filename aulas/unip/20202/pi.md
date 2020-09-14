@@ -19,6 +19,8 @@ O livro oficial da matéria é o [Computação Gráfica vol 2 (Aura Conci, Eduar
 
 ## Comandos
 
+Alguns comandos usados em aula para criar um ambiente virtual com python3, numpy e jupyter
+
 virtualenv --python=python3 venv
 source venv/bin/activate
 
