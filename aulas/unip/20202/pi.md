@@ -1,6 +1,12 @@
-# PI
+# Processamento de Imagens
+
+## Repositório
+ - https://github.com/viniciusdenovaes/Unip202PInoturno
 
 ## Slides
+
+O livro oficial da matéria é o [Computação Gráfica vol 2 (Aura Conci, Eduardo Azevedo e Fabiana R. Leta)](http://computacaografica.ic.uff.br/vol2.html)
+
 
 * [Slide 01](pi_files/slides/transparenciasvol2cap1.pdf)
 * [Slide 02](pi_files/slides/transparenciasvol2cap2.pdf)
