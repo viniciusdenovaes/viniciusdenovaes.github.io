@@ -3,6 +3,10 @@
 ## Repositório
  - https://github.com/viniciusdenovaes/Unip202PInoturno
 
+## Trabalhos
+
+* [Trabalho 01](pi_files/trabalhos/01/trabalho01.md)
+
 ## Slides
 
 O livro oficial da matéria é o [Computação Gráfica vol 2 (Aura Conci, Eduardo Azevedo e Fabiana R. Leta)](http://computacaografica.ic.uff.br/vol2.html)
