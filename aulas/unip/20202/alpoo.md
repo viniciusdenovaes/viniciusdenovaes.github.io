@@ -24,6 +24,7 @@
 * [Laboratório 01: JFrame](alpoo_files/labs/01/lab01.md)
 * [Laboratório 02: Compomentes](alpoo_files/labs/02/lab02.md)
 * [Laboratório 03: MVC](alpoo_files/labs/03/lab03.md)
+* [Laboratório 04: JDBC](alpoo_files/labs/04/lab04.md)
 
 
 
