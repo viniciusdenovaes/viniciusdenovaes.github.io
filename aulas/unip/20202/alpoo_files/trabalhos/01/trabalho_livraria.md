@@ -1,6 +1,6 @@
 # Trabalho Livraria
 
-## Trabalho em grupo de, no máximo, ? pessoas
+## Trabalho em grupo de, no máximo, 5 pessoas
 
 Neste trabalho o grupo deve fazer um programa, usandos os padrões MVC e DAO, aplicados à estrutura do projeto em java, que manipula dados de um banco de dados de uma livraria.
 
