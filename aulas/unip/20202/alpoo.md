@@ -34,3 +34,4 @@
 ## Referências
 
 * Core Java (Horstmann, Cay)
+* [Design Patterns - Tutorials Point](https://www.tutorialspoint.com/design_pattern/index.htm)
