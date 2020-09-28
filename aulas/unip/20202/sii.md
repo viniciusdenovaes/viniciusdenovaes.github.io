@@ -6,7 +6,8 @@
  * Lógica Fuzzy
  * Redes Neurais
  * Talvez alguma coisa de Data Science
- ## Trabalhos
+
+## Trabalhos
 
  * [Trabalho 01](sii_files/trabalhos/01/trabalhoProlog_mindist.md)
 
