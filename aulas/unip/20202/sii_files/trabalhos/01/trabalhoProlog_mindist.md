@@ -57,10 +57,10 @@ Dado um `x`, e um `y`. Para a pergunta
 caminhoMinimo(x, y, Caminho, Custo).
 ```
 
-Um caminho mínimo entre dois pontos é um caminho com a menor suma no custo dos arcos.
+Um caminho mínimo entre dois pontos é um caminho com a menor soma no custo dos arcos.
 
 O seu programa deve guardar
- - em `Caminho`, a lista de vértices por onde o caminho passa (pode ser em qualquer ordem)
+ - em `Caminho`, a lista de vértices por onde o caminho passa (pode ser em qualquer sentido)
  - em `Custo` a soma dos valores de cada arco ligando cada par de vértice.
 
 Para a instância 02:
