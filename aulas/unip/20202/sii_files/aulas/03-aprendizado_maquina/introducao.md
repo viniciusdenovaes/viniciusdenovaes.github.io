@@ -171,7 +171,7 @@ Após treinado o seu sistema chega à seguinte equação:
 
 ![](https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0119.png)
 
-A equação $4.91\times 10^{-5}x + 4.85$ será a equação que irá modelar o sistema para prever a resposta.
+A equação $$4.91\times 10^{-5}x + 4.85$$ será a equação que irá modelar o sistema para prever a resposta.
 
 
 
