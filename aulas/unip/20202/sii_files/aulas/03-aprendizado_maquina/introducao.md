@@ -120,12 +120,58 @@ Um sistema de recompensa ou penalidade irá condicionar o sistema a tomar as mel
 ![](https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0112.png)
 
 
-### Aprendizado Online ou em Lote
+### Aprendizado em Lote ou Online
 
+#### Aprendizado em Lote (*offline*)
 
+No Aprendizado em Lote (também conhecido como *offline*) o sistema é treinado com todos os dados disponíveis e depois é lançado para produção, sem aprender mais nada após ser lançado.
 
+Isto não quer dizer que o sistema não será atualizado. Você pode adquirir novos dados, treinar novamente o sistema e depois lançar uma atualização para produção. Mas o sistema que está em produção não aprenderá enquanto em produção.
 
+O aprendizado em lotes é usado para sistemas que demandam muito poder de processamento na fase de treinamento, não podendo usar este poder em produção.
 
+#### Aprendizado Online
+
+No aprendizado online o sistema pode ser treinado antes de ser lançado, mas também continuará aprendendo enquanto funciona.
+
+![](https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0113.png)
+
+O aprendizado online é usado para sistemas que devem se adaptar enquanto rodam e perceber mudanças em tempo real. Um exemplo é prever preço de ações na bolsa de valores, ou fazer recomendações de produtos para usuários de sites de compras.
+
+Um outro uso do sistema online é quando você tem que usar muitos dados para treinar o sistema, mais dados do que acaberiam na memória. Nestes casos você pode separar os dados em pequenos pedaços e treinar o sistema com cada pedaço dos dados, como se tivesse em produção.
+
+![](https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0114.png)
+
+### Aprendizado Baseado em Instância vs Aprendizado Baseado em Modelo
+
+#### Aprendizado Baseado em Instância
+
+Imagine que você esteja fazendo o filtro de *spam* e resolva fazer um sistema que marca como *spam* apenas os emails que são idênticos aos *spams* já conhecidos. Ou melhor, todos os emails que têm algum alto grau de semelhança.
+
+Neste caso, o sistema não está tentando modelar um padrão, está apenas marcando objetos semelhantes ao que já tem por meio de memorização. Isso é chamdo de aprendizado em instância.
+
+![](https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0115.png)
+
+#### Aprendizado Baseado em Instância
+
+Um outra maneira de treinar o sistema é fazê-lo tentar modelar um padrão.
+
+![](https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0116.png)
+
+Imagine que você esteja tentando prever o PIB per capita baseado na satisfação de vida (ou vice versa) de um país e tenha os seguintes dados:
+
+![](https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0117.png)
+
+Você pode tentar fazer o sistema encontrar a equação linear que, dado uma característica, irá prever a outra:
+
+![](https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0118.png)
+*Possibilidades de equações lineares*
+
+Após treinado o seu sistema chega à seguinte equação:
+
+![](https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0119.png)
+
+A equação $4.91\times 10^{-5}x + 4.85$ será a equação que irá modelar o sistema para prever a resposta.
 
 
 
