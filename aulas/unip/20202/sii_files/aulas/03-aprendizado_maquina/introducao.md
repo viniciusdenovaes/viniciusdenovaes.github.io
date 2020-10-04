@@ -1,7 +1,6 @@
 # Aprendizado de Máquina[^1][^2]
 
-[^1]: Esta aula usou como referência o livro [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow](https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/) e a tradução [Mãos à Obra: Aprendizado de Máquina com Scikit-Learn & TensorFlow
-](https://books.google.com.br/books/about/M%C3%A3os_%C3%A0_Obra_Aprendizado_de_M%C3%A1quina_co.html?id=Z0mvDwAAQBAJ).
+[^1]: Esta aula usou como referência o livro [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow](https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/) e a tradução [Mãos à Obra: Aprendizado de Máquina com Scikit-Learn & TensorFlow](https://books.google.com.br/books/about/M%C3%A3os_%C3%A0_Obra_Aprendizado_de_M%C3%A1quina_co.html?id=Z0mvDwAAQBAJ).
 
 [^2]: O capítulo usado nesta aula pode ser encontrado através deste [link](https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/ch01.html).
 
