@@ -28,4 +28,8 @@ Um outro exemplo de entrada pode ser dado pela seguinte imagem:
 
 ## Saída
 
-O formato da saída fica
+O formato da saída fica à seu cargo.
+
+Deve ser possível que o seu programa
+* treine um conjunto de dados,
+* depois de treinado, receba novos dados e responda à qual classe aquele dado faz parte.
