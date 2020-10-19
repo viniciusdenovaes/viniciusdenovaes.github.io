@@ -9,6 +9,7 @@
 ## Trabalhos
 
  * [Trabalho 01](sii_files/trabalhos/01/trabalhoProlog_mindist.md)
+ * [Trabalho 02](sii_files/trabalhos/02/trabalho_classificacao.md)
 
 ## Livros
 
