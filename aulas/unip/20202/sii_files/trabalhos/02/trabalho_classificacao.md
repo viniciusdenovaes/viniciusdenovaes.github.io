@@ -1,73 +1,31 @@
-# Trabalho 01 Prologo Distância Mínima
+# Trabalho 02 Classificação
 
-Para este trabalho você deve fazer um programa em Prolog que calcula o caminho mínimo para quaisquer dois pontos dados em um dado mapa.
+Para este trabalho você deve fazer um sistema de classificação que separa duas classes de pontos por uma linha reta.
 
 ## Instâncias
 
-**OBS**: nenhum dos mapas terá ciclos
+Cada instância será dada em um arquivo no formato `csv` e terá duas características `x1` e `x2`, e um *label* chamado `classe`
 
-
-```dot {engine="neato"}
-digraph Ancestralidade {
-  a -> b [label="1"]
-  b -> c [label="1"]
-  b -> d [label="1"]
-  c -> d [label="1"]
-  d -> e [label="1"]
-  e -> f [label="1"]
-  e -> h [label="1"]
-  f -> g [label="1"]
-  g -> h [label="1"]
-}
+``` csv
+x1,x2,classe
+20,10,0
+80,60,1
+-20,10,1
 ```
 
-``` Prolog
-arco(a, b, 1).
-arco(b, c, 1).
-arco(b, d, 1).
-arco(c, d, 1).
-arco(d, e, 1).
-arco(e, f, 1).
-arco(e, h, 1).
-arco(f, g, 1).
-arco(g, h, 1).
-```
+![entrada do exemplo do livro](exemplo_livro_entrada.png)
+
+A resposta pode ser a reta definida pelos pesos `w1=-3.9`, `w2=6.1`, `wv=-0.3`
+
+![entrada do exemplo do livro](exemplo_livro_saida.png)
+
+Um outro exemplo de entrada pode ser dado pela seguinte imagem:
+
+![entrada do exemplo do livro](exemplo00_entrada.png)
 
 
-```dot {engine="dot"}
-digraph Ancestralidade {
-  a -> d [label="3"]
-  a -> b [label="1"]
-  d -> c [label="1"]
-  b -> c [label="2"]
-}
-```
-
-``` Prolog
-arco(a, d, 3).
-arco(a, b, 1).
-arco(d, c, 1).
-arco(b, c, 2).
-```
+**OBS:** Você pode assumir que sempre será possível dividir **todos** os dados dos dois conjuntos por uma linha reta
 
 ## Saída
 
-Dado um `x`, e um `y`. Para a pergunta
-``` Prolog
-caminhoMinimo(x, y, Caminho, Custo).
-```
-
-Um caminho mínimo entre dois pontos é um caminho com a menor soma no custo dos arcos.
-
-O seu programa deve guardar
- - em `Caminho`, a lista de vértices por onde o caminho passa (pode ser em qualquer sentido)
- - em `Custo` a soma dos valores de cada arco ligando cada par de vértice.
-
-Para a instância 02:
-
-``` Prolog
-caminhominimo(a, c, Caminho, Custo).
->>> Caminho = [a, b, c]
->>> Custo = 3
-
-```
+O formato da saída fica
