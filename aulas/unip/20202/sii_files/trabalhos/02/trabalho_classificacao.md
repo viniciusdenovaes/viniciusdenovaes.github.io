@@ -1,4 +1,4 @@
-# Trabalho 01 Prolog Distância Mínima
+# Trabalho 01 Prologo Distância Mínima
 
 Para este trabalho você deve fazer um programa em Prolog que calcula o caminho mínimo para quaisquer dois pontos dados em um dado mapa.
 
