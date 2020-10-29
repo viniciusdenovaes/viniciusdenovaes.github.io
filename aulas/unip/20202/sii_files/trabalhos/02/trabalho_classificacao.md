@@ -23,6 +23,8 @@ Um outro exemplo de entrada pode ser dado pela seguinte imagem:
 
 ![entrada do exemplo do livro](exemplo00_entrada.png)
 
+Esta instância pode ser vista no seguinte [link](datasets/dataset00_2k.csv)
+
 
 **OBS:** Você pode assumir que sempre será possível dividir **todos** os dados dos dois conjuntos por uma linha reta
 
