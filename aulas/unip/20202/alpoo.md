@@ -27,6 +27,19 @@
 * [Laboratório 04: JDBC](alpoo_files/labs/04/lab04.md)
 
 ## Trabalhos
+
+O trabalho vale 5 pontos na média.
+
+O trabalho deve ser entregue para viniciusdenovaes[at]gmail.com com as seguintes tags no assunto: [TRABALHO][<sigla_da_materia>][<sua_turma>][<seu_ra>], dentro do email deve conter seu nome, seu ra, e anexado o seu projeto.
+
+Por exemplo, se eu for entregar os trabalhos 1 e 2 de Sistema de Informação Inteligente, e a minha turma é a CB102P, e meu ra é a007, o assunto do meu email ficaria [TRABALHO][SII][CB102P][a007] Trabalhos 1 e 2 de Sistema de Informação Inteligente.
+
+O prazo é até o dia 18/11/2020.
+
+Qualquer texto nos seguintes formatos: txt ou pdf ou o seu projeto zipado.
+
+Atenção: Eu não disponho de Windows nem de Microsoft Office, (Eu uso LaTex para fazer textos), caso sua lista esteja em .doc, e nem meu Libre Office, nem o Google Drive consigam abrir a sua lista, ela não será corrigida.
+
 * [Trabalho Biblioteca](alpoo_files/trabalhos/01/trabalho_livraria.md)
 
 
