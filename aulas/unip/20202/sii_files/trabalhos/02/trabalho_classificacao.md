@@ -21,6 +21,12 @@ A resposta pode ser a reta definida pelos pesos `w1=-3.9`, `w2=6.1`, `wv=-0.3`
 
 Um outro exemplo de entrada pode ser dado pela seguinte imagem:
 
+![entrada do exemplo do livro](exemplo01_entrada.png)
+
+Esta instância pode ser vista no seguinte [link](datasets/dataset01_200.csv)
+
+Um outro exemplo de entrada pode ser dado pela seguinte imagem:
+
 ![entrada do exemplo do livro](exemplo00_entrada.png)
 
 Esta instância pode ser vista no seguinte [link](datasets/dataset00_2k.csv)
