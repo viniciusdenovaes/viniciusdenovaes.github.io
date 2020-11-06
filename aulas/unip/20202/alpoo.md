@@ -42,7 +42,25 @@ Atenção: Eu não disponho de Windows nem de Microsoft Office, (Eu uso LaTex pa
 
 * [Trabalho Biblioteca](alpoo_files/trabalhos/01/trabalho_livraria.md)
 
+## Matéria para a prova
 
+ * Java Swing/awt
+    * `ActionListener`
+    * Componentes:
+       * `JButton`
+       * `JTable`
+       * `JCheckBox`
+       * `JRadioButton`
+       * `JTextField`
+       * `JLabel`
+ * JDBC:
+    * `Connection` (Existe `new Connection()`?)
+    * `Statement`
+    * `PreparedStatement` (Qual é a diferença entre `Statement` e `PreparedStatement`)
+    * `ResultSet` (Como ler o resultado de um `ResultSet`?)
+ * Padrões de Projeto    
+    * `MVC`
+    * `DAO`  
 
 ## Referências
 
