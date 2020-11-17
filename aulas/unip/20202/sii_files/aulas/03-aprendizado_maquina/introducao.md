@@ -152,7 +152,7 @@ Neste caso, o sistema não está tentando modelar um padrão, está apenas marca
 
 ![](https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0115.png)
 
-#### Aprendizado Baseado em Instância
+#### Aprendizado Baseado em Modelo
 
 Um outra maneira de treinar o sistema é fazê-lo tentar modelar um padrão.
 
