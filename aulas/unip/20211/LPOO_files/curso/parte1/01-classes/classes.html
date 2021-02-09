@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Classes</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Vinicius de Novaes Pereira</div>
+<div class="menu-item"><a href="../../../../../../index.html" class="current">home</a></div>
+<div class="menu-category">Aulas</div>
+<div class="menu-item"><a href="../../../../../../class_unip.html">Unip</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Classes</h1>
+<div id="subtitle"><a href="../../../../../../index.html">Vinicius de Novaes Pereira</a></div>
+</div>
+<p>Aqui nós vamos aprender o que uma classe pode ter e como escrever uma classe.</p>
+<h2>O que uma classe pode ter?</h2>
+<p>Uma classe pode ter</p>
+<ul>
+<li><p><b>atributos</b> (também conhecido como <b>campos</b>), são as <b>variáveis</b> da nossa classe.</p>
+</li>
+<li><p><b><i>constructors</i></b>, são métodos usados para inicializar um objeto da classe</p>
+</li>
+<li><p><b>métodos</b>, são as funções da classe</p>
+</li>
+</ul>
+<h2>Como escrevemos uma classe?</h2>
+<p>Por enquanto usaremos somente classes públicas, porém os campos devem ser todos <tt>private</tt>, então toda classe será feita como abaixo</p>
+<div class="codeblock">
+<div class="blocktitle">Escrevendo uma classe</div>
+<div class="blockcontent"><pre>
+public class nomeDaClasse{
+    // nossos atributos
+    private Tipo01 variavel01;
+    private Tipo02 variavel02;
+    private Tipo03 variavel03;
+
+    // nossos constructors
+    public nomeDaClasse(){
+        this.variavel01 = new Tipo01();
+        this.variavel02 = new Tipo02();
+        this.variavel03 = new Tipo03();
+    }
+    public nomeDaClasse(Tipo01 aVariavel01){
+        this(); // Aqui eu estou chamando o constructor desta mesma classe
+        this.variavel01 = aVariavel01;
+    }
+    public nomeDaClasse(Tipo01 aVariavel01, Tipo02 aVariavel02){
+        this(aVariavel01); // Aqui eu estou chamando o constructor desta mesma classe
+        this.variavel02= aVariavel02;
+    }
+
+    // nossos métodos
+    public void setVariavel01(Tipo01 aVariavel01){
+        this.variavel01 = aVariavel01;
+    }
+    public Tipo1 getVariavel01(){
+        return this.variavel01;
+    }
+
+    // Podemos definir métodos que tenham o mesmo nome, isto de chama overloading
+    public void metodo01(){
+        // coisas que o método 01 faz
+    }
+    public void metodo01(Tipo aVariavel){
+        // coisas que o método 01 faz quando recebe uma variável do tipo "Tipo"
+    }
+    public void metodo01(Tipo aVariavel, OutroTipo aOutraVariavel){
+        // coisas que o método 01 faz quando recebe uma variável do tipo "Tipo", e uma outra variável do tipo "OutroTipo"
+    }
+    public Tipo04 metodo02(){
+        // outro método que retorna um objeto do tipo "Tipo04"
+    }
+}
+</pre></div></div>
+<h2>Regras para Overloading</h2>
+<p>Fazer &ldquo;overload&rdquo; em um método quer dizer definir um outro método com o mesmo nome, mas com argumentos diferentes.</p>
+<p>As regras para fazer &ldquo;overload&rdquo; são as seguintes:</p>
+<ul>
+<li><p>Ambos métodos devem ter o mesmo nome</p>
+</li>
+<li><p>A lista de argumentos que os dois recebe deve ser diferente</p>
+</li>
+</ul>
+<p>Se dois métodos seguem as regras acima, eles podem, ou não, ter:</p>
+<ul>
+<li><p>Tipos de retorno diferentes</p>
+</li>
+<li><p>Ter diferentes modificadores de acesso</p>
+</li>
+</ul>
+<h2>Modificadores de Acesso</h2>
+<p>O modificadores que você precisa saber para esta matéria são o <tt>public</tt> e o <tt>private</tt>.</p>
+<p>Tanto para campos de uma classe, quanto para métodos, as regras são as mesmas:</p>
+<ul>
+<li><p><tt>public</tt>: o campo, ou método, pode ser acessado por qualquer classe</p>
+</li>
+<li><p><tt>private</tt>: o campo, ou método, pode ser acessado <b>apenas</b> pelos campos e métodos da <b>mesma classe</b></p>
+</li>
+</ul>
+<p>Além destes dois, temos mais dois modificadores:</p>
+<ul>
+<li><p><tt>protected</tt>: o campo, ou método, pode ser acessado <b>apenas</b> pelas classes que estão no mesmo pacote</p>
+</li>
+<li><p>Default (quando não tem nenhum modificador): o campo, ou método, pode ser acessado <b>apenas</b> pelas classes que estão no mesmo pacote.</p>
+</li>
+</ul>
+<table id="TABLENAME">
+<tr class="r1"><td class="c1"></td><td class="c2"> Class </td><td class="c3"> Package </td><td class="c4"> Subclass (mesmo pacote) </td><td class="c5"> Subclass (pacote diferente) </td><td class="c6"> Mundo </td></tr>
+<tr class="r2"><td class="c1">public      </td><td class="c2">   +  </td><td class="c3">    +   </td><td class="c4">    +                   </td><td class="c5">     +                      </td><td class="c6">   +   </td></tr>
+<tr class="r3"><td class="c1">protected   </td><td class="c2">   +  </td><td class="c3">    +   </td><td class="c4">    +                   </td><td class="c5">     +                      </td><td class="c6">       </td></tr>
+<tr class="r4"><td class="c1">Default     </td><td class="c2">   +  </td><td class="c3">    +   </td><td class="c4">    +                   </td><td class="c5">                             </td><td class="c6">       </td></tr>
+<tr class="r5"><td class="c1">private     </td><td class="c2">   +  </td><td class="c3">         </td><td class="c4">                         </td><td class="c5">                             </td><td class="c6">       
+</td></tr></table>
+<h2>Modificador <tt>static</tt></h2>
+<h3>Para variável</h3>
+<p>Uma variável com o modificador <tt>static</tt> é uma variável que pertence à classe, e não à um objeto da classe.</p>
+<p>Isto quer dizer que o valor da variável é <b>sempre</b> o mesmo para todo objeto da mesma classe. 
+Se uma modificar o valor, este será modificado para todos os outros objetos.</p>
+<p>Inclusive, por conveção, acesso à variável deve ser feito através do nome da classe, e não do objeto.</p>
+<h3>Para métodos</h3>
+<p>Um método <tt>static</tt> <b>não</b> poderá ter acesso ao valor das variáveis do objeto, somente às veriáveis <tt>static</tt> da classe.</p>
+<p>Um método <tt>static</tt> pode criar objetos e poderá ter acesso à qualquer objeto que criou.</p>
+<p>Um exemplo de método <tt>static</tt> é o &ldquo;main&rdquo;</p>
+<h2>Modificador <tt>final</tt></h2>
+<p>(TODO)</p>
+<div id="footer">
+<div id="footer-text">
+Page generated 2019-03-18 04:47:59 -03, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>
