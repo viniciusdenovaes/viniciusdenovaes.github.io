@@ -12,8 +12,15 @@ ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
 
 * Prólogo
     * Instalação:
-        * [Linux (Ubuntu)](lpoo_files/curso/00-install/linux/00-tuto_instal_linux_ubuntu.md)
-        * [Windows](lpoo_files/curso/00-install/windows/00-tuto_instal_windows.md)
+        * [Linux (Ubuntu)](lpoo_files/curso/00-install/linux/00-tuto_instal_linux_ubuntu.html)
+        * [Windows](lpoo_files/curso/00-install/windows/00-tuto_instal_windows.html)
+
+* Parte 01 Comandos Básicos:
+    * [Tipos Primitivos e Operações](lpoo_files/curso/01/comandos_de_controle.html)
+    * [Comandos de Controle](lpoo_files/curso/01/comandos_de_controle.html)
+
+* Parte 02 Orientação a Objetos
+    * [Classes](aulas/unip/20211/lpoo_files/curso/02/01-classes.html)
 
 ## Extras
 
