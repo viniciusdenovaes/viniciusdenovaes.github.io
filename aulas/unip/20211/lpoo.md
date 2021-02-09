@@ -20,7 +20,7 @@ ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
     * [Comandos de Controle](lpoo_files/curso/01/comandos_de_controle.html)
 
 * Parte 02 Orientação a Objetos
-    * [Classes](aulas/unip/20211/lpoo_files/curso/02/01-classes.html)
+    * [Classes](lpoo_files/curso/02/01-classes.html)
 
 ## Extras
 
