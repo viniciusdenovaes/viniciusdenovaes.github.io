@@ -5,9 +5,9 @@ Aqui nós vamos aprender o que uma classe pode ter e como escrever uma classe.
 ## O que uma classe pode ter?
 
 Uma classe pode ter
- - **atributos** (também conhecido como **campos**), são as **variáveis** da nossa classe.
- - **_constructors_**, são métodos usados para inicializar um objeto da classe
- - **métodos**, são as funções da classe
+* **atributos** (também conhecido como **campos**), são as **variáveis** da nossa classe.
+* **_constructors_**, são métodos usados para inicializar um objeto da classe
+* **métodos**, são as funções da classe
 
 ## Como escrevemos uma classe?
 
@@ -65,24 +65,24 @@ public class nomeDaClasse{
 Fazer "overload" em um método quer dizer definir um outro método com o mesmo nome, mas com argumentos diferentes.
 
 As regras para fazer "overload" são as seguintes:
- - Ambos métodos devem ter o mesmo nome
- - A lista de argumentos que os dois recebe deve ser diferente
+* Ambos métodos devem ter o mesmo nome
+* A lista de argumentos que os dois recebe deve ser diferente
 
 Se dois métodos seguem as regras acima, eles podem, ou não, ter:
- - Tipos de retorno diferentes
- - Ter diferentes modificadores de acesso
+* Tipos de retorno diferentes
+* Ter diferentes modificadores de acesso
 
 ## Modificadores de Acesso
 
 O modificadores que você precisa saber para esta matéria são o `public` e o `private`.
 
 Tanto para campos de uma classe, quanto para métodos, as regras são as mesmas:
- - `public`: o campo, ou método, pode ser acessado por qualquer classe
- - `private`: o campo, ou método, pode ser acessado **apenas** pelos campos e métodos da **mesma classe**
+* `public`: o campo, ou método, pode ser acessado por qualquer classe
+* `private`: o campo, ou método, pode ser acessado **apenas** pelos campos e métodos da **mesma classe**
 
 Além destes dois, temos mais dois modificadores:
- - `protected`: o campo, ou método, pode ser acessado **apenas** pelas classes que estão no mesmo pacote
- - Default (quando não tem nenhum modificador): o campo, ou método, pode ser acessado **apenas** pelas classes que estão no mesmo pacote.
+* `protected`: o campo, ou método, pode ser acessado **apenas** pelas classes que estão no mesmo pacote
+* Default (quando não tem nenhum modificador): o campo, ou método, pode ser acessado **apenas** pelas classes que estão no mesmo pacote.
 
 | Class   | Package | Subclass (mesmo pacote) | Subclass (pacote diferente) | Mundo |
 |:---     |:---:    |:---:                    |:---:                        |:---:  |
@@ -139,17 +139,17 @@ Você precisa saber: estas regras serão avaliadas nas provas e nos trabalhos (s
 
 ## Nomes de Classes
 
- - Nomes de classes começam com letra maiúscula
- - Nomes de variáveis começam com letra minúscula
- - Nomes de métodos começam com letra minúscula
- - Os nomes devem usar o estilo [CamelCase](https://pt.wikipedia.org/wiki/CamelCase)
- - Atributos constantes (`final`) devem ser escritos em caixa alta, separando palavras por `_`
+* Nomes de classes começam com letra maiúscula
+* Nomes de variáveis começam com letra minúscula
+* Nomes de métodos começam com letra minúscula
+* Os nomes devem usar o estilo [CamelCase](https://pt.wikipedia.org/wiki/CamelCase)
+* Atributos constantes (`final`) devem ser escritos em caixa alta, separando palavras por `_`
 
 ## Ordem de Campos, Constructors e Métodos
- - As definições de campos (variáveis), constructors e métodos **de uma classe** devem seguir a ordem
- . Campos
- . Constructors
- . Métodos
+* As definições de campos (variáveis), constructors e métodos **de uma classe** devem seguir a ordem
+    * Campos
+    * Constructors
+    * Métodos
 
 
 ## Exemplo
