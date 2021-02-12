@@ -24,7 +24,7 @@ ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
 
 ## Laboratórios
 
-* [lab00 - comandos básicos](lpoo_files/laboratorio/00-basico/lista_comandos_básicos.pdf)
+* [lab00 - comandos básicos](lpoo_files/laboratorio/00-basico/lista_comandos_basicos.pdf)
 
 ## Extras
 
