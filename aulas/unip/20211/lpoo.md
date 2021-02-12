@@ -22,6 +22,10 @@ ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
 * Parte 02 Orientação a Objetos
     * [Classes](lpoo_files/curso/02/01-classes.html)
 
+## Laboratórios
+
+* [lab00 - comandos básicos](lpoo_files/laboratorio/00-basico/lista_comandos_básicos.pdf)
+
 ## Extras
 
 ### Livros
