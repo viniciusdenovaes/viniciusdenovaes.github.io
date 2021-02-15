@@ -1,4 +1,4 @@
-# LPOO
+# LPOO - Linguagem de Programação Orientada a Objetos (em Java)
 
 
 
@@ -7,6 +7,47 @@ Muitas linhas nos códigos podem não fazer sentido:
 talvez eu tenha colocado para dar um exemplo do que não fazer,
 ou talvez eu tenha colocado para explicar algum conceito pontual,
 ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
+
+## Ementa
+
+* Parte 00 - Revisão: Levamos em consideração que a turma aprendeu o paradigma de programação procedural programando em Python. Será feito uma revisão de tipos primitivos, comandos de controle e procedimentos focando na sintaxe em Java.
+    * Tipos primitivos (`int`, `double`, `boolean`)
+    * Comandos de controle
+        * comandos condicionais (`if`, `if else`, `if else if`)
+        * comandos de repetição (`while`, `for`)
+    * Procedimentos: (métodos estáticos tratados como funções)
+    * Estruturas: arrays
+
+* Parte 01 - Classes e Objetos
+  * Atributos e Métodos
+  * _Constructors_
+  * Composição
+  * Encapsulamento
+  * _Override_
+  * Estruturas:
+    * `ArrayList`
+    * `for-each`: Um novo tipo de `for`
+* Parte 02 - Herança
+  * _Overload_
+  * Exemplos: `toString`, `equals`
+  * `String`: uma classe muito especial
+  * Polimorfismo
+  * Classes Abstratas
+  * Interface (é uma classe totalmente abstrata (v.9))(**NÃO É INTERFACE DE USUÁRIO**)
+  * Exemplos Práticos: `Comparable`, `Iterable`
+  * Estruturas:
+    * `TreeSet`,
+    * `TreeMap`
+* Extras
+    * Leitura e escrita de Dados:
+        * Pelo terminal
+        * Arquivos
+        * [CSV](https://pt.wikipedia.org/wiki/Comma-separated_values)
+    * `Exceptions`
+         * `try-catch`
+         * `finaly`
+         * `try-with-resources`
+
 
 ## Curso
 
@@ -25,6 +66,14 @@ ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
 ## Laboratórios
 
 * [lab00 - comandos básicos](lpoo_files/laboratorio/00-basico/lista_comandos_basicos.pdf)
+* [lab00 - Usando funções (métodos estáticos)](lpoo_files/laboratorio/00-basico/comandos-basicos.html)
+  * [respostas](https://github.com/viniciusdenovaes/Unip211LPOO/tree/main/Lab00/src/lab00)
+
+
+
+## Exemplos Vistos em Sala
+
+* [Github](https://github.com/viniciusdenovaes)
 
 ## Extras
 
