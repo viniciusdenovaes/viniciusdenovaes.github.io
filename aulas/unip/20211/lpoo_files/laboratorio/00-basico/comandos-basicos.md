@@ -229,7 +229,7 @@ E a saída para este `main` deve ser
 
 
 8. Calcule o coeficiente binomial de uma dupla dado pela fórmula
-![equation](http://www.sciweavers.org/tex2img.php?eq=%5Cbinom%7Bn%7D%7Bk%7D%20%3D%5Cfrac%7Bn%21%7D%7Bk%21%28n-k%29%21%7D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+![equation](binomial.png)
 **OBS:** Use o método estático do exercício anterior.
 A assinatura da sua função **deve ser**
 ``` java
