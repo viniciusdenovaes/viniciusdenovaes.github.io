@@ -73,7 +73,7 @@ ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
 
 ## Exemplos Vistos em Sala
 
-* [Github](https://github.com/viniciusdenovaes)
+* [Github](https://github.com/viniciusdenovaes/Unip211LPOO)
 
 ## Extras
 
