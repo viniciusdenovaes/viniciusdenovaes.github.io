@@ -267,13 +267,13 @@ pre[data-line] .line-highlight[data-end]:after {
 
 <p>O comando condicional <code>if</code> tem a seguinte sitaxe em Java:</p>
 <ul>
-<li><code>if</code>:</li>
+<li><code>if</code>: a <code>condicao</code> (uma express&#xE3;o boolean, verdadeiro ou falso) &#xE9; verificada. Caso seja verdadeira o <code>//bloco de comandos 01</code> &#xE9; executado. Caso n&#xE3;o seja, o bloco n&#xE3;o ser&#xE1; executado.</li>
 </ul>
 <pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>condicao<span class="token punctuation">)</span><span class="token punctuation">{</span>
   <span class="token comment">//bloco de comandos 01</span>
 <span class="token punctuation">}</span>
 </pre><ul>
-<li><code>if-else</code>:</li>
+<li><code>if-else</code>: a <code>condicao</code> &#xE9; verificada. Caso seja verdadeira o <code>//bloco de comandos 01</code> &#xE9; executado. Caso n&#xE3;o seja, o <code>//bloco de comandos 02</code> ser&#xE1; executado.</li>
 </ul>
 <pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>condicao<span class="token punctuation">)</span><span class="token punctuation">{</span>
   <span class="token comment">//bloco de comandos 01</span>
@@ -281,11 +281,11 @@ pre[data-line] .line-highlight[data-end]:after {
   <span class="token comment">//bloco de comandos 02</span>
 <span class="token punctuation">}</span>
 </pre><ul>
-<li><code>if-else-if</code>:</li>
+<li><code>if-else-if</code>: a <code>condicao01</code> &#xE9; verificada. Caso a <code>condicao01</code> seja verdadeira, o <code>//bloco de comandos 01</code> &#xE9; executado <strong>e</strong> a <code>condicao02</code> <strong>n&#xE3;o</strong> &#xE9; verificada, <strong>nem</strong> o <code>//bloco de comandos 02</code> ser&#xE1; executado. Caso a <code>condicao01</code> n&#xE3;o seja verdadeira, a <code>condicao02</code> ser&#xE1; verificada e caso esta seja verdadeira o <code>//bloco de comandos 02</code> ser&#xE1; executado.</li>
 </ul>
-<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>condicao<span class="token punctuation">)</span><span class="token punctuation">{</span>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>condicao01<span class="token punctuation">)</span><span class="token punctuation">{</span>
   <span class="token comment">//bloco de comandos 01</span>
-<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>condicao<span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>condicao02<span class="token punctuation">)</span><span class="token punctuation">{</span>
   <span class="token comment">// bloco de comandos 02</span>
 <span class="token punctuation">}</span>
 </pre><h3 class="mume-header" id="continua%C3%A7%C3%A3o">Continua&#xE7;&#xE3;o</h3>
