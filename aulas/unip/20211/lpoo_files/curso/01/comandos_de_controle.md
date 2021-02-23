@@ -29,12 +29,25 @@ if(condicao01){
 }
 ```
 
-### Continuação
+**OBS:** Ao contrário de Python, aqui você precisa usar as chaves `{}`. **NÃO ESQUEÇA**.
+Se você esquecer ele executará só o primeiro comando do bloco. Estranho né? Este é o pior tipo de erro que você pode encontrar no código. Por que ele não dará erro na compilação nem na execução. Mas o seu código estará errado **sem você saber**. Evite isso e **sempre use chaves**.
 
-Existe muito mais material sobre estes assuntos, alguns serão colocados nesta página, outros serão dados em aula, e outros estão nos livros da ementa.
-
-Alguns assuntos não tratados aqui são:
- - `switch`
+* `switch`: Dada uma `expressao` que pode ser `int`, `char`, `String`, `Enum`, [entre outros](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html). A sua `expressao` será comparada com cada um dos literais e executará o bloco respectivo. Caso nenhuma comparação resulte em verdadeiro, o bloco do `default` será executado.
+``` java
+switch(expressao){
+  case literal01:
+    // bloco de comandos 01
+    break;
+  case literal02:
+    // bloco de comandos 02
+    break;
+  case literal03:
+    // bloco de comandos 03
+    break;
+  default:
+    // bloco de comandos 04
+}
+```
 
 
 ## Comandos de Repetição
