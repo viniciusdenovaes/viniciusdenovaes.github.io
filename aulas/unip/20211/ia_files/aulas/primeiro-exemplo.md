@@ -1,7 +1,7 @@
 # Espaço de Estados - Primeiro Exemplo - Pontes de Konisberg
 
 
-Lembrando Aresta é a ponte Vétice é Ilha e Margem
+Lembrando Aresta é a ponte, Vértice é Ilha e Margem
 
 N = Conjunto de **caminhos** que não repetem arestas, onde **caminho** é uma lista de vértice e aresta alternados, que começa e termina com um vértice
 
@@ -17,3 +17,9 @@ com a aresta `a` e o vértice adjacente à `a` que não é o `v`
 I = O conjunto de todos os estados que só tem um vértice
 
 DO = O conjunto de todos os caminhos que contém todas as arestas, e elas não se repetem
+
+#### [Programa feito à partir do Espaço de Estados](https://github.com/viniciusdenovaes/Unip211IA/tree/master/Exemplo01CaminhoEuleriano)
+
+#### Rascunho da árvore planejada
+
+![rascunho](exemplo-esp-est-koni.svg)
