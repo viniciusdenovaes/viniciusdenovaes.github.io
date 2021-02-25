@@ -62,6 +62,7 @@ ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
 
 * Parte 02 Orientação a Objetos
     * [Classes](lpoo_files/curso/02/01-classes.html)
+    * [Convenções](lpoo_files/curso/02/02-convencoes.html)
 
 ## Laboratórios
 
