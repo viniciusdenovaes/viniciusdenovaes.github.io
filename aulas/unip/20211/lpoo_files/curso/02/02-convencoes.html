@@ -266,7 +266,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <p>As regras aqui listadas <strong>n&#xE3;o</strong> v&#xE3;o fazer o seu programa funcionar melhor.</p>
 <p>Mas estas conven&#xE7;&#xF5;es s&#xE3;o importantes para que seu programa seja melhor entendido pelos seus colegas e pela comunidade.<br>
 E <strong>isto</strong> sim, vai evitar que seu programa tenha erros no futuro, seja f&#xE1;cil de manter e corrigir erros, e seja f&#xE1;cil para inserir novas funcionalidades.</p>
-<p>Voc&#xEA; precisa saber: estas regras ser&#xE3;o avaliadas nas provas e nos trabalhos.</p>
+<p>Voc&#xEA; precisa saber: estas regras ser&#xE3;o avaliadas nas provas e nos trabalhos (e na sua carreira profissional).</p>
 <h2 class="mume-header" id="tipos-primitivos">Tipos Primitivos</h2>
 
 <p>Os tipos primitivos que usaremos ser&#xE3;o:</p>
@@ -313,8 +313,15 @@ Por exemplo,</p>
 
 <p><strong>Todo</strong> atributo da sua classe deve ser inicializado no contructor. Mesmo que seja por um valor padr&#xE3;o n&#xE3;o recebido nos argumentos.</p>
 <p><strong>Todo</strong> atributo da sua classe deve ser <code>private</code>. As vari&#xE1;veis que voc&#xEA; quer que o usu&#xE1;rio da sua classe tenha acesso deve ter m&#xE9;todos p&#xFA;blicos <code>get</code> e/ou um <code>set</code>.<br>
-Ent&#xE3;o se voc&#xEA; tem uma classe</p>
-<h2 class="mume-header" id="exemplo">Exemplo</h2>
+Por exemplo, se voc&#xEA; acha que faz sentido que o usu&#xE1;rio <strong>mude</strong> alguma vari&#xE1;vel do tipo <code>String</code> chamada <code>variavelDoExemplo</code>, esta classe <strong>deve</strong> ter o m&#xE9;todo</p>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setVariavelDoExemplo</span><span class="token punctuation">(</span><span class="token class-name">String</span> aVariavelDoExemplo<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>variavelDoExemplo <span class="token operator">=</span> aVariavelDoExemplo<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>Se voc&#xEA; acha que faz sentido que o usu&#xE1;rio <strong>tenha acesso ao valor</strong> de alguma vari&#xE1;vel do tipo <code>String</code> chamada <code>variavelDoExemplo</code>, esta classe <strong>deve</strong> ter o m&#xE9;todo</p>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getVariavelDoExemplo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>variavelDoExemplo<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><h2 class="mume-header" id="exemplo">Exemplo</h2>
 
 <pre data-role="codeBlock" data-info="java" class="language-java"><span class="token comment">// Nome da classe come&#xE7;a com letra mai&#xFA;scula e t&#xEA;m o estilo CamelCase</span>
 <span class="token keyword">class</span> <span class="token class-name">ExemploDeConvencoes</span> <span class="token punctuation">{</span>
@@ -326,6 +333,28 @@ Ent&#xE3;o se voc&#xEA; tem uma classe</p>
     <span class="token keyword">private</span> <span class="token class-name">String</span> variavelDoExemplo<span class="token punctuation">;</span>
     <span class="token keyword">private</span> <span class="token keyword">int</span> numeroDoExemplo<span class="token punctuation">;</span>
     <span class="token keyword">private</span> <span class="token keyword">double</span> pesoDoExemplo<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">ExemploDeConvencoes</span><span class="token punctuation">(</span><span class="token class-name">String</span> aVariavelDoExemplo<span class="token punctuation">,</span> <span class="token keyword">int</span> aNumeroDoExemplo<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>variavelDoExemplo <span class="token operator">=</span> aVariavelDoExemplo<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>numeroDoExemplo <span class="token operator">=</span> aNumeroDoExemplo<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>pesoDoExemplo <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getVariavelDoExemplo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>variavelDoExemplo<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setVariavelDoExemplo</span><span class="token punctuation">(</span><span class="token class-name">String</span> aVariavelDoExemplo<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>variavelDoExemplo <span class="token operator">=</span> aVariavelDoExemplo<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getNumeroDoExemplo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>numeroDoExemplo<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setPesoDoExemplo</span><span class="token punctuation">(</span><span class="token keyword">double</span> aPesoDoExemplo<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>pesoDoExemplo <span class="token operator">=</span> aPesoDoExemplo<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
     <span class="token comment">// M&#xE9;todos come&#xE7;am com letra min&#xFA;scula e t&#xEA;m o estilo CamelCase</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">metodoDoExemplo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>

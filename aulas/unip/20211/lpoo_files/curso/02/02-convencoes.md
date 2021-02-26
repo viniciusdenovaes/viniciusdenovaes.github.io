@@ -5,7 +5,7 @@ As regras aqui listadas **não** vão fazer o seu programa funcionar melhor.
 Mas estas convenções são importantes para que seu programa seja melhor entendido pelos seus colegas e pela comunidade.
 E **isto** sim, vai evitar que seu programa tenha erros no futuro, seja fácil de manter e corrigir erros, e seja fácil para inserir novas funcionalidades.
 
-Você precisa saber: estas regras serão avaliadas nas provas e nos trabalhos.
+Você precisa saber: estas regras serão avaliadas nas provas e nos trabalhos (e na sua carreira profissional).
 
 ## Tipos Primitivos
 Os tipos primitivos que usaremos serão:
@@ -49,7 +49,18 @@ Por exemplo,
 **Todo** atributo da sua classe deve ser inicializado no contructor. Mesmo que seja por um valor padrão não recebido nos argumentos.
 
 **Todo** atributo da sua classe deve ser `private`. As variáveis que você quer que o usuário da sua classe tenha acesso deve ter métodos públicos `get` e/ou um `set`.
-Então se você tem uma classe
+Por exemplo, se você acha que faz sentido que o usuário **mude** alguma variável do tipo `String` chamada `variavelDoExemplo`, esta classe **deve** ter o método
+``` java
+public void setVariavelDoExemplo(String aVariavelDoExemplo){
+  this.variavelDoExemplo = aVariavelDoExemplo;
+}
+```
+Se você acha que faz sentido que o usuário **tenha acesso ao valor** de alguma variável do tipo `String` chamada `variavelDoExemplo`, esta classe **deve** ter o método
+``` java
+public String getVariavelDoExemplo(){
+  return this.variavelDoExemplo;
+}
+```
 
 
 ## Exemplo
@@ -65,6 +76,28 @@ class ExemploDeConvencoes {
     private String variavelDoExemplo;
     private int numeroDoExemplo;
     private double pesoDoExemplo;
+
+    public ExemploDeConvencoes(String aVariavelDoExemplo, int aNumeroDoExemplo){
+      this.variavelDoExemplo = aVariavelDoExemplo;
+      this.numeroDoExemplo = aNumeroDoExemplo;
+      this.pesoDoExemplo = 0;
+    }
+
+    public String getVariavelDoExemplo(){
+        return this.variavelDoExemplo;
+    }
+
+    public void setVariavelDoExemplo(String aVariavelDoExemplo){
+        this.variavelDoExemplo = aVariavelDoExemplo;
+    }
+
+    public int getNumeroDoExemplo(){
+        return this.numeroDoExemplo;
+    }
+
+    public void setPesoDoExemplo(double aPesoDoExemplo){
+        this.pesoDoExemplo = aPesoDoExemplo;
+    }
 
     // Métodos começam com letra minúscula e têm o estilo CamelCase
     public void metodoDoExemplo(){
