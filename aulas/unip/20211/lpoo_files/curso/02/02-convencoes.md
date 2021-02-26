@@ -10,11 +10,11 @@ Você precisa saber: estas regras serão avaliadas nas provas e nos trabalhos.
 ## Tipos Primitivos
 Os tipos primitivos que usaremos serão:
 * `int` para representar um número inteiro,
-* `double` para representar um número real,
+* `double` e `float` para representar um número real,
 * `boolean` para representar um booleano e
 * `char` para representar um character.
 
-Em nenhuma parte do curso você precisará usar `long`, `unsigned` ou `float`.
+Em nenhuma parte do curso você precisará usar `long` ou `unsigned`.
 
 Quando falarmos de `collections` vamos precisar usar `Wrappers` dos tipos primitivos: `Integer`, `Double`, `Boolean` e `Character`. Usaremos `Wrappers` apenas quando precisarmos usar.
 
