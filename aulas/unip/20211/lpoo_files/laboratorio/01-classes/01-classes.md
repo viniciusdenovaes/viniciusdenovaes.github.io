@@ -160,11 +160,25 @@ Uma classe que modele a nota no boletim, chamada "Nota"
 
 Use a sua classe teste para testar as várias possibilidades.
 
+## Fazer uma classe com atributos `private`, e métodos de acesso
+
+### Exercício 07
+
+Fazer a mesma classe do exercício anterior, mas incluir o `@Override` do método `public String toString()`, que imprime os dados do objeto.
+
+Para fazer o `@Override` deste método implemente o método com a seguinte assinatura:
+``` java
+@Override
+public String toString(){
+  // implementação do método
+}
+```
+
 
 
 ## Fazer uma classe com uma variável e método `static`
 
-### Exercício 07
+### Exercício 08
 
 Uma classe que modele um aluno, chamada "Aluno",
 * que tenha os campos `private`
