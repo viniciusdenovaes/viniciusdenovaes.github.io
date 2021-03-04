@@ -1,7 +1,8 @@
 # IA
 
 ## Exemplos feitos em aula:
-* [Pontes de Konisberg](ia_files/aulas/primeiro-exemplo.html)
+* [Pontes de Konisberg](ia_files/aulas/exemplo_01_pontes/primeiro-exemplo.html)
+* [8 Puzzle](ia_files/aulas/exemplo02_8puzzle/exemplo_8puzzle.html)
 
 
 ## Listas:
