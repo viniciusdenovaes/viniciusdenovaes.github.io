@@ -5,4 +5,4 @@
 
 
 ## Listas:
-* [Lista 01 - Espaço de Estados](ia_files/listas/lista01IA.pdf)
+* [Lista 01 - Espaço de Estados](ia_files/listas/01/lista01IA.pdf)
