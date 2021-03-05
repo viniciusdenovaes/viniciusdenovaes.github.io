@@ -57,3 +57,35 @@ Cada aluno deverá ter um método chamado `fazRelatorio` que imprime na tela os 
 Neste exercício você irá fazer um programa que simula uma uma clínica veterinária.
 
 ![Diagrama de Classes](veterinaria.svg)
+
+Faça a classe `Cuidador`, esta classe deve ter:
+* um `nome` que deve ser uma `String`
+* uma `Collection` de `cachorros`, `gatos` e `patos`
+
+Um `Cachorro` deve ter
+* `nome`
+* `idade`
+* `peso`
+* e uma variável `boolean` que indica se este animal está doente
+* Um cachorro não pode ser criado sem um `nome`, `idade` e `peso`, e ele deve sempre ser criado saudável.
+* Deve ser possível acessar `nome`, `idade`, `peso` e `isDoente`
+* Deve ser possível setar o valor do `peso`.
+* O método `aumentaIdade()` deve aumentar a idade em um ano
+* O método `latir()` deve
+  * escrever `au au au` na tela, se o `peso` for menor que 4
+  * escrever `AU AU AU` se o peso for maior ou igual a 4, e a idade for menor ou igual a 10.
+  * escrever `ROOF ROOF ROOF` se o peso for maior ou igual a 4 e a idade for maior que 10.
+* O método `dormir` deve escrever na tela `foi dormir no sofá`
+* O método `comer` deve escrever na tela `comendo ração de cachorro`
+* O método `darInjecao` deve setar a variável `isDoente` para `false`
+* O método `adoece` deve setar a variável `isDoente` para `true`
+
+O `Gato` deve ser igual ao cachorro, com algumas diferenças:
+* O método `miar()` deve escrever `miaaauu` na tela
+* O método `dormir` deve escrever na tela `foi dormir no alto`
+* O método `comer` deve escrever na tela `comendo ração de gato`
+
+O `Gato` deve ser igual ao cachorro, com algumas diferenças:
+* O método `quack()` deve escrever `quaaack quaack` na tela
+* O método `dormir` deve escrever na tela `foi dormir no quintal`
+* O método `comer` deve escrever na tela `comendo o que o pato come`
