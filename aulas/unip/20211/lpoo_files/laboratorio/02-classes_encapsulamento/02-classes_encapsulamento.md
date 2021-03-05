@@ -61,6 +61,7 @@ Neste exercício você irá fazer um programa que simula uma uma clínica veteri
 Faça a classe `Cuidador`, esta classe deve ter:
 * um `nome` que deve ser uma `String`
 * uma `Collection` de `cachorros`, `gatos` e `patos`
+* um método para adicionar `Cachorro`, `Gato` e `Pato` em suas coleções.
 
 Um `Cachorro` deve ter
 * `nome`
