@@ -90,3 +90,45 @@ O `Gato` deve ser igual ao cachorro, com algumas diferenças:
 * O método `quack()` deve escrever `quaaack quaack` na tela
 * O método `dormir` deve escrever na tela `foi dormir no quintal`
 * O método `comer` deve escrever na tela `comendo o que o pato come`
+
+Crie uma classe `Veterinaria` para cuidar do `Cachorro`, `Gato` e `Pato`, um método estático para cada, que siga o seguinte exemplo:
+
+``` java
+public class Veterinaria {
+
+	public static void cuidaDoCachorro(Cachorro cachorro) {
+		System.out.println("Recebendo " + cachorro.getNome());
+		if(!cachorro.getIsDoente()) {
+			System.out.println("O cachorro está saudável");
+			return;
+		}
+
+		System.out.println("Dando injeção para o animalzinho");
+		cachorro.darInjecao();
+		cachorro.latir();
+		cachorro.comer();
+		cachorro.dormir();
+	}
+
+}
+```
+
+
+Crie classes separadas para testar cada uma das suas classes, por exemplo:
+
+``` java
+public class TestaVeterinaria {
+
+	public static void main(String[] args) {
+		Cachorro cachorro01 = new Cachorro("Brutus", 12, 5.0);
+		Veterinaria.cuidaDoCachorro(cachorro01);
+
+		cachorro01.adoece();
+		Veterinaria.cuidaDoCachorro(cachorro01);
+	}
+
+}
+
+```
+
+Crie a `TestaCuidador`, `TestaCachorro`, `TestaGato`, `TestaPato`.
