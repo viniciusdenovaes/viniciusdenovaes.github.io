@@ -29,6 +29,7 @@ ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
 * [lab00 - Usando funções (métodos estáticos)](lpoo_files/laboratorio/00-basico/comandos-basicos.html)
   * [respostas](https://github.com/viniciusdenovaes/Unip211LPOO/tree/main/Lab00/src/lab00)
 * [lab01 - Classes](lpoo_files/laboratorio/01-classes/01-classes.html)
+* [lab02 - Classes com Encapsulamento](lpoo_files/laboratorio/02-classes_encapsulamento/02-classes_encapsulamento.html)
 
 ## Trabalho para a NP1
 
