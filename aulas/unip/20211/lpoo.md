@@ -8,6 +8,40 @@ talvez eu tenha colocado para dar um exemplo do que não fazer,
 ou talvez eu tenha colocado para explicar algum conceito pontual,
 ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
 
+## Curso
+
+* Prólogo
+    * Instalação:
+        * [Linux (Ubuntu)](lpoo_files/curso/00-install/linux/00-tuto_instal_linux_ubuntu.html)
+        * [Windows](lpoo_files/curso/00-install/windows/00-tuto_instal_windows.html)
+
+* Parte 01 Comandos Básicos:
+    * [Tipos Primitivos e Operações](lpoo_files/curso/01/tipos_primitivos.html)
+    * [Comandos de Controle](lpoo_files/curso/01/comandos_de_controle.html)
+
+* Parte 02 Orientação a Objetos
+    * [Classes](lpoo_files/curso/02/01-classes.html)
+    * [Convenções](lpoo_files/curso/02/02-convencoes.html)
+
+## Laboratórios
+
+* [lab00 - comandos básicos](lpoo_files/laboratorio/00-basico/lista_comandos_basicos.pdf)
+* [lab00 - Usando funções (métodos estáticos)](lpoo_files/laboratorio/00-basico/comandos-basicos.html)
+  * [respostas](https://github.com/viniciusdenovaes/Unip211LPOO/tree/main/Lab00/src/lab00)
+* [lab01 - Classes](lpoo_files/laboratorio/01-classes/01-classes.html)
+
+
+## APS
+
+* [Documento da APS (em .docx)](lpoo_files/aps/APS_LPOO_2021.docx)
+* [Roteiro para a APS (em html)](lpoo_files/aps/roteiro.html)
+
+## Exemplos Vistos em Sala
+
+* [Github](https://github.com/viniciusdenovaes/Unip211LPOO)
+
+## Extras
+
 ## Ementa
 
 * Parte 00 - Revisão: Levamos em consideração que a turma aprendeu o paradigma de programação procedural programando em Python. Será feito uma revisão de tipos primitivos, comandos de controle e procedimentos focando na sintaxe em Java.
@@ -48,36 +82,6 @@ ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
          * `finaly`
          * `try-with-resources`
 
-
-## Curso
-
-* Prólogo
-    * Instalação:
-        * [Linux (Ubuntu)](lpoo_files/curso/00-install/linux/00-tuto_instal_linux_ubuntu.html)
-        * [Windows](lpoo_files/curso/00-install/windows/00-tuto_instal_windows.html)
-
-* Parte 01 Comandos Básicos:
-    * [Tipos Primitivos e Operações](lpoo_files/curso/01/tipos_primitivos.html)
-    * [Comandos de Controle](lpoo_files/curso/01/comandos_de_controle.html)
-
-* Parte 02 Orientação a Objetos
-    * [Classes](lpoo_files/curso/02/01-classes.html)
-    * [Convenções](lpoo_files/curso/02/02-convencoes.html)
-
-## Laboratórios
-
-* [lab00 - comandos básicos](lpoo_files/laboratorio/00-basico/lista_comandos_basicos.pdf)
-* [lab00 - Usando funções (métodos estáticos)](lpoo_files/laboratorio/00-basico/comandos-basicos.html)
-  * [respostas](https://github.com/viniciusdenovaes/Unip211LPOO/tree/main/Lab00/src/lab00)
-* [lab01 - Classes](lpoo_files/laboratorio/01-classes/01-classes.html)
-
-
-
-## Exemplos Vistos em Sala
-
-* [Github](https://github.com/viniciusdenovaes/Unip211LPOO)
-
-## Extras
 
 ### Livros
 
