@@ -30,6 +30,9 @@ ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
   * [respostas](https://github.com/viniciusdenovaes/Unip211LPOO/tree/main/Lab00/src/lab00)
 * [lab01 - Classes](lpoo_files/laboratorio/01-classes/01-classes.html)
 
+## Trabalho para a NP1
+
+* [Trabalho para a NP1]()
 
 ## APS
 
@@ -39,8 +42,6 @@ ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
 ## Exemplos Vistos em Sala
 
 * [Github](https://github.com/viniciusdenovaes/Unip211LPOO)
-
-## Extras
 
 ## Ementa
 
