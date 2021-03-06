@@ -35,7 +35,7 @@ O `Gato` deve ser igual ao cachorro, com algumas diferenças:
 * O método `dormir` deve escrever na tela `foi dormir no alto`
 * O método `comer` deve escrever na tela `comendo ração de gato`
 
-O `Gato` deve ser igual ao cachorro, com algumas diferenças:
+O `Pato` deve ser igual ao cachorro, com algumas diferenças:
 * O método `quack()` deve escrever `quaaack quaack` na tela
 * O método `dormir` deve escrever na tela `foi dormir no quintal`
 * O método `comer` deve escrever na tela `comendo o que o pato come`
