@@ -33,7 +33,7 @@ ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
 
 ## Trabalho para a NP1
 
-* [Trabalho para a NP1]()
+* [Trabalho para a NP1](lpoo_files/trabalhos/01/trabalho01.html)
 
 ## APS
 
