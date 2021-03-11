@@ -49,7 +49,7 @@ representa um tabuleiro `3x3` com apenas as células `(0,1)` e `(1,1)` ligadas
 ```
 representa um tabuleiro `4x4` com apenas as células `(0,3)`, `(1,2)` e `(3,0)` ligadas.
 
-
+[Exemplos de instâncias podem ser pegos aqui](insts.zip)
 
 
 

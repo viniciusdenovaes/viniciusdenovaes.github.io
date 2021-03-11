@@ -7,3 +7,7 @@
 
 ## Listas:
 * [Lista 01 - Espaço de Estados](ia_files/listas/01/lista01IA.pdf)
+
+
+## Trabalho 01
+* [Jogo do Desliga a Luz](ia_files/trabalho/trabalho01.html)
