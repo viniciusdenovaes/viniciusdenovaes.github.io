@@ -26,7 +26,7 @@ class GenInst:
         return res
 
 if __name__=='__main__':
-    N = 5
+    N = 3
     gen = GenInst(N)
     for i in range(511):
         filename = 'inst_{}_{:04d}.in'.format(N, i)
