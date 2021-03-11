@@ -1,4 +1,4 @@
-# IA
+# IA (Para o dia 16/04)
 
 ## Exemplos feitos em aula:
 * [Pontes de Konisberg](ia_files/aulas/exemplo_01_pontes/primeiro-exemplo.html)
