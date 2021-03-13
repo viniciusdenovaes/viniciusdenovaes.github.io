@@ -1,4 +1,4 @@
-# Trabalho de LPOO
+# Trabalho de LPOO (grupo de 5 pessoas, para o dia 16/04)
 
 Para este trabalho você deve fazer o sistema de cadastro de um histórico.
 
