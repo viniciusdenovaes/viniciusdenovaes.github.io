@@ -1,4 +1,4 @@
-# Trabalho 01 Jogo do Desliga as Luzes
+# Trabalho 01 Jogo do Desliga as Luzes (Grupo de 5 pessoas, para o dia 16/04)
 
 Faça um modelo de Espaço de Estados para resolver o Jogo do Desliga as Luzes.
 
