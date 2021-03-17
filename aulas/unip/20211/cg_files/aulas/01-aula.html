@@ -271,12 +271,18 @@ pre[data-line] .line-highlight[data-end]:after {
 </ul>
 <h2 class="mume-header" id="matriz-do-ponto">Matriz do Ponto</h2>
 
+<p>Representa&#xE7;&#xE3;o do ponto em duas dimens&#xF5;es como uma matriz.</p>
 <pre data-role="codeBlock" data-info class="language-"><code>p = [ x  y ]
 </code></pre><h2 class="mume-header" id="transla%C3%A7%C3%A3o">Transla&#xE7;&#xE3;o</h2>
 
 <p>Transladar no eixo x com um valor de T_x e no eixo y com um valor de T_y</p>
 <pre data-role="codeBlock" data-info class="language-"><code>M_T = [T_x  T_y]
 </code></pre><pre data-role="codeBlock" data-info class="language-"><code>p&apos; = p + M_T
+</code></pre><p>Exemplo: Se tivermos o ponto (1 ,2) e quisermos transladar para a direita em 5 unidades, e para cima em 3 unidades.<br>
+Somamos este ponto pela matriz</p>
+<pre data-role="codeBlock" data-info class="language-"><code>M_T = [5 3]
+</code></pre><p>O ponto resultante pode ser dado pela equa&#xE7;&#xE3;o</p>
+<pre data-role="codeBlock" data-info class="language-"><code>[1 2] + [5 3] = [6 5]
 </code></pre><h2 class="mume-header" id="escala">Escala</h2>
 
 <p>Aumentar o desenho em S_x em rela&#xE7;&#xE3;o ao eixo x e S_y em rela&#xE7;&#xE3;o ao eixo y</p>
@@ -284,7 +290,29 @@ pre[data-line] .line-highlight[data-end]:after {
 [S_x  0  ]
 [  0  S_y]
 </code></pre><pre data-role="codeBlock" data-info class="language-"><code>p&apos; = p * M_E
-</code></pre>
+</code></pre><p>Exemplo: Se tivermos o ponto (1 ,2) e quisermos escalar em 3 unidades em rela&#xE7;&#xE3;o &#xE0; <code>x</code>, e 5 unidades em rela&#xE7;&#xE3;o &#xE0; y.<br>
+Multiplicamos este ponto pela matriz</p>
+<pre data-role="codeBlock" data-info class="language-"><code>M_E =
+[ 3  0 ]
+[ 0  5 ]
+</code></pre><p>O ponto resultante pode ser dado pela equa&#xE7;&#xE3;o</p>
+<pre data-role="codeBlock" data-info class="language-"><code>[1 2] * [ 3  0 ] = [ 3 10 ]
+        [ 0  5 ]   
+</code></pre><h2 class="mume-header" id="rota%C3%A7%C3%A3o">Rota&#xE7;&#xE3;o</h2>
+
+<p>Rotacionar o desenho em um &#xE2;ngulo de <code>t</code> radiano:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>M_R = [  cos(t) sen(t) ]
+      [ -sen(t) cos(t) ]
+</code></pre><pre data-role="codeBlock" data-info class="language-"><code>p&apos; = p * M_R
+</code></pre><p>Exemplo: Se tivermos o ponto (1 ,2) e quisermos rotacionar <code>pi/2</code> (<code>45&#xBA;</code>).<br>
+Multiplicamos este ponto pela matriz</p>
+<pre data-role="codeBlock" data-info class="language-"><code>[  cos(pi/2) sen(pi/2) ] = [  0 1 ]
+[ -sen(pi/2) cos(pi/2) ]   [ -1 0 ]
+</code></pre><p>O ponto resultante pode ser dado pela equa&#xE7;&#xE3;o</p>
+<pre data-role="codeBlock" data-info class="language-"><code>[1 2] * [  0 1 ] = [ -2 ]
+        [ -1 0 ]   [  1 ]
+</code></pre><p>.</p>
+
       </div>
       
       
