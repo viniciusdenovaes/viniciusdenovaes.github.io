@@ -31,6 +31,7 @@ ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
 * [lab01 - Classes](lpoo_files/laboratorio/01-classes/01-classes.html)
   * [lab01.02 - Classes (Extra)](lpoo_files/laboratorio/01-classes/01.02-classes_extra.html)
 * [lab02 - Classes com Encapsulamento](lpoo_files/laboratorio/02-classes_encapsulamento/02-classes_encapsulamento.html)
+  * [lab02 - Classes com encapsulamento (Extra)](lpoo_files/laboratorio/02-classes_encapsulamento/02-classes_encapsulamento02.pdf)
 
 ## Trabalho para a NP1
 
