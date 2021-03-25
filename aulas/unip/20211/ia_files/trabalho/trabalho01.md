@@ -25,7 +25,7 @@ O seu programa deve receber uma instância e exibir na saída padrão uma soluç
 
 #### Entrada
 A entrada será fornecida em um arquivo `instxx.in` que estará estruturado da seguinte maneira:
-* na primeira linha terá o tamanho do tabuleiro, podendo varia de `3` a `5` (lembrando que o tabuleiro é quadrado)
+* na primeira linha terá o tamanho do tabuleiro, podendo varia de `3` a `4` (lembrando que o tabuleiro é quadrado)
 * nas `N` linhas seguintes cada linha do tabuleiro.
 * o número `0` significa que a célula está desligada, enquanto que o número `1` significa que a célula está ligada.
 
