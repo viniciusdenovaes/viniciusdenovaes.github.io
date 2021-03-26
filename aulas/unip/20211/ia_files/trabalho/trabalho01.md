@@ -52,7 +52,10 @@ representa um tabuleiro `4x4` com apenas as células `(0,3)`, `(1,2)` e `(3,0)` 
 [Exemplos de instâncias podem ser pegos aqui](insts.zip)
 
 
-
+Pontuação:
+* A escrita do espaço de estados: 5pt
+* A solução do problema: 2.5pt
+* A solução do problema usando espaço de estados: 2.5pt
 
 
 
