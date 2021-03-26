@@ -23,6 +23,9 @@ O que tem de adicionais:
 O que muda:
 * o método `getPagamento()` soma o `salario` e o `bonus`
 
+Também faça na classe `Financeiro`
+* o método `static public void fazPagamentoGerente(Gerente)` que imprime o pagamento sendo feito ao gerente.
+
 
 ##### Horista
 
@@ -33,6 +36,9 @@ O que tem de adicionais:
 
 O que muda:
 * o método `getPagamento()` soma o `salario` multiplicado pelas `horas`
+
+Também faça na classe `Financeiro`
+* o método `static public void fazPagamentoHorista(Horista)` que imprime o pagamento sendo feito ao horista.
 
 
 

@@ -23,6 +23,7 @@ ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
     * [Classes](lpoo_files/curso/02/01-classes.html)
     * [Convenções](lpoo_files/curso/02/02-convencoes.html)
 
+
 ## Laboratórios
 
 * [lab00 - comandos básicos](lpoo_files/laboratorio/00-basico/lista_comandos_basicos.pdf)
@@ -32,6 +33,12 @@ ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
   * [lab01.02 - Classes (Extra)](lpoo_files/laboratorio/01-classes/01.02-classes_extra.html)
 * [lab02 - Classes com Encapsulamento](lpoo_files/laboratorio/02-classes_encapsulamento/02-classes_encapsulamento.html)
   * [lab02 - Classes com encapsulamento (Extra)](lpoo_files/laboratorio/02-classes_encapsulamento/02-classes_encapsulamento02.pdf)
+* lab03 - Herança, Classes Abstratas e Polimorfismo
+  * [Exemplo sem Herança (Feito em sala)](lpoo_files/laboratorio/03-heranca/03-exercicio_sem_heranca.html)
+  * [Modificando exercícios anteriores com Herança, classe abstrata e polimorfismo](lpoo_files/laboratorio/03-heranca/03-exercicio_com_heranca.html)
+  * [Lista de exercícios](lpoo_files/laboratorio/03-heranca/03-exercicios_lista_heranca.pdf)
+
+
 
 ## Trabalho para a NP1
 
