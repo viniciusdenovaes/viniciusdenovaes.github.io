@@ -57,7 +57,7 @@ M_E =
 ```
 O ponto resultante pode ser dado pela equação
 ```
-[1 2] * [ 3  0 ] = [ 3 10 ]
+[1 2] * [ 3  0 ] = [ 3  10 ]
         [ 0  5 ]   
 ```
 
@@ -80,14 +80,37 @@ Multiplicamos este ponto pela matriz
 ```
 O ponto resultante pode ser dado pela equação
 ```
-[1 2] * [  0 1 ] = [ -2 ]
-        [ -1 0 ]   [  1 ]
+[1 2] * [  0 1 ] = [ -2  1 ]
+        [ -1 0 ]   
 ```
 
+## Cisalhamento
 
+Para aplicar o cisalhamento em um ponto basta multiplicar pela seguinte matriz, onde o valor S_h é quanto você irá inclinar em relação ao eixo horizontal
 
+```
+M_Ch = [   1 0 ]
+       [ S_h 1 ]
+```
 
+Exemplo: Se tivermos o ponto (1 ,2) e quisermos cisalhar em 2, com relação ao eixo horizontal.
+Multiplicamos este ponto pela matriz
+```
+[ 1 0 ]
+[ 2 1 ]
+```
+O ponto resultante pode ser dado pela equação
+```
+[1 2] * [ 1  0 ] = [ 5  2 ]
+        [ 2  1 ]   
+```
 
+Semelhante, para aplicar o cisalhamento vertical em um ponto basta multiplicar pela seguinte matriz, onde o valor S_v é quanto você irá inclinar em relação ao eixo vertical
+
+```
+M_Ch = [ 1  S_v ]
+       [ 0    1 ]
+```
 
 
 
