@@ -37,7 +37,8 @@ ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
   * [Exemplo sem Herança (Feito em sala)](lpoo_files/laboratorio/03-heranca/03-exercicio_sem_heranca.html)
   * [Modificando exercícios anteriores com Herança, classe abstrata e polimorfismo](lpoo_files/laboratorio/03-heranca/03-exercicio_com_heranca.html)
   * [Lista de exercícios](lpoo_files/laboratorio/03-heranca/03-exercicios_lista_heranca.pdf)
-
+* lab04 - Interfaces
+  * [Exemplo sem interface](lpoo_files/laboratorio/04-interfaces/04-sem_interface.html)
 
 
 ## Trabalho para a NP1
