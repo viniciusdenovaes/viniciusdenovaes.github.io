@@ -6,10 +6,10 @@ Faça uma classe `Heroi` que tenha os tributos:
 Faça uma classe `SuperHomem` que seja filha de `Heroi` e tenha o método
 * `voa()`
 
-Faça uma classe `Automotor` que tenha os tributos:
+Faça uma classe `Automovel` que tenha os tributos:
 * `modelo` que seja uma `String`
 
-Faça uma classe `Aviao` que seja filha de `Automotor` e tenha o método
+Faça uma classe `Aviao` que seja filha de `Automovel` e tenha o método
 * `voa()`
 
 Faça uma classe `Animal` que tenha os tributos:
