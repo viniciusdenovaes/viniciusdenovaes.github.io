@@ -39,6 +39,7 @@ ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
   * [Lista de exercícios](lpoo_files/laboratorio/03-heranca/03-exercicios_lista_heranca.pdf)
 * lab04 - Interfaces
   * [Exemplo sem interface](lpoo_files/laboratorio/04-interfaces/04-sem_interface.html)
+  * [Lista de Interfaces](lpoo_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.pdf)
 
 
 ## Trabalho para a NP1
