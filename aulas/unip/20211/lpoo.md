@@ -40,6 +40,7 @@ ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
 * lab04 - Interfaces
   * [Exemplo sem interface](lpoo_files/laboratorio/04-interfaces/04-sem_interface.html)
   * [Lista de Interfaces](lpoo_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.pdf)
+    * [Gabarito](lpoo_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.zip)
 
 
 ## Trabalho para a NP1
