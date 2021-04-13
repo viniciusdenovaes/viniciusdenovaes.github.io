@@ -1,9 +1,9 @@
 <!DOCTYPE html><html><head>
-      <title>cg</title>
+      <title>02-aula_equacoes</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="file:////home/vinicius/.atom/packages/markdown-preview-enhanced/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
       
       
       
@@ -261,22 +261,50 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="computa%C3%A7%C3%A3o-gr%C3%A1fica">Computa&#xE7;&#xE3;o Gr&#xE1;fica</h1>
+      <h1 class="mume-header" id="equa%C3%A7%C3%B5es-anal%C3%ADticas-e-param%C3%A9tricas">Equa&#xE7;&#xF5;es Anal&#xED;ticas e Param&#xE9;tricas</h1>
 
-<p>Aulas</p>
-<ul>
-<li><a href="cg_files/aulas/01-aula.html">Aula 01 Transforma&#xE7;&#xF5;es</a></li>
-<li><a href>Aula 02 Transforma&#xE7;&#xF5;es em Coordenadas Homog&#xEA;neas</a></li>
-<li><a href="cg_files/aulas/02-aula_equacoes.html">Aula 03 Equa&#xE7;&#xF5;es Cartesianas e Param&#xE9;tricas</a></li>
-</ul>
-<p>Listas</p>
-<ul>
-<li><a href="cg_files/listas/01/lista01CG.pdf">Lista 01</a></li>
-</ul>
-<p>Trabalho</p>
-<ul>
-<li><a href="cg_files/trabalhos/trabalho01.html">Trabalho 01</a></li>
-</ul>
+<h3 class="mume-header" id="equa%C3%A7%C3%A3o-anal%C3%ADtica">Equa&#xE7;&#xE3;o anal&#xED;tica</h3>
+
+<p>Serve principalmente para verificar <strong>onde</strong> pontos est&#xE3;o em rela&#xE7;&#xE3;o &#xE0; curva.</p>
+<p>Equa&#xE7;&#xE3;o anal&#xED;tica do c&#xED;rculo &#xE9;</p>
+<p>c: x^2 + y^2 = 1</p>
+<p>Por exemplo, pontos em que x^2 + y^2 &lt; 1 est&#xE3;o <strong>dentro</strong> da curva.</p>
+<h3 class="mume-header" id="equa%C3%A7%C3%A3o-param%C3%A9trica">Equa&#xE7;&#xE3;o Param&#xE9;trica</h3>
+
+<p>A equa&#xE7;&#xE3;o param&#xE9;trica serve para <strong>pegar</strong> pontos que est&#xE3;o na curva</p>
+<h5 class="mume-header" id="c%C3%ADrculo">C&#xED;rculo</h5>
+
+<p>A equa&#xE7;&#xE3;o param&#xE9;trica do c&#xED;rculo com raio r e centro em (a, b) &#xE9;</p>
+<pre data-role="codeBlock" data-info class="language-"><code>x = a + r*cos(t)
+y = b + r*sin(t)
+</code></pre><p>para t variando em <code>[0, 2*PI]</code></p>
+<p>Para (a, b) = (0, 0), e r = 1<br>
+Um ponto com t = 0:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>x = 1*cos(0) = 1
+y = 1*sin(0) = 0
+(1, 0)
+</code></pre><p>Um ponto com t = PI/4:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>x = 1*cos(PI/4) = sqrt(2)/2
+y = 1*sin(PI/4) = sqrt(2)/2
+(sqrt(2)/2, sqrt(2)/2)
+</code></pre><p>Um ponto com t = PI/2:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>x = 1*cos(PI/2) = 0
+y = 1*sin(PI/2) = 1
+(0, 1)
+</code></pre><p>Um ponto com t = 2*PI:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>x = 1*cos(2*PI) = 0
+y = 1*sin(2*PI) = 1
+(0, 1)
+</code></pre><p>Exemplo do Leonardo para fazer iterativamente variando em i, para i de 0 a <code>detailLevel-1</code>, onde <code>detailLevel</code> &#xE9; a quantidade de retas que formam o c&#xED;rculo:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>v[i][0] = a + radius * Math.sin((2 * Math.PI * i) / detailLevel);
+
+v[i][1] = b + radius * Math.cos((2 * Math.PI * i) / detailLevel);
+</code></pre><h5 class="mume-header" id="el%C3%ADpse">El&#xED;pse</h5>
+
+<p>A equa&#xE7;&#xE3;o param&#xE9;trica da el&#xED;pse com largura <code>2*r_1</code> e altura <code>2*r_2</code> e centro em (a, b) &#xE9;</p>
+<pre data-role="codeBlock" data-info class="language-"><code>x = a + r_1*cos(t)
+y = b + r_2*sin(t)
+</code></pre><p>.</p>
 
       </div>
       
