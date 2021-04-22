@@ -3,7 +3,8 @@
 ## Exemplos feitos em aula:
 * [Pontes de Konisberg](ia_files/aulas/exemplo_01_pontes/primeiro-exemplo.html)
 * [8 Puzzle](ia_files/aulas/exemplo02_8puzzle/exemplo_8puzzle.html)
-
+* [8 Puzzle - Heurística de avaliação](ia_files/aulas/exemplo03_8puzzle_heuristica_avaliacao/heuristica_de_avaliacao.html)
+* [Algoritmo A*](ia_files/aulas/exemplo04_algoritmo_A_estrela/algoritmo_a_estrela.html)
 
 ## Listas:
 * [Lista 01 - Espaço de Estados](ia_files/listas/01/lista01IA.pdf)

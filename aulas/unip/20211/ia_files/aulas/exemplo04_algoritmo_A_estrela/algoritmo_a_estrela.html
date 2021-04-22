@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>ia</title>
+      <title>algoritmo_a_estrela</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -261,28 +261,27 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="ia-para-o-dia-1604">IA (Para o dia 16/04)</h1>
+      <h1 class="mume-header" id="algoritmo-a">Algoritmo A*</h1>
 
-<h2 class="mume-header" id="exemplos-feitos-em-aula">Exemplos feitos em aula:</h2>
-
-<ul>
-<li><a href="ia_files/aulas/exemplo_01_pontes/primeiro-exemplo.html">Pontes de Konisberg</a></li>
-<li><a href="ia_files/aulas/exemplo02_8puzzle/exemplo_8puzzle.html">8 Puzzle</a></li>
-<li><a href="ia_files/aulas/exemplo03_8puzzle_heuristica_avaliacao/heuristica_de_avaliacao.html">8 Puzzle - Heur&#xED;stica de avalia&#xE7;&#xE3;o</a></li>
-<li><a href="ia_files/aulas/exemplo04_algoritmo_A_estrela/algoritmo_a_estrela.html">Algoritmo A*</a></li>
-</ul>
-<h2 class="mume-header" id="listas">Listas:</h2>
-
-<ul>
-<li><a href="ia_files/listas/01/lista01IA.pdf">Lista 01 - Espa&#xE7;o de Estados</a></li>
-<li><a href="ia_files/listas/02/lista02IA.pdf">Lista 02 - Heur&#xED;stica de Avalia&#xE7;&#xE3;o</a></li>
-<li><a href="ia_files/listas/03/lista03IA.pdf">Lista 03 - Busca da Melhor Escolha</a></li>
-</ul>
-<h2 class="mume-header" id="trabalho-01">Trabalho 01</h2>
-
-<ul>
-<li><a href="ia_files/trabalho/trabalho01.html">Jogo do Desliga a Luz</a></li>
-</ul>
+<p>Considere uma fun&#xE7;&#xE3;o de avalia&#xE7;&#xE3;o heur&#xED;stica<br>
+<code>f(n) = g(n) + h(n)</code><br>
+onde:<br>
+<code>n</code> &#xE9; um estado<br>
+<code>g(n)</code> &#xE9; o custo do caminho a partir do estado inicial at&#xE9; <code>n</code><br>
+<code>h(n)</code> &#xE9; (uma estimativa) o custo do estado <code>n</code> at&#xE9; um estado objetivo.</p>
+<p>Usando esta heur&#xED;stica de avalia&#xE7;&#xE3;o com a busca da melhor escolha teremos um algoritmo chamado &quot;Algoritmo A&quot;</p>
+<p>Defini&#xE7;&#xE3;o: Se a primeira solu&#xE7;&#xE3;o que o algoritmo encontrar for a melhor, este algoritmo &#xE9; admiss&#xED;vel.</p>
+<p>Suponha que exista um <code>h*(n)</code> com o custo real de ir do estado <code>n</code> at&#xE9; o objetivo. Se a sua heur&#xED;stica de avalia&#xE7;&#xE3;o <code>h(n)</code> &#xE9; <code>h(n) &lt;= h*(n)</code> ent&#xE3;o teremos um algoritmo A*.</p>
+<p>O algortimo A* &#xE9; admiss&#xED;vel.</p>
+<p>Por exemplo podemos ver que o problema de encontrar o caminho m&#xED;nimo no seguinte mapa</p>
+<p><img src="mapa.png" alt="mapa"></p>
+<p>pode ser resolvido pela seguinte busca, usando <code>h(n) = 0</code></p>
+<p><img src="exemplo_hn_0.png" alt="arvore de busca"></p>
+<p>Por&#xE9;m podemos ter uma busca mais informada usando <code>h(n) = valor da reta de n at&#xE9; o</code> dado pela seguinte tabela:</p>
+<p><img src="tabela_reta.png" alt="tabela de valor das retas"></p>
+<p>Podemos ver que a busca com maior informa&#xE7;&#xE3;o &#xE9; mais direcionada, abrindo menos estados</p>
+<p><img src="exemplo_hn_reta.png" alt="arvore de busca mais informada"></p>
+<p>.</p>
 
       </div>
       
