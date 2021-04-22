@@ -45,7 +45,7 @@ Para que um aluno seja aprova ele deve ter média final maior ou igual a `5.0`.
 
 Para calcular a "média final" devemos calcular duas médias:
 * Devesse pegar as **duas maiores** notas entre a `np1`, `np2`, e `sub` e calcular esta média. Se esta média for maior, ou igual, a `7.0` então está será a "média final".
-* Caso a média anterior seja menor que `7.0`, devesse calcular a média entre a "média anterior" e o exame, o resultado será a "média final".
+* Caso a média anterior seja menor que `7.0`, deve-se calcular a média entre a "média anterior" e o exame, o resultado será a "média final".
 
 **OBS**: este cálculo da média não representa a mesma regra que a Unip usa.
 
