@@ -8,7 +8,29 @@ y: b*sen(t)
 t in [0, 2\pi]
 
 
+3
+a) y = x
 
+* translação em x: 
+
+(x', y') = (x+2, y)
+x' = x+2 => x = x'-2
+y' = y   => y = y'
+
+a nova equação da reta: y = x-2 
+
+* rotação de 90º graus
+
+(x', y') = (x*cos(t) - y*sen(t), x*sen(t) + y*cos(t))
+
+x' = x*cos(t) - y*sen(t)
+y' = x*sen(t) + y*cos(t)
+
+t = 90º
+x' = x*cos(90º) - y*sen(90º) = - y*1 => y = -x'
+y' = x*sen(90º) + y*cos(90º) = x*1 => x = y'
+
+a nova equação será da reta: y = x
 
 
 
