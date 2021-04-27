@@ -30,7 +30,68 @@ t = 90º
 x' = x*cos(90º) - y*sen(90º) = - y*1 => y = -x'
 y' = x*sen(90º) + y*cos(90º) = x*1 => x = y'
 
-a nova equação será da reta: y = x
+a nova equação será da reta: y = -x
+
+* escala de 2 em y
+
+x' = x => x = x'
+y' = 2y => y = y'/2
+
+y/2 = x => y = 2x
+
+a nova equação da reta será : y = 2x
+
+* escala de 2 em x
+
+a nova equação da reta será: y = x/2
+
+
+
+b) a equação paramétrica 
+x = t
+y = t
+
+* translação de 2 em x
+x' = x+2 => x = x'-2
+y' = y
+
+x'-2 = t => x' = t+2
+y' = t
+
+a nova equação paramétrica será 
+x = t+2
+y = t
+
+* rotação de 90º
+
+x' = x*cos(90º) - y*sen(90º) = - y*1 => y = -x' => -x' = t => x' = -t
+y' = x*sen(90º) + y*cos(90º) = x*1 => x = y' => y' = t
+
+a nova equação paramétrica será 
+x = -t
+y = t
+
+
+* escala de 2 em y
+
+x' = x  => x' = t
+y' = 2y => y' = 2t
+
+a nova equação paramétrica será 
+x = t
+y = 2t
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

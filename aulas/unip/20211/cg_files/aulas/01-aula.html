@@ -296,7 +296,7 @@ Multiplicamos este ponto pela matriz</p>
 [ 3  0 ]
 [ 0  5 ]
 </code></pre><p>O ponto resultante pode ser dado pela equa&#xE7;&#xE3;o</p>
-<pre data-role="codeBlock" data-info class="language-"><code>[1 2] * [ 3  0 ] = [ 3 10 ]
+<pre data-role="codeBlock" data-info class="language-"><code>[1 2] * [ 3  0 ] = [ 3  10 ]
         [ 0  5 ]   
 </code></pre><h2 class="mume-header" id="rota%C3%A7%C3%A3o">Rota&#xE7;&#xE3;o</h2>
 
@@ -304,13 +304,30 @@ Multiplicamos este ponto pela matriz</p>
 <pre data-role="codeBlock" data-info class="language-"><code>M_R = [  cos(t) sen(t) ]
       [ -sen(t) cos(t) ]
 </code></pre><pre data-role="codeBlock" data-info class="language-"><code>p&apos; = p * M_R
+</code></pre><pre data-role="codeBlock" data-info class="language-"><code>[x&apos;  y&apos;] = [x  y] * [  cos(t) sen(t) ] = [x*cos(t) - y*sen(t)     x*sen(t) + y*cos(t)]
+                    [ -sen(t) cos(t) ]
 </code></pre><p>Exemplo: Se tivermos o ponto (1 ,2) e quisermos rotacionar <code>pi/2</code> (<code>45&#xBA;</code>).<br>
 Multiplicamos este ponto pela matriz</p>
 <pre data-role="codeBlock" data-info class="language-"><code>[  cos(pi/2) sen(pi/2) ] = [  0 1 ]
 [ -sen(pi/2) cos(pi/2) ]   [ -1 0 ]
 </code></pre><p>O ponto resultante pode ser dado pela equa&#xE7;&#xE3;o</p>
-<pre data-role="codeBlock" data-info class="language-"><code>[1 2] * [  0 1 ] = [ -2 ]
-        [ -1 0 ]   [  1 ]
+<pre data-role="codeBlock" data-info class="language-"><code>[1 2] * [  0 1 ] = [ -2  1 ]
+        [ -1 0 ]   
+</code></pre><h2 class="mume-header" id="cisalhamento">Cisalhamento</h2>
+
+<p>Para aplicar o cisalhamento em um ponto basta multiplicar pela seguinte matriz, onde o valor S_h &#xE9; quanto voc&#xEA; ir&#xE1; inclinar em rela&#xE7;&#xE3;o ao eixo horizontal</p>
+<pre data-role="codeBlock" data-info class="language-"><code>M_Ch = [   1 0 ]
+       [ S_h 1 ]
+</code></pre><p>Exemplo: Se tivermos o ponto (1 ,2) e quisermos cisalhar em 2, com rela&#xE7;&#xE3;o ao eixo horizontal.<br>
+Multiplicamos este ponto pela matriz</p>
+<pre data-role="codeBlock" data-info class="language-"><code>[ 1 0 ]
+[ 2 1 ]
+</code></pre><p>O ponto resultante pode ser dado pela equa&#xE7;&#xE3;o</p>
+<pre data-role="codeBlock" data-info class="language-"><code>[1 2] * [ 1  0 ] = [ 5  2 ]
+        [ 2  1 ]   
+</code></pre><p>Semelhante, para aplicar o cisalhamento vertical em um ponto basta multiplicar pela seguinte matriz, onde o valor S_v &#xE9; quanto voc&#xEA; ir&#xE1; inclinar em rela&#xE7;&#xE3;o ao eixo vertical</p>
+<pre data-role="codeBlock" data-info class="language-"><code>M_Ch = [ 1  S_v ]
+       [ 0    1 ]
 </code></pre><p>.</p>
 
       </div>
