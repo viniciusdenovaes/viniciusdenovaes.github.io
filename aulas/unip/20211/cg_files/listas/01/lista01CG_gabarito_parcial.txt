@@ -1,0 +1,14 @@
+exercicio 1
+
+equação cartesiana: (x/a)^2 + (y/b)^2 = 1
+
+equação parametrica:
+x: a*cos(t)
+y: b*sen(t)
+t in [0, 2\pi]
+
+
+
+
+
+

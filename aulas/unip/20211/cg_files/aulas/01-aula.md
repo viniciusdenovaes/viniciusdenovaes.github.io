@@ -72,6 +72,10 @@ M_R = [  cos(t) sen(t) ]
 ```
 p' = p * M_R
 ```
+```
+[x'  y'] = [x  y] * [  cos(t) sen(t) ] = [x*cos(t) - y*sen(t)     x*sen(t) + y*cos(t)]
+                    [ -sen(t) cos(t) ]
+```
 Exemplo: Se tivermos o ponto (1 ,2) e quisermos rotacionar `pi/2` (`45º`).
 Multiplicamos este ponto pela matriz
 ```
