@@ -7,6 +7,7 @@ Aulas
 
 Listas
 * [Lista 01](cg_files/listas/01/lista01CG.pdf)
+  * [gabarito parcial (explicação na sala)](cg_files/listas/01/lista01CG_gabarito_parcial.txt)
 
 Trabalho
 * [Trabalho 01](cg_files/trabalhos/trabalho01.html)
