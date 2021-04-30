@@ -14,3 +14,7 @@
 
 ## Trabalho 01
 * [Jogo do Desliga a Luz](ia_files/trabalho/trabalho01.html)
+
+Livros:
+
+* [Luger](https://www.amazon.com.br/Intelig%C3%AAncia-artificial-George-Luger/dp/8581435505): Recomendado (capítulos 3.1.3, 3.2.2, 3.2.3, 3.2.4, 4.1.1, 4.2.1, 4.2.2, 4.3, 4.4)
