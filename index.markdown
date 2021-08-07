@@ -2,15 +2,19 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: home
+# layout: home
 ---
 
 ## Aulas
 
+### Atuais (2021/2)
+* [PI](aulas/unip/20212/pi.md)
+* [SII](aulas/unip/20212/sii.md)
+
 ### Atuais (2021/1)
- * [LPOO](aulas/unip/20211/lpoo.md)
- * [IA](aulas/unip/20211/ia.md)
- * [CG](aulas/unip/20211/cg.md)
+* [LPOO](aulas/unip/20211/lpoo.md)
+* [IA](aulas/unip/20211/ia.md)
+* [CG](aulas/unip/20211/cg.md)
 
 ### 2020/2
 * [ALPOO Diurno](aulas/unip/20202/alpoo.md)
