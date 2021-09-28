@@ -16,7 +16,7 @@ A data de entrega do trabalho será dia 09/11/2021
 
 Você pode escolher fazer o trabalho 01 ou trabalho 02:
 * [Trabalho 01: Limiarização](pi_files/trabalhos/01/trabalho01.html)
-* [Trabalho 02: Filtros](pi_files/trabalhos/01/trabalho02.html)
+* [Trabalho 02: Filtros](pi_files/trabalhos/02/trabalho02.html)
 
 O trabalho vale 5 pontos na média.
 
