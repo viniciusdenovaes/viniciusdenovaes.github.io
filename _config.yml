@@ -21,8 +21,7 @@
 title: Vinicius de Novaes
 email: viniciusdenovaes@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Esta é a minha página pessoal.
-  Aqui você vai encontrar informações relativas às minhas aulas no
+  Nesta página você vai encontrar informações relativas às minhas aulas no
   curso de Ciência da Computação e Sistemas de Informações na Unip - Swift.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
