@@ -8,16 +8,16 @@ layout: home
 ## Aulas
 
 ### Atuais (2021/2)
-* [PI](aulas/unip/20212/pi.md)
-* [SII](aulas/unip/20212/sii.md)
+* [PI](aulas/unip/20212/pi.html)
+* [SII](aulas/unip/20212/sii.html)
 
 ### Atuais (2021/1)
-* [LPOO](aulas/unip/20211/lpoo.md)
-* [IA](aulas/unip/20211/ia.md)
-* [CG](aulas/unip/20211/cg.md)
+* [LPOO](aulas/unip/20211/lpoo.html)
+* [IA](aulas/unip/20211/ia.html)
+* [CG](aulas/unip/20211/cg.html)
 
 ### 2020/2
-* [ALPOO Diurno](aulas/unip/20202/alpoo.md)
-* [ALPOO Noturno](aulas/unip/20202/alpoo_noturno.md)
-* [PI](aulas/unip/20202/pi.md)
-* [SII](aulas/unip/20202/sii.md)
+* [ALPOO Diurno](aulas/unip/20202/alpoo.html)
+* [ALPOO Noturno](aulas/unip/20202/alpoo_noturno.html)
+* [PI](aulas/unip/20202/pi.html)
+* [SII](aulas/unip/20202/sii.html)
