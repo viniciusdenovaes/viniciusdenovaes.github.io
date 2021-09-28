@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>pi</title>
+      <title>trabalho02</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -261,47 +261,34 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="processamento-de-imagens">Processamento de Imagens</h1>
+      <h1 class="mume-header" id="trabalho-02-de-pi-filtros">Trabalho 02 de PI: Filtros</h1>
 
-<h2 class="mume-header" id="ementa">Ementa:</h2>
-
+<p>Para este trabalho voc&#xEA; deve fazer um programa que receba qualquer imagem com tr&#xEA;s canais de cores (RGB) e forne&#xE7;a tr&#xEA;s imagens resultantes do processo de <em>blur</em>, clareamento das bordas e <em>sharpening</em>.</p>
+<p>Voc&#xEA; pode dar ao usu&#xE1;rio a possibilidade de escolher qual das tr&#xEA;s a&#xE7;&#xF5;es usar, ou fazer as tr&#xEA;s a&#xE7;&#xF5;es e mostrar o resultado ao usu&#xE1;rio (ou somente guardar a imagem no disco)</p>
 <ul>
-<li>Representa&#xE7;&#xE3;o da Imagem como matriz</li>
-<li>Histograma de Imagens (<a href="pi_files/slides/transparenciasvol2cap3.pdf">slide 3.4</a>)</li>
-<li>Segmenta&#xE7;&#xE3;o (bin&#xE1;ria) em imagens (<a href="pi_files/slides/transparenciasvol2cap3.pdf">slide 3.5</a>)</li>
-<li>Aplica&#xE7;&#xE3;o de filtros (m&#xE1;scaras) (<a href="pi_files/slides/transparenciasvol2cap5.pdf">slide 5.2</a>):
-<ul>
-<li>blur</li>
-<li>sharpening</li>
-<li>edges</li>
+<li><em>blur</em>: a transforma&#xE7;&#xE3;o <em>blur</em> pode ser feita passando a m&#xE1;scara</li>
 </ul>
+<pre data-role="codeBlock" data-info class="language-"><code>1 1 1
+1 1 1
+1 1 1
+</code></pre><p>na imagem e dividindo o resultado por 9.</p>
+<ul>
+<li>Clareamento das bordas: o filtro de clareamento das bordas da imagem pode ser feito somando o resultado de passagem das seguintes m&#xE1;scaras:</li>
+</ul>
+<pre data-role="codeBlock" data-info class="language-"><code> 1  2  1
+ 0  0  0
+-1 -2 -1
+</code></pre><p>e</p>
+<pre data-role="codeBlock" data-info class="language-"><code>1 0 -1
+2 0 -2
+1 0 -1
+</code></pre><p>lembrando de limitar o valor de cada pixel a, no m&#xED;nimo, 0 e, no m&#xE1;ximo, 255</p>
+<ul>
+<li>
+<p><em>unsharp</em>: A imagem original menos a imagem resultante do filtro <em>blur</em></p>
 </li>
-</ul>
-<h2 class="mume-header" id="trabalhos">Trabalhos</h2>
-
-<p>A data de entrega do trabalho ser&#xE1; dia 09/11/2021</p>
-<p>Voc&#xEA; pode escolher fazer o trabalho 01 ou trabalho 02:</p>
-<ul>
-<li><a href="pi_files/trabalhos/01/trabalho01.html">Trabalho 01: Limiariza&#xE7;&#xE3;o</a></li>
-<li><a href="pi_files/trabalhos/01/trabalho02.html">Trabalho 02: Filtros</a></li>
-</ul>
-<p>O trabalho vale 5 pontos na m&#xE9;dia.</p>
-<p>O trabalho deve ser submetido no teams.</p>
-<h2 class="mume-header" id="bibliografia">Bibliografia</h2>
-
-<ul>
-<li><a href="http://computacaografica.ic.uff.br/vol2.html">Computa&#xE7;&#xE3;o Gr&#xE1;fica Volume 2. Autores: Aura Conci, Eduardo Azevedo e Fabiana R. Leta</a>
-<ul>
-<li>slides do livro:</li>
-<li><a href="pi_files/slides/transparenciasvol2cap1.pdf">cap&#xED;tulo 1</a></li>
-<li><a href="pi_files/slides/transparenciasvol2cap2.pdf">cap&#xED;tulo 2</a></li>
-<li><a href="pi_files/slides/transparenciasvol2cap3.pdf">cap&#xED;tulo 3</a></li>
-<li><a href="pi_files/slides/transparenciasvol2cap4.pdf">cap&#xED;tulo 4</a></li>
-<li><a href="pi_files/slides/transparenciasvol2cap5.pdf">cap&#xED;tulo 5</a></li>
-<li><a href="pi_files/slides/transparenciasvol2cap6.pdf">cap&#xED;tulo 6</a></li>
-<li><a href="pi_files/slides/transparenciasvol2cap7.pdf">cap&#xED;tulo 7</a></li>
-<li><a href="pi_files/slides/transparenciasvol2cap8.pdf">cap&#xED;tulo 8</a></li>
-</ul>
+<li>
+<p><em>sharpening</em>: pode ser feito somando o resultado da imagem <em>unsharp</em> com a imagem original</p>
 </li>
 </ul>
 

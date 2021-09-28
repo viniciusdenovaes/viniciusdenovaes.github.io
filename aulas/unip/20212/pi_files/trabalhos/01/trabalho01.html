@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>pi</title>
+      <title>trabalho01</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -261,47 +261,40 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="processamento-de-imagens">Processamento de Imagens</h1>
+      <h1 class="mume-header" id="trabalho-01-de-pi-limiariza%C3%A7%C3%A3o">Trabalho 01 de PI: Limiariza&#xE7;&#xE3;o</h1>
 
-<h2 class="mume-header" id="ementa">Ementa:</h2>
-
+<p>Limiariza&#xE7;&#xE3;o &#xE9; o procedimento de transformar uma imagem com tons de cinza, em uma outra imagem com <strong>menos</strong> tons de cinza, agrupando tons de cinza semelhantes e transformando-os para o mesmo tom de cinza.</p>
+<p>Neste trabalho voc&#xEA; deve fazer um programa para <strong>Binarizar</strong> (fazer uma limiariza&#xE7;&#xE3;o resultando em apenas dois tons de cinza: branco e preto) uma imagem.</p>
+<p>Voc&#xEA; deve fazer a <a href="https://pt.wikipedia.org/wiki/Limiariza%C3%A7%C3%A3o_por_equil%C3%ADbrio_do_histograma">binariza&#xE7;&#xE3;o por equil&#xED;brio do histograma</a>. O seu programa deve receber uma imagem qualquer e salvar (ou exibir) uma imagem binarizada.</p>
+<p>O seu programa deve <strong>obrigatoriamente</strong> e <strong>explicitamente</strong> seguir os seguintes passos, ter as seguintes fun&#xE7;&#xF5;es/m&#xE9;todos, e usar as seguintes fun&#xE7;&#xF5;es:</p>
 <ul>
-<li>Representa&#xE7;&#xE3;o da Imagem como matriz</li>
-<li>Histograma de Imagens (<a href="pi_files/slides/transparenciasvol2cap3.pdf">slide 3.4</a>)</li>
-<li>Segmenta&#xE7;&#xE3;o (bin&#xE1;ria) em imagens (<a href="pi_files/slides/transparenciasvol2cap3.pdf">slide 3.5</a>)</li>
-<li>Aplica&#xE7;&#xE3;o de filtros (m&#xE1;scaras) (<a href="pi_files/slides/transparenciasvol2cap5.pdf">slide 5.2</a>):
-<ul>
-<li>blur</li>
-<li>sharpening</li>
-<li>edges</li>
-</ul>
+<li>
+<p>Ser poss&#xED;vel de receber uma imagem com extens&#xF5;es jpg, png ou tiff, com canais rgb.</p>
+</li>
+<li>
+<p>Transformar uma imagem entrada em uma <strong>matrix</strong> de tons de cinza.</p>
+</li>
+<li>
+<p>calcular o histograma da matriz em tons de cinza</p>
+</li>
+<li>
+<p>Escolher <strong>automaticamente</strong> um n&#xFA;mero como limitante (os valores da matriz que est&#xE3;o acima do n&#xFA;mero ir&#xE3;o se transformar em uma cor, e valores abaixo v&#xE3;o se transformar em outra)</p>
+</li>
+<li>
+<p>Transformar a matriz cinza para uma matriz bin&#xE1;ria</p>
+</li>
+<li>
+<p>Salva ou exibir a imagem resultante da matriz bin&#xE1;ria</p>
 </li>
 </ul>
-<h2 class="mume-header" id="trabalhos">Trabalhos</h2>
-
-<p>A data de entrega do trabalho ser&#xE1; dia 09/11/2021</p>
-<p>Voc&#xEA; pode escolher fazer o trabalho 01 ou trabalho 02:</p>
-<ul>
-<li><a href="pi_files/trabalhos/01/trabalho01.html">Trabalho 01: Limiariza&#xE7;&#xE3;o</a></li>
-<li><a href="pi_files/trabalhos/01/trabalho02.html">Trabalho 02: Filtros</a></li>
-</ul>
-<p>O trabalho vale 5 pontos na m&#xE9;dia.</p>
-<p>O trabalho deve ser submetido no teams.</p>
-<h2 class="mume-header" id="bibliografia">Bibliografia</h2>
+<h3 class="mume-header" id="regras">Regras</h3>
 
 <ul>
-<li><a href="http://computacaografica.ic.uff.br/vol2.html">Computa&#xE7;&#xE3;o Gr&#xE1;fica Volume 2. Autores: Aura Conci, Eduardo Azevedo e Fabiana R. Leta</a>
-<ul>
-<li>slides do livro:</li>
-<li><a href="pi_files/slides/transparenciasvol2cap1.pdf">cap&#xED;tulo 1</a></li>
-<li><a href="pi_files/slides/transparenciasvol2cap2.pdf">cap&#xED;tulo 2</a></li>
-<li><a href="pi_files/slides/transparenciasvol2cap3.pdf">cap&#xED;tulo 3</a></li>
-<li><a href="pi_files/slides/transparenciasvol2cap4.pdf">cap&#xED;tulo 4</a></li>
-<li><a href="pi_files/slides/transparenciasvol2cap5.pdf">cap&#xED;tulo 5</a></li>
-<li><a href="pi_files/slides/transparenciasvol2cap6.pdf">cap&#xED;tulo 6</a></li>
-<li><a href="pi_files/slides/transparenciasvol2cap7.pdf">cap&#xED;tulo 7</a></li>
-<li><a href="pi_files/slides/transparenciasvol2cap8.pdf">cap&#xED;tulo 8</a></li>
-</ul>
+<li>
+<p>Voc&#xEA; pode fazer em qualquer uma das seguintes linguagens: python, java, C++, C ou C#.</p>
+</li>
+<li>
+<p>Voc&#xEA; pode usar <strong>qualquer biblioteca</strong> interna ou externa &#xE0; linguagem que voc&#xEA; utilizar&#xE1;. Porem, deve <strong>obrigatoriamente</strong> seguir os passos listados anteriormente.</p>
 </li>
 </ul>
 

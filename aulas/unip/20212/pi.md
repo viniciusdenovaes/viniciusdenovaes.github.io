@@ -2,12 +2,26 @@
 
 ## Ementa:
 * Representação da Imagem como matriz
-* Histograma de Imagens
-* Segmentação (binária) em imagens
-* Aplicação de filtros (máscaras):
+* Histograma de Imagens ([slide 3.4](pi_files/slides/transparenciasvol2cap3.pdf))
+* Segmentação (binária) em imagens ([slide 3.5](pi_files/slides/transparenciasvol2cap3.pdf))
+* Aplicação de filtros (máscaras) ([slide 5.2](pi_files/slides/transparenciasvol2cap5.pdf)):
   * blur
   * sharpening
   * edges
+
+
+## Trabalhos
+
+A data de entrega do trabalho será dia 09/11/2021
+
+Você pode escolher fazer o trabalho 01 ou trabalho 02:
+* [Trabalho 01: Limiarização](pi_files/trabalhos/01/trabalho01.html)
+* [Trabalho 02: Filtros](pi_files/trabalhos/01/trabalho02.html)
+
+O trabalho vale 5 pontos na média.
+
+O trabalho deve ser submetido no teams.
+
 
 ## Bibliografia
 
