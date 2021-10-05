@@ -1,27 +1,59 @@
 # Trabalho 01 de CN: Resolução de Sistemas Lineares
 
-Um sistema linear é uma equação dada por 
+Um sistema linear é uma equação dada por
+$$Ax = b$$
+onde
+- $A$ é uma matriz de $m$ linhas e $n$ colunas
+- $x$ é o vetor de variáveis, de tamanho $n$
+- $b$ é um vetor constante de tamanho $m$.
 
+Então você terá um sistema com $m$ equações lineares e $n$ variáveis do tipo
 
-Limiarização é o procedimento de transformar uma imagem com tons de cinza, em uma outra imagem com **menos** tons de cinza, agrupando tons de cinza semelhantes e transformando-os para o mesmo tom de cinza.
+![Sistema Linear](images/linear_system.png)
 
-Neste trabalho você deve fazer um programa para **Binarizar** (fazer uma limiarização resultando em apenas dois tons de cinza: branco e preto) uma imagem.
+Para este trabalho você deve receber um sistema linear (definido por $A$ e $b$) e retornar uma solução deste sistema.
 
-Você deve fazer a [binarização por equilíbrio do histograma](https://pt.wikipedia.org/wiki/Limiariza%C3%A7%C3%A3o_por_equil%C3%ADbrio_do_histograma). O seu programa deve receber uma imagem qualquer e salvar (ou exibir) uma imagem binarizada.
+Você pode assumir que todo sistema de entrada terá solução única.
+
+A entrada estará em formato `csv` e será dado na forma
+```
+a11, a12, ..., a1n, b1
+a21, a22, ..., a2n, b1
+.
+.
+.
+am1, am2, ..., amn, bm
+```
+
+Por exemplo, o sistema linear
+
+![Exemplo 01](images/exemplo01.png)
+
+Será dado pelo seguinte $csv$:
+```
+2,1,3
+1,-3,-2
+```
+
+O sistema linear
+
+![Exemplo 02](images/exemplo02.png)
+
+Será dado pelo seguinte $csv$:
+```
+1,1,1,6
+1,-1,1,4
+1,1,2,8
+```
+
+### Passos
 
 O seu programa deve **obrigatoriamente** e **explicitamente** seguir os seguintes passos, ter as seguintes funções/métodos, e usar as seguintes funções:
 
- - Ser possível de receber uma imagem com extensões jpg, png ou tiff, com canais rgb.
+ - Ler uma entrada em csv no formato especificado pelo trabalho.
 
- - Transformar uma imagem entrada em uma **matrix** de tons de cinza.
+ - imprimir a solução (os valores de $x$) na tela
 
- - calcular o histograma da matriz em tons de cinza
-
- - Escolher **automaticamente** um número como limitante (os valores da matriz que estão acima do número irão se transformar em uma cor, e valores abaixo vão se transformar em outra)
-
- - Transformar a matriz cinza para uma matriz binária
-
- - Salva ou exibir a imagem resultante da matriz binária
 
 ### Regras
 
