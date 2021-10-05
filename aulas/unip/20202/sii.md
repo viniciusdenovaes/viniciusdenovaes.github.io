@@ -4,7 +4,7 @@
 
  * [Aula 01: Prolog](sii_files/aulas/01-prolog/aula-prolog.html)
  * Redes Neurais
- * [Aula 03: Aprendizado de Máquina](sii_files/aulas/03-aprendizado_maquina/introducao.md)
+ * [Aula 03: Aprendizado de Máquina](sii_files/aulas/03-aprendizado_maquina/introducao.html)
 
 ## Trabalhos
 
@@ -26,8 +26,8 @@ Qualquer texto nos seguintes formatos: txt ou pdf.
 
 Atenção: Eu não disponho de Windows nem de Microsoft Office, (Eu uso LaTex para fazer textos), caso sua lista esteja em .doc, e nem meu Libre Office, nem o Google Drive consigam abrir a sua lista, ela não será corrigida.
 
- * [Trabalho 01](sii_files/trabalhos/01/trabalhoProlog_mindist.md)
- * [Trabalho 02](sii_files/trabalhos/02/trabalho_classificacao.md)
+ * [Trabalho 01](sii_files/trabalhos/01/trabalhoProlog_mindist.html)
+ * [Trabalho 02](sii_files/trabalhos/02/trabalho_classificacao.html)
 
 ## Livros
 
