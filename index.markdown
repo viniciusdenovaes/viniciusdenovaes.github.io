@@ -8,8 +8,8 @@ layout: home
 ## Aulas
 
 ### Atuais (2021/2)
-* [PI](aulas/unip/20212/pi.html)
-* [SII](aulas/unip/20212/sii.html)
+* [Processamento de Imagens](aulas/unip/20212/pi.html)
+* [Cálculo Numérico](aulas/unip/20212/cn.html)
 
 ### Atuais (2021/1)
 * [LPOO](aulas/unip/20211/lpoo.html)
