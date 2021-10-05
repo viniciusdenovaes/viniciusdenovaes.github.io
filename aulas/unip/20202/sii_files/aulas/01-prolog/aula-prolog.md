@@ -30,7 +30,7 @@ legal(maria).
 legal(joao).
 ```
 
-A sintaxe `f(x)` denota um fato `f` sobre o sujeito x`.
+A sintaxe `f(x)` denota um fato `f` sobre o sujeito `x`.
 Chamamos a função `f` de predicado.
 
 Podemos então perguntar se Maria é legal:
@@ -50,7 +50,7 @@ gosta(maria, joao).
 gosta(joao, maria).
 ```
 
-Da mesma forma que podemos representar um fato com um sujeito, também podemos representar com mais de um: `f(x, y).
+Da mesma forma que podemos representar um fato com um sujeito, também podemos representar com mais de um: `f(x, y)`.
 Neste caso chamamos a função `f` de relação.
 
 Podemos então perguntar se Maria gosta de João:
