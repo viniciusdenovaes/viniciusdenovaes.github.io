@@ -1,31 +1,52 @@
-# Trabalho 02 de PI: Filtros
+# Trabalho 02 de CN: Regressão (Pelo Método dos Quadrados Mínimos)
 
-Para este trabalho você deve fazer um programa que receba qualquer imagem com três canais de cores (RGB) e forneça três imagens resultantes do processo de *blur*, clareamento das bordas e *sharpening*.
+Para este trabalho você deve receber uma lista de duplas $(x_1, f(x_1)), (x_2, f(x_2)), ..., (x_n, f(x_n))$, com, no mínimo 4 pontos e encontrar uma função $\phi(x) = \alpha_2x^2 + \alpha_1x + \alpha_0$ que minimiza o somatório dos erros
+$$\sum_{i=1}^n(f(x_i)-\phi(x_i))^2$$
 
-Você pode dar ao usuário a possibilidade de escolher qual das três ações usar, ou fazer as três ações e mostrar o resultado ao usuário (ou somente guardar a imagem no disco)
+### Entradas
 
- * *blur*: a transformação *blur* pode ser feita passando a máscara
- ```
- 1 1 1
- 1 1 1
- 1 1 1
- ```
-na imagem e dividindo o resultado por 9.
-
-* Clareamento das bordas: o filtro de clareamento das bordas da imagem pode ser feito somando o resultado de passagem das seguintes máscaras:
+A entrada estará em formato `csv` e será dado na forma
 ```
- 1  2  1
- 0  0  0
--1 -2 -1
+x1,f(x1)
+x2,f(x2)
+.
+.
+.
+xn,f(xn)
 ```
-e
-```
-1 0 -1
-2 0 -2
-1 0 -1
-```
-lembrando de limitar o valor de cada pixel a, no mínimo, 0 e, no máximo, 255
 
-* *unsharp*: A imagem original menos a imagem resultante do filtro *blur*
+Por exemplo, os pontos dados pela tabela
+_        |  x1 |   x2  |   x3 |   x4 |   x5 | x6 | x7  | x8  |  x9   | x10 | x11  
+---------|-------|------|------|------|----|-----|-----|-------|-----|-----|----
+**x**    |-1.0 | -0.75 | -0.6 | -0.5 | -0.3 |  0 | 0.2 | 0.4 | 0.5   | 0.7 | 1
+**f(x)** |2.05 | 1.153 | 0.45 |  0.4 |  0.5 |  0 | 0.2 | 0.6 | 0.512 | 1.2 | 2.05
 
-* *sharpening*: pode ser feito somando o resultado da imagem *unsharp* com a imagem original
+Serão dados pelo csv:
+```
+-1.0,2.05
+-0.75,1.153
+-0.6,0.45
+-0.5,0.4
+-0.3,0.5
+0,0
+0.2,0.2
+0.4,0.6
+0.5,0.512
+0.7,1.2
+1,2.05
+```
+
+### Passos
+
+O seu programa deve **obrigatoriamente** e **explicitamente** seguir os seguintes passos, ter as seguintes funções/métodos, e usar as seguintes funções:
+
+ - Ler uma entrada em csv no formato especificado pelo trabalho.
+
+ - imprimir a solução (os valores de $\alpha$) na tela **nesta ordem:** $\alpha_2$ $\alpha_1$ $\alpha_0$
+
+
+### Regras
+
+ - Você pode fazer em qualquer uma das seguintes linguagens: python, java, C++, C ou C#.
+
+ - Você pode usar **qualquer biblioteca** interna ou externa à linguagem que você utilizará. Porem, deve **obrigatoriamente** seguir os passos listados anteriormente.

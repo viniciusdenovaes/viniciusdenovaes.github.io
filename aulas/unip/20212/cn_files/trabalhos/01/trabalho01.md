@@ -15,6 +15,8 @@ Para este trabalho você deve receber um sistema linear (definido por $A$ e $b$)
 
 Você pode assumir que todo sistema de entrada terá solução única.
 
+### Entradas
+
 A entrada estará em formato `csv` e será dado na forma
 ```
 a11, a12, ..., a1n, b1
