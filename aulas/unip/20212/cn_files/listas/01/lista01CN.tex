@@ -1,0 +1,187 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}  
+\usepackage[portuguese]{babel}   
+\usepackage{enumerate}
+\usepackage{listings}             % Include the listings-package
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\usepackage{enumitem}
+
+\newlist{passo}{enumerate}{1}
+\setlist[passo]{label=Passo \arabic*:}
+
+\title{Lista 01 de Cálculo Numérico}
+\date{2º Período de 2021}
+\author{Turma do 3º ano}
+
+
+
+\begin{document}
+
+
+\maketitle
+
+
+\vspace{3em}
+
+\begin{enumerate}
+
+
+\item Faça uma busca binária da raíz da equação $f(x) = -x + 8$ entre os valores $0$ e $10$. 
+Considere uma tolerância de erro de $0.6$ para $f(x)$, ou seja, a busca deve continuar enquanto $|f(x)|>0.6$
+
+Resposta:
+
+\begin{passo}
+\item $x_a = 0; f(x_a) = 8$, $x_b = 10; f(x_b) = -2$, $x = 5; f(x) = 3$
+\item $x_a = 5; f(x_a) = 3$, $x_b = 10; f(x_b) = -2$, $x = 7.5; f(x) = 0.5$
+
+\end{passo}
+
+\item Faça uma busca binária da raíz da equação $f(x) = x^2 - 7x - 18$ entre os valores $0$ e $10$. 
+Considere uma tolerância de erro de $0.6$ para $f(x)$, ou seja, a busca deve continuar enquanto $|f(x)|>0.6$
+
+Resposta
+
+\begin{tabular}{ |r|c|c|c|c|c|c| } 
+ \hline
+ Passo & $x_a$   & $f(x_a)$  & $x_b$      & $f(x_b)$  & $x$       & $f(x)$      \\ \hline
+ 1     &   0     &   -18     &   10       & 12        & 5         & -28         \\ \hline
+ 2     &   5     &   -28     &   10       & 12        & 7.5       & -14.25      \\ \hline
+ 3     &   7.5   &   -14.25  &   10       & 12        & 8.75      & -2.6875     \\ \hline
+ 4     &   8.75  &   -2.6875 &   10       & 12        & 8.75      &  4.265625   \\ \hline
+ 5     &   8.75  &   -2.6875 &   9.265625 &  4.265625 & 9.0078125 &  0.0859985  \\ \hline
+\end{tabular}
+
+\break
+
+
+\item Triangularize e resolva sistema linear
+
+\begin{align*} 
+  3 x_1 + 2 x_2 + 4 x_3  &= 1  \\ 
+    x_1 +   x_2 + 2 x_3  &= 2  \\ 
+  4 x_1 + 3 x_2 - 2 x_3  &= 3
+\end{align*}
+
+Resposta: 
+
+Eliminando a coluna 1 abaixo da linha 1
+
+Subtraindo 
+$(3 x_1 + 2 x_2 + 4 x_3 = 1)(\div 3)(\times a_{i1})$  de todas as linhas abaixo da 1
+
+\begin{align*} 
+  3 x_1 +           2 x_2 +            4 x_3  &=          1  \\ 
+  0 x_1 + \frac{1}{3} x_2 + \frac{ 2}{3} x_3  &= \frac{5}{3}  \\ 
+  0 x_1 + \frac{1}{3} x_2 - \frac{22}{3} x_3  &= \frac{5}{3}  \\ 
+\end{align*}
+
+Eliminando a coluna 2 abaixo da linha 2
+
+Subtraindo 
+$(0 x_1 + \frac{1}{3} x_2 + \frac{ 2}{3} x_3 = \frac{5}{3})(\div \frac{1}{3})(\times a_{i2})$  de todas as linhas abaixo da 2
+
+\begin{align*} 
+  3 x_1 +           2 x_2 +            4 x_3  &=          1  \\ 
+  0 x_1 + \frac{1}{3} x_2 + \frac{ 2}{3} x_3  &= \frac{5}{3} \\ 
+  0 x_1 +           0 x_2 -            8 x_3  &=          0  \\ 
+\end{align*}
+
+Vemos que 
+\[-8x_3 = 0 \Rightarrow x_3 = 0\]
+\[\frac{1}{3}x_2 + 0 = \frac{5}{3} \Rightarrow x_2 = 5\]
+\[3x_1 + 10 + 0 = 1 \Rightarrow x_1 = - 3\]
+
+
+\item Triangularize e resolva sistema linear
+
+\begin{align*} 
+  6 \alpha_0 -  2 \alpha_1 + 10 \alpha_2  &=  -50    \\ 
+ -2 \alpha_0 + 10 \alpha_1 - 14 \alpha_2  &=   42   \\ 
+ 10 \alpha_0 - 14 \alpha_1 + 34 \alpha_2  &= -102 
+\end{align*}
+
+\break
+
+\item Considere os pontos $(-2, -10)$, $(-2, -14)$, $(0, -9)$, $( 0, -11)$, $(1, 0)$ e $(1, -6)$. 
+Faça uma regressão pelo método dos quadrados mínimos para encontrar o polinômio de grau 2 que melhor se aproxima dos pontos dados.
+Encontre os valores de $\alpha_0$, $\alpha_1$ e $\alpha_2$ que melhor aproxima a função 
+$f(x) = \alpha_2x^2 + \alpha_1x + \alpha_0$ dos pontos dados.
+
+Resposta: 
+
+Temos os pontos 
+
+\begin{tabular}{ |c|c| } 
+ \hline
+  $x$ & $f(x)$ \\ \hline
+ $-2$ & $-10$  \\ \hline
+ $-2$ & $-14$  \\ \hline 
+ $ 0$ & $-9$   \\ \hline 
+ $ 0$ & $-11$  \\ \hline 
+ $ 1$ & $ 0$   \\ \hline 
+ $ 1$ & $-6$   \\ \hline  
+\end{tabular}
+
+
+Considerando $g_0(x) = 1$, $g_1(x) = x$ e $g_2(x) = x^2$ temos
+
+
+\begin{tabular}{ |c|c|c|c|c|c| } 
+ \hline
+ indice &  $x$ & $f(x)$ & $g_0(x)$ & $g_1(x)$ & $g_2(x)$ \\ \hline
+ $0$ & $-2$ & $-10$ & $1.0$ & $-2$ & $4$ \\ \hline
+ $1$ & $-2$ & $-14$ & $1.0$ & $-2$ & $4$ \\ \hline
+ $2$ &  $0$ &  $-9$ & $1.0$ &  $0$ & $0$ \\ \hline
+ $3$ &  $0$ & $-11$ & $1.0$ &  $0$ & $0$ \\ \hline
+ $4$ &  $1$ &   $0$ & $1.0$ &  $1$ & $1$ \\ \hline
+ $5$ &  $1$ &  $-6$ & $1.0$ &  $1$ & $1$ \\ \hline
+\end{tabular}
+
+Considerando 
+\[a_{ij} = \sum_{k=0}^5 g_i(x_k)*g_j(x_k)\]
+e 
+\[b_i = \sum_{k=0}^5 f(x_k)*g_i(x_k)\]
+para montar o sistema linear 
+
+
+\begin{align*} 
+a_{00}\alpha_0 + a_{01}\alpha_1 + a_{02}\alpha_2  &=  b_0 \\ 
+a_{10}\alpha_0 + a_{11}\alpha_1 + a_{12}\alpha_2  &=  b_1 \\ 
+a_{20}\alpha_0 + a_{21}\alpha_1 + a_{22}\alpha_2  &=  b_2 
+\end{align*}
+
+Ficamos com o sistema linear 
+
+\begin{align*} 
+  6 \alpha_0 -  2 \alpha_1 + 10 \alpha_2  &=  -50    \\ 
+ -2 \alpha_0 + 10 \alpha_1 - 14 \alpha_2  &=   42   \\ 
+ 10 \alpha_0 - 14 \alpha_1 + 34 \alpha_2  &= -102 
+\end{align*}
+
+Resultando em 
+
+$\alpha_0 = -10$, 
+$\alpha_1 = 5$ e 
+$\alpha_2 = 2$.
+
+A função que melhor aproxima a curva é $2x^2 + 5x - 10$
+
+
+
+\end{enumerate}
+
+\end{document}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,141 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}  
+\usepackage[portuguese]{babel}   
+\usepackage{enumerate}
+\usepackage{listings}             % Include the listings-package
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+
+\title{Lista 02 de Processamento de Imagens}
+\date{2º Período de 2018}
+\author{Turma do 3º ano}
+
+
+
+\begin{document}
+
+
+\maketitle
+
+
+\vspace{3em}
+
+
+A descrição de cada filtro usado aqui, e cada máscara, pode ser encontrada na página do trabalho.
+
+\begin{enumerate}
+
+\item As seguintes imagens têm 36 pixels de largura e de altura. 
+Cada linha das figuras têm mais de 3 pixels de largura. 
+Passe cada máscara do filtro de Sobel em cada imagem e em cada matriz e descreva o resultado.
+Descreva o resultado de passar o filtro de Sobel nas imagens e matrizes.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.20\textwidth]{quadrado36}
+    \caption{Quadrado 36x36}
+    \label{fig:quadrado36}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.20\textwidth]{triangulo36}
+    \caption{Quadrado 36x36}
+    \label{fig:quadrado36}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.20\textwidth]{horizontal_baixo36}
+    \caption{Quadrado 36x36}
+    \label{fig:quadrado36}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.20\textwidth]{horizontal_cima36}
+    \caption{Quadrado 36x36}
+    \label{fig:quadrado36}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.20\textwidth]{vertical_direita36}
+    \caption{Quadrado 36x36}
+    \label{fig:quadrado36}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.20\textwidth]{vertical_esquerda36}
+    \caption{Quadrado 36x36}
+    \label{fig:quadrado36}
+\end{figure}
+
+\[
+\begin{bmatrix}
+  0 &  0 &  0 &  0 &  0 & 10 \\
+  0 &  0 &  0 &  0 & 10 & 10 \\
+  0 &  0 &  0 & 10 & 10 & 10 \\
+  0 &  0 & 10 & 10 & 10 & 10 \\
+  0 & 10 & 10 & 10 & 10 & 10 \\
+ 10 & 10 & 10 & 10 & 10 & 10 
+\end{bmatrix}
+\]
+
+\[
+\begin{bmatrix}
+  0 &  0 &  0 & 10 & 10 & 10 \\
+  0 &  0 &  0 & 10 & 10 & 10 \\
+  0 &  0 &  0 & 10 & 10 & 10 \\
+  0 &  0 &  0 & 10 & 10 & 10 \\
+  0 &  0 &  0 & 10 & 10 & 10 \\
+  0 &  0 &  0 & 10 & 10 & 10 
+\end{bmatrix}
+\]
+
+\[
+\begin{bmatrix}
+  0 &  0 &  0 &  0 &  0 &  0 \\
+  0 &  0 &  0 &  0 &  0 &  0 \\
+  0 &  0 &  0 &  0 &  0 &  0 \\
+ 10 & 10 & 10 & 10 & 10 & 10 \\
+ 10 & 10 & 10 & 10 & 10 & 10 \\
+ 10 & 10 & 10 & 10 & 10 & 10 
+\end{bmatrix}
+\]
+
+\break
+
+\item Passe o filtro de contraste da matriz abaixo.
+
+
+\[
+\begin{bmatrix}
+  0 &  0 &  2 &  6 &  2 &  0 \\
+  0 &  0 &  2 &  6 &  2 &  0 \\
+  0 &  0 &  2 &  6 &  2 &  0 \\
+  0 &  0 &  2 &  6 &  2 &  0 \\
+  0 &  0 &  2 &  6 &  2 &  0 \\
+  0 &  0 &  2 &  6 &  2 &  0 
+\end{bmatrix}
+\]
+
+\item Passe o filtro blur em todas as imagens e matrizes da lista.
+
+
+\end{enumerate}
+
+\end{document}
+
+
+
+
+
+
+
+
+

@@ -10,6 +10,9 @@
   * edges
 
 
+## Lista
+ - [Lista 01](pi_files/listas/01/lista01PI.pdf)
+
 ## Trabalhos
 
 A data de entrega do trabalho será dia 09/11/2021
