@@ -1,0 +1,424 @@
+<!DOCTYPE html><html><head>
+      <title>intro</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////home/vinicius/.atom/packages/markdown-preview-enhanced/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="aprendizado-de-m%C3%A1quina12">Aprendizado de M&#xE1;quina<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup><sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></h1>
+
+<h2 class="mume-header" id="introdu%C3%A7%C3%A3o">Introdu&#xE7;&#xE3;o</h2>
+
+<p>Aprendizado de m&#xE1;quina &#xE9; o campo de estudo que d&#xE1; aos computadores a habilidade de aprender a resolver um problema sem ser explicitamente programado.</p>
+<p>Vamos dizer, por exemplo, que voc&#xEA; queira fazer um filtro de <em>spam</em>. Uma possibilidade &#xE9; voc&#xEA; fazer um programa utilizando t&#xE9;cnicas de programa&#xE7;&#xE3;o tradicional (sem usar aprendizado de m&#xE1;quina)</p>
+<p>Como que voc&#xEA; faria um programa tradicional para filtrar <em>spam</em>?</p>
+<ol>
+<li>
+<p>Voc&#xEA; primeiro identificaria caracter&#xED;sticas de um <em>spam</em></p>
+</li>
+<li>
+<p>Escreveria um algoritmo para verificar se um email tem as caracter&#xED;sticas do <em>spam</em></p>
+</li>
+<li>
+<p>Testaria seu programa repetindo os passos anteriores at&#xE9; que esteja satisfat&#xF3;rio.</p>
+</li>
+</ol>
+<p>O processo seria como na figura abaixo</p>
+<p><img src="https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0101.png" alt><br>
+<em>Processo tradicional para fazer um filtro de spam</em></p>
+<p>Como resultado voc&#xEA; ter&#xE1; uma longa lista de regras, que precisar&#xE1; de manuten&#xE7;&#xE3;o constante, pois sempre surgir&#xE1; novos tipos de <em>spam</em>.</p>
+<p>Agora suponha que voc&#xEA; use aprendizado de m&#xE1;quina para resolver o seu problema:</p>
+<ol>
+<li>
+<p>Pegue uma longa lista de dados (emails normais e emails marcados como <em>spam</em>).</p>
+</li>
+<li>
+<p>Separe uma parte do conjunto para treino e uma parte para teste.</p>
+</li>
+<li>
+<p>Treine seu programa para separar emails normais de <em>spam</em> usando o conjunto de treino.</p>
+</li>
+<li>
+<p>Teste seu programa no conjunto de teste.</p>
+</li>
+<li>
+<p>Repita os passos anteriores at&#xE9; que seu programa esteja satisfat&#xF3;rio.</p>
+</li>
+</ol>
+<p><img src="https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0102.png" alt></p>
+<p>Com a t&#xE9;cnica de aprendizado de m&#xE1;quina percebemos uma mudan&#xE7;a de abordagem.<br>
+Agora, se as caracter&#xED;scias do <em>spam</em> mudar, n&#xE3;o precisamos mais <strong>reescrever, ou adicionar linhas ao nosso algoritmo</strong>. Precisamos apenas treinar o <strong>mesmo algoritmo</strong>.</p>
+<p>Melhor ainda, podemos deixar que os usu&#xE1;rios alimentem o algoritmo em tempo real, marcando emails como <em>spam</em>. Assim o mesmo algoritmo poder&#xE1; sempre estar sendo treinado com novos dados.</p>
+<p><img src="https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0103.png" alt></p>
+<p>Finalmente, a solu&#xE7;&#xE3;o apresentada pelo algoritmo treinado pode trazer novas ideias sobre como resolver o problema, encontrando correla&#xE7;&#xF5;es desconhecidas por exemplo.</p>
+<p><img src="https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0104.png" alt></p>
+<h2 class="mume-header" id="tipos-de-sistemas-do-aprendizado-de-m%C3%A1quina">Tipos de Sistemas do Aprendizado de M&#xE1;quina</h2>
+
+<p>O <a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/">livro de Aur&#xE9;lien G&#xE9;ron</a> classifica os sistema de aprendizado de m&#xE1;quina com base nas seguintes categorias:</p>
+<ul>
+<li>Em que n&#xED;vel t&#xEA;m supervis&#xE3;o humana
+<ul>
+<li>supervisionado,</li>
+<li>n&#xE3;o supervisionado,</li>
+<li>semi-supervisionado,</li>
+<li>aprendizado por refor&#xE7;o.</li>
+</ul>
+</li>
+<li>Se podem aprender de forma incremental, enquanto funciona, ou se precisa ser treinado de uma vez para depois ser colocado em pr&#xE1;tica.
+<ul>
+<li>aprendizado online (aprender enquanto funciona)</li>
+<li>aprendizado por lotes (&#xE9; treinado uma vez para depois funcionar)</li>
+</ul>
+</li>
+<li>Se apenas fazem compara&#xE7;&#xE3;o com dados de entrada; ou se criam um modelo para fazer predi&#xE7;&#xE3;o
+<ul>
+<li>aprendizado baseado em inst&#xE2;ncias,</li>
+<li>aprendizado baseado em modelos.</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="aprendizados-supervisionados-ou-n%C3%A3o">Aprendizados Supervisionados ou N&#xE3;o</h3>
+
+<h4 class="mume-header" id="aprendizado-supervisionado">Aprendizado Supervisionado</h4>
+
+<p>Em um aprendizado supervisionado voc&#xEA; tem um conjunto de dados rotulados (<em>labels</em>) com a solu&#xE7;&#xE3;o desejada.</p>
+<p><img src="https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0105.png" alt></p>
+<p>A figura acima representa o problema de filtro de <em>spam</em>, um problema de classifica&#xE7;&#xE3;o.</p>
+<p>O conjunto de treinamento recebe v&#xE1;rios emails rotulados como &quot;<em>spam</em>&quot; ou &quot;n&#xE3;o <em>spam</em>&quot;. O algoritmo aprende com este conjunto durante a fazer de treinamento.</p>
+<p>Um outro problema cl&#xE1;ssico supervisionado &#xE9; o <strong>problema de regress&#xE3;o</strong>. Onde o algoritmo precisa descobrir o valor de um campo em um dado de entrada. Depois de passar por um treinamento com valores dados.</p>
+<p><img src="https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0106.png" alt></p>
+<p>Um exemplo &#xE9; descobrir qual &#xE9; o pre&#xE7;o de um carro, usando caracter&#xED;sticas como ano, marca, quilometragem, quantidade de portas, etc...<br>
+O algoritmo recebe uma alta quantidade de dados de carros com o pre&#xE7;o inclu&#xED;do para a parte de treinamento. Depois esperasse que o algoritmo consiga acertar o pre&#xE7;o de novos dados de carros, baseado em suas outras caracter&#xED;sticas.</p>
+<h4 class="mume-header" id="aprendizado-n%C3%A3o-supervisionado">Aprendizado N&#xE3;o-Supervisionado</h4>
+
+<p>Em um aprendizado n&#xE3;o supervisionado os dados de entrada n&#xE3;o s&#xE3;o rotulados.</p>
+<p>O sistema pode receber o conjunto representado pela seguinte figura e ser pedido para dividir o grupo em 4 grupos.</p>
+<p><img src="https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0107.png" alt></p>
+<p>Usando as caracter&#xED;sticas dadas por cada elemento, ele pode dividir como na figura abaixo.</p>
+<p><img src="https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0108.png" alt></p>
+<p>Uma visualiza&#xE7;&#xE3;o de dados de agrupamento pode ser dada pela figura abaixo.</p>
+<p><img src="https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0109.png" alt></p>
+<p>Um outro problema importante &#xE9; a detec&#xE7;&#xE3;o de anomalias. Um conjunto de treinamento &#xE9; dado para o algoritmo, e qualquer coisa que escape muito do conjunto ser&#xE1; tratado como anomalia.</p>
+<p><img src="https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0110.png" alt></p>
+<h4 class="mume-header" id="aprendizado-semi-supervisionado">Aprendizado Semi-Supervisionado</h4>
+
+<p>No conjunto de treinamento de um aprendizado semi-supervisionado voc&#xEA; ter&#xE1; apenas alguns elementos com r&#xF3;tulos</p>
+<p><img src="https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0111.png" alt></p>
+<h4 class="mume-header" id="aprendizado-por-refor%C3%A7o">Aprendizado Por Refor&#xE7;o</h4>
+
+<p>Em um aprendizado por refor&#xE7;o o sistema pode observar o ambiente, tomar decis&#xF5;es e executar a&#xE7;&#xF5;es.</p>
+<p>Um sistema de recompensa ou penalidade ir&#xE1; condicionar o sistema a tomar as melhores decis&#xF5;es.</p>
+<p><img src="https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0112.png" alt></p>
+<h3 class="mume-header" id="aprendizado-em-lote-ou-online">Aprendizado em Lote ou Online</h3>
+
+<h4 class="mume-header" id="aprendizado-em-lote-offline">Aprendizado em Lote (<em>offline</em>)</h4>
+
+<p>No Aprendizado em Lote (tamb&#xE9;m conhecido como <em>offline</em>) o sistema &#xE9; treinado com todos os dados dispon&#xED;veis e depois &#xE9; lan&#xE7;ado para produ&#xE7;&#xE3;o, sem aprender mais nada ap&#xF3;s ser lan&#xE7;ado.</p>
+<p>Isto n&#xE3;o quer dizer que o sistema n&#xE3;o ser&#xE1; atualizado. Voc&#xEA; pode adquirir novos dados, treinar novamente o sistema e depois lan&#xE7;ar uma atualiza&#xE7;&#xE3;o para produ&#xE7;&#xE3;o. Mas o sistema que est&#xE1; em produ&#xE7;&#xE3;o n&#xE3;o aprender&#xE1; enquanto em produ&#xE7;&#xE3;o.</p>
+<p>O aprendizado em lotes &#xE9; usado para sistemas que demandam muito poder de processamento na fase de treinamento, n&#xE3;o podendo usar este poder em produ&#xE7;&#xE3;o.</p>
+<h4 class="mume-header" id="aprendizado-online">Aprendizado Online</h4>
+
+<p>No aprendizado online o sistema pode ser treinado antes de ser lan&#xE7;ado, mas tamb&#xE9;m continuar&#xE1; aprendendo enquanto funciona.</p>
+<p><img src="https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0113.png" alt></p>
+<p>O aprendizado online &#xE9; usado para sistemas que devem se adaptar enquanto rodam e perceber mudan&#xE7;as em tempo real. Um exemplo &#xE9; prever pre&#xE7;o de a&#xE7;&#xF5;es na bolsa de valores, ou fazer recomenda&#xE7;&#xF5;es de produtos para usu&#xE1;rios de sites de compras.</p>
+<p>Um outro uso do sistema online &#xE9; quando voc&#xEA; tem que usar muitos dados para treinar o sistema, mais dados do que acaberiam na mem&#xF3;ria. Nestes casos voc&#xEA; pode separar os dados em pequenos peda&#xE7;os e treinar o sistema com cada peda&#xE7;o dos dados, como se tivesse em produ&#xE7;&#xE3;o.</p>
+<p><img src="https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0114.png" alt></p>
+<h3 class="mume-header" id="aprendizado-baseado-em-inst%C3%A2ncia-vs-aprendizado-baseado-em-modelo">Aprendizado Baseado em Inst&#xE2;ncia vs Aprendizado Baseado em Modelo</h3>
+
+<h4 class="mume-header" id="aprendizado-baseado-em-inst%C3%A2ncia">Aprendizado Baseado em Inst&#xE2;ncia</h4>
+
+<p>Imagine que voc&#xEA; esteja fazendo o filtro de <em>spam</em> e resolva fazer um sistema que marca como <em>spam</em> apenas os emails que s&#xE3;o id&#xEA;nticos aos <em>spams</em> j&#xE1; conhecidos. Ou melhor, todos os emails que t&#xEA;m algum alto grau de semelhan&#xE7;a.</p>
+<p>Neste caso, o sistema n&#xE3;o est&#xE1; tentando modelar um padr&#xE3;o, est&#xE1; apenas marcando objetos semelhantes ao que j&#xE1; tem por meio de memoriza&#xE7;&#xE3;o. Isso &#xE9; chamdo de aprendizado em inst&#xE2;ncia.</p>
+<p><img src="https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0115.png" alt></p>
+<h4 class="mume-header" id="aprendizado-baseado-em-modelo">Aprendizado Baseado em Modelo</h4>
+
+<p>Um outra maneira de treinar o sistema &#xE9; faz&#xEA;-lo tentar modelar um padr&#xE3;o.</p>
+<p><img src="https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0116.png" alt></p>
+<p>Imagine que voc&#xEA; esteja tentando prever o PIB per capita baseado na satisfa&#xE7;&#xE3;o de vida (ou vice versa) de um pa&#xED;s e tenha os seguintes dados:</p>
+<p><img src="https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0117.png" alt></p>
+<p>Voc&#xEA; pode tentar fazer o sistema encontrar a equa&#xE7;&#xE3;o linear que, dado uma caracter&#xED;stica, ir&#xE1; prever a outra:</p>
+<p><img src="https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0118.png" alt><br>
+<em>Possibilidades de equa&#xE7;&#xF5;es lineares</em></p>
+<p>Ap&#xF3;s treinado o seu sistema chega &#xE0; seguinte equa&#xE7;&#xE3;o:</p>
+<p><img src="https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/assets/mlst_0119.png" alt></p>
+<p>A equa&#xE7;&#xE3;o <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4.91</mn><mo>&#xD7;</mo><mn>1</mn><msup><mn>0</mn><mrow><mo>&#x2212;</mo><mn>5</mn></mrow></msup><mi>x</mi><mo>+</mo><mn>4.85</mn></mrow><annotation encoding="application/x-tex">4.91\times 10^{-5}x + 4.85</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">4</span><span class="mord">.</span><span class="mord">9</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#xD7;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.947438em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.864108em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2212;</span><span class="mord mtight">5</span></span></span></span></span></span></span></span></span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mord">.</span><span class="mord">8</span><span class="mord">5</span></span></span></span></span> ser&#xE1; a equa&#xE7;&#xE3;o que ir&#xE1; modelar o sistema para prever a resposta.</p>
+<p>.</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Esta aula usou como refer&#xEA;ncia o livro <a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/">Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow</a> e a tradu&#xE7;&#xE3;o <a href="https://books.google.com.br/books/about/M%C3%A3os_%C3%A0_Obra_Aprendizado_de_M%C3%A1quina_co.html?id=Z0mvDwAAQBAJ">M&#xE3;os &#xE0; Obra: Aprendizado de M&#xE1;quina com Scikit-Learn &amp; TensorFlow</a>. <a href="#fnref1" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>O cap&#xED;tulo usado nesta aula pode ser encontrado atrav&#xE9;s deste <a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/ch01.html">link</a>. <a href="#fnref2" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+</li>
+</ol>
+</section>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
