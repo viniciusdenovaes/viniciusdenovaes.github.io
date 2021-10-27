@@ -1,6 +1,6 @@
 # Trabalho 02 de PI: Filtros
 
-Para este trabalho você deve fazer um programa que receba qualquer imagem com três canais de cores (RGB) e forneça três imagens resultantes do processo de *blur*, clareamento das bordas e *sharpening*.
+Para este trabalho você deve fazer um programa que receba qualquer imagem com três canais de cores (RGB), (opcional: transforme as imagens para imagens em tons de cinza e trate esta imagem como a imagem original) e forneça três imagens resultantes do processo de *blur*, clareamento das bordas e *sharpening*.
 
 Você pode dar ao usuário a possibilidade de escolher qual das três ações usar, ou fazer as três ações e mostrar o resultado ao usuário (ou somente guardar a imagem no disco)
 
