@@ -12,7 +12,7 @@ Você pode dar ao usuário a possibilidade de escolher qual das três ações us
  ```
 na imagem e dividindo o resultado por 9.
 
-* Clareamento das bordas: o filtro de clareamento das bordas da imagem pode ser feito somando o resultado de passagem das seguintes máscaras:
+* Reconhecimento das bordas (filtro de Sobel): o filtro de clareamento das bordas da imagem pode ser feito somando o resultado de passagem das seguintes máscaras:
 ```
  1  2  1
  0  0  0
