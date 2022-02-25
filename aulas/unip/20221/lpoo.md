@@ -23,7 +23,7 @@
   * [respostas](https://github.com/viniciusdenovaes/Unip211LPOO/tree/main/Lab00/src/lab00)
 * [lab01 - Classes](lpoo_files/laboratorio/01-classes/01-classes.html)
   * [lab01.02 - Classes (Extra)](lpoo_files/laboratorio/01-classes/01.02-classes_extra.html)
-* [lab02 - Classes com Encapsulamento](lpoo_files/laboratorio/02-classes_encapsulamento/02-classes_encapsulamento.html)
+<!--* [lab02 - Classes com Encapsulamento](lpoo_files/laboratorio/02-classes_encapsulamento/02-classes_encapsulamento.html)
   * [lab02 - Classes com encapsulamento (Extra)](lpoo_files/laboratorio/02-classes_encapsulamento/02-classes_encapsulamento02.pdf)
 * lab03 - Herança, Classes Abstratas e Polimorfismo
   * [Exemplo sem Herança (Feito em sala)](lpoo_files/laboratorio/03-heranca/03-exercicio_sem_heranca.html)
@@ -33,7 +33,7 @@
   * [Exemplo sem interface](lpoo_files/laboratorio/04-interfaces/04-sem_interface.html)
   * [Lista de Interfaces](lpoo_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.pdf)
     * [Gabarito](lpoo_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.zip)
-
+-->
 
 <!--## Trabalho para a NP1
 

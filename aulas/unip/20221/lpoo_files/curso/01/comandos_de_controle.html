@@ -265,7 +265,7 @@ pre[data-line] .line-highlight[data-end]:after {
 
 <h2 class="mume-header" id="comando-condicional">Comando Condicional</h2>
 
-<p>O comando condicional <code>if</code> tem a seguinte sitaxe em Java:</p>
+<p>O comando condicional <code>if</code> tem a seguinte sintaxe em Java:</p>
 <ul>
 <li><code>if</code>: a <code>condicao</code> (uma express&#xE3;o boolean, verdadeiro ou falso) &#xE9; verificada. Caso seja verdadeira o <code>//bloco de comandos 01</code> &#xE9; executado. Caso n&#xE3;o seja, o bloco n&#xE3;o ser&#xE1; executado.</li>
 </ul>
@@ -308,17 +308,96 @@ Se voc&#xEA; esquecer ele executar&#xE1; s&#xF3; o primeiro comando do bloco. Es
 <span class="token punctuation">}</span>
 </pre><h2 class="mume-header" id="comandos-de-repeti%C3%A7%C3%A3o">Comandos de Repeti&#xE7;&#xE3;o</h2>
 
-<p>Em constru&#xE7;&#xE3;o</p>
-<h3 class="mume-header" id="continua%C3%A7%C3%A3o">Continua&#xE7;&#xE3;o</h3>
+<ul>
+<li><code>while</code>: a <code>condicao</code> (uma express&#xE3;o boolean, verdadeiro ou falso) &#xE9; verificada. Caso seja verdadeira o <code>//bloco de comandos 01</code> &#xE9; executado e o controle <strong>volta</strong> para o come&#xE7;o do while (e faz a verifica&#xE7;&#xE3;o novamente). Caso n&#xE3;o seja, o bloco n&#xE3;o ser&#xE1; executado.</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">while</span><span class="token punctuation">(</span>condicao<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">// bloco de comandos 01</span>
+  <span class="token comment">// este bloco se repete enquanto a condicao for satisfeita</span>
+<span class="token punctuation">}</span>
+</pre><ul>
+<li><code>do while</code>: a <code>condicao</code> o bloco de comando &#xE9; executado e <strong>depois</strong> a condi&#xE7;&#xE3;o &#xE9; verificada. Caso seja verdadeira o controle <strong>volta</strong> para o come&#xE7;o do while (e faz a verifica&#xE7;&#xE3;o <strong>no final</strong> novamente). Caso n&#xE3;o seja, o controle n&#xE3;o volta.</li>
+</ul>
+<p>OBS1: a &#xFA;nica diferen&#xE7;a entre este e o <code>while</code> &#xE9; que neste voc&#xEA; pode ter certeza de que o bloco ser&#xE1; executado na primeira vez, mesmo que a condi&#xE7;&#xE3;o seja falsa.</p>
+<p>OBS2: perceba que tem um <code>;</code> no final do while.</p>
+<p>OBS3: este comando n&#xE3;o &#xE9; usado com frequ&#xEA;ncia</p>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">do</span><span class="token punctuation">{</span>
+  <span class="token comment">// bloco de comandos 01</span>
+  <span class="token comment">// este bloco executa uma vez e</span>
+  <span class="token comment">// se repete enquanto a condicao for satisfeita</span>
+<span class="token punctuation">}</span><span class="token keyword">while</span><span class="token punctuation">(</span>condicao<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><ul>
+<li><code>for</code>: &#xE9; <strong>inicializado</strong> com um <code>comandoInicializacao</code>; repete enquanto a <code>condi&#xE7;&#xE3;o</code> for verdadeira; sempre ao final de cada itera&#xE7;&#xE3;o um <code>comandoRepeticao</code> &#xE9; executado.</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span>comandoInicializacao<span class="token punctuation">;</span> condicao<span class="token punctuation">;</span> comandoRepeticao<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">// bloco de comandos 01</span>
+  <span class="token comment">// este bloco se repete enquanto a condicao for satisfeita</span>
+  <span class="token comment">// ao final o comandoRepeticao &#xE9; executado</span>
+<span class="token punctuation">}</span>
+</pre><p>exemplo:</p>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>sa&#xED;da:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>0
+1
+2
+3
+4
+</code></pre><ul>
+<li><code>for-each</code>: Dada uma cole&#xE7;&#xE3;o (<code>collection</code>) qualquer, este <strong>iterador</strong> acessa cada objeto dentro da cole&#xE7;&#xE3;o.</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token class-name">Type</span> object<span class="token operator">:</span> collection<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">// bloco de comandos 01 usando o objeto object</span>
+<span class="token punctuation">}</span>
+</pre><p>exemplos:</p>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">class</span> <span class="token class-name">Gato</span><span class="token punctuation">{</span>
+
+  <span class="token class-name">String</span> nome<span class="token punctuation">;</span>
+
+  <span class="token keyword">public</span> <span class="token class-name">Gato</span><span class="token punctuation">(</span><span class="token class-name">String</span> aNome<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>nome <span class="token operator">=</span> aNome<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">miau</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    system<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>nome <span class="token operator">+</span> <span class="token string">&quot; mia!&quot;</span><span class="token punctuation">)</span>
+
+  <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</pre><p>Usando <code>array</code> como cole&#xE7;&#xE3;o</p>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+  <span class="token class-name">Gato</span><span class="token punctuation">[</span><span class="token punctuation">]</span> gatos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Gato</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  gatos<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Gato</span><span class="token punctuation">(</span><span class="token string">&quot;Brutus&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  gatos<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Gato</span><span class="token punctuation">(</span><span class="token string">&quot;Chirriro&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  gatos<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Gato</span><span class="token punctuation">(</span><span class="token string">&quot;Xitara&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token class-name">Gato</span> gato<span class="token operator">:</span> gatos<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    gato<span class="token punctuation">.</span><span class="token function">miau</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><p>usando <code>List</code> como cole&#xE7;&#xE3;o</p>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+  <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Gato</span><span class="token punctuation">&gt;</span></span> gatos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  gatos<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Gato</span><span class="token punctuation">(</span><span class="token string">&quot;Brutus&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  gatos<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Gato</span><span class="token punctuation">(</span><span class="token string">&quot;Chirriro&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  gatos<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Gato</span><span class="token punctuation">(</span><span class="token string">&quot;Xitara&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token class-name">Gato</span> gato<span class="token operator">:</span> gatos<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    gato<span class="token punctuation">.</span><span class="token function">miau</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><p>sa&#xED;da em ambos os programas:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>Brutus mia!
+Chirriro mia!
+Xitara mia!
+</code></pre><h3 class="mume-header" id="continua%C3%A7%C3%A3o">Continua&#xE7;&#xE3;o</h3>
 
 <p>Existe muito mais material sobre estes assuntos, alguns ser&#xE3;o colocados nesta p&#xE1;gina, outros ser&#xE3;o dados em aula, e outros est&#xE3;o nos livros da ementa.</p>
-<p>Alguns assuntos n&#xE3;o tratados aqui s&#xE3;o:</p>
-<ul>
-<li><code>for(int i=0; i&lt;n; ++i)</code></li>
-<li><code>while</code></li>
-<li><code>do{}while</code></li>
-<li><code>for(Object object : objects)</code></li>
-</ul>
 
       </div>
       

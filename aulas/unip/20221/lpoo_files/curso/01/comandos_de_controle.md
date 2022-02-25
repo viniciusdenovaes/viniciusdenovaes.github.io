@@ -2,7 +2,7 @@
 
 ## Comando Condicional
 
-O comando condicional `if` tem a seguinte sitaxe em Java:
+O comando condicional `if` tem a seguinte sintaxe em Java:
 
 * `if`: a `condicao` (uma expressão boolean, verdadeiro ou falso) é verificada. Caso seja verdadeira o `//bloco de comandos 01` é executado. Caso não seja, o bloco não será executado.
 ``` java
@@ -52,14 +52,127 @@ switch(expressao){
 
 ## Comandos de Repetição
 
-Em construção
+* `while`: a `condicao` (uma expressão boolean, verdadeiro ou falso) é verificada. Caso seja verdadeira o `//bloco de comandos 01` é executado e o controle **volta** para o começo do while (e faz a verificação novamente). Caso não seja, o bloco não será executado.
+``` java
+while(condicao){
+  // bloco de comandos 01
+  // este bloco se repete enquanto a condicao for satisfeita
+}
+```
+
+
+* `do while`: a `condicao` o bloco de comando é executado e **depois** a condição é verificada. Caso seja verdadeira o controle **volta** para o começo do while (e faz a verificação **no final** novamente). Caso não seja, o controle não volta.
+
+OBS1: a única diferença entre este e o `while` é que neste você pode ter certeza de que o bloco será executado na primeira vez, mesmo que a condição seja falsa.
+
+OBS2: perceba que tem um `;` no final do while.
+
+OBS3: este comando não é usado com frequência
+
+``` java
+do{
+  // bloco de comandos 01
+  // este bloco executa uma vez e
+  // se repete enquanto a condicao for satisfeita
+}while(condicao);
+```
+
+
+* `for`: é **inicializado** com um `comandoInicializacao`; repete enquanto a `condição` for verdadeira; sempre ao final de cada iteração um `comandoRepeticao` é executado.
+
+``` java
+for(comandoInicializacao; condicao; comandoRepeticao){
+  // bloco de comandos 01
+  // este bloco se repete enquanto a condicao for satisfeita
+  // ao final o comandoRepeticao é executado
+}
+```
+
+exemplo:
+
+``` java
+for(int i=0; i<5; i++){
+  System.out.println(i);
+}
+```
+saída:
+```
+0
+1
+2
+3
+4
+```
+
+
+* `for-each`: Dada uma coleção (`collection`) qualquer, este **iterador** acessa cada objeto dentro da coleção.
+
+``` java
+for(Type object: collection){
+  // bloco de comandos 01 usando o objeto object
+}
+```
+
+exemplos:
+
+``` java
+class Gato{
+
+  String nome;
+
+  public Gato(String aNome){
+    this.nome = aNome;
+  }
+
+  public void miau(){
+    system.out.println(nome + " mia!")
+
+  }
+
+}
+```
+
+Usando `array` como coleção
+
+``` java
+public static void main(String[] args){
+
+  Gato[] gatos = new Gato[3];
+
+  gatos[0] = new Gato("Brutus");
+  gatos[1] = new Gato("Chirriro");
+  gatos[2] = new Gato("Xitara");
+
+  for(Gato gato: gatos){
+    gato.miau();
+  }
+}
+```
+
+usando `List` como coleção
+
+``` java
+public static void main(String[] args){
+
+  List<Gato> gatos = new ArrayList<>();
+
+  gatos.add(new Gato("Brutus"));
+  gatos.add(new Gato("Chirriro"));
+  gatos.add(new Gato("Xitara"));
+
+  for(Gato gato: gatos){
+    gato.miau();
+  }
+}
+```
+saída em ambos os programas:
+```
+Brutus mia!
+Chirriro mia!
+Xitara mia!
+```
+
 
 ### Continuação
 
 Existe muito mais material sobre estes assuntos, alguns serão colocados nesta página, outros serão dados em aula, e outros estão nos livros da ementa.
-
-Alguns assuntos não tratados aqui são:
- - `for(int i=0; i<n; ++i)`
- - `while`
- - `do{}while`
- - `for(Object object : objects)`
