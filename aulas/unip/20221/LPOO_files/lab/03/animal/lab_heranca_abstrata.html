@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Laboratório 03 - Herança Abstrata</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Vinicius de Novaes Pereira</div>
+<div class="menu-item"><a href="../../../../../../index.html" class="current">home</a></div>
+<div class="menu-category">Aulas</div>
+<div class="menu-item"><a href="../../../../../../class_unip.html">Unip</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Laboratório 03 - Herança Abstrata</h1>
+<div id="subtitle"><a href="../../../../../../index.html">Vinicius de Novaes Pereira</a></div>
+</div>
+<h3>Para este laboratório você deve fazer um programa que tenha as classes do diagrama abaixo.</h3>
+<table class="imgtable"><tr><td>
+<img src="diagrama_animal_abstrata.svg" alt="Diagrama do Programa Animal" />&nbsp;</td>
+<td align="left"></td></tr></table>
+<h3>E testar com as seguintes classes: </h3>
+<div class="codeblock">
+<div class="blocktitle">Veterinario.java</div>
+<div class="blockcontent"><pre>
+
+public class Veterinario {
+
+	public static void cuidaDoAnimal(Animal animal) {
+		System.out.println("Recebendo um " + animal.getClass());
+		System.out.print(animal);
+		if(animal.getDoente() == false) {
+			System.out.println("O animal está ok!");
+			return;
+		}
+		System.out.println("Dando comida para " + animal.getNome());
+		animal.procuraComida();
+		Veterinario.curaAnimal(animal);
+		animal.dorme();
+		System.out.println("Pode levar o animal");
+		System.out.println("");
+	}
+
+	private static void curaAnimal(Animal animal) {
+		System.out.println("Aplicando vacina");
+		animal.setDoente(false);
+		animal.fazBarulho();
+		System.out.println("Animal curado");
+	}
+
+}
+</pre></div></div>
+<div class="codeblock">
+<div class="blocktitle">TesteAnimal.java</div>
+<div class="blockcontent"><pre>
+import java.util.ArrayList;
+import java.util.List;
+
+public class TesteAnimal {
+
+	public static void main(String[] args) {
+
+		List&lt;Animal&gt; animais = new ArrayList&lt;&gt;();
+
+		Cachorro cachorro = new Cachorro();
+		cachorro.setNome("Brutus");
+		cachorro.setIdade(15);
+		cachorro.setDoente(true);
+		animais.add(cachorro);
+
+		Gato gato = new Gato();
+		gato.setNome("Cesar");
+		gato.setIdade(5);
+		gato.setDoente(false);
+		animais.add(gato);
+
+		Lobo lobo = new Lobo();
+		lobo.setNome("Nymeria");
+		lobo.setIdade(3);
+		lobo.setDoente(true);
+		animais.add(lobo);
+
+		for(Animal animal : animais) {
+			Veterinario.cuidaDoAnimal(animal);
+		}
+
+	}
+
+}
+</pre></div></div>
+<h2>Classe Animal</h2>
+<table class="imgtable"><tr><td>
+<img src="diagrama_animal.svg" alt="Diagrama do Programa Animal" />&nbsp;</td>
+<td align="left"></td></tr></table>
+<p>Uma classe <b>abstrata</b> que modele um Animal, </p>
+<ul>
+<li><p>que tenha os campos <tt>private</tt>:</p>
+<ul>
+<li><p>&ldquo;nome&rdquo;, que seja uma <tt>String</tt>, </p>
+</li>
+<li><p>&ldquo;idade&rdquo;, que seja um <tt>int</tt>, </p>
+</li>
+<li><p>&ldquo;doente&rdquo;, que seja um <tt>boolean</tt>, </p>
+</li></ul>
+</li>
+<li><p>que tenha os métodos de acesso aos campos</p>
+<ul>
+<li><p><tt>public String getNome()</tt> que retorna o nome do animal</p>
+</li>
+<li><p><tt>public void setNome(String aNome)</tt> que define o nome do animal</p>
+</li>
+<li><p><tt>public int getIdade()</tt> que retorna a idade do animal</p>
+</li>
+<li><p><tt>public void setIdade(int aIdade)</tt> que define a idade do animal</p>
+</li>
+<li><p><tt>public boolean getDoente()</tt> que retorna se o animal está doente</p>
+</li>
+<li><p><tt>public void setDoente(boolean aDoente)</tt> que define se o animal está doente</p>
+</li></ul>
+</li>
+<li><p>que tenha o método <tt>public void dormir()</tt> que imprima na tela &ldquo;ZZZZZZ&rdquo;;</p>
+</li>
+<li><p>que tenha os métodos abstratos</p>
+<ul>
+<li><p><tt>public void procuraComida();</tt></p>
+</li>
+<li><p><tt>public void fazBarulho();</tt></p>
+</li></ul>
+</li>
+<li><p>que faça <b>override</b> do método toString:</p>
+</li>
+</ul>
+<div class="codeblock">
+<div class="blocktitle">Override de toString em Animal.java</div>
+<div class="blockcontent"><pre>
+	@Override
+	public String toString() {
+		String resultado = "";
+		resultado += "Sou um animal " + this.getClass() + "\n";
+		resultado += "Nome: " + this.getNome() + "\n";
+		resultado += "Idade: " + this.getIdade() + "\n";
+		return resultado;
+	}
+</pre></div></div>
+<h2>Classe Abstrata Canino</h2>
+<table class="imgtable"><tr><td>
+<img src="diagrama_canino.svg" alt="Diagrama do Programa Pessoa" />&nbsp;</td>
+<td align="left"></td></tr></table>
+<p>Uma classe abstrata Canino que é uma subclasse da classe Animal, e que</p>
+<ul>
+<li><p>tenha o método <tt>public void latir()</tt> que imprima na tela &ldquo;Au Au Au&rdquo;</p>
+</li>
+<li><p>implemente o método <tt>public void fazBarulho()</tt> chamando o método <tt>latir()</tt></p>
+</li>
+</ul>
+<h2>Classe Abstrata Felino</h2>
+<table class="imgtable"><tr><td>
+<img src="diagrama_felino.svg" alt="Diagrama do Programa Pessoa" />&nbsp;</td>
+<td align="left"></td></tr></table>
+<p>Uma classe abstrata Felino que é uma subclasse da classe Animal, e que</p>
+<ul>
+<li><p>tenha o método <tt>public void miar()</tt> que imprima na tela &ldquo;Miau&rdquo;</p>
+</li>
+<li><p>implemente o método <tt>public void fazBarulho()</tt> chamando o método <tt>miar()</tt></p>
+</li>
+</ul>
+<h2>Classe Cachorro</h2>
+<table class="imgtable"><tr><td>
+<img src="diagrama_cachorro.svg" alt="Diagrama do Programa Pessoa" />&nbsp;</td>
+<td align="left"></td></tr></table>
+<p>Uma classe concreta Cachorro que é uma subclasse da classe Canino, e que</p>
+<ul>
+<li><p>implemente o método <tt>public void procuraComida()</tt> imprimindo na tela &ldquo;Fica pedindo comida&rdquo;</p>
+</li>
+</ul>
+<h2>Classe Lobo</h2>
+<table class="imgtable"><tr><td>
+<img src="diagrama_lobo.svg" alt="Diagrama do Programa Pessoa" />&nbsp;</td>
+<td align="left"></td></tr></table>
+<p>Uma classe concreta Lobo que é uma subclasse da classe Canino, e que</p>
+<ul>
+<li><p>implemente o método <tt>public void procuraComida()</tt> imprimindo na tela &ldquo;Caça com a matilha&rdquo;</p>
+</li>
+</ul>
+<h2>Classe Gato</h2>
+<table class="imgtable"><tr><td>
+<img src="diagrama_gato.svg" alt="Diagrama do Programa Pessoa" />&nbsp;</td>
+<td align="left"></td></tr></table>
+<p>Uma classe concreta Gato que é uma subclasse da classe Felino, e que</p>
+<ul>
+<li><p>implemente o método <tt>public void procuraComida()</tt> imprimindo na tela &ldquo;caça ratos&rdquo;</p>
+</li>
+</ul>
+<div id="footer">
+<div id="footer-text">
+Page generated 2019-03-13 01:44:11 -03, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

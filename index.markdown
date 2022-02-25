@@ -7,12 +7,17 @@ layout: home
 
 ## Aulas
 
-### Atuais (2021/2)
+### Atuais (2022/1)
+* [LPOO](aulas/unip/20221/lpoo.html)
+* [IA](aulas/unip/20221/ia.html)
+* [CG](aulas/unip/20221/cg.html)
+
+### (2021/2)
 * [Processamento de Imagens](aulas/unip/20212/pi.html)
 * [Cálculo Numérico](aulas/unip/20212/cn.html)
 * [Extra: Machine Learning](aulas/unip/20212/extra_ml.html)
 
-### Atuais (2021/1)
+### (2021/1)
 * [LPOO](aulas/unip/20211/lpoo.html)
 * [IA](aulas/unip/20211/ia.html)
 * [CG](aulas/unip/20211/cg.html)

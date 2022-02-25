@@ -15,6 +15,8 @@ Para este trabalho você deve receber um sistema linear (definido por $A$ e $b$)
 
 Você pode assumir que todo sistema de entrada terá solução única.
 
+Mais que isso, você pode assumir que a quantidade de equações é **igual** à quantidade de variáveis.
+
 ### Entradas
 
 A entrada estará em formato `csv` e será dado na forma

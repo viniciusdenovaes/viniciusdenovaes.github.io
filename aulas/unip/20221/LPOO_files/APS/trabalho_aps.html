@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>APS</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Vinicius de Novaes Pereira</div>
+<div class="menu-item"><a href="../../../../index.html" class="current">home</a></div>
+<div class="menu-category">Aulas</div>
+<div class="menu-item"><a href="../../../../class_unip.html">Unip</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>APS</h1>
+<div id="subtitle"><a href="../../../../index.html">Vinicius de Novaes Pereira</a></div>
+</div>
+<p>Trabalho em grupo de, no máximo, 5 pessoas</p>
+<p>Neste trabalho o grupo deve fazer um programa de acesso aos dados de uma faculdade, com informações sobre cadastro de alunos e cursos; e notas dos alunos.</p>
+<h2>Dados</h2>
+<p>o seu programa deve processar dados relativos a alunos, cursos, notas e rendimentos da faculdade.</p>
+<ul>
+<li><p>Um <tt>Aluno</tt> tem:</p>
+<ul>
+<li><p>um <tt>id</tt>, do tipo <tt>String</tt>; </p>
+</li>
+<li><p>um <tt>nome</tt> do tipo <tt>String</tt></p>
+</li>
+<li><p>Cada aluno tem um <tt>id</tt> único e pode ser identificado exclusivamente por seu <tt>id</tt>; dois alunos podem ter o mesmo nome, mas nunca o mesmo <tt>id</tt></p>
+</li></ul>
+</li>
+<li><p>Um <tt>Curso</tt> tem:</p>
+<ul>
+<li><p>um <tt>nome</tt>, do tipo <tt>String</tt>;</p>
+</li>
+<li><p>um <tt>nivel</tt> de dois possíveis, podendo ser de &ldquo;graduacao&rdquo;, ou &ldquo;pos_graduacao&rdquo;;</p>
+</li>
+<li><p>um <tt>ano</tt>, do tipo inteiro, representando o ano que o curso foi dado;</p>
+</li>
+<li><p>Cada curso deve ser identificado pela combinação de seus três campos; dois cursos são iguais se, e somente se, seus três campos forem iguais.</p>
+</li></ul>
+</li>
+<li><p>Uma <tt>Nota</tt>:</p>
+<ul>
+<li><p>são números decimais, com 2 dígitos significativos, ente 0.00 e 10.00</p>
+</li></ul>
+</li>
+<li><p>As <tt>Notas</tt> de cada <tt>Rendimento</tt>:</p>
+<ul>
+<li><p>contêm 4 valores do tipo <tt>Nota</tt>: a nota da NP1, da NP2, da reposição, e do exame.</p>
+</li></ul>
+</li>
+<li><p>Um <tt>Rendimento</tt> representa a qualidade das notas que <b>um</b> <tt>Aluno</tt> obteve em <b>um</b> <tt>Curso</tt>:</p>
+<ul>
+<li><p>um <tt>rendimento</tt> está atrelado à <b>um</b> <tt>aluno</tt> e <b>um</b> <tt>curso</tt></p>
+</li>
+<li><p>um <tt>rendimento</tt> tem:</p>
+<ul>
+<li><p>as <tt>Notas</tt> que o <tt>aluno</tt> tirou no <tt>curso</tt></p>
+</li>
+<li><p>um valor <tt>aprovado</tt> do tipo <tt>boolean</tt> (um valor <b>não</b> quer dizer que a classe deva ter uma variável chamada <tt>aprovado</tt>, pode ser um método)</p>
+</li>
+<li><p>um valor <tt>media</tt>, do tipo <tt>Nota</tt>, associada às notas do curso, esta média deve ser calculada da seguinte maneira:</p>
+<ul>
+<li><p>deve ser calculada uma média inicial (variável local) da seguinte maneira: caso a nota da reposição seja maior que a nota da NP1 ou da NP2, a menor nota, entre a NP1 e a NP2, deve ser substituída pela nota da reposição, (<b>esta substituição deve ser feita apenas no cálculo da média, a nota em da NP1 ou da NP2 não devem mudar de valor.</b>) O valor da média entre a NP1 e NP2, depois de ter sido feita a substituíção, será a média inicial</p>
+</li>
+<li><p>caso o curso seja um curso de graduação:</p>
+<ul>
+<li><p>se a média inicial for maior ou igual a 7.0, então a média se mantém no valor da média inicial e o valor de aprovado é verdadeiro.</p>
+</li>
+<li><p>se a média inicial <b>não</b> for maior que 7.0, então a média final será calculada a partir da média entre a nota do exame e a média inicial. A média terá o valor da média final e se o seu valor for maior ou igual a 5.0, o valor de aprovado será verdadeiro, caso esta média final seja menor que 5.0 o valor de aprovado é falso</p>
+</li></ul>
+</li>
+<li><p>caso o curso seja um curso de pós graduação:</p>
+<ul>
+<li><p>se a média inicial for maior ou igual a 5.0, então a média se mantém no valor da média inicial e o valor de aprovado é verdadeiro.</p>
+</li>
+<li><p>se a média inicial <b>não</b> for maior que 5.0, então a média final será calculada a partir da média entre a nota do exame e a média inicial. Se o seu valor for maior ou igual a 5.0, o valor de aprovado será verdadeiro, e a média terá o valor de 5.0. Caso esta média final seja menor que 5.0 o valor de aprovado é falso e a média terá o valor da média final.</p>
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+</ul>
+<h2>Interface</h2>
+<p>o programa deve ter uma interface com o usuário através do terminal, deve ser possível para o usuário</p>
+<ul>
+<li><p>Listar todos os cursos dados: para cada curso deve ser impresso seu nome, nível e ano, somente</p>
+</li>
+<li><p>Listar todos os alunos inscritos: para cada aluno deve ser impresso seu nome e id, somente</p>
+</li>
+<li><p>Listar o histórico de um determinado aluno: </p>
+<ul>
+<li><p>o seu programa deve ter meios para o usuário escolher o aluno</p>
+</li>
+<li><p>o histórico de um aluno deve conter todos os cursos que o aluno foi inscrito, e para cada curso o programa deve imprimir o curso, as notas, a média e se foi aprovado.</p>
+</li></ul>
+</li>
+<li><p>Listar o relatório de rendimento de cada curso:</p>
+<ul>
+<li><p>o seu programa deve ter meios para o usuário escolher o curso</p>
+</li>
+<li><p>o relatório de rendimento de um curso deve conter todos os alunos que fizeram o curso, e para cada aluno imprimir o aluno, as notas, a média e se foi aprovado.</p>
+</li></ul>
+</li>
+<li><p>Incluir um novo aluno: deve ser pedido para o usuário informar o id e o nome do aluno.</p>
+</li>
+<li><p>Incluir um novo curso: deve ser pedido para o usuário informar o nome, escolher o tipo, e informar o ano.</p>
+</li>
+<li><p>Incluir um novo rendimento, deve ser pedido para o usuário escolher um aluno já inscrito, um curso já inscrito, e o usuário deve informar as notas (NP1, NP2, substitutiva e exame) do novo rendimento.</p>
+</li>
+</ul>
+<h2>Dados</h2>
+<h3>Entrada</h3>
+<p>Os dados iniciais do programa devem ser lidos de arquivos externos. </p>
+<p>O local dos arquivos será preconfigurado em algum local da escolha do grupo. Os arquivos podem ser carregados no momento que o programa iniciar.</p>
+<p>Teremos três tipos de arquivos:</p>
+<ul>
+<li><p>Um arquivo CSV com os dados dos alunos, na ordem &ldquo;id;nome&rdquo;</p>
+</li>
+</ul>
+<p>Exemplo:</p>
+<div class="codeblock">
+<div class="blocktitle">alunos.csv</div>
+<div class="blockcontent"><pre>
+123;Ana
+124;Beto
+125;Carlos Magno
+b26;Danilo E.
+127;Fernando
+
+</pre></div></div>
+<ul>
+<li><p>Um arquivo CSV com os dados dos cursos na ordem &ldquo;nome;nível;ano&rdquo;</p>
+</li>
+</ul>
+<p>Exemplo:</p>
+<div class="codeblock">
+<div class="blocktitle">cursos.csv</div>
+<div class="blockcontent"><pre>
+ALPOO;GRADUACAO;2019
+ALPOO;GRADUACAO;2018
+ALPOO;POS_GRADUACAO;2019
+LPOO;GRADUACAO;2019
+
+</pre></div></div>
+<ul>
+<li><p>Para cada curso, um arquivo com o nome &ldquo;nome_nível_ano.csv&rdquo;, com as informações das notas dos alunos naquele curso, na ordem &ldquo;id_do_aluno;nota_NP1;nota_NP2;nota_reposicao;nota_exame&rdquo;. Havendo a possibilidade de o arquivo não ter nenhum dado, representando o fato de que ninguém cursou aquela matéria naquele ano.</p>
+</li>
+</ul>
+<p>Exemplos:</p>
+<div class="codeblock">
+<div class="blocktitle">ALPOO_GRADUACAO_2019.csv</div>
+<div class="blockcontent"><pre>
+123;7.0;9.0;0.0;0.0
+124;2.0;3.0;4.0;2.0
+125;2.0;4.0;5.0;9.0
+
+</pre></div></div>
+<div class="codeblock">
+<div class="blocktitle">ALPOO_POS_GRADUACAO_2019.csv</div>
+<div class="blockcontent"><pre>
+
+</pre></div></div>
+<h3>Pacotes de Instâncias</h3>
+<ul>
+<li><p><a href="inst/01.zip">inst01</a></p>
+</li>
+</ul>
+<h3>Saída</h3>
+<p>Após terminar o programa, os arquivos listados devem estar atualizados com quaisquer modificações feitas pelo usuário, mas mantendo o formato especificado nesta seção.</p>
+<h2>Controle de Erros</h2>
+<p>O seu programa deve ter um controle <b>para entradas do usuário</b> e conseguir voltar para um estado estável caso o usuário coloque alguma entrada não aceitável.</p>
+<h2>Avaliação</h2>
+<p>O seu programa será avaliado nos seguintes requisitos:</p>
+<ul>
+<li><p>De acordo com cada item feito da descrição do trabalho</p>
+</li>
+<li><p>De acordo com a estruturação do programa, se cada classe está fazendo o que deveria fazer (tente manter a regra de que cada classe deve ter apenas um trabalho)</p>
+</li>
+<li><p>Os nomes das classes, métodos e variáveis serão avaliados</p>
+</li>
+<li><p>Controle de erros em relação à entrada do usuário usando ou não o ambiente <tt>try-catch</tt></p>
+</li>
+<li><p>Uso de recursos dados em aula:</p>
+<ul>
+<li><p>se o seu programa usa o paradigma de orientação a objetos (herança e polimorfismo)</p>
+</li>
+<li><p>se suas classes implementam interfaces dadas em aula (Comparable, Iterable)</p>
+</li>
+<li><p>se usa conceitos dados em aula (encapsulamento e composição)</p>
+</li>
+<li><p>se usa estruturas dadas em aula (ArrayList, Set, Map)</p>
+</li></ul>
+</li>
+<li><p>Você é convidado a usar outros conceitos não vistos, como &ldquo;enumerate&rdquo;, &ldquo;factory pattern&rdquo;, MVC, &ldquo;programação genérica&rdquo;&hellip;</p>
+</li>
+</ul>
+<div id="footer">
+<div id="footer-text">
+Page generated 2020-03-13 15:37:43 -03, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>
