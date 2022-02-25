@@ -21,7 +21,9 @@
 * [lab00 - comandos básicos](lpoo_files/laboratorio/00-basico/lista_comandos_basicos.pdf)
 * [lab00 - Usando funções (métodos estáticos)](lpoo_files/laboratorio/00-basico/comandos-basicos.html)
   * [respostas](https://github.com/viniciusdenovaes/Unip211LPOO/tree/main/Lab00/src/lab00)
-* [lab01 - Classes](lpoo_files/laboratorio/01-classes/01-classes.html)
+* Lab01
+  * [lab01 - Classes como estruturas](lpoo_files/laboratorio/01-classes/01.00-classes_pre.html)
+  * [lab01 - Classes com métodos](lpoo_files/laboratorio/01-classes/01.01-classes.html)
   * [lab01.02 - Classes (Extra)](lpoo_files/laboratorio/01-classes/01.02-classes_extra.html)
 <!--* [lab02 - Classes com Encapsulamento](lpoo_files/laboratorio/02-classes_encapsulamento/02-classes_encapsulamento.html)
   * [lab02 - Classes com encapsulamento (Extra)](lpoo_files/laboratorio/02-classes_encapsulamento/02-classes_encapsulamento02.pdf)
