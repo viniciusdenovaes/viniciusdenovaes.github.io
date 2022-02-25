@@ -1,13 +1,5 @@
 # LPOO - Linguagem de Programação Orientada a Objetos (em Java)
 
-
-
-Alerta: os exemplos fazem sentido no contexto da aula, junto com uma explicação.
-Muitas linhas nos códigos podem não fazer sentido:
-talvez eu tenha colocado para dar um exemplo do que não fazer,
-ou talvez eu tenha colocado para explicar algum conceito pontual,
-ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
-
 ## Curso
 
 * Prólogo
@@ -43,7 +35,7 @@ ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
     * [Gabarito](lpoo_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.zip)
 
 
-## Trabalho para a NP1
+<!--## Trabalho para a NP1
 
 * [Trabalho para a NP1](lpoo_files/trabalhos/01/trabalho01.html)
 
@@ -55,6 +47,8 @@ ou talvez fuja da matéria e eu tenha colocado para responder a alguma pergunta.
 ## Exemplos Vistos em Sala
 
 * [Github](https://github.com/viniciusdenovaes/Unip211LPOO)
+
+-->
 
 ## Ementa
 
