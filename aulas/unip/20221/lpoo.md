@@ -18,7 +18,6 @@
 
 ## Laboratórios
 
-* [lab00 - comandos básicos](lpoo_files/laboratorio/00-basico/lista_comandos_basicos.pdf)
 * [lab00 - Usando funções (métodos estáticos)](lpoo_files/laboratorio/00-basico/comandos-basicos.html)
   * [respostas](https://github.com/viniciusdenovaes/Unip211LPOO/tree/main/Lab00/src/lab00)
 * Lab01
