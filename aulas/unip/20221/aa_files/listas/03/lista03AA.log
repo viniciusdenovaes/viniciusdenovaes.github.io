@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.7.1)  14 MAR 2022 05:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2021.7.1)  14 MAR 2022 17:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**lista03ATC.tex
-(./lista03ATC.tex
+**lista03AA.tex
+(./lista03AA.tex
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-06-18>
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
@@ -129,8 +129,8 @@ File: l3backend-pdftex.def 2021-05-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count270
 \l__pdf_internal_box=\box52
 )
-(./lista03ATC.aux)
-\openout1 = `lista03ATC.aux'.
+(./lista03AA.aux)
+\openout1 = `lista03AA.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
@@ -166,25 +166,24 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./list
-a03ATC.aux) ) 
+a03AA.aux) ) 
 Here is how much of TeX's memory you used:
  2453 strings out of 478517
- 33352 string characters out of 5849901
- 352046 words of memory out of 5000000
+ 33341 string characters out of 5849901
+ 352044 words of memory out of 5000000
  20423 multiletter control sequences out of 15000+600000
  412257 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,6n,66p,206b,231s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-su
-per-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
-fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb>
-
-Output written on lista03ATC.pdf (1 page, 65769 bytes).
+ 56i,6n,66p,205b,231s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-sup
+er-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17
+.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
+b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb>
+Output written on lista03AA.pdf (1 page, 65769 bytes).
 PDF statistics:
  44 PDF objects out of 1000 (max. 8388607)
  26 compressed objects within 1 object stream
