@@ -1,0 +1,157 @@
+exercicio 1
+
+equação cartesiana: (x/a)^2 + (y/b)^2 = 1
+
+equação parametrica:
+x: a*cos(t)
+y: b*sen(t)
+t in [0, 2\pi]
+
+
+3
+a) y = x
+
+* translação em x: 
+
+(x', y') = (x+2, y)
+x' = x+2 => x = x'-2
+y' = y   => y = y'
+
+a nova equação da reta: y = x-2 
+
+* rotação de 90º graus
+
+(x', y') = (x*cos(t) - y*sen(t), x*sen(t) + y*cos(t))
+
+x' = x*cos(t) - y*sen(t)
+y' = x*sen(t) + y*cos(t)
+
+t = 90º
+x' = x*cos(90º) - y*sen(90º) = - y*1 => y = -x'
+y' = x*sen(90º) + y*cos(90º) = x*1 => x = y'
+
+a nova equação será da reta: y = -x
+
+* escala de 2 em y
+
+x' = x => x = x'
+y' = 2y => y = y'/2
+
+y/2 = x => y = 2x
+
+a nova equação da reta será : y = 2x
+
+* escala de 2 em x
+
+a nova equação da reta será: y = x/2
+
+
+
+b) a equação paramétrica 
+x = t
+y = t
+
+* translação de 2 em x
+x' = x+2 => x = x'-2
+y' = y
+
+x'-2 = t => x' = t+2
+y' = t
+
+a nova equação paramétrica será 
+x = t+2
+y = t
+
+* rotação de 90º
+
+x' = x*cos(90º) - y*sen(90º) = - y*1 => y = -x' => -x' = t => x' = -t
+y' = x*sen(90º) + y*cos(90º) = x*1 => x = y' => y' = t
+
+a nova equação paramétrica será 
+x = -t
+y = t
+
+
+* escala de 2 em y
+
+x' = x  => x' = t
+y' = 2y => y' = 2t
+
+a nova equação paramétrica será 
+x = t
+y = 2t
+
+
+
+4) 
+
+* 
+[x'   y'] = [x   y]  [  cos(t) sen(t) ] * [S_x  0  ]
+                     [ -sen(t) cos(t) ]   [  0  S_y]
+
+[  cos(t) sen(t) ] * [S_x  0  ]
+[ -sen(t) cos(t) ]   [  0  S_y]
+
+[  cos(90º) sen(90º) ] * [2  0]
+[ -sen(90º) cos(90º) ]   [0  2]
+
+[  0 1 ] * [2  0]
+[ -1 0 ]   [0  2]
+
+[  0 1 ] * [2  0] = [ 0  2]
+[ -1 0 ]   [0  2]   [-2  0]
+
+
+* 
+[x'   y'] = [x   y]  [S_x  0  ] * [  cos(t) sen(t) ]
+                     [  0  S_y]   [ -sen(t) cos(t) ]   
+
+[S_x  0  ] * [  cos(t) sen(t) ]
+[  0  S_y]   [ -sen(t) cos(t) ]   
+                     
+[2  0] * [  0 1 ] = [ 0 2]
+[0  2]   [ -1 0 ]   [-2 0]
+                     
+
+
+5) 
+
+* 
+[x'   y'] = [x   y]  [  cos(t) sen(t) ] * [S_x  0  ]
+                     [ -sen(t) cos(t) ]   [  0  S_y]
+
+[  cos(t) sen(t) ] * [S_x  0  ]
+[ -sen(t) cos(t) ]   [  0  S_y]
+
+[  cos(90º) sen(90º) ] * [2  0]
+[ -sen(90º) cos(90º) ]   [0  1]
+
+[  0 1 ] * [2  0]
+[ -1 0 ]   [0  1]
+
+[  0 1 ] * [2  0] = [ 0  1]
+[ -1 0 ]   [0  1]   [-2  0]
+
+
+* 
+[x'   y'] = [x   y]  [S_x  0  ] * [  cos(t) sen(t) ]
+                     [  0  S_y]   [ -sen(t) cos(t) ]   
+
+[S_x  0  ] * [  cos(t) sen(t) ]
+[  0  S_y]   [ -sen(t) cos(t) ]   
+                     
+[2  0] * [  0 1 ] = [ 0 2]
+[0  1]   [ -1 0 ]   [-1 0]
+                     
+
+
+
+
+
+6) 
+
+* 
+[x'   y'  1] = [x   y   1]  [  cos(t) sen(t)  0] * [  1   0  0]
+                            [ -sen(t) cos(t)  0]   [  0   1  0]
+                            [      0      0   1]   [T_x T_y  1]
+

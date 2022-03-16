@@ -10,8 +10,8 @@ layout: home
 ### Atuais (2022/1)
 * [LPOO](aulas/unip/20221/lpoo.html)
 * [AA](aulas/unip/20221/aa.html)
-<!--* [IA](aulas/unip/20221/ia.html)
-* [CG](aulas/unip/20221/cg.html)-->
+* [CG](aulas/unip/20221/cg.html)
+* [IA](aulas/unip/20221/ia.html)
 
 ### (2021/2)
 * [Processamento de Imagens](aulas/unip/20212/pi.html)
