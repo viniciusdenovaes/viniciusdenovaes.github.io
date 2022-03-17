@@ -276,10 +276,103 @@ pre[data-line] .line-highlight[data-end]:after {
 <ul>
 <li>Para inicializar um <code>ArrayList</code> use
 <ul>
-<li><code>ArrayList&lt;Gato&gt; gatos = new ArrayList&lt;&gt;();</code></li>
+<li><code>ArrayList&lt;Gato&gt; gatos = new ArrayList&lt;Gato&gt;();</code></li>
 </ul>
 </li>
-<li>asdf</li>
+<li>Para adicionar um objeto <code>gato</code> na sua lista use o comando
+<ul>
+<li><code>gatos.add(gato);</code></li>
+</ul>
+</li>
+<li>Para saber o tamanho de um <code>ArrayList</code> use o m&#xE9;todo <code>size</code>
+<ul>
+<li><code>gatos.size()</code></li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="iterando">Iterando</h2>
+
+<p>Existem algumas maneiras de iterar por um <code>ArrayList</code>.</p>
+<ul>
+<li><code>for</code> (estilo <strong>C</strong>):</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>gatos<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token function">sysout</span><span class="token punctuation">(</span>gatos<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><ul>
+<li><code>for-each</code> (estilo <strong>Python</strong>)</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token class-name">Gato</span> gato<span class="token operator">:</span> gatos<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token function">sysout</span><span class="token punctuation">(</span>gato<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><h2 class="mume-header" id="exemplo">Exemplo</h2>
+
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">ArrayList</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Gato</span><span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> nome<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name">Gato</span><span class="token punctuation">(</span><span class="token class-name">String</span> aNome<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>nome <span class="token operator">=</span> aNome<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">String</span> res <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+        res <span class="token operator">+=</span> <span class="token string">&quot;Gato de Nome &quot;</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>nome <span class="token operator">+</span> <span class="token string">&quot;\n&quot;</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Gato</span><span class="token punctuation">&gt;</span></span> gatos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Gato</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Gato</span> gato01 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Gato</span><span class="token punctuation">(</span><span class="token string">&quot;Brutos&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        gatos<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>gato01<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Gato</span> gato02 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Gato</span><span class="token punctuation">(</span><span class="token string">&quot;Chitara&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        gatos<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>gato01<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        gatos<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Gato</span><span class="token punctuation">(</span><span class="token string">&quot;Chirriro&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Primeiro: for&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>gatos<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>gatos<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Segundo: for-each&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token class-name">Gato</span> gato<span class="token operator">:</span> gatos<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>gato<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><p>Sa&#xED;da</p>
+<pre data-role="codeBlock" data-info class="language-"><code>Primeiro: for
+Gato de Nome Brutos
+
+Gato de Nome Brutos
+
+Gato de Nome Chirriro
+
+Segundo: for-each
+Gato de Nome Brutos
+
+Gato de Nome Brutos
+
+Gato de Nome Chirriro
+
+</code></pre><h2 class="mume-header" id="outros-m%C3%A9todos">Outros M&#xE9;todos</h2>
+
+<p>Outros m&#xE9;todos menos usados mas que voc&#xEA; pode precisar</p>
+<ul>
+<li>
+<p><code>gatos.set(i, outroGato)</code> para colocar um outro gato na posi&#xE7;&#xE3;o <code>i</code> (a posi&#xE7;&#xE3;o <code>i</code> j&#xE1; deve existir)</p>
+</li>
+<li>
+<p><code>gatos.remove(i)</code> remove o objeto da posi&#xE7;&#xE3;o <code>i</code>.</p>
+</li>
+<li>
+<p><code>gatos.clear()</code> limpa a lista (ela fica vazia)</p>
+</li>
+<li>
+<p><code>ArrayList&lt;Gato&gt; outrosGatos = new ArrayList&lt;Gato&gt;(gatos)</code> inicializa uma lista de objetos com os objetos de uma outra cole&#xE7;&#xE3;o qualquer.</p>
+</li>
 </ul>
 <p>.</p>
 
