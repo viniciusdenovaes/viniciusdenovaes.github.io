@@ -1,9 +1,9 @@
-# LPOO - Linguagem de Programação Orientada a Objetos (em Java) 
+# LPOO - Linguagem de Programação Orientada a Objetos (em Java)
 
 ## Curso
 
 - Prólogo
-  - Instalação:
+  - Instalação:.
     - [Linux (Ubuntu)](lpoo_files/curso/00-install/linux/00-tuto_instal_linux_ubuntu.html)
     - [Windows](lpoo_files/curso/00-install/windows/00-tuto_instal_windows.html)
 
