@@ -1,6 +1,6 @@
 # ArrayList
 
-Uma coleção (`Colection`) representa qualquer estrutura usada para **guardar** e **iterar** uma quantidade de objetos do mesmo tipo.
+Uma coleção (`Colection`) representa qualquer estrutura usada para **guardar** e **iterar** uma quantidade de objetos do mesmo tipo. 
 
 O tipo mais simples de coleção é a lista `List`, e o tipo mais simples de lista é o `ArrayList`.
 
