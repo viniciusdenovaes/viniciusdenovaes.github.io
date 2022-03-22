@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>03-exercicio_com_heranca</title>
+      <title>04.00-exercicio_heranca</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -261,17 +261,54 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="exerc%C3%ADcios-sobre-heran%C3%A7a-classe-abstrata-e-polimorfismo">Exerc&#xED;cios sobre Heran&#xE7;a, Classe Abstrata e Polimorfismo</h1>
+      <h1 class="mume-header" id="exerc%C3%ADcio-pato">Exerc&#xED;cio Pato</h1>
 
-<h4 class="mume-header" id="exerc%C3%ADcio1">Exerc&#xED;cio1</h4>
+<h4 class="mume-header" id="pato">Pato</h4>
 
-<p>Repita o exerc&#xED;cio da <a href="03-exercicio_sem_heranca.html">&quot;lista 03 sem heran&#xE7;a&quot;</a>, mas use os conceitos de heran&#xE7;a e polimorfismo para fazer com que <code>Gerente</code> e <code>Horista</code> sejam subclasse de <code>Funcionario</code>, e os tr&#xEA;s m&#xE9;todos de <code>Financeiro</code> seja um m&#xE9;todo s&#xF3; que receba <code>Funcionario</code> e imprima o pagamento para qualquer subclasse de <code>Funcionario</code></p>
-<h4 class="mume-header" id="exerc%C3%ADcio-2">Exerc&#xED;cio 2</h4>
-
-<p>Repita o exerc&#xED;cio 01 da <a href="../02-classes_encapsulamento/02-classes_encapsulamento.html">&quot;lista 02 classes com encapsulamento&quot;</a>. Mas fa&#xE7;a uma superclasse <code>Animal</code> para as classes <code>Cachorro</code>, <code>Gato</code> e <code>Pato</code>.</p>
+<p>Fa&#xE7;a uma classe <code>Pato</code> que tenha os atributos:</p>
 <ul>
-<li>Modifique o m&#xE9;todo da classe <code>Veterinaria</code> para aceitar qualquer animal.</li>
-<li>Modifique a classe <code>Cuidador</code> para que ele tenha uma lista de <code>Animal</code> que aceite qualquer animal na mesma lista, seja <code>Cachorro</code>, <code>Gato</code> ou <code>Pato</code>.</li>
+<li><code>nome</code>: uma <code>String</code></li>
+<li><code>ano</code>: um <code>int</code></li>
+</ul>
+<p>Os m&#xE9;todos p&#xFA;blicos</p>
+<ul>
+<li><code>voa()</code>: escreve na tela &quot;O Pato voa&quot;</li>
+<li><code>nada()</code>: escreve na tela &quot;O Pato nada&quot;</li>
+<li><code>quack()</code>: escreve na tela &quot;quack&quot;</li>
+</ul>
+<h4 class="mume-header" id="pato-de-madeira">Pato de Madeira</h4>
+
+<p>Fa&#xE7;a uma classe <code>PatoMadeira</code>, subclasse de <code>Pato</code>.<br>
+Al&#xE9;m dos atributos e m&#xE9;todos de <code>Pato</code>, redefina os m&#xE9;todos:</p>
+<ul>
+<li><code>voa()</code>: escreve na tela &quot;O Pato n&#xE3;o voa&quot;</li>
+<li><code>nada()</code>: escreve na tela &quot;O Pato boia&quot;</li>
+<li><code>quack()</code>: escreve na tela &quot;...&quot;</li>
+</ul>
+<h4 class="mume-header" id="pato-de-borracha">Pato de Borracha</h4>
+
+<p>Fa&#xE7;a uma classe <code>PatoBorracha</code>, subclasse de <code>Pato</code>.<br>
+Al&#xE9;m dos atributos e m&#xE9;todos de <code>Pato</code>, tenha o atributo.</p>
+<ul>
+<li><code>cor</code> uma <code>String</code></li>
+</ul>
+<p>Redefina os m&#xE9;todos:</p>
+<ul>
+<li><code>voa()</code>: escreve na tela &quot;O Pato [<code>cor</code>] n&#xE3;o voa&quot;</li>
+<li><code>nada()</code>: escreve na tela &quot;O Pato [<code>cor</code>] boia&quot;</li>
+</ul>
+<h4 class="mume-header" id="super-pato">Super Pato</h4>
+
+<p>Fa&#xE7;a uma classe <code>SuperPato</code>, subclasse de <code>Pato</code>.<br>
+Al&#xE9;m dos atributos e m&#xE9;todos de <code>Pato</code>, tenha o atributo.</p>
+<ul>
+<li><code>poder</code> um <code>float</code></li>
+</ul>
+<p>Redefina os m&#xE9;todos:</p>
+<ul>
+<li><code>voa()</code>: escreve na tela &quot;Super Pato voa como um jato de poder [<code>poder</code>]&quot;</li>
+<li><code>nada()</code>: escreve na tela &quot;Super Pato nada como uma submarino de poder [<code>poder</code>]&quot;</li>
+<li><code>quack()</code>: escreve na tela a mesma coisa que <code>Pato</code> mas em letra mai&#xFA;scula</li>
 </ul>
 <p>.</p>
 
