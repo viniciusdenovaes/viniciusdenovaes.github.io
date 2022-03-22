@@ -16,10 +16,10 @@
   - [Convenções](lpoo_files/curso/02/02-convencoes.html)
 
 - Parte 03 - Introdução à primeira estrutura de dados: Lista
-    - [ArrayList](lpoo_files/curso/03/array_list.html)
+  - [ArrayList](lpoo_files/curso/03/array_list.html)
 
 - Parte 04 - Herança
-      - [Herança](lpoo_files/curso/04/heranca.html)
+  - [Herança](lpoo_files/curso/04/heranca.html)
 
 
 ## Laboratórios
