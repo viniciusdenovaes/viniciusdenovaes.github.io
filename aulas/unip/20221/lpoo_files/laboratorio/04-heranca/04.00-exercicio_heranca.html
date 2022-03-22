@@ -310,6 +310,38 @@ Al&#xE9;m dos atributos e m&#xE9;todos de <code>Pato</code>, tenha o atributo.</
 <li><code>nada()</code>: escreve na tela &quot;Super Pato nada como uma submarino de poder [<code>poder</code>]&quot;</li>
 <li><code>quack()</code>: escreve na tela a mesma coisa que <code>Pato</code> mas em letra mai&#xFA;scula</li>
 </ul>
+<h1 class="mume-header" id="exerc%C3%ADcio-telefone">Exerc&#xED;cio Telefone</h1>
+
+<h4 class="mume-header" id="conta-telefone">Conta Telefone</h4>
+
+<p>Crie a classe  <code>ContaTelefone</code> que tenha os atributos:</p>
+<ul>
+<li><code>numero</code>: <code>String</code></li>
+<li><code>minutos</code>: Uma lista de inteiros representando os minutos de cada liga&#xE7;&#xE3;o.</li>
+</ul>
+<p>Os m&#xE9;todos</p>
+<ul>
+<li><code>public int getTotalMinutos()</code> que retorna o valor da soma dos minutos de todas as liga&#xE7;&#xF5;es</li>
+<li><code>public double getValor()</code> que retorna o valor da conta seguindo a seguinte regra:
+<ul>
+<li>Se a soma dos minutos falados for menor ou igual a 30, o valor da conta &#xE9; 0.6 vezes a soma dos minutos de cada liga&#xE7;&#xE3;o</li>
+<li>Se a soma dos minutos falados for maior que 30, o valor da conta &#xE9; 0.8 vezes a soma dos minutos de cada liga&#xE7;&#xE3;o</li>
+</ul>
+</li>
+<li>Redefina <code>toString</code> para exibir todos os dados da conta, inclusive o total de minutos falados e o valor da conta.</li>
+</ul>
+<h4 class="mume-header" id="conta-celular">Conta Celular</h4>
+
+<p>Crie a classe <code>ContaCelular</code> que seja subclasse de <code>ContaTelefone</code> e redefina o m&#xE9;todo.</p>
+<ul>
+<li><code>public double getValor()</code> que retorna o valor da conta seguindo a seguinte regra:
+<ul>
+<li>Se a soma dos minutos falados for menor ou igual a 60, o valor da conta &#xE9; 1.2 vezes a soma dos minutos de cada liga&#xE7;&#xE3;o</li>
+<li>Se a soma dos minutos falados for maior que 60, o valor da conta &#xE9; 1.4 vezes a soma dos minutos de cada liga&#xE7;&#xE3;o</li>
+</ul>
+</li>
+<li>OBS: n&#xE3;o precisa redefinir <code>toString</code> pois j&#xE1; est&#xE1; definido na superclasse</li>
+</ul>
 <p>.</p>
 
       </div>
