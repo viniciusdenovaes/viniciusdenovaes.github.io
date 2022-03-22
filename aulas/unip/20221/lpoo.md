@@ -15,8 +15,11 @@
   - [Classes](lpoo_files/curso/02/01-classes.html)
   - [Convenções](lpoo_files/curso/02/02-convencoes.html)
 
-- Introdução à primeira estrutura de dados: Lista
-  - [ArrayList](lpoo_files/curso/03/array_list.html)
+- Parte 03 - Introdução à primeira estrutura de dados: Lista
+    - [ArrayList](lpoo_files/curso/03/array_list.html)
+
+- Parte 04 - Herança
+      - [Herança](lpoo_files/curso/04/heranca.html)
 
 
 ## Laboratórios
