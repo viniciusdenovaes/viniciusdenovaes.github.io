@@ -21,6 +21,12 @@
 - Parte 04 - Herança
   - [Herança](lpoo_files/curso/04/heranca.html)
 
+- Interlúdio 01 - Controle de Erros
+  - [Controle de Erros](lpoo_files/curso/00.1-erros-io/01-controle_erros.html)
+
+- Interlúdio 02 - Entrada e Saída
+  - [IO](lpoo_files/curso/00.1-erros-io/02-io.html)
+
 
 ## Laboratórios
 
