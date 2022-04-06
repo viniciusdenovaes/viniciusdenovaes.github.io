@@ -260,7 +260,7 @@ Na seção sobre Entrada e Saída veremos um exemplo deste tipo.
 
 Aqui vamos criar uma classe que precisa ser fechada, e vamos usar os 3 tipos de `try catch` para exemplificar.
 
-A classe que precisa ser fechada `implements Closable`:
+A classe que precisa ser fechada `implements Closable`, ela deve ser criada, usada e depois fechada. Este é o mais comum padrão para uso de recursos.
 
 ``` java
 
@@ -313,10 +313,134 @@ public class AlocadorDeRecurso implements Closeable {
 }
 ```
 
+Usando o `try catch` ficaríamos com este seguinte teste, perceba como é complicado usar este padrão usando o `try catch` normal. Precisamos fechar o recurso caso tenhamos erro ou não. E nem sabemos se o recurso foi criado, então precisamos verificar.
+
+```java
+import java.io.IOException;
+
+public class TesteTryCatchNormal {
+
+    public static void main(String[] args) {
+
+        AlocadorDeRecurso alocador = null;
+
+        try{
+
+            alocador = new AlocadorDeRecurso(true);
+            alocador.usarRecurso(true);
+
+        }catch(IOException e){
+            System.out.println("-----------------------------------------------------------");
+            System.out.println("tratando erro dentro do primeiro catch");
+            System.out.println("mensagem de erro: " + e.getMessage());
+            System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+            if(alocador!=null){
+                try{
+                    alocador.close();
+                }catch(IOException e2){
+                    System.out.println("-----------------------------------------------------------");
+                    System.out.println("tratando erro ao fechar o arquivo dentro do segundo catch aninhado");
+                    System.out.println("mensagem de erro: " + e2.getMessage());
+                    System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+                }
+            }
+        }
+
+        if(alocador!=null){
+            if(!alocador.getIsClosed()){
+                try{
+                    alocador.close();
+                }catch(IOException e){
+                    System.out.println("-----------------------------------------------------------");
+                    System.out.println("tratando erro ao fechar o arquivo dentro do segundo catch nao aninhado");
+                    System.out.println("mensagem de erro: " + e.getMessage());
+                    System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+                }
+            }
+        }
+
+    }
+
+}
+```
 
 
 
 
+
+
+
+
+Agora usando o `try catch finally` ficaríamos com este seguinte teste, perceba como a vida ficou mais simples. Porém ainda não é a melhor maneira. Não sabemos se o recurso foi criado, precisamos verificar.
+
+```java
+
+import java.io.IOException;
+
+public class TesteTryCatchFinally {
+
+    public static void main(String[] args) {
+
+        AlocadorDeRecurso alocador = null;
+
+        try{
+
+            alocador = new AlocadorDeRecurso(true);
+            alocador.usarRecurso(true);
+
+        }catch(IOException e){
+            System.out.println("-----------------------------------------------------------");
+            System.out.println("tratando erro dentro do primeiro catch");
+            System.out.println("mensagem de erro: " + e.getMessage());
+            System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        }finally{
+            if(alocador!=null){
+                if(!alocador.getIsClosed()){
+                    try{
+                        alocador.close();
+                    }catch(IOException e){
+                        System.out.println("-----------------------------------------------------------");
+                        System.out.println("tratando erro ao fechar o arquivo dentro do segundo catch nao aninhado");
+                        System.out.println("mensagem de erro: " + e.getMessage());
+                        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+```
+
+### A Melhor Maneira de Tratar Erros de `Closable`
+
+
+
+Agora usando o `try-with-resources` veja como a vida ficou simples. Tudo o que fizemos nos anteriores ele faz automaticamente.
+
+```java
+import java.io.IOException;
+
+public class TesteTryWithResource {
+
+    public static void main(String[] args) {
+
+        try(AlocadorDeRecurso alocador = new AlocadorDeRecurso(true)){
+
+            alocador.usarRecurso(false);
+
+        }catch(IOException e){
+            System.out.println("-----------------------------------------------------------");
+            System.out.println("tratando erro dentro do primeiro catch");
+            System.out.println("mensagem de erro: " + e.getMessage());
+            System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        }
+
+    }
+
+}
+```
 
 
 
