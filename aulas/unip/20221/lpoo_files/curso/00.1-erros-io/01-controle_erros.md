@@ -49,7 +49,7 @@ Em segundo temos o `Runtime Exception`, este é o tipo de erro que é **culpa do
 Caso um erro deste ocorra, o programa deve ser terminado e o **programador deve ser avisado do erro**.
 
 Por exemplo
-* `IndexOutOfBound`: possivelmente o programa tenta acessar uma parte de uma lista que não existe
+- `IndexOutOfBound`: possivelmente o programa tenta acessar uma parte de uma lista que não existe
 
 ``` java
 import java.util.ArrayList;
@@ -74,7 +74,7 @@ Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 1 out of b
 
 ```
 
-* `NulPointerException`: possivelmente tentar usar uma variável de um objeto que não foi inicializado
+- `NulPointerException`: possivelmente tentar usar uma variável de um objeto que não foi inicializado
 ``` java
 public class Main {
 	public static void main(String[] args) {
@@ -92,7 +92,7 @@ Exception in thread "main" java.lang.NullPointerException
 
 
 
-* `StackOverFlow`: uma função está chamando ela mesmo infinitamente (até encher a pilha de chamadas).
+- `StackOverFlow`: uma função está chamando ela mesmo infinitamente (até encher a pilha de chamadas).
 
 ``` java
 public class Main {
@@ -122,7 +122,7 @@ Exception in thread "main" java.lang.StackOverflowError
 
 
 
-* `ArithmeticException`: alguma operação aritmética deu erro.
+- `ArithmeticException`: alguma operação aritmética deu erro.
 
 ``` java
 public class Main {
@@ -152,9 +152,9 @@ Em terceiro lugar temos o `IOException` (pode ser traduzido como Exceções de e
 
 Por exemplo:
 
-* não existe o arquivo que o programa está tentando abrir,
-* o computador está sem acesso à internet,
-* impressora está sem tinta,
+- não existe o arquivo que o programa está tentando abrir,
+- o computador está sem acesso à internet,
+- impressora está sem tinta,
 
 
 ## Como Lançar um Erro? (`throw exception`)
@@ -190,8 +190,128 @@ Exception in thread "main" java.lang.ArithmeticException: O Divisor da divisão 
 
 Como visto ateriormente, o objeto `ArithmeticException` é do tipo `RunTime Exception`, que não precisa ser tratado.
 
+## Como Tratar Um Erro? (`try catch`)
+
+Em Java, uma `exception` do tipo `IOException` **precisa obrigatóriamente ser tratada**.
+
+Para isto devemos ter **todas** as seguintes condições:
+
+- uma função que lança a exception **precisa** avisar que vai lançar, usando a palavra `throws`
+- uma função que usa uma função que lança a exception **precisa** ou lançar a exception recebida, ou tratar usando a sintaxe `try catch`
+
+#### 3 Tipos de `try catch`
+
+O ambiente que trata do erro é o `try catch`. Primeiro fazendo o escopo do `try{}` dentro das chaves usamos as funções que podem lançar erros.
+
+Depois fazendo o `catch(Exception e){}`, dentro do parênteses a exception do tipo `Exception` será guardada na variável `e`, e dentro das chaves ela será tratada. Só entrará no `catch` caso um erro ocorra.
+
+Temos 3 tipos de `try catch`:
+- O `try catch` normal, como descrito, e como veremos no exemplo seguinte.
+- O `try catch finally` com um escopo a mais, o `finally`, que vem depois do `catch` e **sempre** ocorre, caso tenha erro ou não. Veremos este exemplo mais adiante.
+- O `try-with-resources` para objetos que tratam `Closable`, qualquer objeto que deve ser fechado (que implementa a interface `Closable`). É igual ao primeiro, mas criamos todos os objetos que devem ser fechados em um parênteses dentro depois do `try`. Veremos este exemplo mais adiante.
 
 
+Por exemplo, usando o primeiro tipo
+
+``` java
+import java.io.IOException;
+
+public class Tries {
+
+	public static void main(String[] args) {
+
+		try {
+			iof(true);
+			System.out.println("A funcao funcionou normalmente");
+		}catch(IOException e) {
+			System.out.println("Dentro de  catch");
+			System.out.println("Podemos pegar a mensagem de erro: " + e.getMessage());
+			System.out.println("Podemos imprimir todas as funcoes que foram chamadas ate o erro");
+			e.printStackTrace();
+		}
+
+	}
+
+	static void iof(boolean erro) throws IOException{
+		if(erro) {
+			throw new IOException("mensagem de erro");
+		}
+
+		System.out.println("Sem erros, funciona normalmente");
+	}
+
+}
+```
+
+```
+Dentro de  catch
+Podemos pegar a mensagem de erro: mensagem de erro
+Podemos imprimir todas as funcoes que foram chamadas ate o erro
+java.io.IOException: mensagem de erro
+	at erros.Tries.iof(Tries.java:23)
+	at erros.Tries.main(Tries.java:10)
+```
+
+## Vamos ver um exemplo *mais* prático
+
+Normalmente `IOException` acontecem com objetos que deve ser *fechados*. São objetos-recursos que são acessados e têm um método `close()` para chamar quando o recurso terminou de ser usado.
+
+Na seção sobre Entrada e Saída veremos um exemplo deste tipo.
+
+Aqui vamos criar uma classe que precisa ser fechada, e vamos usar os 3 tipos de `try catch` para exemplificar.
+
+A classe que precisa ser fechada `implements Closable`:
+
+``` java
+
+import java.io.Closeable;
+import java.io.IOException;
+
+public class AlocadorDeRecurso implements Closeable {
+
+    boolean isClosed;
+
+    public AlocadorDeRecurso(boolean disponivel) throws IOException {
+
+        System.out.println("Tentando alocar o recurso");
+        if(!disponivel){
+            throw new IOException("recurso nao esta diponivel");
+        }
+
+        isClosed = false;
+        System.out.println("Recurso alocado");
+
+    }
+
+    public boolean getIsClosed(){
+        return isClosed;
+    }
+
+    public void usarRecurso(boolean disponivel) throws IOException {
+        System.out.println("tentando usar o recurso");
+        if(!disponivel){
+            throw new IOException("recurso nao disponivel");
+        }
+
+        System.out.println("recurso usado");
+    }
+
+    @Override
+    public void close() throws IOException{
+        System.out.println("tentando fechar o recurso");
+        if(isClosed){
+            throw new IOException("nao foi possivel fechar o recurso ja esta fechado");
+        }
+
+        isClosed = true;
+        System.out.println("recurso liberado");
+    }
+
+
+
+
+}
+```
 
 
 
