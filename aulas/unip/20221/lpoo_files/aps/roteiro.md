@@ -4,7 +4,7 @@ Trabalho em grupo de, no máximo, 5 pessoas.
 
 Neste trabalho o grupo deve fazer um programa de acesso aos dados de uma faculdade, com informações sobre cadastro de alunos e cursos; e alunos cadastrados no curso.
 
-## Dados
+## Entidade
 
 O seu programa deve processar dados relativos a alunos, cursos e a relação entre alunos e cursos.
 
