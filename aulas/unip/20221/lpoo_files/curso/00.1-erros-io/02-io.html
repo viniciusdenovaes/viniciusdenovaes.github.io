@@ -541,6 +541,50 @@ Cada linha representa uma linha de um tabela em que cada coluna s&#xE3;o as pala
     <span class="token punctuation">}</span>
 
 <span class="token punctuation">}</span>
+</pre><h2 class="mume-header" id="leitura-da-entrada-padr%C3%A3o">Leitura da Entrada Padr&#xE3;o</h2>
+
+<p>Raras vezes na sua vida voc&#xEA; vai precisar fazer leitura da entrada padr&#xE3;o em um programa.</p>
+<p>Normalmente entradas para um programa s&#xE3;o arquivos grandes e estar&#xE3;o guardados em um arquivo externo. E mesmo que n&#xE3;o seja grande, n&#xE3;o &#xE9; pr&#xE1;tico ficar reescrevendo a entrada no terminal sempre que voc&#xEA; precisar testar o programa.</p>
+<p>Mesmo assim, no come&#xE7;o do aprendizado de programa&#xE7;&#xE3;o, por falta de outros meios, devemos recorrer &#xE0; entrada padr&#xE3;o.</p>
+<p>Neste tutorial vamos recorrer &#xE0; fun&#xE7;&#xE3;o mais simples da entrada padr&#xE3;o, que &#xE9; ler uma <code>String</code>, e depois se preocupar qual &#xE9; o formato da entrada (se essa <code>String</code> &#xE9; um <code>int</code>, <code>double</code>, <code>String</code>, etc...)</p>
+<p>Vamos usar o <code>Scanner</code> da entrada padr&#xE3;o (<code>System.in</code>)</p>
+<h4 class="mume-header" id="leitura-de-uma-string">Leitura de uma <code>String</code></h4>
+
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword keyword-import">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">EntradaString</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">Scanner</span> in <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Entre com uma frase:&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> frase <span class="token operator">=</span> in<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;A frase entrada foi: \&quot;&quot;</span> <span class="token operator">+</span> frase <span class="token operator">+</span> <span class="token string">&quot;\&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h4 class="mume-header" id="leitura-de-um-int">Leitura de um <code>int</code></h4>
+
+<p>Aqui lemos uma String e verificamos que podemos transformar essa String em um inteiro, caso n&#xE3;o seja poss&#xED;vel, chamamos a fun&#xE7;&#xE3;o novamente.</p>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword keyword-import">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">EntradaInt</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">Scanner</span> in <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-int">int</span> numero <span class="token operator">=</span> <span class="token function">leInteiro</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;O inteiro entrado foi: \&quot;&quot;</span> <span class="token operator">+</span> numero <span class="token operator">+</span> <span class="token string">&quot;\&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-int">int</span> <span class="token function">leInteiro</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">Scanner</span> in <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Entre com um inteiro:&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> numeroString <span class="token operator">=</span> in<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-try">try</span><span class="token punctuation">{</span>
+            <span class="token keyword keyword-int">int</span> numeroInteiro <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>numeroString<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-return">return</span> numeroInteiro<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword keyword-catch">catch</span><span class="token punctuation">(</span><span class="token class-name">NumberFormatException</span> e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;O valor entrado nao eh um inteiro: &quot;</span> <span class="token operator">+</span> numeroString<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-return">return</span> <span class="token function">leInteiro</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </pre><p>.</p>
 
       </div>
