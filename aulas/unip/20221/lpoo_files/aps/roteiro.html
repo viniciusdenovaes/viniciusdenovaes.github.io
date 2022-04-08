@@ -263,11 +263,11 @@ pre[data-line] .line-highlight[data-end]:after {
       <div class="mume markdown-preview  ">
       <h1 class="mume-header" id="roteiro-para-a-aps">Roteiro para a APS</h1>
 
-<p>Trabalho em grupo de, no m&#xE1;ximo, 5 pessoas</p>
-<p>Neste trabalho o grupo deve fazer um programa de acesso aos dados de uma faculdade, com informa&#xE7;&#xF5;es sobre cadastro de alunos e cursos; e notas dos alunos.</p>
+<p>Trabalho em grupo de, no m&#xE1;ximo, 5 pessoas.</p>
+<p>Neste trabalho o grupo deve fazer um programa de acesso aos dados de uma faculdade, com informa&#xE7;&#xF5;es sobre cadastro de alunos e cursos; e alunos cadastrados no curso.</p>
 <h2 class="mume-header" id="dados">Dados</h2>
 
-<p>o seu programa deve processar dados relativos a alunos, cursos, notas e rendimentos da faculdade.</p>
+<p>O seu programa deve processar dados relativos a alunos, cursos e a rela&#xE7;&#xE3;o entre alunos e cursos.</p>
 <ul>
 <li>Um <code>Aluno</code> tem:
 <ul>
@@ -284,44 +284,8 @@ pre[data-line] .line-highlight[data-end]:after {
 <li>Cada curso deve ser identificado pela combina&#xE7;&#xE3;o de seus tr&#xEA;s campos; dois cursos s&#xE3;o iguais se, e somente se, seus tr&#xEA;s campos forem iguais.</li>
 </ul>
 </li>
-<li>Uma <code>Nota</code>:
-<ul>
-<li>s&#xE3;o n&#xFA;meros decimais, com 2 d&#xED;gitos significativos, ente 0.00 e 10.00</li>
-</ul>
-</li>
-<li>As <code>Notas</code> de cada <code>Rendimento</code>:
-<ul>
-<li>cont&#xEA;m 4 valores do tipo <code>Nota</code>: a nota da NP1, da NP2, da reposi&#xE7;&#xE3;o, e do exame.</li>
-</ul>
-</li>
-<li>Um <code>Rendimento</code> representa a qualidade das notas que <strong>um</strong> <code>Aluno</code> obteve em <strong>um</strong> <code>Curso</code>:
-<ul>
-<li>um <code>rendimento</code> est&#xE1; atrelado &#xE0; <strong>um</strong> <code>aluno</code> e <strong>um</strong> <code>curso</code></li>
-<li>um <code>rendimento</code> tem:
-<ul>
-<li>as <code>Notas</code> que o <code>aluno</code> tirou no <code>curso</code></li>
-<li>um valor <code>aprovado</code> do tipo <code>boolean</code> (um valor <strong>n&#xE3;o</strong> quer dizer que a classe deva ter uma vari&#xE1;vel chamada <code>aprovado</code>, pode ser um m&#xE9;todo)</li>
-<li>um valor <code>media</code>, do tipo <code>Nota</code>, associada &#xE0;s notas do curso, esta m&#xE9;dia deve ser calculada da seguinte maneira:
-<ul>
-<li>deve ser calculada uma m&#xE9;dia inicial (vari&#xE1;vel local) da seguinte maneira: caso a nota da reposi&#xE7;&#xE3;o seja maior que a nota da NP1 ou da NP2, a menor nota, entre a NP1 e a NP2, deve ser substitu&#xED;da pela nota da reposi&#xE7;&#xE3;o, (<em>esta substitui&#xE7;&#xE3;o deve ser feita apenas no c&#xE1;lculo da m&#xE9;dia, a nota em da NP1 ou da NP2 n&#xE3;o devem mudar de valor.</em>) O valor da m&#xE9;dia entre a NP1 e NP2, depois de ter sido feita a substitu&#xED;&#xE7;&#xE3;o, ser&#xE1; a m&#xE9;dia inicial</li>
-<li>caso o curso seja um curso de gradua&#xE7;&#xE3;o:
-<ul>
-<li>se a m&#xE9;dia inicial for maior ou igual a 7.0, ent&#xE3;o a m&#xE9;dia se mant&#xE9;m no valor da m&#xE9;dia inicial e o valor de aprovado &#xE9; verdadeiro.</li>
-<li>se a m&#xE9;dia inicial <strong>n&#xE3;o</strong> for maior que 7.0, ent&#xE3;o a m&#xE9;dia final ser&#xE1; calculada a partir da m&#xE9;dia entre a nota do exame e a m&#xE9;dia inicial. A m&#xE9;dia ter&#xE1; o valor da m&#xE9;dia final e se o seu valor for maior ou igual a 5.0, o valor de aprovado ser&#xE1; verdadeiro, caso esta m&#xE9;dia final seja menor que 5.0 o valor de aprovado &#xE9; falso</li>
-</ul>
-</li>
-<li>caso o curso seja um curso de p&#xF3;s gradua&#xE7;&#xE3;o:
-<ul>
-<li>se a m&#xE9;dia inicial for maior ou igual a 5.0, ent&#xE3;o a m&#xE9;dia se mant&#xE9;m no valor da m&#xE9;dia inicial e o valor de aprovado &#xE9; verdadeiro.</li>
-<li>se a m&#xE9;dia inicial <em>n&#xE3;o</em> for maior que 5.0, ent&#xE3;o a m&#xE9;dia final ser&#xE1; calculada a partir da m&#xE9;dia entre a nota do exame e a m&#xE9;dia inicial. Se o seu valor for maior ou igual a 5.0, o valor de aprovado ser&#xE1; verdadeiro, e a m&#xE9;dia ter&#xE1; o valor de 5.0. Caso esta m&#xE9;dia final seja menor que 5.0 o valor de aprovado &#xE9; falso e a m&#xE9;dia ter&#xE1; o valor da m&#xE9;dia final.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<li>Um <code>Aluno</code> pode estar cadastrado em 0  ou mais cursos</li>
+<li>Um <code>Curso</code> pode estar ter 0  ou mais alunos cadastrados</li>
 </ul>
 <h2 class="mume-header" id="interface">Interface</h2>
 
@@ -329,72 +293,31 @@ pre[data-line] .line-highlight[data-end]:after {
 <ul>
 <li>Listar todos os cursos dados: para cada curso deve ser impresso seu nome, n&#xED;vel e ano, somente</li>
 <li>Listar todos os alunos inscritos: para cada aluno deve ser impresso seu nome e id, somente</li>
-<li>Listar o hist&#xF3;rico de um determinado aluno:
-<ul>
-<li>o seu programa deve ter meios para o usu&#xE1;rio escolher o aluno</li>
-<li>o hist&#xF3;rico de um aluno deve conter todos os cursos que o aluno foi inscrito, e para cada curso o programa deve imprimir o curso, as notas, a m&#xE9;dia e se foi aprovado.</li>
-</ul>
-</li>
-<li>Listar o relat&#xF3;rio de rendimento de cada curso:
+<li>Listar os alunos que est&#xE3;o cadastrados em um determinado curso:
 <ul>
 <li>o seu programa deve ter meios para o usu&#xE1;rio escolher o curso</li>
-<li>o relat&#xF3;rio de rendimento de um curso deve conter todos os alunos que fizeram o curso, e para cada aluno imprimir o aluno, as notas, a m&#xE9;dia e se foi aprovado.</li>
+</ul>
+</li>
+<li>Listar os cursos que um determinado aluno est&#xE1; cadastrado:
+<ul>
+<li>o seu programa deve ter meios para o usu&#xE1;rio escolher o aluno</li>
 </ul>
 </li>
 <li>Incluir um novo aluno: deve ser pedido para o usu&#xE1;rio informar o id e o nome do aluno.</li>
 <li>Incluir um novo curso: deve ser pedido para o usu&#xE1;rio informar o nome, escolher o tipo, e informar o ano.</li>
-<li>Incluir um novo rendimento, deve ser pedido para o usu&#xE1;rio escolher um aluno j&#xE1; inscrito, um curso j&#xE1; inscrito, e o usu&#xE1;rio deve informar as notas (NP1, NP2, substitutiva e exame) do novo rendimento.</li>
+<li>Incluir uma nova rela&#xE7;&#xE3;o entre um aluno j&#xE1; cadastrado e um curso j&#xE1; cadastrado.</li>
 </ul>
 <h2 class="mume-header" id="dados-1">Dados</h2>
 
 <h3 class="mume-header" id="entrada">Entrada</h3>
 
-<p>Os dados iniciais do programa devem ser lidos de arquivos externos.</p>
+<p>Os dados iniciais do programa devem ser lidos de <strong>arquivos externos no formato CSV</strong>.</p>
 <p>O local dos arquivos ser&#xE1; preconfigurado em algum local da escolha do grupo. Os arquivos podem ser carregados no momento que o programa iniciar.</p>
-<p>Teremos tr&#xEA;s tipos de arquivos:</p>
-<ul>
-<li>Um arquivo CSV com os dados dos alunos, na ordem &quot;id;nome&quot;</li>
-</ul>
-<p>Exemplo:</p>
-<h4 class="mume-header" id="alunoscsv"><strong><code>alunos.csv</code></strong></h4>
-
-<pre data-role="codeBlock" data-info class="language-"><code>123;Ana
-124;Beto
-125;Carlos Magno
-b26;Danilo E.
-127;Fernando
-
-</code></pre><ul>
-<li>Um arquivo CSV com os dados dos cursos na ordem &quot;nome;n&#xED;vel;ano&quot;</li>
-</ul>
-<p>Exemplo:</p>
-<h4 class="mume-header" id="cursoscsv"><strong><code>cursos.csv</code></strong></h4>
-
-<pre data-role="codeBlock" data-info class="language-"><code>ALPOO;GRADUACAO;2019
-ALPOO;GRADUACAO;2018
-ALPOO;POS_GRADUACAO;2019
-LPOO;GRADUACAO;2019
-
-</code></pre><ul>
-<li>Para cada curso, um arquivo com o nome &quot;nome_n&#xED;vel_ano.csv&quot;, com as informa&#xE7;&#xF5;es das notas dos alunos naquele curso, na ordem &quot;id_do_aluno;nota_NP1;nota_NP2;nota_reposicao;nota_exame&quot;. Havendo a possibilidade de o arquivo n&#xE3;o ter nenhum dado, representando o fato de que ningu&#xE9;m cursou aquela mat&#xE9;ria naquele ano.</li>
-</ul>
-<p>Exemplos:</p>
-<h4 class="mume-header" id="alpoo_graduacao_2019csv"><strong><code>ALPOO_GRADUACAO_2019.csv</code></strong></h4>
-
-<pre data-role="codeBlock" data-info class="language-"><code>123;7.0;9.0;0.0;0.0
-124;2.0;3.0;4.0;2.0
-125;2.0;4.0;5.0;9.0
-
-</code></pre><h4 class="mume-header" id="alpoo_pos_graduacao_2019csv"><strong><code>ALPOO_POS_GRADUACAO_2019.csv</code></strong></h4>
-
-<pre data-role="codeBlock" data-info class="language-"><code></code></pre><h3 class="mume-header" id="pacotes-de-inst%C3%A2ncias">Pacotes de Inst&#xE2;ncias</h3>
-
-<ul>
-<li><a href="inst/01.zip">inst01</a></li>
-</ul>
+<p>A estrutura dos arquivos ficar&#xE1; &#xE0; cargo do grupo decidir.</p>
 <h3 class="mume-header" id="sa%C3%ADda">Sa&#xED;da</h3>
 
-<p>Ap&#xF3;s terminar o programa, os arquivos listados devem estar atualizados com quaisquer modifica&#xE7;&#xF5;es feitas pelo usu&#xE1;rio, mas mantendo o formato especificado nesta se&#xE7;&#xE3;o.</p>
+<p>Ap&#xF3;s terminar o programa, os arquivos listados devem estar atualizados com quaisquer modifica&#xE7;&#xF5;es feitas pelo usu&#xE1;rio, mas mantendo o formato especificado pelo grupo.<br>
+De modo que deva ser poss&#xED;vel terminar e reiniciar o programa mantendo o mesmo estado dos dados.</p>
 <h2 class="mume-header" id="controle-de-erros">Controle de Erros</h2>
 
 <p>O seu programa deve ter um controle <em>para entradas do usu&#xE1;rio</em> e conseguir voltar para um estado est&#xE1;vel caso o usu&#xE1;rio coloque alguma entrada n&#xE3;o aceit&#xE1;vel.</p>
@@ -408,14 +331,18 @@ LPOO;GRADUACAO;2019
 <li>Controle de erros em rela&#xE7;&#xE3;o &#xE0; entrada do usu&#xE1;rio usando ou n&#xE3;o o ambiente <code>try-catch</code></li>
 <li>Uso de recursos dados em aula:
 <ul>
-<li>se o seu programa usa o paradigma de orienta&#xE7;&#xE3;o a objetos (heran&#xE7;a e polimorfismo)</li>
-<li>se suas classes implementam interfaces dadas em aula (Comparable, Iterable)</li>
+<li>se o seu programa usa o paradigma de orienta&#xE7;&#xE3;o a objetos (Classes e Objetos)</li>
+<li>se suas classes implementam interfaces dadas em aula (Comparable por exemplo)</li>
 <li>se usa conceitos dados em aula (encapsulamento e composi&#xE7;&#xE3;o)</li>
 <li>se usa estruturas dadas em aula (ArrayList, Set, Map)</li>
 </ul>
 </li>
-<li>Voc&#xEA; &#xE9; convidado a usar outros conceitos n&#xE3;o vistos, como &quot;enumerate&quot;, &quot;factory pattern&quot;, MVC, &quot;programa&#xE7;&#xE3;o gen&#xE9;rica&quot;...</li>
+<li>Voc&#xEA; &#xE9; convidado a usar outros conceitos n&#xE3;o vistos, como &quot;enumerate&quot;, &quot;factory pattern&quot;, MVC, &quot;programa&#xE7;&#xE3;o gen&#xE9;rica&quot;, etc...</li>
 </ul>
+<h2 class="mume-header" id="relat%C3%B3rio">Relat&#xF3;rio</h2>
+
+<p>O formato do relat&#xF3;rio e o arquivo oficial da APS ser&#xE1; fornecido no dia 22/04</p>
+<p>.</p>
 
       </div>
       
