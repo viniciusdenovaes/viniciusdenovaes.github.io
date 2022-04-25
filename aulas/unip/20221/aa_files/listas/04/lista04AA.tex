@@ -27,13 +27,19 @@
 
 
 
-\title{Lista 04 de Aspectos Teóricos da Computação}
+\title{Lista 04 de Análise de Algoritmos}
 \date{1º Período de 2018}
 \author{Turma do 4º ano}
 
 \begin{document} 
 
 \maketitle
+
+\begin{center}
+    \large
+    \textbf{Reduções Conhecidas\footnote{Apresentados em Algoritmos (Cormen)}}
+    \vspace{0.4cm}
+\end{center}
 
 \begin{tikzpicture}[
   level 1/.style={sibling distance=40mm},
@@ -61,11 +67,26 @@
 
 \end{tikzpicture}
 
+\break
+
+\begin{center}
+    \large
+    \textbf{Descrições dos problemas}
+    \vspace{0.4cm}
+\end{center}
+
+
 \begin{description}
 
-%\item[CIRCUIT-SAT]
-%\item[SAT]
-%\item[3-CNF-SAT]
+\item[CIRCUIT-SAT]
+Dado um circuito booleano, determinar se existe uma entrada que terá output verdadeiro
+
+\item[SAT]
+Dada uma expressão booleana, determinar se existe uma interpretação para as veaiáveis que satisfaça a expressão
+
+\item[3-CNF-SAT]
+Dada uma expressão booleana formada por conjunções de fórmulas formadas pela disjunção de 3 variáveis (ou sua negação). Determinar se existe uma interpretação para as veaiáveis que satisfaça a expressão
+
 
 \item[CLIQUE]
 
@@ -133,7 +154,20 @@ MULTI-SUBSET-PART = $\{\langle S,t\rangle$ : existe uma partição de $S$, dada 
 
 \end{description}
 
-\vspace{3em}
+
+\begin{description}
+
+\item[Provar que um problema é NP:] dada uma possível solução, descrever um algoritmo polinomial para verificar se esta é uma solução válida para o problema
+
+\item[Provar que um problema é P:] exibir um algoritmo polinomial para o problema
+
+\item[Supondo que P $\neq$ NP:] para esta lista estamos supondo que \textbf{não} existe algoritmo polinomial para os problemas apresentados no início desta lista
+
+\end{description}
+
+
+
+
 
 
 
@@ -173,6 +207,12 @@ MULTI-SUBSET-PART = $\{\langle S,t\rangle$ : existe uma partição de $S$, dada 
 \item SUBSET-PART
 
 \end{enumerate}
+
+
+
+
+\break
+
 
 \item Mostre que os seguintes problemas são NP-Completos
 

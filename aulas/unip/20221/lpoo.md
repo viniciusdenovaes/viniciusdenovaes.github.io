@@ -4,7 +4,7 @@
 
 - [Roteiro](lpoo_files/aps/roteiro.html)
   - [Roteiro em html](lpoo_files/aps/roteiro.html)
-  - Arquivo Oficial (Em Breve!)
+  - [Arquivo Oficial](lpoo_files/aps/APS_LPOO_2022.docx)
 
 
 ## Curso
