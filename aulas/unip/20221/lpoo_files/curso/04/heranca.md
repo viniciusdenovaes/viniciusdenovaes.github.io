@@ -179,12 +179,423 @@ Nada com uma velocidade de 555.0
 
 ## Classe Abstrata
 
-Depois da primeira prova
+Classes abstratas servem como classe base para fazer subclasses. Por exemplo, se você tem as classes `Cachorro`, `Gato` e `Pato`, que compartilham atributos e métodos, você pode fazer uma classe abstrata para servir de super classe para as três classes.
+
+A **vantagem da classe abstrata** é que ela pode ter métodos abstratos, que são métodos que não precisam ser implementados, forçando que a subclasse **concreta** implemente.
+
+As características de uma clase abstrata são:
+- Uma classe abstrata **não** pode ser instanciada (não pode ser criado um objeto de uma classe abstrata)
+- Uma classe abstrata pode ter métodos abstratos, são métodos que não são implementados.
+
+#### Exemplos Sem Usar Classes Abstratas
 
 
+Por exemplo, considere as seguintes classes:
+
+``` java
+class Cachorro{
+    private String nome;
+    private int idade;
+
+    public Cachorro(String aNome){
+        this.nome = aNome;
+        this.idade = 0;
+    }
+
+    public String getNome(){return this.nome;}
+    public int getIdade(){return this.idade;}
+
+    public void aumentaIdade(){this.idade++;}
+
+    public String fazBarulho(){
+        return "au au";
+    }
+
+    @Override
+    public String toString(){
+        String res = "";
+        res += "Classe: Cachorro\n";
+        res += "Nome: " + this.nome + "\n";
+        res += "Idade: " + this.idade + "\n";
+        res += "Barulho: " + this.fazBarulho() + "\n";
+        return res;
+    }
+}
+```
 
 
+``` java
+class Gato{
+    private String nome;
+    private int idade;
 
+    public Gato(String aNome){
+        this.nome = aNome;
+        this.idade = 0;
+    }
+
+    public String getNome(){return this.nome;}
+    public int getIdade(){return this.idade;}
+
+    public void aumentaIdade(){this.idade++;}
+
+    public String fazBarulho(){
+        return "Miau";
+    }
+
+    @Override
+    public String toString(){
+        String res = "";
+        res += "Classe: Gato\n";
+        res += "Nome: " + this.nome + "\n";
+        res += "Idade: " + this.idade + "\n";
+        res += "Barulho: " + this.fazBarulho() + "\n";
+        return res;
+    }
+}
+```
+
+
+``` java
+class Pato{
+    private String nome;
+    private int idade;
+
+    public Pato(String aNome){
+        this.nome = aNome;
+        this.idade = 0;
+    }
+
+    public String getNome(){return this.nome;}
+    public int getIdade(){return this.idade;}
+
+    public void aumentaIdade(){this.idade++;}
+
+    public String fazBarulho(){
+        return "Quaaack";
+    }
+
+    @Override
+    public String toString(){
+        String res = "";
+        res += "Classe: Pato\n";
+        res += "Nome: " + this.nome + "\n";
+        res += "Idade: " + this.idade + "\n";
+        res += "Barulho: " + this.fazBarulho() + "\n";
+        return res;
+    }
+}
+```
+
+
+``` java
+class Teste{
+    static public void main(String[] args){
+        Cachorro cachorro = new Cachorro("Brutus");
+        Gato gato = new Gato("Chirriro");
+        Pato pato = new Pato("Donaldo");
+
+        System.out.println(cachorro);
+        System.out.println(gato);
+        System.out.println(pato);
+
+        cachorro.aumentaIdade();
+        gato.aumentaIdade();
+        pato.aumentaIdade();
+
+        System.out.println(cachorro);
+        System.out.println(gato);
+        System.out.println(pato);
+    }
+}
+```
+#### Exemplos Usando Classes Abstratas
+
+
+Poderemos fazer uma superclasse abstrata `Animal` implementando os métodos que são comuns e definindo como abstrato o método que difere:
+
+``` java
+abstract class Animal{
+    private String nome;
+    private int idade;
+
+    public Animal(String aNome){
+        this.nome = aNome;
+        this.idade = 0;
+    }
+
+    public String getNome(){return this.nome;}
+    public int getIdade(){return this.idade;}
+
+    public void aumentaIdade(){this.idade++;}
+
+    abstract public String fazBarulho();
+
+    @Override
+    public String toString(){
+        String res = "";
+        res += "Classe: " + this.getClass().getSimpleName() + "\n";
+        res += "Nome: " + this.nome + "\n";
+        res += "Idade: " + this.idade + "\n";
+        res += "Barulho: " + this.fazBarulho() + "\n";
+        return res;
+    }
+}
+```
+
+
+``` java
+class Cachorro extends Animal{
+
+    public Cachorro(String aNome){
+        super(aNome);
+    }
+
+    @Override
+    public String fazBarulho(){
+        return "au au";
+    }
+}
+```
+
+
+``` java
+class Gato extends Animal{
+
+    public Gato(String aNome){
+        super(aNome);
+    }
+
+    @Override
+    public String fazBarulho(){
+        return "Miau";
+    }
+
+}
+```
+
+
+``` java
+class Pato extends Animal{
+
+    public Pato(String aNome){
+        super(aNome);
+    }
+
+    @Override
+    public String fazBarulho(){
+        return "Quaaack";
+    }
+
+}
+```
+
+
+``` java
+import java.util.List;
+import java.util.ArrayList;
+
+class Teste{
+    static public void main(String[] args){
+
+        List<Animal> animais = new ArrayList<>();
+
+        animais.add(new Cachorro("Brutus"));
+        animais.add(new Gato("Chirriro"));
+        animais.add(new Pato("Donaldo"));
+
+        for(Animal a: animais){
+            System.out.println(a);
+        }
+
+        for(Animal a: animais){
+            a.aumentaIdade();
+        }
+
+        for(Animal a: animais){
+            System.out.println(a);
+        }
+
+    }
+}
+```
+
+## Interfaces
+
+Diferente de Python, **na linguagem Java as classes podem ter apenas uma superclasse**. Porém as classes podem ter multiplas `interfaces`.
+
+Interfaces são classes completamente abstratas (todos os métodos são abstratos) e sem nenhum atributo.
+
+Nestes casos se diz que uma classe **implementa** a `interface`.
+
+Veja o exemplo de três classes completamente diferentes, mas que compartilham de um método: `public void voa()`
+
+#### Exemplos Sem Usar Interfaces
+
+```java
+class Pato extends Animal{
+    public Pato(String aNome){
+        super(aNome);
+    }
+
+    @Override
+    public String fazBarulho(){return "Qauaack";}
+
+    public void voa(){
+        System.out.println("O Pato voa para o norte");
+    }
+}
+```
+
+```java
+class Aviao{
+    private String modelo;
+    public Aviao(String aModelo){
+        this.modelo = aModelo;
+    }
+
+    public String getModelo(){return modelo;}
+
+    public void voa(){
+        System.out.println("O Aviao voa levando pessoas");
+    }
+
+    @Override
+    public String toString(){
+        String res = "";
+        res += "Classe Aviao\n";
+        res += "Modelo: "+modelo+"\n";
+        return res;
+    }
+}
+```
+
+```java
+class SuperMan{
+
+    public void voa(){
+        System.out.println("O SuperMan voa para salvar alguem");
+    }
+
+    @Override
+    public String toString(){
+        String res = "";
+        res += "Classe SuperMan\n";
+        return res;
+    }
+}
+```
+
+```java
+class Teste{
+    static public void main(String[] args){
+        Pato pato = new Pato("Donaldo");
+        Aviao aviao = new Aviao("Jato");
+        SuperMan superMan = new SuperMan();
+
+        System.out.println(pato);
+        System.out.println(aviao);
+        System.out.println(superMan);
+
+        pato.voa();
+        aviao.voa();
+        superMan.voa();
+
+    }
+}
+```
+
+#### Exemplos Usando Interfaces
+
+Usando `interfaces` podemos tirar proveito do polimorfismo para colocar os objetos na mesma lista.
+
+
+```java
+interface Voavel{
+    public void voa();
+}
+```
+
+```java
+class Pato extends Animal implements Voavel{
+    public Pato(String aNome){
+        super(aNome);
+    }
+
+    @Override
+    public String fazBarulho(){return "Qauaack";}
+
+    @Override
+    public void voa(){
+        System.out.println("O Pato voa para o norte");
+    }
+}
+```
+
+```java
+class Aviao implements Voavel{
+    private String modelo;
+    public Aviao(String aModelo){
+        this.modelo = aModelo;
+    }
+
+    public String getModelo(){return modelo;}
+
+    @Override
+    public void voa(){
+        System.out.println("O Aviao voa levando pessoas");
+    }
+
+    @Override
+    public String toString(){
+        String res = "";
+        res += "Classe Aviao\n";
+        res += "Modelo: "+modelo+"\n";
+        return res;
+    }
+}
+```
+
+```java
+class SuperMan implements Voavel{
+
+    @Override
+    public void voa(){
+        System.out.println("O SuperMan voa para salvar alguem");
+    }
+
+    @Override
+    public String toString(){
+        String res = "";
+        res += "Classe SuperMan\n";
+        return res;
+    }
+}
+```
+
+```java
+import java.util.List;
+import java.util.ArrayList;
+
+class Teste{
+    static public void main(String[] args){
+        List<Voavel> voavels = new ArrayList<>();
+
+        voavels.add(new Pato("Donaldo"));
+        voavels.add(new Aviao("Jato"));
+        voavels.add(new SuperMan());
+
+        for(Voavel v: voavels){
+            System.out.println(v);
+        }
+
+        for(Voavel v: voavels){
+            v.voa();
+        }
+
+    }
+}
+```
 
 
 
