@@ -35,7 +35,7 @@
 - Interlúdio 02 - Entrada e Saída
   - [IO](lpoo_files/curso/00.1-erros-io/02-io.html)
 
-- Parte 05 - Importantes Estruturas e Dados e Interfaces
+- Parte 05 - Importantes Estruturas e Dados e Interfaces (INCOMPLETO)
   - [Set](lpoo_files/curso/05/set.html)
   - [Map](lpoo_files/curso/05/map.html)
 
