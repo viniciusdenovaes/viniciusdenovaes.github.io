@@ -5,6 +5,7 @@
 - [Roteiro](lpoo_files/aps/roteiro.html)
   - [Roteiro em html](lpoo_files/aps/roteiro.html)
   - [Arquivo Oficial](lpoo_files/aps/APS_LPOO_2022.docx)
+- [Um exemplo de um programa parecido com a APS](https://github.com/viniciusdenovaes/Unip221LPOO/blob/master/README.md#programa-funcionario)
 
 
 ## Curso
@@ -33,6 +34,10 @@
 
 - Interlúdio 02 - Entrada e Saída
   - [IO](lpoo_files/curso/00.1-erros-io/02-io.html)
+
+- Parte 05 - Importantes Estruturas e Dados e Interfaces
+  - [Set](lpoo_files/curso/05/set.html)
+  - [Map](lpoo_files/curso/05/map.html)
 
 
 ## Laboratórios
