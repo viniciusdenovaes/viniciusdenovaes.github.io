@@ -8,7 +8,7 @@ Uma estrutura de dados importante são os conjuntos, as suas propriedades são:
 
 Existem outras implementações de conjuntos, nesta aula vamos usar o `TreeSet`.
 
-Para criar um conjunto de tipos primitivos ou Strings em java é bem simples, basta criar um `TreeSet`, ele começa vazio e nós podemos
+Para criar um conjunto de tipos primitivos ou Strings em java é bem simples, basta criar um `TreeSet`, ele começa vazio e nós podemos:
 - Inserir elementos
 - Retirar elementos
 - Iterar
