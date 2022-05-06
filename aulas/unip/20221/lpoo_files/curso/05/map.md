@@ -1,4 +1,4 @@
-# Conjuntos
+# `Map` em Java (`dict` em Python)
 
 Uma estrutura de dados **importante** são os conjuntos.
 Suas propriedades são:
