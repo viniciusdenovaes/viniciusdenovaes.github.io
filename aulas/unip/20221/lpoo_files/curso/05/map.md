@@ -11,7 +11,7 @@ Por exemplo:
 #### Um mapeamento de String para inteiros
 
 ``` java
-import java.util.Map;
+import java.util.Map; 
 import java.util.TreeMap;
 
 class MapStringIntTeste{
