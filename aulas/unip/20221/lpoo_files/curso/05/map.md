@@ -118,7 +118,7 @@ class MapPatoStringTeste{
 
         System.out.println("mapa contem o Donaldo, 5? " + patosToString.containsKey(new Pato("Donaldo", 5)));
         System.out.println("mapa contem o Outro Donaldo, 5? " + patosToString.containsKey(new Pato("Outro Donaldo", 5)));
-        System.out.println("qual o valor de Donaldo, 5? " + patosToString.get(new Pato("Donaldo", 5)));
+        System.out.println("qual o valor de Donaldo, 5? " + patosToString.get(new Pato("Donaldo", 5))); 
 
         patosToString.put(new Pato("Donaldo", 5), "Dreamswork");
         patosToString.put(new Pato("Donaldo", 5), "Pixar");
