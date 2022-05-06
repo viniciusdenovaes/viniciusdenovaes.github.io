@@ -4,14 +4,14 @@ Uma estrutura de dados **muito importante** são os mapeamentos. Os corresponden
 
 Mapeamentos são coleções que são indexados por elementos de um conjunto.
 
-Os índices são chamados de chaves *keys* e os valores correspondentes são os valores *values*.
+Os índices são chamados de chaves *keys* e os valores correspondentes são os valores; *values*.
 
 Por exemplo:
 
 #### Um mapeamento de String para inteiros
 
 ``` java
-import java.util.Map; 
+import java.util.Map;
 import java.util.TreeMap;
 
 class MapStringIntTeste{
