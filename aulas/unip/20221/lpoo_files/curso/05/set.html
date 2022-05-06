@@ -263,23 +263,153 @@ pre[data-line] .line-highlight[data-end]:after {
       <div class="mume markdown-preview  ">
       <h1 class="mume-header" id="conjuntos">Conjuntos</h1>
 
-<p>Uma estrutura de dados importante s&#xE3;o os conjuntos, as suas propriedades s&#xE3;o:</p>
+<p>Uma estrutura de dados <strong>importante</strong> s&#xE3;o os conjuntos.<br>
+Suas propriedades s&#xE3;o:</p>
 <ul>
 <li>N&#xE3;o existem elementos repetidos em conjuntos</li>
 <li>Eles n&#xE3;o s&#xE3;o indexados</li>
 <li>&#xC9; muito mais r&#xE1;pido encontrar um elemento em um conjunto (o programa n&#xE3;o precisa olhar todos os elementos em um conjunto para saber se um elemento espec&#xED;fico est&#xE1; nele)</li>
 <li>(B&#xF4;nus) No tipo de conjuntos que vamos usar (o <code>TreeSet</code>), o conjunto estar&#xE1; sempre ordenado!</li>
 </ul>
-<p>Existem outras implementa&#xE7;&#xF5;es de conjuntos, nesta aula vamos usar o <code>TreeSet</code>.</p>
-<p>Para criar um conjunto de tipos primitivos ou Strings em java &#xE9; bem simples, basta criar um <code>TreeSet</code>, ele come&#xE7;a vazio e n&#xF3;s podemos:</p>
+<p>As opera&#xE7;&#xF5;es que podemos fazer em conjuntos s&#xE3;o:</p>
 <ul>
 <li>Inserir elementos</li>
+<li>Verificar se o conjunto cont&#xE9;m um dado elemento</li>
 <li>Retirar elementos</li>
 <li>Iterar</li>
 <li>Ver o tamanho</li>
 </ul>
-<p>continuar.......</p>
-<p>.</p>
+<p>As opera&#xE7;&#xF5;es que <strong>n&#xE3;o</strong> podemos fazer em conjuntos s&#xE3;o:</p>
+<ul>
+<li>Acessar ou colocar elementos em um &#xED;ndice (<strong>conjuntos n&#xE3;o s&#xE3;o indexados</strong>)</li>
+<li>Modificar um elemento do conjunto: os elementos de um conjunto s&#xE3;o estruturados de acordo com o valor seus par&#xE2;metros, se voc&#xEA; modificar o valor de um par&#xE2;metro sem reorganizar a estrutura o conjunto ficar&#xE1; em estado de inconsist&#xEA;ncia (<strong>e essa &#xE9; a &#xFA;ltima coisa que voc&#xEA; quer que aconte&#xE7;a!</strong>), podendo ter um comportamento <em>estranho</em>. Para modificar um elemento voc&#xEA; deve retirar este elemento, modificar, e recolocar de volta no conjunto.</li>
+</ul>
+<p>Estes conceitos de conjuntos s&#xE3;o comuns em qualquer linguagem com suporte para estruturas de dados<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.<br>
+Em Java vamos ver uma implementa&#xE7;&#xE3;o, o <code>TreeSet</code> onde os elementos estar&#xE3;o ordenados em uma itera&#xE7;&#xE3;o.</p>
+<p>Para criar um <code>TreeSet</code> &#xE9; bem simples, basta usar o <code>contructor</code> <code>TreeSet()</code>, ele come&#xE7;a vazio e n&#xF3;s podemos usar:</p>
+<ul>
+<li><code>add(Object)</code>: Inserir elementos</li>
+<li><code>remove(Object)</code>: Retirar elementos</li>
+<li><code>for(Object o: conjunto)</code>: Iterar</li>
+<li><code>seize()</code>: Ver o tamanho</li>
+</ul>
+<h4 class="mume-header" id="exemplo-com-inteiros">Exemplo com inteiros:</h4>
+
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword keyword-import">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Set</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">TreeSet</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">SetIntTeste</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> numeros <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">TreeSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        numeros<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        numeros<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        numeros<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        numeros<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        numeros<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;tamanho: &quot;</span> <span class="token operator">+</span> numeros<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;conjunto: &quot;</span> <span class="token operator">+</span> numeros<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;conjunto contem o 5? &quot;</span> <span class="token operator">+</span> numeros<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;conjunto contem o 0? &quot;</span> <span class="token operator">+</span> numeros<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        numeros<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        numeros<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        numeros<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;tamanho: &quot;</span> <span class="token operator">+</span> numeros<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;conjunto: &quot;</span> <span class="token operator">+</span> numeros<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        numeros<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;conjunto depois de remover o 5: &quot;</span> <span class="token operator">+</span> numeros<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;conjunto contem o 5? &quot;</span> <span class="token operator">+</span> numeros<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword keyword-for">for</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> n<span class="token operator">:</span> numeros<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h4 class="mume-header" id="sa%C3%ADda">Sa&#xED;da:</h4>
+
+<pre data-role="codeBlock" data-info class="language-"><code>tamanho: 5
+conjunto: [1, 3, 5, 7, 9]
+conjunto contem o 5? true
+conjunto contem o 0? false
+tamanho: 5
+conjunto: [1, 3, 5, 7, 9]
+conjunto depois de remover o 5: [1, 3, 7, 9]
+conjunto contem o 5? false
+1
+3
+7
+9
+</code></pre><h4 class="mume-header" id="exemplo-com-string">Exemplo com <code>String</code></h4>
+
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword keyword-import">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Set</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">TreeSet</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">SetStringTeste</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> palavras <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">TreeSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        palavras<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;Ana&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        palavras<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;ana&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        palavras<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;Beto&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        palavras<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;beto&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        palavras<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;Carlos&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        palavras<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;carlos&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;tamanho: &quot;</span> <span class="token operator">+</span> palavras<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;conjunto: &quot;</span> <span class="token operator">+</span> palavras<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;conjunto contem o Ana? &quot;</span> <span class="token operator">+</span> palavras<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">&quot;Ana&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;conjunto contem o Outra? &quot;</span> <span class="token operator">+</span> palavras<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">&quot;Outra&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        palavras<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;Ana&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        palavras<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;Ana&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        palavras<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;Ana&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        palavras<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;Ana&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;tamanho: &quot;</span> <span class="token operator">+</span> palavras<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;conjunto: &quot;</span> <span class="token operator">+</span> palavras<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;conjunto contem o Ana? &quot;</span> <span class="token operator">+</span> palavras<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">&quot;Ana&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        palavras<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">&quot;Ana&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;conjunto depois de remover Ana: &quot;</span> <span class="token operator">+</span> palavras<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;conjunto contem o Ana? &quot;</span> <span class="token operator">+</span> palavras<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">&quot;Ana&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword keyword-for">for</span><span class="token punctuation">(</span><span class="token class-name">String</span> p<span class="token operator">:</span> palavras<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h4 class="mume-header" id="sa%C3%ADda-1">Sa&#xED;da</h4>
+
+<pre data-role="codeBlock" data-info class="language-"><code>tamanho: 6
+conjunto: [Ana, Beto, Carlos, ana, beto, carlos]
+conjunto contem o Ana? true
+conjunto contem o Outra? false
+tamanho: 6
+conjunto: [Ana, Beto, Carlos, ana, beto, carlos]
+conjunto contem o Ana? true
+conjunto depois de remover Ana: [Beto, Carlos, ana, beto, carlos]
+conjunto contem o Ana? false
+Beto
+Carlos
+ana
+beto
+carlos
+</code></pre><p>.</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>A vers&#xE3;o 2 de Python n&#xE3;o existia suporte para conjuntos. A vers&#xE3;o 3 foi atualizada para ter conjuntos. Na sua implementa&#xE7;&#xE3;o padr&#xE3;o os elementos n&#xE3;o estar&#xE3;o ordenados. <a href="#fnref1" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
+</li>
+</ol>
+</section>
 
       </div>
       
