@@ -28,7 +28,7 @@ Para criar um `TreeSet` é bem simples, basta usar o `contructor` `TreeSet()`, e
 - `add(Object)`: Inserir elementos
 - `remove(Object)`: Retirar elementos
 - `for(Object o: conjunto)`: Iterar
-- `seize()`: Ver o tamanho
+- `size()`: Ver o tamanho
 
 #### Exemplo com inteiros:
 ``` java
