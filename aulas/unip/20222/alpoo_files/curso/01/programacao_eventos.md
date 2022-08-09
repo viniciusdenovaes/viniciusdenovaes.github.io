@@ -268,7 +268,130 @@ public class TestaPato {
 }
 ```
 
+## Incluindo Uma Ação em um Botão
 
+Vamos testar o que aprendemos em um botão `JButton`:
+ 1. Vamos criar uma janela;
+ 1. criar um botão;
+ 1. colocar o botão na janela;
+ 1. criar uma ação
+ 1. inserir a ação no botao
+ 1. finalizar a configuração da janela para ela funcionar
+
+``` java
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class TesteBotao {
+
+	public void testeBotao() {
+
+		// Primeiro vamos fazer uma janela para colocar o botao
+		JFrame janela = new JFrame();
+
+		// Agora vamos criar o botao e colocar na janela
+		JButton botao = new JButton("Botao Teste");
+		janela.add(botao);
+
+		// Agora vamos criar a acao usando inner class
+		// (poderia ser criada de qualquer jeito, desde que implemente ActionListener)
+		AcaoBotao acaoBotao = new AcaoBotao();
+
+		// Vamos inserir a acao no botao
+		botao.addActionListener(acaoBotao);
+
+		// Agora vamos fazer algumas configuracoes que vamos aprender mais adiante para que servem
+		// 1 - redimensiona para caber todos componentes
+		janela.pack();
+		// 2 - configura para terminar o programa quando a janela for fechada
+		janela.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		// 3 - torna a janela visivel
+		janela.setVisible(true);
+
+	}
+
+	// Este eh o ActionListener que vai ser inserido no botao
+	class AcaoBotao implements ActionListener{
+
+		// Um action listener deve ter um actionPerformed
+		// esta eh a acao que sera acionada quando o botao (evento) for pressionado
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			System.out.println("O Botao foi pressionado!");
+		}
+
+	}
+
+	public static void main(String[] args) {
+		new TesteBotao().testeBotao();
+	}
+
+}
+```
+
+### Outras formas de inserir ação em um botão
+
+Também podemos inserir ações em botões de outras formas:
+``` java
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class TesteBotoes {
+
+	public void testeBotoes() {
+
+		JFrame janela = new JFrame();
+
+		// Vamos incluir varios botoes, precisamos selecionar um layout
+		janela.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+
+		// criando acao por inner class
+		JButton botaoInnerClass = new JButton("Botao Inner class");
+		janela.add(botaoInnerClass);
+		botaoInnerClass.addActionListener(new AcaoBotao());
+
+		// criando acao por classe anonima
+		JButton botaoClasseAnonima = new JButton("Botao classe anonima");
+		janela.add(botaoClasseAnonima);
+		botaoClasseAnonima.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Classe Anonima: o botao foi pressionado");
+			}
+		});
+
+		// criando acao por expressao lambda
+		JButton botaoLambda = new JButton("Botao lambda expression");
+		janela.add(botaoLambda);
+		botaoLambda.addActionListener((ActionEvent e) -> System.out.println("Lambda Expression: o botao foi pressionado"));
+
+
+		janela.pack();
+		janela.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		janela.setVisible(true);
+
+	}
+
+	class AcaoBotao implements ActionListener{
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			System.out.println("Inner class: O Botao foi pressionado!");
+		}
+	}
+
+	public static void main(String[] args) {
+		new TesteBotoes().testeBotoes();
+	}
+
+}
+```
 
 
 
