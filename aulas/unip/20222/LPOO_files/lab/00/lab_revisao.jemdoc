@@ -1,0 +1,65 @@
+# jemdoc: menu{../../../../../MENU}{index.html}{../../../../../}
+= Laboratório 00 - Revisão: Tipos Primitivos e Controle de Fluxo
+[../../../../../index.html Vinicius de Novaes Pereira]
+
+== Revisão: Tipos primitivos e controle de fluxo
+
+Nestes exercício você só precisará usar:
+ - os tipos primitivos +int+, +double+ e +boolean+,
+ - além dos comandos de controle de fluxo seguintes:
+ -- Comando condicional (não precisa usar o +else+)
+~~~
+{Comando condicional}{}
+    if(expressão booleana){
+        comandos;
+    }
+    else{
+        comandos;
+    }
+~~~
+-- Comando de repetição
+~~~
+{Comando de repetição}{}
+    for(int i=0; i<numero; ++i){
+        comandos;
+    }
+~~~
+
+=== Exercício 01
+
+Faça uma classe em java, chamada "TesteRevisao01" que só tenha o método
++public static void main(String[] args)+,
+e que imprima na tela a mensagem "Hello World!".
+
+=== Exercício 02
+
+Uma classe chamada "TesteRevisao02" que só tenha o método
++public static void main(String[] args)+
+e que imprima o resultado de 1 dividido por 2.
+
+=== Exercício 03
+
+Uma classe chamada "TesteRevisao03" que só tenha o método
++public static void main(String[] args)+
+e que imprima todos os números de 0 a 99.
+
+=== Exercício 04
+
+Uma classe chamada "TesteRevisao04" que só tenha o método
++public static void main(String[] args)+,
+e que imprima todos os números pares de 1 a 99.
+
+=== Exercício 05
+
+Uma classe chamada "TesteRevisao05" que tenha dois métodos:
+
+ - o método +public static void main(String[] args)+, que imprime todos os números primos de 2 a 100, e use o método seguinte para verificar se um número é primo
+ - mais um método +public static boolean isPrimo(int numero)+, que retorna +true+ se um número é primo, e +false+ caso não seja.
+
+=== [http://wiki.c2.com/?FizzBuzzTest Teste FizzBuzz]
+
+Escreva um programa que imprime os números de 1 a 100.
+Mas para multiplos de três imprima "Fizz" ao invés do número e
+para multiplos de cinco imprima "Buzz".
+Para números que são multiplos de três e
+cinco imprima "FizzBuzz".

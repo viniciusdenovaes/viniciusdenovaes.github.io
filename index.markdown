@@ -7,7 +7,12 @@ layout: home
 
 ## Aulas
 
-### Atuais (2022/1)
+### Atuais (2022/2)
+* [ALPOO](aulas/unip/20222/alpoo.html)
+* [Processamento de Imagens e Visão Computacional](aulas/unip/20222/pi.html)
+* [Cálculo Numérico para Computação](aulas/unip/20222/cn.html)
+
+### (2022/1)
 * [LPOO](aulas/unip/20221/lpoo.html)
 * [AA](aulas/unip/20221/aa.html)
 * [CG](aulas/unip/20221/cg.html)

@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Laboratório 02A - Herança</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Vinicius de Novaes Pereira</div>
+<div class="menu-item"><a href="../../../../../../index.html" class="current">home</a></div>
+<div class="menu-category">Aulas</div>
+<div class="menu-item"><a href="../../../../../../class_unip.html">Unip</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Laboratório 02A - Herança</h1>
+<div id="subtitle"><a href="../../../../../../index.html">Vinicius de Novaes Pereira</a></div>
+</div>
+<h3>Para este laboratório você deve fazer um programa que tenha as classes do diagrama abaixo.</h3>
+<table class="imgtable"><tr><td>
+<img src="diagrama_pessoa_heranca.svg" alt="Diagrama do Programa Pessoa" />&nbsp;</td>
+<td align="left"></td></tr></table>
+<h3>E testar com as seguintes classes: </h3>
+<div class="codeblock">
+<div class="blocktitle">Secretaria.java</div>
+<div class="blockcontent"><pre>
+public class Secretaria {
+
+	public static void imprimeRelatorio(Pessoa pessoa) {
+		pessoa.relatorio();
+	}
+
+	public static void fazPagamento(Funcionario funcionario) {
+		System.out.println("Pagando " + funcionario.getPagamento() + " ao funcionario " + funcionario.getNome());
+		System.out.println();
+	}
+
+}
+</pre></div></div>
+<div class="codeblock">
+<div class="blocktitle">Teste.java</div>
+<div class="blockcontent"><pre>
+
+public class Teste {
+
+	public static void main(String[] args) {
+
+//		Pessoa pessoa = new Pessoa();
+//		pessoa.setId("001");
+//		pessoa.setNome("Fernando");
+//		Secretaria.imprimeRelatorio(pessoa);
+
+//		Aluno alunoA = new Aluno();
+//		alunoA.setId("002");
+//		alunoA.setNome("Galileu");
+//		alunoA.setNotaNP1(new Nota(-2.0));
+//		alunoA.setNotaNP2(new Nota(5.0));
+//		Secretaria.imprimeRelatorio(alunoA);
+
+//		Aluno alunoB = new Aluno();
+//		alunoB.setId("003");
+//		alunoB.setNome("Einstein");
+//		alunoB.setNotaNP1(12.0);
+//		alunoB.setNotaNP2(7.0);
+//		Secretaria.imprimeRelatorio(alunoB);
+
+//		Funcionario funcionario = new Funcionario();
+//		funcionario.setId("004");
+//		funcionario.setNome("Chico");
+//		funcionario.setSalario(700);
+//		Secretaria.imprimeRelatorio(funcionario);
+//		Secretaria.fazPagamento(funcionario);
+
+//		Gerente gerente = new Gerente();
+//		gerente.setId("005");
+//		gerente.setNome("Simaria");
+//		gerente.setSalario(300);
+//		gerente.setBonus(700);
+//		Secretaria.imprimeRelatorio(gerente);
+//		Secretaria.fazPagamento(gerente);
+
+	}
+
+}
+</pre></div></div>
+<h2>Faça nesta ordem: </h2>
+<ol>
+<li><p>Copie as classes &ldquo;Secretaria.java&rdquo; e &ldquo;Teste.java&rdquo;.</p>
+</li>
+<li><p>Faça a classe &ldquo;Pessoa&rdquo;.</p>
+</li>
+<li><p>Teste a sua classe &ldquo;descomentando&rdquo; o bloco que cria e testa &ldquo;Pessoa&rdquo;.</p>
+</li>
+<li><p>Faça a classe &ldquo;Funcionario&rdquo;.</p>
+</li>
+<li><p>Teste a sua classe &ldquo;descomentando&rdquo; o bloco que cria e testa &ldquo;Funcionario&rdquo;.</p>
+</li>
+<li><p>Faça a classe &ldquo;Gerente&rdquo;.</p>
+</li>
+<li><p>Teste a sua classe &ldquo;descomentando&rdquo; o bloco que cria e testa &ldquo;Gerente&rdquo;.</p>
+</li>
+<li><p>Faça a classe &ldquo;Nota&rdquo;.</p>
+</li>
+<li><p>Faça a classe &ldquo;Boletim&rdquo;.</p>
+</li>
+<li><p>Faça a classe &ldquo;Aluno&rdquo;.</p>
+</li>
+<li><p>Teste a sua classe &ldquo;descomentando&rdquo; o bloco que cria e testa &ldquo;Aluno&rdquo;.</p>
+</li>
+</ol>
+<h2>Classe Pessoa </h2>
+<table class="imgtable"><tr><td>
+<img src="diagrama_pessoa.svg" alt="Diagrama do Programa Pessoa" />&nbsp;</td>
+<td align="left"></td></tr></table>
+<p>Uma classe que modele uma Pessoa no corpo de participantes de uma faculdade, </p>
+<ul>
+<li><p>que tenha os campos <tt>private</tt>:</p>
+<ul>
+<li><p>&ldquo;id&rdquo;, que seja uma <tt>String</tt>, </p>
+</li>
+<li><p>&ldquo;nome&rdquo;, que seja uma <tt>String</tt>, </p>
+</li></ul>
+</li>
+<li><p>que tenha os métodos de acesso aos campos</p>
+<ul>
+<li><p><tt>public String getId()</tt> que retorna o id da pessoa</p>
+</li>
+<li><p><tt>public void setId(String aId)</tt> que define o id da pessoa</p>
+</li>
+<li><p><tt>public String getNome()</tt> que retorna o nome da pessoa</p>
+</li>
+<li><p><tt>public void setNome(String aNome)</tt> que define o nome da pessoa</p>
+</li></ul>
+</li>
+<li><p>que tenha o método para imprimir seus dados</p>
+<ul>
+<li><p><tt>public void relatorio()</tt> que imprime o nome da classe (&ldquo;Pessoa&rdquo;), o id, e o nome</p>
+</li>
+</ul>
+
+</li>
+</ul>
+<h2>Classe Funcionario</h2>
+<table class="imgtable"><tr><td>
+<img src="diagrama_funcionario.svg" alt="Diagrama do Programa Pessoa" />&nbsp;</td>
+<td align="left"></td></tr></table>
+<p>Uma classe que modele um Funcionario, subclasse de Pessoa, </p>
+<ul>
+<li><p>que tenha os campos <tt>private</tt></p>
+<ul>
+<li><p>&ldquo;salario&rdquo;, que seja um <tt>double</tt>, </p>
+</li></ul>
+</li>
+<li><p>que tenha os métodos de acesso aos campos</p>
+<ul>
+<li><p><tt>public double getSalario()</tt> que retorna o salário do funcionário</p>
+</li>
+<li><p><tt>public void setSalario(double aSalario)</tt> que define o salário do funcionario</p>
+</li>
+<li><p><tt>public double getPagamento()</tt> que retorna o valor do pagamento (igual ao salário)</p>
+</li></ul>
+</li>
+<li><p>que tenha o método para imprimir seus dados</p>
+<ul>
+<li><p><tt>public void relatorio()</tt> que imprime o nome da classe (&ldquo;Funcionario&rdquo;), o id, o nome, o salário e o pagamento</p>
+</li>
+</ul>
+
+</li>
+</ul>
+<h2>Classe Gerente</h2>
+<table class="imgtable"><tr><td>
+<img src="diagrama_gerente.svg" alt="Diagrama do Programa Pessoa" />&nbsp;</td>
+<td align="left"></td></tr></table>
+<p>Uma classe que modele um Gerente, subclasse de Funcionario, </p>
+<ul>
+<li><p>que tenha os campos <tt>private</tt></p>
+<ul>
+<li><p>&ldquo;bonus&rdquo;, que seja um <tt>double</tt>, </p>
+</li></ul>
+</li>
+<li><p>que tenha os métodos de acesso aos campos</p>
+<ul>
+<li><p><tt>public double getBonus()</tt> que retorna o bônus do gerente</p>
+</li>
+<li><p><tt>public void setBonus(double aBonus)</tt> que define o bônus do gerente</p>
+</li>
+<li><p><tt>public double getPagamento()</tt> que retorna o valor do pagamento (igual ao salário mais o bônus)</p>
+</li></ul>
+</li>
+<li><p>que tenha o método para imprimir seus dados</p>
+<ul>
+<li><p><tt>public void relatorio()</tt> que imprime o nome da classe (&ldquo;Gerente&rdquo;), o id, o nome, o salário, o bônus e o pagamento</p>
+</li>
+</ul>
+
+</li>
+</ul>
+<h1>Pare Aqui! Até aqui você já deve ter testado as classes que você já fez!</h1>
+<h3>Continuação&hellip;</h3>
+<h2>Classe Nota</h2>
+<table class="imgtable"><tr><td>
+<img src="diagrama_nota.svg" alt="Diagrama do Programa Pessoa" />&nbsp;</td>
+<td align="left"></td></tr></table>
+<p>Uma classe que modele uma Nota do boletim de um aluno, subclasse de Funcionario, </p>
+<ul>
+<li><p>que tenha o campo <tt>private</tt></p>
+<ul>
+<li><p>&ldquo;valor&rdquo;, que seja um <tt>double</tt>, </p>
+</li></ul>
+</li>
+<li><p>que tenha o <i>constructor</i></p>
+<ul>
+<li><p><tt>public Nota(double aNota)</tt> que garanta que a nota esteja entre 0.0 e 10.0</p>
+</li></ul>
+</li>
+<li><p>que tenha os métodos de acesso aos campos</p>
+<ul>
+<li><p><tt>public double getNota()</tt> que retorna o valor da nota</p>
+</li></ul>
+</li>
+<li><p>que tenha o método de converter para uma <tt>String</tt></p>
+<ul>
+<li><p><tt>public String toString()</tt> que retorna uma <tt>String</tt> com o valor &ldquo;<i>valorDaNota</i> pontos&rdquo;</p>
+</li>
+</ul>
+
+</li>
+</ul>
+<h2>Classe Boletim</h2>
+<table class="imgtable"><tr><td>
+<img src="diagrama_boletim.svg" alt="Diagrama do Programa Pessoa" />&nbsp;</td>
+<td align="left"></td></tr></table>
+<p>Uma classe que modele o boletim de um aluno</p>
+<ul>
+<li><p>que tenha os campos <tt>private</tt></p>
+<ul>
+<li><p>&ldquo;notaNP1&rdquo;, que seja uma <tt>Nota</tt>, </p>
+</li>
+<li><p>&ldquo;notaNP2&rdquo;, que seja uma <tt>Nota</tt>, </p>
+</li></ul>
+</li>
+<li><p>que tenha os métodos de acesso aos campos</p>
+<ul>
+<li><p><tt>public double getNotaNP1()</tt> que retorna o valor da nota da NP1</p>
+</li>
+<li><p><tt>public double getNotaNP2()</tt> que retorna o valor da nota da NP2</p>
+</li>
+<li><p><tt>public void setNotaNP1(Nota aNota)</tt> que define o valor da nota da NP1</p>
+</li>
+<li><p><tt>public void setNotaNP2(Nota aNota)</tt> que define o valor da nota da NP2</p>
+</li></ul>
+</li>
+<li><p>que faça <i>overload</i> dos métodos de definição das notas, usando <tt>double</tt></p>
+<ul>
+<li><p><tt>public void setNotaNP1(double aNota)</tt> que define o valor da nota da NP1</p>
+</li>
+<li><p><tt>public void setNotaNP2(double aNota)</tt> que define o valor da nota da NP2</p>
+</li></ul>
+</li>
+<li><p>que calcule a média das notas</p>
+<ul>
+<li><p><tt>public double media()</tt> que retorna o valor da média das duas notas</p>
+</li>
+</ul>
+
+</li>
+</ul>
+<h2>Classe Aluno</h2>
+<table class="imgtable"><tr><td>
+<img src="diagrama_aluno.svg" alt="Diagrama do Programa Pessoa" />&nbsp;</td>
+<td align="left"></td></tr></table>
+<p>Uma classe que modele um aluno</p>
+<ul>
+<li><p>que tenha o campo <tt>private</tt></p>
+<ul>
+<li><p>&ldquo;boletim&rdquo;, que seja um <tt>Boletim</tt>, </p>
+</li></ul>
+</li>
+<li><p>que tenha os métodos de acesso aos campos do boletim</p>
+<ul>
+<li><p><tt>public double getNotaNP1()</tt> que retorna o valor da nota da NP1</p>
+</li>
+<li><p><tt>public double getNotaNP2()</tt> que retorna o valor da nota da NP2</p>
+</li>
+<li><p><tt>public void setNotaNP1(Nota aNota)</tt> que define o valor da nota da NP1</p>
+</li>
+<li><p><tt>public void setNotaNP2(Nota aNota)</tt> que define o valor da nota da NP2</p>
+</li></ul>
+</li>
+<li><p>que faça <i>overload</i> dos métodos de definição das notas, usando <tt>double</tt></p>
+<ul>
+<li><p><tt>public void setNotaNP1(double aNota)</tt> que define o valor da nota da NP1</p>
+</li>
+<li><p><tt>public void setNotaNP2(double aNota)</tt> que define o valor da nota da NP2</p>
+</li></ul>
+</li>
+<li><p>que tenha o método para imprimir seus dados</p>
+<ul>
+<li><p><tt>public void relatorio()</tt> que</p>
+<ul>
+<li><p>imprime o nome da classe (&ldquo;Aluno&rdquo;), o id, o nome, as notas e a média;</p>
+</li>
+<li><p>imprime a mensagem &ldquo;O aluno passou direto&rdquo;, caso a média seja maior, ou igual, a 7.0,</p>
+</li>
+<li><p>imprime a mensagem &ldquo;O aluno não passou direto&rdquo;, caso contrário.</p>
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+</ul>
+<div id="footer">
+<div id="footer-text">
+Page generated 2019-02-25 01:32:18 -03, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>
