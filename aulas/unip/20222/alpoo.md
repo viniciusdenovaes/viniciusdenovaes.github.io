@@ -1,19 +1,15 @@
-# LPOO - Linguagem de Programação Orientada a Objetos (em Java)
+# ALPOO - Aplicações de Linguagem de Programação Orientada a Objetos (em Java)
 
+<!--
 ## APS
 
 - [Roteiro](lpoo_files/aps/roteiro.html)
   - [Roteiro em html](lpoo_files/aps/roteiro.html)
   - [Arquivo Oficial](lpoo_files/aps/APS_LPOO_2022.docx)
 - [Um exemplo de um programa parecido com a APS](https://github.com/viniciusdenovaes/Unip221LPOO/blob/master/README.md#programa-funcionario)
-
+-->
 
 ## Curso
-
-- Prólogo
-  - Instalação:.
-    - [Linux (Ubuntu)](lpoo_files/curso/00-install/linux/00-tuto_instal_linux_ubuntu.html)
-    - [Windows](lpoo_files/curso/00-install/windows/00-tuto_instal_windows.html)
 
 - Parte 01 Comandos Básicos:
   - [Tipos Primitivos e Operações](lpoo_files/curso/01/tipos_primitivos.html)
@@ -42,8 +38,6 @@
 
 ## Laboratórios
 
-- [lab00 - Usando funções (métodos estáticos)](lpoo_files/laboratorio/00-basico/comandos-basicos.html)
-  - [respostas](https://github.com/viniciusdenovaes/Unip211LPOO/tree/main/Lab00/src/lab00)
 - Lab01
   - [lab01 - Classes como estruturas](lpoo_files/laboratorio/01-classes/01.00-classes_pre.html)
   - [lab01 - Classes com métodos](lpoo_files/laboratorio/01-classes/01.01-classes.html)
@@ -78,14 +72,8 @@
 
 ## Ementa
 
-* Parte 00 - Revisão: Levamos em consideração que a turma aprendeu o paradigma de programação procedural programando em Python. Será feito uma revisão de tipos primitivos, comandos de controle e procedimentos focando na sintaxe em Java.
-    * Tipos primitivos (`int`, `double`, `boolean`)
-    * Comandos de controle
-        * comandos condicionais (`if`, `if else`, `if else if`)
-        * comandos de repetição (`while`, `for`)
-    * Procedimentos: (métodos estáticos tratados como funções)
-    * Estruturas: arrays
-
+ - Parte 01 - Programação orientada a eventos: injeção de dependência
+ - Parte 02 - Padrões de Arquitetura: MVC e DAO
 * Parte 01 - Classes e Objetos
   * Atributos e Métodos
   * _Constructors_
