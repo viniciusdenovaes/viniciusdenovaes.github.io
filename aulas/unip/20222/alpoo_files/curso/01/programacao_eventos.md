@@ -50,6 +50,12 @@ public class TestePato {
 }
 ```
 
+Saída
+```
+Definido dentro da classe: O pato voa
+```
+
+
 ### Agora vamos fazer de um jeito novo
 
 Ok, agora vamos treinar como definir o comportamento `voar` **depois** da criação do objeto `pato`:
