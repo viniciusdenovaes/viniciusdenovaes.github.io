@@ -3,7 +3,8 @@
 
 ## Curso
 
-- Parte 01 Programação Orientada a Eventos:
+
+- Parte 01 Programa.ção Orientada a Eventos:
   - [Programação Orientada a Eventos](alpoo_files/curso/01/programacao_eventos.html)
 
 
