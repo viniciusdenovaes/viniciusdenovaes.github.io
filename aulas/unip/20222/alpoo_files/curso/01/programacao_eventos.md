@@ -9,7 +9,7 @@ Por **eventos**, podemos entender por exemplo:
 
 Neste curso vamos tratar de [Interface de Usuário](https://pt.wikipedia.org/wiki/Interface_gr%C3%A1fica_do_utilizador) (em inglês [Graphical User Interface ou GUI](https://en.wikipedia.org/wiki/Graphical_user_interface)), que é fazer uma interface para que o usuário possa usar o seu programa. Tipicamente faremos uma **janela** com alguns **botões**, **caixa de texto de entrada**, **tabelas**, etc...
 
-Em java, usaremos as bibliotecas `awt` e `swing`. Para definir o funcionamento de qualquer elemento, estas bibliotecas (assim como a maioria das bibliotecas de GUI) usam o padrão orientado a eventos. Por isso devemos aprende-lo.
+Em java, usaremos as bibliotecas `awt` e `swing`. Para definir o funcionamento de qualquer elemento estas bibliotecas (assim como a maioria das bibliotecas de GUI) usam o padrão orientado a eventos.
 
 A primeira coisa que devemos aprender é que este padrão separa a lógica de desenhar a interface, da lógica de interação da interface,
 ou seja: vamos desenhar uma interface em uma parte do código e definir funcionamento desta interface em outra parte.
