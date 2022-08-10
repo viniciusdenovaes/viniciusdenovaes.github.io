@@ -267,10 +267,76 @@ pre[data-line] .line-highlight[data-end]:after {
 
 <h3 class="mume-header" id="exerc%C3%ADcio-01">Exerc&#xED;cio 01</h3>
 
-<p>Fa&#xE7;a uma classe chamada <code>Pato</code> que tenha uma a&#xE7;&#xE3;o: <code>voar</code> e que esta a&#xE7;&#xE3;o seja definida fora da classe, depois da cria&#xE7;&#xE3;o do objeto.</p>
-<p>Teste a classe: fa&#xE7;a um teste, crie um objeto do tipo <code>Pato</code>, implemente uma a&#xE7;&#xE3;o de voar, e configure seu objeto para que use a sua implementa&#xE7;&#xE3;o.</p>
+<h4 class="mume-header" id="parte-a">Parte A</h4>
+
+<p>Fa&#xE7;a uma classe chamada <code>Pato</code> que tenha uma a&#xE7;&#xE3;o: <code>voar</code> e que esta a&#xE7;&#xE3;o possa definida fora da classe, depois da cria&#xE7;&#xE3;o do objeto.</p>
+<p>Mais especificamente, a classe <code>Pato</code> tem um m&#xE9;todo</p>
+<ul>
+<li><code>public void voar()</code></li>
+<li>que faz uma a&#xE7;&#xE3;o do tipo <code>public void fazVoar()</code><br>
+o funcionamento deste m&#xE9;todo deve ser definido <strong>fora da classe</strong> e <strong>depois</strong> da cria&#xE7;&#xE3;o do objeto.</li>
+</ul>
+<h4 class="mume-header" id="parte-b">Parte B</h4>
+
+<p>Teste a classe: fa&#xE7;a um teste, crie um objeto do tipo <code>Pato</code>, implemente uma a&#xE7;&#xE3;o de <code>fazVoar</code>, e configure seu objeto para que use a sua implementa&#xE7;&#xE3;o.</p>
+<p>Mais especificamente:</p>
+<ul>
+<li>Fa&#xE7;a uma classe para testar o seu programa</li>
+<li>Crie um objeto do tipo <code>Pato</code></li>
+<li>Crie uma implementa&#xE7;&#xE3;o do m&#xE9;todo <code>fazVoar</code></li>
+<li>Defina a implementa&#xE7;&#xE3;o criada como o funcionamento do m&#xE9;todo <code>voar</code> do objeto <code>pato</code> criado.</li>
+<li>Teste para ver se o m&#xE9;todo <code>voar</code> de <code>pato</code> est&#xE1; funcionando.</li>
+</ul>
+<p><a href="https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Lab01/src/acao_inserida_no_objeto">Resposta</a></p>
 <h3 class="mume-header" id="exerc%C3%ADcio-02">Exerc&#xED;cio 02</h3>
 
+<h4 class="mume-header" id="parte-a-1">Parte A</h4>
+
+<p>Fa&#xE7;a uma classe chamada <code>Pato</code> que tenha uma a&#xE7;&#xE3;o: <code>voar</code> que represente um conjunto de a&#xE7;&#xF5;es que possam ser adicionadas depois da cria&#xE7;&#xE3;o do objeto.</p>
+<p>Mais especificamente, a classe <code>Pato</code> tem um m&#xE9;todo</p>
+<ul>
+<li><code>public void voar()</code></li>
+<li>que engatilha uma lista de a&#xE7;&#xF5;es do tipo <code>public void fazVoar()</code><br>
+cada a&#xE7;&#xE3;o engatilhada por este m&#xE9;todo deve ser definido <strong>fora da classe</strong> e <strong>adicionada depois</strong> da cria&#xE7;&#xE3;o do objeto.</li>
+</ul>
+<h4 class="mume-header" id="parte-b-1">Parte B</h4>
+
+<p>Teste a classe: fa&#xE7;a um teste, crie um objeto do tipo <code>Pato</code>, implemente pelo menos duas a&#xE7;&#xF5;es de <code>fazVoar</code>, e configure seu objeto para que use as suas implementa&#xE7;&#xF5;es.</p>
+<p>Mais especificamente:</p>
+<ul>
+<li>Fa&#xE7;a uma classe para testar o seu programa</li>
+<li>Crie um objeto do tipo <code>Pato</code></li>
+<li>Crie uma implementa&#xE7;&#xE3;o do m&#xE9;todo <code>fazVoar</code></li>
+<li>Adicione esta implementa&#xE7;&#xE3;o criada no funcionamento do m&#xE9;todo <code>voar</code> do objeto <code>pato</code> criado.</li>
+<li>Crie uma <strong>outra</strong> implementa&#xE7;&#xE3;o do m&#xE9;todo <code>fazVoar</code></li>
+<li>Adicione esta <strong>outra</strong> implementa&#xE7;&#xE3;o criada no funcionamento do m&#xE9;todo <code>voar</code> do objeto <code>pato</code> criado.</li>
+<li>Teste para ver se o m&#xE9;todo <code>voar</code> de <code>pato</code> est&#xE1; funcionando.</li>
+</ul>
+<p><a href="https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Lab01/src/lista_de_acao_no_objeto">Resposta</a></p>
+<h3 class="mume-header" id="exerc%C3%ADcio-03">Exerc&#xED;cio 03</h3>
+
+<h4 class="mume-header" id="parte-a-2">Parte A</h4>
+
+<p>Fa&#xE7;a uma classe chamada <code>Calculadora</code> que tenha uma a&#xE7;&#xE3;o: <code>calcular</code> que opera dois n&#xFA;meros reais, e que esta a&#xE7;&#xE3;o possa definida fora da classe, depois da cria&#xE7;&#xE3;o do objeto.</p>
+<p>Mais especificamente, a classe <code>Calculadora</code> tem um m&#xE9;todo</p>
+<ul>
+<li><code>public void calcular(double a, double b)</code></li>
+<li>que faz uma a&#xE7;&#xE3;o do tipo <code>public void fazConta(double a, double b)</code><br>
+o funcionamento deste m&#xE9;todo deve ser definido <strong>fora da classe</strong> e <strong>depois</strong> da cria&#xE7;&#xE3;o do objeto.</li>
+</ul>
+<h4 class="mume-header" id="parte-b-2">Parte B</h4>
+
+<p>Teste a classe: fa&#xE7;a um teste, crie um objeto do tipo <code>Calculadora</code>, implemente uma a&#xE7;&#xE3;o de <code>calcular</code>, e configure seu objeto para que use a sua implementa&#xE7;&#xE3;o.</p>
+<p>Mais especificamente:</p>
+<ul>
+<li>Fa&#xE7;a uma classe para testar o seu programa</li>
+<li>Crie um objeto do tipo <code>Calculadora</code></li>
+<li>Crie uma implementa&#xE7;&#xE3;o do m&#xE9;todo <code>fazConta</code></li>
+<li>Defina a implementa&#xE7;&#xE3;o criada como o funcionamento do m&#xE9;todo <code>calcular</code> do objeto <code>calculadora</code> criado.</li>
+<li>Teste para ver se o m&#xE9;todo <code>calcular</code> de <code>calculadora</code> est&#xE1; funcionando.</li>
+</ul>
+<p><a href="https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Lab01/src/calculos">Resposta</a></p>
+<p>.</p>
 
       </div>
       
