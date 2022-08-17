@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>alpoo</title>
+      <title>gui</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -261,40 +261,84 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="alpoo-aplica%C3%A7%C3%B5es-de-linguagem-de-programa%C3%A7%C3%A3o-orientada-a-objetos-em-java">ALPOO - Aplica&#xE7;&#xF5;es de Linguagem de Programa&#xE7;&#xE3;o Orientada a Objetos (em Java)</h1>
+      <h1 class="mume-header" id="interface-de-usu%C3%A1rio-graphical-user-interface-guiem-constru%C3%A7%C3%A3o">Interface de Usu&#xE1;rio (Graphical User Interface (GUI))(<strong>EM CONSTRU&#xC7;&#xC3;O</strong>)</h1>
 
-<h2 class="mume-header" id="curso">Curso</h2>
+<p>Interface de Usu&#xE1;rio (em ingl&#xEA;s <em>Graphical User Interface</em> ou GUI) &#xE9; a parte do programa que vai aparecer para o usu&#xE1;rio final, afim de que ele interaja com o seu programa.</p>
+<p>No nosso caso ser&#xE1; uma janela.</p>
+<h2 class="mume-header" id="op%C3%A7%C3%A3o-1-usar-o-netbeans">Op&#xE7;&#xE3;o 1: Usar o Netbeans</h2>
 
+<p>Voc&#xEA; pode fazer essa janela usando a IDE <a href="https://netbeans.apache.org/">Netbeans</a>. No Netbeans voc&#xEA; precisa apenas escolher o que colocar na sua interface e &quot;arrastar e colar&quot; os componentes em uma janela. Mas, mesmo <strong>para usar o tutorial do Netbeans</strong>,</p>
 <ul>
-<li><a href="alpoo_files/curso/01/programacao_eventos.html">01 - Programa&#xE7;&#xE3;o Orientada a Eventos</a></li>
-<li><a href="alpoo_files/curso/02/gui.html">02 - Interface de Usu&#xE1;rio (Graphical User Interface (GUI))(<strong>EM CONSTRU&#xC7;&#xC3;O</strong>)</a></li>
+<li><strong>voc&#xEA; precisa saber sobre:</strong>
+<ul>
+<li>Janela (<code>JFrame</code>)</li>
+<li>Componentes e Containers</li>
+<li>Listeners</li>
 </ul>
-<h2 class="mume-header" id="laborat%C3%B3rios">Laborat&#xF3;rios</h2>
-
+</li>
+<li>voc&#xEA; <strong>n&#xE3;o</strong> precisa saber sobre:
 <ul>
-<li>Lab01
-<ul>
-<li><a href="alpoo_files/laboratorio/01-dep/01-dep_inj.html">lab01 - separa&#xE7;&#xE3;o de a&#xE7;&#xF5;es e eventos</a></li>
+<li>Layouts</li>
 </ul>
 </li>
 </ul>
-<h2 class="mume-header" id="githttpsgithubcomviniciusdenovaesunip222alpoo"><a href="https://github.com/viniciusdenovaes/Unip222ALPOO">Git</a></h2>
-
-<h2 class="mume-header" id="ementa">Ementa</h2>
-
+<p>Tutoriais do Netbeans est&#xE3;o dispon&#xED;veis nas p&#xE1;ginas oficiais:</p>
 <ul>
-<li>Parte 01 - Programa&#xE7;&#xE3;o orientada a eventos: separa&#xE7;&#xE3;o de a&#xE7;&#xF5;es e eventos</li>
-<li>Parte 02 - Padr&#xF5;es de Arquitetura: MVC
+<li>Em pt-br:
 <ul>
-<li>pacotes awt e Swing</li>
+<li><a href="https://netbeans.apache.org/kb/docs/java/quickstart-gui_pt_BR.html">Introdu&#xE7;&#xE3;o</a></li>
+<li><a href="https://netbeans.apache.org/kb/docs/java/gui-functionality_pt_BR.html">Exemplos pr&#xE1;ticos</a></li>
 </ul>
 </li>
-<li>Parte 03 - Padr&#xF5;es de Arquitetura: DAO
+<li>Em ingl&#xEA;s:
 <ul>
-<li>pacote JDBC</li>
+<li><a href="https://netbeans.apache.org/kb/docs/java/quickstart-gui.html">Introdu&#xE7;&#xE3;o</a></li>
+<li><a href="https://netbeans.apache.org/kb/docs/java/gui-functionality.html">Exemplos pr&#xE1;ticos</a></li>
 </ul>
 </li>
 </ul>
+<h2 class="mume-header" id="op%C3%A7%C3%A3o-2-fazer-direto-pelo-c%C3%B3digo">Op&#xE7;&#xE3;o 2: Fazer direto pelo c&#xF3;digo</h2>
+
+<p>Usando <code>swing</code> e <code>awt</code>, voc&#xEA; tem a op&#xE7;&#xE3;o de criar uma interface escrevendo linhas de c&#xF3;digo em java.</p>
+<p>Vamos ver a seguir tudo o que voc&#xEA; precisa fazer para criar uma interface inicial, notando esta aula n&#xE3;o abrange todas as possibilidades do voc&#xEA; poderia fazer usando <code>swing</code> e <code>awt</code>.</p>
+<h3 class="mume-header" id="janela">Janela</h3>
+
+<p>A janela &#xE9; o container que conter&#xE1; todos os elementos da sua interface gr&#xE1;fica.</p>
+<p>Para fazer uma janela voc&#xEA; deve se preocupar, no m&#xED;nimo, com:</p>
+<ul>
+<li>O tamanho da janela</li>
+<li>O comportamento da janela quando o bot&#xE3;o para fechar &#xE9; pressionado</li>
+<li>Tornar a janela vis&#xED;vel.</li>
+</ul>
+<p>A classe que usaremos para fazer uma janela &#xE9; a <code>JFrame</code></p>
+<h3 class="mume-header" id="como-configurar-o-tamanho">Como configurar o tamanho</h3>
+
+<p>Para configurar o tamanho e localiza&#xE7;&#xE3;o da janela os seguintes m&#xE9;todos podem ser usados:</p>
+<ul>
+<li><code>void setSize(int width, int height)</code>: Configura o tamanho da janela</li>
+<li><code>void setLocation(int x, int y)</code>: Configura a localiza&#xE7;&#xE3;o em que a janela aparece</li>
+<li><code>void setBounds(int x, int y, int width, int height)</code> Configura ao mesmo tempo a localiza&#xE7;&#xE3;o e o tamanho</li>
+<li><code>Dimension getSize()</code>: Retorna o tamanho da janela</li>
+<li><code>void pack()</code>: Configura o tamanho da janela para que tudo o que ela cont&#xE9;m fique em seu tamanho &quot;preferido&quot;.</li>
+</ul>
+<h3 class="mume-header" id="como-configurar-o-comportamento-de-fechar">Como configurar o comportamento de fechar</h3>
+
+<p>Uma das maneira de configurar o comportamento da janela quando o bot&#xE3;o de fechar &#xE9; clicado &#xE9; atrav&#xE9;s do m&#xE9;todo <code>setDefaultCloseOperation(int operation);</code>, a opera&#xE7;&#xE3;o especificada pode ser uma entre:</p>
+<ul>
+<li><code>JFrame.EXIT_ON_CLOSE</code>: Termina o programa</li>
+<li><code>JFrame.HIDE_ON_CLOSE</code>: Esconde a janela, por&#xE9;m o programa continua funcionando (&#xE9; a op&#xE7;&#xE3;o padr&#xE3;o)</li>
+<li><code>JFrame.DISPOSE_ON_CLOSE</code>: Destr&#xF3;i a janela, caso todas janela sejam destru&#xED;das o programa termina</li>
+<li><code>JFrame.DO_NOTHING_ON_CLOSE</code>: Ignora o bot&#xE3;o de fechar</li>
+</ul>
+<p>Existem outas formas mais interessantes de configurar o comportamento usando <code>WindowListener</code>, sendo poss&#xED;vel chamar qualquer m&#xE9;todo quando o usu&#xE1;rio tentar fechar a janela.</p>
+<h3 class="mume-header" id="como-tornar-a-janela-vis%C3%ADvel">Como tornar a janela vis&#xED;vel</h3>
+
+<p>Para tornar a janela vis&#xED;vel basta usar o m&#xE9;todo <code>setVisible(true)</code></p>
+<h3 class="mume-header" id="layout">Layout</h3>
+
+<h3 class="mume-header" id="componentes">Componentes</h3>
+
+<p>.</p>
 
       </div>
       

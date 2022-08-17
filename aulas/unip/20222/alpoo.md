@@ -5,7 +5,7 @@
 
 
  - [01 - Programação Orientada a Eventos](alpoo_files/curso/01/programacao_eventos.html)
- - [02 - Interface de Usuário (Graphical User Interface (GUI))(EM CONSTRUÇÃO)](alpoo_files/curso/02/gui.html)
+ - [02 - Interface de Usuário (Graphical User Interface (GUI))(**EM CONSTRUÇÃO**)](alpoo_files/curso/02/gui.html)
 
 
 
