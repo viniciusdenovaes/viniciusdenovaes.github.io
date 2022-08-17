@@ -51,7 +51,7 @@ Então você seguirá os seguintes passos:
  - depois você deve definir o layout do seu container
  - depois incluir os componentes no seu container
  - definir os passos anteriores para cada container que você tiver
- - definir o% funcionamento de cada controle que você tiver
+ - definir o funcionamento de cada controle que você tiver
 
 Nos seguintes links uma explicação de cada passo
 
