@@ -301,43 +301,37 @@ pre[data-line] .line-highlight[data-end]:after {
 
 <p>Usando <code>swing</code> e <code>awt</code>, voc&#xEA; tem a op&#xE7;&#xE3;o de criar uma interface escrevendo linhas de c&#xF3;digo em java.</p>
 <p>Vamos ver a seguir tudo o que voc&#xEA; precisa fazer para criar uma interface inicial, notando esta aula n&#xE3;o abrange todas as possibilidades do voc&#xEA; poderia fazer usando <code>swing</code> e <code>awt</code>.</p>
-<h3 class="mume-header" id="janela">Janela</h3>
-
-<p>A janela &#xE9; o container que conter&#xE1; todos os elementos da sua interface gr&#xE1;fica.</p>
-<p>Para fazer uma janela voc&#xEA; deve se preocupar, no m&#xED;nimo, com:</p>
+<p>Uma GUI &#xE9; feita de containers e componentes:</p>
 <ul>
-<li>O tamanho da janela</li>
-<li>O comportamento da janela quando o bot&#xE3;o para fechar &#xE9; pressionado</li>
-<li>Tornar a janela vis&#xED;vel.</li>
-</ul>
-<p>A classe que usaremos para fazer uma janela &#xE9; a <code>JFrame</code></p>
-<h3 class="mume-header" id="como-configurar-o-tamanho">Como configurar o tamanho</h3>
-
-<p>Para configurar o tamanho e localiza&#xE7;&#xE3;o da janela os seguintes m&#xE9;todos podem ser usados:</p>
+<li>os containers s&#xE3;o caixas, com um layout definido, que cont&#xE9;m componentes.
 <ul>
-<li><code>void setSize(int width, int height)</code>: Configura o tamanho da janela</li>
-<li><code>void setLocation(int x, int y)</code>: Configura a localiza&#xE7;&#xE3;o em que a janela aparece</li>
-<li><code>void setBounds(int x, int y, int width, int height)</code> Configura ao mesmo tempo a localiza&#xE7;&#xE3;o e o tamanho</li>
-<li><code>Dimension getSize()</code>: Retorna o tamanho da janela</li>
-<li><code>void pack()</code>: Configura o tamanho da janela para que tudo o que ela cont&#xE9;m fique em seu tamanho &quot;preferido&quot;.</li>
+<li>layout &#xE9; a regra de como os componentes que est&#xE3;o dentro de um container, ir&#xE3;o se organizar automaticamente.</li>
 </ul>
-<h3 class="mume-header" id="como-configurar-o-comportamento-de-fechar">Como configurar o comportamento de fechar</h3>
-
-<p>Uma das maneira de configurar o comportamento da janela quando o bot&#xE3;o de fechar &#xE9; clicado &#xE9; atrav&#xE9;s do m&#xE9;todo <code>setDefaultCloseOperation(int operation);</code>, a opera&#xE7;&#xE3;o especificada pode ser uma entre:</p>
+</li>
+<li>Os componentes s&#xE3;o:
 <ul>
-<li><code>JFrame.EXIT_ON_CLOSE</code>: Termina o programa</li>
-<li><code>JFrame.HIDE_ON_CLOSE</code>: Esconde a janela, por&#xE9;m o programa continua funcionando (&#xE9; a op&#xE7;&#xE3;o padr&#xE3;o)</li>
-<li><code>JFrame.DISPOSE_ON_CLOSE</code>: Destr&#xF3;i a janela, caso todas janela sejam destru&#xED;das o programa termina</li>
-<li><code>JFrame.DO_NOTHING_ON_CLOSE</code>: Ignora o bot&#xE3;o de fechar</li>
+<li>Container (os pr&#xF3;prios containers tamb&#xE9;m s&#xE3;o componetes, ou seja, voc&#xEA; pode ter &quot;caixas dentro de caixas&quot;)</li>
+<li>Bot&#xF5;es</li>
+<li>Caixas de texto</li>
+<li>Tabelas</li>
+<li>etc...</li>
 </ul>
-<p>Existem outas formas mais interessantes de configurar o comportamento usando <code>WindowListener</code>, sendo poss&#xED;vel chamar qualquer m&#xE9;todo quando o usu&#xE1;rio tentar fechar a janela.</p>
-<h3 class="mume-header" id="como-tornar-a-janela-vis%C3%ADvel">Como tornar a janela vis&#xED;vel</h3>
-
-<p>Para tornar a janela vis&#xED;vel basta usar o m&#xE9;todo <code>setVisible(true)</code></p>
-<h3 class="mume-header" id="layout">Layout</h3>
-
-<h3 class="mume-header" id="componentes">Componentes</h3>
-
+</li>
+</ul>
+<p>Ent&#xE3;o voc&#xEA; seguir&#xE1; os seguintes passos:</p>
+<ul>
+<li>a primeira coisa que voc&#xEA; deve fazer &#xE9; criar o seu primeiro container: uma janela</li>
+<li>depois voc&#xEA; deve definir o layout do seu container</li>
+<li>depois incluir os componentes no seu container</li>
+<li>definir os passos anteriores para cada container que voc&#xEA; tiver</li>
+<li>definir o funcionamento de cada controle que voc&#xEA; tiver</li>
+</ul>
+<p>Nos seguintes links uma explica&#xE7;&#xE3;o de cada passo</p>
+<ul>
+<li><a href="janela.html">Janela</a></li>
+<li><a href="layout.html">Layout</a></li>
+<li><a href="componentes.html">Componentes e Controles</a></li>
+</ul>
 <p>.</p>
 
       </div>
