@@ -53,7 +53,7 @@ Então você seguirá os seguintes passos:
  - definir os passos anteriores para cada container que você tiver
  - definir o funcionamento de cada controle que você tiver
 
-Nos seguintes links uma explicação de cada passo
+Nos seguintes %links uma explicação de cada passo
 
 - [Janela](janela.html)
 - [Layout](layout.html)
