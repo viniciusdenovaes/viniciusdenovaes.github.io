@@ -1,4 +1,4 @@
-## Layout
+# Layout
 
 Depois de ter o seu primeiro container, você precisa escolher um layout, para este container e para cada container que você criar.
 
