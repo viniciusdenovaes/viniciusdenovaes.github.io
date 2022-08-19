@@ -14,6 +14,9 @@
 - Lab01
   - [lab01 - separação de ações e eventos](alpoo_files/laboratorio/01-dep/01-dep_inj.html)
 
+- Lab02
+   - [lab02.01 - Action Listeners](alpoo_files/laboratorio/02-gui/02.01-gui.html)
+
 
 ## [Git](https://github.com/viniciusdenovaes/Unip222ALPOO)
 
