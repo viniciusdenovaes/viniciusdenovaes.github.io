@@ -148,6 +148,7 @@ Teremos os seguintes constructors mais comuns:
 Teremos os seguintes métodos mais comuns:
  - `void setText(String s)`
  - `String getText()`
+ - `boolean isSelected()`: verifica se este botão está selecionado
  - `void setEnabled(boolean b)`
  - `void addActionListener(ActionListener a)`: Adiciona o ActionListener `a`
 
