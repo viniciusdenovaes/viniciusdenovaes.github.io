@@ -16,6 +16,7 @@
 
 - Lab02
    - [lab02.01 - Action Listeners](alpoo_files/laboratorio/02-gui/01-gui.html)
+   - [lab02.02 - Calculadora](alpoo_files/laboratorio/02-gui/02-gui.html)
 
 
 ## [Git](https://github.com/viniciusdenovaes/Unip222ALPOO)
