@@ -126,7 +126,7 @@ Então é melhor juntar os dois.
 Se você quer entender um *conceito*, leia em um livro.
 Se você quer resolver um problema pontual, procure na internet.
 
-Infelizmente eu ainda não encontrei um livro traduzido para o protuguês que seja perfeito para este curso, por isso a existência deste site.
+Infelizmente eu ainda não encontrei um livro traduzido para o português que seja perfeito para este curso, por isso a existência deste site.
 
 Aqui está uma lista dos livros que eu recomendo:
 
