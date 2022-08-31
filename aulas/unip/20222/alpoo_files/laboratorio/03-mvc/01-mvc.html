@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>alpoo</title>
+      <title>01-mvc</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -261,54 +261,145 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="alpoo-aplica%C3%A7%C3%B5es-de-linguagem-de-programa%C3%A7%C3%A3o-orientada-a-objetos-em-java">ALPOO - Aplica&#xE7;&#xF5;es de Linguagem de Programa&#xE7;&#xE3;o Orientada a Objetos (em Java)</h1>
+      <h1 class="mume-header" id="laborat%C3%B3rio-0301-model-view-controller-mvc">Laborat&#xF3;rio 03.01 - Model-View-Controller (MVC)</h1>
 
-<h2 class="mume-header" id="curso">Curso</h2>
+<p>Nos exerc&#xED;cios abaixo ser&#xE3;o fornecidos arquivos de um projeto em padr&#xE3;o MVC, ser&#xE1; fornecido o <code>Controller</code>, a <code>interface</code> <code>View</code> e <code>Model</code>. Para cada um voc&#xEA; deve fazer uma ou mais implementa&#xE7;&#xF5;es de <code>View</code> e <code>Model</code>; al&#xE9;m de um arquivo para testar as suas classes.</p>
+<h3 class="mume-header" id="exerc%C3%ADcio-01-lista-de-nomes">Exerc&#xED;cio 01 - Lista de Nomes</h3>
 
+<p>Neste projeto voc&#xEA; deve fazer um programa que guarda uma lista de nomes. Esta lista de nomes pode ser persistente ou n&#xE3;o. O usu&#xE1;rio pode pedir para <strong>inserir</strong> um nome, ou <strong>buscar</strong> um nome na lista.</p>
+<p>O seu programa deve</p>
 <ul>
-<li><a href="alpoo_files/curso/01/programacao_eventos.html">01 - Programa&#xE7;&#xE3;o Orientada a Eventos</a></li>
-<li><a href="alpoo_files/curso/02/gui.html">02 - Interface de Usu&#xE1;rio (Graphical User Interface (GUI))(<strong>EM CONSTRU&#xC7;&#xC3;O</strong>)</a></li>
+<li>Guardar uma lista de nomes. Pode ser ou n&#xE3;o persistente.</li>
+<li>O usu&#xE1;rio pode inserir um novo nome.</li>
+<li>O usu&#xE1;rio pode buscar por um nome. Esta busca deve retornar uma lista de nomes. Esta lista deve ser exibida ao usu&#xE1;rio.</li>
 </ul>
-<h2 class="mume-header" id="laborat%C3%B3rios">Laborat&#xF3;rios</h2>
-
+<p><strong>OBS:</strong> O tutorial de interfaces ainda n&#xE3;o cobriu como fazer uma lista de nomes. Voc&#xEA; pode usar uma <code>Jlist</code>. <a href="https://github.com/viniciusdenovaes/Unip222ALPOO/blob/master/Lab03.01.01_lista_nomes/src/view/implementation/jframe/Janela.java">Olhe uma das implementa&#xE7;&#xF5;es da resposta.</a></p>
+<p>Voc&#xEA; deve:</p>
 <ul>
-<li>
-<p>Lab01</p>
+<li>Implementar pelo menos duas classes de <code>View</code>, com elementos diferentes,
 <ul>
-<li><a href="alpoo_files/laboratorio/01-dep/01-dep_inj.html">lab01 - separa&#xE7;&#xE3;o de a&#xE7;&#xF5;es e eventos</a></li>
-</ul>
-</li>
-<li>
-<p>Lab02 - GUI</p>
-<ul>
-<li><a href="alpoo_files/laboratorio/02-gui/01-gui.html">lab02.01 - Action Listeners</a></li>
-<li><a href="alpoo_files/laboratorio/02-gui/02-gui.html">lab02.02 - Calculadora</a></li>
+<li>uma deve ser uma janela do <code>Swing</code>,</li>
+<li>a outra pode ser usando <code>Swing</code> ou terminal, mas deve ter elementos diferentes da implementa&#xE7;&#xE3;o anterior.</li>
 </ul>
 </li>
-<li>
-<p>Lab03 - MVC</p>
+<li>Implementar pelo menos um <code>Model</code>
 <ul>
-<li><a href="alpoo_files/laboratorio/03-mvc/01-mvc.html">lab03 - MVC</a></li>
+<li>As informa&#xE7;&#xF5;es podem ser persistentes ou n&#xE3;o.</li>
+<li>A busca recebe uma palavra chave, e pode procurar por todos os nomes que contem a palavra, ou s&#xF3; pelos nomes exatos, ou como voc&#xEA; preferir. Mas deve retornar uma lista.</li>
 </ul>
 </li>
 </ul>
-<h2 class="mume-header" id="githttpsgithubcomviniciusdenovaesunip222alpoo"><a href="https://github.com/viniciusdenovaes/Unip222ALPOO">Git</a></h2>
-
-<h2 class="mume-header" id="ementa">Ementa</h2>
+<h4 class="mume-header" id="arquivos">Arquivos:</h4>
 
 <ul>
-<li>Parte 01 - Programa&#xE7;&#xE3;o orientada a eventos: separa&#xE7;&#xE3;o de a&#xE7;&#xF5;es e eventos</li>
-<li>Parte 02 - Padr&#xF5;es de Arquitetura: MVC
+<li><a href="https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.01_lista_nomes/src/controller/Controller.java">classe Controller</a></li>
+<li><a href="https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.01_lista_nomes/src/model/Model.java">interface Model</a></li>
+<li><a href="https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.01_lista_nomes/src/view/View.java">interface View</a></li>
+</ul>
+<p><a href="https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Lab03.01.01_lista_nomes/src/">Resposta</a></p>
+<h3 class="mume-header" id="exerc%C3%ADcio-02-calcula-uma-opera%C3%A7%C3%A3o">Exerc&#xED;cio 02 - Calcula Uma Opera&#xE7;&#xE3;o</h3>
+
+<p>Neste projeto voc&#xEA; deve fazer um programa que, dados dois n&#xFA;meros inteiros, faz uma conta e mostra o resultado.</p>
+<p>O seu programa deve</p>
 <ul>
-<li>pacotes awt e Swing</li>
+<li>Receber dois n&#xFA;meros inteiros do usu&#xE1;rio.</li>
+<li>Fazer uma conta usando estes dois n&#xFA;meros.</li>
+<li>Mostrar o resultado.</li>
+</ul>
+<p>Voc&#xEA; deve:</p>
+<ul>
+<li>Implementar pelo menos duas classes de <code>View</code>, com elementos diferentes,
+<ul>
+<li>uma deve ser uma janela do <code>Swing</code>,</li>
+<li>a outra pode ser usando <code>Swing</code> ou terminal, mas deve ter elementos diferentes da implementa&#xE7;&#xE3;o anterior.</li>
 </ul>
 </li>
-<li>Parte 03 - Padr&#xF5;es de Arquitetura: DAO
+<li>Implementar pelo menos duas classes de <code>Model</code>
 <ul>
-<li>pacote JDBC</li>
+<li>A conta que o model vai fazer precisa usar os  dois n&#xFA;meros.</li>
+<li>A opera&#xE7;&#xE3;o que o model vai fazer n&#xE3;o precisa ficar clara para o usu&#xE1;rio.</li>
 </ul>
 </li>
 </ul>
+<h4 class="mume-header" id="arquivos-1">Arquivos:</h4>
+
+<ul>
+<li><a href="https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.02_calcular/src/controller/Controller.java">classe Controller</a></li>
+<li><a href="https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.02_calcular/src/model/Model.java">interface Model</a></li>
+<li><a href="https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.02_calcular/src/view/View.java">interface View</a></li>
+</ul>
+<p><a href="https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Lab03.01.02_calcular/src/">Resposta</a></p>
+<h3 class="mume-header" id="exerc%C3%ADcio-03-calculadora">Exerc&#xED;cio 03 - Calculadora</h3>
+
+<p>Neste projeto voc&#xEA; deve fazer uma calculadora que faz uma opera&#xE7;&#xE3;o apenas, escolhida pelo usu&#xE1;rio, entre as opera&#xE7;&#xF5;es de soma (<code>+</code>), subtra&#xE7;&#xE3;o (<code>-</code>), multiplica&#xE7;&#xE3;o (<code>*</code>) e divis&#xE3;o (<code>/</code>).</p>
+<p>O seu programa deve</p>
+<ul>
+<li>Receber dois n&#xFA;meros inteiros e uma das 4 opera&#xE7;&#xF5;es do usu&#xE1;rio.</li>
+<li>Fazer a conta definida pela opera&#xE7;&#xE3;o usando estes dois n&#xFA;meros na ordem definida pelo usu&#xE1;rio.</li>
+<li>Mostrar o resultado.</li>
+</ul>
+<p>Voc&#xEA; deve:</p>
+<ul>
+<li>Implementar pelo menos duas classes de <code>View</code>, com elementos diferentes,
+<ul>
+<li>uma deve ser uma janela do <code>Swing</code>,</li>
+<li>a outra pode ser usando <code>Swing</code> ou terminal, mas deve ter elementos diferentes da implementa&#xE7;&#xE3;o anterior.</li>
+</ul>
+</li>
+<li>Implementar uma classe de <code>Model</code> que fa&#xE7;a a opera&#xE7;&#xE3;o.</li>
+</ul>
+<p><strong>OBS</strong>: este projeto tamb&#xE9;m usa objetos representando entidades: o enumerate de <code>Operacao</code>, representando as 4 opera&#xE7;&#xF5;es poss&#xED;veis, cada elemento deste enumerate j&#xE1; est&#xE1; com o s&#xED;mbolo associado a ele, e tamb&#xE9;m a opera&#xE7;&#xE3;o.</p>
+<h4 class="mume-header" id="arquivos-2">Arquivos:</h4>
+
+<ul>
+<li><a href="https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.03_calculadora/src/controller/Controller.java">classe Controller</a></li>
+<li><a href="https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.03_calculadora/src/model/Model.java">interface Model</a></li>
+<li><a href="https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.03_calculadora/src/view/View.java">interface View</a></li>
+<li>entidades:
+<ul>
+<li><a href="https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.03_calculadora/src/entities/Operacao.java">Operacao</a></li>
+</ul>
+</li>
+</ul>
+<p><a href="https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Lab03.01.03_calculadora/src/">Resposta</a></p>
+<h3 class="mume-header" id="exerc%C3%ADcio-04-jogo-adivinha-n%C3%BAmero">Exerc&#xED;cio 04 - Jogo Adivinha N&#xFA;mero</h3>
+
+<p>Neste projeto voc&#xEA; deve fazer um jogo em que o computador escolhe um n&#xFA;mero de 0 a 100 e o usu&#xE1;rio tenta adivinhar. Em cada tentativa o usu&#xE1;rio deve ser informado se o n&#xFA;mero tentado &#xE9; <strong>maior</strong>, <strong>menor</strong> ou <strong>igual</strong> ao n&#xFA;mero escolhido pelo programa. Caso seja <strong>igual</strong>, o programa deve parar e informar quantas tentativas foram feitas.</p>
+<p>O seu programa deve</p>
+<ul>
+<li>Escolher um n&#xFA;mero.</li>
+<li>Receber um n&#xFA;mero do usu&#xE1;rio.</li>
+<li>Informar se o n&#xFA;mero recebido &#xE9; maior, menor ou igual ao n&#xFA;mero escolhido pelo programa.
+<ul>
+<li>Caso seja igual, o programa deve parar e exibir quantas tentativas foram feitas pelo usu&#xE1;rio.</li>
+</ul>
+</li>
+</ul>
+<p>Voc&#xEA; deve:</p>
+<ul>
+<li>Implementar pelo menos duas classes de <code>View</code>, com elementos diferentes,
+<ul>
+<li>uma deve ser uma janela do <code>Swing</code>,</li>
+<li>a outra pode ser usando <code>Swing</code> ou terminal, mas deve ter elementos diferentes da implementa&#xE7;&#xE3;o anterior.</li>
+</ul>
+</li>
+<li>Implementar pelo menos uma classe de <code>Model</code> que escolha um n&#xFA;mero no in&#xED;cio, conte as tentativas, e diga o resultado da tentativa do usu&#xE1;rio.</li>
+</ul>
+<p><strong>OBS</strong>: este projeto tamb&#xE9;m usa objetos representando entidades: o enumerate de <code>Resultado</code>, que pode ser <code>MAIOR</code>, <code>MENOR</code> ou <code>IGUAL</code>.</p>
+<h4 class="mume-header" id="arquivos-3">Arquivos:</h4>
+
+<ul>
+<li><a href="https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.04_jogo_adivinha/src/controller/Controller.java">classe Controller</a></li>
+<li><a href="https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.04_jogo_adivinha/src/model/Model.java">interface Model</a></li>
+<li><a href="https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.04_jogo_adivinha/src/view/View.java">interface View</a></li>
+<li>entidades:
+<ul>
+<li><a href="https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.04_jogo_adivinha/src/entities/Resultado.java">Resultado</a></li>
+</ul>
+</li>
+</ul>
+<p><a href="https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Lab03.01.04_jogo_adivinha/src/">Resposta</a></p>
+<p>.</p>
 
       </div>
       
