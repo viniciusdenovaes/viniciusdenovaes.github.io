@@ -53,7 +53,7 @@ Você deve:
 
 #### Arquivos:
 - [classe Controller](https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.02_calcular/src/controller/Controller.java)
-- [interface Model](https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.02_calcular/src/model/Model.java)
+- [interface Model](https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.02_calcular/src/model/Model.java)
 - [interface View](https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.02_calcular/src/view/View.java)
 
 
@@ -88,7 +88,7 @@ Você deve:
 
 #### Arquivos:
 - [classe Controller](https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.03_calculadora/src/controller/Controller.java)
-- [interface Model](https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.03_calculadora/src/model/Model.java)
+- [interface Model](https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.03_calculadora/src/model/Model.java)
 - [interface View](https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.03_calculadora/src/view/View.java)
 - entidades:
    - [Operacao](https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.03_calculadora/src/entities/Operacao.java)
@@ -122,7 +122,7 @@ Você deve:
 
 #### Arquivos:
 - [classe Controller](https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.04_jogo_adivinha/src/controller/Controller.java)
-- [interface Model](https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.04_jogo_adivinha/src/model/Model.java)
+- [interface Model](https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.04_jogo_adivinha/src/model/Model.java)
 - [interface View](https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.04_jogo_adivinha/src/view/View.java)
 - entidades:
    - [Resultado](https://raw.githubusercontent.com/viniciusdenovaes/Unip222ALPOO/master/Lab03.01.04_jogo_adivinha/src/entities/Resultado.java)
