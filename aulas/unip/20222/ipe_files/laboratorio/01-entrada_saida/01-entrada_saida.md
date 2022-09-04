@@ -172,7 +172,7 @@ Nome completo: fulano da silva
 ### Exercício 02:
 
 Faça um progama que receba o raio de um círculo e imprima a área deste círculo com **pelo menos** 3 casas decimais.
-**OBS**: a fórmula da área de um círculo é $\pi*r^2$
+**OBS**: a fórmula da área de um círculo é pi*r²
 
 #### Exemplo
 Entrada
@@ -192,7 +192,7 @@ Area de um circulo de raio 2 eh: 12.56636
 ### Exercício 03:
 
 Faça um progama que receba o raio de uma esfera e imprima o volume desta esfera com **pelo menos** 3 casas decimais.
-**OBS**: a fórmula do volume de uma esfera é $\frac{4}{3}\pi*r^3$
+**OBS**: a fórmula do volume de uma esfera é (4/3)pi*r³
 
 #### Exemplo
 Entrada
