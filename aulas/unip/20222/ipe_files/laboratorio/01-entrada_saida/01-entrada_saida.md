@@ -239,10 +239,5 @@ A area de um triangulo de base 3.0 e altura 5.0 eh: 7.5
 
 
 
-15. Write a Python program to get the volume of a sphere with radius 6.
-30. Write a Python program that will accept the base and height of a triangle and compute the area. Go to the editor
-
-
-
 
 .
