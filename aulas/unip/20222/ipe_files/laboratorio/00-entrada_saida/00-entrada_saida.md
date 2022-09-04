@@ -197,12 +197,39 @@ Faça um progama que receba o raio de uma esfera e imprima o volume desta esfera
 #### Exemplo
 Entrada
 ```
-Entre com o raio de um circulo: 2
+Entre com o raio da esfera: 2
 ```
 
 Saída
 ```
-Area de um circulo de raio 2 eh: 12.56636
+O volume da esfera de 2.0 eh: 33.510321638291124
+```
+
+[Respostas](https://github.com/viniciusdenovaes/Unip222IPE/tree/master/lab01)
+
+
+
+
+
+
+
+
+
+### Exercício 04:
+
+Faça um progama que receba a base e altura de um triângulo e calcule a sua área.
+**OBS**: a fórmula da área de um triângulo é $base*altura/2$
+
+#### Exemplo
+Entrada
+```
+Entre com a base: 3
+Entre com a altura: 5
+```
+
+Saída
+```
+A area de um triangulo de base 3.0 e altura 5.0 eh: 7.5
 ```
 
 [Respostas](https://github.com/viniciusdenovaes/Unip222IPE/tree/master/lab01)
