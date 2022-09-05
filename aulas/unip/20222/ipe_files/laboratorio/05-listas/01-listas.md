@@ -49,6 +49,34 @@ Faça um programa que receba duas listas de inteiros separados por espaço, e im
 
 Faça um programa que receba duas listas de inteiros separados por espaço, e imprima todos os números que estão na primeira mas não estão na segunda.
 
+
+
+### Exercício 08:
+
+Faça um programa que receba uma lista de números separados por espaço, e calcule a soma de todos.
+
+
+
+### Exercício 09:
+
+Faça um programa que receba uma lista de números separados por espaço, e calcule a média dos valores.
+
+
+
+### Exercício 10:
+
+Faça um programa que receba uma lista de números separados por espaço, e imprima o maior.
+
+
+
+### Exercício 11:
+
+Faça um programa que receba uma lista de números separados por espaço, e imprima o maior e o menor.
+
+
+
+
+
 [Respostas](https://github.com/viniciusdenovaes/Unip222IPE/tree/master/lab05)
 
 
