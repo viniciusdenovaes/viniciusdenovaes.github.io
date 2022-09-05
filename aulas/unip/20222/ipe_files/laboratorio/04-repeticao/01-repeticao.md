@@ -45,14 +45,16 @@ Saída
 
 ### Exercício 06:
 
-Faça um progama que receba um número inteiro e calcule a soma dos dígitos deste número.
+Faça um programa que receba um número inteiro e calcule a soma dos dígitos deste número.
 
 
 
 
 ### Exercício 07:
 
-Faça um progama que receba um número inteiro e responda se este número é *perfeito*. Um número é *perfeito* se ele é igual a soma de todos os seus divisores menor que ele mesmo. Por exemplo, o número 6 é *perfeito* por que ele é igual a soma de 1, 2 e 3. Outros números perfeitos são 28, 496 e 8128.
+Faça um programa que receba um número inteiro e responda se este número é *perfeito*.
+
+**Definição**: Um número é *perfeito* se ele é igual a soma de todos os seus divisores menores que ele mesmo. Por exemplo, o número 6 é *perfeito* por que ele é igual a soma de 1, 2 e 3. Outros números perfeitos são 28, 496 e 8128.
 
 
 
@@ -63,7 +65,7 @@ Escreva um programa que receba uma string contendo apenas 0 e 1, e responda o ta
 
 
 
-<!--[Respostas](https://github.com/viniciusdenovaes/Unip222IPE/tree/master/lab04)-->
+[Respostas](https://github.com/viniciusdenovaes/Unip222IPE/tree/master/lab04)
 
 
 
