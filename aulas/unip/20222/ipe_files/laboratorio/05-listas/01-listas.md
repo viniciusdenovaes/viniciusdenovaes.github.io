@@ -65,13 +65,20 @@ Faça um programa que receba uma lista de números separados por espaço, e calc
 
 ### Exercício 10:
 
-Faça um programa que receba uma lista de números separados por espaço, e imprima o maior.
+Faça um programa que receba uma lista de números separados por espaço, e imprima **o maior** número.
 
 
 
 ### Exercício 11:
 
-Faça um programa que receba uma lista de números separados por espaço, e imprima o maior e o menor.
+Faça um programa que receba uma lista de números separados por espaço, e imprima **o maior e o menor**.
+
+
+
+
+### Exercício 12:
+
+Faça um programa que receba uma lista de números separados por espaço, e imprima **o índice** do maior número.
 
 
 
