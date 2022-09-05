@@ -10,7 +10,7 @@ Um programa que receba uma quantidade n e imprima os n primeiro números pares.
 
 ### Exercício 02:
 
-Um programa que receba uma quantidade n e calcule a soma dos n primeiro inteiros.
+Um programa que receba uma quantidade n e calcule a soma dos n primeiro inteiros (inteiros de 1 até n, incluindo o 1 e o n).
 
 ### Exercício 03:
 
