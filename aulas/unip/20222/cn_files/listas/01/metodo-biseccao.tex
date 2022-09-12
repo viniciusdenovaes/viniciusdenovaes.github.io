@@ -1,0 +1,22 @@
+%\incmargin{1em} 
+\linesnumbered \dontprintsemicolon
+\begin{algorithm}[ht!]{
+  \footnotesize
+  \caption{MetodoBisseccao$(f,a,b,e)$\label{alg:metodo-bisseccao}}
+
+  \Entrada{Uma função $f$ definida em $[a, b]$, os valores reais $a$ e $b$, a margem de erro aceita $e$.}
+  \Saida{O valor $x$ tal que $|f(x)| \le e$.}
+  
+  $meio = (a+b)/2$\;
+  \Se{$|f(meio)| \le e$}{
+    retorne $meio$\;
+  }
+  \Se{$f(meio)\cdot f(b) < 0$}{
+    $a = meio$\;
+  }
+  \Senao{
+    $b = meio$\;
+  }
+  retorne MetodoBisseccao($(f, a, b, e)$)\;
+}
+\end{algorithm}
