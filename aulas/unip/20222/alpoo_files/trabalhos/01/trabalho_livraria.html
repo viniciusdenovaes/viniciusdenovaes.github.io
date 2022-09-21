@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>trabalho01</title>
+      <title>trabalho_livraria</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -261,98 +261,143 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="trabalho-de-lpoo-grupo-de-5-pessoas-para-o-dia-1604">Trabalho de LPOO (grupo de 5 pessoas, para o dia 16/04)</h1>
+      <h1 class="mume-header" id="trabalho-livraria">Trabalho Livraria</h1>
 
-<p>Para este trabalho voc&#xEA; deve fazer o sistema de cadastro de um hist&#xF3;rico.</p>
-<p>Neste sistema deve ser poss&#xED;vel que um usu&#xE1;rio final:</p>
+<h2 class="mume-header" id="trabalho-em-grupo-de-no-m%C3%A1ximo-5-pessoas">Trabalho em grupo de, no m&#xE1;ximo, 5 pessoas</h2>
+
+<p>Neste trabalho o grupo deve fazer um programa, usandos os padr&#xF5;es MVC e DAO, aplicados &#xE0; estrutura do projeto em java, que manipula dados de um banco de dados de uma livraria.</p>
+<p>O seu programa deve ter uma interface de usu&#xE1;rio em que seja poss&#xED;vel pesquisar, incluir, modificar e apagar livros, autores e editoras conforme as tabelas especificadas no diagrama a seguir:</p>
+<p><img src="images/BD-Livraria-diagrama.png" alt="Diagrama Livraria"></p>
 <ul>
-<li>Cadastre as mat&#xE9;rias e as notas destas mat&#xE9;ria (1pt).</li>
-<li>Listar todas as mat&#xE9;rias cadastradas (1pt).</li>
-<li>Listar mat&#xE9;rias de um ano espec&#xED;fico (1pt).</li>
-<li>Listar apenas as mat&#xE9;rias aprovadas/reprovadas (1pt).</li>
-<li>Exibir um relat&#xF3;rio que exibe
+<li>A imagem do diagrama foi produzida pelo site [<a href="https://www.quickdatabasediagrams.com">https://www.quickdatabasediagrams.com</a> <a href="http://quickdatabasediagrams.com">quickdatabasediagrams.com</a>]</li>
+</ul>
+<p>O banco de dados pode ser populado com as informa&#xE7;&#xF5;es em <a href="bd/livraria.zip">livraria.zip</a></p>
+<p>O aluno n&#xE3;o precisar&#xE1; fazer a apresenta&#xE7;&#xE3;o presencial</p>
+<p>A data de <strong>entrega</strong> ainda ser&#xE1; definida.</p>
+<h3 class="mume-header" id="instru%C3%A7%C3%B5es">Instru&#xE7;&#xF5;es</h3>
+
+<p>O programa deve ser capaz de fazer as seguintes a&#xE7;&#xF5;es no banco de dados:</p>
 <ul>
-<li>todas as mat&#xE9;rias (em qualquer ordem),</li>
-<li>a m&#xE9;dia de cada mat&#xE9;ria (1pt),</li>
-<li>o status (se foi aprovado ou n&#xE3;o) (1pt),</li>
-<li>a mat&#xE9;ria com a maior <strong>e</strong> menor m&#xE9;dia (1pt),</li>
-<li>e o &quot;coeficiente de rendimento&quot; (a m&#xE9;dia de todas as m&#xE9;dias) (1pt)</li>
+<li>Buscar
+<ul>
+<li>livros,</li>
+<li>autores,</li>
+<li>editoras,</li>
+<li>(b&#xF4;nus) mais uma busca ou <em>filtro</em> de busca, ou busca combinada &#xE0; sua escolha.</li>
+</ul>
+</li>
+<li>Alterar
+<ul>
+<li>livros,</li>
+<li>autores,</li>
+<li>editoras;</li>
+</ul>
+</li>
+<li>Incluir
+<ul>
+<li>livros,</li>
+<li>autores,</li>
+<li>editoras;</li>
+</ul>
+</li>
+<li>Excluir
+<ul>
+<li>livros,</li>
+<li>autores,</li>
+<li>editoras.</li>
 </ul>
 </li>
 </ul>
-<p>OBS: a fun&#xE7;&#xE3;o de listar pode ser a mesma do relat&#xF3;rio.</p>
-<p>As fun&#xE7;&#xF5;es podem ser demonstradas dentro de uma classe <code>Teste</code> com um <code>main</code> (Veja um exemplo de classe <code>Teste</code> no final da p&#xE1;gina). Caso voc&#xEA; n&#xE3;o fa&#xE7;a a interface com o usu&#xE1;rio final voc&#xEA; ganhar&#xE1; os pontos referentes &#xE0; cada fun&#xE7;&#xE3;o mas n&#xE3;o ganhar&#xE1; os pontos referentes &#xE0; interface com o usu&#xE1;rio final.</p>
-<p>Voc&#xEA; pode fazer uma interface com o usu&#xE1;rio final atrav&#xE9;s do terminal e/ou usando a biblioteca &quot;Swing&quot; (2pt).</p>
-<p><strong>OBS: &#xC9; altamente recomend&#xE1;vel que voc&#xEA; fa&#xE7;a o trabalho nesta ordem e garanta os pontos das partes que voc&#xEA; fez.</strong> Para cada item feito atualize o <code>Teste</code> para coontemplar este item.</p>
-<h3 class="mume-header" id="entidades">Entidades</h3>
-
-<h4 class="mume-header" id="materia"><code>Materia</code></h4>
-
-<p>A <code>Materia</code> &#xE9; uma entidade que tem</p>
+<p>Buscar: para a a&#xE7;&#xE3;o de buscar um objeto, o programa deve buscar pelos seguintes campos:</p>
 <ul>
-<li>um <code>nome</code>, o nome da mat&#xE9;ria;</li>
-<li>e um <code>ano</code>, o ano em que foi ministrada.</li>
-</ul>
-<h4 class="mume-header" id="notas"><code>Notas</code></h4>
-
-<p>Cada <code>Materia</code> possui 4 notas:</p>
+<li>Livros:
 <ul>
-<li><code>np1</code>, representa a nota da primeira prova;</li>
-<li><code>np2</code>, representa a nota da segunda prova;</li>
-<li><code>sub</code>, representa a nota da prova substitutiva;</li>
-<li><code>exame</code>, representa a nota do exame final;</li>
+<li>t&#xED;tulo,</li>
 </ul>
-<h3 class="mume-header" id="regras-de-aprova%C3%A7%C3%A3o-e-m%C3%A9dia">Regras de aprova&#xE7;&#xE3;o e m&#xE9;dia</h3>
-
-<h4 class="mume-header" id="aprova%C3%A7%C3%A3o">Aprova&#xE7;&#xE3;o</h4>
-
-<p>Para que um aluno seja aprova ele deve ter m&#xE9;dia final maior ou igual a <code>5.0</code>.</p>
-<h4 class="mume-header" id="m%C3%A9dia-final">M&#xE9;dia Final</h4>
-
-<p>Para calcular a &quot;m&#xE9;dia final&quot; devemos calcular duas m&#xE9;dias:</p>
+</li>
+<li>Autor:
 <ul>
-<li>Devesse pegar as <strong>duas maiores</strong> notas entre a <code>np1</code>, <code>np2</code>, e <code>sub</code> e calcular esta m&#xE9;dia. Se esta m&#xE9;dia for maior, ou igual, a <code>7.0</code> ent&#xE3;o est&#xE1; ser&#xE1; a &quot;m&#xE9;dia final&quot;.</li>
-<li>Caso a m&#xE9;dia anterior seja menor que <code>7.0</code>, deve-se calcular a m&#xE9;dia entre a &quot;m&#xE9;dia anterior&quot; e o exame, o resultado ser&#xE1; a &quot;m&#xE9;dia final&quot;.</li>
+<li>nome e</li>
+<li>sobrenome</li>
 </ul>
-<p><strong>OBS</strong>: este c&#xE1;lculo da m&#xE9;dia n&#xE3;o representa a mesma regra que a Unip usa.</p>
-<h3 class="mume-header" id="exemplo-de-classe-teste">Exemplo de classe <code>Teste</code></h3>
+</li>
+<li>Editora:
+<ul>
+<li>nome.</li>
+</ul>
+</li>
+</ul>
+<p>Incluir: para a a&#xE7;&#xE3;o de incluir, o seu programa deve respeitar as seguintes regras:</p>
+<ul>
+<li>
+<p>Livro, o usu&#xE1;rio deve ser capaz de fornecer:</p>
+<ul>
+<li>o nome do livro,</li>
+<li>o ISBN,</li>
+<li>o pre&#xE7;o,</li>
+<li>deve ser escolhida uma editora j&#xE1; existente,</li>
+<li>um conjunto de um ou mais autores de uma lista, em uma ordem que o usu&#xE1;rio escolher.</li>
+</ul>
+</li>
+<li>
+<p>Autor, o identificador do autor deve ser gerado automaticamente, o usu&#xE1;rio deve fornecer:</p>
+<ul>
+<li>nome do autor,</li>
+<li>sobrenome do autor.</li>
+</ul>
+</li>
+<li>
+<p>Editora, o identificador da editora deve ser gerado automaticamente, o usu&#xE1;rio deve fornecer:</p>
+<ul>
+<li>o nome da editora,</li>
+<li>o site da editora.</li>
+</ul>
+</li>
+</ul>
+<p>Excluir: para a a&#xE7;&#xE3;o de excluir, o seu programa deve respeitar as seguintes regras:</p>
+<ul>
+<li>
+<p>Livro: um livro pode ser exclu&#xED;do livremente,</p>
+<ul>
+<li>um cuidado deve ser tomado: excluir as entradas da tabela de rela&#xE7;&#xE3;o LivrosxAutores em que aquele livro aparece.</li>
+</ul>
+</li>
+<li>
+<p>Autor, podem existir livros que dependam deste autor, ent&#xE3;o voc&#xEA; ter&#xE1; que escolher:</p>
+<ul>
+<li>caso escolha apagar, os livros dever&#xE3;o ser apagados</li>
+<li>caso escolha n&#xE3;o apagar, nada deve acontecer</li>
+<li>(b&#xF4;nus) abrir uma janela de di&#xE1;logo com o usu&#xE1;rio para que ele escolha se deve apagar os livros ou n&#xE3;o</li>
+</ul>
+</li>
+<li>
+<p>Editora, podem existir livros que dependam da editora, ent&#xE3;o voc&#xEA; ter&#xE1; que escolher:</p>
+<ul>
+<li>caso escolha apagar, os livros dever&#xE3;o ser apagados</li>
+<li>caso escolha n&#xE3;o apagar, nada deve acontecer</li>
+<li>(b&#xF4;nus) abrir uma janela de di&#xE1;logo com o usu&#xE1;rio para que ele escolha se deve apagar os livros ou n&#xE3;o</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="avalia%C3%A7%C3%A3o">Avalia&#xE7;&#xE3;o</h3>
 
-<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Teste</span> <span class="token punctuation">{</span>
+<p>O trabalho dever&#xE1; usar os padr&#xF5;es MVC e DAO quanto &#xE0; separa&#xE7;&#xE3;o das responsabilidades do programa.</p>
+<p>Cada componente do padr&#xE3;o dever&#xE1; estar em uma classe diferente ou (melhor) em um pacote diferente.</p>
+<p>OBS: N&#xE3;o ser&#xE1; avaliado o &quot;flow&quot; (dire&#xE7;&#xE3;o e percurso da comunica&#xE7;&#xE3;o) entre os componentes, mas sim a divis&#xE3;o de responsabilidades.</p>
+<ul>
+<li>Pontua&#xE7;&#xE3;o:
+<ul>
+<li>Estrutura do programa: uso do MVC e DAO: 30%</li>
+<li>acesso bem sucedido ao banco de dados proposto e manipula&#xE7;&#xE3;o dos seus dados: 20%</li>
+<li>interface gr&#xE1;fica completa: 20%</li>
+<li>uso adequado do &quot;PreparedStatement&quot;: 20%</li>
+<li>controle de erros das entradas do usu&#xE1;rio: 10%</li>
+<li>(b&#xF4;nus) mais tipos ou funcionalidades de busca, filtros e busca combinada na busca por livros, autores, ou editora: 10%</li>
+<li>(b&#xF4;nus) di&#xE1;logo com o usu&#xE1;rio ao excluir autor e editora, para saber se deve ou n&#xE3;o excluir os livros associados: 10%</li>
+</ul>
+</li>
+</ul>
 
-	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-
-		<span class="token class-name">CadastroAbstract</span> cadastro <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Cadastro</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-		cadastro<span class="token punctuation">.</span><span class="token function">addRendimento</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Rendimento</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Materia</span><span class="token punctuation">(</span><span class="token string">&quot;APOO&quot;</span><span class="token punctuation">,</span> <span class="token number">2020</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token keyword">new</span> <span class="token class-name">Notas</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		cadastro<span class="token punctuation">.</span><span class="token function">addRendimento</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Rendimento</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Materia</span><span class="token punctuation">(</span><span class="token string">&quot;BPOO&quot;</span><span class="token punctuation">,</span> <span class="token number">2020</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token keyword">new</span> <span class="token class-name">Notas</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		cadastro<span class="token punctuation">.</span><span class="token function">addRendimento</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Rendimento</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Materia</span><span class="token punctuation">(</span><span class="token string">&quot;CPOO&quot;</span><span class="token punctuation">,</span> <span class="token number">2021</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token keyword">new</span> <span class="token class-name">Notas</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		cadastro<span class="token punctuation">.</span><span class="token function">addRendimento</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Rendimento</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Materia</span><span class="token punctuation">(</span><span class="token string">&quot;DPOO&quot;</span><span class="token punctuation">,</span> <span class="token number">2021</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token keyword">new</span> <span class="token class-name">Notas</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-		cadastro<span class="token punctuation">.</span><span class="token function">fazRelatorio</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-		cadastro<span class="token punctuation">.</span><span class="token function">imprimeMateriasDoAno</span><span class="token punctuation">(</span><span class="token number">2019</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		cadastro<span class="token punctuation">.</span><span class="token function">imprimeMateriasDoAno</span><span class="token punctuation">(</span><span class="token number">2020</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		cadastro<span class="token punctuation">.</span><span class="token function">imprimeMateriasDoAno</span><span class="token punctuation">(</span><span class="token number">2021</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-		cadastro<span class="token punctuation">.</span><span class="token function">imprimeMateriasStatus</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		cadastro<span class="token punctuation">.</span><span class="token function">imprimeMateriasStatus</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-	<span class="token punctuation">}</span>
-
-<span class="token punctuation">}</span>
-</pre><p>Esta classe abstrata serve apenas para servir de suporte ao exemplo de <code>Teste</code>, <strong>voc&#xEA; n&#xE3;o precisa usar</strong>.</p>
-<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">CadastroAbstract</span> <span class="token punctuation">{</span>
-
-	<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">addRendimento</span><span class="token punctuation">(</span><span class="token class-name">Rendimento</span> rendimento<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-	<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">fazRelatorio</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-	<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">imprimeMateriasDoAno</span><span class="token punctuation">(</span><span class="token keyword">int</span> ano<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-	<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">imprimeMateriasStatus</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> isAprovado<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token punctuation">}</span>
-</pre>
       </div>
       
       
