@@ -10,8 +10,6 @@
 
 
 
-
-
 ## Laboratórios
 
 - Lab01

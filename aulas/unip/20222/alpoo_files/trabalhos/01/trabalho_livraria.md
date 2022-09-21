@@ -1,8 +1,10 @@
 # Trabalho Livraria
 
-## Trabalho em grupo de, no máximo, 5 pessoas
+## Trabalho em grupo de, no máximo, ? pessoas
 
-Neste trabalho o grupo deve fazer um programa, usandos os padrões MVC e DAO, aplicados à estrutura do projeto em java, que manipula dados de um banco de dados de uma livraria.
+Neste trabalho você deve fazer um programa que manipula dados de uma livraria.
+
+A estrutura do seu projeto deve estar nos padrões MVC e DAO.
 
 O seu programa deve ter uma interface de usuário em que seja possível pesquisar, incluir, modificar e apagar livros, autores e editoras conforme as tabelas especificadas no diagrama a seguir:
 
@@ -10,11 +12,11 @@ O seu programa deve ter uma interface de usuário em que seja possível pesquisa
 
 - A imagem do diagrama foi produzida pelo site [https://www.quickdatabasediagrams.com quickdatabasediagrams.com]
 
-O banco de dados pode ser populado com as informações em [livraria.zip](bd/livraria.zip)
+O banco de dados deve ser populado com as informações em [livraria.zip](bd/livraria.zip)
 
-O aluno não precisará fazer a apresentação presencial
+O trabalho deve ser apresentado em aula de laboratório, onde o código fonte será avaliado.
 
-A data de **entrega** ainda será definida.
+A data da **apresentação** ainda será definida.
 
 ### Instruções
 
