@@ -275,14 +275,14 @@ pre[data-line] .line-highlight[data-end]:after {
 <h2 class="mume-header" id="banco-de-dados">Banco de Dados</h2>
 
 <p>Para acessar um banco de dados, primeiro precisamos ter acesso &#xE0; um banco de dados.</p>
-<p>Nesta aula usaremos, como exemplo o mysql com um banco de dados chamado <code>patos</code> com somente uma tabela chamada <code>Patos</code> apenas com um id e um nome:</p>
-<pre data-role="codeBlock" data-info class="language-"><code>mysql&gt; describe Patos;
-+-------+-------------+------+-----+---------+-------+
-| Field | Type        | Null | Key | Default | Extra |
-+-------+-------------+------+-----+---------+-------+
-| id    | varchar(30) | NO   |     | NULL    |       |
-| nome  | varchar(30) | NO   |     | NULL    |       |
-+-------+-------------+------+-----+---------+-------+
+<p>Nesta aula usaremos, como exemplo o mysql com um banco de dados chamado <code>veterinario22</code> com somente uma tabela chamada <code>Gatos</code> apenas com um id e um nome:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>mysql&gt; describe Gatos;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| id    | int          | YES  |     | NULL    |       |
+| nome  | varchar(255) | YES  |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
 2 rows in set (0,00 sec)
 </code></pre><h2 class="mume-header" id="driver">Driver</h2>
 
@@ -292,9 +292,118 @@ pre[data-line] .line-highlight[data-end]:after {
 <p>No Eclipse, por exemplo, clique com o bot&#xE3;o da direita no projeto &gt; properties &gt; java build path &gt; Libraries &gt; classpath &gt; add external jar; escolha o arquivo baixado.</p>
 <h2 class="mume-header" id="conex%C3%A3o">Conex&#xE3;o</h2>
 
-<p>Para fazer a conex&#xE3;o usaremos a interface <code>Connection</code> de <code>java.sql.Connection</code>.</p>
-<p>import java.sql.Connection;<br>
-import java.sql.DriverManager;</p>
+<p>Para fazer a conex&#xE3;o usaremos a interface <code>Connection</code> de <code>java.sql.Connection</code>. Criaremos um objeto filho de <code>Connection</code> atrav&#xE9;s do m&#xE9;todo est&#xE1;tico <code>DriverManager</code> do <code>java.sql.DriverManager</code>:</p>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword keyword-static">static</span> <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> USER <span class="token operator">=</span> <span class="token string">&quot;user&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> PASS <span class="token operator">=</span> <span class="token string">&quot;123456&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> DATABASE <span class="token operator">=</span> <span class="token string">&quot;veterinario22&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> URL <span class="token operator">=</span> <span class="token string">&quot;jdbc:mysql://localhost:3306/&quot;</span> <span class="token operator">+</span> DATABASE<span class="token punctuation">;</span>
+
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">testaConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token keyword keyword-try">try</span> <span class="token punctuation">(</span><span class="token class-name">Connection</span> c <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>URL<span class="token punctuation">,</span> USER<span class="token punctuation">,</span> PASS<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Conexao estabelecida&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token keyword keyword-catch">catch</span><span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</pre><p>onde</p>
+<ul>
+<li><code>USER</code> &#xE9; o usu&#xE1;rio</li>
+<li><code>PASS</code> &#xE9; o password do banco de dados</li>
+<li><code>DATABASE</code> &#xE9; o banco de dados que ser&#xE1; usado</li>
+<li><code>URL</code> &#xE9; o endere&#xE7;o do banco de dados, no caso o banco de dados est&#xE1; instalado em meu computador, ent&#xE3;o o endere&#xE7;o, por padr&#xE3;o, ser&#xE1; <code>&quot;jdbc:mysql://localhost:3306/&quot;</code>, concatenado com o nome do banco de dados.</li>
+</ul>
+<h2 class="mume-header" id="updates">Updates</h2>
+
+<p>Para atualizar o banco de dados vamos usar o <code>PreparedStatement</code> e adicionar um <code>Gato</code> no banco de dados:</p>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token annotation punctuation">@Override</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">addGato</span><span class="token punctuation">(</span><span class="token class-name">Gato</span> gato<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> query <span class="token operator">=</span> <span class="token string">&quot;INSERT INTO Gatos VALUES (?, ?)&quot;</span><span class="token punctuation">;</span>
+
+  <span class="token keyword keyword-try">try</span> <span class="token punctuation">(</span><span class="token class-name">Connection</span> c <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>URL<span class="token punctuation">,</span> USER<span class="token punctuation">,</span> PASS<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token class-name">PreparedStatement</span> pstm <span class="token operator">=</span> c<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    pstm<span class="token punctuation">.</span><span class="token function">setInt</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> gato<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    pstm<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> gato<span class="token punctuation">.</span><span class="token function">getNome</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-int">int</span> result <span class="token operator">=</span> pstm<span class="token punctuation">.</span><span class="token function">executeUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Resultado de adicionar gato &quot;</span> <span class="token operator">+</span> gato <span class="token operator">+</span> <span class="token string">&quot;: &quot;</span> <span class="token operator">+</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+
+  <span class="token punctuation">}</span><span class="token keyword keyword-catch">catch</span><span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><p>Os passos funcionam assim:</p>
+<ol>
+<li>Recebemos um objeto <code>Gato</code> de entrada, lembrando que <code>Gato</code> tem os campos <code>id (int)</code> e <code>nome (String)</code>.</li>
+<li>Criamos o comando para inserir uma entrada no banco de dados, mas deixando um caracter especial <code>?</code> onde queremos inserir as palavras de entrada: <code>&quot;INSERT INTO Gatos VALUES (?, ?)&quot;</code></li>
+<li>Estabelecemos uma conex&#xE3;o</li>
+<li>Criamos um <code>PreparedStatement</code> &#xE0; partir da conex&#xE3;o. Este objeto recebe como par&#xE2;metro o comando para inserir uma entrada no banco de dados.</li>
+<li>Agora precisamos preencher os characteres <code>?</code> que deixamos no comando, pedimos para o <code>PreparedStatement</code> fazer isso: com <code>pstm.setInt(1, gato.getId())</code> pedimos para colocar um <code>int</code> no primeiro <code>?</code> e o valor deste inteiro ser&#xE1; <code>gato.getId()</code>; com <code>pstm.setString(2, gato.getNome());</code> pedimos para inserir uma <code>String</code> no segundo <code>?</code> e o valor desta <code>String</code> ser&#xE1; <code>gato.getNome()</code>.</li>
+<li>Finalmente, pedimos para o <code>PreparedStatement</code> executar a atualiza&#xE7;&#xE3;o programada com <code>pstm.executeUpdate();</code>.</li>
+</ol>
+<h2 class="mume-header" id="buscas">Buscas</h2>
+
+<p>Para fazer uma busca em um banco de dados precisamos usar o <code>ResultSet</code> para acessar o resultado da busca. No exemplo &#xE0; seguir vamos fazer recuperar todos os gatos na tabela.</p>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token annotation punctuation">@Override</span>
+<span class="token keyword keyword-public">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Gato</span><span class="token punctuation">&gt;</span></span> <span class="token function">getTodosGatos</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Gato</span><span class="token punctuation">&gt;</span></span> gatos <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> query <span class="token operator">=</span> <span class="token string">&quot;SELECT * FROM Gatos;&quot;</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-try">try</span> <span class="token punctuation">(</span><span class="token class-name">Connection</span> c <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>URL<span class="token punctuation">,</span> USER<span class="token punctuation">,</span> PASS<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token class-name">Statement</span> stm <span class="token operator">=</span> c<span class="token punctuation">.</span><span class="token function">createStatement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">ResultSet</span> rs <span class="token operator">=</span> stm<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-while">while</span><span class="token punctuation">(</span>rs<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword keyword-int">int</span> id <span class="token operator">=</span> rs<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span><span class="token string">&quot;id&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token class-name">String</span> nome <span class="token operator">=</span> rs<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">&quot;nome&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token class-name">Gato</span> gato <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Gato</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> nome<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      gatos<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>gato<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+
+  <span class="token punctuation">}</span><span class="token keyword keyword-catch">catch</span><span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword keyword-return">return</span> gatos<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>Os passos funcionam assim:</p>
+<ol>
+<li>Criamos uma lista de Gatos para poder guardar e retornar o resultado.</li>
+<li>Criamos o comando para fazer a busca de todos os gatos: <code>&quot;SELECT * FROM Gatos;&quot;</code> (desta vez n&#xE3;o precisamos colocar o <code>?</code>)</li>
+<li>Estabelecemos uma conex&#xE3;o</li>
+<li>Criamos um <code>Statement</code> &#xE0; partir da conex&#xE3;o. Este objeto far&#xE1; a busca. Perceba que n&#xE3;o precisamos criar um <code>PreparedStatement</code>, pois n&#xE3;o temos o caracter especial <code>?</code>.</li>
+<li>Agora pedimos para o <code>Statement</code> realizar a busca e criamos um <code>ResultSet</code> para receber o resultado da busca.</li>
+<li>Para iterar pelo <code>ResultSet</code> precisamos usar o m&#xE9;todo <code>next()</code>, este m&#xE9;todo far&#xE1; o ponteiro do <code>ResultSet</code> ir para a pr&#xF3;xima entrada do resultado, retornando <code>true</code> enquanto tiver uma pr&#xF3;xima entrada.</li>
+<li>Em cada entrada de <code>ResultSet</code> podemos pegar o valor desta entrada pelo nome da coluna, especificando qual &#xE9; o tipo de dado que ir&#xE1; retorna: <code>rs.getInt(&quot;id&quot;);</code> pede para pegar a coluna <code>id</code> como um inteiro; <code>rs.getString(&quot;nome&quot;);</code> pede para pegar a coluna <code>nome</code> como uma <code>String</code>.</li>
+<li>Com um nome e um id, podemos criar um Gato e adicionar &#xE0; lista.</li>
+</ol>
+<h2 class="mume-header" id="conclus%C3%A3o">Conclus&#xE3;o</h2>
+
+<p>Usando estes componentes podemos fazer qualquer comando simples em um banco de dados. S&#xF3; lembre que:</p>
+<ul>
+<li>Para fazer comandos que dependam da entrada do usu&#xE1;rio use o <code>PreparedStatement</code></li>
+<li>Se n&#xE3;o depender da entrada do usu&#xE1;rio voc&#xEA; poder&#xE1; usar o <code>Statement</code></li>
+<li>Se um comando no banco exigir uma resposta, como a busca por exemplo, voc&#xEA; precisa usar o m&#xE9;todo <code>executeQuery</code> e receber um <code>ResultSet</code></li>
+<li>Caso seja uma atualiza&#xE7;&#xE3;o no banco de dados, use o m&#xE9;todo <code>executeUpdate</code></li>
+</ul>
+<h2 class="mume-header" id="a-stylecolorredimportantea"><em><a style="color:red;" href>IMPORTANTE!!!</a></em></h2>
+
+<p>Raramente iremos precisar fazer uma atualiza&#xE7;&#xE3;o ou uma busca usando argumentos pr&#xE9;-programados.<br>
+Normalmente &#xE9; o usu&#xE1;rio final quem deve fornecer os argumentos para usar na nossa busca ou atualiza&#xE7;&#xE3;o.</p>
+<p>Neste caso <strong>nunca</strong> devemos concatenar uma String de um comando com uma String fornecida pelo usu&#xE1;rio.<br>
+Sob o risco do sistema sofrer um <a href="https://en.wikipedia.org/wiki/SQL_injection"><em>injection atack</em></a>.</p>
+<p>O recomend&#xE1;vel para esta situa&#xE7;&#xE3;o &#xE9; usar a classe <code>PreparedStatement</code></p>
 <p>.</p>
 
       </div>
