@@ -7,7 +7,10 @@ Um dataset (conjunto de dados) estará disponível nesta página. Este dataset d
 Você deve avaliar o(s) seu(s) método(s) de reconhecimento segundo as métricas de _**acurácia média**_, _**precision**_, _**recall**_ e _**f1**_.
 
 
-## DataSet
+## DataSet[^s]
+
+[^s]: O dataset foi coletado no site https://www.nist.gov/srd/nist-special-database-19 
+
 
 O conjunto de dados serão imagens de letras escritas a mão. Todas as letras são vogais maiúsculas ou minúsculas.
 
