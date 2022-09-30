@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>cn</title>
+      <title>trabalho01</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -261,21 +261,62 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="c%C3%A1lculo-num%C3%A9rico">C&#xE1;lculo Num&#xE9;rico</h1>
+      <h1 class="mume-header" id="trabalho-01-de-cn-resolu%C3%A7%C3%A3o-de-sistemas-lineares">Trabalho 01 de CN: Resolu&#xE7;&#xE3;o de Sistemas Lineares</h1>
 
-<h3 class="mume-header" id="listas">Listas</h3>
+<p>Um sistema linear &#xE9; uma equa&#xE7;&#xE3;o dada por<br>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>x</mi><mo>=</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">Ax = b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span></span><br>
+onde</p>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span> &#xE9; uma matriz de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span> linhas e <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> colunas</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> &#xE9; o vetor de vari&#xE1;veis, de tamanho <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span></li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span> &#xE9; um vetor constante de tamanho <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span>.</li>
+</ul>
+<p>Ent&#xE3;o voc&#xEA; ter&#xE1; um sistema com <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span> equa&#xE7;&#xF5;es lineares e <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> vari&#xE1;veis do tipo</p>
+<p><img src="images/linear_system.png" alt="Sistema Linear"></p>
+<p>Para este trabalho voc&#xEA; deve receber um sistema linear (definido por <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span> e <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span>) e retornar uma solu&#xE7;&#xE3;o deste sistema.</p>
+<p>Voc&#xEA; pode assumir que todo sistema de entrada ter&#xE1; solu&#xE7;&#xE3;o &#xFA;nica.</p>
+<p>Mais que isso, voc&#xEA; pode assumir que a quantidade de equa&#xE7;&#xF5;es &#xE9; <strong>igual</strong> &#xE0; quantidade de vari&#xE1;veis.</p>
+<h3 class="mume-header" id="entradas">Entradas</h3>
+
+<p>A entrada estar&#xE1; em formato <code>csv</code> e ser&#xE1; dado na forma</p>
+<pre data-role="codeBlock" data-info class="language-"><code>a11, a12, ..., a1n, b1
+a21, a22, ..., a2n, b1
+.
+.
+.
+am1, am2, ..., amn, bm
+</code></pre><p>Por exemplo, o sistema linear</p>
+<p><img src="images/exemplo01.png" alt="Exemplo 01"></p>
+<p>Ser&#xE1; dado pelo seguinte <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mi>s</mi><mi>v</mi></mrow><annotation encoding="application/x-tex">csv</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span></span>:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>2,1,3
+1,-3,-2
+</code></pre><p>O sistema linear</p>
+<p><img src="images/exemplo02.png" alt="Exemplo 02"></p>
+<p>Ser&#xE1; dado pelo seguinte <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mi>s</mi><mi>v</mi></mrow><annotation encoding="application/x-tex">csv</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span></span>:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>1,1,1,6
+1,-1,1,4
+1,1,2,8
+</code></pre><h3 class="mume-header" id="passos">Passos</h3>
+
+<p>O seu programa deve <strong>obrigatoriamente</strong> e <strong>explicitamente</strong> seguir os seguintes passos, ter as seguintes fun&#xE7;&#xF5;es/m&#xE9;todos, e usar as seguintes fun&#xE7;&#xF5;es:</p>
+<ul>
+<li>
+<p>Ler uma entrada em csv no formato especificado pelo trabalho.</p>
+</li>
+<li>
+<p>imprimir a solu&#xE7;&#xE3;o (os valores de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span>) na tela</p>
+</li>
+</ul>
+<h3 class="mume-header" id="regras">Regras</h3>
 
 <ul>
-<li><a href="cn_files/listas/01/lista01CN.pdf">Lista 01</a></li>
+<li>
+<p>Voc&#xEA; pode fazer em qualquer uma das seguintes linguagens: python, java, C++, C ou C#.</p>
+</li>
+<li>
+<p>Voc&#xEA; pode usar <strong>qualquer biblioteca</strong> interna ou externa &#xE0; linguagem que voc&#xEA; utilizar&#xE1;. Porem, deve <strong>obrigatoriamente</strong> seguir os passos listados anteriormente.</p>
+</li>
 </ul>
-<h3 class="mume-header" id="trabalhos">Trabalhos</h3>
-
-<ul>
-<li><a href="cn_files/trabalho/01/trabalho01.html">Trabalho 01</a></li>
-<li><a href="cn_files/trabalho/02/trabalho02.html">Trabalho 02</a></li>
-</ul>
-<h3 class="mume-header" id="githttpsgithubcomviniciusdenovaesunip222cn"><a href="https://github.com/viniciusdenovaes/Unip222CN">Git</a></h3>
-
 
       </div>
       
