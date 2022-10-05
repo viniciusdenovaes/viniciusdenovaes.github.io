@@ -1,4 +1,5 @@
-# JDBC
+# JDBC[^exemplos]
+[^exemplos]: Os exemplos desta aula podem ser vistos no [github](https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Aula04JDBC/src)
 
 Nesta aula vamos aprender a fazer um programa em Java que faça uma conexão com um banco de dados.
 
