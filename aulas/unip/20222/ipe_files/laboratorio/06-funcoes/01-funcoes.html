@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>ipe</title>
+      <title>01-funcoes</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -261,22 +261,80 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="ipe-introdu%C3%A7%C3%A3o-%C3%A0-programa%C3%A7%C3%A3o-estruturada">IPE (Introdu&#xE7;&#xE3;o &#xC0; Programa&#xE7;&#xE3;o Estruturada)</h1>
+      <h1 class="mume-header" id="fun%C3%A7%C3%B5es">Fun&#xE7;&#xF5;es</h1>
 
-<h2 class="mume-header" id="laborat%C3%B3rios">Laborat&#xF3;rios</h2>
+<p>Uma fun&#xE7;&#xE3;o &#xE9; uma estrutura que recebe uma cole&#xE7;&#xE3;o de par&#xE2;metros de <strong>entrada</strong> e retorna um resultado na <strong>sa&#xED;da</strong>.</p>
+<p>A sintaxe para uma fun&#xE7;&#xE3;o em Python &#xE9;</p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword keyword-def">def</span> <span class="token function">nome_da_funcao</span><span class="token punctuation">(</span>parametro1<span class="token punctuation">,</span> parametro2<span class="token punctuation">,</span> parametro3<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  faz coisas
+    <span class="token punctuation">.</span>
+    <span class="token punctuation">.</span>
+    <span class="token punctuation">.</span>
+  faz coisas
+  <span class="token keyword keyword-return">return</span> resultado
+</pre><p>Para usar a fun&#xE7;&#xE3;o definida acima deve-se usar o nome da fun&#xE7;&#xE3;o, passar os valores dos par&#xE2;metros e guardar o resultado retornado</p>
+<pre data-role="codeBlock" data-info="python" class="language-python">resultado <span class="token operator">=</span> nome_da_funcao<span class="token punctuation">(</span>p1<span class="token punctuation">,</span> p2<span class="token punctuation">,</span> p3<span class="token punctuation">)</span>
+</pre><h2 class="mume-header" id="exemplos">Exemplos</h2>
 
-<h4 class="mume-header" id="primeira-prova">Primeira Prova</h4>
+<h3 class="mume-header" id="exemplo-1">Exemplo 1</h3>
 
-<ul>
-<li><a href="ipe_files/laboratorio/01-entrada_saida/01-entrada_saida.html">lab01 - Entrada e Sa&#xED;da</a></li>
-<li><a href="ipe_files/laboratorio/02-operacoes/01-operacoes.html">lab02 - Opera&#xE7;&#xF5;es Matem&#xE1;ticas</a></li>
-<li><a href="ipe_files/laboratorio/03-condicional/01-condicional.html">lab03 - Comandos Condicionais</a></li>
-<li><a href="ipe_files/laboratorio/04-repeticao/01-repeticao.html">lab04 - Comandos De Repeti&#xE7;&#xE3;o</a></li>
-<li><a href="ipe_files/laboratorio/05-listas/01-listas.html">lab05 - Listas</a></li>
-<li><a href="ipe_files/laboratorio/06-funcoes/01-funcoes.html">lab06 - Fun&#xE7;&#xF5;es</a></li>
-</ul>
-<h2 class="mume-header" id="respostas-no-githttpsgithubcomviniciusdenovaesunip222ipe"><a href="https://github.com/viniciusdenovaes/Unip222IPE">Respostas no Git</a></h2>
+<p>Defini&#xE7;&#xE3;o de uma fun&#xE7;&#xE3;o que calcula a multiplica&#xE7;&#xE3;o de dois n&#xFA;meros:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword keyword-def">def</span> <span class="token function">multiplica</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>
+  resultado <span class="token operator">=</span> a<span class="token operator">*</span>b
+  <span class="token keyword keyword-return">return</span> resultado
+</pre><p>O uso da fun&#xE7;&#xE3;o pode ser</p>
+<pre data-role="codeBlock" data-info="python" class="language-python">a <span class="token operator">=</span> <span class="token number">2</span>
+b <span class="token operator">=</span> <span class="token number">3</span>
+resultado <span class="token operator">=</span> multiplica<span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&apos;O resultado de </span><span class="token interpolation"><span class="token punctuation">{</span>a<span class="token punctuation">}</span></span><span class="token string"> multiplicado por </span><span class="token interpolation"><span class="token punctuation">{</span>b<span class="token punctuation">}</span></span><span class="token string"> eh </span><span class="token interpolation"><span class="token punctuation">{</span>resultado<span class="token punctuation">}</span></span><span class="token string">&apos;</span></span><span class="token punctuation">)</span>
+</pre><h3 class="mume-header" id="exemplo-2">Exemplo 2</h3>
 
+<p>Uma fun&#xE7;&#xE3;o n&#xE3;o necessariamente precisa retornar um valor</p>
+<p>Defini&#xE7;&#xE3;o de uma fun&#xE7;&#xE3;o que imprime se um n&#xFA;mero &#xE9; positivo ou n&#xE3;o</p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword keyword-def">def</span> <span class="token function">imprime_positivo</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+  <span class="token keyword keyword-if">if</span> a <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&apos;O numero </span><span class="token interpolation"><span class="token punctuation">{</span>a<span class="token punctuation">}</span></span><span class="token string"> eh positivo&apos;</span></span><span class="token punctuation">)</span>
+  <span class="token keyword keyword-else">else</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&apos;O numero </span><span class="token interpolation"><span class="token punctuation">{</span>a<span class="token punctuation">}</span></span><span class="token string"> nao eh positivo&apos;</span></span><span class="token punctuation">)</span>
+</pre><p>O uso da fun&#xE7;&#xE3;o pode ser</p>
+<pre data-role="codeBlock" data-info="python" class="language-python">imprime_positivo<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+</pre><h2 class="mume-header" id="exerc%C3%ADcios">Exerc&#xED;cios</h2>
+
+<h3 class="mume-header" id="exerc%C3%ADcio-01">Exerc&#xED;cio 01:</h3>
+
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba dois n&#xFA;meros e retorne a soma destes dois n&#xFA;meros.</p>
+<h3 class="mume-header" id="exerc%C3%ADcio-02">Exerc&#xED;cio 02:</h3>
+
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba uma lista de n&#xFA;meros e retorne o somat&#xF3;rio destes n&#xFA;meros.</p>
+<h3 class="mume-header" id="exerc%C3%ADcio-03">Exerc&#xED;cio 03:</h3>
+
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba um n&#xFA;mero inteiro positivo e retorne o fatorial deste n&#xFA;mero.</p>
+<h3 class="mume-header" id="exerc%C3%ADcio-04">Exerc&#xED;cio 04:</h3>
+
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba um n&#xFA;mero inteiro positivo <code>n</code> retorne e retorne o <code>n</code>-&#xE9;simo termo da sequ&#xEA;ncia de Fibonacci.</p>
+<p>OBS: A sequ&#xEA;ncia de Fibonacci &#xE9; constru&#xED;da de forma que cada termo seja a soma dos dois termos anteriores, sendo que o primeiro e o segundo termo s&#xE3;o iguais a 1:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>a_1 = 1
+a_2 = 1
+a_n = a_{n-1} + a_{n-2}
+</code></pre><h3 class="mume-header" id="exerc%C3%ADcio-05">Exerc&#xED;cio 05:</h3>
+
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba uma lista e retorne esta lista invertida (onde o termo na posi&#xE7;&#xE3;o <code>i</code> da lista de entrada est&#xE1; na posi&#xE7;&#xE3;o <code>n-i-1</code> da lista de sa&#xED;da, sendo <code>n</code> o tamanho da lista)</p>
+<h3 class="mume-header" id="exerc%C3%ADcio-06">Exerc&#xED;cio 06:</h3>
+
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba uma lista de palavras e retorne uma lista contendo a primeira letra de cada palavra da lista de entrada</p>
+<h3 class="mume-header" id="exerc%C3%ADcio-07">Exerc&#xED;cio 07:</h3>
+
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba uma lista de palavras e retorne uma lista contendo a &#xFA;ltima letra de cada palavra da lista de entrada</p>
+<h3 class="mume-header" id="exerc%C3%ADcio-08">Exerc&#xED;cio 08:</h3>
+
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba uma lista de palavras e retorne uma lista contendo o tamanho de cada palavra</p>
+<h3 class="mume-header" id="exerc%C3%ADcio-09">Exerc&#xED;cio 09:</h3>
+
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba uma lista de n&#xFA;meros inteiros e retorne uma lista contendo somente os n&#xFA;meros pares sem repeti&#xE7;&#xE3;o da lista de entrada, os n&#xFA;meros da lista retornada n&#xE3;o precisam estar na mesma ordem dos n&#xFA;meros da lista de entrada.</p>
+<h3 class="mume-header" id="exerc%C3%ADcio-10">Exerc&#xED;cio 10:</h3>
+
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba uma lista de n&#xFA;meros inteiros positivos e retorne a quantidade de n&#xFA;meros primos que t&#xEA;m na lista de entrada.</p>
+<p><a href="https://github.com/viniciusdenovaes/Unip222IPE/tree/master/lab06">Respostas</a></p>
 <p>.</p>
 
       </div>
