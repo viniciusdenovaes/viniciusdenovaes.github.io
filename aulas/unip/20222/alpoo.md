@@ -27,7 +27,8 @@
 ## Trabalho (APS)
 
 
-- [Livraria](alpoo_files/trabalhos/01/trabalho_livraria.html)
+- [Roteiro para apresentação](alpoo_files/trabalhos/01/trabalho_livraria.html)
+- [Roteiro para entrega do trabalho no site](alpoo_files/aps/APS_ALPOO_2022.pdf)
 
 
 
