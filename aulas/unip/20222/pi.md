@@ -10,4 +10,7 @@ Listas
 * [Trabalho 02](pi_files/trabalhos/02/trabalho02.html)
 * [Trabalho 03 (APS)](pi_files/trabalhos/03/trabalho03.html)
 
+### Trabalhos
+* [Roteiro para APS](pi_files/aps/APS_PIVC.pdf)
+
 ### [Git](https://github.com/viniciusdenovaes/Unip222PI)
