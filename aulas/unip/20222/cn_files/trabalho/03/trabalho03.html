@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>cn</title>
+      <title>trabalho03</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -261,22 +261,73 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="c%C3%A1lculo-num%C3%A9rico">C&#xE1;lculo Num&#xE9;rico</h1>
+      <h1 class="mume-header" id="trabalho-03-de-cn-otimiza%C3%A7%C3%A3o-por-equa%C3%A7%C3%B5es-lineares">Trabalho 03 de CN: Otimiza&#xE7;&#xE3;o Por Equa&#xE7;&#xF5;es Lineares</h1>
 
-<h3 class="mume-header" id="listas">Listas</h3>
+<p>Para este trabalho voc&#xEA; deve fazer um programa que encontre a <strong>melhor</strong> solu&#xE7;&#xE3;o para o <em>problema da dieta</em>.</p>
+<p>Neste problema &#xE9; dado</p>
+<ul>
+<li>uma cole&#xE7;&#xE3;o de restri&#xE7;&#xF5;es representando o m&#xED;nimo que o corpo precisa diariamente de cada componente;</li>
+<li>uma cole&#xE7;&#xE3;o de alimentos com cada um dos atributos incluindo:
+<ul>
+<li>quantidade</li>
+<li>pre&#xE7;o</li>
+<li>cada um dos componentes inclu&#xED;do no alimento</li>
+</ul>
+</li>
+</ul>
+<p>Voc&#xEA; deve encontrar uma combina&#xE7;&#xE3;o de alimentos, atrubuindo uma quantidade que cada alimento deve ser comprado, para satisfazer o m&#xED;nimo dos componentes necess&#xE1;rios (deve ter uma quantidade maior ou igual para cada componente) e <strong>minimizar</strong> o gasto total pago pelos alimentos.</p>
+<h3 class="mume-header" id="ferramentas">Ferramentas</h3>
+
+<p>Existem v&#xE1;rias ferramentas de <strong>Otimiza&#xE7;&#xE3;o por Programa&#xE7;&#xE3;o Por Restri&#xE7;&#xF5;es</strong>, como</p>
+<ul>
+<li><a href="https://developers.google.com/optimization">google or-tools</a></li>
+<li><a href="https://www.gnu.org/software/glpk/">GLPK da GNU</a></li>
+<li><a href="https://www.ibm.com/analytics/cplex-optimizer">CPLEX da IMB</a></li>
+<li><a href="https://www.gurobi.com/">Gurobi</a></li>
+</ul>
+<p>A sugest&#xE3;o para esta aula &#xE9; usar o google or-tools, exemplos podem ser encontrados na <a href="https://github.com/viniciusdenovaes/Unip222CN/tree/master/aulaORTools">aula de programa&#xE7;&#xE3;o por restri&#xE7;&#xE3;o</a> ou no <a href="https://developers.google.com/optimization">site oficial da ferramenta</a></p>
+<h3 class="mume-header" id="entradas">Entradas</h3>
+
+<p>A entrada estar&#xE1; em formato <code>csv</code> e ser&#xE1; dado na forma</p>
+<ul>
+<li><a href="https://raw.githubusercontent.com/viniciusdenovaes/Unip222CN/master/aulaORTools/trabalho/nutrientes.csv">nutrientes</a>: o m&#xED;nimo que o corpo precisa diariamente, com colunas
+<ul>
+<li><code>nome</code>: com o nome e a unidade de medida</li>
+<li><code>minimo</code>: com o valor m&#xED;nimo</li>
+</ul>
+</li>
+<li><a href="https://raw.githubusercontent.com/viniciusdenovaes/Unip222CN/master/aulaORTools/trabalho/data.csv">data</a>: uma tabela com uma cole&#xE7;&#xE3;o de produtos contendo as colunas
+<ul>
+<li><code>ingrediente</code>: o nome do ingrediente</li>
+<li><code>quantidade</code>: a quantidade</li>
+<li><code>preco</code>: o pre&#xE7;o por esta quantidade</li>
+<li>uma coluna para cada composto visto na tabela de nutrientes representando o quanto deste composto tem nesta quantidade deste ingrediente</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="solu%C3%A7%C3%A3o">Solu&#xE7;&#xE3;o</h3>
+
+<p>Uma solu&#xE7;&#xE3;o &#xE9; uma lista com a quantidade de cada ingrediente que satisfaz o m&#xED;nimo para cada nutriente.</p>
+<p>A melhor solu&#xE7;&#xE3;o &#xE9; a que minimiza o pre&#xE7;o total do custo da solu&#xE7;&#xE3;o.</p>
+<h3 class="mume-header" id="regras">Regras</h3>
 
 <ul>
-<li><a href="cn_files/listas/01/lista01CN.pdf">Lista 01</a></li>
+<li>
+<p>Voc&#xEA; pode fazer em qualquer uma das seguintes linguagens: python, java, C++, C ou C#.</p>
+</li>
+<li>
+<p>Voc&#xEA; pode usar <strong>qualquer biblioteca</strong> interna ou externa &#xE0; linguagem que voc&#xEA; utilizar&#xE1;. Porem, deve <strong>obrigatoriamente</strong> exibir a solu&#xE7;&#xE3;o.</p>
+</li>
 </ul>
-<h3 class="mume-header" id="trabalhos">Trabalhos</h3>
+<h3 class="mume-header" id="links">Links</h3>
 
 <ul>
-<li><a href="cn_files/trabalho/01/trabalho01.html">Trabalho 01</a></li>
-<li><a href="cn_files/trabalho/02/trabalho02.html">Trabalho 02</a></li>
-<li><a href="cn_files/trabalho/03/trabalho03.html">Trabalho 03</a></li>
+<li><a href="https://developers.google.com/optimization">google or-tools</a></li>
+<li><a href="https://github.com/viniciusdenovaes/Unip222CN/tree/master/aulaORTools">aula de programa&#xE7;&#xE3;o por restri&#xE7;&#xE3;o</a></li>
+<li><a href="https://raw.githubusercontent.com/viniciusdenovaes/Unip222CN/master/aulaORTools/trabalho/nutrientes.csv">nutrientes.csv</a></li>
+<li><a href="https://raw.githubusercontent.com/viniciusdenovaes/Unip222CN/master/aulaORTools/trabalho/data.csv">data.csv</a></li>
 </ul>
-<h3 class="mume-header" id="githttpsgithubcomviniciusdenovaesunip222cn"><a href="https://github.com/viniciusdenovaes/Unip222CN">Git</a></h3>
-
+<p>.</p>
 
       </div>
       
