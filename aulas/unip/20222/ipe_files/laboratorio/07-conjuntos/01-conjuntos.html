@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>ipe</title>
+      <title>01-conjuntos</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -261,32 +261,69 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="ipe-introdu%C3%A7%C3%A3o-%C3%A0-programa%C3%A7%C3%A3o-estruturada">IPE (Introdu&#xE7;&#xE3;o &#xC0; Programa&#xE7;&#xE3;o Estruturada)</h1>
+      <h1 class="mume-header" id="conjuntos">Conjuntos</h1>
 
-<h2 class="mume-header" id="laborat%C3%B3rios">Laborat&#xF3;rios</h2>
+<h2 class="mume-header" id="conceito-matem%C3%A1tico">Conceito Matem&#xE1;tico</h2>
 
-<h3 class="mume-header" id="primeira-prova">Primeira Prova</h3>
+<p>Um conjunto &#xE9; uma cole&#xE7;&#xE3;o de elementos &#xFA;nicos, ou seja, todos elementos s&#xE3;o diferentes dois a dois.</p>
+<h2 class="mume-header" id="linguagem-de-programa%C3%A7%C3%A3o">Linguagem de Programa&#xE7;&#xE3;o</h2>
 
+<p>Linguagens de programa&#xE7;&#xE3;o de alto n&#xED;vel, como Python (vers&#xE3;o 3), Java, e C++ t&#xEA;m suporte para o uso de conjuntos.</p>
+<p>Como toda cole&#xE7;&#xE3;o voc&#xEA; pode criar um conjunto, adicionar elementos, ver a quantidade de elementos, iterar na cole&#xE7;&#xE3;o, entre outras fun&#xE7;&#xF5;es.</p>
+<p>Mas com a garantia que todos os elementos desta cole&#xE7;&#xE3;o s&#xE3;o diferentes entre si, ou seja, se dois elementos iguais forem adicionados, um deles ser&#xE1; ignorado.</p>
+<h2 class="mume-header" id="python">Python</h2>
+
+<p>Python tem suporte a conjuntos &#xE0; partir da vers&#xE3;o 3. Assim como o tipo de lista &#xE9; <code>list</code>, o tipo de conjunto &#xE9; <code>set</code>.</p>
+<h3 class="mume-header" id="criando-conjuntos">Criando conjuntos</h3>
+
+<p>Para criar um conjunto em Python podemos usar as seguintes fun&#xE7;&#xF5;es:</p>
 <ul>
-<li><a href="ipe_files/laboratorio/01-entrada_saida/01-entrada_saida.html">lab01 - Entrada e Sa&#xED;da</a></li>
-<li><a href="ipe_files/laboratorio/02-operacoes/01-operacoes.html">lab02 - Opera&#xE7;&#xF5;es Matem&#xE1;ticas</a></li>
-<li><a href="ipe_files/laboratorio/03-condicional/01-condicional.html">lab03 - Comandos Condicionais</a></li>
-<li><a href="ipe_files/laboratorio/04-repeticao/01-repeticao.html">lab04 - Comandos De Repeti&#xE7;&#xE3;o</a></li>
+<li><code>set()</code>: cria um <strong>novo</strong> conjunto vazio</li>
+<li><code>set(l)</code>: cria um <strong>novo</strong> conjunto contendo os elementos da lista <code>l</code></li>
 </ul>
-<h3 class="mume-header" id="segunda-prova">Segunda Prova</h3>
+<h3 class="mume-header" id="fun%C3%A7%C3%B5es">Fun&#xE7;&#xF5;es</h3>
 
+<p>Para usar as funcionalidades de um conjunto em Python podemos usar as seguintes fun&#xE7;&#xF5;es:</p>
 <ul>
-<li><a href="ipe_files/laboratorio/05-listas/01-listas.html">lab05 - Listas</a></li>
-<li><a href="ipe_files/laboratorio/06-funcoes/01-funcoes.html">lab06 - Fun&#xE7;&#xF5;es</a></li>
-<li><a href="ipe_files/laboratorio/07-conjuntos/01-conjuntos.html">lab07 - Conjuntos</a></li>
+<li><code>s.add(e)</code>: adiciona o elemento <code>e</code> ao conjunto <code>s</code></li>
+<li><code>len(s)</code>: retorna o tamanho do conjunto <code>s</code></li>
 </ul>
-<h4 class="mume-header" id="respostas-no-githttpsgithubcomviniciusdenovaesunip222ipe"><a href="https://github.com/viniciusdenovaes/Unip222IPE">Respostas no Git</a></h4>
+<h3 class="mume-header" id="iterar">Iterar</h3>
 
-<h2 class="mume-header" id="aps">APS</h2>
+<p>Para iterar em um conjunto <code>s</code> basta iterar como em qualquer cole&#xE7;&#xE3;o:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword keyword-for">for</span> e <span class="token keyword keyword-in">in</span> s<span class="token punctuation">:</span>
+  <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+</pre><h3 class="mume-header" id="opera%C3%A7%C3%B5es-entre-conjuntos-e-elementos">Opera&#xE7;&#xF5;es Entre Conjuntos e Elementos</h3>
 
+<p>Voc&#xEA; tamb&#xE9;m pode fazer opera&#xE7;&#xF5;es entre conjuntos e elementos:</p>
 <ul>
-<li><a href="ipe_files/aps/APS-2CC-1CC_2022-2.pdf">Documento em pdf da APS</a></li>
+<li><code>e in s</code>: retorna se o elemento <code>e</code> pertence ao conjunto <code>s</code></li>
+<li><code>s1.issubset(s2)</code>: se o conjunto <code>s1</code> &#xE9; subconjunto (est&#xE1; contido) do conjunto <code>s2</code></li>
+<li><code>s1.union(s2)</code>: retorna a uni&#xE3;o entre <code>s1</code> e <code>s2</code></li>
+<li><code>s1.intersection(s2)</code>: retorna a intersec&#xE7;&#xE3;o entre <code>s1</code> e <code>s2</code></li>
+<li><code>s1.difference(s2)</code>: retorna a diferen&#xE7;a entre <code>s1</code> e <code>s2</code> (todos os elementos que est&#xE3;o em <code>s1</code> mas n&#xE3;o est&#xE3;o em <code>s2</code>)</li>
 </ul>
+<h2 class="mume-header" id="exerc%C3%ADcios">Exerc&#xED;cios</h2>
+
+<h3 class="mume-header" id="exerc%C3%ADcio-01">Exerc&#xED;cio 01:</h3>
+
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba uma lista de elementos e retorne um conjunto com os elementos &#xFA;nicos da lista de entrada</p>
+<h3 class="mume-header" id="exerc%C3%ADcio-02">Exerc&#xED;cio 02:</h3>
+
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba uma lista de n&#xFA;meros e retorne o somat&#xF3;rio de todos os n&#xFA;meros &#xFA;nicos da lista.</p>
+<h3 class="mume-header" id="exerc%C3%ADcio-03">Exerc&#xED;cio 03:</h3>
+
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba uma lista de n&#xFA;meros e retorne um conjunto com todos os n&#xFA;meros &#xFA;nicos que s&#xE3;o pares.</p>
+<h3 class="mume-header" id="exerc%C3%ADcio-04">Exerc&#xED;cio 04:</h3>
+
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba duas listas de inteiros separados por espa&#xE7;o, e retorne um conjuntos com todos os n&#xFA;meros que est&#xE3;o <strong>nas duas listas</strong>, sem repeti&#xE7;&#xF5;es.</p>
+<h3 class="mume-header" id="exerc%C3%ADcio-05">Exerc&#xED;cio 05:</h3>
+
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba duas listas de inteiros separados por espa&#xE7;o, e retorne um conjuntos com todos os n&#xFA;meros que est&#xE3;o em <strong>pelo menos uma das duas listas</strong>, sem repeti&#xE7;&#xF5;es.</p>
+<h3 class="mume-header" id="exerc%C3%ADcio-06">Exerc&#xED;cio 06:</h3>
+
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba duas listas de inteiros separados por espa&#xE7;o, e retorne um conjuntos com todos os n&#xFA;meros que est&#xE3;o na primeira lista mas n&#xE3;o est&#xE1; na segunda, sem repeti&#xE7;&#xF5;es.</p>
+<p><a href="https://github.com/viniciusdenovaes/Unip222IPE/tree/master/lab07">Respostas</a></p>
 <p>.</p>
 
       </div>

@@ -14,6 +14,7 @@
 
 - [lab05 - Listas](ipe_files/laboratorio/05-listas/01-listas.html)
 - [lab06 - Funções](ipe_files/laboratorio/06-funcoes/01-funcoes.html)
+- [lab07 - Conjuntos](ipe_files/laboratorio/07-conjuntos/01-conjuntos.html)
 
 #### [Respostas no Git](https://github.com/viniciusdenovaes/Unip222IPE)
 
