@@ -280,20 +280,81 @@ pre[data-line] .line-highlight[data-end]:after {
 <ul>
 <li><code>set()</code>: cria um <strong>novo</strong> conjunto vazio</li>
 <li><code>set(l)</code>: cria um <strong>novo</strong> conjunto contendo os elementos da lista <code>l</code></li>
+<li><code>{1, 2, 3}</code>: cria um <strong>novo</strong> conjunto contendo os elementos <code>1, 2, 3</code></li>
+<li>ATEN&#xC7;&#xC3;O: <code>{}</code> <strong>n&#xE3;o</strong> cria um conjunto vazio, cria um dicion&#xE1;rio.</li>
 </ul>
-<h3 class="mume-header" id="fun%C3%A7%C3%B5es">Fun&#xE7;&#xF5;es</h3>
+<h4 class="mume-header" id="exemplos">Exemplos</h4>
+
+<h5 class="mume-header" id="exemplo-1">Exemplo 1</h5>
+
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</pre><p>sa&#xED;da</p>
+<pre data-role="codeBlock" data-info class="language-"><code>set()
+</code></pre><h5 class="mume-header" id="exemplo-2">Exemplo 2</h5>
+
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</pre><p>sa&#xED;da</p>
+<pre data-role="codeBlock" data-info class="language-"><code>{1, 2, 3}
+</code></pre><h5 class="mume-header" id="exemplo-3">Exemplo 3</h5>
+
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</pre><p>sa&#xED;da</p>
+<pre data-role="codeBlock" data-info class="language-"><code>{1, 2, 3}
+</code></pre><h5 class="mume-header" id="exemplo-4">Exemplo 4</h5>
+
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</pre><p>sa&#xED;da</p>
+<pre data-role="codeBlock" data-info class="language-"><code>{1, 2, 3}
+</code></pre><h3 class="mume-header" id="fun%C3%A7%C3%B5es">Fun&#xE7;&#xF5;es</h3>
 
 <p>Para usar as funcionalidades de um conjunto em Python podemos usar as seguintes fun&#xE7;&#xF5;es:</p>
 <ul>
 <li><code>s.add(e)</code>: adiciona o elemento <code>e</code> ao conjunto <code>s</code></li>
+<li><code>s.update(s2)</code>: adiciona os elementos do conjunto <code>s2</code> ao conjunto <code>s</code></li>
 <li><code>len(s)</code>: retorna o tamanho do conjunto <code>s</code></li>
 </ul>
-<h3 class="mume-header" id="iterar">Iterar</h3>
+<h4 class="mume-header" id="exemplos-1">Exemplos</h4>
+
+<h5 class="mume-header" id="exemplo-1-1">Exemplo 1</h5>
+
+<pre data-role="codeBlock" data-info="python" class="language-python">s <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span>
+s<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+s
+</pre><p>sa&#xED;da</p>
+<pre data-role="codeBlock" data-info class="language-"><code>{1, 2, 3, 4}
+</code></pre><h5 class="mume-header" id="exemplo-2-1">Exemplo 2</h5>
+
+<pre data-role="codeBlock" data-info="python" class="language-python">s<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+s
+</pre><p>sa&#xED;da</p>
+<pre data-role="codeBlock" data-info class="language-"><code>{1, 2, 3, 4}
+</code></pre><h5 class="mume-header" id="exemplo-3-1">Exemplo 3</h5>
+
+<pre data-role="codeBlock" data-info="python" class="language-python">s2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">60</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">}</span>
+s<span class="token punctuation">.</span>update<span class="token punctuation">(</span>s2<span class="token punctuation">)</span>
+s
+</pre><p>sa&#xED;da</p>
+<pre data-role="codeBlock" data-info class="language-"><code>{1, 2, 3, 4, 60, 80}
+</code></pre><h3 class="mume-header" id="iterar">Iterar</h3>
 
 <p>Para iterar em um conjunto <code>s</code> basta iterar como em qualquer cole&#xE7;&#xE3;o:</p>
 <pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword keyword-for">for</span> e <span class="token keyword keyword-in">in</span> s<span class="token punctuation">:</span>
   <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
-</pre><h3 class="mume-header" id="opera%C3%A7%C3%B5es-entre-conjuntos-e-elementos">Opera&#xE7;&#xF5;es Entre Conjuntos e Elementos</h3>
+</pre><h4 class="mume-header" id="exemplo">Exemplo</h4>
+
+<pre data-role="codeBlock" data-info="python" class="language-python">s <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1000</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">}</span>
+<span class="token keyword keyword-for">for</span> e <span class="token keyword keyword-in">in</span> s<span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+</pre><p>sa&#xED;da</p>
+<pre data-role="codeBlock" data-info class="language-"><code>0
+1
+5
+1000
+10
+2000
+50
+-5
+</code></pre><h3 class="mume-header" id="opera%C3%A7%C3%B5es-entre-conjuntos-e-elementos">Opera&#xE7;&#xF5;es Entre Conjuntos e Elementos</h3>
 
 <p>Voc&#xEA; tamb&#xE9;m pode fazer opera&#xE7;&#xF5;es entre conjuntos e elementos:</p>
 <ul>
