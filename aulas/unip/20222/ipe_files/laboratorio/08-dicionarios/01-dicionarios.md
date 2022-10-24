@@ -22,159 +22,136 @@ Você sempre terá a garantia de que as chaves serão únicas e terá um valor a
 
 Python tem suporte a dicionários e seu tipo é `dict`.
 
-### Criando conjuntos
+### Criando dicionários
 
-Para criar um conjunto em Python podemos usar as seguintes funções:
-- `set()`: cria um **novo** conjunto vazio
-- `set(l)`: cria um **novo** conjunto contendo os elementos da lista `l`
-- `{1, 2, 3}`: cria um **novo** conjunto contendo os elementos `1, 2, 3`
-- ATENÇÃO: `{}` **não** cria um conjunto vazio, cria um dicionário.
+Para criar um dicionário em Python podemos usar as seguintes funções:
+- `{}`: cria um **novo** dicionário vazio
+- `{1: 'um', 2: 'dois', 3: 'tres'}`: cria um **novo** conjunto contendo as relacões chave, valor
+- `1` -> `'um'`
+- `2` -> `'dois'`
+- `3` -> `'tres'`
+- ATENÇÃO: `{}` cria um dicionário e **não** um conjunto vazio.
 
-#### Exemplos
+### Operações e Funções
 
-##### Exemplo 1
-```python
-set()
-```
-saída
-```
-set()
-```
-##### Exemplo 2
-```python
-set([1, 2, 3])
-```
-saída
-```
-{1, 2, 3}
-```
-##### Exemplo 3
-```python
-set([1, 2, 3, 1, 2, 3])
-```
-saída
-```
-{1, 2, 3}
-```
-##### Exemplo 4
-```python
-set([1, 1, 2, 2, 3, 3])
-```
-saída
-```
-{1, 2, 3}
-```
+- `d[k] = v`: adiciona a relação chave `k` e valor `v`
+- `k in d.keys()`: verifica se a chave `k` pertence ao conjunto de chaves do dicionário `d`
+- `v in d.values()`: verifica se o valor `v` está na coleção de valores do dicionário `d`
+- `(k, v) in d.items()`: verifica se a relação chave `k`, valor `v` está no dicionário `d`
+- `len(d)`: retorna o tamanho do dicionário `d`
 
-### Funções
-
-Para usar as funcionalidades de um conjunto em Python podemos usar as seguintes funções:
-
-- `s.add(e)`: adiciona o elemento `e` ao conjunto `s`
-- `s.update(s2)`: adiciona os elementos do conjunto `s2` ao conjunto `s`
-- `len(s)`: retorna o tamanho do conjunto `s`
-
-
-#### Exemplos
-
-##### Exemplo 1
-```python
-s = {1, 2, 3}
-s.add(4)
-s
-```
-saída
-```
-{1, 2, 3, 4}
-```
-##### Exemplo 2
-```python
-s.add(1)
-s
-```
-saída
-```
-{1, 2, 3, 4}
-```
-##### Exemplo 3
-```python
-s2 = {2, 4, 60, 80}
-s.update(s2)
-s
-```
-saída
-```
-{1, 2, 3, 4, 60, 80}
-```
 
 ### Iterar
 
-Para iterar em um conjunto `s` basta iterar como em qualquer coleção:
+Você pode iterar nas chaves, valores ou em ambos.
+
+#### iterando nas chaves
 
 ``` python
-for e in s:
-  print(e)
+for k in d.keys():
+  print('chave', k)
+  v = d[k]
+  print('valor', v)
 ```
 
-#### Exemplo
-```python
-s = {1000, 2000, 10, 1, 0, 50, 5, 0, -5, 5, -5}
-for e in s:
-    print(e)
-```
-saída
-```
-0
-1
-5
-1000
-10
-2000
-50
--5
+#### iterando nos valores
+
+``` python
+for v in d.values():
+  print('valor', v)
 ```
 
-### Operações Entre Conjuntos e Elementos
+#### iterando nas chaves e valores
 
-Você também pode fazer operações entre conjuntos e elementos:
-- `e in s`: retorna se o elemento `e` pertence ao conjunto `s`
-- `s1.issubset(s2)`: se o conjunto `s1` é subconjunto (está contido) do conjunto `s2`
-- `s1.union(s2)`: retorna a união entre `s1` e `s2`
-- `s1.intersection(s2)`: retorna a intersecção entre `s1` e `s2`
-- `s1.difference(s2)`: retorna a diferença entre `s1` e `s2` (todos os elementos que estão em `s1` mas não estão em `s2`)
+``` python
+for k, v in d.items():
+  print('chave', k)
+  print('valor', v)
+```
+
 
 ## Exercícios
 
 ### Exercício 01:
 
-Faça uma função que receba uma lista de elementos e retorne um conjunto com os elementos únicos da lista de entrada
+Faça uma função que receba uma lista de strings e retorne um dicionário que mapeie cada palavra da lista para tamanho desta palavra
+
+
+### Exercício 01:
+
+Faça uma função que receba uma lista de strings e retorne um dicionário que mapeie cada palavra da lista para tamanho desta palavra
+
+
 
 ### Exercício 02:
 
-Faça uma função que receba uma lista de números e retorne o somatório de todos os números únicos da lista.
+Faça uma função que receba um dicionário e uma chave e retorne se o dicionário contém esta chave.
+
 
 ### Exercício 03:
 
-Faça uma função que receba uma lista de números e retorne um conjunto com todos os números únicos que são pares.
+Faça uma função que receba um dicionário e um valor e retorne se o dicionário contém este valor.
 
 
 ### Exercício 04:
 
-Faça uma função que receba duas listas de inteiros separados por espaço, e retorne um conjuntos com todos os números que estão **nas duas listas**, sem repetições.
+Faça uma função que receba um dicionário e uma chave e retorne o valor desta chave se o dicionário contém esta chave, e o valor `None` caso não contenha a chave.
+
+OBS: Para referenciar o valor `None` em Python basta escrever a palavra `None`
+OBS2: `None` é o valor nulo. Toda linguagem tem uma palavra para o valor nulo. Que quer dizer que a variável não tem nenhum valor, ou tem valor "vazio".
 
 
 ### Exercício 05:
 
-Faça uma função que receba duas listas de inteiros separados por espaço, e retorne um conjuntos com todos os números que estão em **pelo menos uma das duas listas**, sem repetições.
+Faça uma função que receba uma lista de elementos e retorne um dicionário mapeando cada elemento da lista na quantidade de vezes que este elemento aparece na lista.
+
 
 
 ### Exercício 06:
 
-Faça uma função que receba duas listas de inteiros separados por espaço, e retorne um conjuntos com todos os números que estão na primeira lista mas não está na segunda, sem repetições.
+Faça uma função que receba um dicionário de precos de produtos: para cada produto (`string`) tem um valor numérico (`double`) associado. A sua função deve retorna um mapeamento de preços para uma **lista** de elementos que tem aquele preço.
+
+Por exemplo, se a função receber o dicionário `{'banana': 2, 'maca': 3, 'pera': 2})` deve retornar o dicionário `{2: ['banana', 'pera'], 3: ['maca']}`
+
+
+
+### Exercício 07:
+
+OBS: Mesmo exercício anterior, mas com conjuntos.
+
+Faça uma função que receba um dicionário de precos de produtos: para cada produto (`string`) tem um valor numérico (`double`) associado. A sua função deve retorna um mapeamento de preços para um **conjunto** de elementos que tem aquele preço.
+
+Por exemplo, se a função receber o dicionário `{'banana': 2, 'maca': 3, 'pera': 2})` deve retornar o dicionário `{2: {'banana', 'pera'}, 3: {'maca'}}`
 
 
 
 
-[Respostas](https://github.com/viniciusdenovaes/Unip222IPE/tree/master/lab07)
+
+### Exercício 08:
+
+Faça uma função que receba uma lista de produtos comprados e dicionário de precos de produtos: para cada produto (`string`) tem um valor numérico (`double`) associado. A sua função deve retorna um dicionário que mapeie cada produto da lista de produtos comprados no valor total gasto naquele produto (o preço do produto multiplicado por quantas vezes ele foi aparece na lista de compras).
+
+Por exemplo, se a função receber a lista de compras
+```
+['banana', 'maca', 'pera', 'banana']
+```
+e o dicionário de preços
+```
+{'banana': 2, 'maca': 4, 'pera': 2, 'uva': 6})
+```
+deve retornar o dicionário
+```
+{'banana': 4, 'maca': 4, 'pera': 2}
+```
+
+
+
+
+
+
+
+
+[Respostas](https://github.com/viniciusdenovaes/Unip222IPE/tree/master/lab08)
 
 
 

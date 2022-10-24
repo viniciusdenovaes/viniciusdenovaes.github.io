@@ -280,117 +280,85 @@ pre[data-line] .line-highlight[data-end]:after {
 <h2 class="mume-header" id="python">Python</h2>
 
 <p>Python tem suporte a dicion&#xE1;rios e seu tipo &#xE9; <code>dict</code>.</p>
-<h3 class="mume-header" id="criando-conjuntos">Criando conjuntos</h3>
+<h3 class="mume-header" id="criando-dicion%C3%A1rios">Criando dicion&#xE1;rios</h3>
 
-<p>Para criar um conjunto em Python podemos usar as seguintes fun&#xE7;&#xF5;es:</p>
+<p>Para criar um dicion&#xE1;rio em Python podemos usar as seguintes fun&#xE7;&#xF5;es:</p>
 <ul>
-<li><code>set()</code>: cria um <strong>novo</strong> conjunto vazio</li>
-<li><code>set(l)</code>: cria um <strong>novo</strong> conjunto contendo os elementos da lista <code>l</code></li>
-<li><code>{1, 2, 3}</code>: cria um <strong>novo</strong> conjunto contendo os elementos <code>1, 2, 3</code></li>
-<li>ATEN&#xC7;&#xC3;O: <code>{}</code> <strong>n&#xE3;o</strong> cria um conjunto vazio, cria um dicion&#xE1;rio.</li>
+<li><code>{}</code>: cria um <strong>novo</strong> dicion&#xE1;rio vazio</li>
+<li><code>{1: &apos;um&apos;, 2: &apos;dois&apos;, 3: &apos;tres&apos;}</code>: cria um <strong>novo</strong> conjunto contendo as relac&#xF5;es chave, valor</li>
+<li><code>1</code> -&gt; <code>&apos;um&apos;</code></li>
+<li><code>2</code> -&gt; <code>&apos;dois&apos;</code></li>
+<li><code>3</code> -&gt; <code>&apos;tres&apos;</code></li>
+<li>ATEN&#xC7;&#xC3;O: <code>{}</code> cria um dicion&#xE1;rio e <strong>n&#xE3;o</strong> um conjunto vazio.</li>
 </ul>
-<h4 class="mume-header" id="exemplos">Exemplos</h4>
+<h3 class="mume-header" id="opera%C3%A7%C3%B5es-e-fun%C3%A7%C3%B5es">Opera&#xE7;&#xF5;es e Fun&#xE7;&#xF5;es</h3>
 
-<h5 class="mume-header" id="exemplo-1">Exemplo 1</h5>
-
-<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-</pre><p>sa&#xED;da</p>
-<pre data-role="codeBlock" data-info class="language-"><code>set()
-</code></pre><h5 class="mume-header" id="exemplo-2">Exemplo 2</h5>
-
-<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-</pre><p>sa&#xED;da</p>
-<pre data-role="codeBlock" data-info class="language-"><code>{1, 2, 3}
-</code></pre><h5 class="mume-header" id="exemplo-3">Exemplo 3</h5>
-
-<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-</pre><p>sa&#xED;da</p>
-<pre data-role="codeBlock" data-info class="language-"><code>{1, 2, 3}
-</code></pre><h5 class="mume-header" id="exemplo-4">Exemplo 4</h5>
-
-<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-</pre><p>sa&#xED;da</p>
-<pre data-role="codeBlock" data-info class="language-"><code>{1, 2, 3}
-</code></pre><h3 class="mume-header" id="fun%C3%A7%C3%B5es">Fun&#xE7;&#xF5;es</h3>
-
-<p>Para usar as funcionalidades de um conjunto em Python podemos usar as seguintes fun&#xE7;&#xF5;es:</p>
 <ul>
-<li><code>s.add(e)</code>: adiciona o elemento <code>e</code> ao conjunto <code>s</code></li>
-<li><code>s.update(s2)</code>: adiciona os elementos do conjunto <code>s2</code> ao conjunto <code>s</code></li>
-<li><code>len(s)</code>: retorna o tamanho do conjunto <code>s</code></li>
+<li><code>d[k] = v</code>: adiciona a rela&#xE7;&#xE3;o chave <code>k</code> e valor <code>v</code></li>
+<li><code>k in d.keys()</code>: verifica se a chave <code>k</code> pertence ao conjunto de chaves do dicion&#xE1;rio <code>d</code></li>
+<li><code>v in d.values()</code>: verifica se o valor <code>v</code> est&#xE1; na cole&#xE7;&#xE3;o de valores do dicion&#xE1;rio <code>d</code></li>
+<li><code>(k, v) in d.items()</code>: verifica se a rela&#xE7;&#xE3;o chave <code>k</code>, valor <code>v</code> est&#xE1; no dicion&#xE1;rio <code>d</code></li>
+<li><code>len(d)</code>: retorna o tamanho do dicion&#xE1;rio <code>d</code></li>
 </ul>
-<h4 class="mume-header" id="exemplos-1">Exemplos</h4>
+<h3 class="mume-header" id="iterar">Iterar</h3>
 
-<h5 class="mume-header" id="exemplo-1-1">Exemplo 1</h5>
+<p>Voc&#xEA; pode iterar nas chaves, valores ou em ambos.</p>
+<h4 class="mume-header" id="iterando-nas-chaves">iterando nas chaves</h4>
 
-<pre data-role="codeBlock" data-info="python" class="language-python">s <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span>
-s<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
-s
-</pre><p>sa&#xED;da</p>
-<pre data-role="codeBlock" data-info class="language-"><code>{1, 2, 3, 4}
-</code></pre><h5 class="mume-header" id="exemplo-2-1">Exemplo 2</h5>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword keyword-for">for</span> k <span class="token keyword keyword-in">in</span> d<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">&apos;chave&apos;</span><span class="token punctuation">,</span> k<span class="token punctuation">)</span>
+  v <span class="token operator">=</span> d<span class="token punctuation">[</span>k<span class="token punctuation">]</span>
+  <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">&apos;valor&apos;</span><span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+</pre><h4 class="mume-header" id="iterando-nos-valores">iterando nos valores</h4>
 
-<pre data-role="codeBlock" data-info="python" class="language-python">s<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
-s
-</pre><p>sa&#xED;da</p>
-<pre data-role="codeBlock" data-info class="language-"><code>{1, 2, 3, 4}
-</code></pre><h5 class="mume-header" id="exemplo-3-1">Exemplo 3</h5>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword keyword-for">for</span> v <span class="token keyword keyword-in">in</span> d<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">&apos;valor&apos;</span><span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+</pre><h4 class="mume-header" id="iterando-nas-chaves-e-valores">iterando nas chaves e valores</h4>
 
-<pre data-role="codeBlock" data-info="python" class="language-python">s2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">60</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">}</span>
-s<span class="token punctuation">.</span>update<span class="token punctuation">(</span>s2<span class="token punctuation">)</span>
-s
-</pre><p>sa&#xED;da</p>
-<pre data-role="codeBlock" data-info class="language-"><code>{1, 2, 3, 4, 60, 80}
-</code></pre><h3 class="mume-header" id="iterar">Iterar</h3>
-
-<p>Para iterar em um conjunto <code>s</code> basta iterar como em qualquer cole&#xE7;&#xE3;o:</p>
-<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword keyword-for">for</span> e <span class="token keyword keyword-in">in</span> s<span class="token punctuation">:</span>
-  <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
-</pre><h4 class="mume-header" id="exemplo">Exemplo</h4>
-
-<pre data-role="codeBlock" data-info="python" class="language-python">s <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1000</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">}</span>
-<span class="token keyword keyword-for">for</span> e <span class="token keyword keyword-in">in</span> s<span class="token punctuation">:</span>
-    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
-</pre><p>sa&#xED;da</p>
-<pre data-role="codeBlock" data-info class="language-"><code>0
-1
-5
-1000
-10
-2000
-50
--5
-</code></pre><h3 class="mume-header" id="opera%C3%A7%C3%B5es-entre-conjuntos-e-elementos">Opera&#xE7;&#xF5;es Entre Conjuntos e Elementos</h3>
-
-<p>Voc&#xEA; tamb&#xE9;m pode fazer opera&#xE7;&#xF5;es entre conjuntos e elementos:</p>
-<ul>
-<li><code>e in s</code>: retorna se o elemento <code>e</code> pertence ao conjunto <code>s</code></li>
-<li><code>s1.issubset(s2)</code>: se o conjunto <code>s1</code> &#xE9; subconjunto (est&#xE1; contido) do conjunto <code>s2</code></li>
-<li><code>s1.union(s2)</code>: retorna a uni&#xE3;o entre <code>s1</code> e <code>s2</code></li>
-<li><code>s1.intersection(s2)</code>: retorna a intersec&#xE7;&#xE3;o entre <code>s1</code> e <code>s2</code></li>
-<li><code>s1.difference(s2)</code>: retorna a diferen&#xE7;a entre <code>s1</code> e <code>s2</code> (todos os elementos que est&#xE3;o em <code>s1</code> mas n&#xE3;o est&#xE3;o em <code>s2</code>)</li>
-</ul>
-<h2 class="mume-header" id="exerc%C3%ADcios">Exerc&#xED;cios</h2>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword keyword-for">for</span> k<span class="token punctuation">,</span> v <span class="token keyword keyword-in">in</span> d<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">&apos;chave&apos;</span><span class="token punctuation">,</span> k<span class="token punctuation">)</span>
+  <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">&apos;valor&apos;</span><span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+</pre><h2 class="mume-header" id="exerc%C3%ADcios">Exerc&#xED;cios</h2>
 
 <h3 class="mume-header" id="exerc%C3%ADcio-01">Exerc&#xED;cio 01:</h3>
 
-<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba uma lista de elementos e retorne um conjunto com os elementos &#xFA;nicos da lista de entrada</p>
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba uma lista de strings e retorne um dicion&#xE1;rio que mapeie cada palavra da lista para tamanho desta palavra</p>
+<h3 class="mume-header" id="exerc%C3%ADcio-01-1">Exerc&#xED;cio 01:</h3>
+
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba uma lista de strings e retorne um dicion&#xE1;rio que mapeie cada palavra da lista para tamanho desta palavra</p>
 <h3 class="mume-header" id="exerc%C3%ADcio-02">Exerc&#xED;cio 02:</h3>
 
-<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba uma lista de n&#xFA;meros e retorne o somat&#xF3;rio de todos os n&#xFA;meros &#xFA;nicos da lista.</p>
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba um dicion&#xE1;rio e uma chave e retorne se o dicion&#xE1;rio cont&#xE9;m esta chave.</p>
 <h3 class="mume-header" id="exerc%C3%ADcio-03">Exerc&#xED;cio 03:</h3>
 
-<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba uma lista de n&#xFA;meros e retorne um conjunto com todos os n&#xFA;meros &#xFA;nicos que s&#xE3;o pares.</p>
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba um dicion&#xE1;rio e um valor e retorne se o dicion&#xE1;rio cont&#xE9;m este valor.</p>
 <h3 class="mume-header" id="exerc%C3%ADcio-04">Exerc&#xED;cio 04:</h3>
 
-<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba duas listas de inteiros separados por espa&#xE7;o, e retorne um conjuntos com todos os n&#xFA;meros que est&#xE3;o <strong>nas duas listas</strong>, sem repeti&#xE7;&#xF5;es.</p>
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba um dicion&#xE1;rio e uma chave e retorne o valor desta chave se o dicion&#xE1;rio cont&#xE9;m esta chave, e o valor <code>None</code> caso n&#xE3;o contenha a chave.</p>
+<p>OBS: Para referenciar o valor <code>None</code> em Python basta escrever a palavra <code>None</code><br>
+OBS2: <code>None</code> &#xE9; o valor nulo. Toda linguagem tem uma palavra para o valor nulo. Que quer dizer que a vari&#xE1;vel n&#xE3;o tem nenhum valor, ou tem valor &quot;vazio&quot;.</p>
 <h3 class="mume-header" id="exerc%C3%ADcio-05">Exerc&#xED;cio 05:</h3>
 
-<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba duas listas de inteiros separados por espa&#xE7;o, e retorne um conjuntos com todos os n&#xFA;meros que est&#xE3;o em <strong>pelo menos uma das duas listas</strong>, sem repeti&#xE7;&#xF5;es.</p>
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba uma lista de elementos e retorne um dicion&#xE1;rio mapeando cada elemento da lista na quantidade de vezes que este elemento aparece na lista.</p>
 <h3 class="mume-header" id="exerc%C3%ADcio-06">Exerc&#xED;cio 06:</h3>
 
-<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba duas listas de inteiros separados por espa&#xE7;o, e retorne um conjuntos com todos os n&#xFA;meros que est&#xE3;o na primeira lista mas n&#xE3;o est&#xE1; na segunda, sem repeti&#xE7;&#xF5;es.</p>
-<p><a href="https://github.com/viniciusdenovaes/Unip222IPE/tree/master/lab07">Respostas</a></p>
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba um dicion&#xE1;rio de precos de produtos: para cada produto (<code>string</code>) tem um valor num&#xE9;rico (<code>double</code>) associado. A sua fun&#xE7;&#xE3;o deve retorna um mapeamento de pre&#xE7;os para uma <strong>lista</strong> de elementos que tem aquele pre&#xE7;o.</p>
+<p>Por exemplo, se a fun&#xE7;&#xE3;o receber o dicion&#xE1;rio <code>{&apos;banana&apos;: 2, &apos;maca&apos;: 3, &apos;pera&apos;: 2})</code> deve retornar o dicion&#xE1;rio <code>{2: [&apos;banana&apos;, &apos;pera&apos;], 3: [&apos;maca&apos;]}</code></p>
+<h3 class="mume-header" id="exerc%C3%ADcio-07">Exerc&#xED;cio 07:</h3>
+
+<p>OBS: Mesmo exerc&#xED;cio anterior, mas com conjuntos.</p>
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba um dicion&#xE1;rio de precos de produtos: para cada produto (<code>string</code>) tem um valor num&#xE9;rico (<code>double</code>) associado. A sua fun&#xE7;&#xE3;o deve retorna um mapeamento de pre&#xE7;os para um <strong>conjunto</strong> de elementos que tem aquele pre&#xE7;o.</p>
+<p>Por exemplo, se a fun&#xE7;&#xE3;o receber o dicion&#xE1;rio <code>{&apos;banana&apos;: 2, &apos;maca&apos;: 3, &apos;pera&apos;: 2})</code> deve retornar o dicion&#xE1;rio <code>{2: {&apos;banana&apos;, &apos;pera&apos;}, 3: {&apos;maca&apos;}}</code></p>
+<h3 class="mume-header" id="exerc%C3%ADcio-08">Exerc&#xED;cio 08:</h3>
+
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba uma lista de produtos comprados e dicion&#xE1;rio de precos de produtos: para cada produto (<code>string</code>) tem um valor num&#xE9;rico (<code>double</code>) associado. A sua fun&#xE7;&#xE3;o deve retorna um dicion&#xE1;rio que mapeie cada produto da lista de produtos comprados no valor total gasto naquele produto (o pre&#xE7;o do produto multiplicado por quantas vezes ele foi aparece na lista de compras).</p>
+<p>Por exemplo, se a fun&#xE7;&#xE3;o receber a lista de compras</p>
+<pre data-role="codeBlock" data-info class="language-"><code>[&apos;banana&apos;, &apos;maca&apos;, &apos;pera&apos;, &apos;banana&apos;]
+</code></pre><p>e o dicion&#xE1;rio de pre&#xE7;os</p>
+<pre data-role="codeBlock" data-info class="language-"><code>{&apos;banana&apos;: 2, &apos;maca&apos;: 4, &apos;pera&apos;: 2, &apos;uva&apos;: 6})
+</code></pre><p>deve retornar o dicion&#xE1;rio</p>
+<pre data-role="codeBlock" data-info class="language-"><code>{&apos;banana&apos;: 4, &apos;maca&apos;: 4, &apos;pera&apos;: 2}
+</code></pre><p><a href="https://github.com/viniciusdenovaes/Unip222IPE/tree/master/lab08">Respostas</a></p>
 <p>.</p>
 
       </div>
