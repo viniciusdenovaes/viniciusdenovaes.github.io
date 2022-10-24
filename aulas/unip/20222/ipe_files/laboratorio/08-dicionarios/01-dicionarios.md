@@ -1,20 +1,26 @@
-# Conjuntos
+# Dicionários
 
 ## Conceito Matemático
 
-Um conjunto é uma coleção de elementos únicos, ou seja, todos elementos são diferentes dois a dois.
+Um dicionário é um mapeamento entre um conjunto de chaves e uma coleção de valores. O conjunto de chave é único (não podemos ter duas chaves iguais), e para cada chave definida teremos um valor. Este valor pode ser qualquer coisa: um número, uma string, uma lista, um conjunto e até um outro dicionário.
+
+É equivalente à
+- uma função matemática.
+- relação "chaves e valores" de uma tabela em um banco de dados relacional.
 
 ## Linguagem de Programação
 
-Linguagens de programação de alto nível, como Python (versão 3), Java, e C++ têm suporte para o uso de conjuntos.
+Linguagens de programação de alto nível, como Python, Java, e C++ têm suporte para o uso de dicionários.
 
-Como toda coleção você pode criar um conjunto, adicionar elementos, ver a quantidade de elementos, iterar na coleção, entre outras funções.
+Em Java e C++ são chamados de `Map`
 
-Mas com a garantia que todos os elementos desta coleção são diferentes entre si, ou seja, se dois elementos iguais forem adicionados, um deles será ignorado.
+Como toda coleção você pode criar um dicionário, adicionar uma chave com um valor, ver a quantidade de elementos, iterar nas chave, nos valores, **ou em ambos**, entre outras funções.
+
+Você sempre terá a garantia de que as chaves serão únicas e terá um valor associado a ela, mesmo que este valor seja o `None` (o valor nulo em Python).
 
 ## Python
 
-Python tem suporte a conjuntos à partir da versão 3. Assim como o tipo de lista é `list`, o tipo de conjunto é `set`.
+Python tem suporte a dicionários e seu tipo é `dict`.
 
 ### Criando conjuntos
 
@@ -153,17 +159,17 @@ Faça uma função que receba uma lista de números e retorne um conjunto com to
 
 ### Exercício 04:
 
-Faça uma função que receba duas listas de inteiros, e retorne um conjuntos com todos os números que estão **nas duas listas**, sem repetições.
+Faça uma função que receba duas listas de inteiros separados por espaço, e retorne um conjuntos com todos os números que estão **nas duas listas**, sem repetições.
 
 
 ### Exercício 05:
 
-Faça uma função que receba duas listas de inteiros, e retorne um conjuntos com todos os números que estão em **pelo menos uma das duas listas**, sem repetições.
+Faça uma função que receba duas listas de inteiros separados por espaço, e retorne um conjuntos com todos os números que estão em **pelo menos uma das duas listas**, sem repetições.
 
 
 ### Exercício 06:
 
-Faça uma função que receba duas listas de inteiros, e retorne um conjuntos com todos os números que estão na primeira lista mas não está na segunda, sem repetições.
+Faça uma função que receba duas listas de inteiros separados por espaço, e retorne um conjuntos com todos os números que estão na primeira lista mas não está na segunda, sem repetições.
 
 
 

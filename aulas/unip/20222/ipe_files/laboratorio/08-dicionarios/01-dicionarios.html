@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>01-conjuntos</title>
+      <title>01-dicionarios</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -261,19 +261,25 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="conjuntos">Conjuntos</h1>
+      <h1 class="mume-header" id="dicion%C3%A1rios">Dicion&#xE1;rios</h1>
 
 <h2 class="mume-header" id="conceito-matem%C3%A1tico">Conceito Matem&#xE1;tico</h2>
 
-<p>Um conjunto &#xE9; uma cole&#xE7;&#xE3;o de elementos &#xFA;nicos, ou seja, todos elementos s&#xE3;o diferentes dois a dois.</p>
+<p>Um dicion&#xE1;rio &#xE9; um mapeamento entre um conjunto de chaves e uma cole&#xE7;&#xE3;o de valores. O conjunto de chave &#xE9; &#xFA;nico (n&#xE3;o podemos ter duas chaves iguais), e para cada chave definida teremos um valor. Este valor pode ser qualquer coisa: um n&#xFA;mero, uma string, uma lista, um conjunto e at&#xE9; um outro dicion&#xE1;rio.</p>
+<p>&#xC9; equivalente &#xE0;</p>
+<ul>
+<li>uma fun&#xE7;&#xE3;o matem&#xE1;tica.</li>
+<li>rela&#xE7;&#xE3;o &quot;chaves e valores&quot; de uma tabela em um banco de dados relacional.</li>
+</ul>
 <h2 class="mume-header" id="linguagem-de-programa%C3%A7%C3%A3o">Linguagem de Programa&#xE7;&#xE3;o</h2>
 
-<p>Linguagens de programa&#xE7;&#xE3;o de alto n&#xED;vel, como Python (vers&#xE3;o 3), Java, e C++ t&#xEA;m suporte para o uso de conjuntos.</p>
-<p>Como toda cole&#xE7;&#xE3;o voc&#xEA; pode criar um conjunto, adicionar elementos, ver a quantidade de elementos, iterar na cole&#xE7;&#xE3;o, entre outras fun&#xE7;&#xF5;es.</p>
-<p>Mas com a garantia que todos os elementos desta cole&#xE7;&#xE3;o s&#xE3;o diferentes entre si, ou seja, se dois elementos iguais forem adicionados, um deles ser&#xE1; ignorado.</p>
+<p>Linguagens de programa&#xE7;&#xE3;o de alto n&#xED;vel, como Python, Java, e C++ t&#xEA;m suporte para o uso de dicion&#xE1;rios.</p>
+<p>Em Java e C++ s&#xE3;o chamados de <code>Map</code></p>
+<p>Como toda cole&#xE7;&#xE3;o voc&#xEA; pode criar um dicion&#xE1;rio, adicionar uma chave com um valor, ver a quantidade de elementos, iterar nas chave, nos valores, <strong>ou em ambos</strong>, entre outras fun&#xE7;&#xF5;es.</p>
+<p>Voc&#xEA; sempre ter&#xE1; a garantia de que as chaves ser&#xE3;o &#xFA;nicas e ter&#xE1; um valor associado a ela, mesmo que este valor seja o <code>None</code> (o valor nulo em Python).</p>
 <h2 class="mume-header" id="python">Python</h2>
 
-<p>Python tem suporte a conjuntos &#xE0; partir da vers&#xE3;o 3. Assim como o tipo de lista &#xE9; <code>list</code>, o tipo de conjunto &#xE9; <code>set</code>.</p>
+<p>Python tem suporte a dicion&#xE1;rios e seu tipo &#xE9; <code>dict</code>.</p>
 <h3 class="mume-header" id="criando-conjuntos">Criando conjuntos</h3>
 
 <p>Para criar um conjunto em Python podemos usar as seguintes fun&#xE7;&#xF5;es:</p>
@@ -377,13 +383,13 @@ s
 <p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba uma lista de n&#xFA;meros e retorne um conjunto com todos os n&#xFA;meros &#xFA;nicos que s&#xE3;o pares.</p>
 <h3 class="mume-header" id="exerc%C3%ADcio-04">Exerc&#xED;cio 04:</h3>
 
-<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba duas listas de inteiros, e retorne um conjuntos com todos os n&#xFA;meros que est&#xE3;o <strong>nas duas listas</strong>, sem repeti&#xE7;&#xF5;es.</p>
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba duas listas de inteiros separados por espa&#xE7;o, e retorne um conjuntos com todos os n&#xFA;meros que est&#xE3;o <strong>nas duas listas</strong>, sem repeti&#xE7;&#xF5;es.</p>
 <h3 class="mume-header" id="exerc%C3%ADcio-05">Exerc&#xED;cio 05:</h3>
 
-<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba duas listas de inteiros, e retorne um conjuntos com todos os n&#xFA;meros que est&#xE3;o em <strong>pelo menos uma das duas listas</strong>, sem repeti&#xE7;&#xF5;es.</p>
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba duas listas de inteiros separados por espa&#xE7;o, e retorne um conjuntos com todos os n&#xFA;meros que est&#xE3;o em <strong>pelo menos uma das duas listas</strong>, sem repeti&#xE7;&#xF5;es.</p>
 <h3 class="mume-header" id="exerc%C3%ADcio-06">Exerc&#xED;cio 06:</h3>
 
-<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba duas listas de inteiros, e retorne um conjuntos com todos os n&#xFA;meros que est&#xE3;o na primeira lista mas n&#xE3;o est&#xE1; na segunda, sem repeti&#xE7;&#xF5;es.</p>
+<p>Fa&#xE7;a uma fun&#xE7;&#xE3;o que receba duas listas de inteiros separados por espa&#xE7;o, e retorne um conjuntos com todos os n&#xFA;meros que est&#xE3;o na primeira lista mas n&#xE3;o est&#xE1; na segunda, sem repeti&#xE7;&#xF5;es.</p>
 <p><a href="https://github.com/viniciusdenovaes/Unip222IPE/tree/master/lab07">Respostas</a></p>
 <p>.</p>
 
