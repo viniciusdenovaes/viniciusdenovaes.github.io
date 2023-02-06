@@ -7,7 +7,13 @@
 
 ## Aulas
 
-### Atuais (2022/2)
+### Atuais (2023/1)
+* [LPOO](aulas/unip/20231/lpoo.html)
+* [IA](aulas/unip/20231/ia.html)
+* [CG](aulas/unip/20231/cg.html)
+* [AA](aulas/unip/20231/aa.html)
+
+### (2022/2)
 * [IPE](aulas/unip/20222/ipe.html)
 * [ALPOO](aulas/unip/20222/alpoo.html)
 * [Processamento de Imagens e Visão Computacional](aulas/unip/20222/pi.html)

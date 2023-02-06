@@ -1,0 +1,17 @@
+%\incmargin{1em} 
+\linesnumbered \dontprintsemicolon
+\begin{algorithm}[ht!]{
+  \footnotesize
+  \caption{Merge-sort$(A,p,r)$\label{alg:merge-sort}}
+
+  \Entrada{Um vetor $A$, a posição do início do vetor $p$ e a posição final $r$.}
+  \Saida{O vetor $A$ ordenado da posição $p$ até a posição $r$.}
+  
+  \Se{$p<r$}{
+    $q = \lfloor (p+r)/2\rfloor$\;
+  }
+  Merge-Sort($A$, $p$, $q$)\;
+  Merge-Sort($A$, $q+1$, $r$)\;
+  Merge($A$, $p$, $q$, $r$)\;
+}
+\end{algorithm}

@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+
+\usepackage[brazil]{babel}   
+\usepackage[utf8]{inputenc}  
+%\usepackage[T1]{fontenc}
+\usepackage{amsfonts,amsmath,amssymb,latexsym} 
+
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,positioning,shadows,trees}
+
+
+
+
+\def\cQ{\mathcal{Q}}
+\def\ve{\varepsilon}
+\newcommand\Tau{\mathcal{T}}
+
+
+
+
+
+
+\def\emptyset{\varnothing}
+
+
+
+
+
+\title{Lista 04 de Aspectos Teóricos da Computação
+\\PARA ENTREGAR
+}
+\date{1º Período de 2018}
+\author{Turma do 4º ano}
+
+\begin{document} 
+
+\maketitle
+
+
+\begin{enumerate}
+
+\item Diga quais dos seguintes problemas pertencem à classe P, quais pertencem à NP, e quais pertencem às duas classes. Justifique a sua resposta.
+
+\begin{enumerate}
+
+\item Dado um grafo simples, encontrar um subconjunto $S$, de tamanho $k$, de vértices neste grafo, tal que todos os vértices deste subconjunto $S$ esteja ligado a todos os vértices do próprio subconjunto $S$
+
+\item Dado um grafo simples, encontrar um subconjunto $S$, de tamanho $k$, de vértices neste grafo, tal que todos os vértices deste subconjunto $S$ esteja ligado a todos os vértices do conjunto $V$ de vértices do grafo
+
+\end{enumerate}
+
+
+\item Mostre que os seguintes problemas são NP
+
+\begin{enumerate}
+
+\item CLIQUE
+
+\item SUBSET-PART
+
+\end{enumerate}
+
+\item Mostre que os seguintes problemas são NP-Completos
+
+\begin{enumerate}
+
+\item Problema da rota de veículos: Dado um grafo $G = (V,E)$ simples, completo, com custo nas arestas. Dado um subconjunto $T\subseteq V$, dado um número real $k$. Encontrar um conjunto de ciclos, tal que, cada ciclo passe por exatamente um vértice de $T$; todo vértice de $V$ esteja em um ciclo; e a soma dos custos de todos os ciclos seja menor ou igual a $k$. (Considere que vértices sozinhos formam um ciclo)
+
+\item Problema do conjunto independente: Dado um grafo $G = (V,E)$ simples, encontrar um subconjunto $S\subseteq V$ tal que cada vértice de $S$ não seja vizinho a nenhum vértice de $S$. (Dica: reduza o problema do CLIQUE para este)
+
+\end{enumerate}
+
+\item Bonie e Clyde roubaram um banco e agora querem dividir os ganhos, mas será que o que eles roubaram pode ser dividido igualmente? 
+Verifique em quais das situações é possível encontrar um algoritmo polinomial para dividir os ganhos.
+Justifique a sua resposta.
+
+\begin{enumerate}
+
+\item A mesma situação do item anterior, mas desta vez eles aceitam que a divisão tenha uma difereça de 10 reais.
+
+\item Todo material roubado são cheques, endereçado a eles, com valores diferentes um do outro.
+
+\item A mesma situação do item anterior, mas desta vez eles aceitam que a divisão tenha uma difereça de 10 reais.
+
+\end{enumerate}
+
+
+
+
+
+\end{enumerate}
+
+\end{document}
+
