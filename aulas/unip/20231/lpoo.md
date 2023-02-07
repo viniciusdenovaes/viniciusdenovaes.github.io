@@ -21,11 +21,11 @@
   - [Tipos Primitivos e Operações](lpoo_files/curso/01/tipos_primitivos.html)
   - [Comandos de Controle](lpoo_files/curso/01/comandos_de_controle.html)
 
-<!-- - Parte 02 Orientação a Objetos
+- Parte 02 Orientação a Objetos
   - [Classes](lpoo_files/curso/02/01-classes.html)
   - [Convenções](lpoo_files/curso/02/02-convencoes.html)
 
-- Parte 03 - Introdução à primeira estrutura de dados: Lista
+<!-- - Parte 03 - Introdução à primeira estrutura de dados: Lista
   - [ArrayList](lpoo_files/curso/03/array_list.html)
 
 - Parte 04 - Herança
