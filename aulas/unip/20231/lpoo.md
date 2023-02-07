@@ -45,7 +45,7 @@
 ## Laboratórios (Em Construção)
 
 - [lab00 - Usando funções (métodos estáticos)](lpoo_files/laboratorio/00-basico/comandos-basicos.html)
-  - [respostas](https://github.com/viniciusdenovaes/Unip211LPOO/tree/main/Lab00/src/lab00)
+  - [respostas](https://github.com/viniciusdenovaes/Unip231LPOO/tree/main/Lab00/src/lab00)
 <!-- - Lab01
   - [lab01 - Classes como estruturas](lpoo_files/laboratorio/01-classes/01.00-classes_pre.html)
   - [lab01 - Classes com métodos](lpoo_files/laboratorio/01-classes/01.01-classes.html)
