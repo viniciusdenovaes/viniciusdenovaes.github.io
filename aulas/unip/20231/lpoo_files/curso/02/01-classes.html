@@ -275,46 +275,46 @@ pre[data-line] .line-highlight[data-end]:after {
 <h2 class="mume-header" id="como-escrevemos-uma-classe">Como escrevemos uma classe?</h2>
 
 <p>Por enquanto usaremos somente classes p&#xFA;blicas, por&#xE9;m os campos devem ser todos <code>private</code>, ent&#xE3;o toda classe ser&#xE1; feita como abaixo</p>
-<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> nomeDaClasse<span class="token punctuation">{</span>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> nomeDaClasse<span class="token punctuation">{</span>
     <span class="token comment">// nossos atributos</span>
-    <span class="token keyword">private</span> <span class="token class-name">Tipo01</span> variavel01<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token class-name">Tipo02</span> variavel02<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token class-name">Tipo03</span> variavel03<span class="token punctuation">;</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">Tipo01</span> variavel01<span class="token punctuation">;</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">Tipo02</span> variavel02<span class="token punctuation">;</span>
+    <span class="token keyword keyword-private">private</span> <span class="token class-name">Tipo03</span> variavel03<span class="token punctuation">;</span>
 
     <span class="token comment">// nossos constructors</span>
-    <span class="token keyword">public</span> <span class="token function">nomeDaClasse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>variavel01 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Tipo01</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>variavel02 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Tipo02</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>variavel03 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Tipo03</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-public">public</span> <span class="token function">nomeDaClasse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>variavel01 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Tipo01</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>variavel02 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Tipo02</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>variavel03 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Tipo03</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token function">nomeDaClasse</span><span class="token punctuation">(</span><span class="token class-name">Tipo01</span> aVariavel01<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Aqui eu estou chamando o constructor desta mesma classe</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>variavel01 <span class="token operator">=</span> aVariavel01<span class="token punctuation">;</span>
+    <span class="token keyword keyword-public">public</span> <span class="token function">nomeDaClasse</span><span class="token punctuation">(</span><span class="token class-name">Tipo01</span> aVariavel01<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword keyword-this">this</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Aqui eu estou chamando o constructor desta mesma classe</span>
+        <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>variavel01 <span class="token operator">=</span> aVariavel01<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token function">nomeDaClasse</span><span class="token punctuation">(</span><span class="token class-name">Tipo01</span> aVariavel01<span class="token punctuation">,</span> <span class="token class-name">Tipo02</span> aVariavel02<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">(</span>aVariavel01<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Aqui eu estou chamando o constructor desta mesma classe</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>variavel02<span class="token operator">=</span> aVariavel02<span class="token punctuation">;</span>
+    <span class="token keyword keyword-public">public</span> <span class="token function">nomeDaClasse</span><span class="token punctuation">(</span><span class="token class-name">Tipo01</span> aVariavel01<span class="token punctuation">,</span> <span class="token class-name">Tipo02</span> aVariavel02<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword keyword-this">this</span><span class="token punctuation">(</span>aVariavel01<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Aqui eu estou chamando o constructor desta mesma classe</span>
+        <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>variavel02<span class="token operator">=</span> aVariavel02<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
     <span class="token comment">// nossos m&#xE9;todos</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setVariavel01</span><span class="token punctuation">(</span><span class="token class-name">Tipo01</span> aVariavel01<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>variavel01 <span class="token operator">=</span> aVariavel01<span class="token punctuation">;</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">setVariavel01</span><span class="token punctuation">(</span><span class="token class-name">Tipo01</span> aVariavel01<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>variavel01 <span class="token operator">=</span> aVariavel01<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token class-name">Tipo1</span> <span class="token function">getVariavel01</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>variavel01<span class="token punctuation">;</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">Tipo1</span> <span class="token function">getVariavel01</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword keyword-return">return</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>variavel01<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
     <span class="token comment">// Podemos definir m&#xE9;todos que tenham o mesmo nome, isto de chama overloading</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">metodo01</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">metodo01</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token comment">// coisas que o m&#xE9;todo 01 faz</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">metodo01</span><span class="token punctuation">(</span><span class="token class-name">Tipo</span> aVariavel<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">metodo01</span><span class="token punctuation">(</span><span class="token class-name">Tipo</span> aVariavel<span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token comment">// coisas que o m&#xE9;todo 01 faz quando recebe uma vari&#xE1;vel do tipo &quot;Tipo&quot;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">metodo01</span><span class="token punctuation">(</span><span class="token class-name">Tipo</span> aVariavel<span class="token punctuation">,</span> <span class="token class-name">OutroTipo</span> aOutraVariavel<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">metodo01</span><span class="token punctuation">(</span><span class="token class-name">Tipo</span> aVariavel<span class="token punctuation">,</span> <span class="token class-name">OutroTipo</span> aOutraVariavel<span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token comment">// coisas que o m&#xE9;todo 01 faz quando recebe uma vari&#xE1;vel do tipo &quot;Tipo&quot;, e uma outra vari&#xE1;vel do tipo &quot;OutroTipo&quot;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token class-name">Tipo04</span> <span class="token function">metodo02</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">Tipo04</span> <span class="token function">metodo02</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token comment">// outro m&#xE9;todo que retorna um objeto do tipo &quot;Tipo04&quot;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
@@ -398,9 +398,6 @@ Se uma modificar o valor, este ser&#xE1; modificado para todos os outros objetos
 <p>Um m&#xE9;todo <code>static</code> <strong>n&#xE3;o</strong> poder&#xE1; ter acesso ao valor das vari&#xE1;veis do objeto, somente &#xE0;s veri&#xE1;veis <code>static</code> da classe.</p>
 <p>Um m&#xE9;todo <code>static</code> pode criar objetos e poder&#xE1; ter acesso &#xE0; qualquer objeto que criou.</p>
 <p>Um exemplo de m&#xE9;todo <code>static</code> &#xE9; o &quot;main&quot;</p>
-<h2 class="mume-header" id="modificador-final">Modificador <code>final</code></h2>
-
-<p>(TODO)</p>
 
       </div>
       
