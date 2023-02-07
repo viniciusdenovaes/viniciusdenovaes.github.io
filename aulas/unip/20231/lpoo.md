@@ -12,8 +12,10 @@
 
 - Prólogo
   - Instalação:.
-    - [Linux (Ubuntu)](lpoo_files/curso/00-install/linux/00-tuto_instal_linux_ubuntu.html)
-    - [Windows](lpoo_files/curso/00-install/windows/00-tuto_instal_windows.html)
+    - [Linux (Ubuntu)](lpoo_files/curso/00.0-install/linux/00-tuto_instal_linux_ubuntu.html)
+    - [Windows](lpoo_files/curso/00.0-install/windows/00-tuto_instal_windows.html)
+  - [Hello World - Como escrever um código que imprime uma mensagem na tela](lpoo_files/curso/00.1-hello/hello.html)
+
 
 - Parte 01 Comandos Básicos:
   - [Tipos Primitivos e Operações](lpoo_files/curso/01/tipos_primitivos.html)

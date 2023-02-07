@@ -1,6 +1,6 @@
 # Tipos Primitivos
 
-Assim como **C**, a linguagem Java é estaticamente tipada, isso quer dizer que toda variável declarada deve ter um tipo declarado.
+Assim como **C**, a linguagem Java é fortemente tipada, isso quer dizer que toda variável declarada deve ter um tipo declarado.
 
 Ou ela pode ser declarada como um **objeto**, ou ela pode ser de um dos tipos primitivos.
 
