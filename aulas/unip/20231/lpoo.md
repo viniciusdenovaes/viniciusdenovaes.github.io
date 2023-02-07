@@ -21,7 +21,7 @@
   - [Tipos Primitivos e Operações](lpoo_files/curso/01/tipos_primitivos.html)
   - [Comandos de Controle](lpoo_files/curso/01/comandos_de_controle.html)
 
-- Parte 02 Orientação a Objetos
+- Parte 02 Orientação a Objetos (Essa aula ainda não foi dada)
   - [Classes](lpoo_files/curso/02/01-classes.html)
   - [Convenções](lpoo_files/curso/02/02-convencoes.html)
 
