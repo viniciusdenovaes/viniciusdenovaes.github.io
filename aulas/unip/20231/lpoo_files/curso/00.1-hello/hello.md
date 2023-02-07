@@ -1,46 +1,131 @@
-# Tipos Primitivos
+# Hello World - Imprimindo Informação na Tela Para Quem Sabe `Python`
 
-Assim como **C**, a linguagem Java é fortemente tipada, isso quer dizer que toda variável declarada deve ter um tipo declarado.
+Vamos fazer o código mais simples possível para imprimir algo na tela.
 
-Ou ela pode ser declarada como um **objeto**, ou ela pode ser de um dos tipos primitivos.
+## O Programa Mais Simples do Mundo em Java
 
-Temos 8 tipos primitivos:
-* São 4 tipos de inteiros:
-    * o mais usado é o `int` representando números de -2,147,483,648 a 2,147,483,647, ocupa espaço de 4 bytes
-    * `short`, com espaço de 2 bytes
-    * `long`, que ocupa espaço de 8 bytes
-    * e o `byte`, que ocupa espaço de 1 byte.
-* São 2 tipos com pontos flutuantes (representações de números reais):
-    * o mais usado é o `double`, que tem precisão de 15 casas decimais significantes, e ocupa 8 bytes
-    * temos o `float`, com precisão de 6 casas decimais significativas, ocupando 4 bytes
-* Temos 1 tipo de character: `char` representando um símbolo/letra
-* E um tipo booleano: `boolean`, que pode somente ter os valores `true` (verdadeiro) ou `false` (falso)
+Em um arquivo chamado `Aula00HeloWorld.java`
+```java
+
+package aula00_hello_world;
+
+public class Aula00HeloWorld {
+
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+	}
+
+}
+
+```
+
+Bastante coisa comparando com o simples `print('Hello World')` do `Python`.
 
 
-Os tipos mais usados são `int`, `double`, `char` e `boolean`, e neste curso você precisa saber usar somentes estes.
+Não vamos explicar tudo nesta aula, com o tempo todas as palavras neste código serão entendidas. As regras que você precisa entender agora é:
+- Todo comando deve terminar com ponto-e-vírgula `;`
+- Todo escopo é delimitado por chaves `{}` Para delimitar o que está dentro de uma classe ou uma função não basta apenas identar, você deve delimitar usando as chaves `{}`
+- O nome do arquivo `Aula00HeloWorld.java` precisa ser o mesmo nome da classe `public class Aula00HeloWorld`
+- A função da classe com assinatura `public static void main(String[] args)` é o ponto de partida de onde o código começa quando o arquivo é executado.
+- Lembrar que todo comando deve terminar com ponto-e-vírgula `;`
+- `System.out.println()` é a função usada para imprimir alguma coisa na saída padrão (terminal)
+- Uma `String` em java é delimitada por aspas duplas (`"Hello World"`) e **não** por aspas simples.
+- Eu já falei que todo comando deve terminar com ponto-e-vírgula `;`? Não esqueça do ponto-e-vírgula `;`
 
-## Operações
+## Hello Variável
 
-Usaremos as operações que você já conhece:
- - `+` para soma entre dois `int` ou `double`,
- - `-` para subtração entre dois dois `int` ou `double`,
- - `*` para multiplicação entre dois dois `int` ou `double`,
- - `/` para divisão entre dois dois `int` ou `double`,
- - `&&` para a operação `AND` lógico "short-circuit" entre dois `boolean`,
- - `||` para a operação `OR` lógico "short-circuit" entre dois `boolean`,
- - `&` para a operação `AND` lógico não-"short-circuit" entre dois `boolean`,
- - `|` para a operação `OR` lógico não-"short-circuit" entre dois `boolean`,
- - `^` para a operação `XOR` lógico entre dois `boolean`.
+Para criar uma variável em `Java` precisamos dizer qual será o tipo de objeto que aquela variável irá guardar.
 
-## Continuação
+```java
+package aula00_hello_world;
 
-Existe muito mais material sobre estes assuntos, alguns serão colocados nesta página, outros serão dados em aula, e outros estão nos livros da ementa.
+public class HelloVariavel {
 
-Alguns assuntos não tratados aqui são:
- - Truncamento
- - Casting
- - Operador `+` para concatenar `String`
- - O que é um operador lógico "short-circuit"?
- - Como funciona operações entre `int` e `double`?
+	public static void main(String[] args) {
+
+		String a = "Hello World";
+
+		System.out.println(a);
+	}
+
+}
+```
+
+Neste caso a variável `a` é uma `String`. Precisamos dizer o tipo de `a` ao criar a variável.
+
+Lembre que uma variável pode mudar o valor que ela guarda mas não pode mudar o tipo.
+
+## Hello Numeros
+
+Aqui vamos aprender a criar e imprimir alguns números. Mas saiba que em `Java` existe diferença entre criar um número inteiro (`int`) e um número real (`double`)
+
+### Números Inteiros
+
+```java
+package aula00_hello_world;
+
+public class HelloInteiro {
+
+	public static void main(String[] args) {
+
+		int a = 2;
+
+		System.out.println(a);
+	}
+
+}
+
+```
+
+A variável `a` é um número inteiro. Para escrever um número inteiro basta escrever o número. Mas **nunca** escreva `2.0` e sim `2`
+
+### Números Reais
+
+```java
+package aula00_hello_world;
+
+public class HelloDouble {
+
+	public static void main(String[] args) {
+
+		double a = 4.0/3.0;
+
+		System.out.println(a);
+	}
+
+}
+
+```
+A variável `a` é um número real, que chamamos de `double`. Para escrever um `double` você precisa escrever o `.` no meio do número.
+
+**Importante**: Em `Java` o resultado de `5/3` é `1`, enquanto que o resultado de `5.0/3.0` é `1.6666666666666667`. O motivo disso é que uma divisão entre inteiros vai ter como resultado um número inteiro (que será o resultado sem a parte à direita do ponto)
+
+### Misturando `String` e `double` e escrevendo uma função
+
+```java
+package aula00_hello_world;
+
+public class HelloStringAndDouble {
+
+	public static void main(String[] args) {
+
+		double a = 4.0;
+		double b = 3.0;
+		double c = divisao(a, b);
+
+		System.out.println("A divisao de " + a + " por " + b + " eh igual a " + c);
+	}
+
+
+	public static double divisao(double numero1, double numero2) {
+		return numero1/numero2;
+	}
+
+}
+```
+
+Um exemplo concatenando `String` com números usando o operador `+`.
+
+Aqui temos também um exemplo de função, perceba que precisamos dizer qual será o tipo que uma função retornará. No caso da `main` nada é retornado, então o tipo é `void`. No caso da `divisao` o tipo é `double`
 
 .
