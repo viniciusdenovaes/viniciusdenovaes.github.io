@@ -12,6 +12,7 @@
 * [IA](aulas/unip/20231/ia.html)
 * [CG](aulas/unip/20231/cg.html)
 * [AA](aulas/unip/20231/aa.html)
+* [DAW](aulas/unip/20231/aula01.pdf)
 
 ### (2022/2)
 * [IPE](aulas/unip/20222/ipe.html)
