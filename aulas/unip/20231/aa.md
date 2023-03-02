@@ -1,4 +1,4 @@
-# Análise de Algoritmos (Em Construção)
+# Análise de Algoritmos
 
 ## Listas
 
