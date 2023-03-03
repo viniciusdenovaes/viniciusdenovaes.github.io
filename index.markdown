@@ -12,7 +12,7 @@
 * [IA](aulas/unip/20231/ia.html)
 * [CG](aulas/unip/20231/cg.html)
 * [AA](aulas/unip/20231/aa.html)
-* [DAW](aulas/unip/20231/daw.html)
+* [PWR](aulas/unip/20231/pwr.html)
 
 ### (2022/2)
 * [IPE](aulas/unip/20222/ipe.html)
