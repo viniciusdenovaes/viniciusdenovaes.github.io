@@ -42,7 +42,7 @@
   - [Map](lpoo_files/curso/05/map.html)
  -->
 
-## Laboratórios (Em Construção)
+## Laboratórios
 
 - [lab00 - Usando funções (métodos estáticos)](lpoo_files/laboratorio/00-basico/comandos-basicos.html)
   - [respostas](https://github.com/viniciusdenovaes/Unip231LPOO/tree/main/Lab00/src/lab00)
