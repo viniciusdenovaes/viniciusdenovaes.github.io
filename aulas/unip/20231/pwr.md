@@ -22,3 +22,4 @@
     - alinhamentos: left, center, right e justify
     - href para links
   - imagens
+- [Aula 2](pwr_files/aula02.pdf)
