@@ -64,7 +64,7 @@
 -->
 
 ## Prova em Aula
-- [NP1](lpoo_files/provas_aula/prova01LPOOaula.pdf)
+- [NP1 prova do ano passado, não vale nota](lpoo_files/provas_aula/prova01LPOOaula.pdf)
 
 
 <!--## Trabalho para a NP1
