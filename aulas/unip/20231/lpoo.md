@@ -63,6 +63,10 @@
     * [Gabarito](lpoo_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.zip)
 -->
 
+## Prova em Aula
+- [NP1](lpoo_files/provas_aula/prova01LPOOaula.pdf)
+
+
 <!--## Trabalho para a NP1
 
 * [Trabalho para a NP1](lpoo_files/trabalhos/01/trabalho01.html)
