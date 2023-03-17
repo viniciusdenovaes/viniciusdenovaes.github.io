@@ -23,3 +23,5 @@
     - href para links
   - imagens
 - [Aula 2](pwr_files/aula02.pdf)
+- [Aula 3](pwr_files/aula03.pdf)
+- [Aula 4](pwr_files/aula04.pdf)
