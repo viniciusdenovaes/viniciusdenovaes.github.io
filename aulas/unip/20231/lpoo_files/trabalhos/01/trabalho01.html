@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="file:////home/vinicius/.atom/packages/markdown-preview-enhanced/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      <link rel="stylesheet" href="file:////home/vinicius/programs/atom_packages/markdown-preview-enhanced/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
       
       
       
@@ -261,98 +261,166 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="trabalho-de-lpoo-grupo-de-5-pessoas-para-o-dia-1604">Trabalho de LPOO (grupo de 5 pessoas, para o dia 16/04)</h1>
+      <h1 class="mume-header" id="trabalho-de-lpoo-np2-grupo-m%C3%A1ximo-de-6-pessoas">Trabalho de LPOO: NP2 (grupo m&#xE1;ximo de 6 pessoas)</h1>
 
-<p>Para este trabalho voc&#xEA; deve fazer o sistema de cadastro de um hist&#xF3;rico.</p>
-<p>Neste sistema deve ser poss&#xED;vel que um usu&#xE1;rio final:</p>
+<p>Neste trabalho o grupo deve fazer um programa de acesso aos dados de uma faculdade, com informa&#xE7;&#xF5;es sobre cadastro de alunos e cursos; e notas dos alunos.</p>
+<h2 class="mume-header" id="dados">Dados</h2>
+
+<p>o seu programa deve processar dados relativos a alunos, cursos, notas e rendimentos da faculdade.</p>
 <ul>
-<li>Cadastre as mat&#xE9;rias e as notas destas mat&#xE9;ria (1pt).</li>
-<li>Listar todas as mat&#xE9;rias cadastradas (1pt).</li>
-<li>Listar mat&#xE9;rias de um ano espec&#xED;fico (1pt).</li>
-<li>Listar apenas as mat&#xE9;rias aprovadas/reprovadas (1pt).</li>
-<li>Exibir um relat&#xF3;rio que exibe
+<li>Um <code>Aluno</code> tem:
 <ul>
-<li>todas as mat&#xE9;rias (em qualquer ordem),</li>
-<li>a m&#xE9;dia de cada mat&#xE9;ria (1pt),</li>
-<li>o status (se foi aprovado ou n&#xE3;o) (1pt),</li>
-<li>a mat&#xE9;ria com a maior <strong>e</strong> menor m&#xE9;dia (1pt),</li>
-<li>e o &quot;coeficiente de rendimento&quot; (a m&#xE9;dia de todas as m&#xE9;dias) (1pt)</li>
+<li>um <code>id</code>, do tipo <code>String</code>;</li>
+<li>um <code>nome</code> do tipo <code>String</code>
+<ul>
+<li>Cada aluno tem um <code>id</code> &#xFA;nico e pode ser identificado exclusivamente por seu <code>id</code>; dois alunos podem ter o mesmo nome, mas nunca o mesmo <code>id</code></li>
 </ul>
 </li>
 </ul>
-<p>OBS: a fun&#xE7;&#xE3;o de listar pode ser a mesma do relat&#xF3;rio.</p>
-<p>As fun&#xE7;&#xF5;es podem ser demonstradas dentro de uma classe <code>Teste</code> com um <code>main</code> (Veja um exemplo de classe <code>Teste</code> no final da p&#xE1;gina). Caso voc&#xEA; n&#xE3;o fa&#xE7;a a interface com o usu&#xE1;rio final voc&#xEA; ganhar&#xE1; os pontos referentes &#xE0; cada fun&#xE7;&#xE3;o mas n&#xE3;o ganhar&#xE1; os pontos referentes &#xE0; interface com o usu&#xE1;rio final.</p>
-<p>Voc&#xEA; pode fazer uma interface com o usu&#xE1;rio final atrav&#xE9;s do terminal e/ou usando a biblioteca &quot;Swing&quot; (2pt).</p>
-<p><strong>OBS: &#xC9; altamente recomend&#xE1;vel que voc&#xEA; fa&#xE7;a o trabalho nesta ordem e garanta os pontos das partes que voc&#xEA; fez.</strong> Para cada item feito atualize o <code>Teste</code> para coontemplar este item.</p>
-<h3 class="mume-header" id="entidades">Entidades</h3>
-
-<h4 class="mume-header" id="materia"><code>Materia</code></h4>
-
-<p>A <code>Materia</code> &#xE9; uma entidade que tem</p>
+</li>
+<li>Um <code>Curso</code> tem:
 <ul>
-<li>um <code>nome</code>, o nome da mat&#xE9;ria;</li>
-<li>e um <code>ano</code>, o ano em que foi ministrada.</li>
-</ul>
-<h4 class="mume-header" id="notas"><code>Notas</code></h4>
-
-<p>Cada <code>Materia</code> possui 4 notas:</p>
+<li>um <code>nome</code>, do tipo <code>String</code>;</li>
+<li>um <code>nivel</code> de dois poss&#xED;veis, podendo ser de &quot;graduacao&quot;, ou &quot;pos_graduacao&quot;;</li>
+<li>um <code>ano</code>, do tipo inteiro, representando o ano que o curso foi dado;
 <ul>
-<li><code>np1</code>, representa a nota da primeira prova;</li>
-<li><code>np2</code>, representa a nota da segunda prova;</li>
-<li><code>sub</code>, representa a nota da prova substitutiva;</li>
-<li><code>exame</code>, representa a nota do exame final;</li>
+<li>Cada curso deve ser identificado pela combina&#xE7;&#xE3;o de seus tr&#xEA;s campos; dois cursos s&#xE3;o iguais se, e somente se, seus tr&#xEA;s campos forem iguais.</li>
 </ul>
-<h3 class="mume-header" id="regras-de-aprova%C3%A7%C3%A3o-e-m%C3%A9dia">Regras de aprova&#xE7;&#xE3;o e m&#xE9;dia</h3>
-
-<h4 class="mume-header" id="aprova%C3%A7%C3%A3o">Aprova&#xE7;&#xE3;o</h4>
-
-<p>Para que um aluno seja aprova ele deve ter m&#xE9;dia final maior ou igual a <code>5.0</code>.</p>
-<h4 class="mume-header" id="m%C3%A9dia-final">M&#xE9;dia Final</h4>
-
-<p>Para calcular a &quot;m&#xE9;dia final&quot; devemos calcular duas m&#xE9;dias:</p>
+</li>
+</ul>
+</li>
+<li>Uma rela&#xE7;&#xE3;o <code>Aluno</code> e <code>Curso</code> chamada de <code>Rendimento</code>:
 <ul>
-<li>Devesse pegar as <strong>duas maiores</strong> notas entre a <code>np1</code>, <code>np2</code>, e <code>sub</code> e calcular esta m&#xE9;dia. Se esta m&#xE9;dia for maior, ou igual, a <code>7.0</code> ent&#xE3;o est&#xE1; ser&#xE1; a &quot;m&#xE9;dia final&quot;.</li>
-<li>Caso a m&#xE9;dia anterior seja menor que <code>7.0</code>, deve-se calcular a m&#xE9;dia entre a &quot;m&#xE9;dia anterior&quot; e o exame, o resultado ser&#xE1; a &quot;m&#xE9;dia final&quot;.</li>
+<li>Um <code>Rendimento</code> representa a qualidade das notas que <em>um</em> <code>Aluno</code> obteve em <em>um</em> <code>Curso</code>:</li>
+<li>um <code>rendimento</code> est&#xE1; atrelado &#xE0; <em>um</em> <code>aluno</code> e <em>um</em> <code>curso</code></li>
+<li>um <code>rendimento</code> tem:
+<ul>
+<li>Cont&#xEA;m 4 valores do tipo <code>double</code>: a nota da NP1, da NP2, da reposi&#xE7;&#xE3;o, e do exame.</li>
 </ul>
-<p><strong>OBS</strong>: este c&#xE1;lculo da m&#xE9;dia n&#xE3;o representa a mesma regra que a Unip usa.</p>
-<h3 class="mume-header" id="exemplo-de-classe-teste">Exemplo de classe <code>Teste</code></h3>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="relat%C3%B3rios">Relat&#xF3;rios</h3>
 
-<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Teste</span> <span class="token punctuation">{</span>
+<p>O seu programa deve gerar alguns relat&#xF3;rios baseados nas seguintes regras:</p>
+<ul>
+<li>Cada <code>Rendimento</code> tem os valores associados
+<ul>
+<li>um valor <code>aprovado</code> do tipo <code>boolean</code></li>
+<li>um valor <code>media</code>, do tipo <code>double</code>, associada &#xE0;s notas do curso, esta m&#xE9;dia deve ser calculada da seguinte maneira:
+<ul>
+<li>deve ser calculada uma m&#xE9;dia inicial (vari&#xE1;vel local) da seguinte maneira: caso a nota da reposi&#xE7;&#xE3;o seja maior que a nota da NP1 ou da NP2, a menor nota, entre a NP1 e a NP2, deve ser substitu&#xED;da pela nota da reposi&#xE7;&#xE3;o, (esta substitui&#xE7;&#xE3;o deve ser feita apenas no c&#xE1;lculo da m&#xE9;dia, a nota em da NP1 ou da NP2 n&#xE3;o devem mudar de valor.) O valor da m&#xE9;dia entre a NP1 e NP2, depois de ter sido feita a substitu&#xED;&#xE7;&#xE3;o, ser&#xE1; a m&#xE9;dia inicial</li>
+<li>caso o curso seja um curso de gradua&#xE7;&#xE3;o:
+<ul>
+<li>se a m&#xE9;dia inicial for maior ou igual a 7.0, ent&#xE3;o a m&#xE9;dia se mant&#xE9;m no valor da m&#xE9;dia inicial e o valor de aprovado &#xE9; verdadeiro.</li>
+<li>se a m&#xE9;dia inicial <strong>n&#xE3;o</strong> for maior que 7.0, ent&#xE3;o a m&#xE9;dia final ser&#xE1; calculada a partir da m&#xE9;dia entre a nota do exame e a m&#xE9;dia inicial. A m&#xE9;dia ter&#xE1; o valor da m&#xE9;dia final e se o seu valor for maior ou igual a 5.0, o valor de aprovado ser&#xE1; verdadeiro, caso esta m&#xE9;dia final seja menor que 5.0 o valor de aprovado &#xE9; falso</li>
+</ul>
+</li>
+<li>caso o curso seja um curso de p&#xF3;s gradua&#xE7;&#xE3;o:
+<ul>
+<li>se a m&#xE9;dia inicial for maior ou igual a 5.0, ent&#xE3;o a m&#xE9;dia se mant&#xE9;m no valor da m&#xE9;dia inicial e o valor de aprovado &#xE9; verdadeiro.</li>
+<li>se a m&#xE9;dia inicial <strong>n&#xE3;o</strong> for maior que 5.0, ent&#xE3;o a m&#xE9;dia final ser&#xE1; calculada a partir da m&#xE9;dia entre a nota do exame e a m&#xE9;dia inicial. Se o seu valor for maior ou igual a 5.0, o valor de aprovado ser&#xE1; verdadeiro, e a m&#xE9;dia ter&#xE1; o valor de 5.0. Caso esta m&#xE9;dia final seja menor que 5.0 o valor de aprovado &#xE9; falso e a m&#xE9;dia ter&#xE1; o valor da m&#xE9;dia final.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="estrutura-dos-dados-persistentes">Estrutura dos Dados Persistentes</h2>
 
-	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<p>Os dados persistentes dever&#xE3;o ser lidos e salvos em um arquivo <code>csv</code>. (2pts)</p>
+<p>Ser&#xE3;o 3 tipos de arquivos</p>
+<ul>
+<li>Um arquivo CSV com os dados dos alunos, na ordem &quot;id;nome&quot;</li>
+</ul>
+<h4 class="mume-header" id="exemplo">Exemplo:</h4>
 
-		<span class="token class-name">CadastroAbstract</span> cadastro <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Cadastro</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h5 class="mume-header" id="alunoscsv">alunos.csv</h5>
 
-		cadastro<span class="token punctuation">.</span><span class="token function">addRendimento</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Rendimento</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Materia</span><span class="token punctuation">(</span><span class="token string">&quot;APOO&quot;</span><span class="token punctuation">,</span> <span class="token number">2020</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token keyword">new</span> <span class="token class-name">Notas</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		cadastro<span class="token punctuation">.</span><span class="token function">addRendimento</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Rendimento</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Materia</span><span class="token punctuation">(</span><span class="token string">&quot;BPOO&quot;</span><span class="token punctuation">,</span> <span class="token number">2020</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token keyword">new</span> <span class="token class-name">Notas</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		cadastro<span class="token punctuation">.</span><span class="token function">addRendimento</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Rendimento</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Materia</span><span class="token punctuation">(</span><span class="token string">&quot;CPOO&quot;</span><span class="token punctuation">,</span> <span class="token number">2021</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token keyword">new</span> <span class="token class-name">Notas</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		cadastro<span class="token punctuation">.</span><span class="token function">addRendimento</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Rendimento</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Materia</span><span class="token punctuation">(</span><span class="token string">&quot;DPOO&quot;</span><span class="token punctuation">,</span> <span class="token number">2021</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token keyword">new</span> <span class="token class-name">Notas</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre data-role="codeBlock" data-info class="language-"><code>123;Ana
+124;Beto
+125;Carlos Magno
+b26;Danilo E.
+127;Fernando
+128;Gabriel M.
+129;Hugo S.
 
-		cadastro<span class="token punctuation">.</span><span class="token function">fazRelatorio</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li>Um arquivo CSV com os dados dos cursos na ordem &quot;nome;n&#xED;vel;ano&quot;</li>
+</ul>
+<h4 class="mume-header" id="exemplo-1">Exemplo:</h4>
 
-		cadastro<span class="token punctuation">.</span><span class="token function">imprimeMateriasDoAno</span><span class="token punctuation">(</span><span class="token number">2019</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		cadastro<span class="token punctuation">.</span><span class="token function">imprimeMateriasDoAno</span><span class="token punctuation">(</span><span class="token number">2020</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		cadastro<span class="token punctuation">.</span><span class="token function">imprimeMateriasDoAno</span><span class="token punctuation">(</span><span class="token number">2021</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h5 class="mume-header" id="cursoscsv">cursos.csv</h5>
 
-		cadastro<span class="token punctuation">.</span><span class="token function">imprimeMateriasStatus</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		cadastro<span class="token punctuation">.</span><span class="token function">imprimeMateriasStatus</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre data-role="codeBlock" data-info class="language-"><code>LPOO;GRADUACAO;2018
+ALPOO;GRADUACAO;2018
+ALPOO;GRADUACAO;2019
+ALPOO;POS_GRADUACAO;2019
 
-	<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>Para cada curso, um arquivo com o nome &quot;nome_n&#xED;vel_ano.csv&quot;, com as informa&#xE7;&#xF5;es das notas dos alunos naquele curso, na ordem &quot;id_do_aluno;nota_NP1;nota_NP2;nota_reposicao;nota_exame&quot;. Havendo a possibilidade de o arquivo n&#xE3;o ter nenhum dado, representando o fato de que ningu&#xE9;m cursou aquela mat&#xE9;ria naquele ano.</li>
+</ul>
+<h4 class="mume-header" id="exemplos">Exemplos:</h4>
 
-<span class="token punctuation">}</span>
-</pre><p>Esta classe abstrata serve apenas para servir de suporte ao exemplo de <code>Teste</code>, <strong>voc&#xEA; n&#xE3;o precisa usar</strong>.</p>
-<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">CadastroAbstract</span> <span class="token punctuation">{</span>
+<h5 class="mume-header" id="alpoo_graduacao_2018csv">ALPOO_GRADUACAO_2018.csv</h5>
 
-	<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">addRendimento</span><span class="token punctuation">(</span><span class="token class-name">Rendimento</span> rendimento<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre data-role="codeBlock" data-info class="language-"><code>123;8.0;7.0;0.0;0.0
+124;3.0;4.0;5.0;2.0
+125;2.0;4.0;1.0;9.0
 
-	<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">fazRelatorio</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h5 class="mume-header" id="alpoo_graduacao_2019csv">ALPOO_GRADUACAO_2019.csv</h5>
 
-	<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">imprimeMateriasDoAno</span><span class="token punctuation">(</span><span class="token keyword">int</span> ano<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre data-role="codeBlock" data-info class="language-"><code></code></pre><h5 class="mume-header" id="alpoo_pos_graduacao_2019csv">ALPOO_POS_GRADUACAO_2019.csv</h5>
 
-	<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">imprimeMateriasStatus</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> isAprovado<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre data-role="codeBlock" data-info class="language-"><code>123;7.0;9.0;0.0;0.0
+124;2.0;3.0;4.0;2.0
+125;2.0;4.0;5.0;9.0
+b26;1.0;5.0;5.0;0.0
 
-<span class="token punctuation">}</span>
-</pre>
+</code></pre><h5 class="mume-header" id="lpoo_graduacao_2019csv">LPOO_GRADUACAO_2019.csv</h5>
+
+<pre data-role="codeBlock" data-info class="language-"><code>129;10.0;0.0;2.0;0.0
+
+</code></pre><h2 class="mume-header" id="sistema">Sistema</h2>
+
+<p>O seu sistema deve acessar e manipular os dados persistentes.<br>
+De modo que, ao iniciar o programa, o usu&#xE1;rio final tenha acesso aos dados persistentes.<br>
+Ao terminar o programa, qualquer adi&#xE7;ao que o usu&#xE1;rio tenha feito esteja representada pelos dados persistentes no mesmo formato descrito.</p>
+<p>Neste sistema deve ser poss&#xED;vel que um usu&#xE1;rio final:</p>
+<ul>
+<li>Cadastre alunos (1pt)</li>
+<li>Listar alunos (1pt)</li>
+<li>Cadastre as mat&#xE9;rias(1pt).</li>
+<li>Listar todas as mat&#xE9;rias cadastradas (1pt).</li>
+<li>Listar mat&#xE9;rias de um ano espec&#xED;fico (1pt).</li>
+<li>Escolher um aluno (pelo RA) e mostrar o relat&#xF3;rio do aluno com:(1pt)
+<ul>
+<li>Todas as mat&#xE9;rias cursadas por este aluno com as notas e o status (se passou ou n&#xE3;o)</li>
+<li>Mostrar a m&#xE9;dia do hist&#xF3;rico do aluno.</li>
+</ul>
+</li>
+<li>Escolher uma mat&#xE9;ria (pelo nome, ano e n&#xED;vel) e mostrar o relat&#xF3;rio da mat&#xE9;ria com:(1pt)
+<ul>
+<li>Cada aluno que cursou a mat&#xE9;ria, com a sua m&#xE9;dia e status (se passou ou n&#xE3;o)</li>
+<li>A m&#xE9;dia das m&#xE9;dias da mat&#xE9;ria.</li>
+</ul>
+</li>
+<li>Escolher um <code>Aluno</code> e um <code>Curso</code> e cadastrar um <code>Rendimento</code>.</li>
+</ul>
+<h2 class="mume-header" id="interface-com-o-usu%C3%A1rio-final">Interface com o Usu&#xE1;rio Final</h2>
+
+<p>O seu programa deve se comunicar com o usu&#xE1;rio final atrav&#xE9;s do terminal, o usu&#xE1;rio deve poder executar todos os comandos listados em &quot;Sistemas&quot;.</p>
+<h2 class="mume-header" id="pontos-adicionais">Pontos Adicionais</h2>
+
+<ul>
+<li>Estruturas de Dados Interna: Caso o seu programa use estruturas de dados como <code>Map</code> e/ou <code>Set</code> para organizar os dados internos: (+1pt)</li>
+<li>Heran&#xE7;a e polimorfismo: Caso seu programa use heran&#xE7;a para organizar os diferentes tipos de <code>Rendimento</code> (c&#xE1;lculo da m&#xE9;dia final de GRADUACAO e POS_GRADUACAO). Por exemplo: Fa&#xE7;a com que <code>Rendimento</code> seja uma classe abstrata que tenha duas subclasses que tenham override do c&#xE1;lculo da m&#xE9;dia. (+1pt)</li>
+<li>Controle de Erros: Caso o seu programa tenha controle de erros usando <code>try-catch</code> da entrada do usu&#xE1;rio final (+1pt)</li>
+</ul>
+<p>.</p>
+
       </div>
       
       

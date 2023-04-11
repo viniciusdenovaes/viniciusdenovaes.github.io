@@ -7,11 +7,11 @@ Trabalho em grupo de, no máximo, 5 pessoas
 Neste trabalho o grupo deve fazer um programa de acesso aos dados de uma faculdade, com informações sobre cadastro de alunos e cursos; e notas dos alunos.
 
  == Dados
- 
+
  o seu programa deve processar dados relativos a alunos, cursos, notas e rendimentos da faculdade.
- 
+
  - Um +Aluno+ tem:
- -- um +id+, do tipo +String+; 
+ -- um +id+, do tipo +String+;
  -- um +nome+ do tipo +String+
  -- Cada aluno tem um +id+ único e pode ser identificado exclusivamente por seu +id+; dois alunos podem ter o mesmo nome, mas nunca o mesmo +id+
  - Um +Curso+ tem:
@@ -36,18 +36,18 @@ Neste trabalho o grupo deve fazer um programa de acesso aos dados de uma faculda
  ---- caso o curso seja um curso de pós graduação:
  ----- se a média inicial for maior ou igual a 5.0, então a média se mantém no valor da média inicial e o valor de aprovado é verdadeiro.
  ----- se a média inicial *não* for maior que 5.0, então a média final será calculada a partir da média entre a nota do exame e a média inicial. Se o seu valor for maior ou igual a 5.0, o valor de aprovado será verdadeiro, e a média terá o valor de 5.0. Caso esta média final seja menor que 5.0 o valor de aprovado é falso e a média terá o valor da média final.
- 
- 
- 
- 
- 
+
+
+
+
+
  == Interface
- 
+
  o programa deve ter uma interface com o usuário através do terminal, deve ser possível para o usuário
- 
+
  - Listar todos os cursos dados: para cada curso deve ser impresso seu nome, nível e ano, somente
  - Listar todos os alunos inscritos: para cada aluno deve ser impresso seu nome e id, somente
- - Listar o histórico de um determinado aluno: 
+ - Listar o histórico de um determinado aluno:
  -- o seu programa deve ter meios para o usuário escolher o aluno
  -- o histórico de um aluno deve conter todos os cursos que o aluno foi inscrito, e para cada curso o programa deve imprimir o curso, as notas, a média e se foi aprovado.
  - Listar o relatório de rendimento de cada curso:
@@ -56,24 +56,24 @@ Neste trabalho o grupo deve fazer um programa de acesso aos dados de uma faculda
  - Incluir um novo aluno: deve ser pedido para o usuário informar o id e o nome do aluno.
  - Incluir um novo curso: deve ser pedido para o usuário informar o nome, escolher o tipo, e informar o ano.
  - Incluir um novo rendimento, deve ser pedido para o usuário escolher um aluno já inscrito, um curso já inscrito, e o usuário deve informar as notas (NP1, NP2, substitutiva e exame) do novo rendimento.
- 
- 
- 
- 
+
+
+
+
  == Dados
- 
+
  === Entrada
- 
- Os dados iniciais do programa devem ser lidos de arquivos externos. 
- 
+
+ Os dados iniciais do programa devem ser lidos de arquivos externos.
+
  O local dos arquivos será preconfigurado em algum local da escolha do grupo. Os arquivos podem ser carregados no momento que o programa iniciar.
- 
+
  Teremos três tipos de arquivos:
- 
+
  - Um arquivo CSV com os dados dos alunos, na ordem "id;nome"
- 
+
  Exemplo:
- 
+
 ~~~
 {alunos.csv}{alunos}
 123;Ana
@@ -85,7 +85,7 @@ b26;Danilo E.
 ~~~
 
  - Um arquivo CSV com os dados dos cursos na ordem "nome;nível;ano"
- 
+
  Exemplo:
 
 ~~~
@@ -98,9 +98,9 @@ LPOO;GRADUACAO;2019
 ~~~
 
  - Para cada curso, um arquivo com o nome "nome_nível_ano.csv", com as informações das notas dos alunos naquele curso, na ordem "id_do_aluno;nota_NP1;nota_NP2;nota_reposicao;nota_exame". Havendo a possibilidade de o arquivo não ter nenhum dado, representando o fato de que ninguém cursou aquela matéria naquele ano.
- 
+
  Exemplos:
- 
+
  ~~~
 {ALPOO_GRADUACAO_2019.csv}{cursoALPOO_GRADUACAO_2019}
 123;7.0;9.0;0.0;0.0
@@ -115,21 +115,21 @@ LPOO;GRADUACAO;2019
 ~~~
 
  === Pacotes de Instâncias
- 
+
  - [inst/01.zip inst01]
 
  === Saída
- 
+
  Após terminar o programa, os arquivos listados devem estar atualizados com quaisquer modificações feitas pelo usuário, mas mantendo o formato especificado nesta seção.
- 
- 
- 
+
+
+
  == Controle de Erros
- 
+
  O seu programa deve ter um controle *para entradas do usuário* e conseguir voltar para um estado estável caso o usuário coloque alguma entrada não aceitável.
- 
+
  == Avaliação
- 
+
  O seu programa será avaliado nos seguintes requisitos:
  - De acordo com cada item feito da descrição do trabalho
  - De acordo com a estruturação do programa, se cada classe está fazendo o que deveria fazer (tente manter a regra de que cada classe deve ter apenas um trabalho)
@@ -141,18 +141,3 @@ LPOO;GRADUACAO;2019
  -- se usa conceitos dados em aula (encapsulamento e composição)
  -- se usa estruturas dadas em aula (ArrayList, Set, Map)
  - Você é convidado a usar outros conceitos não vistos, como "enumerate", "factory pattern", MVC, "programação genérica"...
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 

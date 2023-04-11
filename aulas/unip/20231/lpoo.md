@@ -31,16 +31,16 @@
 - Parte 04 - Herança
   - [Herança](lpoo_files/curso/04/heranca.html)
 
-<!-- - Interlúdio 01 - Controle de Erros
+- Parte 05 - Importantes Estruturas e Dados e Interfaces (INCOMPLETO)
+   - [Set](lpoo_files/curso/05/set.html)
+   - [Map](lpoo_files/curso/05/map.html)
+
+- Parte 06 - Controle de Erros
   - [Controle de Erros](lpoo_files/curso/00.1-erros-io/01-controle_erros.html)
 
-- Interlúdio 02 - Entrada e Saída
+- Parte 07 - Entrada e Saída
   - [IO](lpoo_files/curso/00.1-erros-io/02-io.html)
 
-- Parte 05 - Importantes Estruturas e Dados e Interfaces (INCOMPLETO)
-  - [Set](lpoo_files/curso/05/set.html)
-  - [Map](lpoo_files/curso/05/map.html)
- -->
 
 ## Laboratórios
 
@@ -57,30 +57,27 @@
   - [Herança](lpoo_files/laboratorio/04-heranca/04.00-exercicio_heranca.html)
   - [Exemplo sem Herança](lpoo_files/laboratorio/04-heranca/04.01-exercicio_sem_heranca.html)
   - [Modificando exercícios anteriores com Herança, classe abstrata e polimorfismo](lpoo_files/laboratorio/04-heranca/04.02-exercicio_com_heranca.html)
-<!--* lab04 - Interfaces
+* lab04 - Interfaces (Classes abstratas)
   * [Exemplo sem interface](lpoo_files/laboratorio/04-interfaces/04-sem_interface.html)
   * [Lista de Interfaces](lpoo_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.pdf)
     * [Gabarito](lpoo_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.zip)
--->
-
-## Prova em Aula
-- [NP1 prova do ano passado, não vale nota](lpoo_files/provas_aula/prova01LPOOaula.pdf)
 
 
-<!--## Trabalho para a NP1
 
-* [Trabalho para a NP1](lpoo_files/trabalhos/01/trabalho01.html)
+## Trabalho para a NP2
+
+- [Trabalho para a NP2](lpoo_files/trabalhos/01/trabalho01.html)
 
 ## APS
 
-* [Documento da APS (em .docx)](lpoo_files/aps/APS_LPOO_2021.docx)
-* [Roteiro para a APS (em html)](lpoo_files/aps/roteiro.html)
+- [Documento da APS (em .docx)](lpoo_files/aps/APS_LPOO_2023.docx)
 
+<!--
 ## Exemplos Vistos em Sala
 
 * [Github](https://github.com/viniciusdenovaes/Unip211LPOO)
-
 -->
+
 
 ## Ementa
 
