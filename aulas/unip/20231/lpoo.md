@@ -31,7 +31,7 @@
 - Parte 04 - Herança
   - [Herança](lpoo_files/curso/04/heranca.html)
 
-- Parte 05 - Importantes Estruturas e Dados e Interfaces (INCOMPLETO)
+- Parte 05 - Importantes Estruturas de Dados e Interfaces
    - [Set](lpoo_files/curso/05/set.html)
    - [Map](lpoo_files/curso/05/map.html)
 
