@@ -41,6 +41,7 @@
 - [Aula 3](pwr_files/aulas/aula03.pdf)
 
 - [Aula 4](pwr_files/aulas/aula04.pdf)
+   - [exemplo](pwr_files/exemplos/exemplo_css.html)
    - CSS, como funciona?
    - 3 tipos de declaração:
       - inline,
