@@ -3,7 +3,7 @@
 
 ## Material do Curso
 
-- [Aula 1](pwr_files/aula01.pdf)
+- [Aula 1](pwr_files/aulas/aula01.pdf)
   - O que é html
   - tags
     - html
@@ -24,7 +24,7 @@
       - alt para uma descrição alternativa da imagem
       - width e height para definir a largura e altura da imagem respectivamente
       - title um texto ao passar o mouse por cima da imagem
-- [Aula 2](pwr_files/aula02.pdf)
+- [Aula 2](pwr_files/aulas/aula02.pdf)
   - listas:
     - ol para lista ordenada, li para itens da lista
     - ul para lista não ordenada, li para itens da lista
@@ -38,8 +38,20 @@
     - atributo target podendo ter o valor "_blank" para abrir o link em uma nova aba
   -  \<!-- para inserção de comentário --\>
 
-- [Aula 3](pwr_files/aula03.pdf)
+- [Aula 3](pwr_files/aulas/aula03.pdf)
 
-- [Aula 4](pwr_files/aula04.pdf)
+- [Aula 4](pwr_files/aulas/aula04.pdf)
+   - CSS, como funciona?
+   - 3 tipos de declaração:
+      - inline,
+      - interno ao arquivo, no `<head><style type=”text/css”>...</style></head>`
+      - externo ao arquivo: `<link rel=”stylesheet” type=”text/css” href=”nome_pagina.css”>`
 
-- [Aula 5](pwr_files/aula05.pdf)
+- [Aula 5](pwr_files/aulas/aula05.pdf)
+   - Unidades de Medidas
+   - Fontes e cores
+
+
+
+
+.
