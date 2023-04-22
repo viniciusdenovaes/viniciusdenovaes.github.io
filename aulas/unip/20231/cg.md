@@ -1,4 +1,4 @@
-# Computação Gráfica (Em Construção)
+# Computação Gráfica
 
 
 ### Aulas
@@ -13,3 +13,5 @@
 
 ### Trabalho
 - [Trabalho 01 para NP2](cg_files/trabalhos/trabalho01.html)
+
+### [Github](https://github.com/viniciusdenovaes/Unip231CG)
