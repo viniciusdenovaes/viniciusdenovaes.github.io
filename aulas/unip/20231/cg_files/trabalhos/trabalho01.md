@@ -1,4 +1,4 @@
-# Trabalho 01 Computação Gráfica (Grupo de ? pessoas, para o dia ?)
+# Trabalho 01 para a NP2 Computação Gráfica (Grupo de ? pessoas, para o dia ?)
 
 Para este trabalho você deve fazer um programa que cria e exibe um polígono na tela. Seu programa deve ter uma interface para que o usuário consiga manipular alguns fatores do polígono.
 
