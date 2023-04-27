@@ -7,6 +7,6 @@
 * [Lista 02](aa_files/listas/02/lista02AA.pdf)
 
 
-<!-- #### Prova 02
-* [Lista 02](aa_files/listas/02/lista02AA.pdf)
-* [Lista 04](aa_files/listas/04/lista04AA.pdf) -->
+#### Prova 02
+* [Lista 03](aa_files/listas/03/lista03AA.pdf)
+* [Lista 04](aa_files/listas/04/lista04AA.pdf)
