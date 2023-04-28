@@ -52,6 +52,14 @@
    - Unidades de Medidas
    - Fontes e cores
 
+- [Aula 6](pwr_files/aulas/aula06.pdf)
+  - `margin`, `border`, `padding`
+  - Imagem de fundo
+
+- [Aula 7](pwr_files/aulas/aula07.pdf)
+   - `class`, `id`
+   - `div`, `span`
+
 
 ## APS
 - [Arquivo para a APS](pwr_files/aps/aps.pdf)
