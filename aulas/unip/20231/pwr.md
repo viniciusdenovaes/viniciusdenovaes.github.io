@@ -60,6 +60,10 @@
    - `class`, `id`
    - `div`, `span`
 
+- [Aula 8](pwr_files/aulas/aula08.pdf)
+  - Design
+  - Forms
+
 ## Exemplos
 
 - [CSS](pwr_files/exemplos/css/exemplo_css.html)
