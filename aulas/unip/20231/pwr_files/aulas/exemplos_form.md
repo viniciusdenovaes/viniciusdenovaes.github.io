@@ -183,6 +183,7 @@ O método que o `form` por padrão é o GET. Este método tem as seguintes carac
 ### Exemplo de uso de POST
 
 
+```html
 <form action="https://www.w3schools.com/action_page.php" target="_blank" method="post">
   <label for="login">Login:</label><br>
   <input type="text" id="login" name="login"><br>
@@ -193,9 +194,24 @@ O método que o `form` por padrão é o GET. Este método tem as seguintes carac
   <input type="password" id="pass" name="pass"><br><br>
   <input type="submit" value="Enviar">
 </form>
+```
 
 
+<hr>
+<form action="https://www.w3schools.com/action_page.php" target="_blank" method="post">
+  <label for="login">Login:</label><br>
+  <input type="text" id="login" name="login"><br>
+  <label for="pass">Password:</label><br>
+  <p style="color:red">Não coloque seu password aqui<br>
+  Essa informação aparecerá na tela seguinte
+  </p>
+  <input type="password" id="pass" name="pass"><br><br>
+  <input type="submit" value="Enviar">
+</form>
+<hr>
 
+
+Perceba que as informações enviada **não** aparecem na **URL** da tela de resultado
 
 
 
