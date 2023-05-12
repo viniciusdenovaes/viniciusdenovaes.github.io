@@ -74,20 +74,89 @@ Para escolher o tipo de `input` temos que escrever o valor do atributo `type` na
 
 Cada `input` deve ter o atributo `name` que será o nome do atributo deste `input`.
 
-#### `text`
+### Text
 
-O tipo `text` é um *textfield* onde o usuário pode colocar qualquer palavra. Devemos
+O tipo `text` é um *textfield* onde o usuário pode colocar qualquer palavra.
 
-<input type="text" id="fname" name="fname" value="Joao"><br>
+Temos a possibilidade de ligar o `autocomplete`
 
-- `checkbox`
+```
+<input type="text" id="fname" name="fname" value="">
+```
+<input type="text" id="fname" name="fname" value="">
+
+Temos a possibilidade de (des)ligar o `autocomplete`
+
+```
+<input type="text" id="fname" name="fname" value="" autocomplete="off">
+```
+<input type="text" id="fname" name="fname" value="" autocomplete="off">
 
 
 
+### Checkbox
+
+São caixas de seleção, onde podemos selecionar quantas quisermos:
+
+```html
+<form action="https://www.w3schools.com/action_page.php" target="_blank">
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> Eu tenho uma moto</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> Eu tenho um carro</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> Eu tenho um bote</label><br>
+  <input type="submit" value="Enviar">
+</form>
+```
 
 
+<hr>
+<form action="https://www.w3schools.com/action_page.php" target="_blank">
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> Eu tenho uma moto</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> Eu tenho um carro</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> Eu tenho um bote</label><br>
+  <input type="submit" value="Enviar">
+</form>
+<hr>
 
 
+### Radiobutton
+
+São caixas de escolha, onde podemos escolher apenas uma dentre as opções:
+
+
+```html
+<hr>
+<p>Escolha a sua linguagem preferida:</p>
+<form action="https://www.w3schools.com/action_page.php" target="_blank">
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="java" name="fav_language" value="Java">
+  <label for="java">Java</label><br>
+  <input type="submit" value="Enviar">
+</form>
+<hr>
+```
+
+
+<hr>
+<p>Escolha a sua linguagem preferida:</p>
+<form action="https://www.w3schools.com/action_page.php" target="_blank">
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="java" name="fav_language" value="Java">
+  <label for="java">Java</label><br>
+  <input type="submit" value="Enviar">
+</form>
+<hr>
 
 
 
