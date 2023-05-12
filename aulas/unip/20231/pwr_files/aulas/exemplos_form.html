@@ -266,29 +266,71 @@ pre[data-line] .line-highlight[data-end]:after {
 <p>Um <code>form</code> (formul&#xE1;rio) &#xE9; usado para coletar informa&#xE7;&#xF5;es do usu&#xE1;rio atrav&#xE9;s de perguntas.<br>
 Esta informa&#xE7;&#xE3;o coletada pode ser enviada para um servidor.<br>
 Onde um programa pode processar a informa&#xE7;&#xE3;o de um usu&#xE1;rio, ou at&#xE9; a informa&#xE7;&#xE3;o combinada de v&#xE1;rios usu&#xE1;rios.</p>
+<h4 class="mume-header" id="como-%C3%A9-esta-informa%C3%A7%C3%A3o">Como &#xE9; esta informa&#xE7;&#xE3;o?</h4>
+
+<p>A informa&#xE7;&#xE3;o enviada neste exemplo ter&#xE1; a forma</p>
+<p><strong>atributo1</strong>=<strong>valor1</strong> &amp; <strong>atributo2</strong>=<strong>valor2</strong> &amp; <strong>atributo3</strong>=<strong>valor3</strong> &amp; ...</p>
+<p>Uma lista de v&#xE1;rios atributos, cada um com um valor.</p>
 <p>Um exemplo simples do c&#xF3;digo de um <code>form</code> pode ser visto abaixo:</p>
+<h4 class="mume-header" id="c%C3%B3digo">C&#xF3;digo</h4>
+
 <pre data-role="codeBlock" data-info="html" class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://www.w3schools.com/action_page.php<span class="token punctuation">&quot;</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>_blank<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fname<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Nome:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fname<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fname<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Joao<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fnameid<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>fname<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Joao<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>lname<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Sobrenome:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>lname<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>lname<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Silva<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>lnameid<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>lname<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Silva<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>submit<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Enviar<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
-</pre><p>Resultado:</p>
+</pre><h4 class="mume-header" id="explica%C3%A7%C3%A3o">Explica&#xE7;&#xE3;o:</h4>
+
+<p>-<code>form</code>: tag para delimitar o formul&#xE1;rio, os inputs que estiverem dentro desta tag pertencem a este formul&#xE1;rio</p>
+<ul>
+<li><code>action=&quot;https://www.w3schools.com/action_page.php&quot;</code>: para onde a informa&#xE7;&#xE3;o ser&#xE1; enviada, normalmente um script no servidor ir&#xE1; processa a informa&#xE7;&#xE3;o</li>
+<li><code>target=&quot;_blank&quot;</code>: para que a resposta abra em uma nova aba</li>
+<li><code>label</code>: um pequeno text indicando o nome de algum <code>input</code>
+<ul>
+<li><code>for=&quot;fname&quot;</code>: qual o nome do <code>input</code> ao qual este <code>label</code> se refere.</li>
+</ul>
+</li>
+<li><code>input</code>: a tag para indicar uma entrada do usu&#xE1;rio, pode ser um texto, uma caixa de escolha, um calend&#xE1;rio para escolher um dia, ...
+<ul>
+<li><code>type=&quot;text&quot;</code>: o teipo do input, neste caso &#xE9; um input de texto</li>
+<li><code>id=&quot;fnameid&quot;</code>: o <em>id</em> do <code>input</code></li>
+<li><code>name=&quot;fname&quot;</code>: o nome do <code>input</code> que ser&#xE1; o nome deste atributo na resposta, este atributo ter&#xE1; como valor assoziado o texto que o usu&#xE1;rio colocar no <code>input</code>, por exemplo <code>fname=Joao</code>.</li>
+<li><code>value=&quot;Joao&quot;</code>: Um valor padr&#xE3;o para o <code>input</code></li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="resultado">Resultado:</h4>
+
 <hr>
 <form action="https://www.w3schools.com/action_page.php" target="_blank">
   <label for="fname">Nome:</label><br>
-  <input type="text" id="fname" name="fname" value="Joao"><br>
+  <input type="text" id="fnameid" name="fname" value="Joao"><br>
   <label for="lname">Sobrenome:</label><br>
-  <input type="text" id="lname" name="lname" value="Silva"><br><br>
+  <input type="text" id="lnameid" name="lname" value="Silva"><br><br>
   <input type="submit" value="Enviar">
 </form>
 <hr>
 <br>
-<p>A tag <code>form</code> deve ter o atributo <code>action</code> onde &#xE9; passado o endere&#xE7;o para onde as informa&#xE7;&#xF5;es ser&#xE3;o enviadas.</p>
 <p>Ao ser enviado podemos ver uma p&#xE1;gina que mostrar&#xE1; uma lista de chave e valor das informa&#xE7;&#xF5;es:</p>
-<h2 class="mume-header" id="tags-dentro-do-form">Tags dentro do <code>form</code></h2>
+<pre data-role="codeBlock" data-info class="language-"><code>fname=Joao&amp;lname=Silva
+</code></pre><p>onde o atributo <code>fname</code> tem o valor <code>Joao</code> e o atributo <code>lname</code> tem o valor <code>Silva</code>.</p>
+<p>Perceba tamb&#xE9;m que estes valores s&#xE3;o passados pela URL (no endere&#xE7;o do site), possibilitando guardar a URL se quiser reenviar as mesmas informa&#xE7;&#xF5;es oportunamente.</p>
+<h2 class="mume-header" id="tipos-de-input-dentro-do-form">Tipos de <code>input</code> dentro do <code>form</code></h2>
 
+<p>Dentro do <code>form</code> podemos ter v&#xE1;rios tipos de elementos para a tag <code>input</code>.<br>
+Aqui vamos listar o <code>text</code>, <code>checkbox</code> e <code>radiobutton</code>.<br>
+Uma lista maior pode ser encontrada <a href="https://www.w3schools.com/html/html_form_input_types.asp">aqui</a>.</p>
+<p>Para escolher o tipo de <code>input</code> temos que escrever o valor do atributo <code>type</code> na tag <code>input</code>.</p>
+<p>Cada <code>input</code> deve ter o atributo <code>name</code> que ser&#xE1; o nome do atributo deste <code>input</code>.</p>
+<h4 class="mume-header" id="text"><code>text</code></h4>
+
+<p>O tipo <code>text</code> &#xE9; um <em>textfield</em> onde o usu&#xE1;rio pode colocar qualquer palavra. Devemos</p>
+<p><input type="text" id="fname" name="fname" value="Joao"><br></p>
+<ul>
+<li><code>checkbox</code></li>
+</ul>
 <p>.</p>
 <hr class="footnotes-sep">
 <section class="footnotes">
