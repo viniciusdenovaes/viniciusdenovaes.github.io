@@ -383,6 +383,38 @@ Uma lista maior pode ser encontrada <a href="https://www.w3schools.com/html/html
   <input type="submit" value="Enviar">
 </form>
 <hr>
+<h2 class="mume-header" id="m%C3%A9todos-get-e-post">M&#xE9;todos GET e POST</h2>
+
+<p>Ao acessar a internet o computador e o servidor se comunicam atrav&#xE9;s de requisi&#xE7;&#xF5;es, que s&#xE3;o mensagens enviadas na forma de protocolos.</p>
+<p>O m&#xE9;todo que o <code>form</code> por padr&#xE3;o &#xE9; o GET. Este m&#xE9;todo tem as seguintes caracter&#xED;sticas:</p>
+<h4 class="mume-header" id="get">GET</h4>
+
+<ul>
+<li>GET &#xE9; usado para requisitar informa&#xE7;&#xF5;es ao servidor, e n&#xE3;o modificar ou criar arquivos no servidor.</li>
+<li>A mensagem de requisi&#xE7;&#xE3;o &#xE9; enviada na URL. Olhe no endere&#xE7;o do site da p&#xE1;gina de resposta e voc&#xEA; ver&#xE1; os atributos e valores enviados.</li>
+<li>Contra: por este motivo, a lista de atributos e valores t&#xEA;m um limite relativamente pequeno de tamanho.</li>
+<li>Nunca deve ser usado quando mandar informa&#xE7;&#xF5;es privadas, como senhas</li>
+<li>Vantagem: voc&#xEA; pode favoritar a requisi&#xE7;&#xE3;o para enviar outras vezes.</li>
+</ul>
+<h4 class="mume-header" id="post">POST</h4>
+
+<ul>
+<li>POST &#xE9; usado para modificar ou criar arquivos no servidor.</li>
+<li>As informa&#xE7;&#xF5;es n&#xE3;o s&#xE3;o mandadas pela URL, mas sim em uma mensagem na forma de protocolo.</li>
+<li>N&#xE3;o pode ser guardado</li>
+</ul>
+<h3 class="mume-header" id="exemplo-de-uso-de-post">Exemplo de uso de POST</h3>
+
+<form action="https://www.w3schools.com/action_page.php" target="_blank">
+  <label for="login">Login:</label><br>
+  <input type="text" id="login" name="login"><br>
+  <label for="pass">Password:</label><br>
+  <p style="color:red">N&#xE3;o coloque seu password aqui<br>
+  Essa informa&#xE7;&#xE3;o aparecer&#xE1; na tela seguinte
+  </p>
+  <input type="password" id="pass" name="pass"><br><br>
+  <input type="submit" value="Enviar">
+</form>
 <p>.</p>
 <hr class="footnotes-sep">
 <section class="footnotes">

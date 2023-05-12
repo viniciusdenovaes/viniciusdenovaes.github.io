@@ -159,6 +159,48 @@ São caixas de escolha, onde podemos escolher apenas uma dentre as opções:
 <hr>
 
 
+## Métodos GET e POST
+
+Ao acessar a internet o computador e o servidor se comunicam através de requisições, que são mensagens enviadas na forma de protocolos.
+
+O método que o `form` por padrão é o GET. Este método tem as seguintes características:
+
+#### GET
+
+- GET é usado para requisitar informações ao servidor, e não modificar ou criar arquivos no servidor.
+- A mensagem de requisição é enviada na URL. Olhe no endereço do site da página de resposta e você verá os atributos e valores enviados.
+- Contra: por este motivo, a lista de atributos e valores têm um limite relativamente pequeno de tamanho.
+- Nunca deve ser usado quando mandar informações privadas, como senhas
+- Vantagem: você pode favoritar a requisição para enviar outras vezes.
+
+
+#### POST
+
+- POST é usado para modificar ou criar arquivos no servidor.
+- As informações não são mandadas pela URL, mas sim em uma mensagem na forma de protocolo.
+- Não pode ser guardado
+
+### Exemplo de uso de POST
+
+
+<form action="https://www.w3schools.com/action_page.php" target="_blank" method="post">
+  <label for="login">Login:</label><br>
+  <input type="text" id="login" name="login"><br>
+  <label for="pass">Password:</label><br>
+  <p style="color:red">Não coloque seu password aqui<br>
+  Essa informação aparecerá na tela seguinte
+  </p>
+  <input type="password" id="pass" name="pass"><br><br>
+  <input type="submit" value="Enviar">
+</form>
+
+
+
+
+
+
+
+
 
 
 
