@@ -25,7 +25,7 @@ Mais especificamente:
  - Defina a implementação criada como o funcionamento do método `voar` do objeto `pato` criado.
  - Teste para ver se o método `voar` de `pato` está funcionando.
 
-[Resposta](https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Lab01/src/acao_inserida_no_objeto)
+[Resposta](https://github.com/viniciusdenovaes/Unip232ALPOO/tree/master/Lab01/src/acao_inserida_no_objeto)
 
 
 ### Exercício 02
@@ -52,7 +52,7 @@ Mais especificamente:
  - Adicione esta **outra** implementação criada no funcionamento do método `voar` do objeto `pato` criado.
  - Teste para ver se o método `voar` de `pato` está funcionando.
 
-[Resposta](https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Lab01/src/lista_de_acao_no_objeto)
+[Resposta](https://github.com/viniciusdenovaes/Unip232ALPOO/tree/master/Lab01/src/lista_de_acao_no_objeto)
 
 
 ### Exercício 03
@@ -77,12 +77,12 @@ Mais especificamente:
  - Defina a implementação criada como o funcionamento do método `calcular` do objeto `calculadora` criado.
  - Teste para ver se o método `calcular` de `calculadora` está funcionando.
 
-[Resposta](https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Lab01/src/calculos)
+[Resposta](https://github.com/viniciusdenovaes/Unip232ALPOO/tree/master/Lab01/src/calculos)
 
 
 ### Exercício 4
 
-Use o [exemplo visto em sala de aula](https://github.com/viniciusdenovaes/Unip222ALPOO/blob/master/Aula01/src/incluindo_acao_botao/TesteBotao.java) para criar um botão.
+Use o [exemplo visto em sala de aula](https://github.com/viniciusdenovaes/Unip232ALPOO/blob/master/Aula01/src/incluindo_acao_botao/TesteBotao.java) para criar um botão.
 
  - Crie uma janela (`JFrame`)
  - Crie um botão (`JButton`)
@@ -97,7 +97,7 @@ Use o [exemplo visto em sala de aula](https://github.com/viniciusdenovaes/Unip22
 
 Faça seu programa funcionar e teste o botão.
 
-[Resposta](https://github.com/viniciusdenovaes/Unip222ALPOO/blob/master/Aula01/src/incluindo_acao_botao)
+[Resposta](https://github.com/viniciusdenovaes/Unip232ALPOO/blob/master/Aula01/src/incluindo_acao_botao)
 
 ### Exercício 5
 
@@ -118,7 +118,7 @@ Crie uma janela com três botões e defina um funcionamento para cada um deles.
 
 Faça seu programa funcionar e teste os botões.
 
-[Resposta](https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Lab01/src/incluindo_acao_varios_botoes)
+[Resposta](https://github.com/viniciusdenovaes/Unip232ALPOO/tree/master/Lab01/src/incluindo_acao_varios_botoes)
 
 
 ### Exercício 6
@@ -137,7 +137,7 @@ Botão pressionado 3 vezes!
 Botão pressionado 4 vezes!
 ```
 
-[Resposta](https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Lab01/src/incluindo_acao_botao_increment)
+[Resposta](https://github.com/viniciusdenovaes/Unip232ALPOO/tree/master/Lab01/src/incluindo_acao_botao_increment)
 
 
 
