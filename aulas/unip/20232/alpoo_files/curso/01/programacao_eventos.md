@@ -126,7 +126,7 @@ O resultado:
 Classe concreta que definine acao: faz voar
 ```
 
-### Existe várias outras maneiras de definir uma ação
+### Existem várias outras maneiras de definir uma ação
 
 Podemos reescrever o teste da seguinte forma:
 ATENÇÃO: Você não precisa saber todas, apenas uma delas
