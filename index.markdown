@@ -9,6 +9,7 @@
 
 ### Atuais (2023/2)
 <!--* [IPE](aulas/unip/20232/ipe.html)-->
+* [IPE](aulas/unip/20232/ipe.html)
 * [ALPOO](aulas/unip/20232/alpoo.html)
 <!--* [Processamento de Imagens e Visão Computacional](aulas/unip/20232/pi.html)-->
 <!--* [Cálculo Numérico para Computação](aulas/unip/20232/cn.html)-->
