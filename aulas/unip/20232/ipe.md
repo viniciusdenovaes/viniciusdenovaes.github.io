@@ -1,7 +1,7 @@
 # IPE
 
 ## Tutorial
-- [Como instalar e usar python: Linux e windows (vídeo)](alpoo_files/curso/01/programacao_eventos.html)
+- [Como instalar e usar python: Linux e windows (vídeo)](https://youtu.be/B9UlpdOH4SE)
 
 ## Curso
 
