@@ -14,7 +14,7 @@ Fazer uma interface como no desenho abaixo:
 <img src="calculadora_grid.png" alt="drawing" width="800"/>
 
 
-[Resposta](https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Lab02.02/src/calculadora_grid)
+[Resposta](https://github.com/viniciusdenovaes/Unip232ALPOO/tree/master/Lab02.02/src/calculadora_grid)
 
 
 ### Exercício 02 Calculadora Radio
@@ -23,7 +23,7 @@ Fazer uma interface como no desenho abaixo:
 
 <img src="calculadora_radio.png" alt="drawing" width="800"/>
 
-[Resposta](https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Lab02.02/src/calculadora_radio)
+[Resposta](https://github.com/viniciusdenovaes/Unip232ALPOO/tree/master/Lab02.02/src/calculadora_radio)
 
 
 ### Desafio

@@ -1,4 +1,4 @@
-# Interface de Usuário (Graphical User Interface (GUI))(**EM CONSTRUÇÃO**)
+# Interface de Usuário (Graphical User Interface (GUI))
 
 Interface de Usuário (em inglês *Graphical User Interface* ou GUI) é a parte do programa que vai aparecer para o usuário final, afim de que ele interaja com o seu programa.
 

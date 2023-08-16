@@ -17,7 +17,7 @@ O botão B foi pressionado 4 vezes
 O botão A foi pressionado 3 vezes
 ```
 
-[Resposta](https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Lab02.01/src/ex01)
+[Resposta](https://github.com/viniciusdenovaes/Unip232ALPOO/tree/master/Lab02.01/src/ex01)
 
 
 ### Exercício 02
@@ -35,7 +35,7 @@ Os botoes foram pressionados 4 vezes
 Os botoes foram pressionados 5 vezes
 ```
 
-[Resposta](https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Lab02.01/src/ex02)
+[Resposta](https://github.com/viniciusdenovaes/Unip232ALPOO/tree/master/Lab02.01/src/ex02)
 
 
 ### Exercício 03
@@ -55,7 +55,7 @@ Botao B pressionado. Os botoes foram pressionados 6 vezes
 Botao A pressionado. Os botoes foram pressionados 7 vezes
 ```
 
-[Resposta](https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Lab02.01/src/ex03)
+[Resposta](https://github.com/viniciusdenovaes/Unip232ALPOO/tree/master/Lab02.01/src/ex03)
 
 
 
@@ -79,7 +79,7 @@ Contador zerado
 Botao pressionado pressionado 1 vezes
 ```
 
-[Resposta](https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Lab02.01/src/ex04)
+[Resposta](https://github.com/viniciusdenovaes/Unip232ALPOO/tree/master/Lab02.01/src/ex04)
 
 
 ### Exercício 05
@@ -106,7 +106,7 @@ O botão A foi pressionado 1 vezes
 O botão B foi pressionado 1 vezes
 ```
 
-[Resposta](https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Lab02.01/src/ex05)
+[Resposta](https://github.com/viniciusdenovaes/Unip232ALPOO/tree/master/Lab02.01/src/ex05)
 
 
 ### Exercício 06 (Desafio, esta matéria não foi dada)
@@ -119,7 +119,7 @@ OBS: Utilize os métodos `String getText()` e `void setText(String s)` do `JText
 
 Não tem saída
 
-[Resposta](https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Lab02.01/src/ex06)
+[Resposta](https://github.com/viniciusdenovaes/Unip232ALPOO/tree/master/Lab02.01/src/ex06)
 
 
 
