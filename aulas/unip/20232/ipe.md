@@ -5,26 +5,25 @@
 
 ## Curso
 
+- [00 - Algoritmos, o que é?](ipe_files/curso/00/algoritmos.html)
+- [01 - Variáveis](ipe_files/curso/00/variaveis.html)
+- 02 - Comandos de Controle
+  - [02.1 - Comando Condicional (if)](ipe_files/curso/02/01-comando_condicional.html)
+  - [02.2 - Comando De Repetição (while)](ipe_files/curso/02/02-comando_repeticao.html)
 <!--
-- [01 - Programação Orientada a Eventos](alpoo_files/curso/01/programacao_eventos.html)
-<!--- [02 - Interface de Usuário (Graphical User Interface (GUI))(**EM CONSTRUÇÃO**)](alpoo_files/curso/02/gui.html)
-- [03 - Model View Controller](alpoo_files/curso/03/mvc.html)
-- [04 - JDBC](alpoo_files/curso/04/jdbc.html)
+- [03 Funções](ipe_files/curso/03/funcoes.html)
+- [04 Estruturas]
+  - [04.01 Listas](ipe_files/curso/04/01-listas.html)
+  - [04.02 Conjuntos](ipe_files/curso/04/02-conjuntos.html)
+  - [04.03 Dicionarios](ipe_files/curso/04/03-dicionarios.html)
 -->
-
 
 ## Laboratórios
-<!--
-- Lab01
-  - [lab01 - separação de ações e eventos](alpoo_files/laboratorio/01-dep/01-dep_inj.html)
 
-<!--- Lab02 - GUI
-   - [lab02.01 - Action Listeners](alpoo_files/laboratorio/02-gui/01-gui.html)
-   - [lab02.02 - Calculadora](alpoo_files/laboratorio/02-gui/02-gui.html)
+- [lab00 - Algoritmos](ipe_files/lab/00/algoritmos.html)
+- [lab01 - Variáveis](ipe_files/lab/01/variaveis.html)
+- [lab02 - Comandos de Controle](ipe_files/lab/02/comandos_controle.html)
 
-- Lab03 - MVC
-   - [lab03 - MVC](alpoo_files/laboratorio/03-mvc/01-mvc.html)
--->
 
 <!--
 ## Trabalho (APS)
