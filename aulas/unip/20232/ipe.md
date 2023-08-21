@@ -23,7 +23,7 @@
 
 - [lab00 - Entrada e Saída](ipe_files/lab/00/entrada_saida.html)
 - [lab01 - Variáveis](ipe_files/lab/01/variaveis.html)
-- [lab02 - Comandos de Controle](ipe_files/lab/02/comandos_controle.html)
+- lab02 - Comandos de Controle
   - [Comandos Condicionais](ipe_files/lab/02/01-comandos_condicionais.html)
   - [Comandos de Repetição](ipe_files/lab/02/02-comandos_repeticao.html)
 
