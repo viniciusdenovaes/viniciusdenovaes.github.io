@@ -9,8 +9,8 @@
   - [Entrada e Saída](ipe_files/curso/00/01-entrada_saida.html)
 - [01 - Variáveis e Operações](ipe_files/curso/00/variaveis.html)
 - 02 - Comandos de Controle
-  - [02.1 - Comando Condicional (if)](ipe_files/curso/02/01-comando_condicional.html)
-  - [02.2 - Comando De Repetição (while)](ipe_files/curso/02/02-comando_repeticao.html)
+  - [02.1 - Comando Condicional (if)]<!--(ipe_files/curso/02/01-comando_condicional.html)-->
+  - [02.2 - Comando De Repetição (while)]<!--(ipe_files/curso/02/02-comando_repeticao.html)-->
 <!--
 - [03 Funções](ipe_files/curso/03/funcoes.html)
 - [04 Estruturas]
