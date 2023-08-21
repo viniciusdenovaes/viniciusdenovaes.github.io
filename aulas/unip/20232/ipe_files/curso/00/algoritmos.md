@@ -20,6 +20,30 @@ O que faz um programador ser experiente é entender **que tipos de comandos** po
 ## Tipos de comandos
 
 Vamos dividir o que o computador pode fazer em 3 partes:
+- ler e escrever informação (entrada e saída)
 - guardar informação (em variáveis)
 - processar informação (fazer cálculos matemáticos, por exemplo)
-- ler e escrever informação
+
+### Entrada e Saída
+
+Neste curso veremos um tipo simples de entrada e saída padrão do terminal: computador vai ler do teclado e escrever na tela.
+
+Mas existem as mais diversas maneiras de ler e escrever informação: podemos ler e escrever em um arquivo CSV (tabela excel), bando de dados, fazer uma requisição para um servidor.
+
+Em cursos posteriores veremos outras formas de entrada e saída.
+
+### Variáveis
+
+Vamos ver nas próximas seções como fazer para que o programa guarde informações na forma de variáveis
+
+
+### Processar informações
+
+Também vamos ver nas próximas aulas como combinar as informações dadas para gerar soluções, gerar informações significativas, ou até alterar o fluxo do programa, pulando ou repetindo partes do algoritmos.
+
+
+
+
+
+
+.
