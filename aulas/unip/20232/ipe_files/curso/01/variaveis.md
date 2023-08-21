@@ -10,6 +10,8 @@ Vamos trabalhar com 2 tipos de números `int` e `float`, o tipo `booleano` que s
 
 Linguagens de programação têm operações matemáticas básicas, vamos ver como escrever algumas destas operações em Python.
 
+### Números (tipos `int` e `float`)
+
 - Temos as 4 operações básicas: `+`, `-`, `*` e `/`.
 - Temos a potência: `**`, por exemplo 3² = `3**2`,  4³ = `4**3`,
 - Resto da divisão **entre inteiros**:
@@ -44,3 +46,37 @@ Para outras operações precisamos da biblioteca `math`:
    -  `math.sqrt(25)` = `5.0`.
 - `floor(x)`: o *piso* de `x`, o maior inteiro menor ou igual a `x`
 - `ceil(x)`: o *teto* de `x`, o menor inteiro maior ou igual a `x`
+
+### Operações Booleanas
+
+Também podemos fazer operações entre booleanos, estas operações seguem as regras das operações da lógica proposicional (ou lógica de circuitos).
+
+#### Operação unária `not`
+A negação inverte o sinal de um valor
+- `not True` = `False`
+- `not False` = `True`
+
+#### Operações binárias (operam dois elementos)
+
+- operação `and`: se **um** dos elementos for `False`, o resultado será `False`:
+
+|`and`|`True`|`False`|
+|----|----|----|
+|**`True`**|`True`|`False`|
+|**`False`**|`False`|`False`|
+
+
+- operação `or`: se **um** dos elementos for `True`, o resultado será `True`:
+
+|`or`|`True`|`False`|
+|----|----|----|
+|**`True`**|`True`|`True`|
+|**`False`**|`True`|`False`|
+
+
+
+
+
+
+
+.
