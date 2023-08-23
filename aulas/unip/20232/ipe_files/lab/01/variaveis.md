@@ -2,7 +2,7 @@
 
 ### Exercício 01:
 
-Faça um programa que receba um número e escreva o módulo deste número.
+Faça um programa que receba um número e escreva o valor absoluto deste número.
 
 
 ### Exercício 02:
