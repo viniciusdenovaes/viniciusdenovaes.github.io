@@ -59,11 +59,11 @@ Mais especificamente:
 
 #### Parte A
 
-Faça uma classe chamada `Calculadora` que tenha uma ação: `calcular` que opera dois números reais, e que esta ação possa definida fora da classe, depois da criação do objeto.
+Faça uma classe chamada `Calculadora` que tenha uma ação: `calcular` que opera dois números reais, retorna um número real, e que esta ação possa definida fora da classe, depois da criação do objeto.
 
 Mais especificamente, a classe `Calculadora` tem um método
- - `public void calcular(double a, double b)`
- - que faz uma ação do tipo `public void fazConta(double a, double b)`
+ - `public double calcular(double a, double b)`
+ - que faz uma ação do tipo `public double fazConta(double a, double b)`
 o funcionamento deste método deve ser definido **fora da classe** e **depois** da criação do objeto.
 
 #### Parte B
