@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+
+\usepackage[brazil]{babel}   
+\usepackage[utf8]{inputenc}  
+%\usepackage[T1]{fontenc}
+\usepackage{amsfonts,amsmath,amssymb,latexsym} 
+\usepackage{float}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\def\cQ{\mathcal{Q}}
+\def\ve{\varepsilon}
+
+\def\emptyset{\varnothing}
+
+
+
+\title{Lista 05 de Linguagens Formais e Autômatos}
+\date{1º Período de 2018}
+\author{Turma do 3º ano}
+
+\begin{document} 
+
+\maketitle
+
+\begin{description}
+
+
+\item[Definição de um Autômato de Pilha (AP)]
+\[AP = (\cQ, \Sigma, \Gamma, \delta, q_0, Z_0, F)\]
+\begin{itemize}
+\item Um conjunto de estados finito, $\cQ$
+\item Um conjunto de símbolos de entrada $\Sigma$
+\item Um conjunto de símbolos da pilha $\Gamma$
+\item Uma função de transição $\delta: \cQ\times\Sigma\times\Gamma\rightarrow 2^{\cQ\times \Gamma^*}$.
+\item Um estado inicial $q_0$
+\item Um símbolo inicial para a pilha $Z_0$
+\item Um conjunto de estados finais $F\subseteq \cQ$
+\end{itemize}
+
+
+\item[Aceitação por estado final]: Se é possível usar a função $\delta$ para consumir toda a entrada e entrar em um estado final, esta palavra está na linguagem do autômato de aceitação por estado final.
+
+
+\item[Identificação] Uma identificação de um autômato é formado pela tripla $(q,w,W)$, onde $q$ é o estado em que ele se encontra, $w$ é o que resta para processar da string, e $W$ é o estado da pilha.
+Uma identificação expressa um momento em que a string está sendo processada.
+
+
+
+\end{description}
+
+\vspace{3em}
+
+
+
+\begin{enumerate}
+
+
+
+\item Projete um AP para aceitar as seguintes linguagens:
+
+\begin{enumerate}
+
+\item $\{0^n1^n~|~n\geq 1\}$
+
+\item O conjunto de todos os strings de $0$'s e $1$'s tais que nenhum prefixo tenha mais $1$'s do que $0$'s.
+
+\item O conjunto de todos os strings de $0$'s e $1$'s que tenham a mesma quantidade de $1$ e $0$.
+
+\item $\{a^nb^mc^{2(n+m)}~|~n\geq 0, m\geq 0\}$
+
+\item Palavras em $\{0,1\}^*$ tais que a quantidade de 0's seja duas vezes maior que a quantidade de 1's.
+
+\end{enumerate}
+
+
+\item O AP $P = (\{q_0,q_1,q_2,q_3,f\}, \{a,b\},\{Z_0,A,B\},\delta,q_0,Z_0,\{f\})$ tem as seguintes regras:\\
+\begin{tabular}{lll}
+$\delta(q_0, a, Z_0) = (q_1, AAZ_0)$ & $\delta(q_0, b, Z_0)   = (q_2, BZ_0)$ & $\delta(q_0, \ve, Z_0) = (f, \ve)$\\
+$\delta(q_1, a, A)   = (q_1, AAA)$   & $\delta(q_1, b, A)     = (q_1, \ve)$  & $\delta(q_1, \ve, Z_0) = (q_0, Z_0)$\\
+$\delta(q_2, a, B)   = (q_3, \ve)$   & $\delta(q_2, b, B)     = (q_2, BB)$   & $\delta(q_2, \ve, Z_0) = (q_0, Z_0)$\\
+$\delta(q_3, \ve, B) = (q_2, \ve)$   & $\delta(q_3, \ve, Z_0) = (q_1, AZ_0)$ & 
+\end{tabular}
+
+\begin{enumerate}
+  \item forneça uma sequência de identificações mostrando que o string $bab$ faz parte da linguagem.
+  \item forneça uma sequência de identificações mostrando que o string $abb$ faz parte da linguagem.
+  \item forneça o conteúdo da pilha depois de ter lido $b^7a^4$ a partir de sua entrada.
+\end{enumerate}
+
+
+
+
+
+\end{enumerate}
+
+\end{document}
+
