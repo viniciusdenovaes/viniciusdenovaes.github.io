@@ -6,8 +6,8 @@
 
 - [01 - Programação Orientada a Eventos](alpoo_files/curso/01/programacao_eventos.html)
 - [02 - Interface de Usuário (Graphical User Interface (GUI))](alpoo_files/curso/02/gui.html)
-<!--- [03 - Model View Controller](alpoo_files/curso/03/mvc.html)
-- [04 - JDBC](alpoo_files/curso/04/jdbc.html)
+- [03 - Model View Controller](alpoo_files/curso/03/mvc.html)
+<!--- [04 - JDBC](alpoo_files/curso/04/jdbc.html)
 -->
 
 
@@ -19,10 +19,9 @@
 - Lab02 - GUI
    - [lab02.01 - Action Listeners](alpoo_files/laboratorio/02-gui/01-gui.html)
    - [lab02.02 - Calculadora](alpoo_files/laboratorio/02-gui/02-gui.html)
-<!--
 - Lab03 - MVC
    - [lab03 - MVC](alpoo_files/laboratorio/03-mvc/01-mvc.html)
--->
+
 
 <!--
 ## Trabalho (APS)
