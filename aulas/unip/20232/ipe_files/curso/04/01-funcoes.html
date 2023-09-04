@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>02-comandos_repeticao</title>
+      <title>01-funcoes</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -261,44 +261,45 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="laborat%C3%B3rio-comandos-de-repeti%C3%A7%C3%A3o">Laborat&#xF3;rio: Comandos de Repeti&#xE7;&#xE3;o</h1>
+      <h1 class="mume-header" id="fun%C3%A7%C3%B5es">Fun&#xE7;&#xF5;es</h1>
 
-<h3 class="mume-header" id="exerc%C3%ADcio-01">Exerc&#xED;cio 01:</h3>
+<p>Uma fun&#xE7;&#xE3;o &#xE9; uma estrutura que recebe uma cole&#xE7;&#xE3;o de par&#xE2;metros de <strong>entrada</strong> e retorna um resultado na <strong>sa&#xED;da</strong>.</p>
+<p>A sintaxe para uma fun&#xE7;&#xE3;o em Python &#xE9;</p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword keyword-def">def</span> <span class="token function">nome_da_funcao</span><span class="token punctuation">(</span>parametro1<span class="token punctuation">,</span> parametro2<span class="token punctuation">,</span> parametro3<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  faz coisas
+    <span class="token punctuation">.</span>
+    <span class="token punctuation">.</span>
+    <span class="token punctuation">.</span>
+  faz coisas
+  <span class="token keyword keyword-return">return</span> resultado
+</pre><p>Para usar a fun&#xE7;&#xE3;o definida acima deve-se usar o nome da fun&#xE7;&#xE3;o, passar os valores dos par&#xE2;metros e guardar o resultado retornado</p>
+<pre data-role="codeBlock" data-info="python" class="language-python">resultado <span class="token operator">=</span> nome_da_funcao<span class="token punctuation">(</span>p1<span class="token punctuation">,</span> p2<span class="token punctuation">,</span> p3<span class="token punctuation">)</span>
+</pre><h2 class="mume-header" id="exemplos">Exemplos</h2>
 
-<p>Um programa que receba uma quantidade n e imprima os n primeiro n&#xFA;meros pares.</p>
-<h3 class="mume-header" id="exerc%C3%ADcio-02">Exerc&#xED;cio 02:</h3>
+<h3 class="mume-header" id="exemplo-1">Exemplo 1</h3>
 
-<p>Um programa que receba uma quantidade n e calcule a soma dos n primeiro inteiros (inteiros de 1 at&#xE9; n, incluindo o 1 e o n).</p>
-<h3 class="mume-header" id="exerc%C3%ADcio-03">Exerc&#xED;cio 03:</h3>
+<p>Defini&#xE7;&#xE3;o de uma fun&#xE7;&#xE3;o que calcula a multiplica&#xE7;&#xE3;o de dois n&#xFA;meros:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword keyword-def">def</span> <span class="token function">multiplica</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>
+  resultado <span class="token operator">=</span> a<span class="token operator">*</span>b
+  <span class="token keyword keyword-return">return</span> resultado
+</pre><p>O uso da fun&#xE7;&#xE3;o pode ser</p>
+<pre data-role="codeBlock" data-info="python" class="language-python">a <span class="token operator">=</span> <span class="token number">2</span>
+b <span class="token operator">=</span> <span class="token number">3</span>
+resultado <span class="token operator">=</span> multiplica<span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&apos;O resultado de </span><span class="token interpolation"><span class="token punctuation">{</span>a<span class="token punctuation">}</span></span><span class="token string"> multiplicado por </span><span class="token interpolation"><span class="token punctuation">{</span>b<span class="token punctuation">}</span></span><span class="token string"> eh </span><span class="token interpolation"><span class="token punctuation">{</span>resultado<span class="token punctuation">}</span></span><span class="token string">&apos;</span></span><span class="token punctuation">)</span>
+</pre><h3 class="mume-header" id="exemplo-2">Exemplo 2</h3>
 
-<p>Um programa que responda se um n&#xFA;mero &#xE9; primo.</p>
-<h3 class="mume-header" id="exerc%C3%ADcio-04">Exerc&#xED;cio 04:</h3>
+<p>Uma fun&#xE7;&#xE3;o n&#xE3;o necessariamente precisa retornar um valor</p>
+<p>Defini&#xE7;&#xE3;o de uma fun&#xE7;&#xE3;o que imprime se um n&#xFA;mero &#xE9; positivo ou n&#xE3;o</p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword keyword-def">def</span> <span class="token function">imprime_positivo</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+  <span class="token keyword keyword-if">if</span> a <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&apos;O numero </span><span class="token interpolation"><span class="token punctuation">{</span>a<span class="token punctuation">}</span></span><span class="token string"> eh positivo&apos;</span></span><span class="token punctuation">)</span>
+  <span class="token keyword keyword-else">else</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&apos;O numero </span><span class="token interpolation"><span class="token punctuation">{</span>a<span class="token punctuation">}</span></span><span class="token string"> nao eh positivo&apos;</span></span><span class="token punctuation">)</span>
+</pre><p>O uso da fun&#xE7;&#xE3;o pode ser</p>
+<pre data-role="codeBlock" data-info="python" class="language-python">imprime_positivo<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+</pre><h2 class="mume-header" id="exerc%C3%ADcios">Exerc&#xED;cios</h2>
 
-<p>Um programa que receba uma quantidade n e imprima os n primeiro n&#xFA;meros primos.</p>
-<h3 class="mume-header" id="exerc%C3%ADcio-05">Exerc&#xED;cio 05:</h3>
-
-<p>Fa&#xE7;a um programa que receba um n&#xFA;mero inteiro representando uma quantidade de n&#xFA;meros. Depois receba esta quantidade de n&#xFA;meros e calcule a soma.</p>
-<p>Por exemplo</p>
-<p>Entrada</p>
-<pre data-role="codeBlock" data-info class="language-"><code>4
-1
-2
-2.5
-1
-</code></pre><p>Sa&#xED;da</p>
-<pre data-role="codeBlock" data-info class="language-"><code>6.5
-</code></pre><h3 class="mume-header" id="exerc%C3%ADcio-06">Exerc&#xED;cio 06:</h3>
-
-<p>Fa&#xE7;a um programa que receba um n&#xFA;mero inteiro e calcule a soma dos d&#xED;gitos deste n&#xFA;mero.</p>
-<h3 class="mume-header" id="exerc%C3%ADcio-07">Exerc&#xED;cio 07:</h3>
-
-<p>Fa&#xE7;a um programa que receba um n&#xFA;mero inteiro e responda se este n&#xFA;mero &#xE9; <em>perfeito</em>.</p>
-<p><strong>Defini&#xE7;&#xE3;o</strong>: Um n&#xFA;mero &#xE9; <em>perfeito</em> se ele &#xE9; igual a soma de todos os seus divisores menores que ele mesmo. Por exemplo, o n&#xFA;mero 6 &#xE9; <em>perfeito</em> por que ele &#xE9; igual a soma de 1, 2 e 3. Outros n&#xFA;meros perfeitos s&#xE3;o 28, 496 e 8128.</p>
-<h3 class="mume-header" id="exerc%C3%ADcio-08">Exerc&#xED;cio 08:</h3>
-
-<p>Escreva um programa que receba uma string contendo apenas 0 e 1, e responda o tamanho da maior sequ&#xEA;ncia seguida de 0&apos;s.</p>
-<p><a href="https://github.com/viniciusdenovaes/Unip222IPE/tree/master/lab04">Respostas</a></p>
-<p>.</p>
 
       </div>
       

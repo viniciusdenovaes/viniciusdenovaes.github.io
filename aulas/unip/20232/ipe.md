@@ -11,11 +11,9 @@
 - 02 - Comandos de Controle
   - [02.1 - Comando Condicional (if)]<!--(ipe_files/curso/02/01-comando_condicional.html)-->
   - [02.2 - Comando De Repetição (while)]<!--(ipe_files/curso/02/02-comando_repeticao.html)-->
-<!--
-- [03 Funções](ipe_files/curso/03/funcoes.html)
-- [04 Estruturas]
-  - [04.01 Listas](ipe_files/curso/04/01-listas.html)
-  - [04.02 Conjuntos](ipe_files/curso/04/02-conjuntos.html)
+- [04 Listas](ipe_files/curso/03/01-listas.html)
+- [03 Funções](ipe_files/curso/04/01-funcoes.html)
+<!--  - [04.02 Conjuntos](ipe_files/curso/04/02-conjuntos.html)
   - [04.03 Dicionarios](ipe_files/curso/04/03-dicionarios.html)
 -->
 
@@ -26,6 +24,8 @@
 - lab02 - Comandos de Controle
   - [Comandos Condicionais](ipe_files/lab/02/01-comandos_condicionais.html)
   - [Comandos de Repetição](ipe_files/lab/02/02-comandos_repeticao.html)
+- [lab03 - Listas](ipe_files/lab/03/01-listas.html)
+- [lab04 - Funções](ipe_files/lab/04/01-funcoes.html)
 
 <!--
 ## Trabalho (APS)
