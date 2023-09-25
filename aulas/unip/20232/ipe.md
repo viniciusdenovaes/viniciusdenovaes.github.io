@@ -27,14 +27,10 @@
 - [lab03 - Listas](ipe_files/lab/03/01-listas.html)
 - [lab04 - Funções](ipe_files/lab/04/01-funcoes.html)
 
-<!--
 ## Trabalho (APS)
 
+- [Slides Sobre Criptografia](ipe_files/extra/slides/slides.pdf)
 
-- [Roteiro para apresentação](alpoo_files/trabalhos/01/trabalho_livraria.html)
-- [Roteiro para entrega do trabalho no site](alpoo_files/aps/APS_ALPOO_2022.pdf)
-
--->
 <!--
 ## [Git](https://github.com/viniciusdenovaes/Unip223ALPOO)
 

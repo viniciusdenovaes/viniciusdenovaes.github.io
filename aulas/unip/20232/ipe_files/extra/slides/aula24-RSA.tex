@@ -1,3 +1,9 @@
+
+
+
+
+
+
 \begin{frame}{Fundamentos de Criptografia}{}
 \begin{itemize}
 \pitem Quando fazemos compras pela internet, temos que enviar o número do cartão de crédito para efetivar a compra.
@@ -13,6 +19,67 @@
 \pitem Muitas informações podem ser roubadas em conexões pela internet.
 \item Informações enviadas de/para forças armadas, diplomáticas,  cartão de crédito, etc...
 \pitem Portanto além de precisarmos de formas de criptografar e decifrar informações, esse métodos precisam ser dificílimos de derrotar.
+\end{itemize}
+\end{frame}
+
+
+
+
+
+\begin{frame}{O que é criptografia?}{}
+\begin{itemize}
+\pitem O estudo das técnicas de fazer comunicação segura entre duas partes,
+onde existe uma terceira parte que não pode ter acesso à comunicação.
+
+\pitem Imagine uma situação onde a pessoa A manda uma mensagem para a pessoa B,
+mas somente a pessoa A e a pessoa B podem *entender* a mensagem,
+apesar da imagem poder ser *acessada* por qualquer pessoa.
+
+\end{itemize}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{}{}
+\begin{tikzpicture}[shorten >=1pt,scale=0.6]%,on grid
+\footnotesize
+\tikzstyle{fantasma}=[minimum size=0cm]
+\tikzstyle{bolota}=[shape=circle,thick,draw,minimum size=1.5cm]
+
+
+\node[fantasma] at (0,0) (Alice) {Alice};
+% \node[shape=rectangle,thick,draw] at (6,0) (encr) {$f(M)$};
+% \node[shape=rectangle,thick,draw] at (12,0) (dese) {$g(C)$};
+\node[fantasma] at (18,0) (Bob) {Bob};
+
+
+\path[->,draw,thick] (Alice) edge node[fill=white, anchor=north, pos=0.5, align=center,yshift=-5pt] {$M$\\ Texto comum\\ (plain text)} (Bob);
+
+% \path[->,draw,thick] (encr) edge node[fill=white, anchor=north, pos=0.5, align=center,yshift=-5pt] {$C$\\ Texto cifrado\\ (ciphertext)} (dese);
+
+% \path[->,draw,thick] (dese) edge node[fill=white, anchor=north, pos=0.5, align=center,yshift=-5pt] {$M$} (Bob);
+
+
+\visible<2->{\node[fantasma] at (9,4) (Mau) {Maurício};}
+\node<2->[fantasma] at (9,0) (C) {};
+\path<2->[->,draw,thick] (C) -- (Mau);
+
+\end{tikzpicture}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Exemplos}{}
+\begin{itemize}
+
+\pitem cartas enviadas que poderiam ser interceptadas sem correr o risco do interceptador conseguir ler o conteúdo. Júlio César, o imperador romano, tinha uma técnica de criptografia para que as cartas fossem enviadas de forma segura.
+\pitem mensagens de rádio que podem ser ouvidas por terceiros, sem que estes terceiros entendam a mensagem. Alan Turing, cientista da computação, ficou famoso por fazer um computador capaz de **quebrar a criptografia** da inteligência nazista durante a segunda guerra mundial.
+
 \end{itemize}
 \end{frame}
 
@@ -83,47 +150,47 @@
 
 \begin{frame}{}{}
 \begin{center}
-inkzxjegtrg\ppause
+mnocaj ijikxvkj\ppause
 \end{center}
 \begin{columns}[t]\small
 \begin{column}{0.33\textwidth}
-0: inkzxjegtrg\\\ppause
-1: hmjywidfsqf\\
-2: glixvhcerpe\\
-3: fkhwugbdqod\\
-4: ejgvtfacpnc\\
-\only<3>{5: difuse bomb\\}
-\only<4->{\bf \small 5: difuse bomb\\}
+0: mnocaj ijikxvkj\\\ppause
+1: lmnb izhihjwuji\\
+2: klmazhyghgivtih\\
+3: jkl ygxfgfhushg\\\ppause
+4: ijkzxfwefegtrgf\\
+5: hijywevdedfsqfe\\
+6: ghixvducdcerped\\
+7: fghwuctbcbdqodc\\
+8: efgvtbsabacpncb\\
+\only<4>{9: defusar a bomba\\}
+\only<5->{\bf \small 9: defusar a bomba\\}
 \end{column}
 \begin{column}{0.33\textwidth}
-6: chetrdzanla\\
-7: bgdsqcy mk \\
-8: afcrpbxzljz\\
-9:  ebqoawykiy\\
-10: zdapn vxjhx\\
-11: yc omzuwigw\\
-12: xbznlytvhfv\\
-13: waymkxsugeu\\
+10: cdetr qz zanla \\
+11: bcdsqzpyzy mk z\\
+12: abcrpyoxyxzljzy\\
+13:  abqoxnwxwykiyx\\
+14: z apnwmvwvxjhxw\\
+15: yz omvluvuwigwv\\
+16: xyznluktutvhfvu\\
+17: wxymktjstsugeut\\
+18: vwxljsirsrtfdts\\
 \end{column}
 \begin{column}{0.33\textwidth}
-14: v xljwrtfdt\\
-15: uzwkivqsecs\\
-16: tyvjhuprdbr\\
-17: sxuigtoqcaq\\
-18: rwthfsnpb p\\
-19: qvsgermoazo\\
-20: purfdqln yn\\
-21: otqecpkmzxm\\
-22: nspdbojlywl\\
-23: mrocanikxvk\\
-24: lqnb mhjwuj\\
-25: kpmazlgivti\\
-26: jol ykfhush\ppause
+19: uvwkirhqrqsecsr\\
+20: tuvjhqgpqprdbrq\\
+21: stuigpfopoqcaqp\\
+22: rsthfoenonpb po\\
+23: qrsgendmnmoazon\\
+24: pqrfdmclmln ynm\\
+25: opqeclbklkmzxml\\
+26: nopdbkajkjlywlk\\\ppause
 \end{column}
 \end{columns}
 \begin{center}
 \ppause
-difuse bomb
+defusar a bomba
 \end{center}
 \end{frame}
 
@@ -710,7 +777,7 @@ $$
 \ppause $M$     & 0110 0010 & 0110 1111 & 0110 1101 & 0110 0010 \\
 \ppause & $\oplus$ & $\oplus$ & $\oplus$ & $\oplus$ \\
         $chave$ & 0011 0101 & 0010 0000 & 1101 1111 & 0110 1011 \\
-\ppause $C$     & 0101 0111 & 0100 1111 & 1011 0010 & 0000 1001
+\ppause $C$     & 0101 0111 & 0100 1111 & 1011 0010 & 0000 1001 \\
 \ppause & $\oplus$ & $\oplus$ & $\oplus$ & $\oplus$ \\
         $chave$ & 0011 0101 & 0010 0000 & 1101 1111 & 0110 1011 \\
 \ppause $M$     & 0110 0010 & 0110 1111 & 0110 1101 & 0110 0010 \\
@@ -822,460 +889,3 @@ t_l &= D(c_l) \oplus c_{l-1}
 \end{itemize}
 \end{frame}
 
-
-
-% \begin{frame}{\visible<3->{Criptografia de Chave Pública}}{}
-% \begin{itemize}
-% \item Para Alice e Bob se comuniquem eles precisam conhecer a chave que cifra e decifra o texto, certo? \ppause Errado.
-% \pitem Na {\bf Criptografia de Chave Pública} cada participante tem duas chaves.
-% \pitem Uma {\bf chave pública} que todo mundo sabe.
-% \pitem Uma {\bf chave secreta} que que só ele conhece.
-% \end{itemize}
-% \end{frame}
-
-
-
-% \begin{frame}{}{}
-% \begin{itemize}
-% \pitem Bob tem a chave pública $P$ que todos conhecem, inclusive Maurício.
-% \pitem E tem uma chave secreta $S$.
-% \end{itemize}
-% \begin{tikzpicture}[shorten >=1pt,scale=0.6]%,on grid
-% \footnotesize
-% \tikzstyle{fantasma}=[minimum size=0cm]
-% \tikzstyle{bolota}=[shape=circle,thick,draw,minimum size=1.5cm]
-
-
-% \node[fantasma] at (0,0) (Alice) {Alice};
-% \node[shape=rectangle,thick,draw] at (6,0) (encr) {$F_P(M)$};
-% \node[shape=rectangle,thick,draw] at (12,0) (dese) {$F_S(C)$};
-% \node[fantasma] at (18,0) (Bob) {Bob};
-
-
-% \path[->,draw,thick] (Alice) edge node[fill=white, anchor=north, pos=0.5, align=center,yshift=-5pt] {$M$\\ Texto comum\\ (plain text)} (encr);
-
-% \path[->,draw,thick] (encr) edge node[fill=white, anchor=north, pos=0.5, align=center,yshift=-5pt] {$C$\\ Texto cifrado\\ (ciphertext)} (dese);
-
-% \path[->,draw,thick] (dese) edge node[fill=white, anchor=north, pos=0.5, align=center,yshift=-5pt] {$M$} (Bob);
-
-
-% \node[fantasma] at (9,4) (Mau) {Maurício};
-% \node[fantasma] at (9,0) (C) {};
-% \path[->,draw,thick] (C) -- (Mau);
-% \end{tikzpicture}
-% \end{frame}
-
-% \begin{frame}{}{}
-% \begin{itemize}
-% \pitem As chaves têm a seguinte relação:
-% $$
-% M = F_S(F_P(M))
-% $$
-% \pitem Para que isso funcione dois textos comuns diferentes $M_1$ e $M_2$ não podem ter o mesmo resultado $C$ quando aplicado em $F_P$. 
-% \pitem Nesse caso $F_S(C)$ não saberia se o texto original é $M_1$ ou $M_2$,
-% \end{itemize}
-% \end{frame}
-
-
-
-% \begin{frame}{}{}
-% \begin{itemize}
-% \pitem Por outro lado é permitido (e até recomendável) que um mesmo texto $M$ tenha mais de uma representação cifrada.
-% \pitem Esse tipo de sistema funciona melhor se a chave for maior que o bloco a ser cifrado (que a Imagem seja maior que o Domínio).
-% \pitem Em particular podemos colocar algum recheio aleatório na informação a ser cifrada, desde que $F_S()$ esteja preparada para lidar com isso.
-% \end{itemize}
-% \end{frame}
-
-
-
-% \begin{frame}{Criptossistema RSA}{}
-% O sistema de criptografia RSA se baseia na diferença entre  
-% \begin{itemize}
-% \pitem a facilidade de encontrar números primos grandes
-% \pitem e a dificuldade de fatorar o produto de números primos grandes.
-% \end{itemize}
-% \end{frame}
-
-
-% \begin{frame}{Criptossistema RSA}{}
-% \begin{columns}
-% \begin{column}{0.33\textwidth}
-% \centering
-% \includegraphics[scale=0.4]{figs/Rivest.jpg}\\
-% Ron Rivest 
-% \end{column}
-% \begin{column}{0.33\textwidth}
-% \centering
-% \includegraphics[scale=0.3]{figs/Shamir.jpg}\\
-% Adi Shamir
-% \end{column}
-% \begin{column}{0.33\textwidth}
-% \centering
-% \includegraphics[scale=0.1]{figs/Adleman.jpg}\\
-% Leonard Adleman
-% \end{column}
-% \end{columns}
-% \end{frame}
-
-
-% \begin{frame}{}{}
-% O RSA depende de algumas facetas da Teoria dos Números, uma delas é a {\bf aritmética modular}.
-% \begin{itemize}
-% \pitem Na aritmética modular escolhemos um inteiro positivo $n$ e sempre que chegamos a $n$ imediatamente voltamos a 0.
-% \pitem É como aritmética em um relógio, sempre que chega a 12, voltamos para 0. Se você vai dormir as 11 e dorme 8 horas, você acorda as 7. 
-% \end{itemize}
-% \end{frame}
-
-% \begin{frame}{}{}
-% \begin{itemize}
-% \pitem É como aritmética com inteiros, mas sempre dividimos por $n$ e tomamos o resto. Por exemplo, em uma aritmética módulo 5 os únicos valores possíveis são 0, 1, 2, 3 e 4.
-% \pitem Em módulo 5:
-% $$
-% 3 + 4 \equiv 2
-% $$
-% \pitem Pois 7 dividido por 5 tem resto 2. Definimos um operador $\bmod$ para essa operação. de forma que $7 \bmod 5 = 2$
-% \end{itemize}
-% \end{frame}
-
-% \begin{frame}{}{}
-% O operador $\bmod$ tem algumas propriedade interessantes:
-% \begin{itemize}
-% \pitem  $(a + b) \bmod n = ((a \bmod n) + (b \bmod n)) \bmod n$,
-% \pitem  $ab \bmod n = ((a \bmod n)(b \bmod n)) \bmod n$,
-% \pitem  $a^b \bmod n = (a \bmod n)^b \bmod n$.
-% \end{itemize}
-% \end{frame}
-
-
-% \begin{frame}{}{}
-% \begin{itemize}
-% \item Na matemática o {\bf inverso multiplicativo} de um número $x$ é um número $y$ tal que $x \cdot y = 1$. 
-% \pitem Na aritmética modular temos uma definição parecida.
-% O {\bf inverso multiplicativo } de um número $x$ em {\bf modulo $n$} é um inteiro $y$ tal que 
-% $$
-% x \cdot y \bmod n \equiv 1 \bmod n 
-% $$
-% \pitem Por exemplo o inverso multiplicativo em módulo 5 de 3 é 2 pois
-% $$
-% 3 \cdot 2 \bmod 5 = 6 \bmod 5 \equiv 1\bmod 5
-% $$
-% \end{itemize}
-% \end{frame}
-
-
-
-% \begin{frame}{}{}
-% \begin{itemize}
-% \item Note que se $x$ e $n$ tem fatores em comum por exemplo $x = 2$ e $n = 6$ não existe inverso multiplicativo.
-% \begin{align*}
-% 2 * 1 \bmod 6 &= 2 \bmod 6 \\
-% 2 * 2 \bmod 6 &= 4 \bmod 6\\
-% 2 * 3 \bmod 6 &= 6 \bmod 6 \equiv 0 \bmod 6\\
-% 2 * 4 \bmod 6 &= 8 \bmod 6 \equiv 2 \bmod 6\\
-% 2 * 5 \bmod 6 &= 10 \bmod 6 \equiv 4 \bmod 6
-% \end{align*}
-% \pitem Mas se $x$ e $n$ são primos relativos o inverso multiplicativo existe.
-% \end{itemize}
-% \end{frame}
-
-% \begin{frame}{}{}
-% \ppause
-% No {\bf sistema de criptografia de chave pública RSA} um participante cria suas chaves públicas e secreta com o seguinte procedimento:
-% \begin{enumerate}
-% \pitem Seleciona aleatoriamente dois números primos grandes (de pelo menos 1024 bits) distintos $p$ e $q$.
-% \pitem Calcule $n = pq$ (Esse número tem pelo menos 2048 bits ou 618 dígitos decimais.)
-% \pitem Calcule $r = (p-1)(q-1)$ que é quase tão grande quando $n$
-% \end{enumerate}
-
-% \end{frame}
-
-
-% \begin{frame}{}{}
-% \begin{enumerate}
-% \setcounter{enumi}{3}
-% \item Seleciona um inteiro ímpar pequeno $e$ tal que $e$ seja {\bf relativamente primo} de $r$, ou seja, o único divisor comum é 1. Qualquer inteiro pequeno serve.
-% \pitem Calcule $d$ como o {\it inverso multiplicativo} de $e$, módulo $r$. Isto é $e d \bmod r$ deve ser igual a 1.
-% \pitem Divulgue o par $P = (e, n)$ como a chave pública.
-% \pitem Mantenha $S = (d, n)$ em segredo como a chave secreta.
-% \end{enumerate}
-% \end{frame}
-
-% \newcommand{\mmod}{\texttt{mod}\ }
-% \begin{frame}{}{}
-% \begin{itemize}
-% \pitem Para criptografar uma mensagem $M$ fazemos
-% $$
-% F_P(M) = M^e (\mmod n)
-% $$
-% \pitem Para transformar um texto cifrado C:
-% $$
-% F_S(C) = C^d (\mmod n)
-% $$
-% \end{itemize}
-% \end{frame}
-
-% \begin{frame}{Exemplo}{}
-% \begin{itemize}
-% \pitem Bob sorteia $p = 17$ e $q = 29$ (Na prática sorteia números de no mínimo 1024 bits)
-% \pitem Calcula $n = pq = 493$
-% \pitem Calcula $r = (p-1)(q-1) = 448$
-% \pitem Seleciona $e = 5$ que é um primo relativo de $448$
-% \pitem Calcula $d = 269$, já que $5\cdot 269 \bmod r = 1345 \bmod r = 1$
-% \pitem Publica a chave $P = (5, 493)$
-% \pitem Guarda com carinho a chave $S = (269, 493)$
-% \end{itemize}
-% \end{frame}
-
-
-% \begin{frame}{}{}
-% Chaves de Bob $P = (5, 493)$ e $S = (269, 493)$
-% \begin{itemize}
-% \pitem Alice quer enviar a mensagem 327
-% \begin{align}
-% F_P(327) & = 327^5 \bmod 493 \\\ppause
-% & = 3.738.856.210.407 \bmod 493 \\\ppause
-% & = 259
-% \end{align}
-% \end{itemize}
-% \end{frame}
-
-
-% \begin{frame}{}{}
-% \begin{itemize}
-% \pitem Na verdade Alice não precisa lidar com números astronômicos. (iclusive muito maiores que esse)
-% \begin{align}
-% 327^5 \bmod 493 \\
-% 327^2 \cdot 327^3 \bmod 493 \\
-% (327^2 \bmod 493 \cdot 327^3 \bmod 493) \bmod 493 \\
-% (106929 \bmod 493 \cdot 327^3 \bmod 493) \bmod 493 \\  
-% (441 \cdot 327^3 \bmod 493) \bmod 493 \\  
-% (441 \cdot 441 \cdot 327 \bmod 493) \bmod 493 \\  
-% 78153 \bmod 493 = 259
-% \end{align}
-% \end{itemize}
-% \end{frame}
-
-% \begin{frame}{}{}
-% Chaves de Bob $P = (5, 493)$ e $S = (269, 493)$
-% \begin{itemize}
-% \item Bob então recebe a mensagem criptografada $C = 259$. E decifra ela:
-% $$
-% F_S(259) = 259^{269} \bmod 493 =\ppause 327
-% $$
-% \pitem Que de fato é a mensagem original de Alice!
-% \end{itemize}
-% \end{frame}
-
-
-% \begin{frame}{Corretude do RSA}{Mostrando que $F_P$ e $F_S$ são inversas uma da outra}
-% \begin{itemize}
-% \item Para criptografar um texto $M$ fazemos: $F_P(M) = M^e (\bmod n)$
-% \item Para transformar um cifrado C: $F_S(C) = C^d (\bmod n)$
-% \end{itemize}
-% \ppause
-% O sistema RSA de fato é capaz de encriptar e decodificar mensagens 
-% \begin{align*}
-% F_S(F_P(M)) & = F_S(M^e (\bmod n)) \\
-%         & = (M^e (\bmod n))^d (\bmod n)\\
-%         & = M^{ed} (\bmod n)
-% \end{align*}
-% \end{frame}
-
-
-% \begin{frame}{}{}
-% \begin{itemize}
-% \pitem Queremos mostrar então que $$M^{ed} (\bmod n) = M \bmod n$$ e como $M < n$ então $$M \bmod n = M$$
-% \pitem Começaremos mostrando que $$M^{ed} (\bmod p) = M (\bmod p)$$
-% \end{itemize}
-% \end{frame}
-
-
-
-% \begin{frame}{}{}
-% \begin{itemize}
-% \pitem Lembrando que $r = (p-1)(q-1)$,
-% \pitem e que $e$ é um primo relativo de $r$,
-% \pitem e que $d$ é um inverso multiplicativo de e em aritmética módulo $r$, o que equivale a dizer que existe um inteiro $h$ tal que:
-% $$
-% ed = 1 + h(p-1)(q-1)
-% $$
-% \end{itemize}
-% \end{frame}
-
-% \begin{frame}{}{}
-% \begin{itemize}
-% \pitem Seja $\mathbb{Z}_p = \{0,1,\ldots, n-1\}$
-% \pitem Seja $\mathbb{Z}_p^*$ o conjunto dos elementos de $\mathbb{Z}_p$ que são primos relativos de $p$. Ou seja, se $a \in \mathbb{Z}_p^*$ então $mdc(p, a) = 1$. \ppause
-% \end{itemize}
-% \begin{block}{Pequeno teorema de Fermat}{}
-% Seja $p$ um número primo e $a \in \mathbb{Z}_p^*$, então 
-% $$
-% a^{p - 1} \equiv 1 (\bmod p)
-% $$
-% \end{block}
-
-% \end{frame}
-
-
-% \begin{frame}{}{}
-% {\bf Prova:}
-
-% Considere a sequência $L = (a, 2a, 3a, \ldots, (p-1) a)$ de $(p-1)$ múltiplos de a.
-% \begin{itemize}
-% \pitem Nenhum é múltiplo de $p$ já que $a$ e $p$ são primos relativos. E para todo $ka \in L$, $k \leq (p-1)$.
-% \pitem Em $L$ não tem 2 elementos congruentes em módulo $p$. 
-
-% \end{itemize}
-% \end{frame}
-
-
-% \begin{frame}{}{}
-% \begin{itemize}
-% \pitem Suponha por absurdo que exitem $k_1, k_2 \in \{1, 2, \ldots, p-1\}$
-% com $k_1 \neq k_2$ tal que
-% \begin{align}
-% a k_1 \bmod p &\equiv a k_2 \bmod p 
-% \end{align}\ppause
-% Seja $a'$ o inverso multiplicativo de $a$.
-% \begin{align}
-% a' a k_1 \bmod p &\equiv a' a k_2 \bmod p \\
-% k_1 \bmod p &\equiv k_2 \bmod p 
-% \end{align}\ppause
-% Como $k_1$ e $k_2$ são menores que $p$
-% \begin{align}
-% k_1 = k_2 \ppause (ABSURDO)
-% \end{align}
-% \end{itemize}
-% \end{frame}
-
-% \begin{frame}{}{}
-% {\bf Prova:}
-
-% Considere a sequência $L = (a, 2a, 3a, \ldots, (p-1) a)$ de $(p-1)$ múltiplos de a.
-% \begin{itemize}
-% \item Nenhum é múltiplo de $p$ já que $a$ e $p$ são primos relativos. E para todo $ka \in L$, $k \leq (p-1)$.
-% \item Em $L$ não tem 2 elementos congruentes em módulo $p$. 
-% \pitem Cada $l \in L$ então é congruente a $\{1, 2, \ldots, p-1\}$
-% \begin{align}
-% a \cdot 2a \ldots (p-1)a &\equiv 1 \cdot 2 \ldots (p-1) (\bmod p)\\
-% a^{p-1}.(p-1)! &\equiv  (p-1)! (\bmod p)\\
-% a^{p-1} &\equiv  1 (\bmod p)
-% \end{align}
-% \end{itemize}
-% \end{frame}
-
-
-
-% \begin{frame}{}{}
-% \begin{align*}
-% &M^{ed} (\bmod p) \\\ppause
-% &= (M \bmod p)^{ed} \bmod p\\\ppause
-% &= (M \bmod p)^{1 + h(p-1)(q-1)} \bmod p\\\ppause
-% &= (M \bmod p)\cdot (M \bmod p)^{h(p-1)(q-1)} \bmod p\\\ppause
-% &= (M \bmod p)\cdot ((M \bmod p)^{(p-1)})^{h(q-1)} \bmod p\\\ppause
-% &= (M \bmod p)\cdot ((M \bmod p)^{(p-1)} \bmod p)^{h(q-1)} \bmod p\\\ppause
-% &= (M \bmod p)\cdot (1)^{h(q-1)} \bmod p\\\ppause
-% &= (M \bmod p)
-% \end{align*}
-% \end{frame}
-
-
-
-
-
-% \begin{frame}{}{}
-% \begin{itemize}
-% \item Analogamente $M^{ed} (\bmod q) = (M \bmod q)$.
-% \pitem Além disso se 
-% $$x \bmod p = y \bmod p$$
-% e 
-% $$x \bmod q = y \bmod q$$
-% então 
-% $$x \bmod pq = y \bmod pq$$
-% \end{itemize}
-% \end{frame}
-
-
-
-
-
-
-
-% \begin{frame}{}{}
-% \begin{itemize}
-% \pitem Como $M^{ed} (\bmod p) = M \bmod p$,
-% \pitem e $M^{ed}  \bmod q = M \bmod q$
-% \pitem então $$M^{ed} (\bmod pq) = M \bmod pq$$
-% \pitem Como $pq = n$
-% \item então $$M^{ed} (\bmod n) = M \bmod n$$
-% \item e portanto a chave secreta de Bob decifra $C$
-% \end{itemize}
-% \end{frame}
-
-
-
-% \begin{frame}{}{}
-% \begin{itemize}
-% \pitem Além disso, talvez você tenha reparado que se Bob cifrar um texto comum com a sua chave secreta $S = (d, n)$:
-% $$
-% F_S(M) = M^{d} (\bmod n)
-% $$
-% \pitem Alice pode decifra-la com a chave pública. 
-% $$
-% F_P(M^{d} (\bmod n)) = M^{de} (\bmod n) =  M^{ed} (\bmod n) = M
-% $$
-% \pitem Isso não tem muita utilidade se o objetivo era esconder $M$ já que todo mundo conhece $P$. 
-% \end{itemize}
-% \end{frame}
-
-
-% \begin{frame}{}{}
-% \begin{itemize}
-% \pitem Entretanto serve para Bob provar que foi ele quem escreveu $M$. Já que ninguém mais conseguiria cifrar $M$ dessa forma.
-% \pitem Se Bob então enviar $M$ e $F_S(M)$, Alice e quem mais quiser terá certeza que foi Bob que enviou a mensagem.
-% \pitem Além disso se Bob enviar $M$ e $F_S(M)$, Alice terá certeza que a mensagem $M$ não foi corrompida por exemplo.
-% \end{itemize}
-% \end{frame}
-
-% \begin{frame}{}{}
-% \begin{itemize}
-% \pitem Note que Alice pode gerar as suas próprias chaves e Bob também poderá enviar mensagens cifradas que só ela poderá ler.
-% \pitem Além disso se toda a codificação e decodificação usando aritmética  modular for pesado para a quantidade de informações que Alice e Bob querem trocar. Eles podem usar o RSA para trocar chaves simétricas que sejam mais rápidas de calcular.
-% \end{itemize}
-% \end{frame}
-
-%
-%\begin{frame}{}{}
-%\begin{itemize}
-%\pitem 
-%\end{itemize}
-%\end{frame}
-%
-%
-%\begin{frame}{}{}
-%     \begin{columns}[T] % contents are top vertically aligned
-%     \begin{column}{0.6\textwidth} 
-%     \end{column}
-%     \begin{column}{0.4\textwidth} % alternative top-align that's better for graphics
-%     \end{column}
-%     \end{columns}
-%\end{frame}
-%
-%
-%\begin{frame}{}{}
-%\begin{itemize}
-%\pitem 
-%\end{itemize}
-%\end{frame}
-%
-%\begin{frame}{}{}
-%\begin{itemize}
-%\pitem 
-%\end{itemize}
-%\end{frame}
-%
-%\begin{frame}{}{}
-%\begin{itemize}
-%\pitem 
-%\end{itemize}
-%\end{frame}
