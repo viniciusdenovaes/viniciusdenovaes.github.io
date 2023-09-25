@@ -12,3 +12,11 @@ apesar da imagem poder ser *acessada* por qualquer pessoa.
 Alguns exemplos podem ser:
 - cartas enviadas que poderiam ser interceptadas sem correr o risco do interceptador conseguir ler o conteúdo. Júlio César, o imperador romano, tinha uma técnica de criptografia para que as cartas fossem enviadas de forma segura.
 - mensagens de rádio que podem ser ouvidas por terceiros, sem que estes terceiros entendam a mensagem. Alan Turing, cientista da computação, ficou famoso por fazer um computador capaz de **quebrar a criptografia** da inteligência nazista durante a segunda guerra mundial.
+
+
+
+
+
+
+
+.
