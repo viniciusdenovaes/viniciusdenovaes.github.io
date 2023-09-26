@@ -4,7 +4,6 @@
 Listas
 * [Lista](pi_files/listas/01/lista01PI.pdf)
 
-<!--
 ### Trabalhos
 
 * [Trabalho 01](pi_files/trabalhos/01/trabalho01.html)
@@ -14,6 +13,4 @@ Listas
 ### Trabalhos
 * [Roteiro para APS](pi_files/aps/APS_PIVC.pdf)
 
-### [Git](https://github.com/viniciusdenovaes/Unip222PI)
-
--->
+### [Git](https://github.com/viniciusdenovaes/Unip232PI)
