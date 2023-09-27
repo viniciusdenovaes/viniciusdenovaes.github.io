@@ -7,8 +7,8 @@
 - [01 - Programação Orientada a Eventos](alpoo_files/curso/01/programacao_eventos.html)
 - [02 - Interface de Usuário (Graphical User Interface (GUI))](alpoo_files/curso/02/gui.html)
 - [03 - Model View Controller](alpoo_files/curso/03/mvc.html)
-<!--- [04 - JDBC](alpoo_files/curso/04/jdbc.html)
--->
+- [04 - JDBC](alpoo_files/curso/04/jdbc.html)
+
 
 
 ## Laboratórios
@@ -23,14 +23,11 @@
    - [lab03 - MVC](alpoo_files/laboratorio/03-mvc/01-mvc.html)
 
 
-<!--
 ## Trabalho (APS)
 
 
 - [Roteiro para apresentação](alpoo_files/trabalhos/01/trabalho_livraria.html)
 - [Roteiro para entrega do trabalho no site](alpoo_files/aps/APS_ALPOO_2022.pdf)
-
--->
 
 ## [Git](https://github.com/viniciusdenovaes/Unip232ALPOO)
 

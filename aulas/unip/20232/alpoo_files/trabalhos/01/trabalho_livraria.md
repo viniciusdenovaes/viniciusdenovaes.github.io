@@ -26,10 +26,6 @@ O programa deve ser capaz de fazer as seguintes ações no banco de dados:
     - autores,
     - editoras,
     - (bônus) mais uma busca ou *filtro* de busca, ou busca combinada à sua escolha.
- - Alterar
-    - livros,
-    - autores,
-    - editoras;
  - Incluir
     - livros,
     - autores,
@@ -93,5 +89,5 @@ OBS: Não será avaliado o "flow" (direção e percurso da comunicação) entre 
     - interface gráfica completa: 20%
     - uso adequado do "PreparedStatement": 20%
     - controle de erros das entradas do usuário: 10%
-    - (bônus) mais tipos ou funcionalidades de busca, filtros e busca combinada na busca por livros, autores, ou editora: 10%
+    - (bônus) mais tipos ou funcionalidades de modificação dos dados e busca, filtros e busca combinada na busca por livros, autores, ou editora: 10%
     - (bônus) diálogo com o usuário ao excluir autor e editora, para saber se deve ou não excluir os livros associados: 10%
