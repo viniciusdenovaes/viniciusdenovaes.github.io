@@ -34,7 +34,7 @@
 - [Documento APS](ipe_files/extra/aps/aps.pdf)
 - [Slides Sobre Criptografia](ipe_files/extra/slides/slides.pdf)
 
-## [Git](https://github.com/viniciusdenovaes/Unip223IPE)
+## [Git](https://github.com/viniciusdenovaes/Unip232IPE)
 
 <!--
 ## Ementa
