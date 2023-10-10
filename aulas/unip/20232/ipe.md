@@ -32,9 +32,9 @@
 - [Documento APS](ipe_files/extra/aps/aps.pdf)
 - [Slides Sobre Criptografia](ipe_files/extra/slides/slides.pdf)
 
-<!--
-## [Git](https://github.com/viniciusdenovaes/Unip223ALPOO)
+## [Git](https://github.com/viniciusdenovaes/Unip223IPE)
 
+<!--
 ## Ementa
 
 - Parte 01 - Programação orientada a eventos: separação de ações e eventos
