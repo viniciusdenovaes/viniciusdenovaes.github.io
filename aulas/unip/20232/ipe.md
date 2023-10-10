@@ -13,9 +13,8 @@
   - [02.2 - Comando De Repetição (while)]<!--(ipe_files/curso/02/02-comando_repeticao.html)-->
 - [04 Listas](ipe_files/curso/03/01-listas.html)
 - [03 Funções](ipe_files/curso/04/01-funcoes.html)
-<!--  - [04.02 Conjuntos](ipe_files/curso/04/02-conjuntos.html)
-  - [04.03 Dicionarios](ipe_files/curso/04/03-dicionarios.html)
--->
+- [04.02 Conjuntos](ipe_files/curso/05/conjuntos.html)
+- [04.03 Dicionarios](ipe_files/curso/06/dicionarios.html)
 
 ## Laboratórios
 
@@ -26,6 +25,9 @@
   - [Comandos de Repetição](ipe_files/lab/02/02-comandos_repeticao.html)
 - [lab03 - Listas](ipe_files/lab/03/01-listas.html)
 - [lab04 - Funções](ipe_files/lab/04/01-funcoes.html)
+- [lab05 - Conjuntos](ipe_files/lab/05-conjuntos/01-conjuntos.html)
+- [lab06 - Dicionários](ipe_files/lab/06-dicionarios/01-dicionarios.html)
+
 
 ## Trabalho (APS)
 
