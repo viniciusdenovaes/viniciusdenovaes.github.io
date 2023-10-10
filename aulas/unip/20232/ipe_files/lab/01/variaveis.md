@@ -44,4 +44,4 @@ Faça um programa que calcule a hipotenusa de um triângulo, recebendo o valor d
 
 
 
-[Respostas](https://github.com/viniciusdenovaes/Unip222IPE/tree/master/lab02)
+[Respostas](https://github.com/viniciusdenovaes/Unip232IPE/tree/master/lab01)

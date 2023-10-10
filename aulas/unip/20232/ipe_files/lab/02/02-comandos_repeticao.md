@@ -65,7 +65,7 @@ Escreva um programa que receba uma string contendo apenas 0 e 1, e responda o ta
 
 
 
-[Respostas](https://github.com/viniciusdenovaes/Unip222IPE/tree/master/lab04)
+[Respostas](https://github.com/viniciusdenovaes/Unip232IPE/tree/master/lab02.1)
 
 
 

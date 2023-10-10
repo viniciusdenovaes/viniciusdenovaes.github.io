@@ -55,7 +55,7 @@ Saída
 O volume da esfera de 2.0 eh: 33.510321638291124
 ```
 
-[Respostas](https://github.com/viniciusdenovaes/Unip222IPE/tree/master/lab01)
+[Respostas](https://github.com/viniciusdenovaes/Unip232IPE/tree/master/lab00)
 
 
 
@@ -82,4 +82,4 @@ Saída
 A area de um triangulo de base 3.0 e altura 5.0 eh: 7.5
 ```
 
-[Respostas](https://github.com/viniciusdenovaes/Unip222IPE/tree/master/lab01)
+[Respostas](https://github.com/viniciusdenovaes/Unip232IPE/tree/master/lab00)

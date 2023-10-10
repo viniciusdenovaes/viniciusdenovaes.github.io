@@ -84,7 +84,7 @@ Faça um programa que receba uma lista de números separados por espaço, e impr
 
 
 
-[Respostas](https://github.com/viniciusdenovaes/Unip222IPE/tree/master/lab05)
+[Respostas](https://github.com/viniciusdenovaes/Unip232IPE/tree/master/lab03)
 
 
 

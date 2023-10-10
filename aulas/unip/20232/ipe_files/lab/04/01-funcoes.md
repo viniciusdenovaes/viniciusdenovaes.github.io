@@ -54,7 +54,7 @@ Faça uma função que receba uma lista de números inteiros e retorne uma lista
 Faça uma função que receba uma lista de números inteiros positivos e retorne a quantidade de números primos que têm na lista de entrada.
 
 
-[Respostas](https://github.com/viniciusdenovaes/Unip222IPE/tree/master/lab06)
+[Respostas](https://github.com/viniciusdenovaes/Unip232IPE/tree/master/lab04)
 
 
 

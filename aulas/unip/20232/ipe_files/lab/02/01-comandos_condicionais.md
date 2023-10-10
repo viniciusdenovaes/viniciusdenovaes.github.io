@@ -34,7 +34,7 @@ Um programa que recebe os **lados** de um triângulo e verifica se este triângu
 
 
 
-[Respostas](https://github.com/viniciusdenovaes/Unip222IPE/tree/master/lab03)
+[Respostas](https://github.com/viniciusdenovaes/Unip232IPE/tree/master/lab02)
 
 
 
