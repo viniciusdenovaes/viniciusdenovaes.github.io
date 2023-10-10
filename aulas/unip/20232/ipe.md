@@ -11,10 +11,10 @@
 - 02 - Comandos de Controle
   - [02.1 - Comando Condicional (if)]<!--(ipe_files/curso/02/01-comando_condicional.html)-->
   - [02.2 - Comando De Repetição (while)]<!--(ipe_files/curso/02/02-comando_repeticao.html)-->
-- [04 Listas](ipe_files/curso/03/01-listas.html)
-- [03 Funções](ipe_files/curso/04/01-funcoes.html)
-- [04.02 Conjuntos](ipe_files/curso/05/conjuntos.html)
-- [04.03 Dicionarios](ipe_files/curso/06/dicionarios.html)
+- [03 Listas](ipe_files/curso/03/01-listas.html)
+- [04 Funções](ipe_files/curso/04/01-funcoes.html)
+- [05 Conjuntos](ipe_files/curso/05/conjuntos.html)
+- [06 Dicionarios](ipe_files/curso/06/dicionarios.html)
 
 ## Laboratórios
 
