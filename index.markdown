@@ -7,7 +7,7 @@
 
 ## Aulas
 
-### (2023/1)
+### Atuais (2024/1)
 ##### CC e SI
 * [LPOO](aulas/unip/20241/lpoo.html)
 * [IA](aulas/unip/20241/ia.html)
@@ -17,7 +17,7 @@
 ##### ADS
 * [POO](aulas/unip/20241/poo.html)
 
-### Atuais (2023/2)
+### (2023/2)
 * [IPE](aulas/unip/20232/ipe.html)
 * [ALPOO](aulas/unip/20232/alpoo.html)
 * [Aspectos Teóricos da Computação](aulas/unip/20232/atc.html)
