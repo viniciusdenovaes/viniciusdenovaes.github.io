@@ -7,6 +7,16 @@
 
 ## Aulas
 
+### (2023/1)
+##### CC e SI
+* [LPOO](aulas/unip/20241/lpoo.html)
+* [IA](aulas/unip/20241/ia.html)
+* [CG](aulas/unip/20241/cg.html)
+* [AA](aulas/unip/20241/aa.html)
+* [PWR](aulas/unip/20241/pwr.html)
+##### ADS
+* [POO](aulas/unip/20241/poo.html)
+
 ### Atuais (2023/2)
 * [IPE](aulas/unip/20232/ipe.html)
 * [ALPOO](aulas/unip/20232/alpoo.html)
