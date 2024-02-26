@@ -10,7 +10,7 @@ Para saber se você já tem o programa dotnet:
 1. digite o comando `dotnet --version`
 Aparecerá a última versão do dotnet disponível.
 
-No meu apareceu isto :
+No meu apareceu isto:
 ```
 $ dotnet --version
 8.0.200
