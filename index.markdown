@@ -16,7 +16,7 @@
 * [LFA](aulas/unip/20241/lfa.html)
 * [PWR](aulas/unip/20241/pwr.html)
 ##### ADS
-* [POO](aulas/unip/20241/poo.html)
+* [POO](aulas/unip/20241/poo_ads.html)
 
 ### (2023/2)
 * [IPE](aulas/unip/20232/ipe.html)

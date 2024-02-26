@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="file:////home/vinicius/.atom/packages/markdown-preview-enhanced/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      <link rel="stylesheet" href="file:////home/vinicius/programs/atom_packages/markdown-preview-enhanced/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
       
       
       
@@ -261,136 +261,91 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="como-instalar-java-no-windows-windows-10">Como instalar java no Windows (Windows 10)</h1>
+      <h1 class="mume-header" id="como-instalar-c-no-windows-windows-10">Como instalar C# no Windows (Windows 10)</h1>
 
-<p>Para programar em java voc&#xEA; precisa do Java Development Kit (JDK).</p>
-<p>A vers&#xE3;o mais atualizada pode ser encontrada no link <a href="http://www.oracle.com/technetwork/java/javase/downloads">http://www.oracle.com/technetwork/java/javase/downloads</a>.<br>
-(No momento da escrita neste tutorial, a vers&#xE3;o mais nova &#xE9; a 11)</p>
-<h3 class="mume-header" id="passo-a-passo">Passo a passo</h3>
+<p>Para programar em C# voc&#xEA; precisa do programa dotnet (<a href="http://www.dot.net">http://www.dot.net</a>),<br>
+este &#xE9; o programa que ir&#xE1; transformar o seu c&#xF3;digo de C# em um programa execut&#xE1;vel.</p>
+<h3 class="mume-header" id="para-instalar-o-dotnet">Para instalar o &apos;dotnet&apos;</h3>
 
-<p>Para instalar o Java no Windows, siga os seguintes passos (as imagens do tutorial foram feitas no Windows 10):</p>
+<p>Para saber se voc&#xEA; j&#xE1; tem o programa dotnet:</p>
+<ol>
+<li>abra o terminal no windows (busque o programa &#xB4;prompt&#xB4; ou &apos;Command Prompt&apos;)</li>
+<li>digite o comando <code>dotnet --version</code><br>
+Aparecer&#xE1; a &#xFA;ltima vers&#xE3;o do dotnet dispon&#xED;vel.</li>
+</ol>
+<p>No meu apareceu isto:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>$ dotnet --version
+8.0.200
+</code></pre><p>A &#xFA;ltima vers&#xE3;o que eu tenho no meu computador &#xE9; a 8.0.200.</p>
+<p>Qualquer vers&#xE3;o depois da (incluindo a) 6.0 servir&#xE1; para este curso.</p>
+<p>Caso voc&#xEA; n&#xE3;o tenha nenhum instalado voc&#xEA; poder&#xE1; instalar pelo <a href="https://visualstudio.microsoft.com/">Visual Studio 2022 Community Edition</a> como veremos mais adiante, <strong>ou</strong> instalar pelo site <a href="http://www.dot.net">http://www.dot.net</a></p>
+<h2 class="mume-header" id="ide">IDE</h2>
+
+<h3 class="mume-header" id="o-que-%C3%A9-uma-ide">O que &#xE9; uma IDE?</h3>
+
+<p>Do ingl&#xEA;s <em>integrated development environment</em> ou <em>ambiente de desenvolvimento integrado</em> &#xE9; uma ferramenta que inclui um poderoso editor de texto para edi&#xE7;&#xE3;o de c&#xF3;digo em um projeto.</p>
+<p>Em um projeto o seu c&#xF3;digo estar&#xE1; em v&#xE1;rios arquivos diferentes. Diferente de um simples editor de texto como &quot;notepad++&quot;, uma IDE consegue entender o seu projeto como um todo, ao inv&#xE9;s de ver cada arquivo de forma separada. Desta forma ela consegue ajudar nas refer&#xEA;ncias que voc&#xEA; fizer de um arquivo a outro.</p>
+<p>As IDEs s&#xE3;o essenciais para fazer qualquer projeto profissional, ent&#xE3;o &#xE9; melhor se acostumar com alguma desde cedo.</p>
+<h3 class="mume-header" id="qual-ide-usar">Qual IDE usar?</h3>
+
+<p>Vamos ver aqui como usar duas IDEs: <a href="https://visualstudio.microsoft.com/">Visual Studio 2022 Community Edition</a>, e <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</p>
+<p>Dois nome muito parecidos n&#xE9;? Vamos ver a diferen&#xE7;a entre as duas:</p>
 <ul>
-<li>
-<p>Baixe o JDK no link [<a href="http://www.oracle.com/technetwork/java/javase/downloads">www.oracle.com/technetwork/java/javase/downloads</a>]<br>
-<img src="../images/java11InstSearch.png" alt="Busca no google pelo jdk"></p>
-</li>
-<li>
-<p>Escolha a vers&#xE3;o do Java, &#xE9; recomend&#xE1;vel pegar a vers&#xE3;o mais nova, ela possibilita compilar o seu programa usando qualquer vers&#xE3;o anterior<br>
-<img src="../images/java11InstDown.png" alt="Link para a vers&#xE3;o Java 11"></p>
-</li>
-<li>
-<p>Aceite o termo de uso e escolha o tipo de arquivo, aqui escolhemos o &quot;.zip&quot; para o Windows<br>
-<img src="../images/java11InstFlavorWindows.png" alt="Link para a vers&#xE3;o Java 11"></p>
-</li>
-<li>
-<p>Agora colocamos o programa na pasta +C:\java+, para isto basta recortar e colar o arquivo no endere&#xE7;o</p>
-</li>
-<li>
-<p>Agora podemos extrair o arquivo, no meu caso ele foi extra&#xED;do para a pasta &quot;jdk-11.0.2&quot;</p>
-</li>
-<li>
-<p>Agora precisamos configurar a vari&#xE1;vel de ambiente &quot;PATH&quot; para que o Windows saiba onde encontrar o programa.<br>
-O caminho para configurar o &quot;PATH&quot; &#xE9;</p>
-</li>
-<li>
-<p>&quot;Control Panel&quot;,<br>
-<img src="../images/java11InstWinSet.png" alt="Para abrir painel de controle"></p>
-</li>
-<li>
-<p>Busque pelo termo &quot;variable&quot;,<br>
-<img src="../images/java11InstWinSearch.png" alt="Busca pelo termo &quot;variable&quot;"></p>
-</li>
-<li>
-<p>Escolha &quot;Environment Variables&quot;,<br>
-<img src="../images/java11InstWinEnv.png" alt="Abrindo vari&#xE1;veis de ambientes"></p>
-</li>
-<li>
-<p>edit &quot;Path&quot;,<br>
-<img src="../images/java11InstWinPath.png" alt="Editando Path"></p>
-</li>
-<li>
-<p>&quot;New&quot; e<br>
-<img src="../images/java11InstWinVarNew.png" alt="Inserindo um novo caminho em Path"></p>
-</li>
-<li>
-<p>adicione o caminho +C:\Java\jdk-11.0.2\bin+<br>
-<img src="../images/java11InstWinVarEdit.png" alt="Editando o caminho novo"></p>
-</li>
-<li>
-<p>(ATEN&#xC7;&#xC3;O: pode ser que a sua vers&#xE3;o seja diferente, para acertar basta copiar o endere&#xE7;o de onde est&#xE1; a pasta &quot;bin&quot; dentro da pasta &quot;jdk&quot;)</p>
-</li>
-<li>
-<p>Para verificar a instala&#xE7;&#xE3;o v&#xE1; ao terminal e verifique a vers&#xE3;o instalado do Java<br>
-(caso o terminal j&#xE1; esteja aberto, voc&#xEA; precisar&#xE1; fechar e abrir de novo para que ele atualize com a modifica&#xE7;&#xE3;o da vari&#xE1;vel de ambiente)<br>
--- A vers&#xE3;o do compilador +javac+ com o comando <code>javac -version</code></p>
-</li>
+<li><a href="https://visualstudio.microsoft.com/">Visual Studio 2022 Community Edition</a>: &#xE9; uma IDE desenvolvida pela Microsoft para programar em C# e C++. Esta IDE pode automatizar processor mais complicados como cria&#xE7;&#xE3;o e organiza&#xE7;&#xE3;o de projetos. Esta IDE &#xE9; mais direcionada para o projeto.</li>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code</a>: &#xE9; uma IDE desenvolvida pela Microsoft para ser altamente customiz&#xE1;vel, ela <strong>n&#xE3;o</strong> &#xE9; somente para programar em C#. Por isto voc&#xEA; vai precisar configurar bastante ela antes de usar, para que ela se adeque ao seu objetivo. Al&#xE9;m disso ela dificilmente vai automatizar a cria&#xE7;&#xE3;o e estrutura&#xE7;&#xE3;o de projetos. Esta IDE &#xE9; mais direcionada ao c&#xF3;digo.</li>
 </ul>
-<pre data-role="codeBlock" data-info="shell_session" class="language-shell_session"><code>PS C:\Users\vinicius&gt; javac -version
-javac 11.0.2
-</code></pre><p>-- A vers&#xE3;o do +java+ com o comando <code>java -version</code></p>
-<pre data-role="codeBlock" data-info class="language-"><code>PS C:\Users\vinicius&gt; java -version
-java version &quot;11.0.2&quot; 2018-10-16 LTS
-Java(TM) SE Runtime Environment 18.9 (build 11.0.2+7-LTS)
-Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.2+7-LTS, mixed mode)
-</code></pre><h3 class="mume-header" id="informa%C3%A7%C3%A3o-extra">Informa&#xE7;&#xE3;o extra</h3>
+<p>Para iniciantes, recomendo usar o <a href="https://visualstudio.microsoft.com/">Visual Studio 2022 Community Edition</a>, pois voc&#xEA; gastar&#xE1; menos tempo com a parte de configura&#xE7;&#xE3;o do projeto.</p>
+<p>Uma outra IDE que pode ser usada &#xE9; a <a href="https://www.jetbrains.com/rider/">Rider da JetBrains</a>, mas esta &#xE9; paga e n&#xE3;o ser&#xE1; coberta por este tutorial.</p>
+<h3 class="mume-header" id="usando-visual-studio-2022-community-editionhttpsvisualstudiomicrosoftcom">Usando <a href="https://visualstudio.microsoft.com/">Visual Studio 2022 Community Edition</a></h3>
 
-<p>Pode ser que voc&#xEA; se depare com outras vers&#xF5;es mais antigas, a tabela abaixo explica cada nomenclatura.</p>
-<table>
-<thead>
-<tr>
-<th>Nome</th>
-<th style="text-align:center">Acr&#xF4;nimo</th>
-<th style="text-align:left">Explica&#xE7;&#xE3;o</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Java Development Kit</td>
-<td style="text-align:center">JDK</td>
-<td style="text-align:left">Software para programadores que querem escrever programas em Java</td>
-</tr>
-<tr>
-<td>Java Runtime Environment</td>
-<td style="text-align:center">JRE</td>
-<td style="text-align:left">Software para o susu&#xE1;rio final que quer rodar um programa em Java</td>
-</tr>
-<tr>
-<td>Standard Edition</td>
-<td style="text-align:center">SE</td>
-<td style="text-align:left">Plataforma Java para ser usada em computador e aplica&#xE7;&#xF5;es mais simples</td>
-</tr>
-<tr>
-<td>Enterprise Edition</td>
-<td style="text-align:center">EE</td>
-<td style="text-align:left">Plataforma Java para ser usada em computador ou aplica&#xE7;&#xF5;es mais complexas</td>
-</tr>
-<tr>
-<td>Micro Edition</td>
-<td style="text-align:center">ME</td>
-<td style="text-align:left">Plataforma Java para ser usada em celulares e dispositivos port&#xE1;teis</td>
-</tr>
-<tr>
-<td>Java 2</td>
-<td style="text-align:center">J2</td>
-<td style="text-align:left">Um termo desatualizado que descreve as vers&#xF5;es Java de 1998 a 2006</td>
-</tr>
-<tr>
-<td>Software Development Kit</td>
-<td style="text-align:center">SDK</td>
-<td style="text-align:left">Um termo desatualizado que descreve JDK de 1998 a 2006</td>
-</tr>
-<tr>
-<td>Update</td>
-<td style="text-align:center">u</td>
-<td style="text-align:left">Termo para indicar que algum bug foi consertado</td>
-</tr>
-<tr>
-<td>NetBeans</td>
-<td style="text-align:center">--</td>
-<td style="text-align:left">Um ambiente de desenvolvimento da Oracle</td>
-</tr>
-</tbody>
-</table>
+<p>Baixe e rode a &#xFA;ltima vers&#xE3;o do instalador pelo site oficial <a href="https://visualstudio.microsoft.com/">Visual Studio 2022 Community Edition</a>.</p>
+<p><img src="../images/cs-vs01.png" alt="Nada instalado no vs"></p>
+<p>Escolha a instala&#xE7;&#xE3;o do Visual Studio Community 2022</p>
+<p><img src="../images/cs-vs02.png" alt="escolhendo a instalacao"></p>
+<p>Marque a op&#xE7;&#xE3;o de desenvolvimento de aplicativos para consoles (terminal) e<br>
+na outra aba certifique-se de ter uma vers&#xE3;o Long Term Supported do .NET, como a 8.0 por exemplo.</p>
+<p><img src="../images/cs-vs03.1.png" alt="opcoes de instalacao"><br>
+<img src="../images/cs-vs03.2.png" alt="opcoes de .NET"></p>
+<p>Espere a insta&#xE7;&#xE3;o ser conclu&#xED;da</p>
+<p><img src="../images/cs-vs04.png" alt="Instala&#xE7;&#xE3;o"></p>
+<p>N&#xE3;o precisa logar<br>
+<img src="../images/cs-vs05.png" alt="Logar"></p>
+<p>Crie um novo projeto<br>
+<img src="../images/cs-vs06.png" alt="Novo projeto"></p>
+<p>Escolha a op&#xE7;ao de Console APP <strong>do C#</strong>, e <strong>n&#xE3;o</strong> a do <strong>VB</strong><br>
+<img src="../images/cs-vs07.png" alt="Console App para C#"></p>
+<p>Coloque um nome do seu projeto, perceba que o nome da solu&#xE7;&#xE3;o e os nomes das pastas ficar&#xE3;o iguais.<br>
+<img src="../images/cs-vs08.png" alt="Nomeando Projeto"></p>
+<p>Escolha a vers&#xE3;o do .NET e crie o projeto<br>
+<img src="../images/cs-vs09.png" alt="Criando Projeto"></p>
+<p>Clique na seta verde para rodar o projeto<br>
+<img src="../images/cs-vs10.png" alt="Rodando Projeto"></p>
+<p>Modifique o c&#xF3;digo para ficar mais parecido com o que a gente ver&#xE1; na aula.<br>
+<img src="../images/cs-vs11.png" alt="Modificando o c&#xF3;digo"></p>
+<h3 class="mume-header" id="usando-visual-studio-codehttpscodevisualstudiocom">Usando <a href="https://code.visualstudio.com/">Visual Studio Code</a></h3>
+
+<p>O procedimento deste &#xE9; mais complicado que o anterior. Para quem est&#xE1; iniciando recomendo que use o <a href="https://visualstudio.microsoft.com/">Visual Studio 2022 Community Edition</a></p>
+<p>Baixe e instale a &#xFA;ltima vers&#xE3;o pelo site oficial <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</p>
+<p>Crie a pasta que voc&#xEA; usar&#xE1; para a sua &#xE1;rea de trabalho do &apos;vscode&apos;.</p>
+<p>Vamos seguir o mesmo padr&#xE3;o para criar um projeto no VisualStudio:</p>
+<p>Abra esta pasta no terminal e entre com o seguinte comando para criar uma solu&#xE7;&#xE3;o chamada <code>MeuProjetoVSC</code> na pasta <code>MeuProjetoVSC</code></p>
+<pre data-role="codeBlock" data-info class="language-"><code>dotnet new sln -n MeuProjetoVSC -o .\MeuProjetoVSC
+</code></pre><p>Entre com o seguinte comando para criar uma aplica&#xE7;&#xE3;o <code>MeuProjetoVSC</code> na pasta <code>MeuProjetoVSC\MeuProjetoVSC</code>. Em <code>-f net8.0</code> escolha a vers&#xE3;o do .net que voc&#xEA; quer usar.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>dotnet new console -lang c# -n MeuProjetoVSC -o .\MeuProjetoVSC\MeuProjetoVSC -f net8.0
+</code></pre><p>Entre com o seguinte comando para adicionar a aplica&#xE7;&#xE3;o &#xE0; sua solu&#xE7;&#xE3;o.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>dotnet sln .\MeuProjetoVSC\MeuProjetoVSC.sln add .\MeuProjetoVSC\MeuProjetoVSC
+</code></pre><p>Entre com o seguinte comando para abrir o vscode com o seu projeto.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>code MeuProjetoVSC
+</code></pre><p>Veja seu projeto pronto para rodar no vscode<br>
+<img src="../images/code01.png" alt="Projeto VSCode"></p>
+<p>Clique na seta e em &quot;Run and Debug&quot;<br>
+<img src="../images/code02.png" alt="Debug"></p>
+<p>Escolha C#<br>
+<img src="../images/code03.png" alt="Projeto VSCode"></p>
+<p>Escolha C# com o nome do seu projeto<br>
+<img src="../images/code04.png" alt="Projeto VSCode"></p>
+<p>Agora voc&#xEA; pode fazer um projeto no VSCode e rodar o seu aplicativo.</p>
+<p>.</p>
 
       </div>
       

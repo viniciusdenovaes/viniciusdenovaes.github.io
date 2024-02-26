@@ -4,7 +4,7 @@
 Listas
 #### NP 1
 * [Lista 01 - Autômatos Finitos Não-Determinísticos](atc_files/listas/01/lista01LFA.pdf)
-* [Lista 02 - Autômatos Finitos Determinísticos](atc_files/listas/02/lista02LFA.pdf)
+<!--* [Lista 02 - Autômatos Finitos Determinísticos](atc_files/listas/02/lista02LFA.pdf)
 * [Lista 03 - Expressões Regulares](atc_files/listas/03/lista03LFA.pdf)
 
 #### NP 2

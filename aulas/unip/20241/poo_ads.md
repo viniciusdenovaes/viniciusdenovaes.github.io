@@ -16,7 +16,7 @@
   - [Hello World - Como escrever um código que imprime uma mensagem na tela](lpoo_files/curso/00-hello/hello.html)
   - [Dois Mains - Como ter dois pontos de partida no seu código](poo_files/curso/00-hello/dois_mains.html)
 
-- Parte 01 Comandos Básicos:
+<!--- Parte 01 Comandos Básicos:
   - [Tipos Primitivos e Operações](lpoo_files/curso/01/tipos_primitivos.html)
   - [Comandos de Controle](lpoo_files/curso/01/comandos_de_controle.html)
 
@@ -40,7 +40,7 @@
 - Parte 07 - Entrada e Saída
   - [IO](lpoo_files/curso/00.1-erros-io/02-io.html)
 
-
+-->
 ## Laboratórios
 
 - [lab00 - Usando funções (métodos estáticos)](lpoo_files/laboratorio/00-basico/comandos-basicos.html)
@@ -52,6 +52,7 @@
 - lab02 - Classes com Encapsulamento
   - [lab02.01 - Get e Set](lpoo_files/laboratorio/02-classes_encapsulamento/02.01-classes_encapsulamento.html)
   - [lab02.02 - Classes com encapsulamento (Extra)](lpoo_files/laboratorio/02-classes_encapsulamento/02.02-classes_encapsulamento.html)
+<!--
 - lab04 - Herança, Classes Abstratas e Polimorfismo
   - [Herança](lpoo_files/laboratorio/04-heranca/04.00-exercicio_heranca.html)
   - [Exemplo sem Herança](lpoo_files/laboratorio/04-heranca/04.01-exercicio_sem_heranca.html)
@@ -78,7 +79,7 @@
 * [Github](https://github.com/viniciusdenovaes/Unip211LPOO)
 -->
 
-
+<!--
 ## Ementa
 
 * Parte 00 - Revisão: Levamos em consideração que a turma aprendeu o paradigma de programação procedural programando em Python. Será feito uma revisão de tipos primitivos, comandos de controle e procedimentos focando na sintaxe em Java.
@@ -180,3 +181,4 @@ Depois de aprender a programar orientado a objetos este é *o próximo passo*.
 Mas estas são minhas opiniões pessoais.
 É recomendável que você experimente, pesquise e pergunte para outras pessoas também.
 Um bom livro é aquele que você lê e aprende informações corretas, e isto depende de vários fatores como objetivos, gostos, e nível de conhecimento.
+-->

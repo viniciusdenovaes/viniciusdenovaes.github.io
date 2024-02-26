@@ -7,14 +7,14 @@ este é o programa que irá transformar o seu código de C# em um programa execu
 
 Para saber se você já tem o programa dotnet:
 1. abra o terminal no windows (busque o programa ´prompt´ ou 'Command Prompt')
-1. digite o comando 'dotnet --version'
+1. digite o comando `dotnet --version`
 Aparecerá a última versão do dotnet disponível.
 
 No meu apareceu isto:
-'''code
+```
 $ dotnet --version
 8.0.200
-'''
+```
 
 A última versão que eu tenho no meu computador é a 8.0.200.
 
@@ -28,7 +28,7 @@ Caso você não tenha nenhum instalado você poderá instalar pelo [Visual Studi
 
 Do inglês *integrated development environment* ou *ambiente de desenvolvimento integrado* é uma ferramenta que inclui um poderoso editor de texto para edição de código em um projeto.
 
-Em um projeto o seu código estará em vários arquivos diferentes. Diferente de um simples editor de texto como 'notepad++', uma IDE consegue entender o seu projeto como um todo, ao invés de ver cada arquivo de forma separada. Desta forma ela consegue te ajudar nas referências que você fizer de um arquivo a outro.
+Em um projeto o seu código estará em vários arquivos diferentes. Diferente de um simples editor de texto como "notepad++", uma IDE consegue entender o seu projeto como um todo, ao invés de ver cada arquivo de forma separada. Desta forma ela consegue ajudar nas referências que você fizer de um arquivo a outro.
 
 As IDEs são essenciais para fazer qualquer projeto profissional, então é melhor se acostumar com alguma desde cedo.
 
