@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="file:////home/vinicius/.atom/packages/markdown-preview-enhanced/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      <link rel="stylesheet" href="file:////home/vinicius/programs/atom_packages/markdown-preview-enhanced/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
       
       
       
@@ -359,22 +359,25 @@ pre[data-line] .line-highlight[data-end]:after {
 <li>O m&#xE9;todo <code>comer</code> deve escrever na tela <code>comendo o que o pato come</code></li>
 </ul>
 <p>Crie uma classe <code>Veterinaria</code> para cuidar do <code>Cachorro</code>, <code>Gato</code> e <code>Pato</code>, um m&#xE9;todo est&#xE1;tico para cada, que siga o seguinte exemplo:</p>
-<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Veterinaria</span> <span class="token punctuation">{</span>
+<pre data-role="codeBlock" data-info="cs" class="language-csharp"><span class="token keyword keyword-namespace">namespace</span> <span class="token namespace">Veterinaria</span><span class="token punctuation">{</span>
 
-	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">cuidaDoCachorro</span><span class="token punctuation">(</span><span class="token class-name">Cachorro</span> cachorro<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Recebendo &quot;</span> <span class="token operator">+</span> cachorro<span class="token punctuation">.</span><span class="token function">getNome</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>cachorro<span class="token punctuation">.</span><span class="token function">getIsDoente</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;O cachorro est&#xE1; saud&#xE1;vel&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-			<span class="token keyword">return</span><span class="token punctuation">;</span>
-		<span class="token punctuation">}</span>
+  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Veterinaria</span> <span class="token punctuation">{</span>
 
-		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Dando inje&#xE7;&#xE3;o para o animalzinho&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		cachorro<span class="token punctuation">.</span><span class="token function">darInjecao</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		cachorro<span class="token punctuation">.</span><span class="token function">latir</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		cachorro<span class="token punctuation">.</span><span class="token function">comer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		cachorro<span class="token punctuation">.</span><span class="token function">dormir</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token punctuation">}</span>
+  	<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">cuidaDoCachorro</span><span class="token punctuation">(</span><span class="token class-name">Cachorro</span> cachorro<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  		Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">&quot;Recebendo &quot;</span> <span class="token operator">+</span> cachorro<span class="token punctuation">.</span><span class="token function">getNome</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  		<span class="token keyword keyword-if">if</span><span class="token punctuation">(</span><span class="token operator">!</span>cachorro<span class="token punctuation">.</span><span class="token function">getIsDoente</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  			Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">&quot;O cachorro est&#xE1; saud&#xE1;vel&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  			<span class="token keyword keyword-return">return</span><span class="token punctuation">;</span>
+  		<span class="token punctuation">}</span>
 
+  		Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">&quot;Dando inje&#xE7;&#xE3;o para o animalzinho&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  		cachorro<span class="token punctuation">.</span><span class="token function">darInjecao</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  		cachorro<span class="token punctuation">.</span><span class="token function">latir</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  		cachorro<span class="token punctuation">.</span><span class="token function">comer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  		cachorro<span class="token punctuation">.</span><span class="token function">dormir</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  	<span class="token punctuation">}</span>
+
+  <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </pre><p>Fa&#xE7;a a classe <code>Cuidador</code>, esta classe deve ter:</p>
 <ul>
@@ -383,18 +386,19 @@ pre[data-line] .line-highlight[data-end]:after {
 <li>um m&#xE9;todo para adicionar <code>Cachorro</code>, <code>Gato</code> e <code>Pato</code> em suas cole&#xE7;&#xF5;es.</li>
 </ul>
 <p>Crie classes separadas para testar cada uma das suas classes, por exemplo:</p>
-<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TestaVeterinaria</span> <span class="token punctuation">{</span>
+<pre data-role="codeBlock" data-info="cs" class="language-csharp"><span class="token keyword keyword-namespace">namespace</span> <span class="token namespace">TestaVeterinaria</span><span class="token punctuation">{</span>
+  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">TestaVeterinaria</span> <span class="token punctuation">{</span>
 
-	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-		<span class="token class-name">Cachorro</span> cachorro01 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Cachorro</span><span class="token punctuation">(</span><span class="token string">&quot;Brutus&quot;</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">5.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		<span class="token class-name">Veterinaria</span><span class="token punctuation">.</span><span class="token function">cuidaDoCachorro</span><span class="token punctuation">(</span>cachorro01<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  	<span class="token keyword keyword-static">static</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-string">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  		<span class="token class-name">Cachorro</span> cachorro01 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token constructor-invocation class-name">Cachorro</span><span class="token punctuation">(</span><span class="token string">&quot;Brutus&quot;</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">5.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  		Veterinaria<span class="token punctuation">.</span><span class="token function">cuidaDoCachorro</span><span class="token punctuation">(</span>cachorro01<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-		cachorro01<span class="token punctuation">.</span><span class="token function">adoece</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		<span class="token class-name">Veterinaria</span><span class="token punctuation">.</span><span class="token function">cuidaDoCachorro</span><span class="token punctuation">(</span>cachorro01<span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token punctuation">}</span>
+  		cachorro01<span class="token punctuation">.</span><span class="token function">adoece</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  		Veterinaria<span class="token punctuation">.</span><span class="token function">cuidaDoCachorro</span><span class="token punctuation">(</span>cachorro01<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  	<span class="token punctuation">}</span>
 
+  <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-
 </pre><p>Crie a <code>TestaCuidador</code>, <code>TestaCachorro</code>, <code>TestaGato</code>, <code>TestaPato</code>.</p>
 <h3 class="mume-header" id="exerc%C3%ADcio-03">Exerc&#xED;cio 03</h3>
 

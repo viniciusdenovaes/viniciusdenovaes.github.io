@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="file:////home/vinicius/.atom/packages/markdown-preview-enhanced/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      <link rel="stylesheet" href="file:////home/vinicius/programs/atom_packages/markdown-preview-enhanced/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
       
       
       
@@ -263,7 +263,7 @@ pre[data-line] .line-highlight[data-end]:after {
       <div class="mume markdown-preview  ">
       <h1 class="mume-header" id="laborat%C3%B3rio-01-classes">Laborat&#xF3;rio 01 - Classes</h1>
 
-<p>Para cada um destes exerc&#xED;cios, fa&#xE7;a uma classe teste <code>TesteExercicioXX</code> <strong>separada</strong> com o m&#xE9;todo <code>public static void main(String[] args)</code> para testar a sua classe.</p>
+<p>Para cada um destes exerc&#xED;cios, fa&#xE7;a uma classe teste <code>TesteExercicioXX</code> <strong>separada</strong> com o m&#xE9;todo <code>static void Main(String[] args)</code> para testar a sua classe.</p>
 <p>Em todos os exerc&#xED;cios, voc&#xEA; ter&#xE1; que especificar, para cada atributo, <em>constructor</em> e m&#xE9;todo, se estes s&#xE3;o <code>public</code> ou <code>private</code></p>
 <h2 class="mume-header" id="fazer-uma-classe">Fazer uma classe</h2>
 
@@ -273,8 +273,8 @@ pre[data-line] .line-highlight[data-end]:after {
 <ul>
 <li>que tenha os atributos <code>public</code>
 <ul>
-<li>&quot;ra&quot;, que seja uma <code>String</code></li>
-<li>&quot;nome&quot;, que seja do tipo <code>String</code></li>
+<li>&quot;ra&quot;, que seja uma <code>string</code></li>
+<li>&quot;nome&quot;, que seja do tipo <code>string</code></li>
 <li>&quot;notaNP1&quot;, que seja do tipo <code>double</code></li>
 <li>&quot;notaNP2&quot;, que seja do tipo <code>double</code></li>
 </ul>
@@ -313,8 +313,8 @@ pre[data-line] .line-highlight[data-end]:after {
 </ul>
 <p><strong>Uma classe que modele o nome de um aluno, chamada &quot;Nome&quot;</strong></p>
 <ul>
-<li><strong>que tenha o atributo <code>String primeiroNome</code></strong></li>
-<li><strong>que tenha o atributo <code>String sobrenome</code></strong></li>
+<li><strong>que tenha o atributo <code>string primeiroNome</code></strong></li>
+<li><strong>que tenha o atributo <code>string sobrenome</code></strong></li>
 </ul>
 <p>Use a sua classe teste para testar as v&#xE1;rias possibilidades.</p>
 <h3 class="mume-header" id="exerc%C3%ADcio-03">Exerc&#xED;cio 03</h3>
@@ -345,12 +345,12 @@ pre[data-line] .line-highlight[data-end]:after {
 </ul>
 <p>Uma classe que modele o nome de um aluno, chamada &quot;Nome&quot;</p>
 <ul>
-<li>que tenha o atributo <code>String primeiroNome</code></li>
-<li>que tenha o atributo <code>String sobrenome</code></li>
+<li>que tenha o atributo <code>string primeiroNome</code></li>
+<li>que tenha o atributo <code>string sobrenome</code></li>
 </ul>
 <p><strong>Uma classe que modele o nome de um aluno, chamada &quot;Endereco&quot;</strong></p>
 <ul>
-<li>que tenha o atributo <code>String rua</code></li>
+<li>que tenha o atributo <code>string rua</code></li>
 <li>que tenha o atributo <code>int numero</code></li>
 </ul>
 <p>Use a sua classe teste para testar as v&#xE1;rias possibilidades.</p>
@@ -361,7 +361,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <ul>
 <li>que tenha os atributos <code>public</code>
 <ul>
-<li>&quot;ra&quot;, que seja uma <code>String</code></li>
+<li>&quot;ra&quot;, que seja uma <code>string</code></li>
 <li>&quot;cadastro&quot;, que seja do tipo <code>Cadastro</code></li>
 <li>&quot;boletim&quot;, que seja do tipo <code>Boletim</code></li>
 </ul>
@@ -388,15 +388,12 @@ pre[data-line] .line-highlight[data-end]:after {
 </ul>
 <h3 class="mume-header" id="exerc%C3%ADcio-05-override-to-string">Exerc&#xED;cio 05 Override To String</h3>
 
-<p>Fazer a mesma classe do exerc&#xED;cio anterior, mas incluir o <code>@Override</code> do m&#xE9;todo <code>public String toString()</code>, que imprime os dados do objeto.</p>
-<p>Para fazer o <code>@Override</code> deste m&#xE9;todo implemente o m&#xE9;todo com a seguinte assinatura:</p>
-<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token annotation punctuation">@Override</span>
-<span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<p>Fazer a mesma classe do exerc&#xED;cio anterior, mas incluir o <code>override</code> do m&#xE9;todo <code>public override string ToString()</code>, que imprime os dados do objeto.</p>
+<p>Para fazer o <code>override</code> deste m&#xE9;todo implemente o m&#xE9;todo com a seguinte assinatura:</p>
+<pre data-role="codeBlock" data-info="cs" class="language-csharp"><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-override">override</span> <span class="token return-type class-name"><span class="token keyword keyword-string">string</span></span> <span class="token function">ToString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
   <span class="token comment">// implementa&#xE7;&#xE3;o do m&#xE9;todo</span>
 <span class="token punctuation">}</span>
-</pre><h2 class="mume-header" id="respostashttpsgithubcomviniciusdenovaesunip231lpootreemainlab01_01src"><a href="https://github.com/viniciusdenovaes/Unip231LPOO/tree/main/lab01_01/src">Respostas</a></h2>
-
-<p>.</p>
+</pre><p>.</p>
 
       </div>
       
