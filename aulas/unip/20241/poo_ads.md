@@ -43,15 +43,15 @@
 -->
 ## Laboratórios
 
-- [lab00 - Usando funções (métodos estáticos)](lpoo_files/laboratorio/00-basico/comandos-basicos.html)
-  - [respostas](https://github.com/viniciusdenovaes/Unip231LPOO/tree/main/Lab00/src/lab00)
-- Lab01
-  - [lab01 - Classes como estruturas](lpoo_files/laboratorio/01-classes/01.00-classes_pre.html)
-  - [lab01 - Classes com métodos](lpoo_files/laboratorio/01-classes/01.01-classes.html)
-  - [lab01.02 - Classes (Extra)](lpoo_files/laboratorio/01-classes/01.02-classes_extra.html)
+- [lab00 - Usando funções (métodos estáticos)](poo_files/laboratorio/00-basico/comandos-basicos.html)
+<!--  - [respostas](https://github.com/viniciusdenovaes/Unip231LPOO/tree/main/Lab00/src/lab00)
+- Lab01-->
+  - [lab01 - Classes como estruturas](poo_files/laboratorio/01-classes/01.00-classes_pre.html)
+  - [lab01 - Classes com métodos](poo_files/laboratorio/01-classes/01.01-classes.html)
+  - [lab01.02 - Classes (Extra)](poo_files/laboratorio/01-classes/01.02-classes_extra.html)
 - lab02 - Classes com Encapsulamento
-  - [lab02.01 - Get e Set](lpoo_files/laboratorio/02-classes_encapsulamento/02.01-classes_encapsulamento.html)
-  - [lab02.02 - Classes com encapsulamento (Extra)](lpoo_files/laboratorio/02-classes_encapsulamento/02.02-classes_encapsulamento.html)
+  - [lab02.01 - Get e Set](poo_files/laboratorio/02-classes_encapsulamento/02.01-classes_encapsulamento.html)
+  - [lab02.02 - Classes com encapsulamento (Extra)](poo_files/laboratorio/02-classes_encapsulamento/02.02-classes_encapsulamento.html)
 <!--
 - lab04 - Herança, Classes Abstratas e Polimorfismo
   - [Herança](lpoo_files/laboratorio/04-heranca/04.00-exercicio_heranca.html)
