@@ -12,7 +12,7 @@
 
 - Prólogo
   - Instalação:.
-    - [Windows](lpoo_files/curso/00-install/windows/00-tuto_instal_windows.html)
+    - [Windows](poo_files/curso/00-install/windows/00-tuto_instal_windows.html)
 <!--  - [Hello World - Como escrever um código que imprime uma mensagem na tela](lpoo_files/curso/00-hello/hello.html)
   - [Dois Mains - Como ter dois pontos de partida no seu código](poo_files/curso/00-hello/dois_mains.html)
 -->
