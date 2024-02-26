@@ -13,6 +13,7 @@
 * [IA](aulas/unip/20241/ia.html)
 * [CG](aulas/unip/20241/cg.html)
 * [AA](aulas/unip/20241/aa.html)
+* [LFA](aulas/unip/20241/lfa.html)
 * [PWR](aulas/unip/20241/pwr.html)
 ##### ADS
 * [POO](aulas/unip/20241/poo.html)
