@@ -9,14 +9,14 @@
 
 ### Atuais (2024/1)
 ##### CC e SI
-* [LPOO](aulas/unip/20241/lpoo.html)
+* [LPOO (CC e SI)](aulas/unip/20241/lpoo.html)
 * [IA](aulas/unip/20241/ia.html)
 * [CG](aulas/unip/20241/cg.html)
 * [AA](aulas/unip/20241/aa.html)
 * [LFA](aulas/unip/20241/lfa.html)
 * [PWR](aulas/unip/20241/pwr.html)
 ##### ADS
-* [POO](aulas/unip/20241/poo_ads.html)
+* [POO (ADS)](aulas/unip/20241/poo_ads.html)
 
 ### (2023/2)
 * [IPE](aulas/unip/20232/ipe.html)
