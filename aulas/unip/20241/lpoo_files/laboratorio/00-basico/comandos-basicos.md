@@ -84,13 +84,13 @@ public static void main(String[] args) {
 ```
 E a saída para este `main` deve ser
 ``` shell_session
-36.0
-37.8
-39.6
-72.0
-106.2
-108.0
-216.0
+32.0
+33.8
+35.6
+68.0
+102.2
+104.0
+212.0
 ```
 
 * 4. Um conversor de graus Fahrenheit para graus Celsius. A fórmula é dada por `C = (F-32)*5/9`, onde `F` é o grau Fahrenheit e `C` é o grau em Celsius.
