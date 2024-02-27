@@ -9,17 +9,17 @@ Para todas as questões desta lista elabore uma função (método estático em J
 * 1. Calcular o estoque médio de uma peça, sendo que o estóque médio é dado pela seguinte fórmula:
 estoqueMedio = (quantidadeMinima + quantidadeMaxima)/2
 A assinatura da sua função **deve ser**
-``` java
+``` cs
 public static double calculaEstoqueMedio(double estoqueMinimo, double estoqueMaximo)
 ```
 O `main` da sua classe deve ser
-``` java
-public static void main(String[] args) {
-    System.out.println(calculaEstoqueMedio(0, 0));
-    System.out.println(calculaEstoqueMedio(1, 1));
-    System.out.println(calculaEstoqueMedio(1, 2));
-    System.out.println(calculaEstoqueMedio(2, 9));
-    System.out.println(calculaEstoqueMedio(101, 102));
+``` cs
+static void Main(string[] args) {
+    Console.WriteLine(calculaEstoqueMedio(0, 0));
+    Console.WriteLine(calculaEstoqueMedio(1, 1));
+    Console.WriteLine(calculaEstoqueMedio(1, 2));
+    Console.WriteLine(calculaEstoqueMedio(2, 9));
+    Console.WriteLine(calculaEstoqueMedio(101, 102));
 }
 ```
 E a saída para este `main` deve ser
@@ -38,19 +38,19 @@ E a saída para este `main` deve ser
 
 * 2. Calcular a conversão de dólar para real. A sua função deve receber a cotação do dólar e um valor em dólar, e retornar o valor convertido para real.
 A assinatura da sua função **deve ser**
-``` java
+``` cs
 public static double conversaoDolar(double cotacaoDolar, double valorDolar)
 ```
 O `main` da sua classe deve ser
-``` java
-public static void main(String[] args) {
-    System.out.println(conversaoDolar(1, 1));
-    System.out.println(conversaoDolar(0.5, 1));
-    System.out.println(conversaoDolar(0.5, 2));
-    System.out.println(conversaoDolar(2, 1));
-    System.out.println(conversaoDolar(5.37, 1));
-    System.out.println(conversaoDolar(5.37, 100));
-    System.out.println(conversaoDolar(5.37, 0.5));
+``` cs
+static void Main(string[] args) {
+    Console.WriteLine(conversaoDolar(1, 1));
+    Console.WriteLine(conversaoDolar(0.5, 1));
+    Console.WriteLine(conversaoDolar(0.5, 2));
+    Console.WriteLine(conversaoDolar(2, 1));
+    Console.WriteLine(conversaoDolar(5.37, 1));
+    Console.WriteLine(conversaoDolar(5.37, 100));
+    Console.WriteLine(conversaoDolar(5.37, 0.5));
 }
 ```
 E a saída para este `main` deve ser
@@ -67,19 +67,19 @@ E a saída para este `main` deve ser
 
 * 3. Um conversor de graus Celsius para graus Fahrenheit. A fórmula é dada por `F = (9*C+160)/5`, onde `F` é o grau Fahrenheit e `C` é o grau em Celsius.
 A assinatura da sua função **deve ser**
-``` java
+``` cs
 public static double conversorCelsiusToFahrenheit(double grauC)
 ```
 O `main` da sua classe deve ser
-``` java
-public static void main(String[] args) {
-    System.out.println(conversorCelsiusToFahrenheit(0));
-    System.out.println(conversorCelsiusToFahrenheit(1));
-    System.out.println(conversorCelsiusToFahrenheit(2));
-    System.out.println(conversorCelsiusToFahrenheit(20));
-    System.out.println(conversorCelsiusToFahrenheit(39));
-    System.out.println(conversorCelsiusToFahrenheit(40));
-    System.out.println(conversorCelsiusToFahrenheit(100));
+``` cs
+static void Main(string[] args) {
+    Console.WriteLine(conversorCelsiusToFahrenheit(0));
+    Console.WriteLine(conversorCelsiusToFahrenheit(1));
+    Console.WriteLine(conversorCelsiusToFahrenheit(2));
+    Console.WriteLine(conversorCelsiusToFahrenheit(20));
+    Console.WriteLine(conversorCelsiusToFahrenheit(39));
+    Console.WriteLine(conversorCelsiusToFahrenheit(40));
+    Console.WriteLine(conversorCelsiusToFahrenheit(100));
 }
 ```
 E a saída para este `main` deve ser
@@ -95,18 +95,18 @@ E a saída para este `main` deve ser
 
 * 4. Um conversor de graus Fahrenheit para graus Celsius. A fórmula é dada por `C = (F-32)*5/9`, onde `F` é o grau Fahrenheit e `C` é o grau em Celsius.
 A assinatura da sua função **deve ser**
-``` java
+``` cs
 public static double conversorFahrenheitToCelsius(double grauC)
 ```
 O `main` da sua classe deve ser
-``` java
-public static void main(String[] args) {
-    System.out.println(conversorFahrenheitToCelsius(0));
-    System.out.println(conversorFahrenheitToCelsius(1));
-    System.out.println(conversorFahrenheitToCelsius(2));
-    System.out.println(conversorFahrenheitToCelsius(20));
-    System.out.println(conversorFahrenheitToCelsius(32));
-    System.out.println(conversorFahrenheitToCelsius(40));
+``` cs
+static void Main(string[] args) {
+    Console.WriteLine(conversorFahrenheitToCelsius(0));
+    Console.WriteLine(conversorFahrenheitToCelsius(1));
+    Console.WriteLine(conversorFahrenheitToCelsius(2));
+    Console.WriteLine(conversorFahrenheitToCelsius(20));
+    Console.WriteLine(conversorFahrenheitToCelsius(32));
+    Console.WriteLine(conversorFahrenheitToCelsius(40));
 }
 ```
 E a saída para este `main` deve ser
@@ -129,20 +129,20 @@ E a saída para este `main` deve ser
 * 5. Calcular o volume de uma lata de óleo dado pela fórmula `V = 3.14159*R²*A`, onde `V` é o volume, `R` o raio e `A` a altura da lata.
 Dica (opcional): o uso da biblioteca [Math](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html) pode te ajudar, mais especificamente o atributo estático `Math.PI` e o método estático `Math.pow(double a, double b)`. Para usá-los basta escrever o nome deles, não há a necessidade de importar a biblioteca.
 A assinatura da sua função **deve ser**
-``` java
+``` cs
 public static double calculaVolumeLata(double raio, double altura)
 ```
 O `main` da sua classe deve ser
-``` java
-public static void main(String[] args) {
-    System.out.println(calculaVolumeLata(1, 1));
-    System.out.println(calculaVolumeLata(2, 1));
-    System.out.println(calculaVolumeLata(1, 2));
-    System.out.println(calculaVolumeLata(1, 1/Math.PI));
-    System.out.println(calculaVolumeLata(2, 1/Math.PI));
-    System.out.println(calculaVolumeLata(10, 1));
-    System.out.println(calculaVolumeLata(1, 10));
-    System.out.println(calculaVolumeLata(10, 10));
+``` cs
+static void Main(string[] args) {
+    Console.WriteLine(calculaVolumeLata(1, 1));
+    Console.WriteLine(calculaVolumeLata(2, 1));
+    Console.WriteLine(calculaVolumeLata(1, 2));
+    Console.WriteLine(calculaVolumeLata(1, 1/Math.PI));
+    Console.WriteLine(calculaVolumeLata(2, 1/Math.PI));
+    Console.WriteLine(calculaVolumeLata(10, 1));
+    Console.WriteLine(calculaVolumeLata(1, 10));
+    Console.WriteLine(calculaVolumeLata(10, 10));
 }
 ```
 E a saída para este `main` deve ser
@@ -164,17 +164,17 @@ E a saída para este `main` deve ser
 
 * 6. Uma função que retorne o módulo de um número **inteiro**. O módulo de um número `x` é `x` se `x` é maior ou igual a 0, e `-x` caso contrário.
 A assinatura da sua função **deve ser**
-``` java
+``` cs
 public static int modulo(int n)
 ```
 O `main` da sua classe deve ser
-``` java
-public static void main(String[] args) {
-    System.out.println(modulo(1));
-    System.out.println(modulo(0));
-    System.out.println(modulo(-1));
-    System.out.println(modulo(2));
-    System.out.println(modulo(-2));
+``` cs
+static void Main(string[] args) {
+    Console.WriteLine(modulo(1));
+    Console.WriteLine(modulo(0));
+    Console.WriteLine(modulo(-1));
+    Console.WriteLine(modulo(2));
+    Console.WriteLine(modulo(-2));
 }
 ```
 E a saída para este `main` deve ser
@@ -195,19 +195,19 @@ E a saída para este `main` deve ser
 * 7. Uma função que calcule o fatorial de um número.
 **OBS:** `0!=1` e `n!=n*(n-1)!` para `n>0`.
 A assinatura da sua função **deve ser**
-``` java
+``` cs
 public static int fatorial(int n)
 ```
 
 O `main` da sua classe deve ser
-``` java
-public static void main(String[] args) {
-    System.out.println(fatorial(0));
-    System.out.println(fatorial(1));
-    System.out.println(fatorial(2));
-    System.out.println(fatorial(3));
-    System.out.println(fatorial(4));
-    System.out.println(fatorial(10));
+``` cs
+static void Main(string[] args) {
+    Console.WriteLine(fatorial(0));
+    Console.WriteLine(fatorial(1));
+    Console.WriteLine(fatorial(2));
+    Console.WriteLine(fatorial(3));
+    Console.WriteLine(fatorial(4));
+    Console.WriteLine(fatorial(10));
 }
 ```
 E a saída para este `main` deve ser
@@ -232,21 +232,21 @@ E a saída para este `main` deve ser
 ![equation](binomial.png)
 **OBS:** Use o método estático do exercício anterior.
 A assinatura da sua função **deve ser**
-``` java
+``` cs
 public static int binomial(int n, int k)
 ```
 
 O `main` da sua classe deve ser
-``` java
-public static void main(String[] args) {
-    System.out.println(binomial(0, 0));
-    System.out.println(binomial(1, 0));
-    System.out.println(binomial(1, 1));
-    System.out.println(binomial(2, 1));
-    System.out.println(binomial(5, 1));
-    System.out.println(binomial(2, 2));
-    System.out.println(binomial(5, 2));
-    System.out.println(binomial(10, 3));
+``` cs
+static void Main(string[] args) {
+    Console.WriteLine(binomial(0, 0));
+    Console.WriteLine(binomial(1, 0));
+    Console.WriteLine(binomial(1, 1));
+    Console.WriteLine(binomial(2, 1));
+    Console.WriteLine(binomial(5, 1));
+    Console.WriteLine(binomial(2, 2));
+    Console.WriteLine(binomial(5, 2));
+    Console.WriteLine(binomial(10, 3));
 }
 ```
 E a saída para este `main` deve ser
