@@ -37,8 +37,9 @@
       - um email começando "mailto:" com exemplo "mailto:emaildofulano@gmail.com"
     - atributo target podendo ter o valor "_blank" para abrir o link em uma nova aba
   -  \<!-- para inserção de comentário --\>
-<!--
 - [Aula 3](pwr_files/aulas/aula03.pdf)
+   - (lista de fontes, cores e caracteres especiais) **Não cai na prova**
+<!--
 
 - [Aula 4](pwr_files/aulas/aula04.pdf)
    - [exemplo](pwr_files/exemplos/exemplo_css.html)
