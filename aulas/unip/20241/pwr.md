@@ -24,21 +24,20 @@
       - alt para uma descrição alternativa da imagem
       - width e height para definir a largura e altura da imagem respectivamente
       - title um texto ao passar o mouse por cima da imagem
-<!--
 - [Aula 2](pwr_files/aulas/aula02.pdf)
   - listas:
     - ol para lista ordenada, li para itens da lista
     - ul para lista não ordenada, li para itens da lista
     - dl para lista descritiva, dt para definir o termo do item, dd para descrição do item
   - links
-    - a para uma tag sem efeito, serve para inserir links através do atributo href
+    - a inserir links através do atributo href
     - href:
       - um endereço relativo de um arquivo a partir do arquivo atual
       - um endereço da web começando com http://
       - um email começando "mailto:" com exemplo "mailto:emaildofulano@gmail.com"
     - atributo target podendo ter o valor "_blank" para abrir o link em uma nova aba
   -  \<!-- para inserção de comentário --\>
-
+<!--
 - [Aula 3](pwr_files/aulas/aula03.pdf)
 
 - [Aula 4](pwr_files/aulas/aula04.pdf)
