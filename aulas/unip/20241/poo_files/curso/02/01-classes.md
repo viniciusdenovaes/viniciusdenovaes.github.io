@@ -13,7 +13,7 @@ Uma classe pode ter
 
 Por enquanto usaremos somente classes públicas, porém os campos devem ser todos `private`, então toda classe será feita como abaixo
 
-~~~ java
+``` cs
 public class nomeDaClasse{
     // nossos atributos
     private Tipo01 variavel01;
@@ -26,12 +26,15 @@ public class nomeDaClasse{
         this.variavel02 = new Tipo02();
         this.variavel03 = new Tipo03();
     }
-    public nomeDaClasse(Tipo01 aVariavel01){
-        this(); // Aqui eu estou chamando o constructor desta mesma classe
+    public nomeDaClasse(Tipo01 aVariavel01)
+      :this() // Aqui eu estou chamando o constructor desta mesma classe
+    {
         this.variavel01 = aVariavel01;
     }
-    public nomeDaClasse(Tipo01 aVariavel01, Tipo02 aVariavel02){
-        this(aVariavel01); // Aqui eu estou chamando o constructor desta mesma classe
+
+    public nomeDaClasse(Tipo01 aVariavel01, Tipo02 aVariavel02)
+        :this(aVariavel01) // Aqui eu estou chamando o constructor desta mesma classe
+        {
         this.variavel02= aVariavel02;
     }
 
@@ -57,7 +60,7 @@ public class nomeDaClasse{
         // outro método que retorna um objeto do tipo "Tipo04"
     }
 }
-~~~
+```
 
 
 ## Regras para Overloading
@@ -80,7 +83,7 @@ Tanto para campos de uma classe, quanto para métodos, as regras são as mesmas:
 * `public`: o campo, ou método, pode ser acessado por qualquer classe
 * `private`: o campo, ou método, pode ser acessado **apenas** pelos campos e métodos da **mesma classe**
 
-Além destes dois, temos mais dois modificadores:
+<!-- Além destes dois, temos mais dois modificadores:
 * `protected`: o campo, ou método, pode ser acessado **apenas** pelas classes que estão no mesmo pacote
 * Default (quando não tem nenhum modificador): o campo, ou método, pode ser acessado **apenas** pelas classes que estão no mesmo pacote.
 
@@ -89,7 +92,7 @@ Além destes dois, temos mais dois modificadores:
 public    | + | + | + | + |
 protected | + | + | + |   |
 Default   | + | + |   |   |
-private   | + |   |   |   |
+private   | + |   |   |   | -->
 
 
 
