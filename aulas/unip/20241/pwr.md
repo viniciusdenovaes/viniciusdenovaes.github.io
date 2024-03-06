@@ -39,7 +39,6 @@
   -  \<!-- para inserção de comentário --\>
 - [Aula 3](pwr_files/aulas/aula03.pdf)
    - (lista de fontes, cores e caracteres especiais) **Não cai na prova**
-<!--
 
 - [Aula 4](pwr_files/aulas/aula04.pdf)
    - [exemplo](pwr_files/exemplos/exemplo_css.html)
@@ -48,6 +47,8 @@
       - inline,
       - interno ao arquivo, no `<head><style type=”text/css”>...</style></head>`
       - externo ao arquivo: `<link rel=”stylesheet” type=”text/css” href=”nome_pagina.css”>`
+
+<!--
 
 - [Aula 5](pwr_files/aulas/aula05.pdf)
    - Unidades de Medidas
