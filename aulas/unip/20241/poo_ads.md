@@ -16,14 +16,14 @@
 <!--  - [Hello World - Como escrever um código que imprime uma mensagem na tela](lpoo_files/curso/00-hello/hello.html)
   - [Dois Mains - Como ter dois pontos de partida no seu código](poo_files/curso/00-hello/dois_mains.html)
 -->
-<!--- Parte 01 Comandos Básicos:
+- Parte 01 Comandos Básicos:
   - [Tipos Primitivos e Operações](lpoo_files/curso/01/tipos_primitivos.html)
   - [Comandos de Controle](lpoo_files/curso/01/comandos_de_controle.html)
 
 - Parte 02 Orientação a Objetos
   - [Classes](lpoo_files/curso/02/01-classes.html)
   - [Convenções](lpoo_files/curso/02/02-convencoes.html)
-
+<!--
 - Parte 03 - Introdução à primeira estrutura de dados: Lista
   - [ArrayList](lpoo_files/curso/03/array_list.html)
 
