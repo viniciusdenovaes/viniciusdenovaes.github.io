@@ -16,9 +16,6 @@ Os tipos primitivos que usaremos serão:
 
 Em nenhuma parte do curso você precisará usar `long` ou `unsigned`.
 
-Quando falarmos de `collections` vamos precisar usar `Wrappers` dos tipos primitivos: `Integer`, `Double`, `Boolean` e `Character`. Usaremos `Wrappers` apenas quando precisarmos usar.
-
-
 
 ## Nomes de Classes e Variáveis
 
@@ -33,10 +30,11 @@ Por exemplo,
 ### Regras para Nomes
 
 * Nomes de classes começam com letra maiúscula
-* Nomes de variáveis começam com letra minúscula
-* Nomes de métodos começam com letra minúscula
-* Os nomes devem usar o estilo [CamelCase](https://pt.wikipedia.org/wiki/CamelCase): que consiste em separar palavras começando a próxima palavra por letra maiúscula (este é o padrão em Java). (e **não** o [snake_case](https://en.wikipedia.org/wiki/Snake_case))
-* Atributos constantes (`final`) devem ser escritos em caixa alta, separando palavras por `_`
+* Nomes de variáveis `private` começam com letra minúscula
+* Nomes de variáveis `public` começam com letra maiúscula
+* Nomes de métodos começam com letra maiúscula
+* Os nomes devem usar o estilo [camelCase](https://pt.wikipedia.org/wiki/CamelCase) (ou [PascalCase](https://pt.wikipedia.org/wiki/PascalCase)): que consiste em separar palavras começando a próxima palavra por letra maiúscula (este é o padrão em C#). (e **não** o [snake_case](https://en.wikipedia.org/wiki/Snake_case))
+* Atributos constantes (`const`) devem ser escritos em caixa alta, separando palavras por `_`
 
 ## Ordem de Campos, Constructors e Métodos
 * As definições de campos (variáveis), constructors e métodos **de uma classe** devem seguir a ordem
@@ -49,15 +47,15 @@ Por exemplo,
 **Todo** atributo da sua classe deve ser inicializado no contructor. Mesmo que seja por um valor padrão não recebido nos argumentos.
 
 **Todo** atributo da sua classe deve ser `private`. As variáveis que você quer que o usuário da sua classe tenha acesso deve ter métodos públicos `get` e/ou um `set`.
-Por exemplo, se você acha que faz sentido que o usuário **mude** alguma variável do tipo `String` chamada `variavelDoExemplo`, esta classe **deve** ter o método
-``` java
-public void setVariavelDoExemplo(String aVariavelDoExemplo){
+Por exemplo, se você acha que faz sentido que o usuário **mude** alguma variável do tipo `string` chamada `variavelDoExemplo`, esta classe **deve** ter o método
+``` cs
+public void SetVariavelDoExemplo(String aVariavelDoExemplo){
   this.variavelDoExemplo = aVariavelDoExemplo;
 }
 ```
-Se você acha que faz sentido que o usuário **tenha acesso ao valor** de alguma variável do tipo `String` chamada `variavelDoExemplo`, esta classe **deve** ter o método
-``` java
-public String getVariavelDoExemplo(){
+Se você acha que faz sentido que o usuário **tenha acesso ao valor** de alguma variável do tipo `string` chamada `variavelDoExemplo`, esta classe **deve** ter o método
+``` cs
+public String GetVariavelDoExemplo(){
   return this.variavelDoExemplo;
 }
 ```
@@ -65,42 +63,42 @@ public String getVariavelDoExemplo(){
 
 ## Exemplo
 
-``` java
+``` cs
 // Nome da classe começa com letra maiúscula e têm o estilo CamelCase
 class ExemploDeConvencoes {
 
     // Atributos que são constantes devem ser escritos com letra maiúscula
-    public static final double ATRIBUTO_CONSTANTE = 3.14159;
+    public static const double ATRIBUTO_CONSTANTE = 3.14159;
 
     // Campos de variáveis começam com letra minúscula e têm o estilo CamelCase
-    private String variavelDoExemplo;
+    private string variavelDoExemplo;
     private int numeroDoExemplo;
     private double pesoDoExemplo;
 
-    public ExemploDeConvencoes(String aVariavelDoExemplo, int aNumeroDoExemplo){
+    public ExemploDeConvencoes(string aVariavelDoExemplo, int aNumeroDoExemplo){
       this.variavelDoExemplo = aVariavelDoExemplo;
       this.numeroDoExemplo = aNumeroDoExemplo;
       this.pesoDoExemplo = 0;
     }
 
-    public String getVariavelDoExemplo(){
+    public string GetVariavelDoExemplo(){
         return this.variavelDoExemplo;
     }
 
-    public void setVariavelDoExemplo(String aVariavelDoExemplo){
+    public void SetVariavelDoExemplo(string aVariavelDoExemplo){
         this.variavelDoExemplo = aVariavelDoExemplo;
     }
 
-    public int getNumeroDoExemplo(){
+    public int GetNumeroDoExemplo(){
         return this.numeroDoExemplo;
     }
 
-    public void setPesoDoExemplo(double aPesoDoExemplo){
+    public void SetPesoDoExemplo(double aPesoDoExemplo){
         this.pesoDoExemplo = aPesoDoExemplo;
     }
 
     // Métodos começam com letra minúscula e têm o estilo CamelCase
-    public void metodoDoExemplo(){
+    public void MetodoDoExemplo(){
     }
 
 }
