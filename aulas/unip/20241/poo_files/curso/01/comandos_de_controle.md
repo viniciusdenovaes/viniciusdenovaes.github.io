@@ -2,17 +2,17 @@
 
 ## Comando Condicional
 
-O comando condicional `if` tem a seguinte sintaxe em Java:
+O comando condicional `if` tem a seguinte sintaxe em C#:
 
 * `if`: a `condicao` (uma expressão boolean, verdadeiro ou falso) é verificada. Caso seja verdadeira o `//bloco de comandos 01` é executado. Caso não seja, o bloco não será executado.
-``` java
+``` cs
 if(condicao){
   //bloco de comandos 01
 }
 ```
 
 * `if-else`: a `condicao` é verificada. Caso seja verdadeira o `//bloco de comandos 01` é executado. Caso não seja, o `//bloco de comandos 02` será executado.
-``` java
+``` cs
 if(condicao){
   //bloco de comandos 01
 } else{
@@ -21,7 +21,7 @@ if(condicao){
 ```
 
 * `if-else-if`: a `condicao01` é verificada. Caso a `condicao01` seja verdadeira, o `//bloco de comandos 01` é executado **e** a `condicao02` **não** é verificada, **nem** o `//bloco de comandos 02` será executado. Caso a `condicao01` não seja verdadeira, a `condicao02` será verificada e caso esta seja verdadeira o `//bloco de comandos 02` será executado.
-``` java
+``` cs
 if(condicao01){
   //bloco de comandos 01
 } else if(condicao02){
@@ -32,8 +32,8 @@ if(condicao01){
 **OBS:** Ao contrário de Python, aqui você precisa usar as chaves `{}`. **NÃO ESQUEÇA**.
 Se você esquecer ele executará só o primeiro comando do bloco. Estranho né? Este é o pior tipo de erro que você pode encontrar no código. Por que ele não dará erro na compilação nem na execução. Mas o seu código estará errado **sem você saber**. Evite isso e **sempre use chaves**.
 
-* `switch`: Dada uma `expressao` que pode ser `int`, `char`, `String`, `Enum`, [entre outros](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html). A sua `expressao` será comparada com cada um dos literais e executará o bloco respectivo. Caso nenhuma comparação resulte em verdadeiro, o bloco do `default` será executado.
-``` java
+* `switch`: Dada uma `expressao` que pode ser `int`, `char`, `string`, `Enum`, [entre outros](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/selection-statements). A sua `expressao` será comparada com cada um dos literais e executará o bloco respectivo. Caso nenhuma comparação resulte em verdadeiro, o bloco do `default` será executado.
+``` cs
 switch(expressao){
   case literal01:
     // bloco de comandos 01
@@ -53,7 +53,7 @@ switch(expressao){
 ## Comandos de Repetição
 
 * `while`: a `condicao` (uma expressão boolean, verdadeiro ou falso) é verificada. Caso seja verdadeira o `//bloco de comandos 01` é executado e o controle **volta** para o começo do while (e faz a verificação novamente). Caso não seja, o bloco não será executado.
-``` java
+``` cs
 while(condicao){
   // bloco de comandos 01
   // este bloco se repete enquanto a condicao for satisfeita
@@ -69,7 +69,7 @@ OBS2: perceba que tem um `;` no final do while.
 
 OBS3: este comando não é usado com frequência
 
-``` java
+``` cs
 do{
   // bloco de comandos 01
   // este bloco executa uma vez e
@@ -80,7 +80,7 @@ do{
 
 * `for`: é **inicializado** com um `comandoInicializacao`; repete enquanto a `condição` for verdadeira; sempre ao final de cada iteração um `comandoRepeticao` é executado.
 
-``` java
+``` cs
 for(comandoInicializacao; condicao; comandoRepeticao){
   // bloco de comandos 01
   // este bloco se repete enquanto a condicao for satisfeita
@@ -90,9 +90,9 @@ for(comandoInicializacao; condicao; comandoRepeticao){
 
 exemplo:
 
-``` java
+``` cs
 for(int i=0; i<5; i++){
-  System.out.println(i);
+  Console.WriteLine(i);
 }
 ```
 saída:
@@ -107,25 +107,25 @@ saída:
 
 * `for-each`: Dada uma coleção (`collection`) qualquer, este **iterador** acessa cada objeto dentro da coleção.
 
-``` java
-for(Type object: collection){
+``` cs
+for(Type object in collection){
   // bloco de comandos 01 usando o objeto object
 }
 ```
 
 exemplos:
 
-``` java
+``` cs
 class Gato{
 
   String nome;
 
-  public Gato(String aNome){
+  public Gato(string aNome){
     this.nome = aNome;
   }
 
   public void miau(){
-    system.out.println(nome + " mia!")
+    Console.WriteLine(nome + " mia!")
 
   }
 
@@ -134,8 +134,8 @@ class Gato{
 
 Usando `array` como coleção
 
-``` java
-public static void main(String[] args){
+``` cs
+public static void Main(String[] args){
 
   Gato[] gatos = new Gato[3];
 
@@ -143,7 +143,7 @@ public static void main(String[] args){
   gatos[1] = new Gato("Chirriro");
   gatos[2] = new Gato("Xitara");
 
-  for(Gato gato: gatos){
+  for(Gato gato in gatos){
     gato.miau();
   }
 }
@@ -151,16 +151,16 @@ public static void main(String[] args){
 
 usando `List` como coleção
 
-``` java
-public static void main(String[] args){
+``` cs
+public static void Main(String[] args){
 
-  List<Gato> gatos = new ArrayList<>();
+  List<Gato> gatos = new List<Gato>();
 
-  gatos.add(new Gato("Brutus"));
-  gatos.add(new Gato("Chirriro"));
-  gatos.add(new Gato("Xitara"));
+  gatos.Add(new Gato("Brutus"));
+  gatos.Add(new Gato("Chirriro"));
+  gatos.Add(new Gato("Xitara"));
 
-  for(Gato gato: gatos){
+  for(Gato gato in gatos){
     gato.miau();
   }
 }
