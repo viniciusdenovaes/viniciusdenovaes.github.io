@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>pwr</title>
+      <title>00-tuto_instal_windows</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -261,95 +261,92 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="pwr">PWR</h1>
+      <h1 class="mume-header" id="como-instalar-c-no-windows-windows-10">Como instalar C# no Windows (Windows 10)</h1>
 
-<h2 class="mume-header" id="material-do-curso">Material do Curso</h2>
+<p>Para programar em C# voc&#xEA; precisa do programa dotnet (<a href="http://www.dot.net">http://www.dot.net</a>),<br>
+este &#xE9; o programa que ir&#xE1; transformar o seu c&#xF3;digo de C# em um programa execut&#xE1;vel.</p>
+<h3 class="mume-header" id="para-instalar-o-dotnet">Para instalar o &apos;dotnet&apos;</h3>
 
+<p>Para saber se voc&#xEA; j&#xE1; tem o programa dotnet:</p>
+<ol>
+<li>abra o terminal no windows (busque o programa &#xB4;prompt&#xB4; ou &apos;Command Prompt&apos;)</li>
+<li>digite o comando &apos;dotnet --version&apos;<br>
+Aparecer&#xE1; a &#xFA;ltima vers&#xE3;o do dotnet dispon&#xED;vel.</li>
+</ol>
+<p>No meu apareceu isto:<br>
+&apos;&apos;&apos;code<br>
+$ dotnet --version<br>
+8.0.200<br>
+&apos;&apos;&apos;</p>
+<p>A &#xFA;ltima vers&#xE3;o que eu tenho no meu computador &#xE9; a 8.0.200.</p>
+<p>Qualquer vers&#xE3;o depois da (incluindo a) 6.0 servir&#xE1; para este curso.</p>
+<p>Caso voc&#xEA; n&#xE3;o tenha nenhum instalado voc&#xEA; poder&#xE1; instalar pelo <a href="https://visualstudio.microsoft.com/">Visual Studio 2022 Community Edition</a> como veremos mais adiante, <strong>ou</strong> instalar pelo site <a href="http://www.dot.net">http://www.dot.net</a></p>
+<h2 class="mume-header" id="ide">IDE</h2>
+
+<h3 class="mume-header" id="o-que-%C3%A9-uma-ide">O que &#xE9; uma IDE?</h3>
+
+<p>Do ingl&#xEA;s <em>integrated development environment</em> ou <em>ambiente de desenvolvimento integrado</em> &#xE9; uma ferramenta que inclui um poderoso editor de texto para edi&#xE7;&#xE3;o de c&#xF3;digo em um projeto.</p>
+<p>Em um projeto o seu c&#xF3;digo estar&#xE1; em v&#xE1;rios arquivos diferentes. Diferente de um simples editor de texto como &apos;notepad++&apos;, uma IDE consegue entender o seu projeto como um todo, ao inv&#xE9;s de ver cada arquivo de forma separada. Desta forma ela consegue te ajudar nas refer&#xEA;ncias que voc&#xEA; fizer de um arquivo a outro.</p>
+<p>As IDEs s&#xE3;o essenciais para fazer qualquer projeto profissional, ent&#xE3;o &#xE9; melhor se acostumar com alguma desde cedo.</p>
+<h3 class="mume-header" id="qual-ide-usar">Qual IDE usar?</h3>
+
+<p>Vamos ver aqui como usar duas IDEs: <a href="https://visualstudio.microsoft.com/">Visual Studio 2022 Community Edition</a>, e <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</p>
+<p>Dois nome muito parecidos n&#xE9;? Vamos ver a diferen&#xE7;a entre as duas:</p>
 <ul>
-<li>
-<p><a href="pwr_files/aulas/aula01.pdf">Aula 1</a></p>
-<ul>
-<li>O que &#xE9; html</li>
-<li>tags
-<ul>
-<li>html</li>
-<li>head (meta informa&#xE7;&#xE3;o) e body (conte&#xFA;do)</li>
-<li>title: o t&#xED;tulo do site (metainforma&#xE7;&#xE3;o)</li>
-<li>p de par&#xE1;grafo, br de break linha</li>
-<li>subtitulos: de h1 at&#xE9; h6</li>
-<li>hr para linha horizontal</li>
-<li>formatando palavra:
-<ul>
-<li><b>negrito</b> e <i>it&#xE1;lico</i>,</li>
-<li><big>big</big>, <small>small</small>,</li>
-<li><em>&#xEA;nfase</em>, <strong>destaque</strong>,</li>
-<li><ins>sublinhado</ins>, <del>anulado</del></li>
-<li>sub<sub>scrito</sub>, sobre<sup>scrito</sup></li>
+<li><a href="https://visualstudio.microsoft.com/">Visual Studio 2022 Community Edition</a>: &#xE9; uma IDE desenvolvida pela Microsoft para programar em C# e C++. Esta IDE pode automatizar processor mais complicados como cria&#xE7;&#xE3;o e organiza&#xE7;&#xE3;o de projetos. Esta IDE &#xE9; mais direcionada para o projeto.</li>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code</a>: &#xE9; uma IDE desenvolvida pela Microsoft para ser altamente customiz&#xE1;vel, ela <strong>n&#xE3;o</strong> &#xE9; somente para programar em C#. Por isto voc&#xEA; vai precisar configurar bastante ela antes de usar, para que ela se adeque ao seu objetivo. Al&#xE9;m disso ela dificilmente vai automatizar a cria&#xE7;&#xE3;o e estrutura&#xE7;&#xE3;o de projetos. Esta IDE &#xE9; mais direcionada ao c&#xF3;digo.</li>
 </ul>
-</li>
-</ul>
-</li>
-<li>img para imagens
-<ul>
-<li>Atributos
-<ul>
-<li>src para o endere&#xE7;o da imagem</li>
-<li>alt para uma descri&#xE7;&#xE3;o alternativa da imagem</li>
-<li>width e height para definir a largura e altura da imagem respectivamente</li>
-<li>title um texto ao passar o mouse por cima da imagem</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><a href="pwr_files/aulas/aula02.pdf">Aula 2</a></p>
-<ul>
-<li>listas:
-<ul>
-<li>ol para lista ordenada, li para itens da lista</li>
-<li>ul para lista n&#xE3;o ordenada, li para itens da lista</li>
-<li>dl para lista descritiva, dt para definir o termo do item, dd para descri&#xE7;&#xE3;o do item</li>
-</ul>
-</li>
-<li>links
-<ul>
-<li>a inserir links atrav&#xE9;s do atributo href</li>
-<li>href:
-<ul>
-<li>um endere&#xE7;o relativo de um arquivo a partir do arquivo atual</li>
-<li>um endere&#xE7;o da web come&#xE7;ando com http://</li>
-<li>um email come&#xE7;ando &quot;mailto:&quot; com exemplo <a href="mailto:%22mailto:emaildofulano@gmail.com">&quot;mailto:emaildofulano@gmail.com</a>&quot;</li>
-</ul>
-</li>
-<li>atributo target podendo ter o valor &quot;_blank&quot; para abrir o link em uma nova aba</li>
-</ul>
-</li>
-<li>&lt;!-- para inser&#xE7;&#xE3;o de coment&#xE1;rio --&gt;</li>
-</ul>
-</li>
-<li>
-<p><a href="pwr_files/aulas/aula03.pdf">Aula 3</a></p>
-<ul>
-<li>(lista de fontes, cores e caracteres especiais) <strong>N&#xE3;o cai na prova</strong></li>
-</ul>
-</li>
-<li>
-<p><a href="pwr_files/aulas/aula04.pdf">Aula 4</a></p>
-<ul>
-<li><a href="pwr_files/exemplos/exemplo_css.html">exemplo</a></li>
-<li>CSS, como funciona?</li>
-<li>3 tipos de declara&#xE7;&#xE3;o:
-<ul>
-<li>inline,</li>
-<li>interno ao arquivo, no <code>&lt;head&gt;&lt;style type=&#x201D;text/css&#x201D;&gt;...&lt;/style&gt;&lt;/head&gt;</code></li>
-<li>externo ao arquivo: <code>&lt;link rel=&#x201D;stylesheet&#x201D; type=&#x201D;text/css&#x201D; href=&#x201D;nome_pagina.css&#x201D;&gt;</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<p>Para iniciantes, recomendo usar o <a href="https://visualstudio.microsoft.com/">Visual Studio 2022 Community Edition</a>, pois voc&#xEA; gastar&#xE1; menos tempo com a parte de configura&#xE7;&#xE3;o do projeto.</p>
+<p>Uma outra IDE que pode ser usada &#xE9; a <a href="https://www.jetbrains.com/rider/">Rider da JetBrains</a>, mas esta &#xE9; paga e n&#xE3;o ser&#xE1; coberta por este tutorial.</p>
+<h3 class="mume-header" id="usando-visual-studio-2022-community-editionhttpsvisualstudiomicrosoftcom">Usando <a href="https://visualstudio.microsoft.com/">Visual Studio 2022 Community Edition</a></h3>
+
+<p>Baixe e rode a &#xFA;ltima vers&#xE3;o do instalador pelo site oficial <a href="https://visualstudio.microsoft.com/">Visual Studio 2022 Community Edition</a>.</p>
+<p><img src="../images/cs-vs01.png" alt="Nada instalado no vs"></p>
+<p>Escolha a instala&#xE7;&#xE3;o do Visual Studio Community 2022</p>
+<p><img src="../images/cs-vs02.png" alt="escolhendo a instalacao"></p>
+<p>Marque a op&#xE7;&#xE3;o de desenvolvimento de aplicativos para consoles (terminal) e<br>
+na outra aba certifique-se de ter uma vers&#xE3;o Long Term Supported do .NET, como a 8.0 por exemplo.</p>
+<p><img src="../images/cs-vs03.1.png" alt="opcoes de instalacao"><br>
+<img src="../images/cs-vs03.2.png" alt="opcoes de .NET"></p>
+<p>Espere a insta&#xE7;&#xE3;o ser conclu&#xED;da</p>
+<p><img src="../images/cs-vs04.png" alt="Instala&#xE7;&#xE3;o"></p>
+<p>N&#xE3;o precisa logar<br>
+<img src="../images/cs-vs05.png" alt="Logar"></p>
+<p>Crie um novo projeto<br>
+<img src="../images/cs-vs06.png" alt="Novo projeto"></p>
+<p>Escolha a op&#xE7;ao de Console APP <strong>do C#</strong>, e <strong>n&#xE3;o</strong> a do <strong>VB</strong><br>
+<img src="../images/cs-vs07.png" alt="Console App para C#"></p>
+<p>Coloque um nome do seu projeto, perceba que o nome da solu&#xE7;&#xE3;o e os nomes das pastas ficar&#xE3;o iguais.<br>
+<img src="../images/cs-vs08.png" alt="Nomeando Projeto"></p>
+<p>Escolha a vers&#xE3;o do .NET e crie o projeto<br>
+<img src="../images/cs-vs09.png" alt="Criando Projeto"></p>
+<p>Clique na seta verde para rodar o projeto<br>
+<img src="../images/cs-vs10.png" alt="Rodando Projeto"></p>
+<p>Modifique o c&#xF3;digo para ficar mais parecido com o que a gente ver&#xE1; na aula.<br>
+<img src="../images/cs-vs11.png" alt="Modificando o c&#xF3;digo"></p>
+<h3 class="mume-header" id="usando-visual-studio-codehttpscodevisualstudiocom">Usando <a href="https://code.visualstudio.com/">Visual Studio Code</a></h3>
+
+<p>O procedimento deste &#xE9; mais complicado que o anterior. Para quem est&#xE1; iniciando recomendo que use o <a href="https://visualstudio.microsoft.com/">Visual Studio 2022 Community Edition</a></p>
+<p>Baixe e instale a &#xFA;ltima vers&#xE3;o pelo site oficial <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</p>
+<p>Crie a pasta que voc&#xEA; usar&#xE1; para a sua &#xE1;rea de trabalho do &apos;vscode&apos;.</p>
+<p>Vamos seguir o mesmo padr&#xE3;o para criar um projeto no VisualStudio:</p>
+<p>Abra esta pasta no terminal e entre com o seguinte comando para criar uma solu&#xE7;&#xE3;o chamada <code>MeuProjetoVSC</code> na pasta <code>MeuProjetoVSC</code></p>
+<pre data-role="codeBlock" data-info class="language-"><code>dotnet new sln -n MeuProjetoVSC -o .\MeuProjetoVSC
+</code></pre><p>Entre com o seguinte comando para criar uma aplica&#xE7;&#xE3;o <code>MeuProjetoVSC</code> na pasta <code>MeuProjetoVSC\MeuProjetoVSC</code>. Em <code>-f net8.0</code> escolha a vers&#xE3;o do .net que voc&#xEA; quer usar.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>dotnet new console -lang c# -n MeuProjetoVSC -o .\MeuProjetoVSC\MeuProjetoVSC -f net8.0
+</code></pre><p>Entre com o seguinte comando para adicionar a aplica&#xE7;&#xE3;o &#xE0; sua solu&#xE7;&#xE3;o.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>dotnet sln .\MeuProjetoVSC\MeuProjetoVSC.sln add .\MeuProjetoVSC\MeuProjetoVSC
+</code></pre><p>Entre com o seguinte comando para abrir o vscode com o seu projeto.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>code MeuProjetoVSC
+</code></pre><p>Veja seu projeto pronto para rodar no vscode<br>
+<img src="../images/code01.png" alt="Projeto VSCode"></p>
+<p>Clique na seta e em &quot;Run and Debug&quot;<br>
+<img src="../images/code02.png" alt="Debug"></p>
+<p>Escolha C#<br>
+<img src="../images/code03.png" alt="Projeto VSCode"></p>
+<p>Escolha C# com o nome do seu projeto<br>
+<img src="../images/code04.png" alt="Projeto VSCode"></p>
+<p>Agora voc&#xEA; pode fazer um projeto no VSCode e rodar o seu aplicativo.</p>
 <p>.</p>
 
       </div>
