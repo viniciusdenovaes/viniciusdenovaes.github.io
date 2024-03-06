@@ -1,6 +1,6 @@
 # Tipos Primitivos
 
-Assim como **C**, a linguagem Java é estaticamente tipada, isso quer dizer que toda variável declarada deve ter um tipo declarado.
+Assim como **C**, a linguagem C# é estaticamente tipada, isso quer dizer que toda variável declarada deve ter um tipo declarado.
 
 Ou ela pode ser declarada como um **objeto**, ou ela pode ser de um dos tipos primitivos.
 
@@ -39,7 +39,7 @@ Existe muito mais material sobre estes assuntos, alguns serão colocados nesta p
 Alguns assuntos não tratados aqui são:
  - Truncamento
  - Casting
- - Operador `+` para concatenar `String`
+ - Operador `+` para concatenar `string`
  - O que é um operador lógico "short-circuit"?
  - Como funciona operações entre `int` e `double`?
 
