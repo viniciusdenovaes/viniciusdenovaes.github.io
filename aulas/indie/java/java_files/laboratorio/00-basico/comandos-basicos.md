@@ -262,7 +262,7 @@ E a saída para este `main` deve ser
 ```
 
 
-### [Respostas](../../workspace/Lab00)
+### [Respostas](https://github.com/viniciusdenovaes/JavaCourseUnip/tree/main/Lab00/src)
 
 
 
