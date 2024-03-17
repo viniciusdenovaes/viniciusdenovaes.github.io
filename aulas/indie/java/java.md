@@ -38,7 +38,6 @@
 ## Laboratórios
 
 - [lab00 - Usando funções (métodos estáticos)](java_files/laboratorio/00-basico/comandos-basicos.html)
-  - [respostas](https://github.com/viniciusdenovaes/Unip231java/tree/main/Lab00/src/lab00)
 - Lab01
   - [lab01 - Classes como estruturas](java_files/laboratorio/01-classes/01.00-classes_pre.html)
   - [lab01 - Classes com métodos](java_files/laboratorio/01-classes/01.01-classes.html)
