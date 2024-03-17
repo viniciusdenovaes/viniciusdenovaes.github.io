@@ -88,12 +88,12 @@
   * _Constructors_
   * Composição
   * Encapsulamento
-  * _Override_
+  * _Overload_
   * Estruturas:
     * `ArrayList`
     * `for-each`: Um novo tipo de `for`
 * Parte 02 - Herança
-  * _Overload_
+  * _Override_
   * Exemplos: `toString`, `equals`
   * `String`: uma classe muito especial
   * Polimorfismo
