@@ -8,7 +8,7 @@
 - [Um exemplo de um programa parecido com a APS](https://github.com/viniciusdenovaes/Unip221LPOO/blob/master/README.md#programa-funcionario) -->
 
 
-## [Curso](https://viniciusdenovaes.github.io/aulas/indie/java/java_files/java.md)
+## [Curso](https://viniciusdenovaes.github.io/aulas/indie/java/java.html)
 
 
 <!--
