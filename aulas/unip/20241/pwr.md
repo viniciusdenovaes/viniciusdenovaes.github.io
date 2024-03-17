@@ -41,7 +41,7 @@
    - (lista de fontes, cores e caracteres especiais) **Não cai na prova**
 
 - [Aula 4](pwr_files/aulas/aula04.pdf)
-   - [exemplo](pwr_files/exemplos/exemplo_css.html)
+   - [exemplo](pwr_files/exemplos/css/exemplo_css.html)
    - CSS, como funciona?
    - 3 tipos de declaração:
       - inline,
