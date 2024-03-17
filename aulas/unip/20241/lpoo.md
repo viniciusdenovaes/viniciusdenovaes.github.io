@@ -8,8 +8,10 @@
 - [Um exemplo de um programa parecido com a APS](https://github.com/viniciusdenovaes/Unip221LPOO/blob/master/README.md#programa-funcionario) -->
 
 
-## Curso
+## [Curso](https://viniciusdenovaes.github.io/aulas/indie/java/java_files/java.md)
 
+
+<!--
 - Prólogo
   - Instalação:.
     - [Linux (Ubuntu)](lpoo_files/curso/00.0-install/linux/00-tuto_instal_linux_ubuntu.html)
@@ -79,7 +81,7 @@
 * [Github](https://github.com/viniciusdenovaes/Unip211LPOO)
 -->
 
-
+<!--
 ## Ementa
 
 * Parte 00 - Revisão: Levamos em consideração que a turma aprendeu o paradigma de programação procedural programando em Python. Será feito uma revisão de tipos primitivos, comandos de controle e procedimentos focando na sintaxe em Java.
@@ -181,3 +183,5 @@ Depois de aprender a programar orientado a objetos este é *o próximo passo*.
 Mas estas são minhas opiniões pessoais.
 É recomendável que você experimente, pesquise e pergunte para outras pessoas também.
 Um bom livro é aquele que você lê e aprende informações corretas, e isto depende de vários fatores como objetivos, gostos, e nível de conhecimento.
+
+-->
