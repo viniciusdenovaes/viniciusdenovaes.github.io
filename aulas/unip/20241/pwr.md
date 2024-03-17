@@ -48,12 +48,11 @@
       - interno ao arquivo, no `<head><style type=”text/css”>...</style></head>`
       - externo ao arquivo: `<link rel=”stylesheet” type=”text/css” href=”nome_pagina.css”>`
 
-<!--
-
 - [Aula 5](pwr_files/aulas/aula05.pdf)
    - Unidades de Medidas
    - Fontes e cores
 
+<!--
 - [Aula 6](pwr_files/aulas/aula06.pdf)
   - `margin`, `border`, `padding`
   - Imagem de fundo
