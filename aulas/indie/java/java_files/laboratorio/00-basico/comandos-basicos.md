@@ -262,7 +262,7 @@ E a saída para este `main` deve ser
 ```
 
 
-
+### [Respostas](../../workspace/Lab00)
 
 
 
