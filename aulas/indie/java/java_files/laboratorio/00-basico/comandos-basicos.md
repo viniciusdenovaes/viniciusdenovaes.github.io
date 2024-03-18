@@ -107,6 +107,7 @@ public static void main(String[] args) {
     System.out.println(conversorFahrenheitToCelsius(20));
     System.out.println(conversorFahrenheitToCelsius(32));
     System.out.println(conversorFahrenheitToCelsius(40));
+    System.out.println(conversorFahrenheitToCelsius(100));
 }
 ```
 E a saída para este `main` deve ser

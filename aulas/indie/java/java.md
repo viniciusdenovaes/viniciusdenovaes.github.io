@@ -45,7 +45,7 @@
 - lab02 - Classes com Encapsulamento
   - [lab02.01 - Get e Set](java_files/laboratorio/02-classes_encapsulamento/02.01-classes_encapsulamento.html)
   - [lab02.02 - Classes com encapsulamento (Extra)](java_files/laboratorio/02-classes_encapsulamento/02.02-classes_encapsulamento.html)
-- lab04 - Herança, Classes Abstratas e Polimorfismo
+- lab03 - Herança, Classes Abstratas e Polimorfismo
   - [Herança](java_files/laboratorio/04-heranca/04.00-exercicio_heranca.html)
   - [Exemplo sem Herança](java_files/laboratorio/04-heranca/04.01-exercicio_sem_heranca.html)
   - [Modificando exercícios anteriores com Herança, classe abstrata e polimorfismo](java_files/laboratorio/04-heranca/04.02-exercicio_com_heranca.html)

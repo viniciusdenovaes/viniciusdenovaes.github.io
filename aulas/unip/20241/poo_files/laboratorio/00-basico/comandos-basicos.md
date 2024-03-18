@@ -96,7 +96,7 @@ E a saída para este `main` deve ser
 * 4. Um conversor de graus Fahrenheit para graus Celsius. A fórmula é dada por `C = (F-32)*5/9`, onde `F` é o grau Fahrenheit e `C` é o grau em Celsius.
 A assinatura da sua função **deve ser**
 ``` cs
-public static double conversorFahrenheitToCelsius(double grauC)
+public static double conversorFahrenheitToCelsius(double grauF)
 ```
 O `main` da sua classe deve ser
 ``` cs
@@ -107,6 +107,7 @@ static void Main(string[] args) {
     Console.WriteLine(conversorFahrenheitToCelsius(20));
     Console.WriteLine(conversorFahrenheitToCelsius(32));
     Console.WriteLine(conversorFahrenheitToCelsius(40));
+    Console.WriteLine(conversorFahrenheitToCelsius(100));
 }
 ```
 E a saída para este `main` deve ser
@@ -267,8 +268,7 @@ E a saída para este `main` deve ser
 
 
 
-
-
+### [Respostas](https://github.com/viniciusdenovaes/CsCourseUnip20241/tree/main/workspace/Lab00/Lab00)
 
 
 
