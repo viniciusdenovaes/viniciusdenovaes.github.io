@@ -7,9 +7,10 @@
   - [Arquivo Oficial](lpoo_files/aps/APS_LPOO_2022.docx)
 - [Um exemplo de um programa parecido com a APS](https://github.com/viniciusdenovaes/Unip221LPOO/blob/master/README.md#programa-funcionario) -->
 
-
 ## [Curso](https://viniciusdenovaes.github.io/aulas/indie/java/java.html)
 
+
+## [Prova Antiga](lpoo_files/provas_aula/prova01LPOOaula.pdf)
 
 <!--
 - Prólogo
