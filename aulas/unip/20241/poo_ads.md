@@ -62,6 +62,12 @@
   * [Lista de Interfaces](lpoo_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.pdf)
     * [Gabarito](lpoo_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.zip)
 
+
+-->
+## Prova Passada
+
+- [prova](poo_files/provas_aula/prova01POO.pdf)
+
 <!--
 ## [GitHub](https://github.com/viniciusdenovaes/Unip231LPOO)
 
