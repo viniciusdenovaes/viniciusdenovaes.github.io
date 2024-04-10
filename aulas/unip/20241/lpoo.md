@@ -10,7 +10,7 @@
 ## [Curso](https://viniciusdenovaes.github.io/aulas/indie/java/java.html)
 
 
-## [Prova Antiga](lpoo_files/provas_aula/prova01LPOOaula.pdf)
+## [Última Prova](lpoo_files/provas_aula/prova01LPOO_CC.pdf)
 
 <!--
 - Prólogo
