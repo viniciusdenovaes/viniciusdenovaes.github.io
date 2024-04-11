@@ -9,6 +9,9 @@
 
 ## [Curso](https://viniciusdenovaes.github.io/aulas/indie/java/java.html)
 
+## APS
+ - [Especificação do Texto para entregar no site](lpoo_files/aps/APS_LPOO_2024.pdf)
+
 
 ## [Última Prova](lpoo_files/provas_aula/prova01LPOO_CC.pdf)
 
