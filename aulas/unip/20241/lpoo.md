@@ -11,13 +11,14 @@
 
 ## APS
  - [Especificação do Texto para entregar no site](lpoo_files/aps/APS_LPOO_2024.pdf)
+ - [Link alternativo para ficha de horas em xls](lpoo_files/aps/Ficha_APS.xls)
 
 
 ## [Última Prova](lpoo_files/provas_aula/prova01LPOO_CC.pdf)
 
 <!--
 - Prólogo
-  - Instalação:.
+  - Instalação:
     - [Linux (Ubuntu)](lpoo_files/curso/00.0-install/linux/00-tuto_instal_linux_ubuntu.html)
     - [Windows](lpoo_files/curso/00.0-install/windows/00-tuto_instal_windows.html)
   - [Hello World - Como escrever um código que imprime uma mensagem na tela](lpoo_files/curso/00.1-hello/hello.html)
