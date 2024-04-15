@@ -8,30 +8,29 @@ Herança é a relação entre duas classes, uma superclasse e uma subclasse, que
 Por exemplo, vamos fazer uma classe `Pato` que tem os atributos: nome e ano de nascimento; e os métodos voa e nada.
 Depois vamos definir uma subclasse `PatoSubmarino` que tem também uma valocidade para nadar e redefine o método nadar.
 
-``` java
+``` cs
 class Pato{
-    private String nome;
+    private string nome;
     private int ano;
-    public Pato(String aNome, int aAno){
+    public Pato(string aNome, int aAno){
         this.nome = aNome;
         this.ano = aAno;
     }
 
-    public String getNome(){
+    public string GetNome(){
         return nome;
     }
-    public int getAno(){
+    public int GetAno(){
         return ano;
     }
-    public void voa(){
-        System.out.println("O Pato voa");
+    public void Voa(){
+        Console.WriteLine("O Pato voa");
     }
-    public void nada(){
-        System.out.println("O Pato nada");
+    public void Nada(){
+        Console.WriteLine("O Pato nada");
     }
-    @Override
-    public String toString(){
-        String res = "classe " + this.getClass() + "\n";
+    public override string ToString(){
+        string res = "classe " + this.GetType().Name + "\n";
         res += "nome: " + this.nome + "\n";
         res += "nascimento: " + this.ano + "\n";
         return res;
@@ -39,21 +38,20 @@ class Pato{
 }
 ```
 
-``` java
-class PatoSubmarino extends Pato{
+``` cs
+class PatoSubmarino: Pato {
     private double velocidade;
-    public PatoSubmarino(String aNome, int aAno, double aVelocidade){
-        super(aNome, aAno);
+    public PatoSubmarino(string aNome, int aAno, double aVelocidade): base(aNome, aAno){
         this.velocidade = aVelocidade;
     }
-    @Override
-    public void nada(){
-        System.out.println("Nada com uma velocidade de " + this.velocidade);
+    public override void Nada()
+    {
+        Console.WriteLine("Nada com uma velocidade de " + this.velocidade);
     }
 
-    @Override
-    public String toString(){
-        String res = super.toString();
+    public override string ToString()
+    {
+        string res = base.ToString();
         res += "Velocidade: " + this.velocidade + "\n";
         return res;
     }
@@ -62,20 +60,20 @@ class PatoSubmarino extends Pato{
 
 ```
 
-``` java
+``` cs
 
-class TestePato{
-    public static void main(String[] args){
+class TestePato {
+    public static void Main(string[] args) {
         Pato pato = new Pato("joao", 1999);
-        System.out.println(pato);
-        pato.voa();
-        pato.nada();
+        Console.WriteLine(pato);
+        pato.Voa();
+        pato.Nada();
 
 
         PatoSubmarino patoSubmarino = new PatoSubmarino("atomico", 2000, 555);
-        System.out.println(patoSubmarino);
-        patoSubmarino.voa();
-        patoSubmarino.nada();
+        Console.WriteLine(patoSubmarino);
+        patoSubmarino.Voa();
+        patoSubmarino.Nada();
     }
 }
 
@@ -105,35 +103,33 @@ Polimorfismo é a capacidade que uma variável  de um tipo poder representar qua
 No exemplo anterior podemos ter uma variável do tipo `Pato` com objetos do tipo `PatoSubmarino`
 Podemos ter uma Lista de `Pato` com objetos do tipo `PatoSubmarino`
 
-``` java
-import java.util.ArrayList;
-
-class TestePolimorfismo{
-    public static void main(String[] args){
+``` cs
+class TestePolimorfismo {
+    public static void Main(string[] args) {
         Pato pato01 = new Pato("joao", 1999);
-        System.out.println(pato01);
-        pato01.voa();
-        pato01.nada();
+        Console.WriteLine(pato01);
+        pato01.Voa();
+        pato01.Nada();
 
 
         Pato patoSubmarino = new PatoSubmarino("atomico", 2000, 555);
-        System.out.println(patoSubmarino);
-        patoSubmarino.voa();
-        patoSubmarino.nada();
+        Console.WriteLine(patoSubmarino);
+        patoSubmarino.Voa();
+        patoSubmarino.Nada();
 
 
-        System.out.println();
-        System.out.println("\n----------------------------------------");
-        System.out.println("Fazendo uma lista de patos do tipo Pato");
-        System.out.println("----------------------------------------\n");
-        ArrayList<Pato> patos = new ArrayList<Pato>();
-        patos.add(pato01);
-        patos.add(patoSubmarino);
+        Console.WriteLine();
+        Console.WriteLine("\n----------------------------------------");
+        Console.WriteLine("Fazendo uma lista de patos do tipo Pato");
+        Console.WriteLine("----------------------------------------\n");
+        List<Pato> patos = new List<Pato>();
+        patos.Add(pato01);
+        patos.Add(patoSubmarino);
 
-        for(Pato pato: patos){
-            System.out.println(pato);
-            pato.voa();
-            pato.nada();
+        foreach (Pato pato in patos) {
+            Console.WriteLine(pato);
+            pato.Voa();
+            pato.Nada();
         }
 
     }
@@ -192,120 +188,125 @@ As características de uma clase abstrata são:
 
 Por exemplo, considere as seguintes classes:
 
-``` java
-class Cachorro{
-    private String nome;
+``` cs
+namespace sem_classe_abstrata;
+
+class Cachorro {
+    private string nome;
     private int idade;
 
-    public Cachorro(String aNome){
+    public Cachorro(string aNome) {
         this.nome = aNome;
         this.idade = 0;
     }
 
-    public String getNome(){return this.nome;}
-    public int getIdade(){return this.idade;}
+    public string GetNome() { return this.nome; }
+    public int GetIdade() { return this.idade; }
 
-    public void aumentaIdade(){this.idade++;}
+    public void AumentaIdade() { this.idade++; }
 
-    public String fazBarulho(){
+    public string FazBarulho() {
         return "au au";
     }
 
-    @Override
-    public String toString(){
-        String res = "";
+    public override string ToString() {
+        string res = "";
         res += "Classe: Cachorro\n";
         res += "Nome: " + this.nome + "\n";
         res += "Idade: " + this.idade + "\n";
-        res += "Barulho: " + this.fazBarulho() + "\n";
+        res += "Barulho: " + this.FazBarulho() + "\n";
         return res;
     }
 }
 ```
 
 
-``` java
-class Gato{
-    private String nome;
+``` cs
+namespace sem_classe_abstrata;
+
+class Gato {
+    private string nome;
     private int idade;
 
-    public Gato(String aNome){
+    public Gato(string aNome) {
         this.nome = aNome;
         this.idade = 0;
     }
 
-    public String getNome(){return this.nome;}
-    public int getIdade(){return this.idade;}
+    public string GetNome() { return this.nome; }
+    public int GetIdade() { return this.idade; }
 
-    public void aumentaIdade(){this.idade++;}
+    public void AumentaIdade() { this.idade++; }
 
-    public String fazBarulho(){
+    public string FazBarulho() {
         return "Miau";
     }
 
-    @Override
-    public String toString(){
-        String res = "";
+    public override string ToString() {
+        string res = "";
         res += "Classe: Gato\n";
         res += "Nome: " + this.nome + "\n";
         res += "Idade: " + this.idade + "\n";
-        res += "Barulho: " + this.fazBarulho() + "\n";
+        res += "Barulho: " + this.FazBarulho() + "\n";
         return res;
     }
 }
 ```
 
 
-``` java
-class Pato{
-    private String nome;
+``` cs
+namespace sem_classe_abstrata;
+
+class Pato {
+    private string nome;
     private int idade;
 
-    public Pato(String aNome){
+    public Pato(string aNome) {
         this.nome = aNome;
         this.idade = 0;
     }
 
-    public String getNome(){return this.nome;}
-    public int getIdade(){return this.idade;}
+    public string GetNome() { return this.nome; }
+    public int GetIdade() { return this.idade; }
 
-    public void aumentaIdade(){this.idade++;}
+    public void AumentaIdade() { this.idade++; }
 
-    public String fazBarulho(){
-        return "Quaaack";
+    public string FazBarulho() {
+        return "Quaaak";
     }
 
-    @Override
-    public String toString(){
-        String res = "";
+    public override string ToString() {
+        string res = "";
         res += "Classe: Pato\n";
         res += "Nome: " + this.nome + "\n";
         res += "Idade: " + this.idade + "\n";
-        res += "Barulho: " + this.fazBarulho() + "\n";
+        res += "Barulho: " + this.FazBarulho() + "\n";
         return res;
     }
 }
 ```
 
 
-``` java
-class Teste{
-    static public void main(String[] args){
+``` cs
+namespace sem_classe_abstrata;
+
+class TesteSemClasseAbstrata {
+    static public void Main(string[] args) {
         Cachorro cachorro = new Cachorro("Brutus");
         Gato gato = new Gato("Chirriro");
         Pato pato = new Pato("Donaldo");
 
-        System.out.println(cachorro);
-        System.out.println(gato);
-        System.out.println(pato);
+        Console.WriteLine(cachorro);
+        Console.WriteLine(gato);
+        Console.WriteLine(pato);
 
-        cachorro.aumentaIdade();
-        gato.aumentaIdade();
-        pato.aumentaIdade();
+        cachorro.AumentaIdade();
+        gato.AumentaIdade();
+        pato.AumentaIdade();
 
-        System.out.println(cachorro);
-        System.out.println(gato);
-        System.out.println(pato);
+        Console.WriteLine(cachorro);
+        Console.WriteLine(gato);
+        Console.WriteLine(pato);
     }
 }
 ```
@@ -314,60 +315,59 @@ class Teste{
 
 Poderemos fazer uma superclasse abstrata `Animal` implementando os métodos que são comuns e definindo como abstrato o método que difere:
 
-``` java
-abstract class Animal{
-    private String nome;
+``` cs
+namespace classe_abstrata;
+
+abstract class Animal {
+    private string nome;
     private int idade;
 
-    public Animal(String aNome){
+    public Animal(string aNome) {
         this.nome = aNome;
         this.idade = 0;
     }
 
-    public String getNome(){return this.nome;}
-    public int getIdade(){return this.idade;}
+    public string GetNome() { return this.nome; }
+    public int GetIdade() { return this.idade; }
 
-    public void aumentaIdade(){this.idade++;}
+    public virtual void AumentaIdade() { this.idade++; }
 
-    abstract public String fazBarulho();
+    abstract public string FazBarulho();
 
-    @Override
-    public String toString(){
-        String res = "";
-        res += "Classe: " + this.getClass().getSimpleName() + "\n";
+    public override string ToString() {
+        string res = "";
+        res += "Classe: " + this.GetType().Name + "\n";
         res += "Nome: " + this.nome + "\n";
         res += "Idade: " + this.idade + "\n";
-        res += "Barulho: " + this.fazBarulho() + "\n";
+        res += "Barulho: " + this.FazBarulho() + "\n";
         return res;
     }
 }
 ```
 
 
-``` java
-class Cachorro extends Animal{
+``` cs
+namespace classe_abstrata;
 
-    public Cachorro(String aNome){
-        super(aNome);
-    }
+class Cachorro : Animal {
 
-    @Override
-    public String fazBarulho(){
-        return "au au";
-    }
+    public Cachorro(string aNome) : base(aNome){}
+
+    public override string FazBarulho() {
+    return "au au";
+}
 }
 ```
 
 
-``` java
-class Gato extends Animal{
+``` cs
+namespace classe_abstrata;
 
-    public Gato(String aNome){
-        super(aNome);
-    }
+class Gato : Animal {
 
-    @Override
-    public String fazBarulho(){
+    public Gato(string aNome) : base(aNome){}
+
+    public override string FazBarulho() {
         return "Miau";
     }
 
@@ -375,15 +375,14 @@ class Gato extends Animal{
 ```
 
 
-``` java
-class Pato extends Animal{
+``` cs
+namespace classe_abstrata;
 
-    public Pato(String aNome){
-        super(aNome);
-    }
+class Pato : Animal {
 
-    @Override
-    public String fazBarulho(){
+    public Pato(string aNome) : base(aNome){}
+
+    public override string FazBarulho() {
         return "Quaaack";
     }
 
@@ -391,35 +390,36 @@ class Pato extends Animal{
 ```
 
 
-``` java
-import java.util.List;
-import java.util.ArrayList;
+``` cs
+namespace classe_abstrata;
 
-class Teste{
-    static public void main(String[] args){
+class TesteComClasseAbstrata {
+    static public void Main(string[] args) {
 
-        List<Animal> animais = new ArrayList<>();
+        List<Animal> animais = new List<Animal>();
 
-        animais.add(new Cachorro("Brutus"));
-        animais.add(new Gato("Chirriro"));
-        animais.add(new Pato("Donaldo"));
+        animais.Add(new Cachorro("Brutus"));
+        animais.Add(new Gato("Chirriro"));
+        animais.Add(new Pato("Donaldo"));
 
-        for(Animal a: animais){
-            System.out.println(a);
+        foreach (Animal a in animais) {
+            Console.WriteLine(a);
         }
 
-        for(Animal a: animais){
-            a.aumentaIdade();
+        foreach (Animal a in animais) {
+            a.AumentaIdade();
         }
 
-        for(Animal a: animais){
-            System.out.println(a);
+        foreach (Animal a in animais) {
+            Console.WriteLine(a);
         }
 
     }
 }
 ```
 
+
+<!--
 ## Interfaces
 
 Diferente de Python, **na linguagem Java as classes podem ter apenas uma superclasse**. Porém as classes podem ter multiplas `interfaces`.
@@ -434,35 +434,34 @@ Veja o exemplo de três classes completamente diferentes, mas que compartilham d
 
 ```java
 class Pato extends Animal{
-    public Pato(String aNome){
+    public Pato(string aNome){
         super(aNome);
     }
 
     @Override
-    public String fazBarulho(){return "Qauaack";}
+    public string fazBarulho(){return "Qauaack";}
 
     public void voa(){
-        System.out.println("O Pato voa para o norte");
+        Console.WriteLine("O Pato voa para o norte");
     }
 }
 ```
 
 ```java
 class Aviao{
-    private String modelo;
-    public Aviao(String aModelo){
+    private string modelo;
+    public Aviao(string aModelo){
         this.modelo = aModelo;
     }
 
-    public String getModelo(){return modelo;}
+    public string GetModelo(){return modelo;}
 
     public void voa(){
-        System.out.println("O Aviao voa levando pessoas");
+        Console.WriteLine("O Aviao voa levando pessoas");
     }
 
-    @Override
-    public String toString(){
-        String res = "";
+    public override string ToString(){
+        string res = "";
         res += "Classe Aviao\n";
         res += "Modelo: "+modelo+"\n";
         return res;
@@ -474,12 +473,11 @@ class Aviao{
 class SuperMan{
 
     public void voa(){
-        System.out.println("O SuperMan voa para salvar alguem");
+        Console.WriteLine("O SuperMan voa para salvar alguem");
     }
 
-    @Override
-    public String toString(){
-        String res = "";
+    public override string ToString(){
+        string res = "";
         res += "Classe SuperMan\n";
         return res;
     }
@@ -488,14 +486,14 @@ class SuperMan{
 
 ```java
 class Teste{
-    static public void main(String[] args){
+    static public void main(string[] args){
         Pato pato = new Pato("Donaldo");
         Aviao aviao = new Aviao("Jato");
         SuperMan superMan = new SuperMan();
 
-        System.out.println(pato);
-        System.out.println(aviao);
-        System.out.println(superMan);
+        Console.WriteLine(pato);
+        Console.WriteLine(aviao);
+        Console.WriteLine(superMan);
 
         pato.voa();
         aviao.voa();
@@ -518,37 +516,36 @@ interface Voavel{
 
 ```java
 class Pato extends Animal implements Voavel{
-    public Pato(String aNome){
+    public Pato(string aNome){
         super(aNome);
     }
 
     @Override
-    public String fazBarulho(){return "Qauaack";}
+    public string fazBarulho(){return "Qauaack";}
 
     @Override
     public void voa(){
-        System.out.println("O Pato voa para o norte");
+        Console.WriteLine("O Pato voa para o norte");
     }
 }
 ```
 
 ```java
 class Aviao implements Voavel{
-    private String modelo;
-    public Aviao(String aModelo){
+    private string modelo;
+    public Aviao(string aModelo){
         this.modelo = aModelo;
     }
 
-    public String getModelo(){return modelo;}
+    public string GetModelo(){return modelo;}
 
     @Override
     public void voa(){
-        System.out.println("O Aviao voa levando pessoas");
+        Console.WriteLine("O Aviao voa levando pessoas");
     }
 
-    @Override
-    public String toString(){
-        String res = "";
+    public override string ToString(){
+        string res = "";
         res += "Classe Aviao\n";
         res += "Modelo: "+modelo+"\n";
         return res;
@@ -561,12 +558,11 @@ class SuperMan implements Voavel{
 
     @Override
     public void voa(){
-        System.out.println("O SuperMan voa para salvar alguem");
+        Console.WriteLine("O SuperMan voa para salvar alguem");
     }
 
-    @Override
-    public String toString(){
-        String res = "";
+    public override string ToString(){
+        string res = "";
         res += "Classe SuperMan\n";
         return res;
     }
@@ -578,7 +574,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 class Teste{
-    static public void main(String[] args){
+    static public void main(string[] args){
         List<Voavel> voavels = new ArrayList<>();
 
         voavels.add(new Pato("Donaldo"));
@@ -586,7 +582,7 @@ class Teste{
         voavels.add(new SuperMan());
 
         for(Voavel v: voavels){
-            System.out.println(v);
+            Console.WriteLine(v);
         }
 
         for(Voavel v: voavels){
@@ -598,7 +594,7 @@ class Teste{
 ```
 
 
-
+-->
 
 
 

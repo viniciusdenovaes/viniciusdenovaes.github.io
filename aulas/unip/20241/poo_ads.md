@@ -23,13 +23,14 @@
 - Parte 02 Orientação a Objetos
   - [Classes](lpoo_files/curso/02/01-classes.html)
   - [Convenções](lpoo_files/curso/02/02-convencoes.html)
-<!--
+
 - Parte 03 - Introdução à primeira estrutura de dados: Lista
   - [ArrayList](lpoo_files/curso/03/array_list.html)
 
 - Parte 04 - Herança
   - [Herança](lpoo_files/curso/04/heranca.html)
 
+<!--
 - Parte 05 - Importantes Estruturas de Dados e Interfaces
    - [Set](lpoo_files/curso/05/set.html)
    - [Map](lpoo_files/curso/05/map.html)
@@ -52,18 +53,21 @@
 - lab02 - Classes com Encapsulamento
   - [lab02.01 - Get e Set](poo_files/laboratorio/02-classes_encapsulamento/02.01-classes_encapsulamento.html)
   - [lab02.02 - Classes com encapsulamento (Extra)](poo_files/laboratorio/02-classes_encapsulamento/02.02-classes_encapsulamento.html)
-<!--
+
 - lab04 - Herança, Classes Abstratas e Polimorfismo
-  - [Herança](lpoo_files/laboratorio/04-heranca/04.00-exercicio_heranca.html)
-  - [Exemplo sem Herança](lpoo_files/laboratorio/04-heranca/04.01-exercicio_sem_heranca.html)
-  - [Modificando exercícios anteriores com Herança, classe abstrata e polimorfismo](lpoo_files/laboratorio/04-heranca/04.02-exercicio_com_heranca.html)
+  - [Herança](poo_files/laboratorio/04-heranca/04.00-exercicio_heranca.html)
+  - [Exemplo sem Herança](poo_files/laboratorio/04-heranca/04.01-exercicio_sem_heranca.html)
+  - [Modificando exercícios anteriores com Herança, classe abstrata e polimorfismo](poo_files/laboratorio/04-heranca/04.02-exercicio_com_heranca.html)
+<!--
 * lab04 - Interfaces (Classes abstratas)
-  * [Exemplo sem interface](lpoo_files/laboratorio/04-interfaces/04-sem_interface.html)
-  * [Lista de Interfaces](lpoo_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.pdf)
-    * [Gabarito](lpoo_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.zip)
-
-
+  * [Exemplo sem interface](poo_files/laboratorio/04-interfaces/04-sem_interface.html)
+  * [Lista de Interfaces](poo_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.pdf)
+<!--
+  * [Gabarito](poo_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.zip)
 -->
+
+
+
 ## Prova Passada
 
 - [prova](poo_files/provas_aula/prova01POO.pdf)
