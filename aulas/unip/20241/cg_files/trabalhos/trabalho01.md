@@ -2,18 +2,18 @@
 
 Para este trabalho você deve fazer um programa que cria e exibe um polígono na tela. Seu programa deve ter uma interface para que o usuário consiga manipular alguns fatores do polígono.
 
-Você pode usar apenas retas e transformadas para fazer este trabalho.
+Você pode usar **apenas retas e transformadas** para fazer este trabalho.
 
 A pontuação do trabalho se dá à seguir:
 - Mostrar um polígono na tela: +1pt
 - O polígono está centralizado: +1pt
-- Se ao invés de um polígono for um **círculo** formado por uma quantidade pré-definida finita de retas: +1pt
-- Controle para escolher quantos lados o polígono terá: +1pt
+- Se ao invés de um polígono for um **círculo** formado por uma quantidade pré-definida finita de retas: +2pt
+- Controle para escolher quantos lados o polígono terá: +2pt
 - Controle para aplicar transformações:
   - Translação: +2pt
     - Não precisa se importar com o sentido da translação
-    - Os pontos são divididos por cada eixo
   - Rotação, em relação ao centro da figura: +2pt
+    - Não precisa se importar com o sentido da rotação
   - Escalamento: +1pt
   - Cisalhamento: +1pt
 - (Bônus)Se ao invés de um polígono for uma elípse (também formado por retas) com controle sobre as suas características: +2pt
