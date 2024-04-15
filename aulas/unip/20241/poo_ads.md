@@ -25,10 +25,10 @@
   - [Convenções](lpoo_files/curso/02/02-convencoes.html)
 
 - Parte 03 - Introdução à primeira estrutura de dados: Lista
-  - [ArrayList](lpoo_files/curso/03/array_list.html)
+  - [ArrayList](poo_files/curso/03/array_list.html)
 
 - Parte 04 - Herança
-  - [Herança](lpoo_files/curso/04/heranca.html)
+  - [Herança](poo_files/curso/04/heranca.html)
 
 <!--
 - Parte 05 - Importantes Estruturas de Dados e Interfaces
