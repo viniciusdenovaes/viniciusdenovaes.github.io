@@ -12,11 +12,11 @@ Abaixo alguns comandos em markdown e seu efeito correspondente em HTML.
 <html>
 <table class="wikitable">
 <tbody><tr>
-<th width="33%">Text using Markdown syntax
+<th width="20%">Text using Markdown syntax
 </th>
-<th width="34%">Corresponding HTML produced by a Markdown processor
+<th width="20%">Corresponding HTML produced by a Markdown processor
 </th>
-<th width="33%">Text viewed in a browser
+<th width="20%">Text viewed in a browser
 </th></tr>
 <tr valign="top">
 <td>
