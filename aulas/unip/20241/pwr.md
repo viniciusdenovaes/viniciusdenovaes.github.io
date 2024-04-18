@@ -54,6 +54,7 @@
    - Unidades de Medidas
    - Fontes e cores
 
+- [Aula Markdown](pwr_files/aulas/aula_md.html)
 <!--
 - [Aula 6](pwr_files/aulas/aula06.pdf)
   - `margin`, `border`, `padding`
