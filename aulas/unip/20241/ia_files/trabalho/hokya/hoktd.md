@@ -51,7 +51,11 @@ Então uma solução ótima da instância acima, tendo `-30` de dano pode ser
 SSSLLLLS
 ```
 
+### Avaliação
 
+Seu algoritmo deve rodar qualquer tipo de instância especificada no enunciado, um exemplo de instâncias pode ser encontrado [aqui](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/20241/ia_files/trabalho/hokya/insts). Outras instâncias maiores serão adicionadas a este conjunto.
+
+No dia da avaliação outras instâncias, de tamanhos variados, não vistas antes, serão apresentadas e seu trabalho terá que solucionar. Sua nota será proporcional à quantidade de instâncias resolvidas de forma ótima.
 
 
 .
