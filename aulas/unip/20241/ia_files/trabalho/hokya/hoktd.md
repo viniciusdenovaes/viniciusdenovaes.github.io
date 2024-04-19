@@ -19,7 +19,7 @@ O jogador não pode ocupar o mesmo lugar de uma torre (não pode atravessar uma 
 
 ![tabuleiro inicio](hok_area03.png)
 
-
+O jogador **não pode passar em um lugar repetido!**
 
 Para este trabalho você deve fazer um algoritmo exato para encontrar uma solução onde o jogador chega ao seu destino tomando a menor quantidade de dano possível.
 
