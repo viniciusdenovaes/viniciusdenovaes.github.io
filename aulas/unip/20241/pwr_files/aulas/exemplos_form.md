@@ -197,6 +197,7 @@ O método que o `form` por padrão é o GET. Este método tem as seguintes carac
 ```
 
 
+<html>
 <hr>
 <form action="https://www.w3schools.com/action_page.php" target="_blank" method="post">
   <label for="login">Login:</label><br>
@@ -209,14 +210,56 @@ O método que o `form` por padrão é o GET. Este método tem as seguintes carac
   <input type="submit" value="Enviar">
 </form>
 <hr>
+</html>
 
 
 Perceba que as informações enviada **não** aparecem na **URL** da tela de resultado
 
+<hr>
 
 
 
 
+### Javascript para verificação
+
+
+```html
+<form action="https://www.w3schools.com/action_page.php" target="_blank" method="post">
+  <label for="login" id="lab-login-sc">Login:</label><br>
+  <input type="text" id="txt-login-sc" name="login"><br>
+  <label for="login" id="wrn-login-sc"></label><br>
+  <p style="color:red">Não coloque seu password aqui<br>
+  Essa informação aparecerá na tela seguinte
+  </p>
+  <label for="pass"      id="lab-pass-sc">Password:</label><br>
+  <input type="password" id="txt-pass-sc" name="pass"><br>
+  <label for="login"     id="wrn-pass-sc"></label><br>
+  <input type="submit" value="Enviar">
+</form>
+```
+
+
+<html>
+<hr>
+<form action="https://www.w3schools.com/action_page.php" target="_blank" method="post">
+  <label for="login" id="lab-login-sc">Login:</label><br>
+  <input type="text" id="txt-login-sc" name="login"><br>
+  <label for="login" id="wrn-login-sc"></label><br>
+  <p style="color:red">Não coloque seu password aqui<br>
+  Essa informação aparecerá na tela seguinte
+  </p>
+  <label for="pass"      id="lab-pass-sc">Password:</label><br>
+  <input type="password" id="txt-pass-sc" name="pass" onfocus="checkPass()"><br>
+  <label for="login"     id="wrn-pass-sc"></label><br>
+  <input type="submit" value="Enviar">
+</form>
+<hr>
+<script>
+function checkPass(){
+  alert("ola")
+}
+</script>
+</html>
 
 
 
