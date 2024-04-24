@@ -249,14 +249,43 @@ Perceba que as informações enviada **não** aparecem na **URL** da tela de res
   Essa informação aparecerá na tela seguinte
   </p>
   <label for="pass"      id="lab-pass-sc">Password:</label><br>
-  <input type="password" id="txt-pass-sc" name="pass" onfocus="checkPass()"><br>
+  <input type="password" id="txt-pass-sc" name="pass" onclick="checkAlert()"><br>
   <label for="login"     id="wrn-pass-sc"></label><br>
   <input type="submit" value="Enviar">
 </form>
 <hr>
 <script>
+var wrn_pass = document.getElementById("wrn-pass-sc");
+var txt_pass = document.getElementById("txt-pass-sc");
+txt_pass.addEventListener("keyup", () => {checkPass()})
+function checkAlert(){
+  alert("Sua senha deve conter a palavra HTML");
+}
 function checkPass(){
-  alert("ola")
+  if(!txt_pass.value.toLowerCase().includes("html")){
+    wrn_pass.textContent = "Sua senha deve incluir a palavra HTML";
+    wrn_pass.style.color = "red";
+  }else{
+    wrn_pass.textContent = "Senha ok";
+    wrn_pass.style.color = "green";
+  }
+}
+
+
+var wrn_pass = document.getElementById("wrn-pass-sc");
+var txt_pass = document.getElementById("txt-pass-sc");
+txt_pass.addEventListener("keyup", () => {checkPass()})
+function checkPassAlert(){
+  alert("Sua senha deve conter a palavra HTML");
+}
+function checkPass(){
+  if(!txt_pass.value.toLowerCase().includes("html")){
+    wrn_pass.textContent = "Sua senha deve incluir a palavra HTML";
+    wrn_pass.style.color = "red";
+  }else{
+    wrn_pass.textContent = "Senha ok";
+    wrn_pass.style.color = "green";
+  }
 }
 </script>
 </html>
