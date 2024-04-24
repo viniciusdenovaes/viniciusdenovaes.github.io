@@ -243,31 +243,32 @@ Perceba que as informações enviada **não** aparecem na **URL** da tela de res
 <hr>
 <form action="https://www.w3schools.com/action_page.php" target="_blank" method="post">
   <label for="login" id="lab-login-sc">Login:</label><br>
-  <input type="text" id="txt-login-sc" name="login"><br>
+  <input type="text" id="txt-login-sc" name="login" onclick="checkLoginAlert()><br>
   <label for="login" id="wrn-login-sc"></label><br>
   <p style="color:red">Não coloque seu password aqui<br>
   Essa informação aparecerá na tela seguinte
   </p>
   <label for="pass"      id="lab-pass-sc">Password:</label><br>
-  <input type="password" id="txt-pass-sc" name="pass" onclick="checkAlert()"><br>
+  <input type="password" id="txt-pass-sc" name="pass" onclick="checkPassAlert()"><br>
   <label for="login"     id="wrn-pass-sc"></label><br>
   <input type="submit" value="Enviar">
 </form>
 <hr>
 <script>
-var wrn_pass = document.getElementById("wrn-pass-sc");
-var txt_pass = document.getElementById("txt-pass-sc");
-txt_pass.addEventListener("keyup", () => {checkPass()})
-function checkAlert(){
-  alert("Sua senha deve conter a palavra HTML");
+
+var wrn_login = document.getElementById("wrn-login-sc");
+var txt_login = document.getElementById("txt-login-sc");
+txt_login.addEventListener("keyup", () => {checkLogin()})
+function checkLoginAlert(){
+  alert("O seu login deve conter 6 ou mais characteres");
 }
-function checkPass(){
-  if(!txt_pass.value.toLowerCase().includes("html")){
-    wrn_pass.textContent = "Sua senha deve incluir a palavra HTML";
-    wrn_pass.style.color = "red";
+function checkLogin(){
+  if(!(txt_login.value.lenght>=6)){
+    wrn_login.textContent = "O seu login deve conter 6 ou mais characteres";
+    wrn_login.style.color = "red";
   }else{
-    wrn_pass.textContent = "Senha ok";
-    wrn_pass.style.color = "green";
+    wrn_login.textContent = "Senha ok";
+    wrn_login.style.color = "green";
   }
 }
 
