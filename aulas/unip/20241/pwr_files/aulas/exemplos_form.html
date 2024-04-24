@@ -468,7 +468,7 @@ function checkLoginAlert(){<br>
 alert(&quot;O seu login deve conter 6 ou mais characteres&quot;);<br>
 }<br>
 function checkLogin(){<br>
-if(!(txt_login.value.lenght&gt;=6)){<br>
+if(txt_login.value.lenght&lt;6){<br>
 wrn_login.textContent = &quot;O seu login deve conter 6 ou mais characteres&quot;;<br>
 wrn_login.style.color = &quot;red&quot;;<br>
 }else{<br>
