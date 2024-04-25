@@ -54,6 +54,8 @@
    - Unidades de Medidas
    - Fontes e cores
 
+- [Aula Markdown](pwr_files/aulas/aula_md.html)
+- [Aula Forms](pwr_files/aulas/exemplos_form.html)
 <!--
 - [Aula 6](pwr_files/aulas/aula06.pdf)
   - `margin`, `border`, `padding`
@@ -73,13 +75,12 @@
 - [CSS](pwr_files/exemplos/css/exemplo_css.html)
 - [`div` e `table`](pwr_files/exemplos/div/div_exemplo.html)
 
+-->
 ## APS
-- [Arquivo para a APS](pwr_files/aps/aps.pdf)
-
+- [Arquivo para a APS](pwr_files/aps/APS_PWR_2024.pdf)
 
 ## Trabalho
 - [Trabalho para a NP2](pwr_files/trabalhos/trabalhoNP2.html)
 
 
--->
 .
