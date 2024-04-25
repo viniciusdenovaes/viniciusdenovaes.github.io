@@ -240,10 +240,11 @@ Perceba que as informações enviada **não** aparecem na **URL** da tela de res
 
 
 <html>
+
 <hr>
 <form action="https://www.w3schools.com/action_page.php" target="_blank" method="post">
   <label for="login" id="lab-login-sc">Login:</label><br>
-  <input type="text" id="txt-login-sc" name="login" onclick="checkLoginAlert()><br>
+  <input type="text" id="txt-login-sc" name="login" onclick="checkLoginAlert()"><br>
   <label for="login" id="wrn-login-sc"></label><br>
   <p style="color:red">Não coloque seu password aqui<br>
   Essa informação aparecerá na tela seguinte
@@ -255,7 +256,6 @@ Perceba que as informações enviada **não** aparecem na **URL** da tela de res
 </form>
 <hr>
 <script>
-
 var wrn_login = document.getElementById("wrn-login-sc");
 var txt_login = document.getElementById("txt-login-sc");
 txt_login.addEventListener("keyup", () => {checkLogin()})
@@ -263,6 +263,7 @@ function checkLoginAlert(){
   alert("O seu login deve conter 6 ou mais characteres");
 }
 function checkLogin(){
+  alert(txt_login.value);
   if(txt_login.value.lenght<6){
     wrn_login.textContent = "O seu login deve conter 6 ou mais characteres";
     wrn_login.style.color = "red";
@@ -271,8 +272,6 @@ function checkLogin(){
     wrn_login.style.color = "green";
   }
 }
-
-
 var wrn_pass = document.getElementById("wrn-pass-sc");
 var txt_pass = document.getElementById("txt-pass-sc");
 txt_pass.addEventListener("keyup", () => {checkPass()})
@@ -289,6 +288,7 @@ function checkPass(){
   }
 }
 </script>
+
 </html>
 
 

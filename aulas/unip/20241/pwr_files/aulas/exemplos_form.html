@@ -449,8 +449,8 @@ Uma lista maior pode ser encontrada <a href="https://www.w3schools.com/html/html
 <hr>
 <form action="https://www.w3schools.com/action_page.php" target="_blank" method="post">
   <label for="login" id="lab-login-sc">Login:</label><br>
-  <input type="text" id="txt-login-sc" name="login" onclick="checkLoginAlert()&gt;&lt;br&gt;
-  &lt;label for=" login"><br>
+  <input type="text" id="txt-login-sc" name="login" onclick="checkLoginAlert()"><br>
+  <label for="login" id="wrn-login-sc"></label><br>
   <p style="color:red">N&#xE3;o coloque seu password aqui<br>
   Essa informa&#xE7;&#xE3;o aparecer&#xE1; na tela seguinte
   </p>
@@ -461,37 +461,38 @@ Uma lista maior pode ser encontrada <a href="https://www.w3schools.com/html/html
 </form>
 <hr>
 <script>
-<p>var wrn_login = document.getElementById(&quot;wrn-login-sc&quot;);<br>
-var txt_login = document.getElementById(&quot;txt-login-sc&quot;);<br>
-txt_login.addEventListener(&quot;keyup&quot;, () =&gt; {checkLogin()})<br>
-function checkLoginAlert(){<br>
-alert(&quot;O seu login deve conter 6 ou mais characteres&quot;);<br>
-}<br>
-function checkLogin(){<br>
-if(txt_login.value.lenght&lt;6){<br>
-wrn_login.textContent = &quot;O seu login deve conter 6 ou mais characteres&quot;;<br>
-wrn_login.style.color = &quot;red&quot;;<br>
-}else{<br>
-wrn_login.textContent = &quot;Senha ok&quot;;<br>
-wrn_login.style.color = &quot;green&quot;;<br>
-}<br>
-}</p>
-<p>var wrn_pass = document.getElementById(&quot;wrn-pass-sc&quot;);<br>
-var txt_pass = document.getElementById(&quot;txt-pass-sc&quot;);<br>
-txt_pass.addEventListener(&quot;keyup&quot;, () =&gt; {checkPass()})<br>
-function checkPassAlert(){<br>
-alert(&quot;Sua senha deve conter a palavra HTML&quot;);<br>
-}<br>
-function checkPass(){<br>
-if(!txt_pass.value.toLowerCase().includes(&quot;html&quot;)){<br>
-wrn_pass.textContent = &quot;Sua senha deve incluir a palavra HTML&quot;;<br>
-wrn_pass.style.color = &quot;red&quot;;<br>
-}else{<br>
-wrn_pass.textContent = &quot;Senha ok&quot;;<br>
-wrn_pass.style.color = &quot;green&quot;;<br>
-}<br>
-}<br>
-</script><p></p>
+var wrn_login = document.getElementById("wrn-login-sc");
+var txt_login = document.getElementById("txt-login-sc");
+txt_login.addEventListener("keyup", () => {checkLogin()})
+function checkLoginAlert(){
+  alert("O seu login deve conter 6 ou mais characteres");
+}
+function checkLogin(){
+  alert(txt_login.value);
+  if(txt_login.value.lenght<6){
+    wrn_login.textContent = "O seu login deve conter 6 ou mais characteres";
+    wrn_login.style.color = "red";
+  }else{
+    wrn_login.textContent = "Senha ok";
+    wrn_login.style.color = "green";
+  }
+}
+var wrn_pass = document.getElementById("wrn-pass-sc");
+var txt_pass = document.getElementById("txt-pass-sc");
+txt_pass.addEventListener("keyup", () => {checkPass()})
+function checkPassAlert(){
+  alert("Sua senha deve conter a palavra HTML");
+}
+function checkPass(){
+  if(!txt_pass.value.toLowerCase().includes("html")){
+    wrn_pass.textContent = "Sua senha deve incluir a palavra HTML";
+    wrn_pass.style.color = "red";
+  }else{
+    wrn_pass.textContent = "Senha ok";
+    wrn_pass.style.color = "green";
+  }
+}
+</script>
 
 <p>.</p>
 <hr class="footnotes-sep">
