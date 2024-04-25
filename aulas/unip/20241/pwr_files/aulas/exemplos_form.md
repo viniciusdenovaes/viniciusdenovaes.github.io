@@ -263,12 +263,11 @@ function checkLoginAlert(){
   alert("O seu login deve conter 6 ou mais characteres");
 }
 function checkLogin(){
-  alert(txt_login.value);
-  if(txt_login.value.lenght<6){
+  if(txt_login.value.length<6){
     wrn_login.textContent = "O seu login deve conter 6 ou mais characteres";
     wrn_login.style.color = "red";
   }else{
-    wrn_login.textContent = "Senha ok";
+    wrn_login.textContent = "Login ok";
     wrn_login.style.color = "green";
   }
 }

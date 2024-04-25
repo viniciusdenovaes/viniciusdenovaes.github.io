@@ -1,4 +1,4 @@
-# Trabalho de PWR: NP2 (grupo máximo de ? pessoas)
+# Trabalho de PWR: NP2 (grupo máximo de 4 pessoas)
 
 Neste trabalho o grupo deve fazer uma página sobre qualquer tema da sua escolha.
 
