@@ -59,7 +59,40 @@ Pontuação:
 
 
 
+#### Respostas
 
+Para soluções sem usar A* (gerando todas soluções):
+
+```
+Não rodou à partir da instância g08
+```
+
+Para a solução usando A*:
+
+```
+
+00 0
+01 -20
+02 -20
+03 0
+04 -70
+05 -440
+06 -630
+
+g06 -20
+g07 0
+g08 0
+g10 0
+g12 0
+g14 0
+g16 -10
+g18 out of memory
+g20 out of memory
+g28 out of memory
+g30 out of memory
+g32 out of memory
+g99 0
+```
 
 
 
