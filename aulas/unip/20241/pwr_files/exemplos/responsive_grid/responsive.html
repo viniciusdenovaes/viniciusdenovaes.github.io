@@ -37,7 +37,7 @@
 			function filtraBusca(){
 				wrap.innerHTML = "";
 				for(var i=0; i<div_original.length; ++i){
-					if(div_original[i].innerText.includes(txt_busca.value) || txt_busca.value==""){
+					if(div_original[i].innerText.toLowerCase().includes(txt_busca.value.toLowerCase()) || txt_busca.value==""){
 						wrap.appendChild(div_original[i]);
 					}
 				}
