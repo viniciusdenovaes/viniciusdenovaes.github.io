@@ -70,7 +70,12 @@
   - Forms
      - [exemplos](pwr_files/aulas/exemplos_form.html)
 
+-->
 ## Exemplos
+
+- [Filtro em JavaScript](pwr_files/exemplos/responsive_grid/responsive.html)
+
+<!--
 
 - [CSS](pwr_files/exemplos/css/exemplo_css.html)
 - [`div` e `table`](pwr_files/exemplos/div/div_exemplo.html)
