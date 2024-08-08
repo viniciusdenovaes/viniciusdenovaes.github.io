@@ -1,0 +1,285 @@
+%o handout e o beamer normal serao controlados pelo arquivo normal.tex
+
+%\documentclass[12pt,compess,handout,aspectratio=169]{beamer}
+%\usepackage{pgfpages}
+%\pgfpagesuselayout{4 on 1}[a4paper,landscape,border shrink=5mm]
+
+%\documentclass[12pt,aspectratio=169]{beamer}
+\documentclass[11pt,aspectratio=43]{beamer}
+%Para aulas presenciais eu mudei de 11 para 12pt 
+
+%
+\usetheme{Boadilla}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{mathtools}
+%\usepackage{amsmath} mathtools já importa o amsmath
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{verbatim}
+\usepackage{epsfig}
+\usepackage{color}
+
+%para incluir códigos
+\usepackage{listings}
+
+\usepackage{multirow}
+
+%esse pacote permite mudar as margens de um unico slide com \begin{adjustwidth}{-1.5em}{-1.5em} e \end{adjustwidth}
+\usepackage{changepage}
+
+%Para aulas presenciais eu mudei a margem esquerda dos itemize, assim cabe mais coisa mesmo com a letra maior
+\setlength{\leftmargini}{5pt}
+
+
+%\usepackage[portugues,ruled,linesnumbered,noend]{algorithm2e}
+\author{Vinicius de Novaes}
+\usepackage{ragged2e}
+%pacote para fazer um strikeout na diagonal, cancelar o termo em uma equação.
+\usepackage{cancel}
+
+\usepackage{tikz, tkz-graph, pgfplots}
+\usepackage{tikz-qtree}
+
+\usetikzlibrary{arrows,positioning,chains,fit,shapes,calc,backgrounds,quotes,patterns}
+\usetikzlibrary{snakes,arrows.meta}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.markings}
+
+\usepgfplotslibrary{fillbetween}
+
+\newcommand\pgfmathsinandcos[3]{% 
+  \pgfmathsetmacro#1{sin(#3)}% 
+  \pgfmathsetmacro#2{cos(#3)}% 
+}
+
+
+
+\usepackage{epsdice}
+
+
+%pacote para fazer uma bela caixa
+\usepackage[framemethod=tikz]{mdframed}
+\definecolor{myblue}{rgb}{0.122, 0.435, 0.698}
+
+\newmdenv[innerlinewidth=0.5pt, roundcorner=4pt,linecolor=myblue,innerleftmargin=6pt,
+innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{mybox}
+
+
+%Meus blocks personalizados
+\newenvironment{definição}{%
+  \setbeamercolor{block body}{bg=green!10,fg=black}
+  \setbeamercolor{block title}{bg=green!30,fg=black}
+  \begin{block}{Definição}}{\end{block}}
+
+%minhas cores (pacote colors)
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+%Configuração do listings
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+%  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+%  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+%  breaklines=true,                 % sets automatic line breaking
+%  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+%  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside=||,          % if you want to add LaTeX within your code
+%  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+%  frame=single,	                   % adds a frame around the code
+%  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+%  language=Octave,                 % the language of the code
+%  otherkeywords={*,...},           % if you want to add more keywords to the set
+%  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+ % numbersep=5pt,                   % how far the line-numbers are from the code
+%  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+%  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+%  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+%  showtabs=false,                  % show tabs within strings adding particular underscores
+%  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+%  stringstyle=\color{mymauve},     % string literal style
+%  tabsize=2,	                   % sets default tabsize to 2 spaces
+%  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+
+\title{IPE}
+%\setbeamercovered{transparent} 
+
+
+%Esse snipet aqui é para tentar fazer o \pause funcionar dentro do align
+\makeatletter
+\let\save@measuring@true\measuring@true
+\def\measuring@true{%
+  \save@measuring@true
+  \def\beamer@sortzero##1{\beamer@ifnextcharospec{\beamer@sortzeroread{##1}}{}}%
+  \def\beamer@sortzeroread##1<##2>{}%
+  \def\beamer@finalnospec{}%
+}
+\makeatother
+
+%\logo{} 
+%\institute{} 
+\date{} 
+%\subject{} 
+
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
+
+%\setbeamertemplate{navigation symbols}{%
+%    \usebeamerfont{footline}%
+%    \usebeamercolor[fg]{footline}%
+%    \hspace{1em}%
+%    \insertframenumber/\inserttotalframenumber
+%}
+%\setbeamercolor{footline}{fg=black}
+%\setbeamerfont{footline}{series=\bfseries}
+\setbeamersize{text margin left=10mm,text margin right=10mm} 
+
+\mode<beamer|second|trans|article>{\newcommand{\onlyhandout}[1]{}}
+\mode<handout|second|trans|article>{\newcommand{\onlybeamer}[1]{}}
+\mode<handout>{\newcommand{\onlyhandout}[1]{#1}}
+\mode<beamer>{\newcommand{\onlybeamer}[1]{#1}}
+
+\newcommand{\spitem}[1]{\begin{itemize}
+\pitem #1
+\end{itemize}} 
+\newcommand{\pitem}{\pause\item}  
+\newcommand{\ppause}{\pause}  
+%antes de descomentar esse aqui, tente descomentar a primeira linha desse arquivo
+%\newcommand{\pitem}{\item}  
+%\newcommand{\ppause}{} 
+
+\patchcmd{\theorem}{Theorem}{Teorema}{}{}
+\patchcmd{\lemma}{Lemma}{Lema}{}{}
+\patchcmd{\theorem}{defi}{Definição}{}{}
+
+%FORMATAÇÃO, CORES 
+\newcommand{\azul}[1]{{\color{blue}{#1}}}
+\newcommand{\verm}[1]{{\color{red}{#1}}}
+\definecolor{myGreen}{rgb}{0,0.7,0}
+\newcommand{\verde}[1]{{\color{myGreen}{#1}}}
+\newcommand{\roxo}[1]{{\color{magenta}{#1}}}
+
+
+\include{macros}
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\begin{frame}{}
+%\begin{itemize}
+%\item Semanalmente um questionário individual valendo nota e presença.
+%\item Publicado na sexta com entrega até terça antes da aula.
+%\item Seja $Q_t$ sua nota nos questionários do bimestre $t$ de 0 a 1.
+%\item Nota $P_t$ dos trabalhos práticos do bimestre $t$ de 0 a 10.
+%\item Nota do bimestre $t$, $N_t = P_t \times Q_t$.
+%\item Nota final $M = \frac{N_1 + N_2}{2}$
+%\item Se frequência menor que $75\%$ o aluno reprovou-se.
+%\item Senão se, $M \geq 6$ e presença maior que $75\%$ o aluno aprovou-se.
+%\item Senão se, $M < 6$ e presença maior que $75\%$ o aluno pode fazer uma substitutiva que substitui a menor entre $N_1$ e $N_2$.
+%\end{itemize}
+%\end{frame}
+%
+
+
+
+% \begin{frame}{Fontes}
+% \tiny
+% \begin{itemize}
+% \item $[clrs]$ Algoritmos: Teoria e Prática (Terceira Edição) Thomas H. Cormen, Charles Eric Leiserson, Ronald Rivest e Clifford Stein.
+
+% \item $[timr]$ Algorithms Illuminated Series, Tim Roughgarden
+
+% \item Desmistificando Algoritmos, Thomas H. Cormen.
+
+% \item Algoritmos, Sanjoy Dasgupta, Christos Papadimitriou e Umesh Vazirani
+
+% \item Stanford Algorithms
+
+% \url{https://www.youtube.com/playlist?list=PLXFMmlk03Dt7Q0xr1PIAriY5623cKiH7V}
+
+% \url{https://www.youtube.com/playlist?list=PLXFMmlk03Dt5EMI2s2WQBsLsZl7A5HEK6}
+
+% \item Conjunto de Slides dos Professores Cid C. de Souza, Cândida N. da Silva, Orlando Lee, Pedro J. de Rezende
+
+% \item Conjunto de Slides do Professores Cid C. de Souza para a disciplina MO420
+% \end{itemize}
+% Qualquer erro é de minha responsabilidade.
+% \end{frame}
+
+
+
+%\input{aula01}
+%\input{aula01_revisao}
+%\input{aula02}
+%\input{aula02_revisao}
+%\input{aula03}
+%\input{aula03_revisao}
+%\input{aula04}
+%\input{aula04_revisao}
+%\input{aula05}
+%\input{aula05_revisao}
+%\input{aula06}
+%\input{aula04}
+%\input{aula04_revisao}
+%\input{aula07}
+%\input{aula07_revisao}
+%\input{aula08}
+%\input{probabilidade_revisao} %Tem dentro da aula 9
+%\input{aula09}
+%\input{aula09_revisao}
+%\input{aula10}
+%\input{aula10_revisao}
+%\input{aula11}
+%\input{aula11_revisao}
+%\input{probabilidade_condicional_revisao}
+%\input{aula12}
+%\input{aula12_revisao}
+%\input{aula13}
+%\input{aula13_revisao}
+%\input{aula14}
+%\input{aula14_revisao}
+%\input{aula15}
+%\input{caminho_minimo_nao_ponderado_BFS_revisao}
+%\input{aula16}
+%\input{aula17} %Já inclui uma revisão sobre Dijkstra
+%\input{aula17_revisao}
+%\input{aula18}
+%\input{aula19}
+%\input{aula20}
+%\input{mod21-01-PD} desnecessário, tudo aqui já tá no KNAP
+%\input{mod21-02-Knap}
+%\input{mod21-03-BF} % Contém uma Revisão do Dijkstra
+%\input{mod21-BF-revisao}
+%\input{mod21-04-FW}
+%\input{mod21-FW-revisao}
+%\input{mod21-05-Johnson}
+%\input{mod22-01-Poli} %versão mais superficial
+%\input{mod22-02-NP-NPC}%versão mais profunda, tem coisas repetidas da anterior
+%\input{mod22-02-NP-NPC-revisao}
+%\input{mod22-03-3-cnf}
+%\input{mod23-04-sat}
+%\input{mod23-05-hamCicle}
+%\input{mod23-tsp-subsetsum}
+%\begin{frame}
+%\centering
+%\includegraphics[scale=0.5]{figs/arvore_provas_np.png}
+%\end{frame}
+%\input{mod23-solving_vertex_cover}
+%\input{mod24-knap}
+%\input{mod25-localSearch} %Nao tá feito
+\input{aula24-RSA}
+%\input{mod26_BackTracking_Limitantes_BnB}
+%\input{aula_PL}
+%\input{aula_PLI} % as formulações dessa aula são feitas na lousa
+%\input{aula_PLI_CP}
+\end{document}

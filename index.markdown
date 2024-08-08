@@ -7,6 +7,14 @@
 
 ## Aulas
 
+
+### Atuais (2024/2)
+* [ALPOO](aulas/unip/20242/alpoo.html)
+<!-- * [Aspectos Teóricos da Computação](aulas/unip/20242/atc.htmlOFF)
+* [Cálculo Numérico para Computação](aulas/unip/20232/cn.htmlOFF)
+* [Processamento de Imagens e Visão Computacional](aulas/unip/20232/pi.htmlOFF) -->
+
+
 ### Atuais (2024/1)
 ##### CC e SI
 * [LPOO (CC e SI)](aulas/unip/20241/lpoo.html)
