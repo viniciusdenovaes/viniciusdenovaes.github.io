@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>01-dep_inj</title>
+      <title>02-jbutton</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -24,70 +24,61 @@
     
       <div class="crossnote markdown-preview  ">
       
-<h1 id="laboratório-01---ações-e-eventos">Laboratório 01 - Ações e Eventos </h1>
-<h2 id="fazer-uma-ação-separada-de-um-evento">Fazer uma ação separada de um evento </h2>
-<h3 id="exercício-01">Exercício 01 </h3>
-<h4 id="parte-a">Parte A </h4>
-<p>Faça uma classe chamada <code>Pato</code> que tenha uma ação: <code>voar</code> e que esta ação possa definida fora da classe, depois da criação do objeto.</p>
-<p>Mais especificamente, a classe <code>Pato</code> tem um método</p>
+<h1 id="laboratório-012---ações-e-eventos-e-jbuttons">Laboratório 01.2 - Ações e Eventos e JButtons </h1>
+<h2 id="fazer-uma-ação-de-um-jbutton">Fazer uma ação de um JButton </h2>
+<h3 id="exercício-1">Exercício 1 </h3>
+<p>Use o <a href="https://github.com/viniciusdenovaes/Unip232ALPOO/blob/master/Aula01/src/incluindo_acao_botao/TesteBotao.java">exemplo visto em sala de aula</a> para criar um botão.</p>
 <ul>
-<li><code>public void voar()</code></li>
-<li>que faz uma ação do tipo <code>public void fazVoar()</code><br>
-o funcionamento deste método deve ser definido <strong>fora da classe</strong> e <strong>depois</strong> da criação do objeto.</li>
-</ul>
-<h4 id="parte-b">Parte B </h4>
-<p>Teste a classe: faça um teste, crie um objeto do tipo <code>Pato</code>, implemente uma ação de <code>fazVoar</code>, e configure seu objeto para que use a sua implementação.</p>
-<p>Mais especificamente:</p>
+<li>Crie uma janela (<code>JFrame</code>)</li>
+<li>Crie um botão (<code>JButton</code>)</li>
+<li>Adicione o botão na janela</li>
+<li>Crie um método <code>public void actionPerformed(ActionEvent e)</code> dentro de uma classe que <code>implements ActionListener</code></li>
+<li>Implemente um funcionamento qualquer para este método</li>
+<li>Adicione este método no botão criado</li>
+<li>Faça as configurações finais na janela:
 <ul>
-<li>Faça uma classe para testar o seu programa</li>
-<li>Crie um objeto do tipo <code>Pato</code></li>
-<li>Crie uma implementação do método <code>fazVoar</code></li>
-<li>Defina a implementação criada como o funcionamento do método <code>voar</code> do objeto <code>pato</code> criado.</li>
-<li>Teste para ver se o método <code>voar</code> de <code>pato</code> está funcionando.</li>
+<li><code>janela.pack();</code>,</li>
+<li><code>janela.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);</code>,</li>
+<li><code>janela.setVisible(true);</code></li>
 </ul>
-<p><a href="https://github.com/viniciusdenovaes/Unip232ALPOO/tree/master/Lab01/src/acao_inserida_no_objeto">Resposta</a></p>
-<h3 id="exercício-02">Exercício 02 </h3>
-<h4 id="parte-a-1">Parte A </h4>
-<p>Faça uma classe chamada <code>Pato</code> que tenha uma ação: <code>voar</code> que represente um conjunto de ações que possam ser adicionadas depois da criação do objeto.</p>
-<p>Mais especificamente, a classe <code>Pato</code> tem um método</p>
+</li>
+</ul>
+<p>Faça seu programa funcionar e teste o botão.</p>
+<p><a href="https://github.com/viniciusdenovaes/Unip232ALPOO/blob/master/Aula01/src/incluindo_acao_botao">Resposta</a></p>
+<h3 id="exercício-2">Exercício 2 </h3>
+<p>Crie uma janela com três botões e defina um funcionamento para cada um deles.</p>
 <ul>
-<li><code>public void voar()</code></li>
-<li>que engatilha uma lista de ações do tipo <code>public void fazVoar()</code><br>
-cada ação engatilhada por este método deve ser definido <strong>fora da classe</strong> e <strong>adicionada depois</strong> da criação do objeto.</li>
-</ul>
-<h4 id="parte-b-1">Parte B </h4>
-<p>Teste a classe: faça um teste, crie um objeto do tipo <code>Pato</code>, implemente pelo menos duas ações de <code>fazVoar</code>, e configure seu objeto para que use as suas implementações.</p>
-<p>Mais especificamente:</p>
+<li>Crie uma janela (<code>JFrame</code>)</li>
+<li><strong>Defina o layout da janela</strong> (<code>janela.setLayout(new FlowLayout())</code>)</li>
+<li><strong>Repita 3 vezes os seguintes passos</strong>:
 <ul>
-<li>Faça uma classe para testar o seu programa</li>
-<li>Crie um objeto do tipo <code>Pato</code></li>
-<li>Crie uma implementação do método <code>fazVoar</code></li>
-<li>Adicione esta implementação criada no funcionamento do método <code>voar</code> do objeto <code>pato</code> criado.</li>
-<li>Crie uma <strong>outra</strong> implementação do método <code>fazVoar</code></li>
-<li>Adicione esta <strong>outra</strong> implementação criada no funcionamento do método <code>voar</code> do objeto <code>pato</code> criado.</li>
-<li>Teste para ver se o método <code>voar</code> de <code>pato</code> está funcionando.</li>
+<li>Crie um botão (<code>JButton</code>)</li>
+<li>Adicione o botão na janela</li>
+<li>Crie um método <code>public void actionPerformed(ActionEvent e)</code> dentro de uma classe que <code>implements ActionListener</code></li>
+<li>Implemente um funcionamento qualquer para este método</li>
+<li>Adicione este método no botão criado</li>
 </ul>
-<p><a href="https://github.com/viniciusdenovaes/Unip232ALPOO/tree/master/Lab01/src/lista_de_acao_no_objeto">Resposta</a></p>
-<h3 id="exercício-03">Exercício 03 </h3>
-<h4 id="parte-a-2">Parte A </h4>
-<p>Faça uma classe chamada <code>Calculadora</code> que tenha uma ação: <code>calcular</code> que opera dois números reais, retorna um número real, e que esta ação possa definida fora da classe, depois da criação do objeto.</p>
-<p>Mais especificamente, a classe <code>Calculadora</code> tem um método</p>
+</li>
+<li>Faça as configurações finais na janela:
 <ul>
-<li><code>public double calcular(double a, double b)</code></li>
-<li>que faz uma ação do tipo <code>public double fazConta(double a, double b)</code><br>
-o funcionamento deste método deve ser definido <strong>fora da classe</strong> e <strong>depois</strong> da criação do objeto.</li>
+<li><code>janela.pack();</code>,</li>
+<li><code>janela.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);</code>,</li>
+<li><code>janela.setVisible(true);</code></li>
 </ul>
-<h4 id="parte-b-2">Parte B </h4>
-<p>Teste a classe: faça um teste, crie um objeto do tipo <code>Calculadora</code>, implemente uma ação de <code>calcular</code>, e configure seu objeto para que use a sua implementação.</p>
-<p>Mais especificamente:</p>
-<ul>
-<li>Faça uma classe para testar o seu programa</li>
-<li>Crie um objeto do tipo <code>Calculadora</code></li>
-<li>Crie uma implementação do método <code>fazConta</code></li>
-<li>Defina a implementação criada como o funcionamento do método <code>calcular</code> do objeto <code>calculadora</code> criado.</li>
-<li>Teste para ver se o método <code>calcular</code> de <code>calculadora</code> está funcionando.</li>
+</li>
 </ul>
-<p><a href="https://github.com/viniciusdenovaes/Unip232ALPOO/tree/master/Lab01/src/calculos">Resposta</a></p>
+<p>Faça seu programa funcionar e teste os botões.</p>
+<p><a href="https://github.com/viniciusdenovaes/Unip232ALPOO/tree/master/Lab01/src/incluindo_acao_varios_botoes">Resposta</a></p>
+<h3 id="exercício-3">Exercício 3 </h3>
+<p>Faça uma janela, com um botão que escreve na tela</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Botão pressionado n vezes!
+</code></pre><p>onde <code>n</code> é o número de vezes que este botão foi pressionado</p>
+<p>Exemplo de saída:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Botão pressionado 1 vezes!
+Botão pressionado 2 vezes!
+Botão pressionado 3 vezes!
+Botão pressionado 4 vezes!
+</code></pre><p><a href="https://github.com/viniciusdenovaes/Unip232ALPOO/tree/master/Lab01/src/incluindo_acao_botao_increment">Resposta</a></p>
 <p>.</p>
 
       </div>

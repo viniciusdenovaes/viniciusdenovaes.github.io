@@ -4,8 +4,8 @@
 ## Curso
 
 
-<!-- - [01 - Programação Orientada a Eventos](alpoo_files/curso/01/programacao_eventos.html)
-- [02 - Interface de Usuário (Graphical User Interface (GUI))](alpoo_files/curso/02/gui.html)
+- [01 - Programação Orientada a Eventos](alpoo_files/curso/01/programacao_eventos.html)
+<!-- - [02 - Interface de Usuário (Graphical User Interface (GUI))](alpoo_files/curso/02/gui.html)
 - [03 - Model View Controller](alpoo_files/curso/03/mvc.html)
 - [04 - JDBC](alpoo_files/curso/04/jdbc.html) -->
 
@@ -13,10 +13,10 @@
 
 ## Laboratórios
 
-<!-- - Lab01
+- Lab01
   - [lab01 - separação de ações e eventos](alpoo_files/laboratorio/01-dep/01-dep_inj.html)
-
-- Lab02 - GUI
+<!-- - [lab01.2 - aplicando em um JButton](alpoo_files/laboratorio/01-dep/02-jbutton.html)
+<!-- - Lab02 - GUI
    - [lab02.01 - Action Listeners](alpoo_files/laboratorio/02-gui/01-gui.html)
    - [lab02.02 - Calculadora](alpoo_files/laboratorio/02-gui/02-gui.html)
 - Lab03 - MVC
