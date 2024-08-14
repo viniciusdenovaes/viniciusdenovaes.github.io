@@ -1,85 +1,57 @@
-# POO - Programação Orientada a Objetos (em C#)
-
-<!-- ## APS
-
-- [Roteiro](lpoo_files/aps/roteiro.html)
-  - [Roteiro em html](lpoo_files/aps/roteiro.html)
-  - [Arquivo Oficial](lpoo_files/aps/APS_LPOO_2022.docx)
-- [Um exemplo de um programa parecido com a APS](https://github.com/viniciusdenovaes/Unip221LPOO/blob/master/README.md#programa-funcionario) -->
+# C
 
 
 ## Curso
 
 - Prólogo
   - Instalação:.
-    - [Windows](poo_files/curso/00-install/windows/00-tuto_instal_windows.html)
-<!--  - [Hello World - Como escrever um código que imprime uma mensagem na tela](lpoo_files/curso/00-hello/hello.html)
-  - [Dois Mains - Como ter dois pontos de partida no seu código](poo_files/curso/00-hello/dois_mains.html)
--->
-- Parte 01 Comandos Básicos:
-  - [Tipos Primitivos e Operações](lpoo_files/curso/01/tipos_primitivos.html)
-  - [Comandos de Controle](lpoo_files/curso/01/comandos_de_controle.html)
+    - Linux (Ubuntu): Já vem com o compilador.
+    - [Windows (Vídeo)](https://www.youtube.com/watch?v=9lfwKDolm9k)
+
+
+<!-- - Parte 01 Comandos Básicos:
+  - [Tipos Primitivos e Operações](java_files/curso/01/tipos_primitivos.html)
+  - [Comandos de Controle](java_files/curso/01/comandos_de_controle.html)
 
 - Parte 02 Orientação a Objetos
-  - [Classes](lpoo_files/curso/02/01-classes.html)
-  - [Convenções](lpoo_files/curso/02/02-convencoes.html)
+  - [Classes](java_files/curso/02/01-classes.html)
+  - [Convenções](java_files/curso/02/02-convencoes.html)
 
 - Parte 03 - Introdução à primeira estrutura de dados: Lista
-  - [ArrayList](poo_files/curso/03/array_list.html)
+  - [ArrayList](java_files/curso/03/array_list.html)
 
 - Parte 04 - Herança
-  - [Herança](poo_files/curso/04/heranca.html)
+  - [Herança](java_files/curso/04/heranca.html)
 
-<!--
 - Parte 05 - Importantes Estruturas de Dados e Interfaces
-   - [Set](lpoo_files/curso/05/set.html)
-   - [Map](lpoo_files/curso/05/map.html)
+   - [Set](java_files/curso/05/set.html)
+   - [Map](java_files/curso/05/map.html)
 
 - Parte 06 - Controle de Erros
-  - [Controle de Erros](lpoo_files/curso/00.1-erros-io/01-controle_erros.html)
+  - [Controle de Erros](java_files/curso/00.1-erros-io/01-controle_erros.html)
 
 - Parte 07 - Entrada e Saída
-  - [IO](lpoo_files/curso/00.1-erros-io/02-io.html)
+  - [IO](java_files/curso/00.1-erros-io/02-io.html)
 
--->
+
 ## Laboratórios
 
-- [lab00 - Usando funções (métodos estáticos)](poo_files/laboratorio/00-basico/comandos-basicos.html)
-<!--  - [respostas](https://github.com/viniciusdenovaes/Unip231LPOO/tree/main/Lab00/src/lab00)
-- Lab01-->
-  - [lab01 - Classes como estruturas](poo_files/laboratorio/01-classes/01.00-classes_pre.html)
-  - [lab01 - Classes com métodos](poo_files/laboratorio/01-classes/01.01-classes.html)
-  - [lab01.02 - Classes (Extra)](poo_files/laboratorio/01-classes/01.02-classes_extra.html)
+- [lab00 - Usando funções (métodos estáticos)](java_files/laboratorio/00-basico/comandos-basicos.html)
+- Lab01
+  - [lab01 - Classes como estruturas](java_files/laboratorio/01-classes/01.00-classes_pre.html)
+  - [lab01 - Classes com métodos](java_files/laboratorio/01-classes/01.01-classes.html)
+  - [lab01.02 - Classes (Extra)](java_files/laboratorio/01-classes/01.02-classes_extra.html)
 - lab02 - Classes com Encapsulamento
-  - [lab02.01 - Get e Set](poo_files/laboratorio/02-classes_encapsulamento/02.01-classes_encapsulamento.html)
-  - [lab02.02 - Classes com encapsulamento (Extra)](poo_files/laboratorio/02-classes_encapsulamento/02.02-classes_encapsulamento.html)
-
-- lab04 - Herança, Classes Abstratas e Polimorfismo
-  - [Herança](poo_files/laboratorio/04-heranca/04.00-exercicio_heranca.html)
-  - [Exemplo sem Herança](poo_files/laboratorio/04-heranca/04.01-exercicio_sem_heranca.html)
-  - [Modificando exercícios anteriores com Herança, classe abstrata e polimorfismo](poo_files/laboratorio/04-heranca/04.02-exercicio_com_heranca.html)
-<!--
+  - [lab02.01 - Get e Set](java_files/laboratorio/02-classes_encapsulamento/02.01-classes_encapsulamento.html)
+  - [lab02.02 - Classes com encapsulamento (Extra)](java_files/laboratorio/02-classes_encapsulamento/02.02-classes_encapsulamento.html)
+- lab03 - Herança, Classes Abstratas e Polimorfismo
+  - [Herança](java_files/laboratorio/04-heranca/04.00-exercicio_heranca.html)
+  - [Exemplo sem Herança](java_files/laboratorio/04-heranca/04.01-exercicio_sem_heranca.html)
+  - [Modificando exercícios anteriores com Herança, classe abstrata e polimorfismo](java_files/laboratorio/04-heranca/04.02-exercicio_com_heranca.html)
 * lab04 - Interfaces (Classes abstratas)
-  * [Exemplo sem interface](poo_files/laboratorio/04-interfaces/04-sem_interface.html)
-  * [Lista de Interfaces](poo_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.pdf)
-<!--
-  * [Gabarito](poo_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.zip)
--->
-
-
-
-## Questões Enade
-
-- [enade](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/20241/poo_files/enade)
-
-## Prova Passada
-
-- [prova 01 em Java](poo_files/provas_aula/prova01LPOOaula.pdf)
-- [prova 01 em C#](poo_files/provas_aula/prova01POO.pdf)
-- [prova 02 em Java (apenas questões 5, 6, 7, 8, 9, 10)](poo_files/provas_aula/prova02LPOOJava.pdf)
-
-
-
+  * [Exemplo sem interface](java_files/laboratorio/04-interfaces/04-sem_interface.html)
+  * [Lista de Interfaces](java_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.pdf)
+    * [Gabarito](java_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.zip) -->
 
 <!--
 ## [GitHub](https://github.com/viniciusdenovaes/Unip231LPOO)
@@ -98,7 +70,7 @@
 * [Github](https://github.com/viniciusdenovaes/Unip211LPOO)
 -->
 
-<!--
+<!-- 
 ## Ementa
 
 * Parte 00 - Revisão: Levamos em consideração que a turma aprendeu o paradigma de programação procedural programando em Python. Será feito uma revisão de tipos primitivos, comandos de controle e procedimentos focando na sintaxe em Java.
@@ -114,12 +86,12 @@
   * _Constructors_
   * Composição
   * Encapsulamento
-  * _Override_
+  * _Overload_
   * Estruturas:
     * `ArrayList`
     * `for-each`: Um novo tipo de `for`
 * Parte 02 - Herança
-  * _Overload_
+  * _Override_
   * Exemplos: `toString`, `equals`
   * `String`: uma classe muito especial
   * Polimorfismo
@@ -138,9 +110,9 @@
          * `try-catch`
          * `finaly`
          * `try-with-resources`
+ -->
 
-
-### Livros
+<!-- ### Livros
 
 Os livros tratam os conceitos de forma mais aprofundada do que materiais encontrados na internet (como fóruns, vídeo aulas, etc...).
 Porém os materiais encontrados na internet muitas vezes estão mais atualizados.
@@ -148,8 +120,6 @@ Porém os materiais encontrados na internet muitas vezes estão mais atualizados
 Então é melhor juntar os dois.
 Se você quer entender um **conceito**, leia em um livro.
 Se você quer resolver um **problema pontual**, procure na internet.
-
-Infelizmente eu ainda não encontrei um livro traduzido para o português que seja perfeito para este curso, por isso a existência deste site.
 
 Aqui está uma lista dos livros que eu recomendo:
 
@@ -170,7 +140,7 @@ Para este curso você pode usar este livro, sem problemas.
 
 * [Deitel 10ª edição (Java 8) Traduzido](https://www.amazon.com.br/Java®-como-programar-Paul-Deitel/dp/8543004799):
 Este livro é o oposto do "Use a Cabeça", é um ótimo livro de consulta, mas eu não conseguiria ler este livro do começo ao final.
-É muito aprofundado, por um lado faz você perder um imenso tempo em cada capítulo, por outro tem muita informação sobre cada conceito.
+É muito aprofundado. Por um lado faz você perder um imenso tempo em cada capítulo, por outro tem muita informação sobre cada conceito.
 Então é o melhor livro para aprender algum conceito pontual que você tem dúvidas.
 Se vale o investimento? Custa mais de 300 reais.
 Se você tiver preferência por livros em inglês, você poderá encontrar outras fontes mais baratas...
@@ -180,7 +150,7 @@ Este é melhor dos dois mundos, é o meu livro preferido atualmente, eu consigo 
 Infelizmente não existe tradução para português.
 Somente uma tradução de uma edição bem antiga, e apenas do volume 1.
 
-#### Para depois de aprender o básico de Java
+#### Para **depois** de aprender o básico de Java
 
 * [Effective Java 3ª Edição (Java 9) Traduzido](https://www.amazon.com.br/Java-Efetivo-Melhores-Práticas-Plataforma/dp/8550804622):
 Este não é um livro para aprender Java, mas para melhorar e atualizar as suas práticas.
@@ -199,5 +169,4 @@ Depois de aprender a programar orientado a objetos este é *o próximo passo*.
 
 Mas estas são minhas opiniões pessoais.
 É recomendável que você experimente, pesquise e pergunte para outras pessoas também.
-Um bom livro é aquele que você lê e aprende informações corretas, e isto depende de vários fatores como objetivos, gostos, e nível de conhecimento.
--->
+Um bom livro é aquele que você lê e aprende informações corretas, e isto depende de vários fatores como objetivos, gostos, e nível de conhecimento. -->
