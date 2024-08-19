@@ -10,6 +10,7 @@
 
 ### Atuais (2024/2)
 * [ALPOO](aulas/unip/20242/alpoo.html)
+* [ED](aulas/unip/20242/ed.html)
 * [LTP](aulas/unip/20242/ltp.html)
 <!-- * [Aspectos Teóricos da Computação](aulas/unip/20242/atc.htmlOFF)
 * [Cálculo Numérico para Computação](aulas/unip/20232/cn.htmlOFF)
