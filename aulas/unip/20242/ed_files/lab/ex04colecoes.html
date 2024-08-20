@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>ex03colecoes</title>
+      <title>ex04colecoes</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -24,29 +24,27 @@
     
       <div class="crossnote markdown-preview  ">
       
-<h1 id="lab-03-pilha-collections">Lab 03 Pilha <em>Collections</em> </h1>
-<h3 id="generic"><em>Generic</em> </h3>
-<p>Repita o exercício anterior para <code>Pilha</code>.<br>
-Mas implemente a funcionalidade <em>generic</em>,<br>
-onde o tipo do elemento da pilha é escolhido dentro do operador diamante &lt;&gt;.</p>
-<p>Lembre-se que para criar um array de tipo genérico você deve usar o seguinte comando:</p>
-<pre data-role="codeBlock" data-info="java" class="language-java java"><code>a <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Item</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Object</span><span class="token punctuation">[</span><span class="token class-name">N</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-</code></pre><p>onde <code>Item</code> é o seu tipo genérico e <code>N</code> é o tamanho do array desejado.</p>
-<h3 id="tamanho-flexível">Tamanho flexível </h3>
-<p>Continue o exercício anterior, mas implemente a funcionalidade para que o tamanho não tenha um limite fixo.</p>
-<h3 id="iterable"><code>Iterable</code> </h3>
-<p>Continue o exercício anterior, mas implemente a interface <code>Iterable</code> para que o cliente possa iterar na sua coleção usando o <em>for each</em> do java.</p>
-<h3 id="resultado">Resultado </h3>
-<p>A sua coleção deve ser uma Pilha genérica, sem tamanho fixo, que seja possível iterar, e que implementa as seguintes funcionalidades:</p>
-<h4 id="pilhat-implements-iterablet"><code>Pilha&lt;T&gt; implements Iterable&lt;T&gt;</code> </h4>
-<p>Uma coleção do tipo LIFO.</p>
+<h1 id="lab-04-collections">Lab 04 <em>Collections</em> </h1>
+<h3 id="bag">Bag </h3>
+<p>Faça a interface e implemente a coleção <code>Bag</code>.</p>
+<h4 id="bagt-implements-iterablet"><code>Bag&lt;T&gt; implements Iterable&lt;T&gt;</code> </h4>
+<p>Uma coleção.</p>
 <h5 id="funcionalidades">funcionalidades </h5>
+<ul>
+<li><code>void add(Item)</code>: coloca um elemento na coleção.</li>
+<li><code>bool empty()</code>: retorna se a coleção está vazia.</li>
+<li><code>int size()</code>: retorna o tamanho.</li>
+</ul>
+<h3 id="fila">Fila </h3>
+<h4 id="filat-implements-iterablet"><code>Fila&lt;T&gt; implements Iterable&lt;T&gt;</code> </h4>
+<p>Uma coleção do tipo FIFO.</p>
+<h5 id="funcionalidades-1">funcionalidades </h5>
 <ul>
 <li><code>bool empty()</code>: retorna se a coleção está vazia.</li>
 <li><code>int size()</code>: retorna o tamanho.</li>
-<li><code>void push(Item)</code>: coloca um elemento na coleção.</li>
-<li><code>int pop()</code>: retorna o <strong>mais novo</strong> elemento colocado na pilha, e retira este elemento da pilha.</li>
-<li><code>int peek()</code>: retorna o <strong>mais novo</strong> elemento colocado na pilha, e retira este elemento da pilha.</li>
+<li><code>void add(Item)</code>: coloca um elemento na coleção.</li>
+<li><code>int pool()</code>: retorna o <strong>mais antigo</strong> elemento colocado na pilha, e retira este elemento da pilha.</li>
+<li><code>int peek()</code>: retorna o <strong>mais antigo</strong> elemento colocado na pilha, e retira este elemento da pilha.</li>
 </ul>
 
       </div>
