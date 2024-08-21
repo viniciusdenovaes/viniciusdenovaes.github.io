@@ -1,4 +1,6 @@
-# Tipos Primitivos
+# Tipos de Variáveis
+
+Neste curso vamos trabalhar com 3 tipos de variáveis: `int` para representar números inteiros de , `float` para representar números reais, `char` e `float`.
 
 Assim como **C**, a linguagem Java é estaticamente tipada, isso quer dizer que toda variável declarada deve ter um tipo declarado.
 
