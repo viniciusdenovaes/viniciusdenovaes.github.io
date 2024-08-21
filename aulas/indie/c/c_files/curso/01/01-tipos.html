@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>c</title>
+      <title>01-tipos</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -24,103 +24,95 @@
     
       <div class="crossnote markdown-preview  ">
       
-<h1 id="c">C </h1>
-<h2 id="curso">Curso </h2>
+<h1 id="tipos-de-variáveis">Tipos de Variáveis </h1>
+<p>A linguagem <strong>C</strong> é estaticamente tipada, isso quer dizer que toda variável declarada deve ter um tipo declarado.</p>
+<p>Neste curso vamos trabalhar com 3 tipos de variáveis:</p>
 <ul>
-<li>
-<p>Prólogo</p>
+<li><code>int</code> para representar números inteiros de -2.147.483.648 a 2.147.483.647, com 4 bytes, ou 32 bits</li>
+<li><code>float</code> para representar números reais com 6 casas de precisão, de 1.2E-38 a 3.4E+38, com 4 bytes,</li>
+<li><code>char</code> para representar letras</li>
+</ul>
+<p>Em C temos também outros tipos como os</p>
 <ul>
-<li>Instalação:.
+<li><code>double</code> para números reais com mais precisão, 16 bytes, com 15 casas de precisão, de 2.3E-308 a 1.7E+308.</li>
+<li><code>long</code> <code>double</code> ou <code>int</code>, se precisar de números maiores<br>
+Não precisaremos destes neste curso.</li>
+</ul>
+<h2 id="operações">Operações </h2>
+<p>Usaremos as operações matemáticas básica:</p>
 <ul>
-<li>Linux (Ubuntu): Já vem com o compilador.</li>
-<li><a href="https://www.youtube.com/watch?v=9lfwKDolm9k">Windows (Vídeo)</a></li>
+<li><code>+</code> para soma entre dois <code>int</code> ou <code>float</code>,</li>
+<li><code>-</code> para subtração entre dois dois <code>int</code> ou <code>float</code>,</li>
+<li><code>*</code> para multiplicação entre dois dois <code>int</code> ou <code>float</code>,</li>
+<li><code>/</code> para divisão entre dois dois <code>int</code> ou <code>float</code>,</li>
+<li><code>%</code> operação entre dois números inteiros que calcula o resto da divisão do primeiro pelo segundo</li>
 </ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Parte 01 Variáveis:</p>
+<p>Porém fique atento! Em C quando você divide dois números inteiros, o resultado será um número inteiro: <code>5/2 = 2</code>.</p>
+<h2 id="mudança-entre-tipos">Mudança entre tipos </h2>
+<p>Diferente de Python, uma variável em C <strong>nunca</strong> pode mudar o tipo dela, porém um valor do tipo <code>float</code> pode ser transformado para um valor do tipo <code>int</code>e vice versa.</p>
+<p>O código a seguir</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-int">int</span> a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"como int: %d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"como float: %f\n"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token keyword keyword-float">float</span><span class="token punctuation">)</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>Irá imprimir</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>como int: 2
+como float: 2.000000
+</code></pre><p>Também podemos atribuir um valor do tipo para uma variável do tipo float para ter o mesmo resultado.</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-int">int</span> a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"como int: %d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-float">float</span> b <span class="token operator">=</span> a<span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"como float: %f\n"</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="truncamento">Truncamento </h3>
+<p>Caso um valor do tipo float seja transformado em um do tipo int, haverá um truncamento, onde a parte decimal do número original será perdida no novo valor do inteiro.</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-float">float</span> a <span class="token operator">=</span> <span class="token number">2.3</span><span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"como float: %f\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"como int: %d\n"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token punctuation">)</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>Irá imprimir</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>como float: 2.300000
+como int: 2
+</code></pre><p>Chamamos isto de truncamento.</p>
+<h3 id="char-e-int"><code>char</code> e <code>int</code> </h3>
+<p>Um <code>char</code> pode ser tratado como <code>int</code> e vice versa, o número inteiro correspondente ao <code>char</code> será seu código na table <a href="https://en.wikipedia.org/wiki/ASCII">ascii</a></p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"como char: %c\n"</span><span class="token punctuation">,</span> <span class="token number">97</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"como int: %d\n"</span><span class="token punctuation">,</span> <span class="token char">'a'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><pre data-role="codeBlock" data-info="" class="language-text"><code>como char: a
+como int: 97
+</code></pre><h2 id="como-imprimir">Como imprimir </h2>
+<p>Como vimos, devemos usar palavras chaves para imprimir valores na função <code>printf</code>.</p>
 <ul>
-<li><a href="c_files/curso/01/tipos.html">Tipos de variáveis</a></li>
+<li><code>%c</code> escrita de um caractere (<code>char</code>)</li>
+<li><code>%d</code> ou <code>%i</code> escrita de números inteiros (<code>int</code> ou <code>char</code>)</li>
+<li><code>%u</code> escrita de números inteiros sem sinal (<code>unsigned</code>)</li>
+<li><code>%f</code> escrita de número reais (<code>float</code> ou <code>double</code>)</li>
+<li><code>%s</code> escrita de vários caracteres</li>
+<li><code>%p</code> escrita de um endereço de memória</li>
+<li><code>%e</code> ou <code>%E</code> escrita em notação científica</li>
 </ul>
-<!-- - [Comandos de Controle](java_files/curso/01/comandos_de_controle.html)
-</li>
-<li>
-<p>Parte 02 Comandos de controle</p>
-<ul>
-<li><a href="java_files/curso/02/01-classes.html">Classes</a></li>
-<li><a href="java_files/curso/02/02-convencoes.html">Convenções</a></li>
-</ul>
-</li>
-<li>
-<p>Parte 03 - Introdução à primeira estrutura de dados: Lista</p>
-<ul>
-<li><a href="java_files/curso/03/array_list.html">ArrayList</a></li>
-</ul>
-</li>
-<li>
-<p>Parte 04 - Herança</p>
-<ul>
-<li><a href="java_files/curso/04/heranca.html">Herança</a></li>
-</ul>
-</li>
-<li>
-<p>Parte 05 - Importantes Estruturas de Dados e Interfaces</p>
-<ul>
-<li><a href="java_files/curso/05/set.html">Set</a></li>
-<li><a href="java_files/curso/05/map.html">Map</a></li>
-</ul>
-</li>
-<li>
-<p>Parte 06 - Controle de Erros</p>
-<ul>
-<li><a href="java_files/curso/00.1-erros-io/01-controle_erros.html">Controle de Erros</a></li>
-</ul>
-</li>
-<li>
-<p>Parte 07 - Entrada e Saída</p>
-<ul>
-<li><a href="java_files/curso/00.1-erros-io/02-io.html">IO</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="laboratórios">Laboratórios </h2>
-<ul>
-<li><a href="java_files/laboratorio/00-basico/comandos-basicos.html">lab00 - Usando funções (métodos estáticos)</a></li>
-<li>Lab01
-<ul>
-<li><a href="java_files/laboratorio/01-classes/01.00-classes_pre.html">lab01 - Classes como estruturas</a></li>
-<li><a href="java_files/laboratorio/01-classes/01.01-classes.html">lab01 - Classes com métodos</a></li>
-<li><a href="java_files/laboratorio/01-classes/01.02-classes_extra.html">lab01.02 - Classes (Extra)</a></li>
-</ul>
-</li>
-<li>lab02 - Classes com Encapsulamento
-<ul>
-<li><a href="java_files/laboratorio/02-classes_encapsulamento/02.01-classes_encapsulamento.html">lab02.01 - Get e Set</a></li>
-<li><a href="java_files/laboratorio/02-classes_encapsulamento/02.02-classes_encapsulamento.html">lab02.02 - Classes com encapsulamento (Extra)</a></li>
-</ul>
-</li>
-<li>lab03 - Herança, Classes Abstratas e Polimorfismo
-<ul>
-<li><a href="java_files/laboratorio/04-heranca/04.00-exercicio_heranca.html">Herança</a></li>
-<li><a href="java_files/laboratorio/04-heranca/04.01-exercicio_sem_heranca.html">Exemplo sem Herança</a></li>
-<li><a href="java_files/laboratorio/04-heranca/04.02-exercicio_com_heranca.html">Modificando exercícios anteriores com Herança, classe abstrata e polimorfismo</a></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>lab04 - Interfaces (Classes abstratas)
-<ul>
-<li><a href="java_files/laboratorio/04-interfaces/04-sem_interface.html">Exemplo sem interface</a></li>
-<li><a href="java_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.pdf">Lista de Interfaces</a>
-<ul>
-<li><a href="java_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.zip">Gabarito</a> --&gt;</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
---></li></ul>
+<h3 id="como-formatar">Como formatar </h3>
+<p>Tanto números inteiros como reais podem ser formatados na hora de ser impressos, veja o exemplo abaixo:</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-float">float</span> pi <span class="token operator">=</span> M_PI<span class="token punctuation">;</span>
+
+<span class="token comment">// formatacao normal</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"numero %f\n"</span><span class="token punctuation">,</span> pi<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// numero ocupa 10 espacos</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"numero %10f\n"</span><span class="token punctuation">,</span> pi<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+<span class="token comment">// numero tera apenas 2 casas decimais</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"numero %.2f\n"</span><span class="token punctuation">,</span> pi<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+<span class="token comment">/* 
+numero todo ocupa 7 espacos, 
+tem apenas 2 casas decimais, 
+espacos a esquerda sao completados por 0
+*/</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"numero %07.2f\n"</span><span class="token punctuation">,</span> pi<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+</code></pre><pre data-role="codeBlock" data-info="" class="language-text"><code>numero 3.141593
+numero   3.141593
+numero 3.14
+numero 0003.14
+</code></pre><p>.</p>
+
       </div>
       
       

@@ -11,7 +11,7 @@
 
 - Parte 01 Variáveis:
   - [Tipos de variáveis](c_files/curso/01/tipos.html)
-  - [Comandos de Controle](java_files/curso/01/comandos_de_controle.html)
+  <!-- - [Comandos de Controle](java_files/curso/01/comandos_de_controle.html)
 
 - Parte 02 Comandos de controle
   - [Classes](java_files/curso/02/01-classes.html)

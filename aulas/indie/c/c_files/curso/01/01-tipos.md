@@ -1,48 +1,133 @@
 # Tipos de Variáveis
 
-Neste curso vamos trabalhar com 3 tipos de variáveis: `int` para representar números inteiros de , `float` para representar números reais, `char` e `float`.
-
-Assim como **C**, a linguagem Java é estaticamente tipada, isso quer dizer que toda variável declarada deve ter um tipo declarado.
-
-Ou ela pode ser declarada como um **objeto**, ou ela pode ser de um dos tipos primitivos.
-
-Temos 8 tipos primitivos:
-* São 4 tipos de inteiros:
-    * o mais usado é o `int` representando números de -2,147,483,648 a 2,147,483,647, ocupa espaço de 4 bytes
-    * `short`, com espaço de 2 bytes
-    * `long`, que ocupa espaço de 8 bytes
-    * e o `byte`, que ocupa espaço de 1 byte.
-* São 2 tipos com pontos flutuantes (representações de números reais):
-    * o mais usado é o `double`, que tem precisão de 15 casas decimais significantes, e ocupa 8 bytes
-    * temos o `float`, com precisão de 6 casas decimais significativas, ocupando 4 bytes
-* Temos 1 tipo de character: `char` representando um símbolo/letra
-* E um tipo booleano: `boolean`, que pode somente ter os valores `true` (verdadeiro) ou `false` (falso)
+A linguagem **C** é estaticamente tipada, isso quer dizer que toda variável declarada deve ter um tipo declarado.
 
 
-Os tipos mais usados são `int`, `double`, `char` e `boolean`, e neste curso você precisa saber usar somentes estes.
+Neste curso vamos trabalhar com 3 tipos de variáveis: 
+- `int` para representar números inteiros de -2.147.483.648 a 2.147.483.647, com 4 bytes, ou 32 bits
+- `float` para representar números reais com 6 casas de precisão, de 1.2E-38 a 3.4E+38, com 4 bytes, 
+- `char` para representar letras
+
+Em C temos também outros tipos como os
+- `double` para números reais com mais precisão, 16 bytes, com 15 casas de precisão, de 2.3E-308 a 1.7E+308.
+- `long` `double` ou `int`, se precisar de números maiores
+Não precisaremos destes neste curso.
 
 ## Operações
 
-Usaremos as operações que você já conhece:
- - `+` para soma entre dois `int` ou `double`,
- - `-` para subtração entre dois dois `int` ou `double`,
- - `*` para multiplicação entre dois dois `int` ou `double`,
- - `/` para divisão entre dois dois `int` ou `double`,
- - `&&` para a operação `AND` lógico "short-circuit" entre dois `boolean`,
- - `||` para a operação `OR` lógico "short-circuit" entre dois `boolean`,
- - `&` para a operação `AND` lógico não-"short-circuit" entre dois `boolean`,
- - `|` para a operação `OR` lógico não-"short-circuit" entre dois `boolean`,
- - `^` para a operação `XOR` lógico entre dois `boolean`.
+Usaremos as operações matemáticas básica:
+ - `+` para soma entre dois `int` ou `float`,
+ - `-` para subtração entre dois dois `int` ou `float`,
+ - `*` para multiplicação entre dois dois `int` ou `float`,
+ - `/` para divisão entre dois dois `int` ou `float`,
+ - `%` operação entre dois números inteiros que calcula o resto da divisão do primeiro pelo segundo
+ 
+Porém fique atento! Em C quando você divide dois números inteiros, o resultado será um número inteiro: `5/2 = 2`.
 
-## Continuação
+## Mudança entre tipos
 
-Existe muito mais material sobre estes assuntos, alguns serão colocados nesta página, outros serão dados em aula, e outros estão nos livros da ementa.
+Diferente de Python, uma variável em C **nunca** pode mudar o tipo dela, porém um valor do tipo `float` pode ser transformado para um valor do tipo `int`e vice versa.
 
-Alguns assuntos não tratados aqui são:
- - Truncamento
- - Casting
- - Operador `+` para concatenar `String`
- - O que é um operador lógico "short-circuit"?
- - Como funciona operações entre `int` e `double`?
+O código a seguir
+
+``` c
+int a = 2;
+printf("como int: %d\n", a);
+printf("como float: %f\n", (float)a);
+```
+
+Irá imprimir 
+
+```
+como int: 2
+como float: 2.000000
+``` 
+
+Também podemos atribuir um valor do tipo para uma variável do tipo float para ter o mesmo resultado.
+
+``` c
+int a = 2;
+printf("como int: %d\n", a);
+float b = a;
+printf("como float: %f\n", b);
+```
+
+### Truncamento
+
+Caso um valor do tipo float seja transformado em um do tipo int, haverá um truncamento, onde a parte decimal do número original será perdida no novo valor do inteiro.
+
+``` c
+float a = 2.3;
+printf("como float: %f\n", a);
+printf("como int: %d\n", (int)a);
+```
+
+Irá imprimir 
+
+```
+como float: 2.300000
+como int: 2
+``` 
+Chamamos isto de truncamento.
+
+### `char` e `int`
+
+Um `char` pode ser tratado como `int` e vice versa, o número inteiro correspondente ao `char` será seu código na table [ascii](https://en.wikipedia.org/wiki/ASCII)
+
+
+``` c
+printf("como char: %c\n", 97);
+printf("como int: %d\n", 'a');
+```
+
+```
+como char: a
+como int: 97
+```
+
+## Como imprimir
+
+Como vimos, devemos usar palavras chaves para imprimir valores na função `printf`.
+
+
+- `%c` escrita de um caractere (`char`)
+- `%d` ou `%i` escrita de números inteiros (`int` ou `char`)
+- `%u` escrita de números inteiros sem sinal (`unsigned`)
+- `%f` escrita de número reais (`float` ou `double`)
+- `%s` escrita de vários caracteres
+- `%p` escrita de um endereço de memória
+- `%e` ou `%E` escrita em notação científica
+
+### Como formatar
+
+Tanto números inteiros como reais podem ser formatados na hora de ser impressos, veja o exemplo abaixo:
+
+``` c
+float pi = M_PI;
+
+// formatacao normal
+printf("numero %f\n", pi);
+
+// numero ocupa 10 espacos
+printf("numero %10f\n", pi); 
+
+// numero tera apenas 2 casas decimais
+printf("numero %.2f\n", pi); 
+
+/* 
+numero todo ocupa 7 espacos, 
+tem apenas 2 casas decimais, 
+espacos a esquerda sao completados por 0
+*/
+printf("numero %07.2f\n", pi); 
+```
+
+
+```
+numero 3.141593
+numero   3.141593
+numero 3.14
+numero 0003.14
+```
 
 .
