@@ -27,6 +27,6 @@ Uma coleção do tipo FIFO (*First In First Out*)
 
 - `void push(int)`: coloca um elemento na pilha.
 - `int pop()`: retorna o **mais antigo** elemento colocado na pilha, e retira este elemento da pilha.
-- `int peek()`: retorna o **mais antigo** elemento colocado na pilha, e retira este elemento da pilha.
+- `int peek()`: retorna o **mais antigo** elemento colocado na pilha, mas **não retira** este elemento da pilha.
 
 
