@@ -15,11 +15,11 @@
 
 - Lab01
   - [lab01 - separação de ações e eventos](alpoo_files/laboratorio/01-dep/01-dep_inj.html)
-<!-- - [lab01.2 - aplicando em um JButton](alpoo_files/laboratorio/01-dep/02-jbutton.html)
-<!-- - Lab02 - GUI
+- [lab01.2 - aplicando em um JButton](alpoo_files/laboratorio/01-dep/02-jbutton.html)
+- Lab02 - GUI
    - [lab02.01 - Action Listeners](alpoo_files/laboratorio/02-gui/01-gui.html)
    - [lab02.02 - Calculadora](alpoo_files/laboratorio/02-gui/02-gui.html)
-- Lab03 - MVC
+<!-- - Lab03 - MVC
    - [lab03 - MVC](alpoo_files/laboratorio/03-mvc/01-mvc.html) -->
 
 
