@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>ltp</title>
+      <title>lab20240829</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -24,15 +24,61 @@
     
       <div class="crossnote markdown-preview  ">
       
-<h1 id="linguagem-de-programação">Linguagem de Programação </h1>
-<h2 id="cursohttpsviniciusdenovaesgithubioaulasindiecchtml"><a href="https://viniciusdenovaes.github.io/aulas/indie/c/c.html">Curso</a> </h2>
-<h2 id="labs">Labs </h2>
-<ol>
-<li><a href="ltp_files/labs/lab20240821.html">Lab do dia 21/08/2024</a></li>
-<li><a href="ltp_files/labs/lab20240822.html">Lab do dia 22/08/2024</a></li>
-<li><a href="ltp_files/labs/lab20240828.html">Lab do dia 28/08/2024</a></li>
-<li><a href="ltp_files/labs/lab20240829.html">Lab do dia 29/08/2024</a></li>
-</ol>
+<h1 id="lab-dia-29082024">Lab dia 29/08/2024 </h1>
+<h2 id="aquecimento">Aquecimento </h2>
+<h3 id="exercício-1">exercício 1 </h3>
+<p>Faça um programa que receba um número real da entrada padrão e exiba o valor ao quadrado.</p>
+<h3 id="exercício-2">exercício 2 </h3>
+<p>Faça um programa que receba um número real da entrada padrão e exiba o valor ao quadrado usando a função <code>pow(float a, float b)</code> da biblioteca <code>math.h</code>.</p>
+<details>
+  <summary>resposta</summary>
+<pre class="language-text"> 
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main(){
+    float numero;
+    scanf("%f", &amp;numero);
+    float resultado = pow(numero, 2.0);
+    printf("%f\n", resultado);
+    return 0;
+}  
+</pre>
+</details>
+<h3 id="exercício-3">exercício 3 </h3>
+<p>Faça um programa que receba um número real da entrada padrão e exiba o valor a raíz quadrada do número. Use  a função <code>pow(float a, float b)</code> com o valor <code>1.0/2.0</code>.</p>
+<details>
+  <summary>resposta</summary>
+<pre class="language-text"> 
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main(){
+    float numero;
+    scanf("%f", &amp;numero);
+    float resultado = pow(numero, 1.0/2.0);
+    printf("%f\n", resultado);
+    return 0;
+}  
+</pre>
+</details>
+<h2 id="treinando-habilidade-nova-if-else-if-else--e-switch-">Treinando habilidade nova (<code>if</code>, <code>else if</code>, <code>else</code><!-- e `switch`-->) </h2>
+<h3 id="exercício-1-1">exercício 1 </h3>
+<p>Faça um programa que receba dois números e exiba uma lista de opções de operação:</p>
+<ul>
+<li><code>+</code> para soma,</li>
+<li><code>-</code> para subtração,</li>
+<li><code>*</code> para multiplicação e</li>
+<li><code>/</code> para divisão.</li>
+</ul>
+<p>Use o comando <code>switch</code> para verificar qual foi a operação escolhida pelo usuário.</p>
+<h3 id="exercício-2-1">exercício 2 </h3>
+<p>Faça um programa que receba os três número e imprima o menor.</p>
+<h2 id="desafio">Desafio </h2>
+<h3 id="exercício-1-2">exercício 1 </h3>
+<p>Faça um programa que receba um número inteiro positivo e verifique se este número é divisível por 3 ou por 5, mas não pelos dois números.</p>
+<h3 id="exercício-2-2">exercício 2 </h3>
+<p>Faça um programa que receba os três número e imprima os números em ordem crescente.</p>
 
       </div>
       
