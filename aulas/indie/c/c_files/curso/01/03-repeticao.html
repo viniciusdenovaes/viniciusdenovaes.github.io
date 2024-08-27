@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>c</title>
+      <title>03-repeticao</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -24,35 +24,46 @@
     
       <div class="crossnote markdown-preview  ">
       
-<h1 id="c">C </h1>
-<h2 id="curso">Curso </h2>
+<h1 id="comandos-de-repetição">Comandos de Repetição </h1>
+<p>Um outro comando importante para controlar o fluxo do código é o comando de repetição.</p>
+<p>Em C temos os comandos <code>while</code>e <code>for</code>. Os dois fazem a mesma ação, mas com a sintaxe (a forma de escrever) de cada um é diferente.</p>
+<p>O que eles fazem é <strong>repetir um bloco de código enquanto uma condição for verdadeira</strong>.</p>
 <ul>
-<li>
-<p>Prólogo</p>
-<ul>
-<li>Instalação:.
-<ul>
-<li>Linux (Ubuntu): Já vem com o compilador.</li>
-<li><a href="https://www.youtube.com/watch?v=9lfwKDolm9k">Windows (Vídeo)</a></li>
+<li><code>while</code>: a <code>condicao</code> (uma expressão booleana que pode ter valor verdadeiro ou falso) é verificada. Caso seja verdadeira o <code>//bloco de comandos 01</code> é executado e o controle <strong>volta</strong> para o começo do while (e faz a verificação novamente). Caso não seja, o bloco não será executado.</li>
 </ul>
-</li>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-while">while</span><span class="token punctuation">(</span>condicao<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">// bloco de comandos 01</span>
+  <span class="token comment">// este bloco se repete enquanto a condicao for satisfeita</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li><code>do while</code>: a <code>condicao</code> o bloco de comando é executado e <strong>depois</strong> a condição é verificada. Caso seja verdadeira o controle <strong>volta</strong> para o começo do while (e faz a verificação <strong>no final</strong> novamente). Caso não seja, o controle não volta.</li>
 </ul>
-</li>
-<li>
-<p>Parte 01 Variáveis:</p>
-<ul>
-<li><a href="c_files/curso/01/01-tipos.html">Tipos de variáveis</a></li>
+<p>OBS1: a única diferença entre o <code>do-while</code> e o <code>while</code> é que no primeiro você pode ter certeza de que o bloco será executado na primeira vez, mesmo que a condição seja falsa.</p>
+<p>OBS2: perceba que tem um <code>;</code> no final do while.</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-do">do</span><span class="token punctuation">{</span>
+  <span class="token comment">// bloco de comandos 01</span>
+  <span class="token comment">// este bloco executa uma vez e</span>
+  <span class="token comment">// se repete enquanto a condicao for satisfeita</span>
+<span class="token punctuation">}</span><span class="token keyword keyword-while">while</span><span class="token punctuation">(</span>condicao<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li><code>for</code>: é <strong>inicializado</strong> com um <code>comandoInicializacao</code>; repete enquanto a <code>condição</code> for verdadeira; sempre ao final de cada iteração um <code>comandoRepeticao</code> é executado.</li>
 </ul>
-</li>
-<li>
-<p>Parte 02 Comandos de Controle:</p>
-<ul>
-<li><a href="c_files/curso/01/02-condicional.html">Comandos Condicionais</a></li>
-<li><a href="c_files/curso/01/03-repeticao.html">Comandos de Repetição</a></li>
-</ul>
-</li>
-</ul>
-
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-for">for</span><span class="token punctuation">(</span>comandoInicializacao<span class="token punctuation">;</span> condicao<span class="token punctuation">;</span> comandoRepeticao<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">// bloco de comandos 01</span>
+  <span class="token comment">// este bloco se repete enquanto a condicao for satisfeita</span>
+  <span class="token comment">// ao final o comandoRepeticao é executado</span>
+<span class="token punctuation">}</span>
+</code></pre><p>exemplo:</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-for">for</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>saída:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>0
+1
+2
+3
+4
+</code></pre>
       </div>
       
       

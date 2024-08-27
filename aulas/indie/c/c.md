@@ -11,9 +11,11 @@
 
 - Parte 01 Variáveis:
   - [Tipos de variáveis](c_files/curso/01/01-tipos.html)
-  <!-- - [Comandos de Controle](java_files/curso/01/comandos_de_controle.html)
+- Parte 02 Comandos de Controle:
+  - [Comandos Condicionais](c_files/curso/01/02-condicional.html)
+  - [Comandos de Repetição](c_files/curso/01/03-repeticao.html)
 
-- Parte 02 Comandos de controle
+<!-- - Parte 02 Comandos de controle
   - [Classes](java_files/curso/02/01-classes.html)
   - [Convenções](java_files/curso/02/02-convencoes.html)
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>c</title>
+      <title>02-condicional</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -24,35 +24,51 @@
     
       <div class="crossnote markdown-preview  ">
       
-<h1 id="c">C </h1>
-<h2 id="curso">Curso </h2>
+<h1 id="comando-condicional">Comando Condicional </h1>
+<p>Um dos comandos que você pode fazer para controlar o fluxo do código é decidir se vai executar uma ação ou não.</p>
+<p>Este comando de decisão é feito pela palavra <code>if</code>.</p>
+<p>O comando condicional <code>if</code> tem a seguinte sintaxe em C:</p>
 <ul>
-<li>
-<p>Prólogo</p>
+<li><code>if</code>: a <code>condicao</code> (uma expressão boolean, verdadeiro ou falso) é verificada. Caso seja verdadeira o <code>//bloco de comandos 01</code> é executado. Caso não seja, o bloco não será executado.</li>
+</ul>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>condicao<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">//bloco de comandos 01</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li><code>if-else</code>: a <code>condicao</code> é verificada. Caso seja verdadeira o <code>//bloco de comandos 01</code> é executado. Caso não seja, o <code>//bloco de comandos 02</code> será executado.</li>
+</ul>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>condicao<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">//bloco de comandos 01</span>
+<span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span><span class="token punctuation">{</span>
+  <span class="token comment">//bloco de comandos 02</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li><code>if-else-if</code>: a <code>condicao01</code> é verificada. Caso a <code>condicao01</code> seja verdadeira, o <code>//bloco de comandos 01</code> é executado <strong>e</strong> a <code>condicao02</code> <strong>não</strong> é verificada, <strong>nem</strong> o <code>//bloco de comandos 02</code> será executado. Caso a <code>condicao01</code> não seja verdadeira, a <code>condicao02</code> será verificada e caso esta seja verdadeira o <code>//bloco de comandos 02</code> será executado.</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>condicao01<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">//bloco de comandos 01</span>
+<span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>condicao02<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">// bloco de comandos 02</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>OBS:</strong> Ao contrário de Python, aqui você precisa usar as chaves <code>{}</code>. <strong>NÃO ESQUEÇA</strong>.<br>
+Se você esquecer ele executará só o primeiro comando do bloco. Estranho né? Este é o pior tipo de erro que você pode encontrar no código por que ele não dará erro na compilação nem na execução. Mas o seu código estará errado <strong>sem você saber</strong>. Evite isso e <strong>sempre use chaves</strong>.</p>
 <ul>
-<li>Instalação:.
-<ul>
-<li>Linux (Ubuntu): Já vem com o compilador.</li>
-<li><a href="https://www.youtube.com/watch?v=9lfwKDolm9k">Windows (Vídeo)</a></li>
+<li><code>switch</code>: Dada uma <code>expressao</code> que pode ser <code>int</code> ou <code>char</code>, <a href="https://en.cppreference.com/w/c/language/switch">entre outros</a>. A sua <code>expressao</code> será comparada com cada um dos literais e executará o bloco respectivo. Caso nenhuma comparação resulte em verdadeiro, o bloco do <code>default</code> será executado.</li>
 </ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Parte 01 Variáveis:</p>
-<ul>
-<li><a href="c_files/curso/01/01-tipos.html">Tipos de variáveis</a></li>
-</ul>
-</li>
-<li>
-<p>Parte 02 Comandos de Controle:</p>
-<ul>
-<li><a href="c_files/curso/01/02-condicional.html">Comandos Condicionais</a></li>
-<li><a href="c_files/curso/01/03-repeticao.html">Comandos de Repetição</a></li>
-</ul>
-</li>
-</ul>
-
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-switch">switch</span><span class="token punctuation">(</span>expressao<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword keyword-case">case</span> literal01<span class="token operator">:</span>
+    <span class="token comment">// bloco de comandos 01</span>
+    <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-case">case</span> literal02<span class="token operator">:</span>
+    <span class="token comment">// bloco de comandos 02</span>
+    <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-case">case</span> literal03<span class="token operator">:</span>
+    <span class="token comment">// bloco de comandos 03</span>
+    <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-default">default</span><span class="token operator">:</span>
+    <span class="token comment">// bloco de comandos 04</span>
+<span class="token punctuation">}</span>
+</code></pre>
       </div>
       
       
