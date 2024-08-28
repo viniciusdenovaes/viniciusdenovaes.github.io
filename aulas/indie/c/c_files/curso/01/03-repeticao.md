@@ -6,6 +6,9 @@ Em C temos os comandos `while`e `for`. Os dois fazem a mesma ação, mas com a s
 
 O que eles fazem é **repetir um bloco de código enquanto uma condição for verdadeira**.
 
+![fluxo do if](while.PNG)
+
+
 * `while`: a `condicao` (uma expressão booleana que pode ter valor verdadeiro ou falso) é verificada. Caso seja verdadeira o `//bloco de comandos 01` é executado e o controle **volta** para o começo do while (e faz a verificação novamente). Caso não seja, o bloco não será executado.
 ``` c
 while(condicao){

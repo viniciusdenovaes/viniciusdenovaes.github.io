@@ -26,7 +26,8 @@
       
 <h1 id="comando-condicional">Comando Condicional </h1>
 <p>Um dos comandos que você pode fazer para controlar o fluxo do código é decidir se vai executar uma ação ou não.</p>
-<p>Este comando de decisão é feito pela palavra <code>if</code>.</p>
+<p>Este comando de decisão é feito pela palavra <code>if</code>. Sua estrutura tem uma expressão de verificação e um escopo para um código. Se a expressão for válida o código em seu escopo executará, caso não seja, o fluxo passará direto para depois do seu escopo.</p>
+<p><img src="if.PNG" alt="fluxo do if"></p>
 <p>O comando condicional <code>if</code> tem a seguinte sintaxe em C:</p>
 <ul>
 <li><code>if</code>: a <code>condicao</code> (uma expressão boolean, verdadeiro ou falso) é verificada. Caso seja verdadeira o <code>//bloco de comandos 01</code> é executado. Caso não seja, o bloco não será executado.</li>
@@ -34,7 +35,8 @@
 <pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>condicao<span class="token punctuation">)</span><span class="token punctuation">{</span>
   <span class="token comment">//bloco de comandos 01</span>
 <span class="token punctuation">}</span>
-</code></pre><ul>
+</code></pre><p><img src="ifelse.PNG" alt="fluxo do if"></p>
+<ul>
 <li><code>if-else</code>: a <code>condicao</code> é verificada. Caso seja verdadeira o <code>//bloco de comandos 01</code> é executado. Caso não seja, o <code>//bloco de comandos 02</code> será executado.</li>
 </ul>
 <pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>condicao<span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -42,7 +44,8 @@
 <span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span><span class="token punctuation">{</span>
   <span class="token comment">//bloco de comandos 02</span>
 <span class="token punctuation">}</span>
-</code></pre><ul>
+</code></pre><p><img src="ifelseif.PNG" alt="fluxo do if"></p>
+<ul>
 <li><code>if-else-if</code>: a <code>condicao01</code> é verificada. Caso a <code>condicao01</code> seja verdadeira, o <code>//bloco de comandos 01</code> é executado <strong>e</strong> a <code>condicao02</code> <strong>não</strong> é verificada, <strong>nem</strong> o <code>//bloco de comandos 02</code> será executado. Caso a <code>condicao01</code> não seja verdadeira, a <code>condicao02</code> será verificada e caso esta seja verdadeira o <code>//bloco de comandos 02</code> será executado.</li>
 </ul>
 <pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>condicao01<span class="token punctuation">)</span><span class="token punctuation">{</span>
