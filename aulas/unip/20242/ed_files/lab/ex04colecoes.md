@@ -24,5 +24,5 @@ Uma coleção do tipo FIFO.
 - `bool empty()`: retorna se a coleção está vazia.
 - `int size()`: retorna o tamanho.
 - `void add(Item)`: coloca um elemento na coleção.
-- `int pool()`: retorna o **mais antigo** elemento colocado na pilha, e retira este elemento da pilha.
-- `int peek()`: retorna o **mais antigo** elemento colocado na pilha, e retira este elemento da pilha.
+- `int pool()`: retorna o **mais antigo** elemento colocado na pilha, e retira este elemento da fila.
+- `int peek()`: retorna o **mais antigo** elemento colocado na pilha, mas não retira este elemento da fila.
