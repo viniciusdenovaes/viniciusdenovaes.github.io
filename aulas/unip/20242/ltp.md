@@ -1,7 +1,7 @@
 # Linguagem de Programação
 
 
-## [Curso](https://viniciusdenovaes.github.io/aulas/indie/c/c.html)
+## [Curso (Link)](https://viniciusdenovaes.github.io/aulas/indie/c/c.html)
 
 
 ## Labs
