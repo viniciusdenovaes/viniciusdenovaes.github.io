@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>c</title>
+      <title>lab20240905</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -24,38 +24,54 @@
     
       <div class="crossnote markdown-preview  ">
       
-<h1 id="c">C </h1>
-<h2 id="curso">Curso </h2>
-<ul>
-<li>
-<p>Prólogo</p>
-<ul>
-<li>Instalação:.
-<ul>
-<li>Linux (Ubuntu): Já vem com o compilador.</li>
-<li><a href="https://www.youtube.com/watch?v=9lfwKDolm9k">Windows (Vídeo)</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Parte 01 Variáveis:</p>
-<ul>
-<li><a href="c_files/curso/01/01-tipos.html">01 - Tipos de variáveis</a></li>
-</ul>
-</li>
-<li>
-<p>Parte 02 Comandos de Controle:</p>
-<ul>
-<li><a href="c_files/curso/01/02-condicional.html">02 - Comandos Condicionais</a></li>
-<li><a href="c_files/curso/01/03-repeticao.html">03 - Comandos de Repetição</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="listas">Listas </h2>
-<ul>
-<li><a href="c_files%5Clistas%5C03-repeticao%5Clista_repeticao.html">03 - Comandos de Repetição</a></li>
-</ul>
+<h1 id="lab-dia-05092024">Lab dia 05/09/2024 </h1>
+<h2 id="aquecimento">Aquecimento </h2>
+<h3 id="exercício-1">exercício 1 </h3>
+<p>Faça um programa que receba um número real da entrada padrão e exiba o valor ao quadrado.</p>
+<h3 id="exercício-2">exercício 2 </h3>
+<p>Faça um programa que receba um número real da entrada padrão e exiba o valor ao quadrado usando a função <code>pow(float a, float b)</code> da biblioteca <code>math.h</code>.</p>
+<details>
+  <summary>resposta</summary>
+<pre class="language-text"> 
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main(){
+    float numero;
+    scanf("%f", &amp;numero);
+    float resultado = pow(numero, 2.0);
+    printf("%f\n", resultado);
+    return 0;
+}  
+</pre>
+</details>
+<h3 id="exercício-3">exercício 3 </h3>
+<p>Faça um programa que receba um número real da entrada padrão e exiba o valor a raíz quadrada do número. Use  a função <code>pow(float a, float b)</code> com o valor <code>1.0/2.0</code>.</p>
+<details>
+  <summary>resposta</summary>
+<pre class="language-text"> 
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main(){
+    float numero;
+    scanf("%f", &amp;numero);
+    float resultado = pow(numero, 1.0/2.0);
+    printf("%f\n", resultado);
+    return 0;
+}  
+</pre>
+</details>
+<h2 id="treinando-habilidade-nova-while-e-for">Treinando habilidade nova (<code>while</code> e <code>for</code>) </h2>
+<h3 id="exercício-1-1">exercício 1 </h3>
+<p>Faça um programa que leia um número inteiro positivo N da entrada e imprima a soma de todos os números de 0 até N.</p>
+<h3 id="exercício-2-1">exercício 2 </h3>
+<p>Faça um programa que leia um número inteiro positivo N da entrada e imprima a soma de todos os números pares de 0 até N.</p>
+<h3 id="exercício-3-1">exercício 3 </h3>
+<p>Faça um programa que leia um número inteiro positivo <code>N</code> da entrada, depois receba <code>N</code> números do usuário e imprima a <strong>soma</strong> de todos os números entrados.</p>
+<h2 id="desafio">Desafio </h2>
+<h3 id="exercício-3-2">exercício 3 </h3>
+<p>Faça um programa que leia um número inteiro positivo <code>N</code> da entrada, depois receba <code>N</code> números do usuário e imprima a <strong>média</strong> de todos os números entrados.</p>
 
       </div>
       
