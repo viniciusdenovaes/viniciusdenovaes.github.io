@@ -13,8 +13,8 @@
 * [ED](aulas/unip/20242/ed.html)
 * [LTP](aulas/unip/20242/ltp.html)
 * [Aspectos Teóricos da Computação](aulas/unip/20242/atc.html)
-* [Cálculo Numérico para Computação](aulas/unip/20232/cn.html)
-* [Processamento de Imagens e Visão Computacional](aulas/unip/20232/pi.html)
+* [Cálculo Numérico para Computação](aulas/unip/20242/cn.html)
+* [Processamento de Imagens e Visão Computacional](aulas/unip/20242/pi.html)
 
 
 ### (2024/1)
