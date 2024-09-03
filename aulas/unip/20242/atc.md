@@ -3,7 +3,7 @@
 ## Listas
 
 #### Prova 01
-* [Lista 01](aa_files/listas/01/lista01AA.pdf)
+* [Lista 01](atc_files/listas/01/lista01ATC.pdf)
 
 <!-- #### Prova 02
 
