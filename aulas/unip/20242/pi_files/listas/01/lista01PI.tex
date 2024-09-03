@@ -1,0 +1,206 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}  
+\usepackage[portuguese]{babel}   
+
+\usepackage[ruled, vlined, algonl, portuguese]{algorithm2e}
+
+\newcommand{\linesnumbered}{\LinesNumbered}
+\newcommand{\dontprintsemicolon}{\DontPrintSemicolon}
+\newcommand{\incmargin}{\IncMargin}
+\newcommand{\decmargin}{\DecMargin}
+
+\usepackage{mathtools}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[shortlabels]{enumitem}
+
+\def\le{\leqslant}\def\leq{\le}
+\def\ge{\geqslant}\def\geq{\ge}
+\newcommand{\floor}[1]{\left\lfloor{#1}\right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil{#1}\right\rceil}
+\newcommand{\pare}[1]{\left({#1}\right)}
+\newcommand{\set}[1]{\left\{{#1}\right\}}
+\newcommand{\range}[2]{\set{{#1},\dots,{#2}}}
+\newcommand{\dist}{\mathrm{dist}}
+\newcommand{\cluster}{\mathrm{cluster}}
+\newcommand{\merge}{\mathrm{merge}}
+
+
+
+\title{Lista de Processamento de Imagens}
+\date{}
+
+
+
+\begin{document}
+
+
+\maketitle
+
+
+\vspace{3em}
+
+\section{Tons de Cinza}
+
+Tradicionalmente uma imagem digital é representada por uma matriz, em que cada célula contêm uma tupla de valores representando os canais $r$, $g$ e $b$.
+
+Uma imagem em \textit{tons de cinza} é uma imagem onde cada célula tem apenas um valor, representando o tom de cinza daquela célula.
+
+Para transformar uma imagem colorida em uma imagem em tons de cinza podemos, entre outras técnicas, para cada célula, tirar a mádia dos valores dos 3 canais.
+
+
+\textbf{Exercício}: Dada a imagem representada pela tabela abaixo, com cores variando entre $[0, 255]$, onde cada célula tem uma tupla representando os valores de $(r, g, b)$ respectivamente
+
+\begin{tabular}{|c|c|c|}
+\hline
+$(255, 255,   0)$ & $(  0, 255, 255)$ & $(255,   0, 255)$ \\ \hline
+$(122, 122, 122)$ & $(  0,   0,   0)$ & $(255, 255, 255)$ \\ \hline
+$(255,   0,   0)$ & $(  0, 255,   0)$ & $(  0,   0, 255)$ \\ \hline
+
+\end{tabular}
+
+
+
+\break
+
+
+
+\section{Histograma}
+
+Dado um espaço amostral e um conjunto de fenômenos ocorridos, um histograma é um mapeamento entre cada fenômeno possível e a quantidade de vezes que aquele evento ocorre.
+
+Em uma imagem, um histograma é um mapeamento entre cada cor possível e a quantidade de vezes que aquela cor ocorre na imagem.
+
+\textbf{Exercício}: Dada a imagem representada pela tabela abaixo, com cores variando entre $[0, 9]$, onde cada célula tem um valor representando um tom de cinza, faça o histograma desta imagem.
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$8$ & $1$ & $1$ & $0$ & $4$ \\ \hline
+$1$ & $7$ & $1$ & $4$ & $0$ \\ \hline
+$1$ & $1$ & $6$ & $1$ & $0$ \\ \hline
+$1$ & $7$ & $1$ & $5$ & $0$ \\ \hline
+$8$ & $1$ & $1$ & $0$ & $4$ \\ \hline
+
+\end{tabular}
+
+
+
+
+
+\break
+
+
+
+
+
+\section{Segmentação de Imagens}
+
+Segmentar uma imagem é separar a imagem em regiões significativas. Nesta lista vamos segmentar o espaço de cor de uma imagem em duas cores possíveis. A isto chamamos de segmentação binária. Para isto precisamos escolher um limitante $L$ em que todas as cores maiores que $L$ se tornam a cor de valor máximo, e todas as cores menores se tornam a cor de valor mínimo.
+
+Uma técnica para fazer uma segmentação binária é escolher um limitante tal que minimize o valor de 
+\[\left| \sum_{i<L}h(i) - \sum_{i>L}h(i)\right|\]
+
+Onde $h$ é o histograma da imagem
+
+\textbf{Exercício}: Ainda sobre a imagem anterior. Faça uma segmentação binária na imagem. Use o método de escolha de limitante que minimize o histograma acumulado.
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$8$ & $1$ & $1$ & $0$ & $4$ \\ \hline
+$1$ & $7$ & $1$ & $4$ & $0$ \\ \hline
+$1$ & $1$ & $6$ & $1$ & $0$ \\ \hline
+$1$ & $7$ & $1$ & $5$ & $0$ \\ \hline
+$8$ & $1$ & $1$ & $0$ & $4$ \\ \hline
+
+\end{tabular}
+
+
+
+
+
+
+
+\break
+
+
+
+
+
+\section{Convoluções (ou Máscaras ou Filtros)}
+
+Uma máscara é uma matrix quadrada de dimenção ímpar que pode ser aplicada em uma imagem
+
+Aplicar uma máscara em uma imagem consiste em gerar uma imagem nova, em que cada célula da imagem nova é criada à partir da célula de mesmo índice na imagem antiga.
+
+Para aplicar uma máscara em uma célula é preciso colocar o centro da máscara na célula e multiplicar cada valor da máscara pelo valor da célula da imagem que este valor coincidir, depois somar todos os valores, limitando os valores pelos valores de máximo e mínimo das cores da imagem.
+
+\textbf{Exercício}: Considere a seguinte imagem com cores entre $[0, 9]$.
+
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$0$ & $0$ & $0$ & $9$ & $9$ & $9$ \\ \hline
+$0$ & $0$ & $0$ & $9$ & $9$ & $9$ \\ \hline
+$0$ & $2$ & $0$ & $9$ & $9$ & $9$ \\ \hline
+$0$ & $0$ & $0$ & $9$ & $9$ & $9$ \\ \hline
+$0$ & $0$ & $0$ & $9$ & $8$ & $9$ \\ \hline
+$0$ & $0$ & $0$ & $9$ & $9$ & $9$ \\ \hline
+
+\end{tabular}
+
+Passe a seguinte máscara na imagem acima
+
+\[
+\frac{1}{9}
+\begin{bmatrix}
+1 & 1 & 1\\
+1 & 1 & 1\\
+1 & 1 & 1
+\end{bmatrix}
+\]
+
+\break
+
+\textbf{Exercício}: Considere a seguinte imagem com cores entre $[0, 9]$.
+
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$0$ & $0$ & $0$ & $9$ & $9$ & $9$ \\ \hline
+$0$ & $0$ & $0$ & $9$ & $9$ & $9$ \\ \hline
+$0$ & $0$ & $0$ & $9$ & $9$ & $9$ \\ \hline
+$0$ & $0$ & $0$ & $9$ & $9$ & $9$ \\ \hline
+$0$ & $0$ & $0$ & $9$ & $9$ & $9$ \\ \hline
+$0$ & $0$ & $0$ & $9$ & $9$ & $9$ \\ \hline
+
+\end{tabular}
+
+Passe cada uma das seguintes máscaras na imagem acima, separadamente.
+
+\begin{enumerate}[a)]
+
+\item
+
+\[
+\begin{bmatrix}
+ 1 &  2 &  1\\
+ 0 &  0 &  0\\
+-1 & -2 & -1
+\end{bmatrix}
+\]
+
+\item
+
+\[
+\begin{bmatrix}
+ 1 &  0 & -1\\
+ 2 &  0 & -2\\
+ 1 &  0 & -1
+\end{bmatrix}
+\]
+
+\end{enumerate}
+
+
+
+\end{document}

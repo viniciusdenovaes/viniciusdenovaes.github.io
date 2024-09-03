@@ -12,9 +12,9 @@
 * [ALPOO](aulas/unip/20242/alpoo.html)
 * [ED](aulas/unip/20242/ed.html)
 * [LTP](aulas/unip/20242/ltp.html)
-<!-- * [Aspectos Teóricos da Computação](aulas/unip/20242/atc.htmlOFF)
-* [Cálculo Numérico para Computação](aulas/unip/20232/cn.htmlOFF)
-* [Processamento de Imagens e Visão Computacional](aulas/unip/20232/pi.htmlOFF) -->
+* [Aspectos Teóricos da Computação](aulas/unip/20242/atc.html)
+* [Cálculo Numérico para Computação](aulas/unip/20232/cn.html)
+* [Processamento de Imagens e Visão Computacional](aulas/unip/20232/pi.html)
 
 
 ### (2024/1)
