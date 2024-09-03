@@ -1,7 +1,7 @@
 # Processamento de Imagens e Visão Computacional
 
 
-Listas
+## Listas
 * [Lista](pi_files/listas/01/lista01PI.pdf)
 
 <!-- ### Trabalhos
