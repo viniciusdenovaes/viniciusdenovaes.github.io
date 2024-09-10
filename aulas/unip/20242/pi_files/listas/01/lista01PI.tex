@@ -95,34 +95,34 @@ $8$ & $1$ & $1$ & $0$ & $4$ \\ \hline
 
 
 
-\section{Segmentação de Imagens}
+% \section{Segmentação de Imagens}
 
-Segmentar uma imagem é separar a imagem em regiões significativas. Nesta lista vamos segmentar o espaço de cor de uma imagem em duas cores possíveis. A isto chamamos de segmentação binária. Para isto precisamos escolher um limitante $L$ em que todas as cores maiores que $L$ se tornam a cor de valor máximo, e todas as cores menores se tornam a cor de valor mínimo.
+% Segmentar uma imagem é separar a imagem em regiões significativas. Nesta lista vamos segmentar o espaço de cor de uma imagem em duas cores possíveis. A isto chamamos de segmentação binária. Para isto precisamos escolher um limitante $L$ em que todas as cores maiores que $L$ se tornam a cor de valor máximo, e todas as cores menores se tornam a cor de valor mínimo.
 
-Uma técnica para fazer uma segmentação binária é escolher um limitante tal que minimize o valor de 
-\[\left| \sum_{i<L}h(i) - \sum_{i>L}h(i)\right|\]
+% Uma técnica para fazer uma segmentação binária é escolher um limitante tal que minimize o valor de 
+% \[\left| \sum_{i<L}h(i) - \sum_{i>L}h(i)\right|\]
 
-Onde $h$ é o histograma da imagem
+% Onde $h$ é o histograma da imagem
 
-\textbf{Exercício}: Ainda sobre a imagem anterior. Faça uma segmentação binária na imagem. Use o método de escolha de limitante que minimize o histograma acumulado.
+% \textbf{Exercício}: Ainda sobre a imagem anterior. Faça uma segmentação binária na imagem. Use o método de escolha de limitante que minimize o histograma acumulado.
 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-$8$ & $1$ & $1$ & $0$ & $4$ \\ \hline
-$1$ & $7$ & $1$ & $4$ & $0$ \\ \hline
-$1$ & $1$ & $6$ & $1$ & $0$ \\ \hline
-$1$ & $7$ & $1$ & $5$ & $0$ \\ \hline
-$8$ & $1$ & $1$ & $0$ & $4$ \\ \hline
+% \begin{tabular}{|c|c|c|c|c|}
+% \hline
+% $8$ & $1$ & $1$ & $0$ & $4$ \\ \hline
+% $1$ & $7$ & $1$ & $4$ & $0$ \\ \hline
+% $1$ & $1$ & $6$ & $1$ & $0$ \\ \hline
+% $1$ & $7$ & $1$ & $5$ & $0$ \\ \hline
+% $8$ & $1$ & $1$ & $0$ & $4$ \\ \hline
 
-\end{tabular}
-
-
+% \end{tabular}
 
 
 
 
 
-\break
+
+
+% \break
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.3)  3 SEP 2024 13:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.3)  10 SEP 2024 16:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -327,13 +327,7 @@ LaTeX Warning: No \author given.
 [1
 
 {C:/Users/vinicius/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-[2]
-Overfull \hbox (1.27094pt too wide) in paragraph at lines 100--101
-\OT1/cmr/m/n/12 lista va-mos seg-men-tar o espa^^Xco de cor de uma ima-gem em d
-uas co-res poss^^S^^Pveis.
- []
-
-[3] [4] [5] (lista01PI.aux)
+[2] [3] [4] (lista01PI.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -346,20 +340,19 @@ Here is how much of TeX's memory you used:
  28107 multiletter control sequences out of 15000+600000
  566872 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,7n,79p,411b,256s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 70i,7n,79p,394b,256s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/vinicius/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
 cm/cmbx12.pfb><C:/Users/vinicius/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmex10.pfb><C:/Users/vinicius/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/vinicius/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/vinicius/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/vinicius/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/User
-s/vinicius/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb><C:/Users/vinicius/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmti12.pfb>
-Output written on lista01PI.pdf (5 pages, 101121 bytes).
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/vinicius/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/vinicius/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Use
+rs/vinicius/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12
+.pfb>
+Output written on lista01PI.pdf (4 pages, 86761 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
+ 50 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
