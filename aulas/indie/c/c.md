@@ -17,4 +17,4 @@
 
 ## Listas
 
-- [03 - Comandos de Repetição](c_files\listas\03-repeticao\lista_repeticao.html)
+- [03 - Comandos de Repetição](c_files/listas/03-repeticao/lista_repeticao.html)
