@@ -14,3 +14,8 @@
 1. [Lab do dia 05/09/2024](ltp_files/labs/lab20240905.html)
 1. [Lab do dia 11/09/2024](ltp_files/labs/lab20240911.html)
 1. [Lab do dia 12/09/2024](ltp_files/labs/lab20240912.html)
+
+
+## Exemplos
+- [Parser de csv]()
+
