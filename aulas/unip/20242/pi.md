@@ -10,6 +10,6 @@
 * [Trabalho 02](pi_files/trabalhos/02/trabalho02.html)
 
 ### Trabalhos
-* [Roteiro para APS](pi_files/aps/APS_PIVC.pdf)
+* [Roteiro para APS](pi_files/aps/APS_PIVC_2024.pdf)
 
 <!-- ### [Git](https://github.com/viniciusdenovaes/Unip232PI) --> 
