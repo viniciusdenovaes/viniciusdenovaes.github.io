@@ -14,5 +14,5 @@
 - Parte 02 - Padrões de Arquitetura: MVC
   - pacotes awt e Swing
 - Parte 03 - Padrões de Arquitetura: DAO
-  - pacote JDBC
+  - pacote JDB C
 
