@@ -1,7 +1,7 @@
 # ALPOO - Aplicações de Linguagem de Programação Orientada a Objetos (em Java)
 
 
-## [Curso](../../indie/java/java2.html)
+## [Curso (link)](../../indie/java/java2.html)
 
 
 ## Trabalho (APS)
