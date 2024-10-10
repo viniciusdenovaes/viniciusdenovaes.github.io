@@ -14,7 +14,9 @@
 - Parte 02 Comandos de Controle:
   - [02 - Comandos Condicionais](c_files/curso/01/02-condicional.html)
   - [03 - Comandos de Repetição](c_files/curso/01/03-repeticao.html)
+  - [04 - Funções](c_files/curso/01/04-funcoes.html)
 
 ## Listas
 
 - [03 - Comandos de Repetição](c_files/listas/03-repeticao/lista_repeticao.html)
+- [04 - Funções](c_files/listas/04-funcoes/lista_funcoes.html)
