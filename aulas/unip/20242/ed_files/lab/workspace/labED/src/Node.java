@@ -1,6 +1,6 @@
 public class Node<T> {
-    T element;
-    Node<T> next = null;
+    public T element;
+    public Node<T> next = null;
     public Node(){}
     public Node(T aElement){
         this();
