@@ -14,9 +14,16 @@
 - Parte 02 Comandos de Controle:
   - [02 - Comandos Condicionais](c_files/curso/01/02-condicional.html)
   - [03 - Comandos de Repetição](c_files/curso/01/03-repeticao.html)
-  - [04 - Funções](c_files/curso/01/04-funcoes.html)
+- Parte 03 Arrays:
+  - [04 - Arrays](c_files/curso/01/04-arrays.html)
+  - [05 - Strings](c_files/curso/01/05-strings.html)
+- Parte 04 Funções:
+  - [06 - Funções](c_files/curso/01/06-funcoes.html)
+
 
 ## Listas
 
 - [03 - Comandos de Repetição](c_files/listas/03-repeticao/lista_repeticao.html)
-- [04 - Funções](c_files/listas/04-funcoes/lista_funcoes.html)
+- [04 - Arrays](c_files/listas/04-arrays/lista_arrays.html)
+- [05 - Strings](c_files/listas/05-strings/lista_strings.html)
+- [06 - Funções](c_files/listas/06-funcoes/lista_funcoes.html)
