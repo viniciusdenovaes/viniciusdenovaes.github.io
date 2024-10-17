@@ -25,7 +25,62 @@
       <div class="crossnote markdown-preview  ">
       
 <h1 id="strings">Strings </h1>
-
+<p>String é um tipo especial de array para representar palavras (ou frases).</p>
+<p>Funciona como qualquer array comum, mas temos alguma funcionalidades a mais que veremos a seguir.</p>
+<h2 id="criando-strings-em-c">Criando Strings em C </h2>
+<p>Para criar uma <strong>variavel</strong> de uma String em C podemos criar um array de characteres:</p>
+<p>Neste exemplo estamos criando uma String que pode ter, no máximo, 9 letras.</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-char">char</span> s<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre><p>Isso por que na última posição de uma String <strong>sempre tem o símbolo <code>\0</code></strong></p>
+<h3 id="criando-o-literal-de-uma-string">Criando o literal de uma String </h3>
+<p>Neste exemplo estamos armazenando a palavra <code>"casa"</code> na variavel <code>s</code>.</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code>s <span class="token operator">=</span> <span class="token string">"casa"</span><span class="token punctuation">;</span>
+</code></pre><p>Isso seria a mesma coisa que fazer</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code>s<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token char">'c'</span><span class="token punctuation">;</span>
+s<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token char">'a'</span><span class="token punctuation">;</span>
+s<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token char">'s'</span><span class="token punctuation">;</span>
+s<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token char">'a'</span><span class="token punctuation">;</span>
+s<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token char">'\0'</span><span class="token punctuation">;</span>
+</code></pre><p>As outras posições <code>s[5]</code> até <code>s[9]</code> terão lixo de memória.</p>
+<h2 id="imprimindo-uma-string">Imprimindo uma String </h2>
+<p>Usamos <code>%s</code> para imprimir uma String usando a função <code>printf</code></p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h2 id="lendo-uma-string">Lendo uma String </h2>
+<p>Podemos usar a função <code>scanf</code> para ler uma string do teclado:</p>
+<p>Neste caso</p>
+<ul>
+<li>Não precisamos usar o símbolo <code>&amp;</code> antes da variável.</li>
+<li>Será lido a palavra entrada <strong>até o primeiro espaço</strong></li>
+</ul>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>Para ler uma String até o "enter" (ou new line <code>\n</code>) devemos usar a função <code>gets</code></p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token function">gets</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h2 id="funcionalidades">Funcionalidades </h2>
+<p>Como sao estruturas especiais, Strings têm várias funcionalidades para facilitar o código</p>
+<h3 id="tamanho-de-uma-string">tamanho de uma string </h3>
+<p>A função <code>int strlen(char[])</code> recebe uma string e retorna o tamanho dela.</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token function">strlen</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="copiar-uma-string-para-outra">copiar uma string para outra </h3>
+<p>A função <code>strcpy(char *destino, char *origem)</code> copia o conteúdo da string origem para a string de destino.</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-char">char</span> s2<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token function">strcpy</span><span class="token punctuation">(</span>s2<span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="concatenar-strings">Concatenar strings </h3>
+<p>Concatenar strings é combinar duas strings uma depois da outra.</p>
+<p>Usamos a função <code>strcat(char *destino, char *origem)</code> copia o conteúdo da string origem para <strong>o final</strong> da string de destino.</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-char">char</span> s1<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"bom "</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-char">char</span> s2<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"dia!"</span><span class="token punctuation">;</span>
+<span class="token function">strcat</span><span class="token punctuation">(</span>s1<span class="token punctuation">,</span> s2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> s1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="comparando-duas-strings">Comparando duas Strings </h3>
+<p>Para comparar se duas strings são iguais <strong>não podemos</strong> simplesmente testar <code>s1==s2</code>.</p>
+<p>Temos que usar uma função!</p>
+<p>A função para isso é a <code>strcmp(char *str1, char *str2)</code> compara o character de cada posição das duas strings e <strong>retorna 0 caso as duas sejam iguais</strong>. Um valor diferente de 0 quer dizer que as duas são diferentes.</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-char">char</span> s1<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"igual"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-char">char</span> s2<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"igual"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-char">char</span> s3<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"diferente"</span><span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> <span class="token function">strcmp</span><span class="token punctuation">(</span>s1<span class="token punctuation">,</span> s2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> <span class="token function">strcmp</span><span class="token punctuation">(</span>s1<span class="token punctuation">,</span> s3<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
       </div>
       
       
