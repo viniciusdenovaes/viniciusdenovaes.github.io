@@ -14,4 +14,4 @@
 
 1. Faça um programa que leia um numero natural n, depois leia n números da entrada. Faça um array que guarde os n números e exiba para o usuário.
 
-1. Faça um programa que leia um numero natural n, depois leia n números da entrada. Faça um array A que guarde os n números **ordene** este array e imprima.
+1. (Difícil) Faça um programa que leia um numero natural n, depois leia n números da entrada. Faça um array A que guarde os n números **ordene** este array e imprima.
