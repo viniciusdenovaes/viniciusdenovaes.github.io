@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>lista_funcoes</title>
+      <title>lista_funcoes_referencia</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -24,63 +24,81 @@
     
       <div class="crossnote markdown-preview  ">
       
-<h1 id="lista-funções">Lista Funções </h1>
-<ol>
-<li>
-<p>Faça uma função que recebe dois inteiros e retorna a soma dos dois números.</p>
-</li>
-<li>
-<p>Faça uma função que recebe dois inteiros e retorna o maior deles.</p>
-</li>
-<li>
-<p>Faça uma função que recebe uma medida de temperatura em <em>Fahrenheit</em> e retorne esta medida convertida em graus <em>Celsius</em>.<br>
-Use a fórmula de conversão <code>C = (F-32)*(5/9)</code></p>
-</li>
-<li>
-<p>Faça uma função que recebe uma medida de temperatura em <em>Celsius</em> e retorne esta medida convertida em <em>Fahrenheit</em>.<br>
-Use a fórmula de conversão <code>F = C(9/5) + 32</code></p>
-</li>
-<li>
-<p>Faça uma função que recebe uma medida do lado do quadrado e retorne a área do quadrado.</p>
-</li>
-<li>
-<p>Faça uma função que recebe duas medidas da largura e altura de um retângulo e retorne a área do retângulo.</p>
-</li>
-<li>
-<p>Faça uma função que recebe uma medida do raio de um círculo e retorne a área da circunferência do círculo.</p>
-</li>
-<li>
-<p>Faça uma função que recebe duas medidas de um cilindro, o raio e a altura, e retorne o volume do cilindro.</p>
-</li>
-<li>
-<p>Faça uma função que recebe com o raio de uma esfera e retorne o volume da esfera.</p>
-</li>
-<li>
-<p>Faça uma função que recebe uma medida de tempo contendo 3 números como entrada, a hora, o minuto e segundos, e retorne a quantidade de segundos nesta medida.</p>
-</li>
-<li>
-<p>Faça uma função que recebe <em>duas</em> medidas de tempo, cada uma contendo 3 números como entrada, a hora, o minuto e segundos, e retorne a diferença entre essas duas medidas em segundos.</p>
-</li>
-<li>
-<p>Faça uma função que recebe um número inteiro e retorna <code>1</code> caso este número seja <em>par</em> e <code>0</code> caso não seja <em>par</em>.</p>
-</li>
-<li>
-<p>Faça uma função que recebe um número inteiro e retorna <code>1</code> caso este número seja <em>primo</em> e <code>0</code> caso não seja <em>primo</em>.</p>
-</li>
-<li>
-<p>Faça uma função que recebe um número inteiro e o próximo número primo maior que o número da entrada (Dica: use a função do exercício anterior para fazer esta).</p>
-</li>
-<li>
-<p>Faça uma função que recebe um número inteiro e retorne o fatorial deste número.</p>
-</li>
-<li>
-<p>(Difícil) Faça uma função que recebe uma medida de tempo contendo apenas segundos, e retorne uma struct contendo a hora, o minuto e segundos na medida de entrada.</p>
-</li>
-<li>
-<p>(Difícil) Faça uma função que recebe <em>duas</em> medidas de tempo, cada uma contendo 3 números como entrada, a hora, o minuto e segundos, e retorne a diferença entre essas duas medidas em uma struct contendo hora, minutos e segundos.</p>
-</li>
-</ol>
+<h1 id="continuação-lista-funções-e-passagem-por-valor-ou-referência">Continuação Lista Funções e Passagem por Valor ou Referência </h1>
+<p>Escreva o resultado dos seguintes códigos</p>
+<h3 id="01---ponteiros-este-exercício-não-cairá-na-prova">01 - Ponteiros (Este exercício não cairá na prova) </h3>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
 
+<span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword keyword-int">int</span> a <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-int">int</span> <span class="token operator">*</span>pa <span class="token operator">=</span> <span class="token operator">&amp;</span>a<span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"valor de a: %d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"valor do ponteiro pa: %d\n"</span><span class="token punctuation">,</span> <span class="token operator">*</span>pa<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"endereco de a: %p\n"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"endereco para onde pa aponta: %p\n"</span><span class="token punctuation">,</span> pa<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token operator">*</span>pa <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+	
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"valor de a depois de mudar o valor pelo ponteiro: %d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"valor do ponteiro pa: %d\n"</span><span class="token punctuation">,</span> <span class="token operator">*</span>pa<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="02---passagem-por-valor-estará-na-prova">02 - Passagem por valor (estará na prova) </h4>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">muda_valor_sem_referencia</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> x<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	x <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"valor de x dentro da funcao: %d\n"</span><span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword keyword-int">int</span> a <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"valor de a antes da funcao: %d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">muda_valor_sem_referencia</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"valor de a depois da funcao: %d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="03---passagem-por-referência-estará-na-prova">03 - Passagem por referência (estará na prova) </h4>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">muda_valor_com_referencia</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> <span class="token operator">*</span>px<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token operator">*</span>px <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"valor de px dentro da funcao: %d\n"</span><span class="token punctuation">,</span> <span class="token operator">*</span>px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword keyword-int">int</span> a <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"valor de a antes da funcao: %d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">muda_valor_com_referencia</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"valor de a depois da funcao: %d\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="04---arrays-estará-na-prova">04 - Arrays (estará na prova) </h4>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">recebe_array_referencia</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> v<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> tamanho<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword keyword-for">for</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>tamanho<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		v<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">11</span> <span class="token operator">+</span> i<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword keyword-int">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-int">int</span> tam <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"valor de a antes da funcao: \n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-for">for</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>tam<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d, "</span><span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token comment">// nao precisamos passar o endereco de a, </span>
+	<span class="token comment">// pois o valor de um array ja eh seu endereco</span>
+	<span class="token function">recebe_array_referencia</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> tam<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"valor de a depois da funcao: \n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-for">for</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>tam<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d, "</span><span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
       </div>
       
       

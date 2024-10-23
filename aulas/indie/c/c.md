@@ -19,6 +19,7 @@
   - [05 - Strings](c_files/curso/01/05-strings.html)
 - Parte 04 Funções:
   - [06 - Funções](c_files/curso/01/06-funcoes.html)
+  - [07 - Ponteiros e passagem por valor ou referência](c_files/curso/01/06.02-funcoes.html)
 
 
 ## Listas
@@ -27,3 +28,4 @@
 - [04 - Arrays](c_files/listas/04-arrays/lista_arrays.html)
 - [05 - Strings](c_files/listas/05-strings/lista_strings.html)
 - [06 - Funções](c_files/listas/06-funcoes/lista_funcoes.html)
+- [07 - Funções (Passagem por valor ou referência)](c_files/listas/06.02-funcoes/lista_funcoes_referencia.html)
