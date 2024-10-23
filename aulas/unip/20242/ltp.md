@@ -17,5 +17,5 @@
 
 
 ## Exemplos
-- [Parser de csv](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/20242/ltp_files/exemplos/parser_csv)
+- [Parser de input de csv](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/20242/ltp_files/exemplos/parser_csv_input)
 

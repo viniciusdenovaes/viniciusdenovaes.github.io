@@ -14,7 +14,7 @@ int main(){
 
 
     // Coloque o nome do arquivo aqui
-    FILE* fp = fopen("compras.csv", "r");
+    FILE* fp = fopen("compras_input.csv", "r");
     if (!fp){
         printf("Can't open file\n");
     }
