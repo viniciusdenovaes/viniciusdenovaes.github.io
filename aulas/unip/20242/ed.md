@@ -37,4 +37,6 @@
 
 ## Questões Enade
 
-- [enade](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/20241/poo_files/enade)
+- [enade - cc](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/20242/ed_files/enade/cc)
+
+- [enade - si](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/20242/ed_files/enade/si)
