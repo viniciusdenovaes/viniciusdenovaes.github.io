@@ -1,0 +1,182 @@
+\documentclass[12pt]{exam}
+
+\usepackage[brazil]{babel}   
+\usepackage[TS1,T1]{fontenc}
+\usepackage[utf8]{luainputenc}
+\usepackage[utf8]{inputenc}  
+%\usepackage[T1]{fontenc}
+\usepackage{amsfonts,amsmath,amssymb,latexsym} 
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\graphicspath{ {images/} }
+
+
+
+
+\def\cQ{\mathcal{Q}}
+\def\ve{\varepsilon}
+
+\def\emptyset{\varnothing}
+\def\ept{\varnothing}
+
+% Include the listings-package
+\usepackage{listings}             
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Prolog,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  stepnumber=1,  
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+
+\usepackage{tikz}
+\usetikzlibrary{trees}
+
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+
+\def\code#1{\texttt{#1}}
+
+\newcommand{\class}{LTP}
+\newcommand{\term}{2º semestre de 2024}
+\newcommand{\examnum}{Prova Exemplo}
+\newcommand{\examdate}{?/?/2024}
+\newcommand{\timelimit}{$\thickapprox$75 Minutos}
+
+\pointpoints{ponto}{pontos}
+
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Página \thepage\ de \numpages}{\examdate}
+\runningheadrule
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Nome:} & \makebox[2in]{\hrulefill}\\
+\textbf{\term}  & \textbf{RA:}   & \makebox[2in]{\hrulefill}\\
+\textbf{\examnum} & \textbf{Turma:}   & \makebox[2in]{\hrulefill}\\
+\textbf{\examdate} &&\\
+\textbf{Tempo limite: \timelimit} & Professor: & Vinicius Pereira \\
+                                  &              &
+\end{tabular*}\\
+\rule[2ex]{\textwidth}{2pt}
+
+AVISOS:
+
+Ao escrever o seu código você não precisa se preocupar com os comandos de \code{include}
+
+Ao escrever o seu código, ou o resultado de algum código, você pode ignorar as quebras de linha.
+
+Esta prova contém \numpages\ páginas e \numquestions\ questões.\\
+
+
+\begin{center}
+Folha de respostas\\
+\begin{tabular}{ c|c|c|c|c|c|c|c| }
+ \hline
+  & A & B & C & D & E & Nota & Máxima \\ \hline\hline
+ \pgfsetfillopacity{1.0}1 \pgfsetfillopacity{0.3} & A & B & C & D & E & & 1 \\[-1.6ex]
+ \hline\noalign{\vspace{\dimexpr 1.6ex-\doublerulesep}}
+ \hline
+ \pgfsetfillopacity{1.0}2 \pgfsetfillopacity{0.3} & A & B & C & D & E & & 1 \\ \hline
+ \pgfsetfillopacity{1.0}3 \pgfsetfillopacity{0.3} & A & B & C & D & E & & 1 \\[-1.6ex]
+ \hline\noalign{\vspace{\dimexpr 1.6ex-\doublerulesep}}
+ \hline
+ \pgfsetfillopacity{1.0}4 \pgfsetfillopacity{0.3} & A & B & C & D & E & & 1 \\ \hline
+ \pgfsetfillopacity{1.0}5 \pgfsetfillopacity{0.3} & A & B & C & D & E & & 1 \\ \hline
+ \pgfsetfillopacity{1.0}6 \pgfsetfillopacity{0.3} & A & B & C & D & E & & 1 \\ \hline
+ \pgfsetfillopacity{1.0}7 \pgfsetfillopacity{0.3} & A & B & C & D & E & & 1 \\ \hline
+ \pgfsetfillopacity{1.0}8 \pgfsetfillopacity{0.3} & A & B & C & D & E & & 1 \\ \hline
+ \pgfsetfillopacity{1.0}9 \pgfsetfillopacity{0.3} & A & B & C & D & E & & 1 \\ \hline
+ \pgfsetfillopacity{1.0}10\pgfsetfillopacity{0.3} & A & B & C & D & E & & 1 \\ \hline
+ \end{tabular}
+\end{center}
+\pgfsetfillopacity{1.0}
+
+
+
+
+
+\begin{questions}
+
+
+
+% n_pares.c  pares.c soma.c hello_world.c  par.c      primo.c  sequencia.c
+
+
+
+
+
+
+
+
+\question[1] Escreva um programa que escreva na tela a frase ``\code{Hello World}''
+
+\makeemptybox{\stretch{1}}
+
+\break
+
+
+
+
+
+
+
+\question[1] Considere o seguinte programa escreva a saída
+
+\lstinputlisting[language=C]{q_sem_ref.c}
+
+
+\question[1] Considere o seguinte programa escreva a saída
+
+\lstinputlisting[language=C]{q_com_ref.c}
+
+
+\question[1] Considere o seguinte programa escreva a saída
+
+\lstinputlisting[language=C]{q_f_array.c}
+
+\question[1] Faça uma função que recebe dois inteiros e retorna o maior deles.
+
+\question[1] Faça uma função que recebe duas medidas da largura e altura de um retângulo e retorne a área do retângulo.
+
+\question[1] Faça uma função que recebe um número inteiro e retorna `1` caso este número seja *par* e `0` caso não seja *par*.
+
+\question[1] Considere o seguinte programa escreva a saída para a entradas 4, 5, 6, 7
+\lstinputlisting[language=C]{q_prime.c}
+
+\question[1] Faça um programa que leia 5 valores inteiros entrados pelo usuário e imprima **o dobro** destes valores **na ordem inversa**.
+
+\question[1] Faça um programa que leia dois arrays A e B de tamanho 6 de números reais entrados pelo usuário, faça um terceiro array C em que cada elemento de C é o elemento de A menos o elemento de B na mesma posição. Exiba todo o array C.
+
+
+\end{questions}
+
+
+\end{document}
