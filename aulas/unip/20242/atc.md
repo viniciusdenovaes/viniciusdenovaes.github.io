@@ -8,4 +8,4 @@
 #### Prova 02
 
 * Refazer a lista 01
-* [Lista 02](aa_files/listas/02/lista02ATC.pdf)
+* [Lista 02](atc_files/listas/02/lista02ATC.pdf)
