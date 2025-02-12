@@ -5,20 +5,34 @@
 # layout: home
 ---
 
-## Workshop
-* [Godot Game Mobile](aulas/workshops/20242/godot_mobile.html)
-
 
 ## Aulas
 
+### Atuais (2025/1)
+##### CC e SI
+* [PDM](aulas/unip/20251/pdm.html)
+<!-- * [LPOO (CC e SI)](aulas/unip/20241/lpoo.html)
+* [IA](aulas/unip/20241/ia.html)
+* [CG](aulas/unip/20241/cg.html)
+* [AA](aulas/unip/20241/aa.html)
+* [LFA](aulas/unip/20241/lfa.html)
+* [PWR](aulas/unip/20241/pwr.html) -->
+##### ADS
+* [POO (ADS)](aulas/unip/20251/poo_ads.html)
 
-### Atuais (2024/2)
+
+
+
+### (2024/2)
 * [ALPOO](aulas/unip/20242/alpoo.html)
 * [ED](aulas/unip/20242/ed.html)
 * [LTP](aulas/unip/20242/ltp.html)
 * [Aspectos Teóricos da Computação](aulas/unip/20242/atc.html)
 * [Cálculo Numérico para Computação](aulas/unip/20242/cn.html)
 * [Processamento de Imagens e Visão Computacional](aulas/unip/20242/pi.html)
+
+### Workshop
+* [Godot Game Mobile](aulas/workshops/20242/godot_mobile.html)
 
 
 ### (2024/1)
