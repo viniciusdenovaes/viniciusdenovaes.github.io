@@ -1,11 +1,5 @@
 # POO - Programação Orientada a Objetos (em C#)
 
-<!-- ## APS
-
-- [Roteiro](lpoo_files/aps/roteiro.html)
-  - [Roteiro em html](lpoo_files/aps/roteiro.html)
-  - [Arquivo Oficial](lpoo_files/aps/APS_LPOO_2022.docx)
-- [Um exemplo de um programa parecido com a APS](https://github.com/viniciusdenovaes/Unip221LPOO/blob/master/README.md#programa-funcionario) -->
 
 
 ## Curso
@@ -66,11 +60,6 @@
   * [Gabarito](poo_files/laboratorio/04-interfaces/04-lista_lpoo_interfaces.zip)
 -->
 
-
-
-## Questões Enade
-
-- [enade](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/20241/poo_files/enade)
 
 ## Prova Passada
 
