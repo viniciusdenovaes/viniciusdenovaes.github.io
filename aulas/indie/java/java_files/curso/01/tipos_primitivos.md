@@ -23,13 +23,11 @@ Os tipos mais usados são `int`, `double`, `char` e `boolean`, e neste curso voc
 
 Usaremos as operações que você já conhece:
  - `+` para soma entre dois `int` ou `double`,
- - `-` para subtração entre dois dois `int` ou `double`,
- - `*` para multiplicação entre dois dois `int` ou `double`,
- - `/` para divisão entre dois dois `int` ou `double`,
+ - `-` para subtração entre dois `int` ou `double`,
+ - `*` para multiplicação entre dois `int` ou `double`,
+ - `/` para divisão entre dois `int` ou `double`,
  - `&&` para a operação `AND` lógico "short-circuit" entre dois `boolean`,
  - `||` para a operação `OR` lógico "short-circuit" entre dois `boolean`,
- - `&` para a operação `AND` lógico não-"short-circuit" entre dois `boolean`,
- - `|` para a operação `OR` lógico não-"short-circuit" entre dois `boolean`,
  - `^` para a operação `XOR` lógico entre dois `boolean`.
 
 ## Continuação
@@ -40,7 +38,6 @@ Alguns assuntos não tratados aqui são:
  - Truncamento
  - Casting
  - Operador `+` para concatenar `String`
- - O que é um operador lógico "short-circuit"?
  - Como funciona operações entre `int` e `double`?
 
 .

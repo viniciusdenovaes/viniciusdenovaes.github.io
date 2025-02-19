@@ -29,6 +29,18 @@ if(condicao01){
 }
 ```
 
+Podemos colocar um else no final também
+
+``` java
+if(condicao01){
+  //bloco de comandos 01
+} else if(condicao02){
+  // bloco de comandos 02
+} else{
+  // bloco de comandos 03
+}
+```
+
 **OBS:** Ao contrário de Python, aqui você precisa usar as chaves `{}`. **NÃO ESQUEÇA**.
 Se você esquecer ele executará só o primeiro comando do bloco. Estranho né? Este é o pior tipo de erro que você pode encontrar no código. Por que ele não dará erro na compilação nem na execução. Mas o seu código estará errado **sem você saber**. Evite isso e **sempre use chaves**.
 
@@ -63,12 +75,6 @@ while(condicao){
 
 * `do while`: a `condicao` o bloco de comando é executado e **depois** a condição é verificada. Caso seja verdadeira o controle **volta** para o começo do while (e faz a verificação **no final** novamente). Caso não seja, o controle não volta.
 
-OBS1: a única diferença entre este e o `while` é que neste você pode ter certeza de que o bloco será executado na primeira vez, mesmo que a condição seja falsa.
-
-OBS2: perceba que tem um `;` no final do while.
-
-OBS3: este comando não é usado com frequência
-
 ``` java
 do{
   // bloco de comandos 01
@@ -76,6 +82,12 @@ do{
   // se repete enquanto a condicao for satisfeita
 }while(condicao);
 ```
+
+OBS1: a única diferença entre este e o `while` é que neste você pode ter certeza de que o bloco será executado na primeira vez, mesmo que a condição seja falsa.
+
+OBS2: perceba que tem um `;` no final do while.
+
+OBS3: este comando não é usado com frequência
 
 
 * `for`: é **inicializado** com um `comandoInicializacao`; repete enquanto a `condição` for verdadeira; sempre ao final de cada iteração um `comandoRepeticao` é executado.
@@ -113,7 +125,50 @@ for(Type object: collection){
 }
 ```
 
-exemplos:
+### Exemplos do `for-each`
+
+#### Iterando usando inteiros com array
+
+``` java
+public static void main(String[] args){
+
+  int[] numeros = new int[3];
+
+  numeros[0] = 10;
+  numeros[1] = 21;
+  numeros[2] = 32;
+
+  for(int n: numeros){
+    System.out.println(n);
+  }
+}
+```
+
+##### Usando `List` como coleção
+
+``` java
+public static void main(String[] args){
+
+  List<Integer> numeros = new ArrayList<>();
+
+  numeros.add(10);
+  numeros.add(21);
+  numeros.add(32);
+
+  for(int n: numeros){
+    System.out.println(n);
+  }
+}
+```
+saída em ambos os programas:
+```
+10
+21
+32
+```
+
+
+#### Iterando usando objetos com array
 
 ``` java
 class Gato{
@@ -132,7 +187,7 @@ class Gato{
 }
 ```
 
-Usando `array` como coleção
+##### Usando `array` como coleção
 
 ``` java
 public static void main(String[] args){
@@ -149,7 +204,7 @@ public static void main(String[] args){
 }
 ```
 
-usando `List` como coleção
+##### usando `List` como coleção
 
 ``` java
 public static void main(String[] args){
@@ -171,6 +226,7 @@ Brutus mia!
 Chirriro mia!
 Xitara mia!
 ```
+
 
 
 ### Continuação
