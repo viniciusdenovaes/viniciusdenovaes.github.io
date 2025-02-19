@@ -11,12 +11,11 @@
 ### Atuais (2025/1)
 ##### CC e SI
 * [PDM](aulas/unip/20251/pdm.html)
-<!-- * [LPOO (CC e SI)](aulas/unip/20241/lpoo.html)
-* [IA](aulas/unip/20241/ia.html)
+* [LPOO (CC e SI)](aulas/indie/java/java.html)
+<!-- * [IA](aulas/unip/20241/ia.html)
 * [CG](aulas/unip/20241/cg.html)
 * [AA](aulas/unip/20241/aa.html)
-* [LFA](aulas/unip/20241/lfa.html)
-* [PWR](aulas/unip/20241/pwr.html) -->
+* [LFA](aulas/unip/20241/lfa.html) -->
 ##### ADS
 * [POO (ADS)](aulas/unip/20251/poo_ads.html)
 
@@ -31,7 +30,7 @@
 * [Cálculo Numérico para Computação](aulas/unip/20242/cn.html)
 * [Processamento de Imagens e Visão Computacional](aulas/unip/20242/pi.html)
 
-### Workshop
+#### Workshop
 * [Godot Game Mobile](aulas/workshops/20242/godot_mobile.html)
 
 
