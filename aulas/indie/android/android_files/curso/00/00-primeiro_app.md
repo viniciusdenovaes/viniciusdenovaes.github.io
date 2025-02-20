@@ -37,7 +37,7 @@ Neste layout os elementos adicionados serão adicionados linearmente, um depois 
 
 Como é o primeiro layout, precisamos definir o *namespace* do android com a linha `xmlns:android="http://schemas.android.com/apk/res/android"`, esta linha também estará em todos os documentos, não vamos nos preocupar com ela.
 
-Precisaremos escolher os valores dos campos obrigatórios `layout_width` e `layout_height`, escolhemos o valor `"match_parent"` para que tenha o tamanho do *view* pai, que é o container que contém esta *view*.
+Precisaremos escolher os valores dos campos obrigatórios `layout_width` e `layout_height`, escolhemos o valor `"match_parent"` para que tenha o tamanho do pai, que é o seu container.
 
 
 ##### TextView
