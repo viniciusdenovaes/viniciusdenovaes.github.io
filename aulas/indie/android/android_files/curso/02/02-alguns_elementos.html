@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>android</title>
+      <title>02-alguns_elementos</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -24,29 +24,81 @@
     
       <div class="crossnote markdown-preview  ">
       
-<h1 id="android">Android </h1>
-<h2 id="curso">Curso </h2>
+<h1 id="alguns-elementos">Alguns Elementos </h1>
+<p>Elementos que possibilitam interação com o usuário são chamados de <code>View</code>.</p>
+<p>Nesta aula vamos falar de</p>
 <ul>
-<li>
-<p>Prólogo</p>
-<ul>
-<li>Instalação:.
-<ul>
-<li><a href="https://youtu.be/0AJtabl7nkw">Windows (Vídeo)</a></li>
+<li><code>TextView</code>: Um simples texto</li>
+<li><code>EditText</code>: Uma caixa de texto para o usuário entrar com informações</li>
+<li><code>Button</code>: Um botão para o usuário apertar</li>
+<li><code>CheckBox</code>: Uma caixa de seleção para o usuário selecionar</li>
+<li><code>RadioButton</code>: Mesmo que o <code>CheckBox</code>, porém somente um radio button de cada grupo pode ser selecionado</li>
+<li><code>ImageView</code>: Uma imagem.</li>
 </ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Parte 01 Primeiros Passos:</p>
+<h3 id="textview">TextView </h3>
+<p>Exibe um texto para o usuário. Podemos customizar tamanho, cor, fonte, inclusive o próprio texto a ser mostrado. Útil para mostrar informações para o usuário.</p>
+<p>Alguns atributos úteis:</p>
 <ul>
-<li><a href="android_files%5Ccurso%5C00%5C00-primeiro_app.html">00 - Primeiro App</a></li>
-<li><a href="android_files%5Ccurso%5C01%5C01-simples_layout.html">01 - Primeiro Layout</a></li>
-<li><a href="android_files%5Ccurso%5C02%5C02-alguns_elementos.html">02 - Primeiros Elementos</a></li>
-<li>[03 - Primeiro Botão Funcionando (EM CONSTRUÇÃO)]</li>
-<li>[04 - Primeiro Cálculo Matemático (EM CONSTRUÇÃO)]</li>
+<li><code>text</code>: o texto que será exibido para o usuário</li>
+<li><code>textSize</code>: O tamanho do texto, lembre de usar a unidade sp, por exemplo <code>android:textSize="26sp"</code>, esta unidade faz com que o tamanho do texto mude caso o usuário aumente a fonte das letras no app.</li>
+<li><code>textColor</code>: Define a cor do texto, podendo usar código hexadecimal para escolher a cor, por exemplo: <code>android:textColor="#aa1122"</code> criará um texto vermelho.</li>
 </ul>
-</li>
+<h3 id="edittext">EditText </h3>
+<p>Exibe um campo para que o usuário escreva um texto. Útil para coletar informações do usuário.</p>
+<p>Alguns atributos úteis:</p>
+<ul>
+<li><code>hint</code>: o texto que será exibido para o usuário dentro do campo <strong>Atenção: não use <code>text</code>, use <code>hint</code>.</strong></li>
+<li><code>textSize</code>: O tamanho do texto, lembre de usar a unidade sp, por exemplo <code>android:textSize="26sp"</code>, esta unidade faz com que o tamanho do texto mude caso o usuário aumente a fonte das letras no app.</li>
+<li><code>textColorHint</code>: Por padrão o texto aparecerá em cinz claro, mas você pode usar este atributo para mudar a cor.</li>
+</ul>
+<h3 id="button">Button </h3>
+<p>Um botão para o usuário clicar.</p>
+<p>Alguns atributos úteis:</p>
+<ul>
+<li><code>text</code>: o texto que será colocado dentro do botão</li>
+</ul>
+<h3 id="checkbox">CheckBox </h3>
+<p>Uma caixa de seleção usuário selecionar.</p>
+<p>Alguns atributos úteis:</p>
+<ul>
+<li><code>text</code>: o texto que será colocado ao lado da caixa</li>
+</ul>
+<h3 id="radiobutton">RadioButton </h3>
+<p>Igual ao <code>CheckBox</code>, mas faz parte de um grupo, e somente um de cada grupo pode ser selecionado.</p>
+<p>Você vai precisar colocar os que fazem parte do mesmo grupo dentro da mesma tag <code>RadioGroup</code>, por exemplo:</p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>RadioGroup</span>
+    <span class="token attr-name"><span class="token namespace">android:</span>layout_width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>match_parent<span class="token punctuation">"</span></span>
+    <span class="token attr-name"><span class="token namespace">android:</span>layout_height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrap_content<span class="token punctuation">"</span></span>
+    <span class="token attr-name"><span class="token namespace">android:</span>orientation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>vertical<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>RadioButton</span>
+        <span class="token attr-name"><span class="token namespace">android:</span>layout_width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrap_content<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">android:</span>layout_height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrap_content<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">android:</span>text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Pirates<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">android:</span>textSize</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>24sp<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>RadioButton</span>
+        <span class="token attr-name"><span class="token namespace">android:</span>layout_width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrap_content<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">android:</span>layout_height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>wrap_content<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">android:</span>text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Ninjas<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">android:</span>textSize</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>24sp<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>RadioGroup</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h3 id="button-1">Button </h3>
+<p>Um botão para o usuário clicar.</p>
+<p>Alguns atributos úteis:</p>
+<ul>
+<li><code>text</code>: o texto que será colocado dentro do botão</li>
+</ul>
+<h3 id="imageview">ImageView </h3>
+<p>Para adicionar uma imagem você precisará importar a imagem como um <em>drawable</em>. Olhe no lado extremo esquerdo:<br>
+<img src="android_imagem_drawable.png" alt=""></p>
+<p>Clique no símbolo de <strong>+</strong> na esquerda.<br>
+Escolha "<em>Import Drawables</em>"<br>
+Uma janela abrirá para que você escolha a imagem.<br>
+Na tela seguinte escolha um nome para a imagem.<br>
+Agora você poderá adicionar uma <code>ImageView</code> no xml.<br>
+Coloque o nome da imagem no atributo <code>src</code>, por exemplo: <code>android:src="@drawable/nome_da_imagem"</code></p>
+<p>Alguns atributos úteis:</p>
+<ul>
+<li><code>maxHeight</code> e <code>maxWidth</code>: Máxima altura e largura da imagem</li>
 </ul>
 
       </div>
