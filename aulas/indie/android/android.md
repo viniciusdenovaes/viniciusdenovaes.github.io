@@ -8,9 +8,9 @@
     - [Windows (Vídeo)](https://youtu.be/0AJtabl7nkw)
 
 - Parte 01 Primeiros Passos:
-   - [00 - Primeiro App](android_files\curso\00\00-primeiro_app.html)
-   - [01 - Primeiro Layout](android_files\curso\01\01-simples_layout.html)
-   - [02 - Primeiros Elementos](android_files\curso\02\02-alguns_elementos.html)
+   - [00 - Primeiro App](android_files/curso/00/00-primeiro_app.html)
+   - [01 - Primeiro Layout](android_files/curso/01/01-simples_layout.html)
+   - [02 - Primeiros Elementos](android_files/curso/02/02-alguns_elementos.html)
    - [03 - Primeiro Botão Funcionando (EM CONSTRUÇÃO)]
    - [04 - Primeiro Cálculo Matemático (EM CONSTRUÇÃO)]
 
