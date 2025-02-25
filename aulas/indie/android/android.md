@@ -11,8 +11,9 @@
    - [00 - Primeiro App](android_files/curso/00/00-primeiro_app.html)
    - [01 - Primeiro Layout](android_files/curso/01/01-simples_layout.html)
    - [02 - Primeiros Elementos](android_files/curso/02/02-alguns_elementos.html)
-   - [03 - Primeiro Botão Funcionando (EM CONSTRUÇÃO)]
-   - [04 - Primeiro Cálculo Matemático (EM CONSTRUÇÃO)]
+   - [03 - Primeiro Rascunho em Java](android_files/curso/03/03-um_programa_em_java.html)
+   - [04 - Primeiro Botão Funcionando (Java) (EM CONSTRUÇÃO)]
+   - [05 - Primeiro Cálculo Matemático (EM CONSTRUÇÃO)]
 
 
 

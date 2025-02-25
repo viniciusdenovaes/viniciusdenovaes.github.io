@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>android</title>
+      <title>03-um_programa_em_java</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -24,32 +24,95 @@
     
       <div class="crossnote markdown-preview  ">
       
-<h1 id="android">Android </h1>
-<h2 id="curso">Curso </h2>
-<ul>
-<li>
-<p>Prólogo</p>
-<ul>
-<li>Instalação:.
-<ul>
-<li><a href="https://youtu.be/0AJtabl7nkw">Windows (Vídeo)</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Parte 01 Primeiros Passos:</p>
-<ul>
-<li><a href="android_files/curso/00/00-primeiro_app.html">00 - Primeiro App</a></li>
-<li><a href="android_files/curso/01/01-simples_layout.html">01 - Primeiro Layout</a></li>
-<li><a href="android_files/curso/02/02-alguns_elementos.html">02 - Primeiros Elementos</a></li>
-<li><a href="android_files/curso/03/03-um_programa_em_java.html">03 - Primeiro Rascunho em Java</a></li>
-<li>[04 - Primeiro Botão Funcionando (Java) (EM CONSTRUÇÃO)]</li>
-<li>[05 - Primeiro Cálculo Matemático (EM CONSTRUÇÃO)]</li>
-</ul>
-</li>
-</ul>
+<h1 id="um-pequeno-programa-em-java">Um pequeno programa em Java </h1>
+<p>Vamos fazer um pequeno programa em Java para conhecer alguns conceitos básicos que vamos precisar, como variáveis, tipos, uso de métodos e valores.</p>
+<p>Crie um rascunho (<em>scratch</em>) no Android Studio, este ambiente de rascunho é independente de projeto e serve para testar algumas funcionalidades.</p>
+<p>Clique com o botão direito em <em>scratches and consoles</em></p>
+<p><img src="android_scratch.png" alt=""></p>
+<p>As opções estarão em ordem alfabética, selecione Java.</p>
+<p><img src="android_scratch_java.png" alt=""></p>
+<p>Será criado um arquivo com uma classe e um método <code>main</code>.</p>
+<p>Agora vamos colocar um código dentro do <code>main</code></p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">Scratch</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">/*
+         * TODO CÓDIGO DEVE SER COLOCADO AQUI
+         */</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p>Para programar usaremos a seguinte ordem:</p>
+<ol>
+<li>Primeiro criaremos 3 variáveis do tipo inteira, isso quer dizer que estas variáveis só podem ter um valor de um número inteiro.</li>
+<li>Depois colocaremos valores nas variáveis <code>a</code> e <code>b</code></li>
+<li>Depois vamos operar as variáveis e guardar o valor em <code>c</code></li>
+<li>Em seguida vamos mostrar o resultado na tela para o usuário.</li>
+</ol>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">Scratch</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// Aqui estamos definindo as variaveis</span>
+        <span class="token comment">// devemos colocar o tipo (int) e o nome da variavel</span>
+        <span class="token keyword keyword-int">int</span> a<span class="token punctuation">;</span>
+        <span class="token keyword keyword-int">int</span> b<span class="token punctuation">;</span>
+        <span class="token keyword keyword-int">int</span> c<span class="token punctuation">;</span>
 
+        <span class="token comment">// aqui estamos colocando um valor para as variaveis a e b</span>
+        a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        b <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// estamos fazendo uma operacao matematica e guardando este valor em c</span>
+        c <span class="token operator">=</span> a<span class="token operator">+</span>b<span class="token punctuation">;</span>
+
+        <span class="token comment">// aquio estamos imprimindo esta variavel na tela do usuario</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p>Execute o programa clicando na seta verde ao lado esquerdo da <code>main</code> para ver o resultado.</p>
+<h3 id="mais-um-programa-em-java">Mais um programa em Java </h3>
+<p>Java é uma linguagem orientada a objetos, isto quer dizer que cada elemento criado tem <strong>muitas funcionalidades</strong>.</p>
+<p>Estes elementos criados chamamos de <strong>objetos</strong>.</p>
+<p>Neste próximo exemplo vamos criar algumas <code>String</code> e veremos algumas funcionalidades.</p>
+<p><code>String</code> são objetos que representam palavras ou qualquer cadeia de characteres alinhados. Criamos uma <code>String</code> colocando aspas duplas em volta de uma cadeia de characteres.</p>
+<p>Por exemplo <code>"casa"</code> é uma <code>String</code>.<br>
+<code>"a minha casa"</code> é uma <code>String</code>.<br>
+<code>"n#n s3n$3!"</code> é uma <code>String</code>.<br>
+E <strong>Atenção</strong> <code>"3"</code> é uma <code>String</code> e não o número inteiro <code>3</code>.</p>
+<p>Agora crie outro arquivos de rascunho e vamos usar algumas funcionalidades de <code>String</code>.</p>
+<p>Para programar usaremos a seguinte ordem:</p>
+<ol>
+<li>Primeiro criaremos 3 variáveis para guardar os valores das <code>String</code></li>
+<li>Depois colocaremos valores nas variáveis</li>
+<li>Depois vamos operar as variáveis concatenando o valor de <code>nome</code> com <code>sobrenome</code></li>
+<li>Em seguida vamos mostrar o resultado</li>
+<li>Depois vamos usar uma funcionalidade de <code>String</code> que é o método <code>toUpperCase</code>, este método retorna o mesmo valor da <code>String</code> mas transformando tudo em letra maiúscula.</li>
+<li>Em seguida vamos mostrar o tamanho da <code>String nome</code> usando o método <code>lenght</code> que retorna um inteiro.</li>
+</ol>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">Scratch</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// vamos definir 3 variaveis do tipo String</span>
+        <span class="token class-name">String</span> nome<span class="token punctuation">;</span>
+        <span class="token class-name">String</span> sobrenome<span class="token punctuation">;</span>
+        <span class="token class-name">String</span> nomeInteiro<span class="token punctuation">;</span>
+
+        <span class="token comment">// Vamos dar um valor para estas variaveis</span>
+        nome <span class="token operator">=</span> <span class="token string">"vinicius"</span><span class="token punctuation">;</span>
+        sobrenome <span class="token operator">=</span> <span class="token string">"pereira"</span><span class="token punctuation">;</span>
+        nomeInteiro <span class="token operator">=</span> nome <span class="token operator">+</span> sobrenome<span class="token punctuation">;</span>
+
+        <span class="token comment">// vamos imprimir o resultado</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>nomeInteiro<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// vamos usar uma funcionalidade da String: transformar para letra maiuscula</span>
+        <span class="token class-name">String</span> nomeLetraMaiuscula <span class="token operator">=</span> nome<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>nomeLetraMaiuscula<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// vamos ver o tamanho do nome</span>
+        <span class="token keyword keyword-int">int</span> tamanho <span class="token operator">=</span> nome<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>tamanho<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
       </div>
       
       
