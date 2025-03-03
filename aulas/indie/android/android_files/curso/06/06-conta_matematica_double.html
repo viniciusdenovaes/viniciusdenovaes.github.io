@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>05-conta_matematica</title>
+      <title>06-conta_matematica_double</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -24,16 +24,14 @@
     
       <div class="crossnote markdown-preview  ">
       
-<h1 id="um-programa-com-operações-matemáticas">Um Programa com Operações Matemáticas </h1>
-<p>Já vimos que <code>Java</code> tem tipos diferentes de variáveis e objetos.</p>
-<p>Por exemplo, se fizermos a conta <code>2+3</code> teremos resultado <code>5</code>. Mas se fizermos a conta <code>"2"+"3"</code> teremos resultado <code>"23"</code>.</p>
-<p>Por que isso acontece? Porque <code>2</code> é o valor do tipo <code>int</code> (número inteiro) <code>2</code>, que se somado com <code>3</code> teremos <code>5</code>.</p>
-<p>Mas <code>"2"</code> é uma variável do tipo <code>String</code> que se somarmos com <code>"3"</code> ele irá <strong>concatenar</strong> as duas <strong>palavras</strong> resultado na <strong>palavra</strong> <code>"23"</code>. Assim como <code>"Hello" + "World"</code> resultará em <code>"HelloWorld"</code>.</p>
-<p>Então para fazermos operações matemáticas com a entrada do usuário, que sempre será uma <code>String</code>, precisamos aprender a transformar uma <code>String</code> em um <code>int</code>. O nome desta transformação é <em><strong>parse</strong></em>.</p>
+<h1 id="um-programa-com-operações-matemáticas-usando-double">Um Programa com Operações Matemáticas Usando Double </h1>
+<p>No tutorial passado fizemos um programa que usa <code>Integer</code> para fazer operações matemáticas.</p>
+<p>Vimos que isto não basta para algumas operações, precisamos usar números reais com uma parte decimal para algumas operações.</p>
+<p>Neste tutorial vamos fazer <strong>o mesmo programa</strong>, mas desta vez usaremos número decimais.</p>
 <h2 id="o-programa">O Programa </h2>
-<p>Vamos fazer um programa que recebe dois números e exibe a soma, subtração, multiplicação e a divisão.</p>
+<p>Vamos fazer um programa que recebe dois números reais e exibe a soma, subtração, multiplicação e a divisão.</p>
 <h3 id="a-parte-do-xml">A parte do <code>xml</code> </h3>
-<p>Para a parte do <code>xml</code> copie o código abaixo.</p>
+<p>Para a parte do <code>xml</code> vamos usar o <code>xml</code> da aula anterior, apenas mudar o tipo de entrada de <code>number</code> para <code>numberDecimal</code>. Outros tipos de entrada podems ser visto <a href="https://developer.android.com/reference/android/widget/TextView#attr_android:inputType">aqui</a></p>
 <pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token prolog">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>LinearLayout</span>
     <span class="token attr-name"><span class="token namespace">xmlns:</span>android</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://schemas.android.com/apk/res/android<span class="token punctuation">"</span></span>
@@ -56,7 +54,7 @@
             <span class="token attr-name"><span class="token namespace">android:</span>layout_height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>64dp<span class="token punctuation">"</span></span>
             <span class="token attr-name"><span class="token namespace">android:</span>hint</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Numero 1<span class="token punctuation">"</span></span>
             <span class="token attr-name"><span class="token namespace">android:</span>textSize</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>32dp<span class="token punctuation">"</span></span>
-            <span class="token attr-name"><span class="token namespace">android:</span>inputType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>number<span class="token punctuation">"</span></span>
+            <span class="token attr-name"><span class="token namespace">android:</span>inputType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>numberDecimal<span class="token punctuation">"</span></span>
             <span class="token punctuation">/&gt;</span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>EditText</span>
             <span class="token attr-name"><span class="token namespace">android:</span>id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@+id/numero2<span class="token punctuation">"</span></span>
@@ -64,7 +62,7 @@
             <span class="token attr-name"><span class="token namespace">android:</span>layout_height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>64dp<span class="token punctuation">"</span></span>
             <span class="token attr-name"><span class="token namespace">android:</span>hint</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Numero 2<span class="token punctuation">"</span></span>
             <span class="token attr-name"><span class="token namespace">android:</span>textSize</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>32dp<span class="token punctuation">"</span></span>
-            <span class="token attr-name"><span class="token namespace">android:</span>inputType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>number<span class="token punctuation">"</span></span>
+            <span class="token attr-name"><span class="token namespace">android:</span>inputType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>numberDecimal<span class="token punctuation">"</span></span>
             <span class="token punctuation">/&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>LinearLayout</span><span class="token punctuation">&gt;</span></span>
 
@@ -172,16 +170,8 @@
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>LinearLayout</span><span class="token punctuation">&gt;</span></span>
 
-</code></pre><h4 id="novidades-do-código">Novidades do Código </h4>
-<p>Temos novidades neste código <code>xml</code>:</p>
-<h5 id="tipo-de-teclado-na-entrada">Tipo de teclado na entrada </h5>
-<p>Nos elementos <code>EditText</code> que recebem números, colocamos o parâmetro <code>android:inputType="number"</code>, que usa um teclado numérico quando o usuário for colocar a entrada. Outros tipos de entrada podems ser visto <a href="https://developer.android.com/reference/android/widget/TextView#attr_android:inputType">aqui</a></p>
-<h5 id="table-layout">Table Layout </h5>
-<p>Para organizar a saída, e deixar tudo alinhado, usamos o layout <code>TableLayout</code>, e em cada linha deste layout usamos <code>TableRow</code></p>
-<h5 id="estilo-do-texto-para-números">Estilo do texto para números </h5>
-<p>Para ficar ainda mais alinhado, incluímos o parâmetro <code>android:fontFamily="monospace"</code> nos textos de saída para deixar os números da saída com a fonte <em>monospace</em>. Esta fonte deixa todos os characteres com a mesma largura, e ajuda o texto da linha de uma tabela a ficar alinhado com as outras linhas.</p>
-<h3 id="a-parte-do-java">A parte do <code>java</code> </h3>
-<p>Quase tudo no código <code>java</code> já vimos em aulas anteriores:</p>
+</code></pre><h3 id="a-parte-do-java">A parte do <code>java</code> </h3>
+<p>A diferença entre este código e o anterior é que agora vamos operar números do tipo <code>Double</code></p>
 <pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">com<span class="token punctuation">.</span>viniciusdenovaes<span class="token punctuation">.</span>meuapptesteunip</span><span class="token punctuation">;</span>
 
 <span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">android<span class="token punctuation">.</span>os<span class="token punctuation">.</span></span><span class="token class-name">Bundle</span></span><span class="token punctuation">;</span>
@@ -232,21 +222,22 @@
             <span class="token class-name">String</span> textoN1 <span class="token operator">=</span> inNum1<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token class-name">String</span> textoN2 <span class="token operator">=</span> inNum2<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-            <span class="token comment">// transformamos o text em um numero inteiro</span>
-            <span class="token class-name">Integer</span> numero1 <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>textoN1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token class-name">Integer</span> numero2 <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>textoN2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// transformamos o text em um numero Double</span>
+            <span class="token class-name">Double</span> numero1 <span class="token operator">=</span> <span class="token class-name">Double</span><span class="token punctuation">.</span><span class="token function">parseDouble</span><span class="token punctuation">(</span>textoN1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">Double</span> numero2 <span class="token operator">=</span> <span class="token class-name">Double</span><span class="token punctuation">.</span><span class="token function">parseDouble</span><span class="token punctuation">(</span>textoN2<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
             <span class="token comment">// fazemos as operacoes com numeros</span>
-            <span class="token class-name">Integer</span> resSom <span class="token operator">=</span> numero1 <span class="token operator">+</span> numero2<span class="token punctuation">;</span>
-            <span class="token class-name">Integer</span> resSub <span class="token operator">=</span> numero1 <span class="token operator">-</span> numero2<span class="token punctuation">;</span>
-            <span class="token class-name">Integer</span> resMul <span class="token operator">=</span> numero1 <span class="token operator">*</span> numero2<span class="token punctuation">;</span>
-            <span class="token class-name">Integer</span> resDiv <span class="token operator">=</span> numero1 <span class="token operator">/</span> numero2<span class="token punctuation">;</span>
+            <span class="token class-name">Double</span> resSom <span class="token operator">=</span> numero1 <span class="token operator">+</span> numero2<span class="token punctuation">;</span>
+            <span class="token class-name">Double</span> resSub <span class="token operator">=</span> numero1 <span class="token operator">-</span> numero2<span class="token punctuation">;</span>
+            <span class="token class-name">Double</span> resMul <span class="token operator">=</span> numero1 <span class="token operator">*</span> numero2<span class="token punctuation">;</span>
+            <span class="token class-name">Double</span> resDiv <span class="token operator">=</span> numero1 <span class="token operator">/</span> numero2<span class="token punctuation">;</span>
 
             <span class="token comment">// fazemos a operacao de volta para transformar o numero em string</span>
-            <span class="token class-name">String</span> texSom <span class="token operator">=</span> resSom<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token class-name">String</span> texSub <span class="token operator">=</span> resSub<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token class-name">String</span> texMul <span class="token operator">=</span> resMul<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token class-name">String</span> texDiv <span class="token operator">=</span> resDiv<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// desta vez com 3 casas decimais</span>
+            <span class="token class-name">String</span> texSom <span class="token operator">=</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"%.3f"</span><span class="token punctuation">,</span> resSom<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">String</span> texSub <span class="token operator">=</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"%.3f"</span><span class="token punctuation">,</span> resSub<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">String</span> texMul <span class="token operator">=</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"%.3f"</span><span class="token punctuation">,</span> resMul<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">String</span> texDiv <span class="token operator">=</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"%.3f"</span><span class="token punctuation">,</span> resDiv<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
             outSom<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span>texSom<span class="token punctuation">)</span><span class="token punctuation">;</span>
             outSub<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span>texSub<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -261,19 +252,12 @@
 
 </code></pre><h4 id="novidades-do-código-java">Novidades do Código <code>java</code> </h4>
 <p>Temos novidades neste código <code>java</code>:</p>
-<h5 id="transformação-de-string-em-integer">Transformação de <code>String</code> em <code>Integer</code> </h5>
-<p>Usamos o comando <code>Integer numero1 = Integer.parseInt(textoN1);</code> para transformar o texto da entrada em um número.</p>
-<h5 id="transformação-de-integer-em-string">Transformação de <code>Integer</code> em <code>String</code> </h5>
-<p>Usamos o comando <code>String texSom = resSom.toString();</code> para transformar o resultado da operação em um texto.</p>
-<h5 id="usamos-integer-ao-invés-de-int">Usamos <code>Integer</code> ao invés de <code>int</code> </h5>
-<p>Podemos usar <code>int</code> ou <code>Integer</code> para usar números inteiros. Aqui usamos <code>Integer</code> para usar o método <code>toString()</code> que ele fornece. Este método transforma um número em <code>String</code>.</p>
+<h5 id="transformação-de-double-em-string">Transformação de <code>Double</code> em <code>String</code> </h5>
+<p>Usamos o comando <code>String texSom = String.format("%.3f", resSom);</code> para transformar o resultado da operação em um texto, o formato <code>"%.3f"</code> especifica que deve ser usado apenas 3 casas decimais depois do <code>.</code>.</p>
 <h4 id="resultado">Resultado </h4>
 <p>Abaixo podemos ver o resultado em operar dois números inteiros</p>
-<p><img src="android_resultado_int.png" alt=""></p>
-<h5 id="o-que-está-errado">O Que Está Errado? </h5>
-<p>Você percebeu que a divisão de <code>9</code> por <code>2</code> deu resultado <code>4</code>? Isto acontece por que quando operamos um número inteiro por outro inteiro o resultado deve ser um inteiro! Isto faz com que a parte decimal do resultado <code>9/2=4.5</code> foi jogada fora.</p>
-<p>Para consertar isto precisamos usar um número real no lugar de um número inteiro.</p>
-<p>Faremos isso no próximo tutorial...</p>
+<p><img src="android_resultado_double.png" alt=""></p>
+<p>Agora podemos ver que o resultado está correto até certa casa decimal especificada.</p>
 
       </div>
       

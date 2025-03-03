@@ -1,22 +1,19 @@
-# Um Programa com Operações Matemáticas
+# Um Programa com Operações Matemáticas Usando Double
 
-Já vimos que `Java` tem tipos diferentes de variáveis e objetos. 
+No tutorial passado fizemos um programa que usa `Integer` para fazer operações matemáticas. 
 
-Por exemplo, se fizermos a conta `2+3` teremos resultado `5`. Mas se fizermos a conta `"2"+"3"` teremos resultado `"23"`.
+Vimos que isto não basta para algumas operações, precisamos usar números reais com uma parte decimal para algumas operações.
 
-Por que isso acontece? Porque `2` é o valor do tipo `int` (número inteiro) `2`, que se somado com `3` teremos `5`. 
+Neste tutorial vamos fazer **o mesmo programa**, mas desta vez usaremos número decimais.
 
-Mas `"2"` é uma variável do tipo `String` que se somarmos com `"3"` ele irá **concatenar** as duas **palavras** resultado na **palavra** `"23"`. Assim como `"Hello" + "World"` resultará em `"HelloWorld"`.
-
-Então para fazermos operações matemáticas com a entrada do usuário, que sempre será uma `String`, precisamos aprender a transformar uma `String` em um `int`. O nome desta transformação é ***parse***.
 
 ## O Programa
 
-Vamos fazer um programa que recebe dois números e exibe a soma, subtração, multiplicação e a divisão.
+Vamos fazer um programa que recebe dois números reais e exibe a soma, subtração, multiplicação e a divisão.
 
 ### A parte do `xml`
 
-Para a parte do `xml` copie o código abaixo.
+Para a parte do `xml` vamos usar o `xml` da aula anterior, apenas mudar o tipo de entrada de `number` para `numberDecimal`. Outros tipos de entrada podems ser visto [aqui](https://developer.android.com/reference/android/widget/TextView#attr_android:inputType)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -41,7 +38,7 @@ Para a parte do `xml` copie o código abaixo.
             android:layout_height="64dp"
             android:hint="Numero 1"
             android:textSize="32dp"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             />
         <EditText
             android:id="@+id/numero2"
@@ -49,7 +46,7 @@ Para a parte do `xml` copie o código abaixo.
             android:layout_height="64dp"
             android:hint="Numero 2"
             android:textSize="32dp"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             />
     </LinearLayout>
 
@@ -161,25 +158,10 @@ Para a parte do `xml` copie o código abaixo.
 
 
 
-#### Novidades do Código
-
-Temos novidades neste código `xml`:
-
-##### Tipo de teclado na entrada
-Nos elementos `EditText` que recebem números, colocamos o parâmetro `android:inputType="number"`, que usa um teclado numérico quando o usuário for colocar a entrada. Outros tipos de entrada podems ser visto [aqui](https://developer.android.com/reference/android/widget/TextView#attr_android:inputType)
-
-
-##### Table Layout
-Para organizar a saída, e deixar tudo alinhado, usamos o layout `TableLayout`, e em cada linha deste layout usamos `TableRow`
-
-
-##### Estilo do texto para números
-Para ficar ainda mais alinhado, incluímos o parâmetro `android:fontFamily="monospace"` nos textos de saída para deixar os números da saída com a fonte *monospace*. Esta fonte deixa todos os characteres com a mesma largura, e ajuda o texto da linha de uma tabela a ficar alinhado com as outras linhas.
-
 
 ### A parte do `java`
 
-Quase tudo no código `java` já vimos em aulas anteriores:
+A diferença entre este código e o anterior é que agora vamos operar números do tipo `Double`
 
 ```java
 package com.viniciusdenovaes.meuapptesteunip;
@@ -232,21 +214,22 @@ public class MainActivity extends AppCompatActivity {
             String textoN1 = inNum1.getText().toString();
             String textoN2 = inNum2.getText().toString();
 
-            // transformamos o text em um numero inteiro
-            Integer numero1 = Integer.parseInt(textoN1);
-            Integer numero2 = Integer.parseInt(textoN2);
+            // transformamos o text em um numero Double
+            Double numero1 = Double.parseDouble(textoN1);
+            Double numero2 = Double.parseDouble(textoN2);
 
             // fazemos as operacoes com numeros
-            Integer resSom = numero1 + numero2;
-            Integer resSub = numero1 - numero2;
-            Integer resMul = numero1 * numero2;
-            Integer resDiv = numero1 / numero2;
+            Double resSom = numero1 + numero2;
+            Double resSub = numero1 - numero2;
+            Double resMul = numero1 * numero2;
+            Double resDiv = numero1 / numero2;
 
             // fazemos a operacao de volta para transformar o numero em string
-            String texSom = resSom.toString();
-            String texSub = resSub.toString();
-            String texMul = resMul.toString();
-            String texDiv = resDiv.toString();
+            // desta vez com 3 casas decimais
+            String texSom = String.format("%.3f", resSom);
+            String texSub = String.format("%.3f", resSub);
+            String texMul = String.format("%.3f", resMul);
+            String texDiv = String.format("%.3f", resDiv);
 
             outSom.setText(texSom);
             outSub.setText(texSub);
@@ -265,26 +248,14 @@ public class MainActivity extends AppCompatActivity {
 
 Temos novidades neste código `java`:
 
-##### Transformação de `String` em `Integer`
-Usamos o comando `Integer numero1 = Integer.parseInt(textoN1);` para transformar o texto da entrada em um número.
-
-##### Transformação de `Integer` em `String`
-Usamos o comando `String texSom = resSom.toString();` para transformar o resultado da operação em um texto.
-
-##### Usamos `Integer` ao invés de `int`
-Podemos usar `int` ou `Integer` para usar números inteiros. Aqui usamos `Integer` para usar o método `toString()` que ele fornece. Este método transforma um número em `String`.
+##### Transformação de `Double` em `String`
+Usamos o comando `String texSom = String.format("%.3f", resSom);` para transformar o resultado da operação em um texto, o formato `"%.3f"` especifica que deve ser usado apenas 3 casas decimais depois do `.`.
 
 #### Resultado
 
 Abaixo podemos ver o resultado em operar dois números inteiros
 
-![](android_resultado_int.png)
+![](android_resultado_double.png)
 
-##### O Que Está Errado?
-
-Você percebeu que a divisão de `9` por `2` deu resultado `4`? Isto acontece por que quando operamos um número inteiro por outro inteiro o resultado deve ser um inteiro! Isto faz com que a parte decimal do resultado `9/2=4.5` foi jogada fora.
-
-Para consertar isto precisamos usar um número real no lugar de um número inteiro.
-
-Faremos isso no próximo tutorial...
+Agora podemos ver que o resultado está correto até certa casa decimal especificada.
 
