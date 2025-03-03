@@ -1,8 +1,11 @@
-# Programação de Dispositivos Móveis
+# Desenvolvimento de Dispositivos Móveis
 
 
 ## [Curso (Link)](https://viniciusdenovaes.github.io/aulas/indie/android/android.html)
 
+
+## Trabalhos
+#### [Enunciado trabalho NP1](ddm_files/NP1.DDM_2025.pdf)
 
 <!-- ## Labs
 
