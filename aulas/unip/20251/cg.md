@@ -7,8 +7,10 @@
 - [Aula 03 Equações Cartesianas e Paramétricas](cg_files/aulas/03-aula_equacoes.html)
 
 ### Listas
+#### NP1
 - [Lista 01](cg_files/listas/01/lista01CG.pdf)
 - [Lista 02](cg_files/listas/02/lista02CG.pdf)
+#### NP2
 - [Lista 03](cg_files/listas/03/lista03CG.pdf)
 
 <!-- ### Trabalho
