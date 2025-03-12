@@ -1,16 +1,16 @@
 # IA
 
-## Trabalho:
-- [Hokama`s TD Mod (sem fonte de vida)](ia_files/trabalho/hokya/hoktd.html)
+<!-- ## Trabalho:
+- [Hokama`s TD Mod (sem fonte de vida)](ia_files/trabalho/hokya/hoktd.html) -->
 
 ## Listas:
 ### NP1
 - [Lista 01 - Espaço de Estados](ia_files/listas/01/lista01IA.pdf)
 
-### NP2
+<!-- ### NP2
 - [Lista 02 - Heurística de Avaliação](ia_files/listas/02/lista02IA.pdf)
 - [Lista 03 - Busca da Melhor Escolha](ia_files/listas/03/lista03IA.pdf)
-- [Lista 04 - Jogos](ia_files/listas/04/lista04IA.pdf)
+- [Lista 04 - Jogos](ia_files/listas/04/lista04IA.pdf) -->
 
 ## Livros:
 

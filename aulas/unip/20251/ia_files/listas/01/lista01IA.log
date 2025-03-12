@@ -1,112 +1,128 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.12.1)  20 MAR 2023 15:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.3)  12 MAR 2025 16:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**lista01IA.tex
-(./lista01IA.tex
-LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-01-21>
-(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+**./lista01IA.tex
+(lista01IA.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+(C:\Users\vinicius\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(C:\Users\vinicius\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count185
-\c@section=\count186
-\c@subsection=\count187
-\c@subsubsection=\count188
-\c@paragraph=\count189
-\c@subparagraph=\count190
-\c@figure=\count191
-\c@table=\count192
-\abovecaptionskip=\skip47
-\belowcaptionskip=\skip48
-\bibindent=\dimen138
+\c@part=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\c@figure=\count193
+\c@table=\count194
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
 )
-(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+(C:\Users\vinicius\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks16
-\inpenc@posthook=\toks17
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
 )
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2022/01/26 3.70 The Babel package
-\babel@savecnt=\count193
-\U@D=\dimen139
-\l@unhyphenated=\language87
+(C:\Users\vinicius\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2024/01/07 v24.1 The Babel package
+\babel@savecnt=\count195
+\U@D=\dimen141
+\l@unhyphenated=\language79
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+(C:\Users\vinicius\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def
+)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count194
+\bbl@dirlevel=\count196
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/portuguese.ldf
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\vinicius\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\vinicius\AppData\Local\Programs\MiKTeX\tex/latex/babel-portuges\portu
+guese.ldf
 Language: portuges 2021/07/09 v1.2t Portuguese support from the babel system
 Package babel Info: Making " an active character on input line 143.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+(C:\Users\vinicius\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/pt\ba
+bel-portuguese.tex
+Package babel Info: Importing font and identification data for portuguese
+(babel)             from babel-pt.ini. Reported on input line 11.
+)
+(C:\Users\vinicius\AppData\Local\Programs\MiKTeX\tex/latex/algorithm2e\algorith
+m2e.sty
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count195
+\c@AlgoLine=\count197
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+(C:\Users\vinicius\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
-\algocf@hangindent=\skip49
+\algocf@hangindent=\skip50
 
-(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
-Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count196
+(C:\Users\vinicius\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.
+sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count198
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+(C:\Users\vinicius\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+(C:\Users\vinicius\AppData\Local\Programs\MiKTeX\tex/latex/relsize\relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
-\skiptotal=\skip50
-\skiplinenumber=\skip51
-\skiprule=\skip52
-\skiphlne=\skip53
-\skiptext=\skip54
-\skiplength=\skip55
-\algomargin=\skip56
-\skipalgocfslide=\skip57
-\algowidth=\dimen140
-\inoutsize=\dimen141
-\inoutindent=\dimen142
-\interspacetitleruled=\dimen143
-\interspacealgoruled=\dimen144
-\interspacetitleboxruled=\dimen145
-\algocf@ruledwidth=\skip58
-\algocf@inoutbox=\box50
-\algocf@inputbox=\box51
-\AlCapSkip=\skip59
-\AlCapHSkip=\skip60
-\algoskipindent=\skip61
-\algocf@nlbox=\box52
-\algocf@hangingbox=\box53
-\algocf@untilbox=\box54
-\algocf@skipuntil=\skip62
-\algocf@capbox=\box55
-\algocf@lcaptionbox=\skip63
-\algoheightruledefault=\skip64
-\algoheightrule=\skip65
-\algotitleheightruledefault=\skip66
-\algotitleheightrule=\skip67
-\c@algocfline=\count197
-\c@algocfproc=\count198
-\c@algocf=\count199
-\algocf@algoframe=\box56
-\algocf@algobox=\box57
+\skiptotal=\skip51
+\skiplinenumber=\skip52
+\skiprule=\skip53
+\skiphlne=\skip54
+\skiptext=\skip55
+\skiplength=\skip56
+\algomargin=\skip57
+\skipalgocfslide=\skip58
+\algowidth=\dimen142
+\inoutsize=\dimen143
+\inoutindent=\dimen144
+\interspacetitleruled=\dimen145
+\interspacealgoruled=\dimen146
+\interspacetitleboxruled=\dimen147
+\algocf@ruledwidth=\skip59
+\algocf@inoutbox=\box51
+\algocf@inputbox=\box52
+\AlCapSkip=\skip60
+\AlCapHSkip=\skip61
+\algoskipindent=\skip62
+\algocf@nlbox=\box53
+\algocf@hangingbox=\box54
+\algocf@untilbox=\box55
+\algocf@skipuntil=\skip63
+\algocf@capbox=\box56
+\algocf@lcaptionbox=\skip64
+\algoheightruledefault=\skip65
+\algoheightrule=\skip66
+\algotitleheightruledefault=\skip67
+\algotitleheightrule=\skip68
+\c@algocfline=\count199
+\c@algocfproc=\count266
+\c@algocf=\count267
+\algocf@algoframe=\box57
+\algocf@algobox=\box58
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
-Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
-\@enLab=\toks18
+(C:\Users\vinicius\AppData\Local\Programs\MiKTeX\tex/latex/tools\enumerate.sty
+Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
+\@enLab=\toks19
 )
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count266
-\l__pdf_internal_box=\box58
-)
-(./lista01IA.aux)
+(C:\Users\vinicius\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-
+pdftex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count268
+\l__pdf_internal_box=\box59
+) (lista01IA.aux)
 \openout1 = `lista01IA.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
@@ -141,33 +157,39 @@ L/cmm/m/it/12 N; A; I; O\OT1/cmr/m/n/12 )$
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+{C:/Users/vinicius/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+[2]
 Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
 
-[3] [4] [5] (./lista01IA.aux) ) 
+[3] [4] [5] (lista01IA.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+ ***********
+ ) 
 Here is how much of TeX's memory you used:
- 2748 strings out of 478287
- 48010 string characters out of 5849289
- 370993 words of memory out of 5000000
- 20978 multiletter control sequences out of 15000+600000
- 474192 words of font info for 44 fonts, out of 8000000 for 9000
+ 2882 strings out of 474485
+ 52395 string characters out of 5742319
+ 1932542 words of memory out of 5000000
+ 25195 multiletter control sequences out of 15000+600000
+ 563002 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,6n,52p,475b,282s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-su
-per-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
-2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/typ
-e1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
-frm1440.pfb>
-Output written on lista01IA.pdf (5 pages, 87752 bytes).
+ 42i,6n,52p,477b,288s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\vinicius\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\t
+crm1200.pk> <C:\Users\vinicius\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\tcrm1440.pk><C:/Users/vinicius/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmbx12.pfb><C:/Users/vinicius/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/vinicius/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/vinicius/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/vin
+icius/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C
+:/Users/vinicius/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+msy10.pfb>
+Output written on lista01IA.pdf (5 pages, 84700 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 58 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

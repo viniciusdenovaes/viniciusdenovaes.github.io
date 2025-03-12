@@ -12,10 +12,10 @@
 ##### CC e SI
 * [DDM](aulas/unip/20251/ddm.html)
 * [LPOO (CC e SI)](aulas/indie/java/java.html)
-<!-- * [IA](aulas/unip/20241/ia.html)
+* [IA](aulas/unip/20241/ia.html)
 * [CG](aulas/unip/20241/cg.html)
-* [AA](aulas/unip/20241/aa.html)
-* [LFA](aulas/unip/20241/lfa.html) -->
+<!-- * [AA](aulas/unip/20241/aa.html) -->
+* [LFA](aulas/unip/20241/lfa.html)
 ##### ADS
 * [POO (ADS)](aulas/unip/20251/poo_ads.html)
 
