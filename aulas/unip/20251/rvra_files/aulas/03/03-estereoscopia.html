@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>index</title>
+      <title>03-estereoscopia</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -24,113 +24,123 @@
     
       <div class="crossnote markdown-preview  ">
       
-<h2 id="aulas">Aulas </h2>
-<h3 id="atuais-20251">Atuais (2025/1) </h3>
-<h5 id="cc-e-si">CC e SI </h5>
+<h1 id="estereoscopia-como-simular-sentidos-em-3d1">Estereoscopia (Como Simular Sentidos em 3D)<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> </h1>
+<p>Para dar a sensação de um ambiente 3D em som temos a tecnologia estéreo.</p>
+<p>Diferentes caixas de som ligadas à mesma fonte emitem os sons em diferentes tempos e volumes.</p>
+<p>Com um headset podemos ver claramente o efeito, dando a sensação exata da direção fonte do som, criando uma ambientação sonora em 3D.</p>
+<p>A mesma tecnologia sonora em estéreo pode ser usada para a visão, criando a sensação de profundidade.</p>
+<p>Nas figuras abaixo podemos ver como nossos olhos funcionam naturalmente dando a sensação de profundidade. Neste experimento colocamos o nosso polegar perto do nosso nariz, com um ponto de referência mais longe.</p>
+<p>Na primeira figura olhamos para o nosso polegar e percebemos que o ponto ficou duplicado.</p>
+<p><img src="ilusao-estereo-polegar-duas-bandeiras.png" alt=""></p>
+<p>Na segunda figura olhamos para o ponto e percebemos que o nosso polegar ficou duplicado.</p>
+<p><img src="ilusao-estereo-dois-polegar-bandeiras.png" alt=""></p>
+<p>Assim como o som, saindo com uma diferença de diferentes fontes, a diferença das imagens que nossos olhos recebem nos dão a sensação de profundidade.</p>
+<p>Em uma tela, normalmente somente imagens mono são geradas, fazendo que nossos dois olhos percebam a mesma imagem. Então como fazer para que nosso cérebro tenha a sensação de 3D (profundidade)?</p>
+<p>Teremos duas principais estratégias para dar a ilusão de profundidade:</p>
 <ul>
-<li>Ano 1
-<ul>
-<li><a href="aulas/unip/20251/ddm.html">DDM</a></li>
+<li>Efeitos passivos: quando a ilução de profundidade se dá em uma única imagem, usando técnicas de pintura.</li>
+<li>Efeito ativo: quando o efeito não está presente em somente uma imagem, mas sim em diferentes imagens em que cada olho terá acesso separadamente.</li>
 </ul>
+<h3 id="efeitos-passivos">Efeitos Passivos </h3>
+<p>Uma imagem, tirada de uma câmera normal, por exemplo, dá a ideia de profundidade.</p>
+<p><img src="imagem-edificio.png" alt=""></p>
+<p>Nesta imagem de edifício conseguimos ver qual parte está mais distante. O que será que informa, de maneira intuitiva para o nosso cérebro, qual parte está mais distante e qual está mais próxima?</p>
+<p>Vamos ver cada técnica passiva que causa este efeito:</p>
+<h5 id="perspectiva">Perspectiva </h5>
+<p>Quando a natureza da imagem cria linhas de perspectiva usando estruturas familiares, como janelas, ruas, portas. Sabemos que estas estruturas são retas, e isso informa ao nosso cérebro que tem uma reta da parte mais funda para a perte mais próxima.</p>
+<p>Na imagem abaixo, mesmo que o paralelepípedo mais ao fundo seja maior, sabemos que ele está mais longe.</p>
+<p><img src="perspectiva.png" alt=""></p>
+<h5 id="iluminação">Iluminação </h5>
+<p>O clareamento e escurecimento de partes do mesmo objeto dão a ideia de profundidade e aumentam o realismo.</p>
+<p><img src="iluminacao.png" alt=""></p>
+<h5 id="oclusão">Oclusão </h5>
+<p>O obstrução de parte de um objeto em relação à parte de outro, dá a ideia de um estar na frente (mais próximo da câmera) que outro.</p>
+<p><img src="oclusao.png" alt=""></p>
+<h5 id="sombra">Sombra </h5>
+<p>Para dar a sensação de distância de um ponto de apoio, podemos ver as sombras na figura abaixo.</p>
+<p><img src="sombra.png" alt=""></p>
+<h5 id="gradiente-de-textura">Gradiente de textura </h5>
+<p>Com o uso de uma textura (repetição de padrões em uma imagem) podemos dar a ideia de profundidade mudando o tamanho da textura</p>
+<p><img src="gradiente.png" alt=""></p>
+<h3 id="efeitos-ativos">Efeitos Ativos </h3>
+<p>Voltando ao conceito de estereoscopia, esta é um efeito ativo pois precisamos da geração de mais de uma imagem, e tecnicas para que imagens diferentes cheguem em olhos diferentes.</p>
+<p>Na imagem abaixo podemos ver como que a profundidade de pinos alinhados são vistos por cada olho. Cada olho ve uma imagem diferente dos pinos!</p>
+<p><img src="boliche.png" alt=""></p>
+<p>"Uma consequência imediata da diferença das imagens capturadas pelos dois olhos é o espaçamento entre o mesmo ponto projetado nas duas retinas, chamado de disparidade na retina.<sup class="footnote-ref"><a href="#fn1" id="fnref1:1">[1:1]</a></sup>"</p>
+<p>Na figura abaixo podemos ver como os dois olhos podem ver duas imagens, com objetos colocados em locais bem diferente em relação ao outro.</p>
+<p><img src="estereo.png" alt=""></p>
+<p>O cérebro processa esta imagem criando uma sobreposição</p>
+<p><img src="disparidade.png" alt=""></p>
+<h4 id="estereoscopia-no-computador">Estereoscopia No Computador </h4>
+<p>Com ajuda de estratégias, podemos fazer com que cada imagem chegue a um olho diferente. Teremos também uma estratégia passiva e uma ativa. Ambas usam o auxílio de óculos para fazer com que imagens diferentes cheguem em olhos diferentes.</p>
+<p><img src="fusao.png" alt=""></p>
+<h5 id="estéreo-passivo">Estéreo Passivo </h5>
+<p>As duas imagens são exibidas simultaneamente, e o óculos atua como filtro.</p>
+<h6 id="estéreo-anáglifo">Estéreo Anáglifo </h6>
+<p>Nesta estratégia, duas imagens de cor diferente são sobre postas, uma em vermelho e outra em azul. O usuário usa um óculo com duas lentes de filtro de cores diferentes, assim podemos ver uma imagem em cada olho.</p>
+<p><img src="anaglifo.png" alt=""></p>
+<p>Na figura abaixo temos um outro exemplo com mais cores adicionadas.</p>
+<p><img src="anaglifo-verde.png" alt=""></p>
+<p>Vantagens desta estratégia:</p>
+<ol>
+<li>Necessita apenas um projetor</li>
+<li>Pode ser impressa</li>
+<li>Baixo custo para confecção do óculos</li>
+</ol>
+<p>Desvantagens:</p>
+<ol>
+<li>Perda de qualidade na coloração</li>
+</ol>
+<h6 id="filtragem-por-espectro-de-cores">Filtragem por espectro de cores </h6>
+<p>Um óculos filtra cores por seu espectro da onda.</p>
+<p><img src="grafico.png" alt=""></p>
+<p>Cores mais quentes, próximas ao vermelhos, vão parecer mais próximas do observador.</p>
+<p><img src="chromacast.png" alt=""></p>
+<p>Vantagens desta estratégia:</p>
+<ol>
+<li>Necessita apenas um projetor</li>
+<li>Pode ser impressa</li>
+</ol>
+<p>Desvantagens:</p>
+<ol>
+<li>Precisa de óculos especial
+<ol>
+<li>ChromaDepth 3D High Definition para monitores</li>
+<li>ChromaDepth 3D Standard Glasses para impressos</li>
+</ol>
 </li>
-<li>Ano 2
-<ul>
-<li><a href="aulas/indie/java/java.html">LPOO (CC e SI)</a></li>
-</ul>
+<li>Funciona apenas para imagens estáticas</li>
+<li>Limitação de cores</li>
+</ol>
+<h6 id="polarizadores-lineares">Polarizadores Lineares </h6>
+<p>Dois projetores projetam imagens diferentes, cada um com um filtro polarizador. Um óculos especial filtra a visão e cada olho recebe uma imagem diferente.</p>
+<p><img src="polarizador.png" alt=""></p>
+<p>Na figura abaixo temos o esquema de como estas imagens chegam ao observador.</p>
+<p><img src="tela-polarizador.png" alt=""></p>
+<p>Vantagens desta estratégia:</p>
+<ol>
+<li>Não existe limitação de cor</li>
+<li>Podemos ver um filme</li>
+</ol>
+<p>Desvantagens:</p>
+<ol>
+<li>Precisa de dois monitores</li>
+<li>Óculos especiais</li>
+<li>Dois projetores</li>
+</ol>
+<h5 id="estéreo-ativo">Estéreo Ativo </h5>
+<p>No estéreo ativo temos uma imagem diferente exclusiva para cada olho.</p>
+<p>Um óculos bloqueia a visão de cada olho em cada frame, enquanto o monitor alterna a imagem de cada olho em cada frame</p>
+<p><img src="estereo-ativo.png" alt=""></p>
+<p>A desvantagem é que o <em>fps</em> recebido será a metade do projetado.</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Informações retiradas de <a href="https://www.academia.edu/56235009/Cap%C3%ADtulo_8_Vis%C3%A3o_Estereosc%C3%B3pica_Realidade_Virtual_Realidade_Aumentada_e_Colabora%C3%A7%C3%A3o">Capítulo 8 Visão Estereoscópica, Realidade Virtual, Realidade Aumentada e Colaboração</a><br>
+O capítulo pode ser acessado na íntegra neste <a href="https://www.academia.edu/56235009/Cap%C3%ADtulo_8_Vis%C3%A3o_Estereosc%C3%B3pica_Realidade_Virtual_Realidade_Aumentada_e_Colabora%C3%A7%C3%A3o">link</a> <a href="#fnref1" class="footnote-backref">↩︎</a> <a href="#fnref1:1" class="footnote-backref">↩︎</a></p>
 </li>
-<li>Ano 3
-<ul>
-<li><a href="aulas/unip/20251/ia.html">IA</a></li>
-<li><a href="aulas/unip/20251/cg.html">CG</a></li>
-<li><a href="aulas/unip/20251/lfa.html">LFA</a></li>
-</ul>
-</li>
-<li>Ano 4
-<ul>
-<li><a href="aulas/unip/20251/rvra.html">RVRA</a></li>
-</ul>
-</li>
-</ul>
-<h5 id="ads">ADS </h5>
-<ul>
-<li><a href="aulas/unip/20251/poo_ads.html">POO (ADS)</a></li>
-</ul>
-<h3 id="20242">(2024/2) </h3>
-<ul>
-<li><a href="aulas/unip/20242/alpoo.html">ALPOO</a></li>
-<li><a href="aulas/unip/20242/ed.html">ED</a></li>
-<li><a href="aulas/unip/20242/ltp.html">LTP</a></li>
-<li><a href="aulas/unip/20242/atc.html">Aspectos Teóricos da Computação</a></li>
-<li><a href="aulas/unip/20242/cn.html">Cálculo Numérico para Computação</a></li>
-<li><a href="aulas/unip/20242/pi.html">Processamento de Imagens e Visão Computacional</a></li>
-</ul>
-<h4 id="workshop">Workshop </h4>
-<ul>
-<li><a href="aulas/workshops/20242/godot_mobile.html">Godot Game Mobile</a></li>
-</ul>
-<h3 id="20241">(2024/1) </h3>
-<h5 id="cc-e-si-1">CC e SI </h5>
-<ul>
-<li><a href="aulas/unip/20241/lpoo.html">LPOO (CC e SI)</a></li>
-<li><a href="aulas/unip/20241/ia.html">IA</a></li>
-<li><a href="aulas/unip/20241/cg.html">CG</a></li>
-<li><a href="aulas/unip/20241/aa.html">AA</a></li>
-<li><a href="aulas/unip/20241/lfa.html">LFA</a></li>
-<li><a href="aulas/unip/20241/pwr.html">PWR</a></li>
-</ul>
-<h5 id="ads-1">ADS </h5>
-<ul>
-<li><a href="aulas/unip/20241/poo_ads.html">POO (ADS)</a></li>
-</ul>
-<h3 id="20232">(2023/2) </h3>
-<ul>
-<li><a href="aulas/unip/20232/ipe.html">IPE</a></li>
-<li><a href="aulas/unip/20232/alpoo.html">ALPOO</a></li>
-<li><a href="aulas/unip/20232/atc.html">Aspectos Teóricos da Computação</a></li>
-<li><a href="aulas/unip/20232/cn.html">Cálculo Numérico para Computação</a></li>
-<li><a href="aulas/unip/20232/pi.html">Processamento de Imagens e Visão Computacional</a></li>
-</ul>
-<h3 id="20231">(2023/1) </h3>
-<ul>
-<li><a href="aulas/unip/20231/lpoo.html">LPOO</a></li>
-<li><a href="aulas/unip/20231/ia.html">IA</a></li>
-<li><a href="aulas/unip/20231/cg.html">CG</a></li>
-<li><a href="aulas/unip/20231/aa.html">AA</a></li>
-<li><a href="aulas/unip/20231/pwr.html">PWR</a></li>
-</ul>
-<h3 id="20222">(2022/2) </h3>
-<ul>
-<li><a href="aulas/unip/20222/ipe.html">IPE</a></li>
-<li><a href="aulas/unip/20222/alpoo.html">ALPOO</a></li>
-<li><a href="aulas/unip/20222/pi.html">Processamento de Imagens e Visão Computacional</a></li>
-<li><a href="aulas/unip/20222/cn.html">Cálculo Numérico para Computação</a></li>
-</ul>
-<h3 id="20221">(2022/1) </h3>
-<ul>
-<li><a href="aulas/unip/20221/lpoo.html">LPOO</a></li>
-<li><a href="aulas/unip/20221/aa.html">AA</a></li>
-<li><a href="aulas/unip/20221/cg.html">CG</a></li>
-<li><a href="aulas/unip/20221/ia.html">IA</a></li>
-</ul>
-<h3 id="20212">(2021/2) </h3>
-<ul>
-<li><a href="aulas/unip/20212/pi.html">Processamento de Imagens</a></li>
-<li><a href="aulas/unip/20212/cn.html">Cálculo Numérico</a></li>
-<li><a href="aulas/unip/20212/extra_ml.html">Extra: Machine Learning</a></li>
-</ul>
-<h3 id="20211">(2021/1) </h3>
-<ul>
-<li><a href="aulas/unip/20211/lpoo.html">LPOO</a></li>
-<li><a href="aulas/unip/20211/ia.html">IA</a></li>
-<li><a href="aulas/unip/20211/cg.html">CG</a></li>
-</ul>
-<h3 id="20202">2020/2 </h3>
-<ul>
-<li><a href="aulas/unip/20202/alpoo.html">ALPOO Diurno</a></li>
-<li><a href="aulas/unip/20202/alpoo_noturno.html">ALPOO Noturno</a></li>
-<li><a href="aulas/unip/20202/pi.html">PI</a></li>
-<li><a href="aulas/unip/20202/sii.html">SII</a></li>
-</ul>
+</ol>
+</section>
 
       </div>
       
