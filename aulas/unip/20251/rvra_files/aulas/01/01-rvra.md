@@ -22,7 +22,7 @@ Vamos ver alguns aspectos da Realidade Virtual em um grau crescente de imersão 
 
 ### Imersão 1 - Passeio Exploratório
 
-Navegação decorrente da movimentação do usuário no espaço 3D atraés de mouse, comando de voz, ou gestos detectados por algum dispositivo.
+Navegação decorrente da movimentação do usuário no espaço 3D através de mouse, comando de voz, ou gestos detectados por algum dispositivo.
 
 Neste caso temos um usuário apenas passeando por algum ambiente 3D criado digitalmente. Ele pode olhar, mas não pode interagir, assim não podendo modificar o ambiente.
 
