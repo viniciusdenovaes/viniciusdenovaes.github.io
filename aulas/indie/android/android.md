@@ -16,6 +16,8 @@
    - [05 - Primeiro Cálculo Matemático (com Integer)](android_files/curso/05/05-conta_matematica.html)
    - [06 - Cálculo Matemático (com Double)](android_files/curso/06/06-conta_matematica_double.html)
 
+- Parte 02 Novas Funcionalidades:
+   - [07 - Atividades (Como fazer uma nova tela)](android_files/curso/07/07-atividades.html)
 
 <!-- - Parte 01 Variáveis:
   - [01 - Tipos de variáveis](c_files/curso/01/01-tipos.html)
