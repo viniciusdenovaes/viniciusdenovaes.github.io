@@ -19,6 +19,8 @@
 - Parte 02 Novas Funcionalidades:
    - [07 - Atividades (Como fazer uma nova tela)](android_files/curso/07/07-atividades.html)
 
+   - [08 - Spinners (Uma lista de opções)](android_files/curso/08/08-spinners.html)
+
 <!-- - Parte 01 Variáveis:
   - [01 - Tipos de variáveis](c_files/curso/01/01-tipos.html)
 - Parte 02 Comandos de Controle:

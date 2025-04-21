@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>android</title>
+      <title>07-atividades</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -24,43 +24,51 @@
     
       <div class="crossnote markdown-preview  ">
       
-<h1 id="android">Android </h1>
-<h2 id="curso">Curso </h2>
+<h1 id="atividades-intentos-e-o-android-manifest">Atividades, Intentos e o <em>Android Manifest</em> </h1>
+<p>Cada tela do seu aplicativo será uma atividade.</p>
+<p>O ideal é que cada tela será focada em uma única coisa que o usuário pode fazer.</p>
+<h2 id="activity-como-criar-uma-nova-atividade"><code>Activity</code>, como criar uma nova atividade </h2>
+<p>O jeito mais fácil de criar uma atividade nova é clicar com o botão direito do mouse em <code>app-&gt;New-&gt;Activity-&gt;Empty Views Activity</code></p>
+<p><img src="activity_path.png" alt=""></p>
+<p>Isto criará dois arquivos no seu projeto:</p>
 <ul>
-<li>
-<p>Prólogo</p>
-<ul>
-<li>Instalação:.
-<ul>
-<li><a href="https://youtu.be/0AJtabl7nkw">Windows (Vídeo)</a></li>
+<li><code>NomeDaAtividadeActivity.java</code> com o código <code>java</code> da nova tela; e</li>
+<li><code>activity_nome_da_atividade.xml</code> com o <code>xml</code> da nova tela.</li>
 </ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Parte 01 Primeiros Passos:</p>
-<ul>
-<li><a href="android_files/curso/00/00-primeiro_app.html">00 - Primeiro App</a></li>
-<li><a href="android_files/curso/01/01-simples_layout.html">01 - Primeiro Layout</a></li>
-<li><a href="android_files/curso/02/02-alguns_elementos.html">02 - Primeiros Elementos</a></li>
-<li><a href="android_files/curso/03/03-um_programa_em_java.html">03 - Primeiro Rascunho em Java</a></li>
-<li><a href="android_files/curso/04/04-botao_funcionalidade.html">04 - Primeiro Botão Funcionando (Java)</a></li>
-<li><a href="android_files/curso/05/05-conta_matematica.html">05 - Primeiro Cálculo Matemático (com Integer)</a></li>
-<li><a href="android_files/curso/06/06-conta_matematica_double.html">06 - Cálculo Matemático (com Double)</a></li>
-</ul>
-</li>
-<li>
-<p>Parte 02 Novas Funcionalidades:</p>
-<ul>
-<li>
-<p><a href="android_files/curso/07/07-atividades.html">07 - Atividades (Como fazer uma nova tela)</a></p>
-</li>
-<li>
-<p><a href="android_files/curso/08/08-spinners.html">08 - Spinners (Uma lista de opções)</a></p>
-</li>
-</ul>
-</li>
-</ul>
+<p>Além disso teremos uma nova entrada no <code>AndroidManifest.xml</code> com o nome da atividade.</p>
+<h2 id="intent-como-ir-para-a-nova-tela"><code>Intent</code>, como ir para a nova tela </h2>
+<p>Com a nova atividade criada precisaremos criar um <code>Intent</code> sinalizando que queremos mudar desta tela para a nova tela.</p>
+<p>Após a criação do <code>Intent</code> precisamos executar o intento com o método <code>startActivity</code> passando o intento como argumento.</p>
+<p>Um código minimalista com um botão que passa para a tela nova, chamada <code>EmptyActivity</code> ficará da seguinte forma:</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">MainActivity</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">AppCompatActivity</span> <span class="token punctuation">{</span>
+
+    <span class="token class-name">Button</span> button<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword keyword-protected">protected</span> <span class="token keyword keyword-void">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token class-name">Bundle</span> savedInstanceState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-super">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setContentView</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>layout<span class="token punctuation">.</span>activity_main<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        button <span class="token operator">=</span> <span class="token function">findViewById</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>id<span class="token punctuation">.</span>main_button<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        button<span class="token punctuation">.</span><span class="token function">setOnClickListener</span><span class="token punctuation">(</span>view <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Intent</span> emptyViewIntent <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Intent</span><span class="token punctuation">(</span><span class="token class-name">MainActivity</span><span class="token punctuation">.</span><span class="token keyword keyword-this">this</span><span class="token punctuation">,</span> <span class="token class-name">EmptyActivity</span><span class="token punctuation">.</span><span class="token keyword keyword-class">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">startActivity</span><span class="token punctuation">(</span>emptyViewIntent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p>Na linha <code>Intent emptyViewIntent = new Intent(MainActivity.this, EmptyActivity.class);</code> estamos sinalizando a intenção de sair da tela <code>MainActivity</code> e entrar na tela <code>EmptyActivity</code></p>
+<p>Na linha <code>startActivity(emptyViewIntent);</code> estamos executando o <code>Intent emptyViewIntent</code></p>
+<h2 id="uma-configuração-do-androidmanifestxml">Uma configuração do <code>AndroidManifest.xml</code> </h2>
+<p>No arquivo <code>AndroidManifest.xml</code> podemos configurar qual é a atividade de volta em relação à nova atividade.</p>
+<p>Encontre a entrada da nova atividade em <code>AndroidManifest.xml</code> com a tag <code>activity</code>, coloque o valor da propriedade <code>parentActivityName</code> como <code>MainActivity</code>.</p>
+<p>Olhe o exemplo abaixo:</p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activity</span>
+    <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>.EmptyActivity<span class="token punctuation">"</span></span>
+    <span class="token attr-name"><span class="token namespace">android:</span>parentActivityName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>.MainActivity<span class="token punctuation">"</span></span>
+    <span class="token punctuation">/&gt;</span></span>
+</code></pre><p>Desta forma, quando o usuário estiver na tela <code>Empty</code> e clicar em voltar, ele será direcionado para a tela <code>Main</code></p>
 
       </div>
       
