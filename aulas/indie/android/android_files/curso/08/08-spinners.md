@@ -85,7 +85,9 @@ Todos estes métodos serão explicados nas aulas de Orientação a Objetos.
 Abaixo vamos ver um programa onde o usuário escolhe um planeta e o programa diz qual é a distância do da Terra até o planeta.
 
 
-![](spinner.png)
+![](spinner.jpeg)
+
+### O Layout
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -174,6 +176,8 @@ Abaixo vamos ver um programa onde o usuário escolhe um planeta e o programa diz
 </LinearLayout>
 
 ```
+
+### O Java
 
 
 ```java
