@@ -6,6 +6,7 @@
 
 ## Trabalhos
 #### [Enunciado trabalho NP1](ddm_files/NP1.DDM_2025.pdf)
+#### [Enunciado trabalho NP2](ddm_files/NP2.DDM_2025.html)
 
 <!-- ## Labs
 
