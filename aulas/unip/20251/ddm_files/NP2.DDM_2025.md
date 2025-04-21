@@ -14,7 +14,7 @@ O aplicativo deve ser feito em Android e deve ter, pelo menos, os seguintes elem
 
 O grupo deve apresentar o trabalho para o(s) professor(es) presente(s) no dia marcado da apresentação.
 
-É esperado que o grupo entenda tudo o que foi desenvolvido, explicando, pelo menos, uma funcionalidade de cada linha escrita.
+É esperado que o grupo entenda tudo o que foi desenvolvido, explicando, pelo menos, uma funcionalidade de cada linha de código.
 
 O grupo não precisa saber explicar as linhas seguintes, que não foram dadas em sala de aula. 
 
