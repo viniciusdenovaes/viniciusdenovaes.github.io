@@ -13,7 +13,7 @@
 #### NP2
 - [Lista 03](cg_files/listas/03/lista03CG.pdf)
 
-<!-- ### Trabalho
-- [Trabalho 01 para NP2](cg_files/trabalhos/trabalho01.html) -->
+### Trabalho
+- [Trabalho 01 para NP2](cg_files/trabalhos/trabalho01.html)
 
-<!-- ### [Github](https://github.com/viniciusdenovaes/Unip241CG) -->
+### [Github](https://github.com/viniciusdenovaes/Unip241CG)
