@@ -1,7 +1,7 @@
 # IA
 
-<!-- ## Trabalho:
-- [Hokama`s TD Mod (sem fonte de vida)](ia_files/trabalho/hokya/hoktd.html) -->
+## Trabalho:
+- [Hokama`s TD Mod (sem fonte de vida)](ia_files/trabalho/hokya/hoktd.html)
 
 ## Listas:
 ### NP1

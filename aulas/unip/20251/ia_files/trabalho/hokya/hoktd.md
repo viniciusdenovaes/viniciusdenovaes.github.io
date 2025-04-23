@@ -1,6 +1,6 @@
-# Hokama`s Tower Defense (Sem fonte de vida)
+# Hokama`s Tower Defense (Sem fonte de vida) (Grupo de 5 pessoas, para o dia 07/05)
 
-No Hokama’s Tower Defense o jogo se dá em um tabuleiro de `nxn`, o jogador sai do quadrado superior esquerdo na coordenada `(0, 0)` e precisa chegar no quadrado `(n-1, n-1)`.
+No Hokama’s Tower Defense o jogo se dá em um tabuleiro de `nxn`, o jogador começa no quadrado superior esquerdo na coordenada `(0, 0)` e precisa chegar no quadrado `(n-1, n-1)`.
 
 ![tabuleiro inicio](hok_area00.png)
 
