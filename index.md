@@ -13,7 +13,7 @@
 - Ano 1
    - [DDM](aulas/unip/20251/ddm.html)
 - Ano 2
-   - [LPOO (CC e SI)](aulas/indie/java/java.html)
+   - [LPOO (CC e SI)](aulas/unip/20251/lpoo.html)
 - Ano 3
    - [IA](aulas/unip/20251/ia.html)
    - [CG](aulas/unip/20251/cg.html)
