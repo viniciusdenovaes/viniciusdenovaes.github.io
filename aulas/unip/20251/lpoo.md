@@ -9,12 +9,13 @@
 
 ## [Curso](https://viniciusdenovaes.github.io/aulas/indie/java/java.html)
 
-## APS
+<!-- ## APS
  - [Especificação do Texto para entregar no site](lpoo_files/aps/APS_LPOO_2024.pdf)
- - [Link alternativo para ficha de horas em xls](lpoo_files/aps/Ficha_APS.xls)
+ - [Link alternativo para ficha de horas em xls](lpoo_files/aps/Ficha_APS.xls) -->
 
+## [Teste da NP1](lpoo_files/trabalhos/teste/teste01.html)
 
-## [Última Prova](lpoo_files/provas_aula/prova01LPOO_CC.pdf)
+<!-- ## [Última Prova](lpoo_files/provas_aula/prova01LPOO_CC.pdf) -->
 
 <!--
 - Prólogo
