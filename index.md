@@ -12,7 +12,7 @@
 ##### CC e SI
 * [ALPOO](aulas/unip/20252/alpoo.html)
 ##### ADS
-- [POO II](aulas/unip/20252/poo2.html)
+- [Programação Orientada a Objetos II](aulas/unip/20252/poo2.html)
 - [Projeto de Sistema Orientado a Objeto](aulas/unip/20252/psoo.html)
 ##### Engenharia
 - [Algoritmo e Programação para Engenheiros (Python)](aulas/unip/20252/ape.html)
