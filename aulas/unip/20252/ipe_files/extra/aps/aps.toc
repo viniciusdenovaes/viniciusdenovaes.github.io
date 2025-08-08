@@ -1,4 +1,0 @@
-\babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {1}Proposta do Trabalho}{1}{}%
-\contentsline {section}{\numberline {2}Apresenta\IeC {\c c}\IeC {\~a}o do Trabalho}{2}{}%
-\contentsline {section}{\numberline {3}Modelo de Ficha de Atividades Pr\IeC {\'a}ticas Supervisionadas}{4}{}%
