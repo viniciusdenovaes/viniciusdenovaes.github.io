@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}  
+\usepackage[portuguese]{babel}   
+
+\usepackage[ruled, vlined, algonl, portuguese]{algorithm2e}
+
+\newcommand{\linesnumbered}{\LinesNumbered}
+\newcommand{\dontprintsemicolon}{\DontPrintSemicolon}
+\newcommand{\incmargin}{\IncMargin}
+\newcommand{\decmargin}{\DecMargin}
+
+\usepackage{mathtools}
+
+\usepackage{amssymb}
+\def\le{\leqslant}\def\leq{\le}
+\def\ge{\geqslant}\def\geq{\ge}
+\newcommand{\floor}[1]{\left\lfloor{#1}\right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil{#1}\right\rceil}
+\newcommand{\pare}[1]{\left({#1}\right)}
+\newcommand{\set}[1]{\left\{{#1}\right\}}
+\newcommand{\range}[2]{\set{{#1},\dots,{#2}}}
+\newcommand{\dist}{\mathrm{dist}}
+\newcommand{\cluster}{\mathrm{cluster}}
+\newcommand{\merge}{\mathrm{merge}}
+
+
+
+\title{Lista de Cálculo Numérico}
+\date{}
+
+
+
+\begin{document}
+
+
+\maketitle
+
+
+\vspace{3em}
+
+\section{Medida de Erro}
+
+Ao usar o computador para fazer cálculos numéricos sempre precisamos esperar que o resultado não seja exato, pois não é possível para o computador representar uma infinidade de números. Além disso, para fins práticos, nem sempre precisamos do resultado exato, uma aproximação já basta, e pode nos economizar tempo, poder de processamento e memória. Mais ainda, se tivermos trabalhando com resultados coletados no mundo real, e tentando fazer uma modelagem matemática que explique estes resultado, pode não ser possível (ou desejável) fazer uma modelagem matemática sem considerar uma função de erro.
+
+Então precisamos definir uma função para medir o erro do nosso resultado (ou da modelagem matemática).
+
+Para esta lista vamos usar a seguinte função: 
+Para os pontos de amostra $(x_i, y_i)$, $i = 1, ..., n$, e a função matemática $f(x)$, o erro associado a $f(x)$ na amostra será
+\[\sum_{i=1}^{n}\frac{(f(x_i) - y_i)^2}{n}\]
+
+\textbf{Exercício}: Dada a função $2x^2 + -4x + -30$ e os pontos $(-2, -12)$, $(-2, -16)$, $(0, -29)$, $(0, -31)$, $(1, -29)$ e $(1, -35)$; encontre o erro de cada ponto em relação à função.
+
+
+
+\break
+
+
+
+
+
+\section{Resolução de Sistema de Equações Lineares}
+
+Uma das maneiras de resolver um sistema de equações lineares é transformar o sistema em um \textit{sistema triangular superior}: um sistema onde os termos na parte inferior da diagona do sistema são iguais a zero.
+
+Para isto podemos fazer as seguintes operações no sistema:
+\begin{itemize}
+\item trocar duas equações
+\item multiplicar uma equação por uma constante
+\item adicionar um multiplo de uma equação a uma outra equação
+\end{itemize}
+
+\textbf{Exercício: }
+
+Transforme o sistema abaixo em um sistema triangular superior e depois resolva o sistema
+
+\begin{tabular}{ccccccc}
+$  6x$ & $-$ & $ 2y$ & $+$ & $10z$ & $=$ & $-152$\\
+$ -2x$ & $+$ & $10y$ & $-$ & $14z$ & $=$ & $-8$\\
+$ 10x$ & $-$ & $14y$ & $+$ & $34z$ & $=$ & $-176$
+\end{tabular}
+
+
+
+
+
+\break
+
+
+
+
+
+\section{Regressão Linear (pelo método dos mínimos quadrados)}
+
+Dado um conjunto de amostras $(x_i, y_i)$, para $i = 1, 2, ..., m$, e um conjuntos de funções $g_1(x), g_2(x), ..., g_n(x)$, queremos encontra os valores $\alpha_1, \alpha_2, ..., \alpha_n$ tal que o valor do erro entre os dados de amostra e a função $f(x) = \alpha_1g_1(x) + \alpha_2g_2(x) + \cdots + \alpha_ng_n(x)$ seja mínimo. Sendo este erro referente à medida de erro introduzida no início da lista.
+
+Vimos em aula que existe uma fórmula para encontrar os valores de $\alpha_j$, que são os valores que satisfazem a equação.
+
+\begin{tabular}{ccccccccc}
+   $a_{11}\alpha_1$ & $+$ & $a_{12}\alpha_2$ & $+$ & $\cdots$ & + & $a_{1n}\alpha_n$ & $=$ & $b_1$ \\
+   $a_{21}\alpha_1$ & $+$ & $a_{22}\alpha_2$ & $+$ & $\cdots$ & + & $a_{2n}\alpha_n$ & $=$ & $b_2$ \\
+   $\vdots$         & $+$ & $\vdots$         & $+$ & $\vdots$ & + &         $\vdots$ & $=$ &$\vdots$ \\
+   $a_{n1}\alpha_1$ & $+$ & $a_{n2}\alpha_2$ & $+$ & $\cdots$ & + & $a_{nn}\alpha_n$ & $=$ & $b_n$ 
+\end{tabular}
+
+onde 
+
+
+\[a_{ij} = \sum_{k=1}^{m}g_i(x_k)g_j(x_k) = a_{ji}\]
+\[b_i = \sum_{k=1}^{m}y_kg_i(x_k)\]
+
+
+\textbf{Exercício}: Dados os pontos $(-2, -12)$, $(-2, -16)$, $(0, -29)$, $(0, -31)$, $(1, -29)$ e $(1, -35)$ econtre (i) uma função linear contante, (ii) uma função linear e (iii) uma função quadrática que minimize o erro entre os pontos  amostrais e as funções encontradas
+
+
+\end{document}

@@ -8,7 +8,19 @@
 
 ## Aulas
 
-### Atuais (2025/1)
+### Atuais (2025/2)
+##### CC e SI
+* [ALPOO](aulas/unip/20252/alpoo.html)
+##### ADS
+- [LPOO II](aulas/unip/20252/lpoo_ii.html) (EM CONTRUÇÃO)
+- [Projeto de Sistema Orientado a Objeto](aulas/unip/20252/psoo.html)
+##### Engenharia
+- [Algoritmo e Programação para Engenheiros (Python)](aulas/unip/20252/ape.html)
+##### Flex
+- Python
+
+
+### (2025/1)
 ##### CC e SI
 - Ano 1
    - [DDM](aulas/unip/20251/ddm.html)
