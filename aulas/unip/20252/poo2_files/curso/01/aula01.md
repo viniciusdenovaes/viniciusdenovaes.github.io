@@ -113,3 +113,13 @@ namespace WpfAppUnip01 {
 }
 ```
 
+## Exercícios
+
+1. Faça um programa que contenha um botão centralizado em uma tela de tamanho 100x150. Quando o botão for pressionado deve aparecer uma caixa de mensagem escrito "botão pressionado"
+
+Dica: Para escolher a dimensão inicial da tela mude os valores dos atributos `Height` e `Width` da tag `Window`
+
+1. Faça um programa com um botão posicionado no canto inferior esquerdo da tela. Quando o botão for pressionado a janela deve ser fechada.
+
+Dica: Para fechar a janela use o comando `this.Close()` 
+

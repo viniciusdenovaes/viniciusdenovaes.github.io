@@ -5,6 +5,7 @@
 
 
 - [01 - Primeiro Botão](poo2_files/curso/01/aula01.html)
+- [02 - Primeiro Layout (`Grid`)](poo2_files/curso/02/aula02.html)
 <!-- - [02 - Interface de Usuário (Graphical User Interface (GUI))](java2_files/curso/02/gui.html)
 - [03 - Model View Controller](java2_files/curso/03/mvc.html)
 - [04 - JDBC](java2_files/curso/04/jdbc.html) 
