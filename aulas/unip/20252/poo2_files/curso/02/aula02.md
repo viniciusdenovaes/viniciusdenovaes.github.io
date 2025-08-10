@@ -121,6 +121,32 @@ No exemplo abaixo teremos 4 linhas com um botão na linha 0 e coluna 1, e outro 
 ![](ex05.png)
 
 
+#### Para um elemento ocupar mais de uma coluna
+
+Se quiser que um elemento ocupe mais de uma coluna (ou linha) você pode usar o atributo `Grid.Column` (ou `Grid.RowSpan`).
+
+``` xml
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+
+        <Button Content="Um Botao" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"/>
+        <Button Content="Segundo Botao" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2"/>
+    </Grid>
+```
+![](ex06.png)
+
+
 ## Exercícios
 
 1. Crie um programa que tem a mesma interface da figura abaixo.
