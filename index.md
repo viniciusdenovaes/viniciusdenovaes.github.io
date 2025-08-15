@@ -17,7 +17,7 @@
 ##### Engenharia
 - [Algoritmo e Programação para Engenheiros (Python)](aulas/unip/20252/ape.html)
 ##### Flex
-- Python
+- [Python](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20251)
 
 
 ### (2025/1)
@@ -35,7 +35,7 @@
 ##### ADS
 - [POO (ADS)](aulas/unip/20251/poo_ads.html)
 
-##### [Flex](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex)
+##### [Flex](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20251)
 
 
 
