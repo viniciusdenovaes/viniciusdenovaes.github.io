@@ -17,8 +17,8 @@
 ##### Engenharia
 - [Algoritmo e Programação para Engenheiros (Python)](aulas/unip/20252/ape.html)
 ##### Flex
-- [Python](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20251)
-
+- [Python](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20252/IPE)
+- [Circuitos Lógicos Digitais](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20252/CLD)
 
 ### (2025/1)
 ##### CC e SI
