@@ -10,7 +10,8 @@
 
 ### Atuais (2025/2)
 ##### CC e SI
-* [ALPOO](aulas/unip/20252/alpoo.html)
+- [ALPOO](aulas/unip/20252/alpoo.html)
+- [ED](https://github.com/viniciusdenovaes/AulaUnipEstruturasDeDados) 
 ##### ADS
 - [Programação Orientada a Objetos II](aulas/unip/20252/poo2.html)
 - [Projeto de Sistema Orientado a Objeto](aulas/unip/20252/psoo.html)
