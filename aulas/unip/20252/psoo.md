@@ -7,4 +7,4 @@
 #### Aulas
  - [Aula 01 - Processos de Software - Visão Geral](psoo_files/slides/Aula01_visao_geral.pdf)
 
- - [Aula 02 - Processos de Software - Visão Geral](psoo_files/slides/Aula02_original.pdf)
+ - [Aula 02 - Processos de Software - Visão Geral](psoo_files/slides/Aula02_processo_desenvolvimento.pdf)
