@@ -8,6 +8,8 @@
 - [02 - Primeiro Layout (`Grid`)](poo2_files/curso/02/aula02.html)
 - [03 - Entrada e Saída om TextField e Label](poo2_files/curso/03/aula03.html)
 - [04 - ScrollView | Novo Layout: StackPanel | Adicionando elementos pelo código](poo2_files/curso/04/aula04.html)
+- [05 - ContentControl e UserControl](poo2_files/curso/05/aula05.html)
+
 
 
 
