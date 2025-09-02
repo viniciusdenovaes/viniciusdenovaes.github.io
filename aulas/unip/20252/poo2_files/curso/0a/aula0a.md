@@ -95,6 +95,7 @@ Vamos fazer uma janela para fazermos as 3 ações:
 
 ![alt text](janela.png)
 
+No código da Janela, abaixo, não tem nenhuma novidade, tudo foi visto em aulas passadas
 
 ```xml
     <Grid>
@@ -178,6 +179,9 @@ Vamos fazer uma janela para fazermos as 3 ações:
     </Grid>
 ```
 
+Vamos criar a classe Animal em `C#` para podermos trabalhar com a composição dos dados.
+
+Perceba que não colocamos o Id do animal como um campo, pois neste exemplo não precisamos. Porém se você fizer uma aplicação que precisa, você precisará colocar.
 
 ```cs
 namespace WpfAppTesteMySql01 {
@@ -192,6 +196,9 @@ namespace WpfAppTesteMySql01 {
 }
 ```
 
+No código abaixo podemos ver o código para fazer a manipulação no banco de dados.
+
+Preste atenção na string que fazer a conexão `"Server=localhost;Uid=root;Pwd=;database=veterinario_unip"` onde o usuário do meu banco de dados é `root` e não tem senha.
 
 ```cs
 using System;

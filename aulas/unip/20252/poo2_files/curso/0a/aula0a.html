@@ -85,6 +85,7 @@
 <li>Adicionar um animal</li>
 </ul>
 <p><img src="janela.png" alt="alt text"></p>
+<p>No código da Janela, abaixo, não tem nenhuma novidade, tudo foi visto em aulas passadas</p>
 <pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Grid</span><span class="token punctuation">&gt;</span></span>
 
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Grid.ColumnDefinitions</span><span class="token punctuation">&gt;</span></span>
@@ -164,7 +165,9 @@
 
 
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Grid</span><span class="token punctuation">&gt;</span></span>
-</code></pre><pre data-role="codeBlock" data-info="cs" class="language-csharp cs"><code><span class="token keyword keyword-namespace">namespace</span> <span class="token namespace">WpfAppTesteMySql01</span> <span class="token punctuation">{</span>
+</code></pre><p>Vamos criar a classe Animal em <code>C#</code> para podermos trabalhar com a composição dos dados.</p>
+<p>Perceba que não colocamos o Id do animal como um campo, pois neste exemplo não precisamos. Porém se você fizer uma aplicação que precisa, você precisará colocar.</p>
+<pre data-role="codeBlock" data-info="cs" class="language-csharp cs"><code><span class="token keyword keyword-namespace">namespace</span> <span class="token namespace">WpfAppTesteMySql01</span> <span class="token punctuation">{</span>
     <span class="token keyword keyword-internal">internal</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
         <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-string">string</span></span> Name <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token keyword keyword-set">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
         <span class="token keyword keyword-public">public</span> <span class="token return-type class-name"><span class="token keyword keyword-int">int</span></span> Idade <span class="token punctuation">{</span> <span class="token keyword keyword-get">get</span><span class="token punctuation">;</span> <span class="token keyword keyword-set">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
@@ -174,7 +177,9 @@
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre><pre data-role="codeBlock" data-info="cs" class="language-csharp cs"><code><span class="token keyword keyword-using">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
+</code></pre><p>No código abaixo podemos ver o código para fazer a manipulação no banco de dados.</p>
+<p>Preste atenção na string que fazer a conexão <code>"Server=localhost;Uid=root;Pwd=;database=veterinario_unip"</code> onde o usuário do meu banco de dados é <code>root</code> e não tem senha.</p>
+<pre data-role="codeBlock" data-info="cs" class="language-csharp cs"><code><span class="token keyword keyword-using">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
 <span class="token keyword keyword-using">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Collections<span class="token punctuation">.</span>Generic</span><span class="token punctuation">;</span>
 <span class="token keyword keyword-using">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Windows</span><span class="token punctuation">;</span>
 <span class="token keyword keyword-using">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Windows<span class="token punctuation">.</span>Controls</span><span class="token punctuation">;</span>
