@@ -12,9 +12,88 @@ O Xampp é um framework que possibilitará ter o MySql e um agente de acesso ao 
 
 Faça o download em https://www.apachefriends.org/index.html
 
-Instale o xampp no seu computador, de preferência no diretório
+Instale o xampp no seu computador, de preferência no diretório sugerido (C:\xampp)
+
+Abra o programa e ligue o apache e o MySql.
+
+![alt text](xampp_start.png)
+
+Clique em `admin` no MySql para abrir o agente administrador do banco de dados.
+
+### Criando um Banco de Dados
+
+![alt text](criando_bd.png)
+
+1. Clique em `new` para criar um novo banco de dados
+2. Coloque o nome do banco de dados, nesta aula vamos usar o nome `veterinario_unip`
+3. Verifique se o banco de dados foi criado
+
+### Criando uma Tabela no Banco de Dados
+
+![alt text](criando_table.png)
+
+1. Clique no Banco de Dados
+2. escolha a aba `SQL` para entrar com um comando sql no banco de dados.
+3. Insira o comando abaixo para criar uma tabela chamada `Animais` 
+```sql
+CREATE TABLE Animais(
+    ID int NOT NULL AUTO_INCREMENT,
+    Nome varchar(255) NOT NULL,
+    Idade int, 
+    PRIMARY KEY (ID)
+);
+```
+
+Neste comando
+- A chave primária é um ID inteiro não nulo que se auto incrementa (você não precisa entrar com um ID, ele será colocado automaticamente)
+- O campo Nome será uma string
+- O campo Idade será um inteiro
+
+#### Outros Comandos Possíveis
+
+Conectado a este Banco de Dados podemos 
+
+Inserir uma nova entrada:
+```sql
+INSERT INTO Animais(Nome, Idade) VALUES("Brutus", 12);
+```
+
+Listar todas as linhas:
+```sql
+SELECT * FROM Animais;
+```
 
 
+Fazer uma busca por todas as ocorrências que contenham a palavra "Br" como substring no nome, ignorando o case:
+```sql
+SELECT * FROM Animais WHERE LOWER(Nome) LIKE LOWER("%Br%");
+```
+
+## Acessando o Banco de Dados Através do `C#`
+
+Para conseguirmos acessar o `MySql` no `C#`, primeiro precisamos instalar as dependências:
+
+### Instalando o Driver do MySql
+
+Clique com o botão direito no projeto e escolha *Manage NuGet Packages for Solution...*
+
+![alt text](nuget.png)
+
+Na tela do *NuGet* escolha a aba browser e busque por `MySql`, escolha o pacote chamado `MySql.Data` *By MySql*
+
+![alt text](nuget02.png)
+
+Instale este pacote no projeto.
+
+### Acessando o Banco de Dados de dentro do `C#`
+
+Vamos fazer uma janela para fazermos as 3 ações:
+
+- Buscar todos os animais
+- Buscar um animal pelo nome
+- Adicionar um animal
+
+![alt text](janela.png)
 
 
 ```xml

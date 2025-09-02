@@ -31,7 +31,60 @@
 <h2 id="como-instalar-o-xampp">Como Instalar o XAMPP </h2>
 <p>O Xampp é um framework que possibilitará ter o MySql e um agente de acesso ao banco de dados.</p>
 <p>Faça o download em <a href="https://www.apachefriends.org/index.html">https://www.apachefriends.org/index.html</a></p>
-<p>Instale o xampp no seu computador, de preferência no diretório</p>
+<p>Instale o xampp no seu computador, de preferência no diretório sugerido (C:\xampp)</p>
+<p>Abra o programa e ligue o apache e o MySql.</p>
+<p><img src="xampp_start.png" alt="alt text"></p>
+<p>Clique em <code>admin</code> no MySql para abrir o agente administrador do banco de dados.</p>
+<h3 id="criando-um-banco-de-dados">Criando um Banco de Dados </h3>
+<p><img src="criando_bd.png" alt="alt text"></p>
+<ol>
+<li>Clique em <code>new</code> para criar um novo banco de dados</li>
+<li>Coloque o nome do banco de dados, nesta aula vamos usar o nome <code>veterinario_unip</code></li>
+<li>Verifique se o banco de dados foi criado</li>
+</ol>
+<h3 id="criando-uma-tabela-no-banco-de-dados">Criando uma Tabela no Banco de Dados </h3>
+<p><img src="criando_table.png" alt="alt text"></p>
+<ol>
+<li>Clique no Banco de Dados</li>
+<li>escolha a aba <code>SQL</code> para entrar com um comando sql no banco de dados.</li>
+<li>Insira o comando abaixo para criar uma tabela chamada <code>Animais</code></li>
+</ol>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-CREATE">CREATE</span> <span class="token keyword keyword-TABLE">TABLE</span> Animais<span class="token punctuation">(</span>
+    ID <span class="token keyword keyword-int">int</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword keyword-AUTO_INCREMENT">AUTO_INCREMENT</span><span class="token punctuation">,</span>
+    Nome <span class="token keyword keyword-varchar">varchar</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    Idade <span class="token keyword keyword-int">int</span><span class="token punctuation">,</span> 
+    <span class="token keyword keyword-PRIMARY">PRIMARY</span> <span class="token keyword keyword-KEY">KEY</span> <span class="token punctuation">(</span>ID<span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>Neste comando</p>
+<ul>
+<li>A chave primária é um ID inteiro não nulo que se auto incrementa (você não precisa entrar com um ID, ele será colocado automaticamente)</li>
+<li>O campo Nome será uma string</li>
+<li>O campo Idade será um inteiro</li>
+</ul>
+<h4 id="outros-comandos-possíveis">Outros Comandos Possíveis </h4>
+<p>Conectado a este Banco de Dados podemos</p>
+<p>Inserir uma nova entrada:</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-INSERT">INSERT</span> <span class="token keyword keyword-INTO">INTO</span> Animais<span class="token punctuation">(</span>Nome<span class="token punctuation">,</span> Idade<span class="token punctuation">)</span> <span class="token keyword keyword-VALUES">VALUES</span><span class="token punctuation">(</span><span class="token string">"Brutus"</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>Listar todas as linhas:</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> Animais<span class="token punctuation">;</span>
+</code></pre><p>Fazer uma busca por todas as ocorrências que contenham a palavra "Br" como substring no nome, ignorando o case:</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> Animais <span class="token keyword keyword-WHERE">WHERE</span> LOWER<span class="token punctuation">(</span>Nome<span class="token punctuation">)</span> <span class="token operator">LIKE</span> LOWER<span class="token punctuation">(</span><span class="token string">"%Br%"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h2 id="acessando-o-banco-de-dados-através-do-c">Acessando o Banco de Dados Através do <code>C#</code> </h2>
+<p>Para conseguirmos acessar o <code>MySql</code> no <code>C#</code>, primeiro precisamos instalar as dependências:</p>
+<h3 id="instalando-o-driver-do-mysql">Instalando o Driver do MySql </h3>
+<p>Clique com o botão direito no projeto e escolha <em>Manage NuGet Packages for Solution...</em></p>
+<p><img src="nuget.png" alt="alt text"></p>
+<p>Na tela do <em>NuGet</em> escolha a aba browser e busque por <code>MySql</code>, escolha o pacote chamado <code>MySql.Data</code> <em>By MySql</em></p>
+<p><img src="nuget02.png" alt="alt text"></p>
+<p>Instale este pacote no projeto.</p>
+<h3 id="acessando-o-banco-de-dados-de-dentro-do-c">Acessando o Banco de Dados de dentro do <code>C#</code> </h3>
+<p>Vamos fazer uma janela para fazermos as 3 ações:</p>
+<ul>
+<li>Buscar todos os animais</li>
+<li>Buscar um animal pelo nome</li>
+<li>Adicionar um animal</li>
+</ul>
+<p><img src="janela.png" alt="alt text"></p>
 <pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Grid</span><span class="token punctuation">&gt;</span></span>
 
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Grid.ColumnDefinitions</span><span class="token punctuation">&gt;</span></span>
