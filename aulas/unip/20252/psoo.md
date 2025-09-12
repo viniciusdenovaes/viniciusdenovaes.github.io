@@ -10,3 +10,5 @@
  - [Aula 02 - Processos de Desenvolvimento](psoo_files/slides/Aula02_processo_desenvolvimento.pdf)
 
  - [Aula 03 - Modelos de Caso de Uso](psoo_files/slides/Aula03_casos_de_uso.pdf)
+
+- [Aula 04 - Modelos de Classes de Análise](psoo_files/slides/Aula04_classe_de_analise.pdf)
