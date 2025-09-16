@@ -19,7 +19,7 @@ Faça uma janela que contenha um botão e uma caixa de texto e um label, quando 
 
 ### Exercício 04
 
-Faça uma janela que contenha um botão e um label com o número 0, quando o botão for pressionado, o valor no label irá incrementar em uma unidade.
+Faça uma janela que contenha um botão uma caixa de texto e um label com o número 0, quando o botão for pressionado, o valor do label deverá ser incrementado com o valor que estiver na caixa de texto.
 
 
 ### Exercício 05
