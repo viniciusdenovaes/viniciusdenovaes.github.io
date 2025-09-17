@@ -4,9 +4,9 @@
 ## [Curso (link)](../../indie/java/java2.html)
 
 
-<!-- ## Trabalho (APS)
+## Trabalho (APS)
 
-- [Roteiro para a apresentação e entrega do trabalho](alpoo_files/aps/APS_ALPOO_2024.pdf)
+- [Roteiro para a apresentação e entrega do trabalho](alpoo_files/aps/2025_2_CC_SI_4.pdf)
 
 ## Ementa
 
@@ -15,4 +15,3 @@
   - pacotes awt e Swing
 - Parte 03 - Padrões de Arquitetura: DAO
   - pacote JDBC
- -->
