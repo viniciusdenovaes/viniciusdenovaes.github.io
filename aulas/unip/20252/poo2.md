@@ -22,6 +22,19 @@
 ## Revisão
 - [NP1](poo2_files/listas/01/lista01.html)
 
+## Teste Para NP1
+- Escolha 5 questões dentre a lista de questões da [revisão da NP1](poo2_files/listas/01/lista01.html)
+- Toda resposta deve usar como referência o livro da ementa do Eduardo Bezerra (Princípios de Análise e Projeto de Sistemas com UML)
+- As respostas devem ser escritas à mão na folha de prova oficial da Unip (entregue pelo professor)
+- Deve ser escolhido, no máximo, duas questões por cada capítulo. Sendo a única questão do capítulo 1 obrigatória.
+- Cada resposta deve ter 
+   - no mínimo 3 linhas
+   - no máximo 15 linhas (metade de uma folha)
+- Data de entrega ideal: dia da prova (26/09)
+- Data de entrega máxima: primeira aula depois da prova (3/10)
+- Caso seja entregue depois da prova, **não** pode escolher as questões que caíram na prova.
+- O teste não tem validade se não fizer a prova presencial.
+
 
 
 <!-- 
