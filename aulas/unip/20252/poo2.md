@@ -10,9 +10,8 @@
 - [04 - ScrollView | Novo Layout: StackPanel | Adicionando elementos pelo código](poo2_files/curso/04/aula04.html)
 - [05 - ContentControl e UserControl](poo2_files/curso/05/aula05.html)
 - [06 - Data Binding](poo2_files/curso/06/aula06.html)
-
-
-- [? - Banco de Dados](poo2_files/curso/0a/aula0a.html)
+- [07 - ListBox - Como mostrar uma lista de dados](poo2_files/curso/07/aula07.html)
+- [08 - Banco de Dados](poo2_files/curso/08/aula08.html)
 
 
 
