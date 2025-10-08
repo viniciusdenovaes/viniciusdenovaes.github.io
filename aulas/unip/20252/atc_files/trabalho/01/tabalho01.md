@@ -1,60 +1,98 @@
 # Trabalho 01 de ATC: Algoritmo de Dijkstra
 
-Para este trabalho você deve fazer um programa que receba um grafo de entrada e escreva o caminho do vértice `0` para **todos** os outros vértices, assim como o valor do caminho, se houver.
+Para este trabalho você deve usar o **Algoritmo de Dijkstra** para fazer um programa que receba um grafo de entrada e escreva o caminho do vértice `0` para **todos** os outros vértices, assim como o valor do caminho, se houver.
 
 ### Entrada
 
+O seu programa deve poder ler uma entrada de um arquivo. 
+O formato será de diagonal inferior, representando um grafo simples não direcionado com pesos nas arestas.
+
+Na primeira linha teremos a quantidade de vértices, e nas próximas linhas cada linha da diagonal inferior da matriz.
+
+Todo grafo é: 
+- simples (não existe mais de uma aresta ligando dois vértices), 
+- não direcionado (a mesma aresta que vai de `a` para `b` também vai de `b` para `a`), 
+- não necessariamente completo (não precisa haver uma aresta de cada vértice para todo vértice), 
+- as arestas inexistentes serão denotadas pelo valor `-1` na definição da matriz
+- toda aresta tem um valor maior que 0 representando a distância de um vértice ao outro.
+
+##### inst01
+
+Então por exemplo o seguinte arquivo:
+
+```
+8
+ 0
+ 2  0
+ 7 -1  0
+-1 -1 -1  0
+ 8 -1 -1 -1  0
+-1  4 -1 -1 -1  0
+-1 -1 -1 -1  3  8  0
+-1 -1 -1  4 -1 -1 -1  0
+```
+
+Define um grafo com 8 vértices que pode ser representado pelo seguinte desenho: 
+
+![alt text](image.png)
+
+##### inst02
+
+O seguinte arquivo:
+
+```
+8
+ 0
+-1  0
+-1  5  0
+ 5  8 -1  0
+ 3 -1 -1 -1  0
+-1  2  1 -1 -1  0
+-1 -1 -1 -1  6 -1  0
+-1 -1 -1 -1  3 -1 -1  0
+```
+
+Define um grafo com 8 vértices que pode ser representado pelo seguinte desenho: 
 
 
-Neste problema é dado
-- uma coleção de restrições representando o mínimo que o corpo precisa diariamente de cada componente;
-- uma coleção de alimentos com cada um dos atributos incluindo:
-   - quantidade
-   - preço
-   - cada um dos componentes incluído no alimento
-
-Você deve encontrar uma combinação de alimentos, atrubuindo uma quantidade que cada alimento deve ser comprado, para satisfazer o mínimo dos componentes necessários (deve ter uma quantidade maior ou igual para cada componente) e **minimizar** o gasto total pago pelos alimentos.
-
-### Ferramentas
-
-Existem várias ferramentas de **Otimização por Programação Por Restrições**, como
-- [google or-tools](https://developers.google.com/optimization)
-- [GLPK da GNU](https://www.gnu.org/software/glpk/)
-- [CPLEX da IMB](https://www.ibm.com/analytics/cplex-optimizer)
-- [Gurobi](https://www.gurobi.com/)
-
-A sugestão para esta aula é usar o google or-tools, exemplos podem ser encontrados na [aula de programação por restrição](https://github.com/viniciusdenovaes/Unip222CN/tree/master/aulaORTools) ou no [site oficial da ferramenta](https://developers.google.com/optimization)
+![alt text](image-1.png)
 
 
-### Entradas
+##### inst02
 
-A entrada estará em formato `csv` e será dado na forma
+O seguinte arquivo:
 
-- [nutrientes](https://raw.githubusercontent.com/viniciusdenovaes/Unip222CN/master/aulaORTools/trabalho/nutrientes.csv): o mínimo que o corpo precisa diariamente, com colunas
-   - `nome`: com o nome e a unidade de medida
-   - `minimo`: com o valor mínimo
-- [data](https://raw.githubusercontent.com/viniciusdenovaes/Unip222CN/master/aulaORTools/trabalho/data.csv): uma tabela com uma coleção de produtos contendo as colunas
-   - `ingrediente`: o nome do ingrediente
-   - `quantidade`: a quantidade
-   - `preco`: o preço por esta quantidade
-   - uma coluna para cada composto visto na tabela de nutrientes representando o quanto deste composto tem nesta quantidade deste ingrediente
+```
+8
+ 0
+ 2  0
+ 9  3  0
+ 4  7 -1  0
+ 8 -1  9 -1  0
+-1 -1 -1 -1 -1  0
+-1 -1 -1 -1  6 -1  0
+-1 -1 -1  8  1 -1 -1  0
+```
 
-### Solução
+Define um grafo com 8 vértices que pode ser representado pelo seguinte desenho: 
 
-Uma solução é uma lista com a quantidade de cada ingrediente que satisfaz o mínimo para cada nutriente.
+![alt text](image-2.png)
 
-A melhor solução é a que minimiza o preço total do custo da solução.
 
-### Regras
 
- - Você pode fazer em qualquer uma das seguintes linguagens: python, java, C++, C ou C#.
+### Saída
 
- - Você pode usar **qualquer biblioteca** interna ou externa à linguagem que você utilizará. Porem, deve **obrigatoriamente** exibir a solução.
+Como resposta, seu programa deve exibir a informação do menor caminho do vértice `0` para cada vértice do grafo, assim como o custo deste caminho. 
+Caso não exista um caminho, deve ser exibido uma informação de que não existe caminho.
+
+### Linguagem
+
+Você pode usar qualquer linguagem de programação para resolver o problema, mas deve saber explicar seu código, ou a biblioteca usada.
 
 ### Links
-- [google or-tools](https://developers.google.com/optimization)
-- [aula de programação por restrição](https://github.com/viniciusdenovaes/Unip222CN/tree/master/aulaORTools)
-- [nutrientes.csv](https://raw.githubusercontent.com/viniciusdenovaes/Unip222CN/master/aulaORTools/trabalho/nutrientes.csv)
+- [instancias]()
+- [Wiki com o Algoritmo de Dijkstra](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
+- [Animação com o algoritmo](https://www.cs.usfca.edu/~galles/visualization/Dijkstra.html)
 - [data.csv](https://raw.githubusercontent.com/viniciusdenovaes/Unip222CN/master/aulaORTools/trabalho/data.csv)
 
 
@@ -65,5 +103,4 @@ A melhor solução é a que minimiza o preço total do custo da solução.
 
 
 
-![alt text](image.png)
 
