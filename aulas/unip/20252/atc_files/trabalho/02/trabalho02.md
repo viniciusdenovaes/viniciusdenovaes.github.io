@@ -1,10 +1,6 @@
-# Trabalho 01 de ATC: Algoritmo de Dijkstra
+# Trabalho 02 de ATC: Otimização Por Equações Lineares
 
-Para este trabalho você deve fazer um programa que receba um grafo de entrada e escreva o caminho do vértice `0` para **todos** os outros vértices, assim como o valor do caminho, se houver.
-
-### Entrada
-
-
+Para este trabalho você deve fazer um programa que encontre a **melhor** solução para o *problema da dieta*.
 
 Neste problema é dado
 - uma coleção de restrições representando o mínimo que o corpo precisa diariamente de cada componente;
@@ -62,8 +58,3 @@ A melhor solução é a que minimiza o preço total do custo da solução.
 
 
 .
-
-
-
-![alt text](image.png)
-
