@@ -7,7 +7,7 @@
 - [01 - Programação Orientada a Eventos](java2_files/curso/01/programacao_eventos.html)
 - [02 - Interface de Usuário (Graphical User Interface (GUI))](java2_files/curso/02/gui.html)
 - [03 - Model View Controller](java2_files/curso/03/mvc.html)
-- [04 - JDBC](java2_files/curso/04/jdbc.html) 
+- [04 - JDBC e Padrão `DAO`](java2_files/curso/04/jdbc.html) 
 
 
 

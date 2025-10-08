@@ -3,421 +3,372 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="file:////home/vinicius/.atom/packages/markdown-preview-enhanced/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
-      
-      
-      
-      
+      <link rel="stylesheet" href="file:///c:\Users\vinicius\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.19\crossnote\dependencies\katex\katex.min.css">
       
       
       
       
       
       <style>
-      /**
- * prism.js Github theme based on GitHub's theme.
- * @author Sam Clarke
- */
-code[class*="language-"],
-pre[class*="language-"] {
-  color: #333;
-  background: none;
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.4;
-
-  -moz-tab-size: 8;
-  -o-tab-size: 8;
-  tab-size: 8;
-
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
-
-/* Code blocks */
-pre[class*="language-"] {
-  padding: .8em;
-  overflow: auto;
-  /* border: 1px solid #ddd; */
-  border-radius: 3px;
-  /* background: #fff; */
-  background: #f5f5f5;
-}
-
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-  padding: .1em;
-  border-radius: .3em;
-  white-space: normal;
-  background: #f5f5f5;
-}
-
-.token.comment,
-.token.blockquote {
-  color: #969896;
-}
-
-.token.cdata {
-  color: #183691;
-}
-
-.token.doctype,
-.token.punctuation,
-.token.variable,
-.token.macro.property {
-  color: #333;
-}
-
-.token.operator,
-.token.important,
-.token.keyword,
-.token.rule,
-.token.builtin {
-  color: #a71d5d;
-}
-
-.token.string,
-.token.url,
-.token.regex,
-.token.attr-value {
-  color: #183691;
-}
-
-.token.property,
-.token.number,
-.token.boolean,
-.token.entity,
-.token.atrule,
-.token.constant,
-.token.symbol,
-.token.command,
-.token.code {
-  color: #0086b3;
-}
-
-.token.tag,
-.token.selector,
-.token.prolog {
-  color: #63a35c;
-}
-
-.token.function,
-.token.namespace,
-.token.pseudo-element,
-.token.class,
-.token.class-name,
-.token.pseudo-class,
-.token.id,
-.token.url-reference .token.variable,
-.token.attr-name {
-  color: #795da3;
-}
-
-.token.entity {
-  cursor: help;
-}
-
-.token.title,
-.token.title .token.punctuation {
-  font-weight: bold;
-  color: #1d3e81;
-}
-
-.token.list {
-  color: #ed6a43;
-}
-
-.token.inserted {
-  background-color: #eaffea;
-  color: #55a532;
-}
-
-.token.deleted {
-  background-color: #ffecec;
-  color: #bd2c00;
-}
-
-.token.bold {
-  font-weight: bold;
-}
-
-.token.italic {
-  font-style: italic;
-}
-
-
-/* JSON */
-.language-json .token.property {
-  color: #183691;
-}
-
-.language-markup .token.tag .token.punctuation {
-  color: #333;
-}
-
-/* CSS */
-code.language-css,
-.language-css .token.function {
-  color: #0086b3;
-}
-
-/* YAML */
-.language-yaml .token.atrule {
-  color: #63a35c;
-}
-
-code.language-yaml {
-  color: #183691;
-}
-
-/* Ruby */
-.language-ruby .token.function {
-  color: #333;
-}
-
-/* Markdown */
-.language-markdown .token.url {
-  color: #795da3;
-}
-
-/* Makefile */
-.language-makefile .token.symbol {
-  color: #795da3;
-}
-
-.language-makefile .token.variable {
-  color: #183691;
-}
-
-.language-makefile .token.builtin {
-  color: #0086b3;
-}
-
-/* Bash */
-.language-bash .token.keyword {
-  color: #0086b3;
-}
-
-/* highlight */
-pre[data-line] {
-  position: relative;
-  padding: 1em 0 1em 3em;
-}
-pre[data-line] .line-highlight-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: transparent;
-  display: block;
-  width: 100%;
-}
-
-pre[data-line] .line-highlight {
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: inherit 0;
-  margin-top: 1em;
-  background: hsla(24, 20%, 50%,.08);
-  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
-  pointer-events: none;
-  line-height: inherit;
-  white-space: pre;
-}
-
-pre[data-line] .line-highlight:before, 
-pre[data-line] .line-highlight[data-end]:after {
-  content: attr(data-start);
-  position: absolute;
-  top: .4em;
-  left: .6em;
-  min-width: 1em;
-  padding: 0 .5em;
-  background-color: hsla(24, 20%, 50%,.4);
-  color: hsl(24, 20%, 95%);
-  font: bold 65%/1.5 sans-serif;
-  text-align: center;
-  vertical-align: .3em;
-  border-radius: 999px;
-  text-shadow: none;
-  box-shadow: 0 1px white;
-}
-
-pre[data-line] .line-highlight[data-end]:after {
-  content: attr(data-end);
-  top: auto;
-  bottom: .4em;
-}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
 /* Please visit the URL below for more information: */
 /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
 
       </style>
-    </head>
-    <body for="html-export">
-      <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="jdbcexemplos">JDBC<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></h1>
-
-<p>Nesta aula vamos aprender a fazer um programa em Java que fa&#xE7;a uma conex&#xE3;o com um banco de dados.</p>
-<p>O banco de dados que vamos utilizar &#xE9; o MySQL.</p>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="jdbc">JDBC </h1>
+<p>Nesta aula vamos aprender a fazer um programa em Java que faça uma conexão com um banco de dados.</p>
+<p>O banco de dados que vamos utilizar é o MySQL.</p>
 <p>Devemos obrigatoriamente seguir os passos:</p>
 <ol>
-<li>Conseguir o driver do banco de dados (a biblioteca que vai permitir a conex&#xE3;o). Aqui &#xE9; feita a escolha de qual banco de dados usaremos (MySQL)</li>
-<li>Fazer a conex&#xE3;o com o banco de dados. Aqui ser&#xE1; fornecido as informa&#xE7;&#xF5;es para conectar ao banco: usu&#xE1;rio, senha, tabela.</li>
-<li>Fazer as opera&#xE7;&#xF5;es referente ao banco: inser&#xE7;&#xE3;o, busca, etc...</li>
-<li>(Se preciso) Pegar o resultado da opera&#xE7;&#xE3;o.</li>
+<li>Conseguir o driver do banco de dados (a biblioteca que vai permitir a conexão). Aqui é feita a escolha de qual banco de dados usaremos (MySQL)</li>
+<li>Fazer a conexão com o banco de dados. Aqui será fornecido as informações para conectar ao banco: usuário, senha, tabela.</li>
+<li>Fazer as operações referente ao banco: inserção, busca, etc...</li>
+<li>(Se preciso) Pegar o resultado da operação.</li>
 </ol>
-<h2 class="mume-header" id="banco-de-dados">Banco de Dados</h2>
-
-<p>Para acessar um banco de dados, primeiro precisamos ter acesso &#xE0; um banco de dados.</p>
-<p>Nesta aula usaremos, como exemplo o mysql com um banco de dados chamado <code>veterinario22</code> com somente uma tabela chamada <code>Gatos</code> apenas com um id e um nome:</p>
-<pre data-role="codeBlock" data-info class="language-"><code>mysql&gt; describe Gatos;
-+-------+--------------+------+-----+---------+-------+
-| Field | Type         | Null | Key | Default | Extra |
-+-------+--------------+------+-----+---------+-------+
-| id    | int          | YES  |     | NULL    |       |
-| nome  | varchar(255) | YES  |     | NULL    |       |
-+-------+--------------+------+-----+---------+-------+
-2 rows in set (0,00 sec)
-</code></pre><h2 class="mume-header" id="driver">Driver</h2>
-
-<p>O Driver &#xE9; um arquivo <code>.jar</code> distribu&#xED;dos pela pr&#xF3;pria empresa do banco de dados.</p>
-<p>Para encontrar o driver do mysql basta procurar por &quot;jdbc mysql driver&quot;, e escolher a &quot;distribui&#xE7;&#xE3;o independente da plataforma&quot;.</p>
-<p>Depois de baixar o driver, voc&#xEA; deve incluir o .jar em seu projeto como uma biblioteca externa.</p>
-<p>No Eclipse, por exemplo, clique com o bot&#xE3;o da direita no projeto &gt; properties &gt; java build path &gt; Libraries &gt; classpath &gt; add external jar; escolha o arquivo baixado.</p>
-<h2 class="mume-header" id="conex%C3%A3o">Conex&#xE3;o</h2>
-
-<p>Para fazer a conex&#xE3;o usaremos a interface <code>Connection</code> de <code>java.sql.Connection</code>. Criaremos um objeto filho de <code>Connection</code> atrav&#xE9;s do m&#xE9;todo est&#xE1;tico <code>DriverManager</code> do <code>java.sql.DriverManager</code>:</p>
-<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword keyword-static">static</span> <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> USER <span class="token operator">=</span> <span class="token string">&quot;user&quot;</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> PASS <span class="token operator">=</span> <span class="token string">&quot;123456&quot;</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> DATABASE <span class="token operator">=</span> <span class="token string">&quot;veterinario22&quot;</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> URL <span class="token operator">=</span> <span class="token string">&quot;jdbc:mysql://localhost:3306/&quot;</span> <span class="token operator">+</span> DATABASE<span class="token punctuation">;</span>
+<h2 id="banco-de-dados">Banco de Dados </h2>
+<p>Para acessar um banco de dados, primeiro precisamos ter acesso à um banco de dados.</p>
+<h2 id="como-instalar-o-xampp">Como Instalar o XAMPP </h2>
+<p>O Xampp é um framework que possibilitará ter o MySql e um agente de acesso ao banco de dados.</p>
+<p>Faça o download em <a href="https://www.apachefriends.org/index.html">https://www.apachefriends.org/index.html</a></p>
+<p>Instale o xampp no seu computador, de preferência no diretório sugerido (C:\xampp)</p>
+<p>Abra o programa e ligue o apache e o MySql.</p>
+<p><img src="xampp_start.png" alt="alt text"></p>
+<p>Clique em <code>admin</code> no MySql para abrir o agente administrador do banco de dados.</p>
+<h3 id="criando-um-banco-de-dados">Criando um Banco de Dados </h3>
+<p><img src="criando_bd.png" alt="alt text"></p>
+<ol>
+<li>Clique em <code>new</code> para criar um novo banco de dados</li>
+<li>Coloque o nome do banco de dados, nesta aula vamos usar o nome <code>veterinario_unip</code></li>
+<li>Verifique se o banco de dados foi criado</li>
+</ol>
+<h3 id="criando-uma-tabela-no-banco-de-dados">Criando uma Tabela no Banco de Dados </h3>
+<p><img src="criando_table.png" alt="alt text"></p>
+<ol>
+<li>Clique no Banco de Dados</li>
+<li>escolha a aba <code>SQL</code> para entrar com um comando sql no banco de dados.</li>
+<li>Insira o comando abaixo para criar uma tabela chamada <code>Animais</code></li>
+</ol>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-CREATE">CREATE</span> <span class="token keyword keyword-TABLE">TABLE</span> Animais<span class="token punctuation">(</span>
+    ID <span class="token keyword keyword-int">int</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword keyword-AUTO_INCREMENT">AUTO_INCREMENT</span><span class="token punctuation">,</span>
+    Nome <span class="token keyword keyword-varchar">varchar</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    Idade <span class="token keyword keyword-int">int</span><span class="token punctuation">,</span> 
+    <span class="token keyword keyword-PRIMARY">PRIMARY</span> <span class="token keyword keyword-KEY">KEY</span> <span class="token punctuation">(</span>ID<span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>Neste comando</p>
+<ul>
+<li>A chave primária é um ID inteiro não nulo que se auto incrementa (você não precisa entrar com um ID, ele será colocado automaticamente)</li>
+<li>O campo Nome será uma string</li>
+<li>O campo Idade será um inteiro</li>
+</ul>
+<h4 id="outros-comandos-possíveis">Outros Comandos Possíveis </h4>
+<p>Conectado a este Banco de Dados podemos</p>
+<p>Inserir uma nova entrada:</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-INSERT">INSERT</span> <span class="token keyword keyword-INTO">INTO</span> Animais<span class="token punctuation">(</span>Nome<span class="token punctuation">,</span> Idade<span class="token punctuation">)</span> <span class="token keyword keyword-VALUES">VALUES</span><span class="token punctuation">(</span><span class="token string">"Brutus"</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>Listar todas as linhas:</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> Animais<span class="token punctuation">;</span>
+</code></pre><p>Fazer uma busca por todas as ocorrências que contenham a palavra "Br" como substring no nome, ignorando o case:</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> Animais <span class="token keyword keyword-WHERE">WHERE</span> LOWER<span class="token punctuation">(</span>Nome<span class="token punctuation">)</span> <span class="token operator">LIKE</span> LOWER<span class="token punctuation">(</span><span class="token string">"%Br%"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h2 id="driver">Driver </h2>
+<p>O Driver é um arquivo <code>.jar</code> distribuídos pela própria empresa do banco de dados.</p>
+<p>Para encontrar o driver do mysql basta procurar por "jdbc mysql driver", e escolher a "distribuição independente da plataforma".</p>
+<p>Depois de baixar o driver, você deve incluir o .jar em seu projeto como uma biblioteca externa.</p>
+<p>No Eclipse, por exemplo, clique com o botão da direita no projeto &gt; properties &gt; java build path &gt; Libraries &gt; classpath &gt; add external jar; escolha o arquivo baixado.</p>
+<h2 id="conexão">Conexão </h2>
+<p>Para fazer a conexão usaremos a interface <code>Connection</code> de <code>java.sql.Connection</code>. Criaremos um objeto filho de <code>Connection</code> através do método estático <code>DriverManager</code> do <code>java.sql.DriverManager</code>:</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-static">static</span> <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> <span class="token constant">USER</span> <span class="token operator">=</span> <span class="token string">"root"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> <span class="token constant">PASS</span> <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> <span class="token constant">DATABASE</span> <span class="token operator">=</span> <span class="token string">"veterinario_unip"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> <span class="token constant">URL</span> <span class="token operator">=</span> <span class="token string">"jdbc:mysql://localhost:3306/"</span> <span class="token operator">+</span> <span class="token constant">DATABASE</span><span class="token punctuation">;</span>
 
 <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">testaConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-  <span class="token keyword keyword-try">try</span> <span class="token punctuation">(</span><span class="token class-name">Connection</span> c <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>URL<span class="token punctuation">,</span> USER<span class="token punctuation">,</span> PASS<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Conexao estabelecida&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-try">try</span> <span class="token punctuation">(</span><span class="token class-name">Connection</span> c <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token constant">URL</span><span class="token punctuation">,</span> <span class="token constant">USER</span><span class="token punctuation">,</span> <span class="token constant">PASS</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Conexao estabelecida"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token keyword keyword-catch">catch</span><span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-</pre><p>onde</p>
+</code></pre><p>onde</p>
 <ul>
-<li><code>USER</code> &#xE9; o usu&#xE1;rio</li>
-<li><code>PASS</code> &#xE9; o password do banco de dados</li>
-<li><code>DATABASE</code> &#xE9; o banco de dados que ser&#xE1; usado</li>
-<li><code>URL</code> &#xE9; o endere&#xE7;o do banco de dados, no caso o banco de dados est&#xE1; instalado em meu computador, ent&#xE3;o o endere&#xE7;o, por padr&#xE3;o, ser&#xE1; <code>&quot;jdbc:mysql://localhost:3306/&quot;</code>, concatenado com o nome do banco de dados.</li>
+<li><code>USER</code> é o usuário</li>
+<li><code>PASS</code> é o password do banco de dados</li>
+<li><code>DATABASE</code> é o banco de dados que será usado</li>
+<li><code>URL</code> é o endereço do banco de dados, no caso o banco de dados está instalado em meu computador, então o endereço, por padrão, será <code>"jdbc:mysql://localhost:3306/"</code>, concatenado com o nome do banco de dados.</li>
 </ul>
-<h2 class="mume-header" id="updates">Updates</h2>
+<h2 id="updates">Updates </h2>
+<p>Para atualizar o banco de dados vamos usar o <code>PreparedStatement</code> e adicionar um <code>Animal</code> no banco de dados:</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code>	<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">addAnimal</span><span class="token punctuation">(</span><span class="token class-name">Animal</span> animal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-<p>Para atualizar o banco de dados vamos usar o <code>PreparedStatement</code> e adicionar um <code>Gato</code> no banco de dados:</p>
-<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token annotation punctuation">@Override</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">addGato</span><span class="token punctuation">(</span><span class="token class-name">Gato</span> gato<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> query <span class="token operator">=</span> <span class="token string">"INSERT INTO Animais(Nome, Idade) VALUES(?, ?);"</span><span class="token punctuation">;</span>
 
-  <span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> query <span class="token operator">=</span> <span class="token string">&quot;INSERT INTO Gatos VALUES (?, ?)&quot;</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-try">try</span> <span class="token punctuation">(</span><span class="token class-name">Connection</span> c <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token constant">URL</span><span class="token punctuation">,</span> <span class="token constant">USER</span><span class="token punctuation">,</span> <span class="token constant">PASS</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
 
-  <span class="token keyword keyword-try">try</span> <span class="token punctuation">(</span><span class="token class-name">Connection</span> c <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>URL<span class="token punctuation">,</span> USER<span class="token punctuation">,</span> PASS<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token class-name">PreparedStatement</span> pstm <span class="token operator">=</span> c<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token class-name">PreparedStatement</span> pstm <span class="token operator">=</span> c<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			pstm<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> animal<span class="token punctuation">.</span><span class="token function">getNome</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			pstm<span class="token punctuation">.</span><span class="token function">setInt</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> animal<span class="token punctuation">.</span><span class="token function">getIdade</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    pstm<span class="token punctuation">.</span><span class="token function">setInt</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> gato<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    pstm<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> gato<span class="token punctuation">.</span><span class="token function">getNome</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-int">int</span> result <span class="token operator">=</span> pstm<span class="token punctuation">.</span><span class="token function">executeUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token keyword keyword-int">int</span> result <span class="token operator">=</span> pstm<span class="token punctuation">.</span><span class="token function">executeUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Resultado de adicionar gato &quot;</span> <span class="token operator">+</span> gato <span class="token operator">+</span> <span class="token string">&quot;: &quot;</span> <span class="token operator">+</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Resultado de adicionar animal "</span> <span class="token operator">+</span> animal<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"numero de linhas modificadas "</span> <span class="token operator">+</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 
-  <span class="token punctuation">}</span><span class="token keyword keyword-catch">catch</span><span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</pre><p>Os passos funcionam assim:</p>
+		<span class="token punctuation">}</span><span class="token keyword keyword-catch">catch</span><span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+</code></pre><p>Os passos funcionam assim:</p>
 <ol>
-<li>Recebemos um objeto <code>Gato</code> de entrada, lembrando que <code>Gato</code> tem os campos <code>id (int)</code> e <code>nome (String)</code>.</li>
-<li>Criamos o comando para inserir uma entrada no banco de dados, mas deixando um caracter especial <code>?</code> onde queremos inserir as palavras de entrada: <code>&quot;INSERT INTO Gatos VALUES (?, ?)&quot;</code></li>
-<li>Estabelecemos uma conex&#xE3;o</li>
-<li>Criamos um <code>PreparedStatement</code> &#xE0; partir da conex&#xE3;o. Este objeto recebe como par&#xE2;metro o comando para inserir uma entrada no banco de dados.</li>
-<li>Agora precisamos preencher os characteres <code>?</code> que deixamos no comando, pedimos para o <code>PreparedStatement</code> fazer isso: com <code>pstm.setInt(1, gato.getId())</code> pedimos para colocar um <code>int</code> no primeiro <code>?</code> e o valor deste inteiro ser&#xE1; <code>gato.getId()</code>; com <code>pstm.setString(2, gato.getNome());</code> pedimos para inserir uma <code>String</code> no segundo <code>?</code> e o valor desta <code>String</code> ser&#xE1; <code>gato.getNome()</code>.</li>
-<li>Finalmente, pedimos para o <code>PreparedStatement</code> executar a atualiza&#xE7;&#xE3;o programada com <code>pstm.executeUpdate();</code>.</li>
+<li>Recebemos um objeto <code>Animal</code> de entrada, lembrando que <code>Gato</code> tem os campos <code>id (int)</code> e <code>nome (String)</code>.</li>
+<li>Criamos o comando para inserir uma entrada no banco de dados, mas deixando um caracter especial <code>?</code> onde queremos inserir as palavras de entrada: <code>"INSERT INTO Animais VALUES (?, ?)"</code></li>
+<li>Estabelecemos uma conexão</li>
+<li>Criamos um <code>PreparedStatement</code> à partir da conexão. Este objeto recebe como parâmetro o comando para inserir uma entrada no banco de dados.</li>
+<li>Agora precisamos preencher os characteres <code>?</code> que deixamos no comando, pedimos para o <code>PreparedStatement</code> fazer isso: com <code>pstm.setInt(1, animal.getId())</code> pedimos para colocar um <code>int</code> no primeiro <code>?</code> e o valor deste inteiro será <code>animal.getId()</code>; com <code>pstm.setString(2, animal.getNome());</code> pedimos para inserir uma <code>String</code> no segundo <code>?</code> e o valor desta <code>String</code> será <code>animal.getNome()</code>.</li>
+<li>Finalmente, pedimos para o <code>PreparedStatement</code> executar a atualização programada com <code>pstm.executeUpdate();</code>.</li>
 </ol>
-<h2 class="mume-header" id="buscas">Buscas</h2>
+<h2 id="buscas">Buscas </h2>
+<p>Para fazer uma busca em um banco de dados precisamos usar o <code>ResultSet</code> para acessar o resultado da busca. No exemplo à seguir vamos fazer recuperar todos os gatos na tabela.</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code>	<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-public">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Animal</span><span class="token punctuation">&gt;</span></span> <span class="token function">getTodosAnimais</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-<p>Para fazer uma busca em um banco de dados precisamos usar o <code>ResultSet</code> para acessar o resultado da busca. No exemplo &#xE0; seguir vamos fazer recuperar todos os gatos na tabela.</p>
-<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token annotation punctuation">@Override</span>
-<span class="token keyword keyword-public">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Gato</span><span class="token punctuation">&gt;</span></span> <span class="token function">getTodosGatos</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Animal</span><span class="token punctuation">&gt;</span></span> animais <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Gato</span><span class="token punctuation">&gt;</span></span> gatos <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> query <span class="token operator">=</span> <span class="token string">"SELECT * FROM Animais;"</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-try">try</span> <span class="token punctuation">(</span><span class="token class-name">Connection</span> c <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token constant">URL</span><span class="token punctuation">,</span> <span class="token constant">USER</span><span class="token punctuation">,</span> <span class="token constant">PASS</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
 
-  <span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> query <span class="token operator">=</span> <span class="token string">&quot;SELECT * FROM Gatos;&quot;</span><span class="token punctuation">;</span>
-  <span class="token keyword keyword-try">try</span> <span class="token punctuation">(</span><span class="token class-name">Connection</span> c <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>URL<span class="token punctuation">,</span> USER<span class="token punctuation">,</span> PASS<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token class-name">Statement</span> stm <span class="token operator">=</span> c<span class="token punctuation">.</span><span class="token function">createStatement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">ResultSet</span> rs <span class="token operator">=</span> stm<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token class-name">Statement</span> stm <span class="token operator">=</span> c<span class="token punctuation">.</span><span class="token function">createStatement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token class-name">ResultSet</span> rs <span class="token operator">=</span> stm<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token keyword keyword-while">while</span><span class="token punctuation">(</span>rs<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword keyword-int">int</span> id <span class="token operator">=</span> rs<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span><span class="token string">&quot;id&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token class-name">String</span> nome <span class="token operator">=</span> rs<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">&quot;nome&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token class-name">Gato</span> gato <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Gato</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> nome<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      gatos<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>gato<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+			<span class="token keyword keyword-while">while</span><span class="token punctuation">(</span>rs<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token class-name">String</span> nome <span class="token operator">=</span> rs<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"Nome"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-int">int</span> idade <span class="token operator">=</span> rs<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span><span class="token string">"Idade"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token class-name">Animal</span> animal <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Animal</span><span class="token punctuation">(</span>nome<span class="token punctuation">,</span> idade<span class="token punctuation">)</span><span class="token punctuation">;</span>
+				animais<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>animal<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
 
 
 
-  <span class="token punctuation">}</span><span class="token keyword keyword-catch">catch</span><span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token keyword keyword-catch">catch</span><span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
 
-  <span class="token keyword keyword-return">return</span> gatos<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</pre><p>Os passos funcionam assim:</p>
+		<span class="token keyword keyword-return">return</span> animais<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+</code></pre><p>Os passos funcionam da seguinte forma:</p>
 <ol>
-<li>Criamos uma lista de Gatos para poder guardar e retornar o resultado.</li>
-<li>Criamos o comando para fazer a busca de todos os gatos: <code>&quot;SELECT * FROM Gatos;&quot;</code> (desta vez n&#xE3;o precisamos colocar o <code>?</code>)</li>
-<li>Estabelecemos uma conex&#xE3;o</li>
-<li>Criamos um <code>Statement</code> &#xE0; partir da conex&#xE3;o. Este objeto far&#xE1; a busca. Perceba que n&#xE3;o precisamos criar um <code>PreparedStatement</code>, pois n&#xE3;o temos o caracter especial <code>?</code>.</li>
+<li>Criamos uma lista de Animais para poder guardar e retornar o resultado.</li>
+<li>Criamos o comando para fazer a busca de todos os gatos: <code>"SELECT * FROM Animais;"</code> (desta vez não precisamos colocar o <code>?</code>)</li>
+<li>Estabelecemos uma conexão</li>
+<li>Criamos um <code>Statement</code> à partir da conexão. Este objeto fará a busca. Perceba que não precisamos criar um <code>PreparedStatement</code>, pois não temos o caracter especial <code>?</code>.</li>
 <li>Agora pedimos para o <code>Statement</code> realizar a busca e criamos um <code>ResultSet</code> para receber o resultado da busca.</li>
-<li>Para iterar pelo <code>ResultSet</code> precisamos usar o m&#xE9;todo <code>next()</code>, este m&#xE9;todo far&#xE1; o ponteiro do <code>ResultSet</code> ir para a pr&#xF3;xima entrada do resultado, retornando <code>true</code> enquanto tiver uma pr&#xF3;xima entrada.</li>
-<li>Em cada entrada de <code>ResultSet</code> podemos pegar o valor desta entrada pelo nome da coluna, especificando qual &#xE9; o tipo de dado que ir&#xE1; retorna: <code>rs.getInt(&quot;id&quot;);</code> pede para pegar a coluna <code>id</code> como um inteiro; <code>rs.getString(&quot;nome&quot;);</code> pede para pegar a coluna <code>nome</code> como uma <code>String</code>.</li>
-<li>Com um nome e um id, podemos criar um Gato e adicionar &#xE0; lista.</li>
+<li>Para iterar pelo <code>ResultSet</code> precisamos usar o método <code>next()</code>, este método fará o ponteiro do <code>ResultSet</code> ir para a próxima entrada do resultado, retornando <code>true</code> enquanto tiver uma próxima entrada.</li>
+<li>Em cada entrada de <code>ResultSet</code> podemos pegar o valor desta entrada pelo nome da coluna, especificando qual é o tipo de dado que irá retorna: <code>rs.getInt("idade");</code> pede para pegar a coluna <code>idade</code> como um inteiro; <code>rs.getString("nome");</code> pede para pegar a coluna <code>nome</code> como uma <code>String</code>.</li>
+<li>Com um nome e uma idade, podemos criar um Animal e adicionar à lista.</li>
 </ol>
-<h2 class="mume-header" id="conclus%C3%A3o">Conclus&#xE3;o</h2>
+<h2 id="buscar-com-uma-palavra-chave">Buscar com uma palavra-chave </h2>
+<p>Agora vamos fazer uma busca recebendo uma palavra, queremos encontrar todas as ocorrências que contenham a palavra como substring</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code>	<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-public">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Animal</span><span class="token punctuation">&gt;</span></span> <span class="token function">buscaAnimais</span><span class="token punctuation">(</span><span class="token class-name">String</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-<p>Usando estes componentes podemos fazer qualquer comando simples em um banco de dados. S&#xF3; lembre que:</p>
+		<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Animal</span><span class="token punctuation">&gt;</span></span> animais <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> query <span class="token operator">=</span> <span class="token string">"SELECT * FROM Animais WHERE LOWER(Nome) LIKE LOWER(?);"</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-try">try</span> <span class="token punctuation">(</span><span class="token class-name">Connection</span> c <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token constant">URL</span><span class="token punctuation">,</span> <span class="token constant">USER</span><span class="token punctuation">,</span> <span class="token constant">PASS</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+			<span class="token class-name">PreparedStatement</span> pstm <span class="token operator">=</span> c<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			pstm<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"%"</span> <span class="token operator">+</span> key <span class="token operator">+</span> <span class="token string">"%"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">ResultSet</span> rs <span class="token operator">=</span> pstm<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+			<span class="token keyword keyword-while">while</span><span class="token punctuation">(</span>rs<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token class-name">String</span> nome <span class="token operator">=</span> rs<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"Nome"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-int">int</span> idade <span class="token operator">=</span> rs<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span><span class="token string">"Idade"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token class-name">Animal</span> animal <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Animal</span><span class="token punctuation">(</span>nome<span class="token punctuation">,</span> idade<span class="token punctuation">)</span><span class="token punctuation">;</span>
+				animais<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>animal<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+
+
+
+		<span class="token punctuation">}</span><span class="token keyword keyword-catch">catch</span><span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token keyword keyword-return">return</span> animais<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+</code></pre><h2 id="padrão-de-projetos-dao">Padrão de projetos <code>DAO</code> </h2>
+<p>O padrão de arquitetura <code>DAO</code> significa <em>Data Access Object</em>.<br>
+É o padrão que trabalha com a responsabilidade de transformar dados em objetos.<br>
+Assim como o <code>MVC</code>, consiste em separar a interface da implementação.<br>
+Para usar o padrão <code>DAO</code> em java devemos ter uma interface que defina a funcionalidade de sua responsabilidade: transformar dados persistentes em objetos java.<br>
+Esta interface independe se estes dados serão recuperados de um <code>csv</code>, banco de dados, ou qualquer outra forma.</p>
+<p>Se formos seguir o exemplo desta aula teremos como interface <code>DAO</code>:</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">dao</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">entidade<span class="token punctuation">.</span></span><span class="token class-name">Animal</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">Dao</span> <span class="token punctuation">{</span>
+	
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">addAnimal</span><span class="token punctuation">(</span><span class="token class-name">Animal</span> animal<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Animal</span><span class="token punctuation">&gt;</span></span> <span class="token function">getTodosAnimais</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Animal</span><span class="token punctuation">&gt;</span></span> <span class="token function">buscaAnimais</span><span class="token punctuation">(</span><span class="token class-name">String</span> key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre><p>Uma implementação possível da interface é fazer uma classe que lê os dados em um arquivo <code>csv</code>, uma outra pode ler de um banco de dados <code>MySql</code>.</p>
+<p>A seguir uma implementação que lê de um banco de dados <code>MySql</code>:</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">dao</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">Connection</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">DriverManager</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">PreparedStatement</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">ResultSet</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">Statement</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">ArrayList</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">entidade<span class="token punctuation">.</span></span><span class="token class-name">Animal</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">DaoMySql</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">Dao</span><span class="token punctuation">{</span>
+	
+	<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> <span class="token constant">USER</span> <span class="token operator">=</span> <span class="token string">"root"</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> <span class="token constant">PASS</span> <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> <span class="token constant">DATABASE</span> <span class="token operator">=</span> <span class="token string">"veterinario_unip"</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> <span class="token constant">URL</span> <span class="token operator">=</span> <span class="token string">"jdbc:mysql://localhost:3306/"</span> <span class="token operator">+</span> <span class="token constant">DATABASE</span><span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">testaConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-try">try</span> <span class="token punctuation">(</span><span class="token class-name">Connection</span> c <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token constant">URL</span><span class="token punctuation">,</span> <span class="token constant">USER</span><span class="token punctuation">,</span> <span class="token constant">PASS</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Conexao estabelecida"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span><span class="token keyword keyword-catch">catch</span><span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token annotation punctuation">@Override</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">addAnimal</span><span class="token punctuation">(</span><span class="token class-name">Animal</span> animal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+		<span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> query <span class="token operator">=</span> <span class="token string">"INSERT INTO Animais(Nome, Idade) VALUES(?, ?);"</span><span class="token punctuation">;</span>
+
+		<span class="token keyword keyword-try">try</span> <span class="token punctuation">(</span><span class="token class-name">Connection</span> c <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token constant">URL</span><span class="token punctuation">,</span> <span class="token constant">USER</span><span class="token punctuation">,</span> <span class="token constant">PASS</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+			<span class="token class-name">PreparedStatement</span> pstm <span class="token operator">=</span> c<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+			pstm<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> animal<span class="token punctuation">.</span><span class="token function">getNome</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			pstm<span class="token punctuation">.</span><span class="token function">setInt</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> animal<span class="token punctuation">.</span><span class="token function">getIdade</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+			<span class="token keyword keyword-int">int</span> result <span class="token operator">=</span> pstm<span class="token punctuation">.</span><span class="token function">executeUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Resultado de adicionar animal "</span> <span class="token operator">+</span> animal<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"numero de linhas modificadas "</span> <span class="token operator">+</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+		<span class="token punctuation">}</span><span class="token keyword keyword-catch">catch</span><span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token annotation punctuation">@Override</span>
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Animal</span><span class="token punctuation">&gt;</span></span> <span class="token function">getTodosAnimais</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+		<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Animal</span><span class="token punctuation">&gt;</span></span> animais <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> query <span class="token operator">=</span> <span class="token string">"SELECT * FROM Animais;"</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-try">try</span> <span class="token punctuation">(</span><span class="token class-name">Connection</span> c <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token constant">URL</span><span class="token punctuation">,</span> <span class="token constant">USER</span><span class="token punctuation">,</span> <span class="token constant">PASS</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+			<span class="token class-name">Statement</span> stm <span class="token operator">=</span> c<span class="token punctuation">.</span><span class="token function">createStatement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">ResultSet</span> rs <span class="token operator">=</span> stm<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+			<span class="token keyword keyword-while">while</span><span class="token punctuation">(</span>rs<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token class-name">String</span> nome <span class="token operator">=</span> rs<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"Nome"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-int">int</span> idade <span class="token operator">=</span> rs<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span><span class="token string">"Idade"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token class-name">Animal</span> animal <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Animal</span><span class="token punctuation">(</span>nome<span class="token punctuation">,</span> idade<span class="token punctuation">)</span><span class="token punctuation">;</span>
+				animais<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>animal<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+
+
+
+		<span class="token punctuation">}</span><span class="token keyword keyword-catch">catch</span><span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token keyword keyword-return">return</span> animais<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	
+	<span class="token annotation punctuation">@Override</span>
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Animal</span><span class="token punctuation">&gt;</span></span> <span class="token function">buscaAnimais</span><span class="token punctuation">(</span><span class="token class-name">String</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+		<span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Animal</span><span class="token punctuation">&gt;</span></span> animais <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token keyword keyword-final">final</span> <span class="token class-name">String</span> query <span class="token operator">=</span> <span class="token string">"SELECT * FROM Animais WHERE LOWER(Nome) LIKE LOWER(?);"</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-try">try</span> <span class="token punctuation">(</span><span class="token class-name">Connection</span> c <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token constant">URL</span><span class="token punctuation">,</span> <span class="token constant">USER</span><span class="token punctuation">,</span> <span class="token constant">PASS</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+			<span class="token class-name">PreparedStatement</span> pstm <span class="token operator">=</span> c<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			pstm<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"%"</span> <span class="token operator">+</span> key <span class="token operator">+</span> <span class="token string">"%"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">ResultSet</span> rs <span class="token operator">=</span> pstm<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+			<span class="token keyword keyword-while">while</span><span class="token punctuation">(</span>rs<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token class-name">String</span> nome <span class="token operator">=</span> rs<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"Nome"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-int">int</span> idade <span class="token operator">=</span> rs<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span><span class="token string">"Idade"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token class-name">Animal</span> animal <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Animal</span><span class="token punctuation">(</span>nome<span class="token punctuation">,</span> idade<span class="token punctuation">)</span><span class="token punctuation">;</span>
+				animais<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>animal<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+
+
+
+		<span class="token punctuation">}</span><span class="token keyword keyword-catch">catch</span><span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token keyword keyword-return">return</span> animais<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre><h3 id="como-usar-o-padrão-dao">Como usar o padrão Dao </h3>
+<p>Usando o padrão que separa a interface da implentação, todo o código deve trabalhar com a interface, ou seja, com uma variável do tipo <code>Dao</code>, assim o código funcionará independente da implementação.</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code>	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		
+		<span class="token comment">// aqui a implementação é escolhida</span>
+		<span class="token class-name">Dao</span> dao <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">DaoMySql</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token comment">// em todo os restante do código a interface Dao é usada</span>
+		dao<span class="token punctuation">.</span><span class="token function">addAnimal</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">Animal</span><span class="token punctuation">(</span><span class="token string">"doguinho"</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		dao<span class="token punctuation">.</span><span class="token function">addAnimal</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">Animal</span><span class="token punctuation">(</span><span class="token string">"caramelo"</span><span class="token punctuation">,</span> <span class="token number">21</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-for">for</span><span class="token punctuation">(</span><span class="token class-name">Animal</span> a<span class="token operator">:</span> dao<span class="token punctuation">.</span><span class="token function">getTodosAnimais</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword keyword-for">for</span><span class="token punctuation">(</span><span class="token class-name">Animal</span> a<span class="token operator">:</span> dao<span class="token punctuation">.</span><span class="token function">buscaAnimais</span><span class="token punctuation">(</span><span class="token string">"c"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+
+</code></pre><h2 id="conclusão">Conclusão </h2>
+<p>Usando estes componentes podemos fazer qualquer comando simples em um banco de dados. Só lembre que:</p>
 <ul>
-<li>Para fazer comandos que dependam da entrada do usu&#xE1;rio use o <code>PreparedStatement</code></li>
-<li>Se n&#xE3;o depender da entrada do usu&#xE1;rio voc&#xEA; poder&#xE1; usar o <code>Statement</code></li>
-<li>Se um comando no banco exigir uma resposta, como a busca por exemplo, voc&#xEA; precisa usar o m&#xE9;todo <code>executeQuery</code> e receber um <code>ResultSet</code></li>
-<li>Caso seja uma atualiza&#xE7;&#xE3;o no banco de dados, use o m&#xE9;todo <code>executeUpdate</code></li>
+<li>Para fazer comandos que dependam da entrada do usuário use o <code>PreparedStatement</code></li>
+<li>Se não depender da entrada do usuário você poderá usar o <code>Statement</code></li>
+<li>Se um comando no banco exigir uma resposta, como a busca por exemplo, você precisa usar o método <code>executeQuery</code> e receber um <code>ResultSet</code></li>
+<li>Caso seja uma atualização no banco de dados, use o método <code>executeUpdate</code></li>
 </ul>
-<h2 class="mume-header" id="a-stylecolorredimportantea"><em><a style="color:red;" href>IMPORTANTE!!!</a></em></h2>
-
-<p>Raramente iremos precisar fazer uma atualiza&#xE7;&#xE3;o ou uma busca usando argumentos pr&#xE9;-programados.<br>
-Normalmente &#xE9; o usu&#xE1;rio final quem deve fornecer os argumentos para usar na nossa busca ou atualiza&#xE7;&#xE3;o.</p>
-<p>Neste caso <strong>nunca</strong> devemos concatenar uma String de um comando com uma String fornecida pelo usu&#xE1;rio.<br>
+<h2 id="a-stylecolorredimportantea"><em><a style="color:red;" href="">IMPORTANTE!!!</a></em> </h2>
+<p>Raramente iremos precisar fazer uma atualização ou uma busca usando argumentos pré-programados.<br>
+Normalmente é o usuário final quem deve fornecer os argumentos para usar na nossa busca ou atualização.</p>
+<p>Neste caso <strong>nunca</strong> devemos concatenar uma String de um comando com uma String fornecida pelo usuário.<br>
 Sob o risco do sistema sofrer um <a href="https://en.wikipedia.org/wiki/SQL_injection"><em>injection atack</em></a>.</p>
-<p>O recomend&#xE1;vel para esta situa&#xE7;&#xE3;o &#xE9; usar a classe <code>PreparedStatement</code></p>
-<p>.</p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>Os exemplos desta aula podem ser vistos no <a href="https://github.com/viniciusdenovaes/Unip222ALPOO/tree/master/Aula04JDBC/src">github</a> <a href="#fnref1" class="footnote-backref">&#x21A9;&#xFE0E;</a></p>
-</li>
-</ol>
-</section>
+<p>O recomendável para esta situação é usar a classe <code>PreparedStatement</code></p>
 
       </div>
       
       
-    
-    
     
     
     
