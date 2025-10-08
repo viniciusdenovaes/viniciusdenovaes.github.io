@@ -58,7 +58,7 @@ Define um grafo com 8 vértices que pode ser representado pelo seguinte desenho:
 ![alt text](image-1.png)
 
 
-##### inst02
+##### inst03
 
 O seguinte arquivo:
 
