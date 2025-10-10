@@ -12,6 +12,8 @@
 ##### CC e SI
 - [ALPOO](aulas/unip/20252/alpoo.html)
 - [ED](https://github.com/viniciusdenovaes/AulaUnipEstruturasDeDados) 
+- [PI](aulas/unip/20252/pi.html)
+- [ATC](aulas/unip/20252/atc.html)
 ##### ADS
 - [Programação Orientada a Objetos II](aulas/unip/20252/poo2.html)
 - [Projeto de Sistema Orientado a Objeto](aulas/unip/20252/psoo.html)
