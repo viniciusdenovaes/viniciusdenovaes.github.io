@@ -12,4 +12,4 @@
 <!-- ### Trabalhos
 * [Roteiro para APS](pi_files/aps/APS_PIVC_2024.pdf) -->
 
-<!-- ### [Git](https://github.com/viniciusdenovaes/Unip232PI) --> 
+### [Git](https://github.com/viniciusdenovaes/Unip232PI)
