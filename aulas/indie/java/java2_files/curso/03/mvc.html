@@ -89,7 +89,7 @@
 <li>Um <code>JTable</code> que é o objeto tabela, e onde podemos configurar o jeito que os dados aparecem.</li>
 <li>Um <code>JScrollPane</code> que é um painel, com um <em>scroll</em> para conter a tabela.</li>
 </ul>
-<h4 id="o-tablemodel-default-os-dados-e-a-tabela">O TableModel default, os Dados e a Tabela </h4>
+<h3 id="o-tablemodel-default-os-dados-e-a-tabela">O TableModel default, os Dados e a Tabela </h3>
 <p>Para criar um <code>TableModel</code> completo você precisaria extender de <code>AbstractTableModel</code>. Para este exemplo simples vamos usar um table model pronto chamado <code>DefaultTableModel</code>.</p>
 <p>Para criar um <code>DefaultTableModel</code> basta passar os nomes das colunas e a quantidade de linhas iniciais (no caso serão 0).</p>
 <p>Então teremos o seguinte bloco de código para criar uma tabela dentro de um panel:</p>
@@ -105,7 +105,7 @@
 <li>um <code>JTable</code> que usará o <code>DefaultTableModel</code></li>
 <li>um <code>JScrollPane</code> que terá apenas o <code>JTable</code> dentro dele.</li>
 </ul>
-<h4 id="populando-a-tabela">Populando a tabela </h4>
+<h3 id="populando-a-tabela">Populando a tabela </h3>
 <p>Vamos ver como colocar informações dentro da tabela:</p>
 <pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-void">void</span> <span class="token function">preencheTabela</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Animal</span><span class="token punctuation">&gt;</span></span> animais<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 	dtm<span class="token punctuation">.</span><span class="token function">setRowCount</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -132,7 +132,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="montando-um-exemplo-completo">Montando um Exemplo Completo </h2>
+<h3 id="montando-um-exemplo-completo">Montando um Exemplo Completo </h3>
 <p>O seguinte código irá montar um exemplo completo do que foi aprendido até agora:</p>
 <pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">TestandoJTable</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">JFrame</span><span class="token punctuation">{</span>
 	
@@ -196,7 +196,7 @@
 	<span class="token punctuation">}</span>
 	
 <span class="token punctuation">}</span>
-</code></pre><h4 id="consertando-a-tabela-editável">Consertando a Tabela Editável </h4>
+</code></pre><h3 id="consertando-a-tabela-editável">Consertando a Tabela Editável </h3>
 <p>Se você reparar o exemplo anterior, cada célula na tabela pode ser editável, vamos aprender a desligar este recurso.<br>
 Perceba que essa edição não muda o estado do objeto original.</p>
 <p>Infelizmente não basta mudar a configuração na <code>JTable</code>, precisamos criar uma classe filha da <code>JTable</code> e fazer <code>@Override</code> do método <code>public boolean isCellEditable(int row, int column)</code>.</p>
@@ -206,7 +206,7 @@ Perceba que essa edição não muda o estado do objeto original.</p>
 		<span class="token keyword keyword-return">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
 	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre><h4 id="selecionando-um-animal-da-tabela">Selecionando um Animal da Tabela </h4>
+</code></pre><h3 id="selecionando-um-animal-da-tabela">Selecionando um Animal da Tabela </h3>
 <p>Podemos selecionar uma linha na tabela usando o mouse, mas como pegar essa informação e passar para o código?</p>
 <ul>
 <li>Pegamos a linha selecionada na tabela usando <code>int rowIndex = table.getSelectedRow();</code></li>
@@ -218,7 +218,7 @@ Perceba que essa edição não muda o estado do objeto original.</p>
 	<span class="token class-name">String</span> nome <span class="token operator">=</span> dtm<span class="token punctuation">.</span><span class="token function">getValueAt</span><span class="token punctuation">(</span>rowIndex<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token keyword keyword-return">return</span> nome<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><h5 id="pegando-o-objeto-animal-da-linha">Pegando o objeto <code>Animal</code> da Linha </h5>
+</code></pre><h3 id="pegando-o-objeto-animal-da-linha">Pegando o objeto <code>Animal</code> da Linha </h3>
 <p>Podemos fazer ainda melhor e pegar o objeto da linha.</p>
 <p>Temos que consertar um detalhe: não guardamos nenhum objeto na linha, apenas os dados do objeto. Mais ainda, não guardamos nem todos os dados do objeto (faltou o id).</p>
 <p>Como resolver isso?</p>
@@ -241,7 +241,7 @@ Perceba que essa edição não muda o estado do objeto original.</p>
 	<span class="token class-name">Animal</span> animal <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Animal</span><span class="token punctuation">)</span>dtm<span class="token punctuation">.</span><span class="token function">getValueAt</span><span class="token punctuation">(</span>rowIndex<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token keyword keyword-return">return</span> animal<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><h4 id="testando-a-seleção-de-linha">Testando a Seleção de Linha </h4>
+</code></pre><h3 id="testando-a-seleção-de-linha">Testando a Seleção de Linha </h3>
 <p>Vamos fazer modificar o programa anterior para que, quando clicado com duplo clique, apareça uma mensagem dizendo qual objeto foi selecionado.</p>
 <pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">TestandoJTable</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">JFrame</span><span class="token punctuation">{</span>
 	

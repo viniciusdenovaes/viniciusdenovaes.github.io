@@ -78,7 +78,7 @@ Para fazer uma tabela em Java precisamos de, no mínimo, 3 elementos:
 - Um `JTable` que é o objeto tabela, e onde podemos configurar o jeito que os dados aparecem.
 - Um `JScrollPane` que é um painel, com um *scroll* para conter a tabela.
 
-#### O TableModel default, os Dados e a Tabela
+### O TableModel default, os Dados e a Tabela
 
 Para criar um `TableModel` completo você precisaria extender de `AbstractTableModel`. Para este exemplo simples vamos usar um table model pronto chamado `DefaultTableModel`.
 
@@ -98,7 +98,7 @@ Explicação:
 - um `JTable` que usará o `DefaultTableModel`
 - um `JScrollPane` que terá apenas o `JTable` dentro dele.
 
-#### Populando a tabela
+### Populando a tabela
 
 Vamos ver como colocar informações dentro da tabela:
 ```java
@@ -122,7 +122,7 @@ Sempre que vamos mexer nos dados da tabela, devemos mexer no `TableModel dtm`.
       - `row[1] = a.getIdade();`
    - Finalmente adicionamos a o array de dados na tabela com `dtm.addRow(row);`
 
-## Montando um Exemplo Completo
+### Montando um Exemplo Completo
 
 O seguinte código irá montar um exemplo completo do que foi aprendido até agora:
 
@@ -191,7 +191,7 @@ public class TestandoJTable extends JFrame{
 }
 ```
 
-#### Consertando a Tabela Editável
+### Consertando a Tabela Editável
 
 Se você reparar o exemplo anterior, cada célula na tabela pode ser editável, vamos aprender a desligar este recurso. 
 Perceba que essa edição não muda o estado do objeto original.
@@ -207,7 +207,7 @@ JTable table = new JTable(dtm) {
 };
 ```
 
-#### Selecionando um Animal da Tabela
+### Selecionando um Animal da Tabela
 
 Podemos selecionar uma linha na tabela usando o mouse, mas como pegar essa informação e passar para o código?
 
@@ -223,7 +223,7 @@ String selecionaLinha() {
 }
 ```
 
-##### Pegando o objeto `Animal` da Linha
+### Pegando o objeto `Animal` da Linha
 
 Podemos fazer ainda melhor e pegar o objeto da linha.
 
@@ -260,7 +260,7 @@ Animal selecionaLinha() {
 }
 ```
 
-#### Testando a Seleção de Linha
+### Testando a Seleção de Linha
 
 Vamos fazer modificar o programa anterior para que, quando clicado com duplo clique, apareça uma mensagem dizendo qual objeto foi selecionado.
 
