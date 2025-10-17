@@ -13,6 +13,7 @@
 
 - [Aula 04 - Modelos de Classes de Análise](psoo_files/slides/Aula04_classe_de_analise.pdf)
 
+- [Aula 05 - Modelos de Interações](psoo_files/slides/Aula05_modelagem_interacoes.pdf)
 
 #### Revisão
  - [Para NP1](psoo_files/listas/01.html)
