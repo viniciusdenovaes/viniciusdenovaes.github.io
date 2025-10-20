@@ -15,6 +15,9 @@
 
 - [Aula 05 - Modelos de Interações](psoo_files/slides/Aula05_modelagem_interacoes.pdf)
 
+
+- [Aula 06 - Diagrama de Transição de Estados](psoo_files/slides/Aula06_diagrama_transicao_estados.pdf)
+
 #### Revisão
  - [Para NP1](psoo_files/listas/01.html)
 
