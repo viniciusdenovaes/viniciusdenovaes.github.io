@@ -12,6 +12,7 @@
 - [06 - Data Binding](poo2_files/curso/06/aula06.html)
 - [07 - ListBox - Como mostrar uma lista de dados](poo2_files/curso/07/aula07.html)
 - [08 - Banco de Dados](poo2_files/curso/08/aula08.html)
+- [09 - Banco de Dados Relacional: Exemplo de Sistema com uma Tabela Relacional](poo2_files/curso/09/aula09.html)
 
 
 
