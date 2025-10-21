@@ -10,6 +10,7 @@
 
 ### Atuais (2025/2)
 ##### CC e SI
+- [CLD](aulas/unip/20252/cld.html)
 - [ALPOO](aulas/unip/20252/alpoo.html)
 - [ED](https://github.com/viniciusdenovaes/AulaUnipEstruturasDeDados) 
 - [PI](aulas/unip/20252/pi.html)
