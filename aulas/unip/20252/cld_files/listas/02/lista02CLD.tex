@@ -16,6 +16,8 @@
 \usepackage{amsmath,amssymb}
 \usepackage{multicol}
 
+\usepackage{karnaugh-map}
+
 \def\code#1{\texttt{#1}}
 
 \newcommand{\class}{CLD}
@@ -48,152 +50,108 @@
 \begin{questions}
 
 
-\question Faça um circuito para cada expressão booleana.
+\question 
 
 \begin{enumerate}
 
-\item $\sim (a+b)$
+\item
 
-\item $(\sim a \cdot b) + (b \cdot \sim c)$
+Considere a seguinte tabela verdade e 
+monte uma expressão booleana que satisfaça a 
+tabela.
 
-\item $\sim a \cdot \sim b$
+\begin{displaymath}
+\begin{array}{|c c|c|}
+a & b & resultado \\
+\hline 
+0 & 0 & 0\\
+0 & 1 & 0\\
+1 & 0 & 1\\
+1 & 1 & 1\\
+\end{array}
+\end{displaymath}
 
-\item $(a+b)\cdot c$
 
-\item $a + (b\cdot c)$
+\makeemptybox{\stretch{1}}
+
+\item
+
+Ainda considerando a mesma tabela verdade, 
+monte o mapa de Karnaugh e encontre uma equação 
+simplificada da tabela verdade.
+
+
+    \begin{karnaugh-map}[2][2][1][$a$][$b$]
+    \end{karnaugh-map}
+
+
+\makeemptybox{\stretch{1}}
+
+\item
+
+Considerando a equação simplificada do item anterior,
+monte um circuito baseado nesta equação.
+
+\makeemptybox{\stretch{1}}
 
 \end{enumerate}
+
+
 
 \break
 
 
 
 
-\tikzstyle{branch}=[fill,shape=circle,minimum size=3pt,inner sep=0pt]
 
 
-\question Faça uma expressão booleana equivalente a cada um dos circuitos abaixo.
+
+
+
+
+\question 
 
 \begin{enumerate}
 
-\item \textbf{Resposta:} $(a+b)\cdot c$
+\item
 
-\begin{tikzpicture}[label distance=2mm]
+Considere a seguinte tabela verdade e 
+monte uma expressão booleana que satisfaça a 
+tabela.
 
-    \node (c) at (0,0) {$c$};
-    \node (b) at (1,0) {$b$};
-    \node (a) at (2,0) {$a$};
-
-    \node[or gate US, draw, logic gate inputs=nn] at ($(a)+(1,-1)$) (Or) {};
-    \node[and gate US, draw, logic gate inputs=nn, anchor=input 1] at ($(Or.output)+(1,-1)$) (And) {};
-
-    \draw (a) |- (Or.input 1);
-    \draw (b) |- (Or.input 2);
-    \draw (Or.output) |- (And.input 1);
-    \draw (c) |- (And.input 2);
-    \draw (And.output) -- ([xshift=0.5cm]And.output) node[above] {$~$};
-
-\end{tikzpicture}
+\begin{displaymath}
+\begin{array}{|c c|c|}
+a & b & resultado \\
+\hline 
+0 & 0 & 1\\
+0 & 1 & 1\\
+1 & 0 & 0\\
+1 & 1 & 1\\
+\end{array}
+\end{displaymath}
 
 
+\makeemptybox{\stretch{1}}
 
-\item \textbf{Resposta:} $a + (b\cdot c)$
+\item
 
-\begin{tikzpicture}[label distance=2mm]
-
-    \node (a) at (0,0) {$a$};
-    \node (b) at (1,0) {$b$};
-    \node (c) at (2,0) {$c$};
-
-    \node[and gate US, draw, logic gate inputs=nn] at ($(c)+(1,-1)$) (And) {};
-    \node[or gate US, draw, logic gate inputs=nn, anchor=input 1] at ($(And.output)+(1,-1)$) (Or) {};
-
-    \draw (c) |- (And.input 1);
-    \draw (b) |- (And.input 2);
-    \draw (And.output) |- (Or.input 1);
-    \draw (a) |- (Or.input 2);
-    \draw (Or.output) -- ([xshift=0.5cm]Or.output) node[above] {$~$};
-
-\end{tikzpicture}
+Ainda considerando a mesma tabela verdade, 
+monte o mapa de Karnaugh e encontre uma equação 
+simplificada da tabela verdade.
 
 
+    \begin{karnaugh-map}[2][2][1][$a$][$b$]
+    \end{karnaugh-map}
 
 
+\makeemptybox{\stretch{1}}
 
+\item
 
-\item \textbf{Resposta:}  $\sim (a+b)$
+Considerando a equação simplificada do item anterior,
+monte um circuito baseado nesta equação.
 
-\begin{tikzpicture}[label distance=2mm]
-
-    \node (a) at (0,0) {$a$};
-    \node (b) at (1,0) {$b$};
-
-    \node[or gate US, draw, logic gate inputs=nn] at ($(b)+(1,-1)$) (Or) {};
-    \node[not gate US, draw] at ($(Or.output)+(1,0)$) (Not) {};
-
-    \draw (a) |- (Or.input 2);
-    \draw (b) |- (Or.input 1);
-    \draw (Or.output) |- (Not.input);
-    \draw (Not.output) -- ([xshift=0.5cm]Not.output) node[above] {$~$};
-
-\end{tikzpicture}
-
-
-
-\item \textbf{Resposta:} $\sim a \cdot \sim b$
-
-\begin{tikzpicture}[label distance=2mm]
-
-    \node (a) at (0,0) {$a$};
-    \node (b) at (1,0) {$b$};
-
-    \node[not gate US, draw, rotate=-90] at ($(a)+(0,-1)$) (NotA) {};
-    \draw (a) |- (NotA.input);
-    
-    \node[not gate US, draw, rotate=-90] at ($(b)+(0,-1)$) (NotB) {};
-    \draw (b) |- (NotB.input);
-    
-    \node[and gate US, draw, logic gate inputs=nn] at ($(b)+(1,-2)$) (And) {};
-
-    \draw (NotA) |- (And.input 2);
-    \draw (NotB) |- (And.input 1);
-    \draw (And.output) -- ([xshift=0.5cm]And.output) node[above] {$~$};
-
-\end{tikzpicture}
-
-
-
-
-
-\item \textbf{Resposta:} $(\sim a \cdot b) + (b \cdot \sim c)$
-
-\begin{tikzpicture}[label distance=2mm]
-
-    \node (a) at (0,0) {$a$};
-    \node (b) at (1,0) {$b$};
-    \node (c) at (2,0) {$c$};
-
-    \node[not gate US, draw, rotate=-90] at ($(a)+(0,-1)$) (NotA) {};
-    \draw (a) |- (NotA.input);
-    
-    \node[not gate US, draw, rotate=-90] at ($(c)+(0,-1)$) (NotC) {};
-    \draw (c) |- (NotC.input);
-    
-    \node[and gate US, draw, logic gate inputs=nn] at ($(c)+(1,-2)$) (And1) {};
-    \node[and gate US, draw, logic gate inputs=nn] at ($(c)+(1,-3)$) (And2) {};
-    \node[or gate US, draw, logic gate inputs=nn, anchor=input 1] at ($(And1.output)+(1,0)$) (Or) {};
-
-    \draw (NotC) |- (And1.input 1);
-    \draw (b |- And1.input 2) node[branch] {} -- (And1.input 2);
-    \draw (b)    |- (And2.input 1);
-    \draw (NotA) |- (And2.input 2);
-    \draw (And1.output) |- (Or.input 1);
-    \draw (And2.output) -- ([xshift=0.5cm]And2.output) |- (Or.input 2);
-
-    \draw (Or.output) -- ([xshift=0.5cm]Or.output) node[above] {$~$};
-
-\end{tikzpicture}
-
+\makeemptybox{\stretch{1}}
 
 \end{enumerate}
 
@@ -201,28 +159,125 @@
 \break
 
 
-\question
 
-Considere o seguinte número binário $(1110011110110)_2$ forneça o mesmo número nas bases 4 e 16.
+
+
+
+\question 
+
+\begin{enumerate}
+
+\item
+
+Considere a seguinte tabela verdade e 
+monte uma expressão booleana que satisfaça a 
+tabela.
+
+\begin{displaymath}
+\begin{array}{|c c c|c|}
+a & b & c & resultado \\
+\hline 
+0 & 0 & 0 & 0\\
+0 & 0 & 1 & 1\\
+0 & 1 & 0 & 0\\
+0 & 1 & 1 & 1\\
+1 & 0 & 0 & 1\\
+1 & 0 & 1 & 1\\
+1 & 1 & 0 & 1\\
+1 & 1 & 1 & 1\\
+\end{array}
+\end{displaymath}
+
 
 \makeemptybox{\stretch{1}}
 
-\question
+\item
 
-Considere o seguinte número hexadecimal $(AF12)_{16}$ forneça o mesmo número nas bases 4 e 2.
+Ainda considerando a mesma tabela verdade, 
+monte o mapa de Karnaugh e encontre uma equação 
+simplificada da tabela verdade.
+
+
+    \begin{karnaugh-map}[4][2][1][$a b$][$c$]
+    \end{karnaugh-map}
+
 
 \makeemptybox{\stretch{1}}
+
+\item
+
+Considerando a equação simplificada do item anterior,
+monte um circuito baseado nesta equação.
+
+\makeemptybox{\stretch{1}}
+
+\end{enumerate}
+
 
 \break
 
 
-\question[1]
 
-Prove seguinte equivalência $a\oplus b \equiv (a+b)\cdot \sim(a\cdot b)$. Dica: use a tabela verdade.
+
+
+
+
+
+
+
+\question 
+
+\begin{enumerate}
+
+\item
+
+Considere a seguinte tabela verdade e 
+monte uma expressão booleana que satisfaça a 
+tabela.
+
+\begin{displaymath}
+\begin{array}{|c c c|c|}
+a & b & c & resultado \\
+\hline 
+0 & 0 & 0 & 0\\
+0 & 0 & 1 & 1\\
+0 & 1 & 0 & 1\\
+0 & 1 & 1 & 1\\
+1 & 0 & 0 & 0\\
+1 & 0 & 1 & 1\\
+1 & 1 & 0 & 0\\
+1 & 1 & 1 & 1\\
+\end{array}
+\end{displaymath}
+
 
 \makeemptybox{\stretch{1}}
 
+\item
+
+Ainda considerando a mesma tabela verdade, 
+monte o mapa de Karnaugh e encontre uma equação 
+simplificada da tabela verdade.
+
+
+    \begin{karnaugh-map}[4][2][1][$a b$][$c$]
+    \end{karnaugh-map}
+
+
+\makeemptybox{\stretch{1}}
+
+\item
+
+Considerando a equação simplificada do item anterior,
+monte um circuito baseado nesta equação.
+
+\makeemptybox{\stretch{1}}
+
+\end{enumerate}
+
+
 \break
+
 
 
 \end{questions}
