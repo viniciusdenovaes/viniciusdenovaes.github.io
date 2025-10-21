@@ -1,0 +1,231 @@
+\documentclass[12pt]{exam}
+
+\usepackage[brazil]{babel}   
+\usepackage[TS1,T1]{fontenc}
+\usepackage[utf8]{luainputenc}
+\usepackage[utf8]{inputenc}  
+%\usepackage[T1]{fontenc}
+
+
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes.gates.logic.US,shapes.gates.logic.IEC,calc}
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+
+\def\code#1{\texttt{#1}}
+
+\newcommand{\class}{CLD}
+\newcommand{\term}{Circuitos Lógicos Digitais}
+\newcommand{\examnum}{Lista 2}
+\newcommand{\examdate}{}
+\newcommand{\timelimit}{}
+
+\pointpoints{ponto}{pontos}
+
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Página \thepage\ de \numpages}{\examdate}
+\runningheadrule
+
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class}   &  & \\
+\textbf{\term}    &  & \\
+\textbf{\examnum} &  & \\
+                  & Professor: & Vinicius Pereira
+\end{tabular*}\\
+\rule[2ex]{\textwidth}{2pt}
+
+
+
+\begin{questions}
+
+
+\question Faça um circuito para cada expressão booleana.
+
+\begin{enumerate}
+
+\item $\sim (a+b)$
+
+\item $(\sim a \cdot b) + (b \cdot \sim c)$
+
+\item $\sim a \cdot \sim b$
+
+\item $(a+b)\cdot c$
+
+\item $a + (b\cdot c)$
+
+\end{enumerate}
+
+\break
+
+
+
+
+\tikzstyle{branch}=[fill,shape=circle,minimum size=3pt,inner sep=0pt]
+
+
+\question Faça uma expressão booleana equivalente a cada um dos circuitos abaixo.
+
+\begin{enumerate}
+
+\item \textbf{Resposta:} $(a+b)\cdot c$
+
+\begin{tikzpicture}[label distance=2mm]
+
+    \node (c) at (0,0) {$c$};
+    \node (b) at (1,0) {$b$};
+    \node (a) at (2,0) {$a$};
+
+    \node[or gate US, draw, logic gate inputs=nn] at ($(a)+(1,-1)$) (Or) {};
+    \node[and gate US, draw, logic gate inputs=nn, anchor=input 1] at ($(Or.output)+(1,-1)$) (And) {};
+
+    \draw (a) |- (Or.input 1);
+    \draw (b) |- (Or.input 2);
+    \draw (Or.output) |- (And.input 1);
+    \draw (c) |- (And.input 2);
+    \draw (And.output) -- ([xshift=0.5cm]And.output) node[above] {$~$};
+
+\end{tikzpicture}
+
+
+
+\item \textbf{Resposta:} $a + (b\cdot c)$
+
+\begin{tikzpicture}[label distance=2mm]
+
+    \node (a) at (0,0) {$a$};
+    \node (b) at (1,0) {$b$};
+    \node (c) at (2,0) {$c$};
+
+    \node[and gate US, draw, logic gate inputs=nn] at ($(c)+(1,-1)$) (And) {};
+    \node[or gate US, draw, logic gate inputs=nn, anchor=input 1] at ($(And.output)+(1,-1)$) (Or) {};
+
+    \draw (c) |- (And.input 1);
+    \draw (b) |- (And.input 2);
+    \draw (And.output) |- (Or.input 1);
+    \draw (a) |- (Or.input 2);
+    \draw (Or.output) -- ([xshift=0.5cm]Or.output) node[above] {$~$};
+
+\end{tikzpicture}
+
+
+
+
+
+
+\item \textbf{Resposta:}  $\sim (a+b)$
+
+\begin{tikzpicture}[label distance=2mm]
+
+    \node (a) at (0,0) {$a$};
+    \node (b) at (1,0) {$b$};
+
+    \node[or gate US, draw, logic gate inputs=nn] at ($(b)+(1,-1)$) (Or) {};
+    \node[not gate US, draw] at ($(Or.output)+(1,0)$) (Not) {};
+
+    \draw (a) |- (Or.input 2);
+    \draw (b) |- (Or.input 1);
+    \draw (Or.output) |- (Not.input);
+    \draw (Not.output) -- ([xshift=0.5cm]Not.output) node[above] {$~$};
+
+\end{tikzpicture}
+
+
+
+\item \textbf{Resposta:} $\sim a \cdot \sim b$
+
+\begin{tikzpicture}[label distance=2mm]
+
+    \node (a) at (0,0) {$a$};
+    \node (b) at (1,0) {$b$};
+
+    \node[not gate US, draw, rotate=-90] at ($(a)+(0,-1)$) (NotA) {};
+    \draw (a) |- (NotA.input);
+    
+    \node[not gate US, draw, rotate=-90] at ($(b)+(0,-1)$) (NotB) {};
+    \draw (b) |- (NotB.input);
+    
+    \node[and gate US, draw, logic gate inputs=nn] at ($(b)+(1,-2)$) (And) {};
+
+    \draw (NotA) |- (And.input 2);
+    \draw (NotB) |- (And.input 1);
+    \draw (And.output) -- ([xshift=0.5cm]And.output) node[above] {$~$};
+
+\end{tikzpicture}
+
+
+
+
+
+\item \textbf{Resposta:} $(\sim a \cdot b) + (b \cdot \sim c)$
+
+\begin{tikzpicture}[label distance=2mm]
+
+    \node (a) at (0,0) {$a$};
+    \node (b) at (1,0) {$b$};
+    \node (c) at (2,0) {$c$};
+
+    \node[not gate US, draw, rotate=-90] at ($(a)+(0,-1)$) (NotA) {};
+    \draw (a) |- (NotA.input);
+    
+    \node[not gate US, draw, rotate=-90] at ($(c)+(0,-1)$) (NotC) {};
+    \draw (c) |- (NotC.input);
+    
+    \node[and gate US, draw, logic gate inputs=nn] at ($(c)+(1,-2)$) (And1) {};
+    \node[and gate US, draw, logic gate inputs=nn] at ($(c)+(1,-3)$) (And2) {};
+    \node[or gate US, draw, logic gate inputs=nn, anchor=input 1] at ($(And1.output)+(1,0)$) (Or) {};
+
+    \draw (NotC) |- (And1.input 1);
+    \draw (b |- And1.input 2) node[branch] {} -- (And1.input 2);
+    \draw (b)    |- (And2.input 1);
+    \draw (NotA) |- (And2.input 2);
+    \draw (And1.output) |- (Or.input 1);
+    \draw (And2.output) -- ([xshift=0.5cm]And2.output) |- (Or.input 2);
+
+    \draw (Or.output) -- ([xshift=0.5cm]Or.output) node[above] {$~$};
+
+\end{tikzpicture}
+
+
+\end{enumerate}
+
+
+\break
+
+
+\question
+
+Considere o seguinte número binário $(1110011110110)_2$ forneça o mesmo número nas bases 4 e 16.
+
+\makeemptybox{\stretch{1}}
+
+\question
+
+Considere o seguinte número hexadecimal $(AF12)_{16}$ forneça o mesmo número nas bases 4 e 2.
+
+\makeemptybox{\stretch{1}}
+
+\break
+
+
+\question[1]
+
+Prove seguinte equivalência $a\oplus b \equiv (a+b)\cdot \sim(a\cdot b)$. Dica: use a tabela verdade.
+
+\makeemptybox{\stretch{1}}
+
+\break
+
+
+\end{questions}
+
+
+\end{document}
