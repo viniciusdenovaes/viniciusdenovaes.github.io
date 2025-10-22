@@ -4,15 +4,10 @@
 ## [Curso (link)](../../indie/python/python.html)
 
 
-<!-- ## Trabalho (APS)
+### Listas
 
-- [Roteiro para a apresentação e entrega do trabalho](alpoo_files/aps/APS_ALPOO_2024.pdf)
+##### NP1
+- [01 - Matéria da NP1](ape_files/listas/01/lista01APE.pdf)
 
-## Ementa
-
-- Parte 01 - Programação orientada a eventos: separação de ações e eventos
-- Parte 02 - Padrões de Arquitetura: MVC
-  - pacotes awt e Swing
-- Parte 03 - Padrões de Arquitetura: DAO
-  - pacote JDBC
- -->
+##### NP2
+- [02 - Matéria da NP2](ape_files/listas/02/lista02APE.pdf)
