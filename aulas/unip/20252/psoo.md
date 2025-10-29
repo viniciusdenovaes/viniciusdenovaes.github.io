@@ -20,6 +20,20 @@
 
 #### Revisão
  - [Para NP1](psoo_files/listas/01.html)
+ - [Para NP2](psoo_files/listas/02.html)
+
+
+## Teste Para NP2
+- Escolha 5 questões dentre a lista de questões da [revisão da NP2](psoo_files/listas/02/lista02.html)
+- Toda resposta deve usar como referência o livro da ementa do Eduardo Bezerra (Princípios de Análise e Projeto de Sistemas com UML)
+- As respostas devem ser escritas à mão na folha de prova oficial da Unip (entregue pelo professor)
+- Deve ser escolhido, no máximo, duas questões por cada capítulo.
+- Cada resposta deve ter 
+   - no mínimo 3 linhas
+   - no máximo 15 linhas (metade de uma folha)
+- Data de entrega: dia da prova (07/11)
+- O teste não tem validade se não fizer a prova presencial.
+
 
 
 ## Teste Para NP1
