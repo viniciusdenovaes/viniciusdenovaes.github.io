@@ -1,0 +1,450 @@
+<!DOCTYPE html><html><head>
+      <title>aula_md</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////home/vinicius/programs/atom_packages/markdown-preview-enhanced/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="markdown">Markdown</h1>
+
+<p>Assim como o HTML, a linguagem <code>markdown</code> &#xE9; uma linguagem de marca&#xE7;&#xE3;o, mas bem mais leve e mais f&#xE1;cil de ler e escrever.</p>
+<p>A sintaxe de markdown consegue fazer as principais funcionalidades de HTML, mas n&#xE3;o todas. Se voc&#xEA; usar apenas markdown para escrever seu site, voc&#xEA; poder&#xE1; escrever muito (MUITO) mais r&#xE1;pido, e se precisar usar alguma funcionalidade que s&#xF3; tem em HTML, &#xE9; s&#xF3; usar HTML onde voc&#xEA; precisar.</p>
+<p>Abaixo alguns comandos em markdown e seu efeito correspondente em HTML.</p>
+<p>(tabela retirada da <a href="https://en.wikipedia.org/wiki/Markdown">wikip&#xE9;dia</a>)</p>
+
+<table class="wikitable">
+<tbody><tr>
+<th width="20%">Text using Markdown syntax
+</th>
+<th width="20%">Corresponding HTML produced by a Markdown processor
+</th>
+<th width="20%">Text viewed in a browser
+</th></tr>
+<tr valign="top">
+<td>
+<div class="mw-highlight mw-highlight-lang-md mw-content-ltr" dir="ltr"><pre><span></span><span class="gh">Heading</span>
+<span class="gh">=======</span>
+<p><span class="gu">Sub-heading</span><br>
+<span class="gu">-----------</span></p>
+<p><span class="gh"># Alternative heading</span></p>
+<p><span class="gu">## Alternative sub-heading</span></p>
+<p>Paragraphs are separated<br>
+by a blank line.</p>
+<p>Two spaces at the end of a line<br>
+produce a line break.<br>
+</p></pre></div><p></p>
+</td>
+<td>
+<div class="mw-highlight mw-highlight-lang-html mw-content-ltr" dir="ltr"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Heading<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<p><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Sub-heading<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span></p>
+<p><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Alternative heading<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span></p>
+<p><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Alternative sub-heading<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span></p>
+<p><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Paragraphs are separated<br>
+by a blank line.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></p>
+<p><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Two spaces at the end of a line<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span><br>
+produce a line break.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span><br>
+</p></pre></div><p></p>
+</td>
+<td><div style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 1.8em; font-family: Georgia,Times,serif; margin-top: 1em; margin-bottom: 0.25em; line-height: 1.3; padding: 0; border-bottom: 1px solid #AAAAAA;">Heading</div>
+<div style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 1.5em; font-family: Georgia,Times,serif; margin-top: 1em; margin-bottom: 0.25em; line-height: 1.3; padding: 0; border-bottom: 1px solid #AAAAAA;">Sub-heading</div>
+<div style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 1.8em; font-family: Georgia,Times,serif; margin-top: 1em; margin-bottom: 0.25em; line-height: 1.3; padding: 0; border-bottom: 1px solid #AAAAAA;">Alternative heading</div>
+<div style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 1.5em; font-family: Georgia,Times,serif; margin-top: 1em; margin-bottom: 0.25em; line-height: 1.3; padding: 0; border-bottom: 1px solid #AAAAAA;">Alternative sub-heading</div>
+<p>Paragraphs are separated
+by a blank line.
+</p><p>Two spaces at the end of a line<br>
+produce a line break.
+</p>
+</td></tr>
+<tr>
+<td><div class="mw-highlight mw-highlight-lang-md mw-content-ltr" dir="ltr"><pre><span></span>Text attributes <span class="ge">_italic_</span>, <span class="gs">**bold**</span>, <span class="sb">`monospace`</span>.
+<p>Horizontal rule:</p>
+<pre>---</pre>
+<p></p></pre></div><p></p>
+</td>
+<td>
+<div class="mw-highlight mw-highlight-lang-html mw-content-ltr" dir="ltr"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Text attributes <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>italic<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>, <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>bold<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>, <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>monospace<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<p><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Horizontal rule:<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></p>
+<p><span class="p">&lt;</span><span class="nt">hr</span> <span class="p">/&gt;</span><br>
+</p></pre></div><p></p>
+</td>
+<td>Text attributes <i>italic</i>, <b>bold</b>, <code>monospace</code>.<p class="mw-empty-elt"></p>
+<p>Horizontal rule:
+</p>
+<hr>
+</td></tr>
+<tr>
+<td><div class="mw-highlight mw-highlight-lang-md mw-content-ltr" dir="ltr"><pre><span></span>Bullet lists nested within numbered list:
+<p><span class="w">  </span><span class="k">1.</span> fruits<br>
+<span class="w">     </span><span class="k"><em></em></span><em><span class="w"> </span>apple<br>
+<span class="w">     </span><span class="k"></span></em><span class="w"> </span>banana<br>
+<span class="w">  </span><span class="k">2.</span> vegetables<br>
+<span class="w">     </span><span class="k">-</span><span class="w"> </span>carrot<br>
+<span class="w">     </span><span class="k">-</span><span class="w"> </span>broccoli<br>
+</p></pre></div><p></p>
+</td>
+<td>
+<div class="mw-highlight mw-highlight-lang-html mw-content-ltr" dir="ltr"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Bullet lists nested within numbered list:<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<p><span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span><br>
+<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>fruits <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span><br>
+<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>apple<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span><br>
+<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>banana<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span><br>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span><br>
+<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>vegetables <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span><br>
+<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>carrot<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span><br>
+<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>broccoli<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span><br>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span><br>
+<span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span><br>
+</p></pre></div><p></p>
+</td>
+<td>Bullet lists nested within numbered list:
+<ol><li>fruits
+<ul><li>apple</li>
+<li>banana</li></ul></li>
+<li>vegetables
+<ul><li>carrot</li>
+<li>broccoli</li></ul></li></ol>
+</td></tr>
+<tr>
+<td><div class="mw-highlight mw-highlight-lang-md mw-content-ltr" dir="ltr"><pre><span></span>A [<span class="nt">link</span>](<span class="na">http://example.com</span>).
+<p>![<span class="nt">Image</span>](<span class="na">Icon-pictures.png &quot;icon&quot;</span>)</p>
+<p><span class="k">&gt; </span><span class="ge">Markdown uses email-style</span><br>
+characters for blockquoting.<br>
+<span class="k">&gt;</span><br>
+<span class="ge">&gt; Multiple paragraphs need to be prepended individually.</span></p>
+<p>Most inline &lt;abbr title=&quot;Hypertext Markup Language&quot;&gt;HTML&lt;/abbr&gt; tags are supported.<br>
+</p></pre></div><p></p>
+</td>
+<td>
+<div class="mw-highlight mw-highlight-lang-html mw-content-ltr" dir="ltr"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>A <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://example.com&quot;</span><span class="p">&gt;</span>link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<p><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Image&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;icon&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;Icon-pictures.png&quot;</span> <span class="p">/&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></p>
+<p><span class="p">&lt;</span><span class="nt">blockquote</span><span class="p">&gt;</span><br>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Markdown uses email-style characters for blockquoting.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span><br>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Multiple paragraphs need to be prepended individually.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span><br>
+<span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span></p>
+<p><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Most inline <span class="p">&lt;</span><span class="nt">abbr</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Hypertext Markup Language&quot;</span><span class="p">&gt;</span>HTML<span class="p">&lt;/</span><span class="nt">abbr</span><span class="p">&gt;</span> tags are supported.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span><br>
+</p></pre></div><p></p>
+</td>
+<td>A <a rel="nofollow" class="external text" href="http://example.com/">link</a>.
+<p><span class="mw-default-size" typeof="mw:File"><span title="icon"><img alt="Image" src="Icon-pictures.png" decoding="async" width="65" height="59" class="mw-file-element" data-file-width="65" data-file-height="59"></span></span>
+</p>
+<blockquote>
+<p>Markdown uses email-style characters for blockquoting.
+</p><p>Multiple paragraphs need to be prepended individually.
+</p>
+</blockquote>
+<p>Most inline <abbr title="Hypertext Markup Language">HTML</abbr> tags are supported.
+</p>
+</td></tr></tbody></table>
+
+<h3 class="mume-header" id="exemplo-de-tabela">Exemplo de tabela</h3>
+
+<p>Para fazer uma tabela voc&#xEA; pode usar</p>
+<pre>| Nome      | Idade | Peso |
+|:---:      |:---:  |:---: |
+brutinho    |10     |5.5
+oggi        |5      |3.8
+pato donald |30     |12.1
+francis     |7      |2.0
+</pre>
+<p>Para ter o resultado</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Nome</th>
+<th style="text-align:center">Idade</th>
+<th style="text-align:center">Peso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">brutinho</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">5.5</td>
+</tr>
+<tr>
+<td style="text-align:center">oggi</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">3.8</td>
+</tr>
+<tr>
+<td style="text-align:center">pato donald</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">12.1</td>
+</tr>
+<tr>
+<td style="text-align:center">francis</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">2.0</td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

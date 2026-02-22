@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}  
+\usepackage[portuguese]{babel}   
+
+\usepackage[ruled, vlined, algonl, portuguese]{algorithm2e}
+
+\newcommand{\linesnumbered}{\LinesNumbered}
+\newcommand{\dontprintsemicolon}{\DontPrintSemicolon}
+\newcommand{\incmargin}{\IncMargin}
+\newcommand{\decmargin}{\DecMargin}
+
+\def\le{\leqslant}\def\leq{\le}
+\def\ge{\geqslant}\def\geq{\ge}
+\newcommand{\floor}[1]{\left\lfloor{#1}\right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil{#1}\right\rceil}
+\newcommand{\pare}[1]{\left({#1}\right)}
+\newcommand{\set}[1]{\left\{{#1}\right\}}
+\newcommand{\range}[2]{\set{{#1},\dots,{#2}}}
+\newcommand{\dist}{\mathrm{dist}}
+\newcommand{\cluster}{\mathrm{cluster}}
+\newcommand{\merge}{\mathrm{merge}}
+
+
+
+
+\title{Lista 03 de Análise de Algoritmos}
+\date{1º Período de 2023}
+\author{Turma do 4º ano}
+
+
+
+
+\begin{document}
+
+
+\maketitle
+
+
+\vspace{3em}
+
+Em aula foram dados dois algoritmos de ordenação, o Insertion Sort e o Merge Sort. 
+
+O Insertion Sort, um algoritmo mais simples, supõe que o vetor está ordenado da posição inicial até uma certa posição $n$. O procedimento então pega o elemento da próxima posição e coloca em seu lugar devido na parte ordenada do vetor, deixando o vetor ordenado até a posição $n+1$.
+Repetindo este procedimento com $n$ variando de $1$ até o tamanho do vetor, o resultado é o vetor todo ordenado.
+
+O Merge Sorte usa a técnica de divisão-e-conquista, o algoritmo divide o vetor ao meio, em dois vetores de tamanho igual, ordena cada um deles, depois junta os dois, de forma ordenada, em um terceiro vetor.
+
+Os dois algoritmos são mostrados a seguir, na forma de um pseudo-código (O algoritmo Merge é usado pelo Merge-Sort).
+Encontre o tempo de execução de pior caso do Insertion-Sort e do Merge-Sort, em termos da notação $O$, em relação ao tamanho do vetor $A$. \textbf{Escreva o raciocínio que você usou.}
+
+
+\input{merge-sort}
+
+\input{merge}
+
+\input{insertion-sort}
+
+\end{document}

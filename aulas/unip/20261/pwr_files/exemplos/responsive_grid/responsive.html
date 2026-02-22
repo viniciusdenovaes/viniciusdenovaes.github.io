@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<style>
+			#wrap {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			.item {
+				width: 150px;
+				height: 150px;
+				background-color: green;
+				margin: 10px;
+				font-size: 22px;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			<label for="busca" id="lab-busca-sc">Busca:</label><br>
+			<input type="text" id="txt-busca-sc" name="busca"><br>
+		</form>
+		<div id="wrap">
+			<div class="item" id="ana">Ana</div>
+			<div class="item" id="brutus">Brutus</div>
+			<div class="item" id="Cormac McCarthy">Cormac McCarthy</div>
+			<div class="item" id="David Fincher">David Fincher</div>
+		</div>
+		<script>
+			var txt_busca = document.getElementById("txt-busca-sc");
+			txt_busca.addEventListener("keyup", () => {filtraBusca()})
+			
+			var wrap = document.getElementById('wrap');
+			var div_original = Array.from(wrap.getElementsByTagName('div'));
+			var div = wrap.getElementsByTagName('div');
+			
+			function filtraBusca(){
+				wrap.innerHTML = "";
+				for(var i=0; i<div_original.length; ++i){
+					if(div_original[i].innerText.toLowerCase().includes(txt_busca.value.toLowerCase()) || txt_busca.value==""){
+						wrap.appendChild(div_original[i]);
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

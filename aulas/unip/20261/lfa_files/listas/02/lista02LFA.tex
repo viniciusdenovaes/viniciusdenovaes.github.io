@@ -1,0 +1,177 @@
+\documentclass[12pt]{article}
+
+\usepackage[brazil]{babel}   
+\usepackage[utf8]{inputenc}  
+%\usepackage[T1]{fontenc}
+\usepackage{amsfonts,amsmath,amssymb,latexsym} 
+
+\def\cQ{\mathcal{Q}}
+\def\ve{\varepsilon}
+
+\def\emptyset{\varnothing}
+
+
+
+\title{Lista 02 de ATC}
+\date{}
+%\date{2º Período de 2023}
+\author{Turma do 3º ano}
+
+\begin{document} 
+
+\maketitle
+
+\begin{description}
+
+\item[Definição de um Autômato Finíto Determinístico (AFD)]
+\[A = (\cQ, \Sigma, \delta, q_0, F)\]
+\begin{itemize}
+\item Um conjunto de estados finito, $\cQ$
+\item Um conjunto de símbolos de entrada $\Sigma$
+\item Uma função de transição $\delta: \cQ\times\Sigma\rightarrow\cQ$.
+\item Um estado inicial $q_0$
+\item Um conjunto de estados finais $F\subseteq \cQ$
+\end{itemize}
+
+
+
+\item[Um AFD a partir de um AFN]
+Para encontrar um AFD $D = (\cQ_D, \Sigma, \delta_D, \{q_0\}, F_D)$ a partir de um AFN $N = (\cQ_N, \Sigma, \delta_N, \{q_0\}, F_N)$.
+
+\begin{itemize}
+
+\item $\cQ_D$ é o conjunto de subconjuntos de $\cQ_N$
+
+\item $F_D$ é o conjunto de subconjuntos $S$ de $\cQ_N$ tal que $S\cap F_N\neq\emptyset$
+
+\item Para cada conjunto $S\subseteq \cQ_N$ e para cada símbolo de entrada em $\Sigma$
+\[\delta_D(S,a) = \bigcup_{p\in S} \delta_N(p,a)\]
+
+\end{itemize}
+
+
+\end{description}
+
+\vspace{3em}
+
+
+
+
+
+
+\break
+
+
+
+
+\begin{enumerate}
+
+\item Forneça autômatos finitos determinísticos que aceitam as seguintes linguagens no alfabeto $\Sigma = \{0,1\}$. Pode ser desenhando um diagrama de transições (o grafo) ou desenhando a tabela de transições.
+
+\begin{enumerate}
+
+\item Linguagem das strings que terminam em 00
+
+\item Linguagem das strings que têm três 0's consecutivos
+
+\item Linguagem das strings que têm 011 como substring
+
+\item têm 0101 como substring
+
+\item têm 01 e 10 como substring
+
+\item têm um número par de 1's e um número par de 0's
+
+\item têm um número ímpar de 1's e um número par de 0's
+
+\item têm um número ímpar de 1's e um número ímpar de 0's
+
+\item Depois de cada 0 tem um 1
+
+\item strings que terminam em 01:
+
+\item não têm 00 como substring
+
+\item não têm 00 nem 11 como substring
+
+\item é construído concatenando 01's e 010's e nenhum outra string
+
+\end{enumerate}
+
+
+\item Explique informalmente qual linguagem que as seguintes tabelas de transição geram
+
+\begin{enumerate}
+
+\item 
+\begin{tabular}{c||c|c}
+                & $0$ & $1$  \\\hline\hline
+$\rightarrow A$ & $A$ & $B$ \\
+$          * B$ & $B$ & $A$ 
+\end{tabular}
+
+\item 
+\begin{tabular}{c||c|c}
+                 & $0$ & $1$  \\\hline\hline
+$\rightarrow *A$ & $B$ & $A$ \\
+$            *B$ & $C$ & $A$ \\
+$             C$ & $B$ & $A$ 
+\end{tabular}
+
+\end{enumerate} 
+
+
+
+
+\break
+
+
+
+
+
+\item Forneça autômatos finitos não-determinísticos que aceitam as seguintes linguagens no alfabeto $\{a, b\}$.
+Transforme o autômato em um Autômato Finito Determinístico.
+
+\begin{enumerate}
+
+\item Tem $3k+1$ $b$'s, para algum $k\in\mathbb{N}$
+
+\item O terceiro último símbolo é $a$.
+
+\end{enumerate}
+
+
+\item Converta os seguintes AFN em AFD.
+
+\begin{enumerate}
+
+\item
+\begin{tabular}{c||c|c}
+                &    $a$    &     $b$     \\\hline\hline
+$\rightarrow p$ & $\{p,q\}$ &   $\{p\}$   \\
+$            q$ &  $\{r\}$  &   $\{r\}$   \\
+$            r$ &  $\{s\}$  & $\emptyset$ \\
+$           *s$ &  $\{s\}$  &   $\{s\}$
+\end{tabular}
+
+\item
+\begin{tabular}{c||c|c}
+                &    $a$    &     $b$   \\\hline\hline
+$\rightarrow p$ & $\{q,s\}$ &  $\{q\}$  \\
+$           *q$ &  $\{r\}$  & $\{q,r\}$ \\
+$            r$ &  $\{s\}$  &  $\{p\}$  \\
+$           *s$ &$\emptyset$&  $\{p\}$
+\end{tabular}
+
+\end{enumerate}
+
+
+
+
+
+
+
+\end{enumerate}
+
+\end{document}
+

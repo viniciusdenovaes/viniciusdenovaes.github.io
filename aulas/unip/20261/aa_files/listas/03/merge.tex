@@ -1,0 +1,35 @@
+%\incmargin{1em} 
+\linesnumbered \dontprintsemicolon
+\begin{algorithm}[ht!]{
+  \footnotesize
+  \caption{Merge$(A,p,q,r)$\label{alg:merge}}
+
+  \Entrada{Um vetor $A$, a posição do início do vetor $p$, a posição do meio $q$ e a posição final $r$.}
+  \Saida{O vetor $A$ ordenado da posição $p$ até a posição $r$.}
+  
+  $n_1 = q-p+1$\;
+  $n_2 = r-q$\;
+  Seja $L[1..n_1+1]$ e $R[1..n_2+1]$ novos vetores\;
+  \Para{$i=1$ \Ate $n_1$}{
+    $L[i] = A[p+i-1]$\;
+  }
+  \Para{$j=1$ \Ate $n_2$}{
+    $R[j] = A[q+j]$\;
+  }
+  $L[n_1+1] = \infty$\;
+  $R[n_2+1] = \infty$\;
+  $i=1$\;
+  $j=1$\;
+  \Para{$k=p$ \Ate $r$}{
+    \Se{$L[i] <= R[j]$}{
+      $A[k] = L[i]$\;
+      $i=i+1$\;
+    }
+    \Senao{
+      $A[k] = R[j]$\;
+      $j=j+1$\;
+    }
+  }
+  
+}
+\end{algorithm}
