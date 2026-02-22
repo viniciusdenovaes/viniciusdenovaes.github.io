@@ -8,6 +8,25 @@
 
 ## Aulas
 
+
+### Atuais (2026/1)
+##### CC e SI
+- Ano 1
+   - [DDM](aulas/unip/20261/ddm.html)
+- Ano 2
+   - [LPOO (CC e SI)](aulas/unip/20261/lpoo.html)
+<!-- - Ano 3
+   - [IA](aulas/unip/20251/ia.html)
+   - [CG](aulas/unip/20251/cg.html)
+   - [LFA](aulas/unip/20251/lfa.html)
+- Ano 4
+   - [RVRA](aulas/unip/20251/rvra.html) -->
+##### ADS
+- [POO (ADS)](aulas/unip/20261/poo_ads.html)
+
+
+
+
 ### Atuais (2025/2)
 ##### CC e SI
 - [CLD](aulas/unip/20252/cld.html)
@@ -20,9 +39,9 @@
 - [Projeto de Sistema Orientado a Objeto](aulas/unip/20252/psoo.html)
 ##### Engenharia
 - [Algoritmo e Programação para Engenheiros (Python)](aulas/unip/20252/ape.html)
-##### Flex
+<!-- ##### Flex
 - [Python](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20252/IPE)
-- [Circuitos Lógicos Digitais](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20252/CLD)
+- [Circuitos Lógicos Digitais](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20252/CLD) -->
 
 ### (2025/1)
 ##### CC e SI
@@ -39,7 +58,7 @@
 ##### ADS
 - [POO (ADS)](aulas/unip/20251/poo_ads.html)
 
-##### [Flex](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20251)
+<!-- ##### [Flex](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20251) -->
 
 
 
