@@ -6,7 +6,8 @@ Para todas as questões desta lista elabore uma função (método estático em J
 
 
 
-* 1. Calcular o estoque médio de uma peça, sendo que o estóque médio é dado pela seguinte fórmula:
+### 1) Calcular o estoque médio de uma peça
+O estoque médio é dado pela seguinte fórmula:
 estoqueMedio = (quantidadeMinima + quantidadeMaxima)/2
 A assinatura da sua função **deve ser**
 ``` java
@@ -36,7 +37,8 @@ E a saída para este `main` deve ser
 
 
 
-* 2. Calcular a conversão de dólar para real. A sua função deve receber a cotação do dólar e um valor em dólar, e retornar o valor convertido para real.
+### 2) Calcular a conversão de dólar para real. 
+A sua função deve receber a cotação do dólar e um valor em dólar, e retornar o valor convertido para real.
 A assinatura da sua função **deve ser**
 ``` java
 public static double conversaoDolar(double cotacaoDolar, double valorDolar)
@@ -65,7 +67,8 @@ E a saída para este `main` deve ser
 ```
 
 
-* 3. Um conversor de graus Celsius para graus Fahrenheit. A fórmula é dada por `F = (9*C+160)/5`, onde `F` é o grau Fahrenheit e `C` é o grau em Celsius.
+### 3) Um conversor de graus Celsius para graus Fahrenheit. 
+A fórmula é dada por `F = (9*C+160)/5`, onde `F` é o grau Fahrenheit e `C` é o grau em Celsius.
 A assinatura da sua função **deve ser**
 ``` java
 public static double conversorCelsiusToFahrenheit(double grauC)
@@ -93,7 +96,8 @@ E a saída para este `main` deve ser
 212.0
 ```
 
-* 4. Um conversor de graus Fahrenheit para graus Celsius. A fórmula é dada por `C = (F-32)*5/9`, onde `F` é o grau Fahrenheit e `C` é o grau em Celsius.
+### 4) Um conversor de graus Fahrenheit para graus Celsius. 
+A fórmula é dada por `C = (F-32)*5/9`, onde `F` é o grau Fahrenheit e `C` é o grau em Celsius.
 A assinatura da sua função **deve ser**
 ``` java
 public static double conversorFahrenheitToCelsius(double grauC)
@@ -127,7 +131,8 @@ E a saída para este `main` deve ser
 
 
 
-* 5. Calcular o volume de uma lata de óleo dado pela fórmula `V = 3.14159*R²*A`, onde `V` é o volume, `R` o raio e `A` a altura da lata.
+### 5) Calcular o volume de uma lata
+O volume é dado pela fórmula `V = 3.14159*R²*A`, onde `V` é o volume, `R` o raio e `A` a altura da lata.
 Dica (opcional): o uso da biblioteca [Math](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html) pode te ajudar, mais especificamente o atributo estático `Math.PI` e o método estático `Math.pow(double a, double b)`. Para usá-los basta escrever o nome deles, não há a necessidade de importar a biblioteca.
 A assinatura da sua função **deve ser**
 ``` java
@@ -163,7 +168,8 @@ E a saída para este `main` deve ser
 
 
 
-* 6. Uma função que retorne o módulo de um número **inteiro**. O módulo de um número `x` é `x` se `x` é maior ou igual a 0, e `-x` caso contrário.
+### 6) Uma função que retorne o módulo de um número **inteiro**. 
+O módulo de um número `x` é `x` se `x` é maior ou igual a 0, e `-x` caso contrário.
 A assinatura da sua função **deve ser**
 ``` java
 public static int modulo(int n)
@@ -193,7 +199,7 @@ E a saída para este `main` deve ser
 
 
 
-* 7. Uma função que calcule o fatorial de um número.
+### 7) Uma função que calcule o fatorial de um número.
 **OBS:** `0!=1` e `n!=n*(n-1)!` para `n>0`.
 A assinatura da sua função **deve ser**
 ``` java
@@ -229,7 +235,8 @@ E a saída para este `main` deve ser
 
 
 
-* 8. Calcule o coeficiente binomial de uma dupla dado pela fórmula
+### 8) Calcule o coeficiente binomial de uma dupla. 
+Dado pela fórmula
 ![equation](binomial.png)
 **OBS:** Use o método estático do exercício anterior.
 A assinatura da sua função **deve ser**
