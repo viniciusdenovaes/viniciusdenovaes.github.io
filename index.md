@@ -18,9 +18,9 @@
 <!-- - Ano 3
    - [IA](aulas/unip/20251/ia.html)
    - [CG](aulas/unip/20251/cg.html)
-   - [LFA](aulas/unip/20251/lfa.html)
+   - [LFA](aulas/unip/20251/lfa.html) -->
 - Ano 4
-   - [RVRA](aulas/unip/20251/rvra.html) -->
+   - [RVRA](aulas/unip/20261/rvra.html) 
 ##### ADS
 - [POO (ADS)](aulas/unip/20261/poo_ads.html)
 
