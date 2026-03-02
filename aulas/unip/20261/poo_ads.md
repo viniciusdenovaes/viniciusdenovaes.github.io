@@ -41,7 +41,7 @@
 - [lab00 - Usando funções (métodos estáticos)](poo_files/laboratorio/00-basico/comandos-basicos.html)
 <!--  - [respostas](https://github.com/viniciusdenovaes/Unip231LPOO/tree/main/Lab00/src/lab00)
 - Lab01-->
-  - [lab01 - Classes como estruturas](poo_files/laboratorio/01-classes/01.00-classes_pre.html)
+- [lab01 - Classes como estruturas](poo_files/laboratorio/01-classes/01.00-classes_pre.html)
   - [lab01 - Classes com métodos](poo_files/laboratorio/01-classes/01.01-classes.html)
   - [lab01.02 - Classes (Extra)](poo_files/laboratorio/01-classes/01.02-classes_extra.html)
 - lab02 - Classes com Encapsulamento
