@@ -14,46 +14,46 @@ Uma classe pode ter
 Por enquanto usaremos somente classes públicas, porém os campos devem ser todos `private`, então toda classe será feita como abaixo
 
 ~~~ java
-public class nomeDaClasse{
+public class NomeDaClasse{
     // nossos atributos
     private Tipo01 variavel01;
     private Tipo02 variavel02;
     private Tipo03 variavel03;
 
     // nossos constructors
-    public nomeDaClasse(){
+    public NomeDaClasse(){
         this.variavel01 = new Tipo01();
         this.variavel02 = new Tipo02();
         this.variavel03 = new Tipo03();
     }
-    public nomeDaClasse(Tipo01 aVariavel01){
+    public NomeDaClasse(Tipo01 aVariavel01){
         this(); // Aqui eu estou chamando o constructor desta mesma classe
         this.variavel01 = aVariavel01;
     }
-    public nomeDaClasse(Tipo01 aVariavel01, Tipo02 aVariavel02){
+    public NomeDaClasse(Tipo01 aVariavel01, Tipo02 aVariavel02){
         this(aVariavel01); // Aqui eu estou chamando o constructor desta mesma classe
         this.variavel02= aVariavel02;
     }
 
     // nossos métodos
-    public void setVariavel01(Tipo01 aVariavel01){
+    public void SetVariavel01(Tipo01 aVariavel01){
         this.variavel01 = aVariavel01;
     }
-    public Tipo1 getVariavel01(){
+    public Tipo1 GetVariavel01(){
         return this.variavel01;
     }
 
     // Podemos definir métodos que tenham o mesmo nome, isto de chama overloading
-    public void metodo01(){
-        // coisas que o método 01 faz
+    public void Metodo01(){
+        // O que o método 01 faz
     }
-    public void metodo01(Tipo aVariavel){
-        // coisas que o método 01 faz quando recebe uma variável do tipo "Tipo"
+    public void Metodo01(Tipo aVariavel){
+        // O que o método 01 faz quando recebe uma variável do tipo "Tipo"
     }
-    public void metodo01(Tipo aVariavel, OutroTipo aOutraVariavel){
-        // coisas que o método 01 faz quando recebe uma variável do tipo "Tipo", e uma outra variável do tipo "OutroTipo"
+    public void Metodo01(Tipo aVariavel, OutroTipo aOutraVariavel){
+        // O que o método 01 faz quando recebe uma variável do tipo "Tipo", e uma outra variável do tipo "OutroTipo"
     }
-    public Tipo04 metodo02(){
+    public Tipo04 Metodo02(){
         // outro método que retorna um objeto do tipo "Tipo04"
     }
 }
@@ -79,18 +79,6 @@ O modificadores que você precisa saber para esta matéria são o `public` e o `
 Tanto para campos de uma classe, quanto para métodos, as regras são as mesmas:
 * `public`: o campo, ou método, pode ser acessado por qualquer classe
 * `private`: o campo, ou método, pode ser acessado **apenas** pelos campos e métodos da **mesma classe**
-
-Além destes dois, temos mais dois modificadores:
-* `protected`: o campo, ou método, pode ser acessado **apenas** pelas classes que estão no mesmo pacote
-* Default (quando não tem nenhum modificador): o campo, ou método, pode ser acessado **apenas** pelas classes que estão no mesmo pacote.
-
-| Class   | Package | Subclass (mesmo pacote) | Subclass (pacote diferente) | Mundo |
-|:---     |:---:    |:---:                    |:---:                        |:---:  |
-public    | + | + | + | + |
-protected | + | + | + |   |
-Default   | + | + |   |   |
-private   | + |   |   |   |
-
 
 
 ## Modificador `static`
