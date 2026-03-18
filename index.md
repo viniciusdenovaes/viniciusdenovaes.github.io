@@ -15,9 +15,9 @@
    - [DDM](aulas/unip/20261/ddm.html)
 - Ano 2
    - [LPOO (CC e SI)](aulas/unip/20261/lpoo.html)
-<!-- - Ano 3
+- Ano 3
    - [IA](aulas/unip/20251/ia.html)
-   - [CG](aulas/unip/20251/cg.html)
+<!--    - [CG](aulas/unip/20251/cg.html)
    - [LFA](aulas/unip/20251/lfa.html) -->
 - Ano 4
    - [RVRA](aulas/unip/20261/rvra.html) 
