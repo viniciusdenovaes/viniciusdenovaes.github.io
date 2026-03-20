@@ -31,9 +31,11 @@
 
 ## [Questões Enade](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/enade/tomos)
 
-- [enade - cc](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/20242/ed_files/enade/cc)
+- [enade - CC](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/enade/tomos/TomosCC)
 
-- [enade - si](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/20242/ed_files/enade/si)
+- [enade - SI](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/enade/tomos/TomosSI)
+
+- [enade - ADS](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/enade/tomos/TomosADS)
 
 <br>
 <br>
