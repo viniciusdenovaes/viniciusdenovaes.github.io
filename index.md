@@ -29,6 +29,12 @@
 
 - [BD](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20261/bd)
 
+## Questões Enade
+
+- [enade - cc](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/20242/ed_files/enade/cc)
+
+- [enade - si](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/20242/ed_files/enade/si)
+
 <br>
 <br>
 <br>
