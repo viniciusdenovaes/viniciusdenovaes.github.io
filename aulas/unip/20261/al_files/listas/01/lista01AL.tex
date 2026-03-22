@@ -1,0 +1,238 @@
+\documentclass[12pt]{exam}
+
+\usepackage[utf8]{inputenc}  
+\usepackage[portuguese]{babel}   
+
+\usepackage[ruled, vlined, algonl, portuguese]{algorithm2e}
+
+\newcommand{\linesnumbered}{\LinesNumbered}
+\newcommand{\dontprintsemicolon}{\DontPrintSemicolon}
+\newcommand{\incmargin}{\IncMargin}
+\newcommand{\decmargin}{\DecMargin}
+
+\usepackage{mathtools}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[shortlabels]{enumitem}
+
+\def\le{\leqslant}\def\leq{\le}
+\def\ge{\geqslant}\def\geq{\ge}
+\newcommand{\floor}[1]{\left\lfloor{#1}\right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil{#1}\right\rceil}
+\newcommand{\pare}[1]{\left({#1}\right)}
+\newcommand{\set}[1]{\left\{{#1}\right\}}
+\newcommand{\range}[2]{\set{{#1},\dots,{#2}}}
+\newcommand{\dist}{\mathrm{dist}}
+\newcommand{\cluster}{\mathrm{cluster}}
+\newcommand{\merge}{\mathrm{merge}}
+
+\pagestyle{empty}
+
+\title{Lista de Álgebra Linear}
+\date{}
+
+
+
+\begin{document}
+
+
+\maketitle
+
+
+\vspace{3em}
+
+
+\begin{questions}
+
+    \question Resolva os seguintes sistemas lineares 2D
+
+    \begin{parts}
+
+    \part 
+
+    \[
+\left\{
+\begin{aligned}
+        2x +  y & = 3\\
+        2x + 3y & = 5
+\end{aligned}
+\right.
+\hspace{1in}
+\left\{
+\begin{aligned}
+        2x +  y & = 5\\
+        2x + 3y & = 8
+\end{aligned}
+\right.
+\hspace{1in}
+\left\{
+\begin{aligned}
+        2x +  y & = 1\\
+        2x + 3y & = -1
+\end{aligned}
+\right.
+\]
+
+\vspace{\stretch{1}}
+
+
+    \part
+
+\[
+\left\{
+\begin{aligned}
+    2x - 4y & = 8 \\
+    -3x + 9y & = -9
+\end{aligned}
+\right.
+\hspace{1in}
+\left\{
+\begin{aligned}
+    2x - 4y & = -2 \\
+    -3x + 9y & = 6
+\end{aligned}
+\right.
+\hspace{1in}
+\left\{
+\begin{aligned}
+    2x - 4y & = 6 \\
+    -3x + 9y & = -12
+\end{aligned}
+\right.
+\]
+\vspace{\stretch{1}}
+
+
+\part
+\[
+\left\{
+\begin{aligned}
+    \frac{3x}{2} + \frac{2y}{3} & = 5 \\
+    \frac{x}{2}x + \frac{y}{3} & = 2
+\end{aligned}
+\right.
+\hspace{1in}
+\left\{
+\begin{aligned}
+    \frac{3x}{2} + \frac{2y}{3} & = 13 \\
+    \frac{x}{2}x + \frac{y}{3} & = 5
+\end{aligned}
+\right.
+\hspace{1in}
+\left\{
+\begin{aligned}
+    \frac{3x}{2} + \frac{2y}{3} & = 1 \\
+    \frac{x}{2}x + \frac{y}{3} & = 0
+\end{aligned}
+\right.
+\]
+\vspace{\stretch{1}}
+
+\break
+
+\end{parts}
+
+
+    \question Resolva os seguintes sistemas lineares 3D
+
+    \begin{parts}
+
+    \part 
+
+    \[
+\left\{
+\begin{aligned}
+        x + y + z & = 3\\
+       -x - y + z & = -1\\
+        x - y - z & = -1
+\end{aligned}
+\right.
+\hspace{1in}
+\left\{
+\begin{aligned}
+        x + y + z & = 6\\
+       -x - y + z & = -4\\
+        x - y - z & = 0
+\end{aligned}
+\right.
+\hspace{1in}
+\left\{
+\begin{aligned}
+        x + y + z & = 2\\
+       -x - y + z & = 2\\
+        x - y - z & = 0
+\end{aligned}
+\right.
+\]
+
+\vspace{\stretch{1}}
+
+
+    \part
+
+\[
+\left\{
+\begin{aligned}
+        x + 2y + z & = 4\\
+       -x - y  & = 0\\
+        -y + 2z & = 1
+\end{aligned}
+\right.
+\hspace{1in}
+\left\{
+\begin{aligned}
+        x + 2y + z & = 8\\
+       -x - y  & = -3\\
+        -y + 2z & = 4
+\end{aligned}
+\right.
+\hspace{1in}
+\left\{
+\begin{aligned}
+        x + 2y + z & = 3\\
+       -x - y  & = 0\\
+        -y + 2z & = 3
+\end{aligned}
+\right.
+\]
+
+\vspace{\stretch{1}}
+
+
+\part
+\[
+\left\{
+\begin{aligned}
+    \frac{-2x}{3} - \frac{5y}{3} + \frac{z}{3} & = -6 \\
+    \frac{2x}{3} + \frac{2y}{3} - \frac{z}{3} & = 3 \\
+    \frac{x}{3} + \frac{y}{3} + \frac{z}{3} & = 3 
+\end{aligned}
+\right.
+\hspace{0.5in}
+\left\{
+\begin{aligned}
+    \frac{-2x}{3} - \frac{5y}{3} + \frac{z}{3} & = 6 \\
+    \frac{2x}{3} + \frac{2y}{3} - \frac{z}{3} & = -3 \\
+    \frac{x}{3} + \frac{y}{3} + \frac{z}{3} & = 3 
+\end{aligned}
+\right.
+\hspace{0.5in}
+\left\{
+\begin{aligned}
+    \frac{-2x}{3} - \frac{5y}{3} + \frac{z}{3} & = -9 \\
+    \frac{2x}{3} + \frac{2y}{3} - \frac{z}{3} & = 2 \\
+    \frac{x}{3} + \frac{y}{3} + \frac{z}{3} & = 6 
+\end{aligned}
+\right.
+\]
+
+\vspace{\stretch{1}}
+
+\end{parts}
+
+
+
+\end{questions}
+
+\end{document}
