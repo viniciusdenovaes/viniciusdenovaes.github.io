@@ -1,0 +1,5 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Estrutura do Trabalho}{1}{section.1}%
+\contentsline {section}{\numberline {2}Proposta do Trabalho}{2}{section.2}%
+\contentsline {section}{\numberline {3}Apresentação do Trabalho}{2}{section.3}%
+\contentsline {section}{\numberline {4}Modelo de Ficha de Atividades Práticas Supervisionadas}{4}{section.4}%
