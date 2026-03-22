@@ -55,6 +55,6 @@ Texto: Fonte Arial 12, espaçamento 1,5, margens de 2,5 cm
 
 Grupo: Recomendado 5 alunos
 
-Apresentação: O grupo deve realizar uma demonstração do software executando os testes em tempo real
+Apresentação: O grupo deve realizar uma demonstração do software executando **alguns** testes em tempo real
 
 
