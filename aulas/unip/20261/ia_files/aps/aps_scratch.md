@@ -1,5 +1,5 @@
 
-Atividades Práticas Supervisionadas (APS): Inteligência Artificial
+Atividades Práticas Supervisionadas (APS): Inteligência Artificial: Espaço de Busca do TSP
 
 Tema: Análise Comparativa de Algoritmos para o Problema do Caixeiro Viajante (TSP)
 

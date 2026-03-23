@@ -1,0 +1,16 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {chapter}{\numberline {1}Projeto e Desenvolvimento}{2}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Tema e Objetivos}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Tema}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Objetivo Geral}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Objetivos Específicos}{3}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Conteúdo do Projeto}{4}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Bases de Dados (Datasets)}{4}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Desenvolvimento e Conceitos Computacionais}{4}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Busca em Espaço de Estados (Solução Ótima)}{4}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Branch and Bound (Solução Ótima Otimizada)}{5}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Heurística (Solução Aproximada)}{5}{subsection.3.2.3}%
+\contentsline {chapter}{\numberline {4}Estrutura do Trabalho Escrito}{6}{chapter.4}%
+\contentsline {chapter}{Instruções para o Desenvolvimento}{7}{chapter*.2}%
+\contentsline {chapter}{\numberline {5}Avaliação}{8}{chapter.5}%
+\contentsline {chapter}{Modelo Ficha}{9}{chapter*.3}%
