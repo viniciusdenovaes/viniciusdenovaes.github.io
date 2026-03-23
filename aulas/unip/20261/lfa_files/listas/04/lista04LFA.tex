@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt]{exam}
 
 \usepackage[brazil]{babel}   
 \usepackage[utf8]{inputenc}  
@@ -6,7 +6,6 @@
 \usepackage{amsfonts,amsmath,amssymb,latexsym} 
 \usepackage{float}
 \usepackage{graphicx}
-\usepackage{enumerate}
 \graphicspath{ {images/} }
 
 \def\cQ{\mathcal{Q}}
@@ -27,22 +26,90 @@
 
 \begin{description}
 
-\item[Definição de uma Gramática Livre de Contexto (GLC)]: Uma gramática livre de contexto, definida pela 4-tupla
-\[G = (\Lambda, \Sigma, \Delta, I)\]
+\item[Operadores de Expressões Regulares]:
 \begin{itemize}
-\item Um conjunto finito de variáries $\Lambda$, cada variável repreenta uma linguagem.
-\item Um conjunto finito de símbolos terminais $\Sigma$, que forma as strings da linguagem.
-\item Um conjunto finito de regras $\Delta$. Cada regra consiste em:
-  \begin{itemize}
-  \item Uma variável, chamada de cabeça da regra
-  \item Um símbolo de produção da regra $\rightarrow$
-  \item Uma string de zero ou mais terminais e variáveis, chamada de corpo da regra
-  \end{itemize}
-  Em cada passo, substituímos uma das variáveis da string que esteja numa das cabeças de uma regra, e subtituímos esta variável pela string que está no corpo desta regra.
-\item Uma das variáveis representa a linguagem que está sendo definidia, ela é chamada de símbolo de início, $I\in \Lambda$
+\item A união de duas linguagens $L$ e $M$ denotada por $L\cup M$ 
+é o conjunto de strings que estão em $L$ ou em $M$
+\item A concatenação de duas linguagens $L$ e $M$ denotada por $LM$
+é o conjunto de strings que podem ser formados concatenando-se qualquer string de $L$ 
+com qualquer string de $M$, 
+nesta ordem
+\item A potência $L^i$, para $i=0,1,2,3, \dots$; é a concatenação de $L$ com $L^{i-1}$, se $i>0$;
+e $L^0 = \{\ve\}$ para $i=0$.
+\item O fechamento de uma linguagem $L$, denotado por $L^*$ é a união
+\[\bigcup_{i=0}^\infty L^i\]
 \end{itemize}
 
-\item[Derivação]: Uma derivação é a aplicação das regras em uma variável inicial. Podemos representar uma derivação com o símbolo $\Rightarrow$, colocando à esquerda a string original e à direita a string resultante.
+\item[Definição de uma Expressão Regular (ER)]:
+
+\begin{itemize}
+\item $\emptyset$ é uma ER; $L(\emptyset) = \emptyset$.
+\item $\ve$ é uma ER; $L(\ve) = \{\ve\}$.
+\item \textbf{a} é uma ER, $a\in \Sigma$; $L($\textbf{a}$) = \{a\}$.
+\item Se $E$ e $F$ são ER, então $E+F$ é ER; $L(E+F) = L(E)\cup L(F)$.
+\item Se $E$ e $F$ são ER, então $EF$ é ER; $L(EF) = L(E)L(F)$.
+\item Se $E$ é ER, então $E^*$ é ER; $L(E^*) = L(E)^*$.
+\item Se $E$ é ER, então $(E)$ é ER; $L((E)) = L(E)$.
+\end{itemize}
+
+\break
+
+\item[ER para AFN$\ve$]:
+\begin{itemize}
+\item $\emptyset$
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{ERtoAFNeEmpty}
+    \caption{$\emptyset$}
+    \label{fig:ERtoAFNeEmpty}
+\end{figure}
+
+\item $\ve$
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{ERtoAFNeVarep}
+    \caption{$\ve$}
+    \label{fig:ERtoAFNeVarep}
+\end{figure}
+
+\item $a$
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{ERtoAFNea}
+    \caption{$a\in \Sigma$}
+    \label{fig:ERtoAFNea}
+\end{figure}
+
+\item $E+F$
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{ERtoAFNeE+F}
+    \caption{$E+F$}
+    \label{fig:ERtoAFNeE+F}
+\end{figure}
+
+
+\break
+
+\item $EF$
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{ERtoAFNeEF}
+    \caption{$EF$}
+    \label{fig:ERtoAFNeEF}
+\end{figure}
+
+\item $E^*$
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{ERtoAFNeEKle}
+    \caption{$E^*$}
+    \label{fig:ERtoAFNeEKle}
+\end{figure}
+
+
+\end{itemize}
+
 
 \end{description}
 
@@ -50,103 +117,127 @@
 
 
 
-\begin{enumerate}
+\begin{questions}
 
 
 
-\item Projete gramáticas livre de contexto para as seguintes linguagens:
+\question Descreva em palavras as linguagens geradas pelas seguintes expressões regulares:
 
-\begin{enumerate}
+\begin{parts}
 
-\item $\ve$
+\part $(00^*1)^*0^*$
 
-\item $\{a,b\}^*$
+\part $(0^*1^*)^*000(0+1)^*$
 
-\item O conjunto $\{0^n1^n~|~n\geq 1\}$ (o conjunto de todas as strings de um ou mais 0, seguidos por uma quantidade igual de 1)
+\part $(0+10)^*$
 
-\item O conjunto $\{waw^R~|~w\in \{a,b\}^*\}$ (o conjunto de todas as strings que tem um $a$ no meio, e o sufixo depois deste $a$ invertido é igual ao prefixo antes do $a$)
+\part $(a+b+c)^*(a+b+c)$
 
-\item O conjunto $\{ww^R~|~w\in \{a,b\}^*\}$ (o conjunto de todas as strings que podem ser escritas como uma string $w$ concatenada com esta string $w$ invertida)
+\part $(aa+b)^*$
 
-\item O conjunto $\{w~|~w\in \{a,b\}^*, w = w^R\}$ (o conjunto de todas as strings que são iguais a elas mesma invertida)
+\part $(b+ab)^*(\ve+a)$
 
-\item O conjunto $\{0^m1^n~|~m\geq n\}$ (o conjunto de 0 seguidos de 1 tal que a quantidade de 0 seja maior que a quantidade de 1)
+\part $c^*(a+b)(a+b+c)^*$
 
-\item O conjunto $\{0^m1^n~|~m\leq 2n\}$ 
+\part $((b+c)^*+a(b+c)^*a)^*$
 
-\item O conjunto $\{uawb~|~u,w\in \{a,b\}^*, |u| = |w|\}$ 
+%\item $(aa+bb+(aa+bb)(ab+ba)(aa+bb))^*$
 
-\item $\{w~|~$ $w\in \{0,1,+,(,),^*\}$ e $w$ é uma expressão regular em $\{0,1\}$ $\}$
-
-\item O conjunto de todas as strings em $\{0,1\}^*$ com a mesma quantidade de 0's e 1's.
-
-
-\end{enumerate}
-
-
-\item Considere a gramática livre de contexto $G = (\Lambda, \Sigma, \Delta, I)$, onde 
-\begin{description}
-  \item $\Lambda = \{A,B,S\}$
-  \item $\Sigma = \{a,b\}$
-  \item $\Delta:$
-    \begin{enumerate}[(1)]
-    \item $S\rightarrow aB$
-    \item $S\rightarrow bA$
-    \item $A\rightarrow a$
-    \item $A\rightarrow aS$
-    \item $A\rightarrow BAA$
-    \item $B\rightarrow b$
-    \item $B\rightarrow bS$
-    \item $B\rightarrow ABB$
-    \end{enumerate}
-\end{description}
-Mostre que as seguintes strings fazem parte desta linguagem
-
-\begin{enumerate}
-
-\item $ababba$
-
-\item $aaabbb$
-
-\item $aaabbbab$
-
-\item $bababaab$
-
-\end{enumerate}
-
-
-
-\item Considere a gramática livre de contexto $G = (\Lambda, \Sigma, \Delta, I)$, onde 
-\begin{description}
-  \item $\Lambda = \{S,A\}$
-  \item $\Sigma = \{a,b\}$
-  \item $\Delta:$
-    \begin{enumerate}[(1)]
-    \item $S\rightarrow AA$
-    \item $A\rightarrow AAA$
-    \item $A\rightarrow a$
-    \item $A\rightarrow bA$
-    \item $A\rightarrow Ab$
-    \end{enumerate}
-\end{description}
-Mostre que as seguintes strings fazem parte desta linguagem
-
-\begin{enumerate}
-
-\item $babbab$
-
-\item $bbabbabb$
-
-\item $bbbabab$
-
-\end{enumerate}
-
-Forneça um algoritmo para gerar a string $b^mab^nab^p$, para qualquer $m$, $n$ e $p$.
+\end{parts}
 
 
 
 
-\end{enumerate}
+
+\break
+
+
+
+
+
+\question Desenvolva ER que gerem as seguintes linguagens sobre o alfabeto $\Sigma = \{0,1,+,-\}$
+
+\begin{parts}
+
+\part Expressões em uma linguagem tipo C, onde os operadores são $+$ ou $-$ e os números são binários.
+
+\part Número inteiros em uma linguagem tipo C, composto por qualquer sequência não vazia de dígitos, precedido ou não por um sinal.
+
+\end{parts}
+
+
+
+
+\question Desenvolva ER que gerem as seguintes linguagens sobre o alfabeto $\Sigma = \{a,b,c\}$:
+
+$\{w~|~w $ tem pelo menos um $a$ e um $b$ $\}$
+
+
+\question Desenvolva ER que gerem as seguintes linguagens sobre o alfabeto $\Sigma = \{a,b\}$:
+
+\begin{parts}
+
+\part $\{w~|~w$ o terceiro símbolo a partir da extremidade direita é $a$ $\}$
+
+\part $\{w~|~w $ tem, pelo menos, um par de $a$ como substring$\}$
+
+\part $\{w~|~w $ tem, pelo menos, um par de $a$ como substring e um par de $b$ como substring$\}$
+
+\part $\{w~|~w $ possui $aba$ como substring$\}$
+
+\part $\{w~|~$ se houver par de $a$, este antecede um par de $b$ $\}$
+
+\end{parts}
+
+
+
+
+\question Quais das seguintes ER são equivalentes
+
+\begin{parts}
+
+\part $(a+b)^*a^*$
+\part $(a+b)^*$
+\part $((a+b)a)^*$
+
+
+\end{parts}
+
+
+
+\question Converta as expressões a seguir em AFD (Autômato Finito Determinístico, você pode primeiro transformar para AFD$\ve$ depois para AFD):
+
+\begin{parts}
+
+\part $01^*$
+
+\part $(0+1)01$
+
+\part $00(0+1)^*$
+
+\end{parts}
+
+
+%\item Quais linguagens tem o fechamento finito? (Forneça $L$ tal que $L^*$ é um conjunto finito)(são duas linguagens)
+
+
+%\item Seja $E$ uma ER que gera a linguagem $L(E)$, que linguagens são geradas pelas seguintes expressões?
+
+%\begin{enumerate}
+
+%\item $\emptyset + E$
+
+%\item $\ve E$
+
+%\item $\emptyset E$
+
+%\end{enumerate}
+
+
+
+
+
+\end{questions}
 
 \end{document}
 
