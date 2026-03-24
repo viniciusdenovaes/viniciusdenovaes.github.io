@@ -44,4 +44,4 @@ Cada integrante deve entregar uma cópia assinada do projeto escrito, contendo N
 O projeto será avaliado **na apresentação presencial** pela clareza da explicação matemática e usabilidade da interface
 
 #### Data Apresentação: 
-A apresentação ocorrerá impreterivelmente no dia 30/04, durante a aula de DDM.
+A apresentação ocorrerá impreterivelmente no dia 06/04, durante a aula de DDM.
