@@ -31,13 +31,11 @@
 
 - [BD](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20261/bd)
 
-## [Questões Enade](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/enade/tomos)
+## Questões Enade
 
-- [enade - CC](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/enade/tomos/TomosCC)
-
-- [enade - SI](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/enade/tomos/TomosSI)
-
-- [enade - ADS](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/enade/tomos/TomosADS)
+- [enade - CC](aulas/unip/enade/tomos/tomosCC.html)
+- [enade - SI](aulas/unip/enade/tomos/tomosSI.html)
+- [enade - ADS](aulas/unip/enade/tomos/tomosADS.html)
 
 <br>
 <br>
