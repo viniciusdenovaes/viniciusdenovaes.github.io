@@ -97,4 +97,4 @@ Seguindo o exemplo, para recuperarmos o valor do nome e da idade deveremos fazer
 String nome = getIntent().getStringExtra("nome");
 int idade = getIntent().getIntExtra("idade", 0);
 ```
-
+.
