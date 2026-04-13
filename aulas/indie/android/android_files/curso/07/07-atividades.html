@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="file:///c:\Users\vinicius\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.18\crossnote\dependencies\katex\katex.min.css">
+      <link rel="stylesheet" href="file:///c:\Users\vinicius\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.22\crossnote\dependencies\katex\katex.min.css">
       
       
       
@@ -15,13 +15,13 @@
 /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
 
       </style>
-      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+      <script type="text/javascript">
   document.addEventListener("DOMContentLoaded", function () {
     // your code here
   });
-</script></head><body for="html-export">
-    
-    
+</script>
+    </head>
+    <body for="html-export">
       <div class="crossnote markdown-preview  ">
       
 <h1 id="atividades-intentos-e-o-android-manifest">Atividades, Intentos e o <em>Android Manifest</em> </h1>
@@ -69,7 +69,25 @@
     <span class="token attr-name"><span class="token namespace">android:</span>parentActivityName</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>.MainActivity<span class="token punctuation">"</span></span>
     <span class="token punctuation">/&gt;</span></span>
 </code></pre><p>Desta forma, quando o usuário estiver na tela <code>Empty</code> e clicar em voltar, ele será direcionado para a tela <code>Main</code></p>
-
+<h2 id="como-passar-informação-para-a-próxima-activity">Como passar informação para a próxima <code>Activity</code> </h2>
+<p>Se quisermos passar informação da <code>Activity</code> original para a próxima <code>Activity</code> teremos que anotar a inforção no <code>Intent</code>.</p>
+<p>Se tivermos, por exemplo, o nome do usuário guardado em uma variável chamada <code>nome_usuario</code>,<br>
+e a idade do usuário na variável inteira <code>idade_usuario</code>.</p>
+<p>Pode usar o seguinte código para anotar no <code>Intent</code> estas informações para a próxima tela.</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token class-name">Intent</span> intent <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Intent</span><span class="token punctuation">(</span><span class="token class-name">MainActivity</span><span class="token punctuation">.</span><span class="token keyword keyword-this">this</span><span class="token punctuation">,</span> <span class="token class-name">EmptyActivity</span><span class="token punctuation">.</span><span class="token keyword keyword-class">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+intent<span class="token punctuation">.</span><span class="token function">putExtra</span><span class="token punctuation">(</span><span class="token string">"nome"</span><span class="token punctuation">,</span> nome_usuario<span class="token punctuation">)</span><span class="token punctuation">;</span>
+intent<span class="token punctuation">.</span><span class="token function">putExtra</span><span class="token punctuation">(</span><span class="token string">"idade"</span><span class="token punctuation">,</span> idade_usuario<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">startActivity</span><span class="token punctuation">(</span>intent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h5 id="como-recuperar-informações-anotadas-no-intent">Como recuperar informações anotadas no <code>Intent</code>: </h5>
+<p>Para recuperar estas informações na próxima tela precisamos recuperar o <code>Intent</code> e pedir cada informação pelo nome, e fornecer o tipo da variável.</p>
+<ul>
+<li>Recuperar o <code>Intent</code>: <code>getIntent()</code></li>
+<li>Recuperar o valor da variável: <code>getTipoExtra(nome_da_variavel, valor_default);</code></li>
+</ul>
+<p>Seguindo o exemplo, para recuperarmos o valor do nome e da idade deveremos fazer:</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token class-name">String</span> nome <span class="token operator">=</span> <span class="token function">getIntent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getStringExtra</span><span class="token punctuation">(</span><span class="token string">"nome"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-int">int</span> idade <span class="token operator">=</span> <span class="token function">getIntent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getIntExtra</span><span class="token punctuation">(</span><span class="token string">"idade"</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
       </div>
       
       

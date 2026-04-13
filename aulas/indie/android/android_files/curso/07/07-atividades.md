@@ -67,4 +67,34 @@ Olhe o exemplo abaixo:
 Desta forma, quando o usuário estiver na tela `Empty` e clicar em voltar, ele será direcionado para a tela `Main`
 
 
+## Como passar informação para a próxima `Activity`
+
+Se quisermos passar informação da `Activity` original para a próxima `Activity` teremos que anotar a inforção no `Intent`.
+
+Se tivermos, por exemplo, o nome do usuário guardado em uma variável chamada `nome_usuario`, 
+e a idade do usuário na variável inteira `idade_usuario`.
+
+Pode usar o seguinte código para anotar no `Intent` estas informações para a próxima tela.
+
+
+```java
+Intent intent = new Intent(MainActivity.this, EmptyActivity.class);
+intent.putExtra("nome", nome_usuario);
+intent.putExtra("idade", idade_usuario);
+startActivity(intent);
+```
+
+##### Como recuperar informações anotadas no `Intent`:
+
+Para recuperar estas informações na próxima tela precisamos recuperar o `Intent` e pedir cada informação pelo nome, e fornecer o tipo da variável.
+
+- Recuperar o `Intent`: `getIntent()`
+- Recuperar o valor da variável: `getTipoExtra(nome_da_variavel, valor_default);`
+
+Seguindo o exemplo, para recuperarmos o valor do nome e da idade deveremos fazer:
+
+```java
+String nome = getIntent().getStringExtra("nome");
+int idade = getIntent().getIntExtra("idade", 0);
+```
 
