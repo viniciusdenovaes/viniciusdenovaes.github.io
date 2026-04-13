@@ -23,10 +23,10 @@ class Pato{
     public int GetAno(){
         return ano;
     }
-    public void Voa(){
+    public virtual void Voa(){
         Console.WriteLine("O Pato voa");
     }
-    public void Nada(){
+    public virtual void Nada(){
         Console.WriteLine("O Pato nada");
     }
     public override string ToString(){
