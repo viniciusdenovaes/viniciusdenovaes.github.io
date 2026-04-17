@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.3)  17 APR 2026 12:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.3)  17 APR 2026 14:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -664,10 +664,10 @@ L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 16771 strings out of 474485
- 364201 string characters out of 5742319
+ 16789 strings out of 474485
+ 364595 string characters out of 5742319
  1934542 words of memory out of 5000000
- 38755 multiletter control sequences out of 15000+600000
+ 38773 multiletter control sequences out of 15000+600000
  568261 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,18n,107p,455b,1874s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -687,7 +687,7 @@ X/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/vinicius/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/vinicius/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/vi
 nicius/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on lista02AA.pdf (5 pages, 168115 bytes).
+Output written on lista02AA.pdf (5 pages, 168255 bytes).
 PDF statistics:
  115 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
