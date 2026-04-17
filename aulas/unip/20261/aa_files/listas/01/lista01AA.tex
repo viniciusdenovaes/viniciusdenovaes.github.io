@@ -21,10 +21,11 @@
 \newcommand{\cluster}{\mathrm{cluster}}
 \newcommand{\merge}{\mathrm{merge}}
 
+\def\code#1{\texttt{#1}}
 
 
 \title{Lista 01 de Análise de Algoritmos}
-\date{1º Período de 2023}
+\date{}
 \author{Turma do 4º ano}
 
 
@@ -35,58 +36,98 @@
 \vspace{3em}
 
 
+Para cada problema abaixo, desenvolva um algoritmo, 
+descreva o algoritmo (pode ser em alto nível, pseudo-código ou 
+linguagem de programação) e 
+diga qual é a complexidade do seu algoritmo na notação $O$.
 
-\begin{enumerate}
+Utilize estratégia de programação dinâmica com memorização.
 
-\item Para cada problema abaixo, desenvolva um algoritmo, descreva o algoritmo (pode ser em alto nível, pseudo-código ou linguagem de programação) e diga qual é a complexidade do seu algoritmo na notação $O$.
+OBS: O algoritmo pode usar operações como saber o tamanho do 
+vetor e pegar um elemento do vetor da posição $i$ sem custo de 
+cálculo.
 
-OBS: O algoritmo pode usar operações como saber o tamanho do vetor e pegar um elemento do vetor da posição $i$ sem custo de cálculo.
-
-OBS2: O seu algoritmo não precisa ter a menor complexidade conhecida.
-
-\begin{enumerate}
-
-\item Entrada: Um vetor de inteiros de tamanho $n$. Saída: a soma de todos elementos do vetor de entrada.
-
-\item Entrada: Um vetor de reais de tamanho $n$. Saída: a média dos elementos do vetor de entrada.
-
-\item Entrada: Um vetor de inteiros de tamanho $n$. Saída: o menor elemento do vetor.
-
-\item Entrada: Um vetor de inteiros de tamanho $n$. Saída: o menor e o maior elemento do vetor.
-
-\item Entrada: Um vetor de inteiros de tamanho $n$. Saída: o primeiro elemento do vetor.
-
-\item Entrada: dois vetores de inteiros, cada um de tamanho $n$. Saída: um vetor cuja posição $i$ guarda a soma dos elementos da posição $i$ de cada vetor de entrada.
-
-\item Entrada: Um vetor de inteiros de tamanho $n$. Saída: o vetor de entrada invertido.
-
-\item Entrada: Duas matrizes quadradas de tamanho $n$. Saída: a soma das duas matrizes.
-
-\item Entrada: Duas matrizes quadradas de tamanho $n$. Saída: a multiplicação das duas matrizes.
-
-\item Entrada: Um vetor de inteiros de tamanho $n$. Saída: a mediana dos valores do vetor.
-
-\item Entrada: Um vetor de inteiros de tamanho $n$ e um número inteiro. Saída: se o vetor contém este número.
-
-\item Entrada: Um vetor de inteiros de tamanho $n$. Saída: se o vetor contém dois números iguais.
-
-\item Entrada: dois vetores de inteiros, cada um de tamanho $n$. Saída: se os dois vetores têm um elemento em comum.
-
-\item Entrada: Duas matrizes quadradas de tamanho $n$. Saída: se as duas matrizes têm um elemento em comum.
-
-\item Entrada: Um grafo simples $G=(V, E)$. Saída: responder se este grafo é completo.
-
-\item Entrada: Um grafo completo $G=(V, E)$ com pesos nas arestas. Saída: responder qual aresta tem o maior peso.
-
-\item Entrada: Um grafo completo $G=(V, E)$ com pesos positivos nas arestas. Saída: responder se o grafo respeita a desigualdade triangular.
+\begin{description}
 
 
 
-\end{enumerate}
+\item[Fibonacci:] 
+Os números de Fibonacci correspondem a uma sequência 
+infinita na qual os dois primeiros termos são 0 e 1. 
+Cada termo da sequência, 
+à exceção dos dois primeiros, 
+é igual à soma dos dois anteriores, 
+conforme a relação de recorrência abaixo:
+\[f_n = f_{n-1} + f_{n-2}\]
+Desenvolva dois algoritmos que retorna o $i$-ésimo termo da sequência.
 
 
 
-\end{enumerate}
+\item[Tribonacci:]
+Seguindo o exercício anterior, 
+escreva um algoritmo para o Tribonacci. 
+Uma variação do Fibonacci em que o valor de um termo 
+depende dos \textbf{3} termos anteriores.
+
+\[f_n = f_{n-1} + f_{n-2} + f_{n-3},\]
+
+e os três primeiros termos são 0, 0 e 1. 
+
+
+
+\item[Subida das Escadas:]
+Dada uma escada com $n$ degraus, uma pessoa parada em um degrau pode 
+subir um ou dois degraus.
+Qual a quantidade de combinações diferentes que uma pessoa pode usar para
+subir a escada.
+
+
+
+\item[Máximo Número de Segmentos:]
+Dado um segmento de tamanho $n$. 
+O objetivo é cortar o segmento na maior quantidade de partes possível.
+Sendo que cada corte pode somente ter 3 tamanhos possíveis: $x$, $y$ e $z$.
+
+
+
+\item[Roubo de Casas:] 
+Dado um array de tamanho $n$, com números inteiros positivos.
+Escolher posições no array tal que a soma dos seus elementos seja máxima, 
+atendendo à restrição de que 
+não se pode escolher duas posições vizinhas.
+Caso a posição $i$ esteja entre as escolhidas, 
+as posições $i-1$ e $i+1$ não poderão ser escolhidas.
+
+
+
+
+\item[Troco em Moedas:]
+Dada uma lista de tipos de \code{moedas[i]} de tamanho $n$ e 
+um valor soma objetivo $S$, 
+onde cada elemento \code{moedas[i]} é um valor diferente de moeda.
+Considere que você tem uma quantidade infinita de cada moeda.
+O objetivo é encontrar a mínima quantidade de moedas para juntar a soma $S$.
+Se não for possível juntar a soma, retorne o número -1.
+
+
+
+
+\item [Problema da Mochila:]
+Dados dois arrays, \code{valor[]} e \code{peso[]}, 
+onde cada elemento na posição \code{i} de \code{valor} representa o valor do item \code{i}, 
+e cada elemento na posição \code{i} de \code{peso} representa o peso do item \code{i}.
+Também é dado um valor \code{W} representando o peso total que a mochila aguenta.
+O objetivo é juntar um conjunto de itens,
+ tal que a soma tenha valor máximo e 
+não ultrapasse o peso \code{W} da mochila.
+
+OBS: Se um item for incluído, ele deve ser incluído por inteiro, não pode ser 
+usado uma fração do item.
+
+
+
+\end{description}
+
 
 \end{document}
 
