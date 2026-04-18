@@ -22,6 +22,7 @@
    - [CG](aulas/unip/20261/cg.html)
    - [LFA](aulas/unip/20261/lfa.html)
 - Ano 4
+   - [AA](aulas/unip/20261/aa.html) 
    - [RVRA](aulas/unip/20261/rvra.html) 
 ##### ADS
 - [POO (ADS)](aulas/unip/20261/poo_ads.html)
