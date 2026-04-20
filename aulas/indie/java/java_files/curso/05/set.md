@@ -1,7 +1,7 @@
 # Conjuntos
 
 Uma estrutura de dados **importante** são os conjuntos.
-Suas propriedades são:
+Suas características são:
 - Não existem elementos repetidos em conjuntos
 - Eles não são indexados
 - É muito mais rápido encontrar um elemento em um conjunto (o programa não precisa olhar todos os elementos em um conjunto para saber se um elemento específico está nele)
