@@ -35,6 +35,9 @@
 - Parte 07 - Entrada e Saída
   - [IO](java_files/curso/00.1-erros-io/02-io.html)
 
+- Parte 08 - Menu (Adicionando e Listando de um CSV)
+  - [(Mini)Menu funcional](java_files/curso/)
+
 
 ## Laboratórios
 
