@@ -25,6 +25,7 @@
   - [Herança](java_files/curso/04/heranca.html)
 
 - Parte 05 - Importantes Estruturas de Dados e Interfaces
+   - [List (Revisited)](java_files/curso/05/list.html)
    - [Set](java_files/curso/05/set.html)
    - [Map](java_files/curso/05/map.html)
 
