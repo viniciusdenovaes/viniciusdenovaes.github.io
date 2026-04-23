@@ -34,7 +34,7 @@
 
 - Parte 07 - Entrada e Saída
   - [IO](java_files/curso/00.2-io/01-io.html)
-  - [JSON Parse](java_files/curso/00.2-io/02-json-parser.html)
+  <!--- [JSON Parse](java_files/curso/00.2-io/02-json-parser.html)-->
 
 - Parte 08 - Menu (Adicionando e Listando de um CSV)
   - [(Mini)Menu funcional](java_files/curso/00.2-menu/menu.html)
