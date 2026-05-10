@@ -64,6 +64,6 @@
 ## Prova Passada
 
 - [prova 01 em Java](poo_files/provas_aula/prova01LPOOaula.pdf)
-- [prova 02 em Java (apenas questões 5, 6, 7, 8, 9, 10)](poo_files/provas_aula/prova02LPOOJava.pdf)
+- [prova 02 Rascunho](poo_files/provas_aula/prova02POO.pdf)
 
 
