@@ -61,7 +61,7 @@
 -->
 
 
-## Prova Passada
+## Prova Passada.
 
 - [prova 01 em Java](poo_files/provas_aula/prova01LPOOaula.pdf)
 - [prova 02 Rascunho](poo_files/provas_aula/prova02POO.pdf)
