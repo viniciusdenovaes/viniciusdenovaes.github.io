@@ -1,0 +1,123 @@
+\documentclass[12pt]{exam}
+
+\usepackage[utf8]{inputenc}  
+\usepackage[portuguese]{babel}   
+
+\usepackage[ruled, vlined, algonl, portuguese]{algorithm2e}
+
+\newcommand{\linesnumbered}{\LinesNumbered}
+\newcommand{\dontprintsemicolon}{\DontPrintSemicolon}
+\newcommand{\incmargin}{\IncMargin}
+\newcommand{\decmargin}{\DecMargin}
+
+\usepackage{mathtools}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[shortlabels]{enumitem}
+
+\def\le{\leqslant}\def\leq{\le}
+\def\ge{\geqslant}\def\geq{\ge}
+\newcommand{\floor}[1]{\left\lfloor{#1}\right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil{#1}\right\rceil}
+\newcommand{\pare}[1]{\left({#1}\right)}
+\newcommand{\set}[1]{\left\{{#1}\right\}}
+\newcommand{\range}[2]{\set{{#1},\dots,{#2}}}
+\newcommand{\dist}{\mathrm{dist}}
+\newcommand{\cluster}{\mathrm{cluster}}
+\newcommand{\merge}{\mathrm{merge}}
+
+\pagestyle{empty}
+
+\title{Lista 02 de Álgebra Linear}
+\date{}
+
+
+
+\begin{document}
+
+
+\maketitle
+
+
+\vspace{3em}
+
+
+\begin{questions}
+
+    \question Normalize os seguintes vetores:
+    \begin{parts}
+        \part (0, 1)
+        \part (1, 0)
+        \part (1, 1)
+        \part (3, 4)
+        \part (6, 8)
+    \end{parts}
+
+
+    \question Considere os vetores (1, 2) e (0, 1).
+    Prove que os seguintes vetores são 
+    combinação linear destes vetores.
+
+    \begin{parts}
+        \part (0, 0)
+        \part (0, 1)
+        \part (1, 0)
+        \part (1, 1)
+        \part (2, 2)
+    \end{parts}
+
+    \question Considere os vetores (1, 2) e (2, 4).
+    Verifique \textbf{SE} os seguintes vetores são
+    combinação linear destes vetores.
+
+    \begin{parts}
+        \part (0, 0)
+        \part (0, 1)
+        \part (1, 0)
+        \part (1, 1)
+        \part (2, 2)
+    \end{parts}
+
+\break
+
+\question Considere os vetores 
+    (1, 1, 1), 
+    (2, 3, 2) e
+    (3, 2, 4).
+Prove que os seguintes vetores são 
+combinação linear destes vetores.
+
+    \begin{parts}
+        \part (2, 1, 2)
+        \part (2, 1, 1)
+        \part (-1, 0, -1)
+    \end{parts}
+
+
+
+\question Usando o cálculo do produto escalar, 
+calcule o cosseno do ângulo entre o vetor 
+$(3, 4)$ e $(6, 8)$
+
+
+\question Usando o cálculo do produto escalar, 
+calcule o cosseno do ângulo entre o vetor 
+$(2, 1)$ e $(-2, 4)$
+
+
+\question Usando o cálculo do produto escalar, 
+calcule o cosseno do ângulo entre o vetor 
+$(3, 3)$ e $(0, 2)$
+
+
+\question Descubra qual os valores de 
+$\cos(45^\circ)$,  
+$\cos(0^\circ)$ e  
+$\cos(90^\circ)$  
+usando o cálculo do produto escalar e 
+os vetores $(1, 0)$, $(0, 1)$ e $(1, 1)$.
+
+\end{questions}
+
+\end{document}
