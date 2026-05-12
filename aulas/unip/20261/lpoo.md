@@ -6,7 +6,7 @@
  - [Especificação do Texto para entregar no site](lpoo_files/aps/2026_1_CC_SI_3.pdf)
 
 
-## Provas
+## Provas Antigas
 #### NP1
  - [Prova NP1](lpoo_files/provas_aula/prova01LPOOaula.pdf) 
 #### NP2
