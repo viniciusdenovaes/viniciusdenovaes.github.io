@@ -15,6 +15,9 @@
 * [Lista 06 - Autômatos Finitos Não Determinísticos Com Pilha](lfa_files/listas/06/lista06LFA.pdf)
 
 
+### Prova Antiga
+##### NP 1
+* [Prova 01](lfa_files/prova_antiga/prova01A_LFA.pdf)
 
 
 
