@@ -19,7 +19,7 @@
 
 - Ano 3
    - [IA](aulas/unip/20261/ia.html)
-   - [CG](aulas/unip/20261/cg.html)
+   - [CG](aulas/unip/20261/cg.html).
    - [LFA](aulas/unip/20261/lfa.html)
 - Ano 4
    - [AA](aulas/unip/20261/aa.html) 
