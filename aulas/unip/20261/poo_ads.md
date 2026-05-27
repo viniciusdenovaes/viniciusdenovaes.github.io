@@ -61,9 +61,14 @@
 -->
 
 
-## Prova Passada
+## Provas Atuais
 
-- [prova 01 em Java](poo_files/provas_aula/prova01LPOOaula.pdf)
-- [prova 02 Rascunho](poo_files/provas_aula/prova02POO.pdf)
+- [prova 01](poo_files/provas_aula/prova01LPOOaula.pdf)
+- [prova 02](poo_files/provas_aula/prova02POO.pdf)
+
+## Provas Anos Passados
+
+- [prova 01 em Java](poo_files/provas_passadas/prova01LPOOaula.pdf)
+- [prova 02 Rascunho](poo_files/provas_passadas/prova02POO.pdf)
 
 
