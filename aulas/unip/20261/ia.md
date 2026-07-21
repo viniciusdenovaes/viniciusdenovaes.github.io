@@ -13,6 +13,9 @@
 - [Lista 03 - Busca da Melhor Escolha](ia_files/listas/03/lista03IA.pdf)
 <!-- - [Lista 04 - Jogos](ia_files/listas/04/lista04IA.pdf) -->
 
+
+
+
 ### [Git](https://github.com/viniciusdenovaes/UnipIA)
 
 ## Livros:
