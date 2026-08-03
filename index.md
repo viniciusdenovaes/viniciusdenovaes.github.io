@@ -9,7 +9,37 @@
 ## Aulas
 
 
-### Atuais (2026/1)
+### Atuais (2026/2)
+##### CC e SI
+- Ano 2
+   <!-- - [LPOO (CC e SI)](aulas/unip/20261/lpoo.html)
+   - [AL](aulas/unip/20261/al.html) -->
+
+- Ano 3
+   <!-- - [IA](aulas/unip/20261/ia.html)
+   - [CG](aulas/unip/20261/cg.html)
+   - [LFA](aulas/unip/20261/lfa.html) -->
+##### ADS
+<!-- - [POO (ADS)](aulas/unip/20261/poo_ads.html) -->
+
+##### Flex
+<!-- - [POO](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20261/poo)
+
+- [BD](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20261/bd) -->
+
+##### Questões Enade
+
+- [enade - CC](aulas/unip/enade/tomos/tomosCC.html)
+- [enade - SI](aulas/unip/enade/tomos/tomosSI.html)
+- [enade - ADS](aulas/unip/enade/tomos/tomosADS.html)
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+### 2026/1
 ##### CC e SI
 - Ano 1
    - [DDM](aulas/unip/20261/ddm.html)
@@ -28,11 +58,11 @@
 - [POO (ADS)](aulas/unip/20261/poo_ads.html)
 
 ##### Flex
-- [POO](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20261/poo)
+<!-- - [POO](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20261/poo)
 
-- [BD](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20261/bd)
+- [BD](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20261/bd) -->
 
-## Questões Enade
+##### Questões Enade
 
 - [enade - CC](aulas/unip/enade/tomos/tomosCC.html)
 - [enade - SI](aulas/unip/enade/tomos/tomosSI.html)
@@ -43,7 +73,7 @@
 <br>
 <br>
 
-### (2025/2)
+### 2025/2
 ##### CC e SI
 - [CLD](aulas/unip/20252/cld.html)
 - [ALPOO](aulas/unip/20252/alpoo.html)
@@ -59,7 +89,7 @@
 - [Python](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20252/IPE)
 - [Circuitos Lógicos Digitais](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20252/CLD) -->
 
-### (2025/1)
+### 2025/1
 ##### CC e SI
 - Ano 1
    - [DDM](aulas/unip/20251/ddm.html)
@@ -79,7 +109,7 @@
 
 
 
-### (2024/2)
+### 2024/2
 * [ALPOO](aulas/unip/20242/alpoo.html)
 * [ED](aulas/unip/20242/ed.html)
 * [LTP](aulas/unip/20242/ltp.html)
@@ -91,7 +121,7 @@
 * [Godot Game Mobile](aulas/workshops/20242/godot_mobile.html)
 
 
-### (2024/1)
+### 2024/1
 ##### CC e SI
 * [LPOO (CC e SI)](aulas/unip/20241/lpoo.html)
 * [IA](aulas/unip/20241/ia.html)
@@ -110,7 +140,7 @@
 * [Processamento de Imagens e Visão Computacional](aulas/unip/20232/pi.html)
 
 
-### (2023/1)
+### 2023/1
 * [LPOO](aulas/unip/20231/lpoo.html)
 * [IA](aulas/unip/20231/ia.html)
 * [CG](aulas/unip/20231/cg.html)
@@ -123,18 +153,18 @@
 * [Processamento de Imagens e Visão Computacional](aulas/unip/20222/pi.html)
 * [Cálculo Numérico para Computação](aulas/unip/20222/cn.html)
 
-### (2022/1)
+### 2022/1
 * [LPOO](aulas/unip/20221/lpoo.html)
 * [AA](aulas/unip/20221/aa.html)
 * [CG](aulas/unip/20221/cg.html)
 * [IA](aulas/unip/20221/ia.html)
 
-### (2021/2)
+### 2021/2
 * [Processamento de Imagens](aulas/unip/20212/pi.html)
 * [Cálculo Numérico](aulas/unip/20212/cn.html)
 * [Extra: Machine Learning](aulas/unip/20212/extra_ml.html)
 
-### (2021/1)
+### 2021/1
 * [LPOO](aulas/unip/20211/lpoo.html)
 * [IA](aulas/unip/20211/ia.html)
 * [CG](aulas/unip/20211/cg.html)

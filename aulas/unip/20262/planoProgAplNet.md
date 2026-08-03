@@ -1,3 +1,16 @@
+revisao
+classe abstrata e interfaces
+
+preludio
+dependency injection
+1 do design pattern
+
+
+ideias
+observable coolection
+
+
+
 5 diagnóstico e perfilamento:
 Visual Studio Profiler
 
