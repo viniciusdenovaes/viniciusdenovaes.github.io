@@ -214,7 +214,162 @@ true
 <li><code>||</code>: OU lógico</li>
 </ul>
 <h3 id="comandos-condicionais">Comandos Condicionais </h3>
-<p>.</p>
+<h5 id="comando-if">Comando <code>if</code> </h5>
+<p>O comando condicional <code>if else</code> funciona como na linguagem C:</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> temperatura <span class="token operator">=</span> <span class="token number">20.5</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>temperatura<span class="token operator">&lt;</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Esta congelando'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token keyword keyword-else">else</span> <span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>temperatura<span class="token operator">&gt;=</span><span class="token number">10</span> <span class="token operator">&amp;&amp;</span> temperatura<span class="token operator">&lt;</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Esta muito frio'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token keyword keyword-else">else</span> <span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>temperatura<span class="token operator">&gt;=</span><span class="token number">30</span> <span class="token operator">&amp;&amp;</span> temperatura<span class="token operator">&lt;</span><span class="token number">35</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Esta uma tempo bom'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token keyword keyword-else">else</span><span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Esta calor'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><pre data-role="codeBlock" data-info="" class="language-text"><code>Esta muito frio
+</code></pre><h5 id="comando-switch">Comando <code>switch</code> </h5>
+<p>Usando o comando <code>switch</code> podemos escrever o código acima de forma mais concisa:</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> temperatura <span class="token operator">=</span> <span class="token number">20.5</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword keyword-switch">switch</span><span class="token punctuation">(</span>temperatura<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-case">case</span> <span class="token operator">&lt;</span><span class="token number">10</span><span class="token punctuation">:</span> 
+      <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Esta congelando'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-case">case</span> <span class="token operator">&gt;=</span><span class="token number">10</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">&lt;</span><span class="token number">30</span><span class="token punctuation">:</span> 
+      <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Esta muito frio'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-case">case</span> <span class="token operator">&gt;=</span><span class="token number">30</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">&lt;</span><span class="token number">35</span><span class="token punctuation">:</span> 
+      <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Esta uma tempo bom'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-default">default</span><span class="token punctuation">:</span> 
+      <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Esta calor'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h5 id="switch-expression">switch expression </h5>
+<p>Usando o <code>switch expression</code> você pode retornar um valor usando a estrutura do switch:</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> temperatura <span class="token operator">=</span> <span class="token number">20.5</span><span class="token punctuation">;</span>
+  
+  <span class="token class-name">String</span> status <span class="token operator">=</span> <span class="token keyword keyword-switch">switch</span><span class="token punctuation">(</span>temperatura<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token operator">&lt;</span><span class="token number">10</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string-literal"><span class="token string">'Esta congelando'</span></span><span class="token punctuation">,</span>
+    <span class="token operator">&gt;=</span><span class="token number">10</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">&lt;</span><span class="token number">30</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string-literal"><span class="token string">'Esta muito frio'</span></span><span class="token punctuation">,</span>
+    <span class="token operator">&gt;=</span><span class="token number">30</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">&lt;</span><span class="token number">35</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string-literal"><span class="token string">'Esta uma tempo bom'</span></span><span class="token punctuation">,</span>
+    _ <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string-literal"><span class="token string">'Esta calor'</span></span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>status<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>Observe que:</p>
+<ul>
+<li>Em cada caso você pode omitir o nome da variável</li>
+<li>O separador de seta <code>=&gt;</code> denota o que será retornado.</li>
+<li>O caso default é denotado pelo undeline <code>_</code></li>
+<li>Cada caso é separado por uma vírgula</li>
+<li>Existe um <code>;</code> depois do parênteses</li>
+</ul>
+<p>Perceba que o switch só pode entrar em um dos casos.<br>
+Podemos fazer um código mais limpo ainda.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> temperatura <span class="token operator">=</span> <span class="token number">20.5</span><span class="token punctuation">;</span>
+  <span class="token class-name">String</span> status <span class="token operator">=</span> <span class="token keyword keyword-switch">switch</span><span class="token punctuation">(</span>temperatura<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token operator">&lt;</span><span class="token number">10</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string-literal"><span class="token string">'Esta congelando'</span></span><span class="token punctuation">,</span>
+    <span class="token operator">&lt;</span><span class="token number">30</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string-literal"><span class="token string">'Esta muito frio'</span></span><span class="token punctuation">,</span>
+    <span class="token operator">&lt;</span><span class="token number">35</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string-literal"><span class="token string">'Esta uma tempo bom'</span></span><span class="token punctuation">,</span>
+    _ <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string-literal"><span class="token string">'Esta calor'</span></span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>status<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>Poderíamos ter feito isso nos exemplos anteriores também.</p>
+<h5 id="testando-igualdade-de-string">Testando igualdade de <code>string</code> </h5>
+<p>Diferente de Java, Dart permite fazer redefinição de operadores. Para testar duas <code>string</code> você pode usar o operador <code>==</code>.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> metal <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'ouro'</span></span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-const">const</span> cor <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'ouro'</span></span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>metal<span class="token operator">==</span>cor<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'sao iguais'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>OBS:</strong> Não é toda linguagem que permite testar a igualdade de duas <code>string</code> com <code>==</code>, sempre verifique!!</p>
+<h5 id="usando-switch-com-string">Usando <code>switch</code> com <code>string</code> </h5>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> cor <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'vermelho'</span></span><span class="token punctuation">;</span>
+  
+  <span class="token keyword keyword-switch">switch</span><span class="token punctuation">(</span>cor<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword keyword-case">case</span> <span class="token string-literal"><span class="token string">'vermelho'</span></span><span class="token punctuation">:</span> 
+      <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'A cor escolhida foi a cor da aurora'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-case">case</span> <span class="token string-literal"><span class="token string">'azul'</span></span><span class="token punctuation">:</span> 
+      <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'A cor escolhida foi a cor do ceu'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-case">case</span> <span class="token string-literal"><span class="token string">'verde'</span></span><span class="token punctuation">:</span> 
+      <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'A cor escolhida foi a cor da planta'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-default">default</span><span class="token punctuation">:</span> 
+      <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Nao conheco a cor escolhida'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h5 id="usando-switch-expression">Usando switch expression </h5>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> cor <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'vermelho'</span></span><span class="token punctuation">;</span>
+  
+  <span class="token class-name">String</span> comentario <span class="token operator">=</span> <span class="token keyword keyword-switch">switch</span><span class="token punctuation">(</span>cor<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token string-literal"><span class="token string">'vermelho'</span></span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string-literal"><span class="token string">'A cor escolhida foi a cor da aurora'</span></span><span class="token punctuation">,</span>
+    <span class="token string-literal"><span class="token string">'azul'</span></span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string-literal"><span class="token string">'A cor escolhida foi a cor do ceu'</span></span><span class="token punctuation">,</span>
+    <span class="token string-literal"><span class="token string">'verde'</span></span>  <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string-literal"><span class="token string">'A cor escolhida foi a cor da planta'</span></span><span class="token punctuation">,</span>
+    _<span class="token operator">=</span><span class="token operator">&gt;</span><span class="token string-literal"><span class="token string">'Nao conheco a cor escolhida'</span></span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>comentario<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h2 id="estruturas-de-dados-listas-conjuntos-e-maps">Estruturas de Dados (Listas, Conjuntos e Maps) </h2>
+<p>Podemos declarar uma lista de inteiros da seguinte maneira: <code>List&lt;int&gt; numeros = [];</code></p>
+<p>Principais métodos da lista:</p>
+<ul>
+<li><code>numeros[i]</code>: retorna o valor na posição <code>i</code></li>
+<li><code>numeros[i] = valor</code>: coloca <code>valor</code> na posição <code>i</code></li>
+<li><code>numeros.length</code> retorna o tamanho da lista</li>
+<li><code>numeros.add(valor)</code> adiciona o <code>valor</code> ao final da lista</li>
+<li><code>numeros.addAll(colecao)</code> adiciona todos os valores da <code>colecao</code> à <code>numeros</code></li>
+<li><code>numeros.insert(pos, valor)</code> adiciona o <code>valor</code> na posicao <code>pos</code>, empurrando todos os valores à direita uma posição para direita</li>
+<li><code>numeros.insertAll(pos, colecao)</code> adiciona todos os valores de <code>colecao</code> na posicao <code>pos</code>, empurrando todos os valores à direita mais para direita</li>
+<li><code>numeros = [10, 20, 30]</code> literal para criar a lista <code>[10, 20, 30]</code></li>
+<li><code>numeros.remove(valor)</code> remove o <code>valor</code> da lista</li>
+<li><code>numeros.removeAt(pos)</code> remove o valor da posição <code>pos</code></li>
+<li><code>print(numeros.last)</code> retorna o último valor da lista</li>
+<li><code>print(numeros.first)</code> retorna o primeiro valor da lista</li>
+</ul>
+<h6 id="exemplos">Exemplos </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span>int<span class="token punctuation">&gt;</span></span> numeros <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>numeros<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>numeros<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  numeros<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>numeros<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  numeros<span class="token punctuation">.</span><span class="token function">addAll</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>numeros<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  numeros<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>numeros<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  numeros<span class="token punctuation">.</span><span class="token function">insertAll</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>numeros<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  numeros <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>numeros<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  numeros<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>numeros<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  numeros<span class="token punctuation">.</span><span class="token function">removeAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>numeros<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  numeros <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>numeros<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>numeros<span class="token punctuation">.</span>last<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>numeros<span class="token punctuation">.</span>first<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><pre data-role="codeBlock" data-info="" class="language-text"><code>[]
+0
+[1]
+[1, 2, 3]
+[1, 100, 2, 3]
+[1, 200, 300, 100, 2, 3]
+[10, 20, 30]
+[10, 30]
+[30]
+200
+300
+100
+</code></pre><p>.</p>
 
       </div>
       
