@@ -20,7 +20,7 @@
    - [CG](aulas/unip/20261/cg.html)
    - [LFA](aulas/unip/20261/lfa.html) -->
 ##### ADS
-<!-- - [POO (ADS)](aulas/unip/20261/poo_ads.html) -->
+ - [Mobile com Flutter e Dart](aulas/unip/20262/mobile_ads.html)
 
 ##### Flex
 <!-- - [POO](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20261/poo)
