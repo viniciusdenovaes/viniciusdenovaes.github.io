@@ -424,6 +424,8 @@ void main() {
 
 ## Estruturas de Dados (Listas, Conjuntos e Maps)
 
+#### Listas
+
 Podemos declarar uma lista de inteiros da seguinte maneira: `List<int> numeros = [];`
 
 Principais métodos da lista:
@@ -482,5 +484,100 @@ void main() {
 300
 100
 ```
+
+#### Conjuntos
+
+Um conjunto é uma coleção que não tem valores repetidos.
+
+###### Exemplo
+```dart
+void main() {
+  
+  Set<int> numeros = {3, 1, 2};
+  print(numeros);
+  numeros.add(1);
+  numeros.add(2);
+  numeros.add(3);
+  numeros.add(4); // apenas o numero 4 sera adicionado
+  print(numeros);
+  
+}
+```
+###### Saída
+
+```
+{3, 1, 2}
+{3, 1, 2, 4}
+```
+
+Caso você tenha uma coleção de objetos e quiser eliminar repetições, você pode transformar a sua coleção em um conjunto.
+
+###### Exemplo
+```dart
+void main() {
+  
+  List<int> numeros = [1, 1, 2, 2, 3, 3];
+  print(numeros);
+  Set<int> conjuntoNumeros = Set.of(numeros);
+  print(conjuntoNumeros);
+  
+}
+```
+
+###### Saída
+```
+[1, 1, 2, 2, 3, 3]
+{1, 2, 3}
+``` 
+
+#### Maps
+
+Enquanto uma lista é indexada por números inteiros começando pelo 0, um map é indexado por uma chave qualquer.
+
+Um map é um mapeamento de um conjunto (chamados `key`) para uma coleção de valores (`values`).
+
+###### Exemplo
+
+```dart
+void main() {
+  
+  Map<String, int> pontos = {
+    'Carlos': 30,
+    'Ana': 10, 
+    'Beto': 20, 
+  };
+  
+  var pessoa = 'Ana';
+  print('A pontuacao da ${pessoa} eh ${pontos[pessoa]}');
+  pessoa = 'Beto';
+  print('A pontuacao da ${pessoa} eh ${pontos[pessoa]}');
+  pessoa = 'Dani'; // <- Dani nao esta no map
+  print('A pontuacao da ${pessoa} eh ${pontos[pessoa]}');
+  
+  pontos['Dani'] = 40;  // Inserindo a dupla chave Dani e valor 40
+  print('A pontuacao da ${pessoa} eh ${pontos[pessoa]}');
+  pontos['Dani'] = 140; // Atualizando o valor da chave Dani para 140
+  print('A pontuacao da ${pessoa} eh ${pontos[pessoa]}');
+  
+  print(pontos);
+  print(pontos.keys);
+  print(pontos.values);
+  
+  
+}
+```
+
+###### Saída
+```
+A pontuacao da Ana eh 10
+A pontuacao da Beto eh 20
+A pontuacao da Dani eh null
+A pontuacao da Dani eh 40
+A pontuacao da Dani eh 140
+{Carlos: 30, Ana: 10, Beto: 20, Dani: 140}
+(Carlos, Ana, Beto, Dani)
+(30, 10, 20, 140)
+```
+
 
 .

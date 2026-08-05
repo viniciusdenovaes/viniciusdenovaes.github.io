@@ -317,6 +317,7 @@ Podemos fazer um código mais limpo ainda.</p>
   <span class="token function">print</span><span class="token punctuation">(</span>comentario<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre><h2 id="estruturas-de-dados-listas-conjuntos-e-maps">Estruturas de Dados (Listas, Conjuntos e Maps) </h2>
+<h4 id="listas">Listas </h4>
 <p>Podemos declarar uma lista de inteiros da seguinte maneira: <code>List&lt;int&gt; numeros = [];</code></p>
 <p>Principais métodos da lista:</p>
 <ul>
@@ -369,6 +370,75 @@ Podemos fazer um código mais limpo ainda.</p>
 200
 300
 100
+</code></pre><h4 id="conjuntos">Conjuntos </h4>
+<p>Um conjunto é uma coleção que não tem valores repetidos.</p>
+<h6 id="exemplo">Exemplo </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  
+  <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span>int<span class="token punctuation">&gt;</span></span> numeros <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>numeros<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  numeros<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  numeros<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  numeros<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  numeros<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// apenas o numero 4 sera adicionado</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>numeros<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+<span class="token punctuation">}</span>
+</code></pre><h6 id="saída">Saída </h6>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>{3, 1, 2}
+{3, 1, 2, 4}
+</code></pre><p>Caso você tenha uma coleção de objetos e quiser eliminar repetições, você pode transformar a sua coleção em um conjunto.</p>
+<h6 id="exemplo-1">Exemplo </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  
+  <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span>int<span class="token punctuation">&gt;</span></span> numeros <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>numeros<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span>int<span class="token punctuation">&gt;</span></span> conjuntoNumeros <span class="token operator">=</span> <span class="token class-name">Set</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>numeros<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>conjuntoNumeros<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+<span class="token punctuation">}</span>
+</code></pre><h6 id="saída-1">Saída </h6>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>[1, 1, 2, 2, 3, 3]
+{1, 2, 3}
+</code></pre><h4 id="maps">Maps </h4>
+<p>Enquanto uma lista é indexada por números inteiros começando pelo 0, um map é indexado por uma chave qualquer.</p>
+<p>Um map é um mapeamento de um conjunto (chamados <code>key</code>) para uma coleção de valores (<code>values</code>).</p>
+<h6 id="exemplo-2">Exemplo </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  
+  <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> int<span class="token punctuation">&gt;</span></span> pontos <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string-literal"><span class="token string">'Carlos'</span></span><span class="token punctuation">:</span> <span class="token number">30</span><span class="token punctuation">,</span>
+    <span class="token string-literal"><span class="token string">'Ana'</span></span><span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span> 
+    <span class="token string-literal"><span class="token string">'Beto'</span></span><span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">,</span> 
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword keyword-var">var</span> pessoa <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'Ana'</span></span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'A pontuacao da </span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">pessoa</span><span class="token punctuation">}</span></span><span class="token string"> eh </span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">pontos<span class="token punctuation">[</span>pessoa<span class="token punctuation">]</span></span><span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  pessoa <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'Beto'</span></span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'A pontuacao da </span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">pessoa</span><span class="token punctuation">}</span></span><span class="token string"> eh </span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">pontos<span class="token punctuation">[</span>pessoa<span class="token punctuation">]</span></span><span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  pessoa <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'Dani'</span></span><span class="token punctuation">;</span> <span class="token comment">// &lt;- Dani nao esta no map</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'A pontuacao da </span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">pessoa</span><span class="token punctuation">}</span></span><span class="token string"> eh </span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">pontos<span class="token punctuation">[</span>pessoa<span class="token punctuation">]</span></span><span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  pontos<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'Dani'</span></span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">40</span><span class="token punctuation">;</span>  <span class="token comment">// Inserindo a dupla chave Dani e valor 40</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'A pontuacao da </span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">pessoa</span><span class="token punctuation">}</span></span><span class="token string"> eh </span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">pontos<span class="token punctuation">[</span>pessoa<span class="token punctuation">]</span></span><span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  pontos<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'Dani'</span></span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">140</span><span class="token punctuation">;</span> <span class="token comment">// Atualizando o valor da chave Dani para 140</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'A pontuacao da </span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">pessoa</span><span class="token punctuation">}</span></span><span class="token string"> eh </span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">pontos<span class="token punctuation">[</span>pessoa<span class="token punctuation">]</span></span><span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token function">print</span><span class="token punctuation">(</span>pontos<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>pontos<span class="token punctuation">.</span>keys<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>pontos<span class="token punctuation">.</span>values<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  
+<span class="token punctuation">}</span>
+</code></pre><h6 id="saída-2">Saída </h6>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>A pontuacao da Ana eh 10
+A pontuacao da Beto eh 20
+A pontuacao da Dani eh null
+A pontuacao da Dani eh 40
+A pontuacao da Dani eh 140
+{Carlos: 30, Ana: 10, Beto: 20, Dani: 140}
+(Carlos, Ana, Beto, Dani)
+(30, 10, 20, 140)
 </code></pre><p>.</p>
 
       </div>
