@@ -4,7 +4,7 @@ Este curso de Dart é destinado a pessoas que sabem os conceitos de Programaçã
 
 Aqui serão apresentados os Core Concepts de Dart e serão comparados com as linguagens mais conhecidas.
 
-Os programas podem ser testados online em [dartpad.dev](dartpad.dev).
+Os programas podem ser testados online em [dartpad.dev](https://dartpad.dev).
 
 ### Hello World
 
@@ -128,17 +128,17 @@ o numero 3 eh par? false
 ```dart
 void main() {
   for (int i = -2; i < 2; i++) {
-    print('qual o sinal do numero $i? ${i.sign}');
+    print('o numero $i eh positivo? ${!(i.isNegative)}');
   }
 }
 ```
 
 **Saída**
 ```
-qual o sinal do numero -2? -1
-qual o sinal do numero -1? -1
-qual o sinal do numero 0? 0
-qual o sinal do numero 1? 1
+o numero -2 eh positivo? false
+o numero -1 eh positivo? false
+o numero 0 eh positivo? true
+o numero 1 eh positivo? true
 ```
 
 
@@ -578,6 +578,106 @@ A pontuacao da Dani eh 140
 (Carlos, Ana, Beto, Dani)
 (30, 10, 20, 140)
 ```
+
+
+### Iterando em Coleções
+
+Devemos iterar em coleções usando o comando `foreach`:
+
+###### Exemplo List
+```dart 
+void main() {
+  final List<int> numeros = const [1,2,3,4,5];
+  for (int n in numeros) {
+    print(n);
+  }
+}
+```
+
+###### Saída
+```dart 
+1
+2
+3
+4
+5
+```
+
+###### Exemplo Set
+```dart
+void main() {
+  final Set<int> numeros = {1,2,3};
+  numeros.add(1);
+  numeros.add(2);
+  numeros.add(3);
+  numeros.add(4);
+  for (var n in numeros) {
+    print(n);
+  }
+}
+```
+###### Saída
+```dart 
+1
+2
+3
+4
+```
+
+###### Exemplo Map
+```dart
+void main() {
+  final Map<String, int> scores = 
+      {'Ana': 1,
+       'Beto': 2,
+       'Carla': 3, 
+      };
+  for (var key in scores.keys) {
+    print('Chave: ${key}, Valor: ${scores[key]}');
+  }
+}
+```
+
+###### Saída
+```
+Chave: Ana, Valor: 1
+Chave: Beto, Valor: 2
+Chave: Carla, Valor: 3
+```
+
+Podemos também iterar nas chaves e valores ao mesmo tempo, usando a classe `MapEntry`
+
+
+###### Exemplo Map
+```dart
+void main() {
+  final Map<String, int> scores = 
+      {'Ana': 1,
+       'Beto': 2,
+       'Carla': 3, 
+      };
+  for (MapEntry<String, int> entry in scores.entries) {
+    print('Entry: $entry');
+    print('Chave: ${entry.key}, Valor: ${entry.value}\n');
+  }
+}
+```
+
+###### Saída
+```
+Entry: MapEntry(Ana: 1)
+Chave: Ana, Valor: 1
+
+Entry: MapEntry(Beto: 2)
+Chave: Beto, Valor: 2
+
+Entry: MapEntry(Carla: 3)
+Chave: Carla, Valor: 3
+```
+
+
+## O elemento `null`
+
 
 
 .

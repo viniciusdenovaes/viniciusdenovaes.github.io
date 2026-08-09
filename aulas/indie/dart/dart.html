@@ -30,7 +30,7 @@
 <h1 id="dart-crash-course">Dart Crash Course </h1>
 <p>Este curso de Dart é destinado a pessoas que sabem os conceitos de Programação Estruturada e de Programação Orientada a Objetos.</p>
 <p>Aqui serão apresentados os Core Concepts de Dart e serão comparados com as linguagens mais conhecidas.</p>
-<p>Os programas podem ser testados online em <a href="dartpad.dev">dartpad.dev</a>.</p>
+<p>Os programas podem ser testados online em <a href="https://dartpad.dev">dartpad.dev</a>.</p>
 <h3 id="hello-world">Hello World </h3>
 <p>Um programa simples em Dart:</p>
 <pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -101,14 +101,14 @@ o numero 3 eh par? false
 </code></pre><h6 id="exemplo-2-1">Exemplo 2 </h6>
 <pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'qual o sinal do numero </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">i</span></span><span class="token string">? </span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">i<span class="token punctuation">.</span>sign</span><span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'o numero </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">i</span></span><span class="token string"> eh positivo? </span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression"><span class="token operator">!</span><span class="token punctuation">(</span>i<span class="token punctuation">.</span>isNegative<span class="token punctuation">)</span></span><span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre><p><strong>Saída</strong></p>
-<pre data-role="codeBlock" data-info="" class="language-text"><code>qual o sinal do numero -2? -1
-qual o sinal do numero -1? -1
-qual o sinal do numero 0? 0
-qual o sinal do numero 1? 1
+<pre data-role="codeBlock" data-info="" class="language-text"><code>o numero -2 eh positivo? false
+o numero -1 eh positivo? false
+o numero 0 eh positivo? true
+o numero 1 eh positivo? true
 </code></pre><h6 id="exemplo-3-1">Exemplo 3 </h6>
 <pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">4</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -439,7 +439,76 @@ A pontuacao da Dani eh 140
 {Carlos: 30, Ana: 10, Beto: 20, Dani: 140}
 (Carlos, Ana, Beto, Dani)
 (30, 10, 20, 140)
-</code></pre><p>.</p>
+</code></pre><h3 id="iterando-em-coleções">Iterando em Coleções </h3>
+<p>Devemos iterar em coleções usando o comando <code>foreach</code>:</p>
+<h6 id="exemplo-list">Exemplo List </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-final">final</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span>int<span class="token punctuation">&gt;</span></span> numeros <span class="token operator">=</span> <span class="token keyword keyword-const">const</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span>int n <span class="token keyword keyword-in">in</span> numeros<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h6 id="saída-3">Saída </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token number">1</span>
+<span class="token number">2</span>
+<span class="token number">3</span>
+<span class="token number">4</span>
+<span class="token number">5</span>
+</code></pre><h6 id="exemplo-set">Exemplo Set </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-final">final</span> <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span>int<span class="token punctuation">&gt;</span></span> numeros <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  numeros<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  numeros<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  numeros<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  numeros<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-var">var</span> n <span class="token keyword keyword-in">in</span> numeros<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h6 id="saída-4">Saída </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token number">1</span>
+<span class="token number">2</span>
+<span class="token number">3</span>
+<span class="token number">4</span>
+</code></pre><h6 id="exemplo-map">Exemplo Map </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-final">final</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> int<span class="token punctuation">&gt;</span></span> scores <span class="token operator">=</span> 
+      <span class="token punctuation">{</span><span class="token string-literal"><span class="token string">'Ana'</span></span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+       <span class="token string-literal"><span class="token string">'Beto'</span></span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+       <span class="token string-literal"><span class="token string">'Carla'</span></span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> 
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-var">var</span> key <span class="token keyword keyword-in">in</span> scores<span class="token punctuation">.</span>keys<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Chave: </span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">key</span><span class="token punctuation">}</span></span><span class="token string">, Valor: </span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">scores<span class="token punctuation">[</span>key<span class="token punctuation">]</span></span><span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h6 id="saída-5">Saída </h6>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Chave: Ana, Valor: 1
+Chave: Beto, Valor: 2
+Chave: Carla, Valor: 3
+</code></pre><p>Podemos também iterar nas chaves e valores ao mesmo tempo, usando a classe <code>MapEntry</code></p>
+<h6 id="exemplo-map-1">Exemplo Map </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-final">final</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> int<span class="token punctuation">&gt;</span></span> scores <span class="token operator">=</span> 
+      <span class="token punctuation">{</span><span class="token string-literal"><span class="token string">'Ana'</span></span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+       <span class="token string-literal"><span class="token string">'Beto'</span></span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+       <span class="token string-literal"><span class="token string">'Carla'</span></span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> 
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token class-name">MapEntry</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> int<span class="token punctuation">&gt;</span></span> entry <span class="token keyword keyword-in">in</span> scores<span class="token punctuation">.</span>entries<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Entry: </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">entry</span></span><span class="token string">'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Chave: </span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">entry<span class="token punctuation">.</span>key</span><span class="token punctuation">}</span></span><span class="token string">, Valor: </span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">entry<span class="token punctuation">.</span>value</span><span class="token punctuation">}</span></span><span class="token string">\n'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h6 id="saída-6">Saída </h6>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Entry: MapEntry(Ana: 1)
+Chave: Ana, Valor: 1
+
+Entry: MapEntry(Beto: 2)
+Chave: Beto, Valor: 2
+
+Entry: MapEntry(Carla: 3)
+Chave: Carla, Valor: 3
+</code></pre><h2 id="o-elemento-null">O elemento <code>null</code> </h2>
+<p>.</p>
 
       </div>
       
