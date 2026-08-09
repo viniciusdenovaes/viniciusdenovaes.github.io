@@ -6,6 +6,8 @@ Aqui serão apresentados os Core Concepts de Dart e serão comparados com as lin
 
 Os programas podem ser testados online em [dartpad.dev](https://dartpad.dev).
 
+Uma documentação exaustiva pode ser encontrada em [dart.dev](https://dart.dev/language)
+
 ### Hello World
 
 Um programa simples em Dart:
@@ -678,6 +680,122 @@ Chave: Carla, Valor: 3
 
 ## O elemento `null`
 
+Dart tem uma proteção contra o uso do elemento `null`. Uma variável não pode ser nula a não ser que o código explicite que esta variável pode ser nula usando o modificador `?` na definição de seu tipo.
 
+Por exemplo:
+```dart
+void main() {
+  //int x = null; <- ERRO: uma variavel nao pode ser nula
+  int? y = null;
+  print(y);
+  //print(y.isEven) <- ERRO: nao posso usar o metodo de uma variavel nula
+  print(y?.isEven);
+  
+}
+```
 
+###### Saída
+```
+null
+null
+```
+
+O operador `?` em `print(y?.isEven);` funciona como uma condicional: ele só faz a operação se `y` não é nulo, caso seja nulo ele retorna `null`.
+
+Paralelamente, o operador `!` no lugar do `?` garante para o compilador que a variável não é nula. Dando erro e parando o programa caso seja nula.
+
+## Funções
+
+Funções têm a mesma sintáxe de `C`.
+
+###### Exemplo
+```dart
+int soma(int x, int y){
+  return x+y;
+}
+
+void main() {
+  print(soma(1, 2));
+}
+```
+
+Mas podem ter parâmetros opcionais, assim como Python.
+```dart
+int soma(int x, int y, [int z=0]){
+  return x+y+z;
+}
+
+void main() {
+  print(soma(1, 2));
+  print(soma(1, 2, 3));
+}
+```
+Os argumentos opcionais sempre devem vir por último, e devem estar entre colchetes. 
+
+E assim como Python, podemos nomear os parâmetros explicitamente na chamada da função, fazendo com que não precisemos fornecer os parâmetros na mesma ordem.
+
+```dart
+int soma({int x=0, int y=0, int z=0}){
+  return x+y+z;
+}
+
+void main() {
+  print(soma(x:1, y:2));
+  print(soma(z:1, y:2, x:3));
+}
+```
+
+Se usarmos parâmetros nomeados, teremos que fornecer valores default para os argumentos, eles se tornam opcionais. Caso queira que os argumentos sejam nomeados E não opcionais, devemos usar o modificador `required`.
+
+```dart
+int soma({required int x, required int y, required int z}){
+  return x+y+z;
+}
+
+void main() {
+  //print(soma(x:1, y:2)); <-- ERRO, nao forneceu o argumento z que era obrigatorio
+  print(soma(z:1, y:2, x:3));
+}
+
+```
+
+Caso uma função possa ser definida em apenas uma linha podemos usar seguinte síntaxe:
+```dart
+int soma(int x, int y, [int z=0]) => x+y+z;
+
+void main() {
+  print(soma(1, 2));
+  print(soma(1, 2, 3));
+}
+``` 
+
+### Expressões Lambda
+
+Algumas vezes precisamos passar uma função como argumento de uma função. Podemos fazer uma variável que é uma função:
+
+```dart
+void main() {
+  Function quadrado = (int n) => print(n*n);
+  quadrado.call(2);
+}
+```
+
+Podemos criar uma função anônima quando passamos como argumentos para uma função:
+
+```dart
+void main() {
+  List<int> numeros = [-2, -1, 0, 1, 2, 3];
+  numeros.forEach((n)=>print(n*n));
+}
+```
+O método `forEach` recebe uma função que recebe um elemento da lista e retorna nada, e faz isso para cada elemento.
+###### Saída
+```
+4
+1
+0
+1
+4
+9
+```
 .

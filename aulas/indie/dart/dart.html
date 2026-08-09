@@ -31,6 +31,7 @@
 <p>Este curso de Dart é destinado a pessoas que sabem os conceitos de Programação Estruturada e de Programação Orientada a Objetos.</p>
 <p>Aqui serão apresentados os Core Concepts de Dart e serão comparados com as linguagens mais conhecidas.</p>
 <p>Os programas podem ser testados online em <a href="https://dartpad.dev">dartpad.dev</a>.</p>
+<p>Uma documentação exaustiva pode ser encontrada em <a href="https://dart.dev/language">dart.dev</a></p>
 <h3 id="hello-world">Hello World </h3>
 <p>Um programa simples em Dart:</p>
 <pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -508,7 +509,87 @@ Chave: Beto, Valor: 2
 Entry: MapEntry(Carla: 3)
 Chave: Carla, Valor: 3
 </code></pre><h2 id="o-elemento-null">O elemento <code>null</code> </h2>
-<p>.</p>
+<p>Dart tem uma proteção contra o uso do elemento <code>null</code>. Uma variável não pode ser nula a não ser que o código explicite que esta variável pode ser nula usando o modificador <code>?</code> na definição de seu tipo.</p>
+<p>Por exemplo:</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//int x = null; &lt;- ERRO: uma variavel nao pode ser nula</span>
+  int<span class="token operator">?</span> y <span class="token operator">=</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">//print(y.isEven) &lt;- ERRO: nao posso usar o metodo de uma variavel nula</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>y<span class="token operator">?</span><span class="token punctuation">.</span>isEven<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+<span class="token punctuation">}</span>
+</code></pre><h6 id="saída-7">Saída </h6>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>null
+null
+</code></pre><p>O operador <code>?</code> em <code>print(y?.isEven);</code> funciona como uma condicional: ele só faz a operação se <code>y</code> não é nulo, caso seja nulo ele retorna <code>null</code>.</p>
+<p>Paralelamente, o operador <code>!</code> no lugar do <code>?</code> garante para o compilador que a variável não é nula. Dando erro e parando o programa caso seja nula.</p>
+<h2 id="funções">Funções </h2>
+<p>Funções têm a mesma sintáxe de <code>C</code>.</p>
+<h6 id="exemplo-3">Exemplo </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code>int <span class="token function">soma</span><span class="token punctuation">(</span>int x<span class="token punctuation">,</span> int y<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword keyword-return">return</span> x<span class="token operator">+</span>y<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token function">soma</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>Mas podem ter parâmetros opcionais, assim como Python.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code>int <span class="token function">soma</span><span class="token punctuation">(</span>int x<span class="token punctuation">,</span> int y<span class="token punctuation">,</span> <span class="token punctuation">[</span>int z<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword keyword-return">return</span> x<span class="token operator">+</span>y<span class="token operator">+</span>z<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token function">soma</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token function">soma</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>Os argumentos opcionais sempre devem vir por último, e devem estar entre colchetes.</p>
+<p>E assim como Python, podemos nomear os parâmetros explicitamente na chamada da função, fazendo com que não precisemos fornecer os parâmetros na mesma ordem.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code>int <span class="token function">soma</span><span class="token punctuation">(</span><span class="token punctuation">{</span>int x<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> int y<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> int z<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword keyword-return">return</span> x<span class="token operator">+</span>y<span class="token operator">+</span>z<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token function">soma</span><span class="token punctuation">(</span>x<span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span> y<span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token function">soma</span><span class="token punctuation">(</span>z<span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span> y<span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">,</span> x<span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>Se usarmos parâmetros nomeados, teremos que fornecer valores default para os argumentos, eles se tornam opcionais. Caso queira que os argumentos sejam nomeados E não opcionais, devemos usar o modificador <code>required</code>.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code>int <span class="token function">soma</span><span class="token punctuation">(</span><span class="token punctuation">{</span>required int x<span class="token punctuation">,</span> required int y<span class="token punctuation">,</span> required int z<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword keyword-return">return</span> x<span class="token operator">+</span>y<span class="token operator">+</span>z<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//print(soma(x:1, y:2)); &lt;-- ERRO, nao forneceu o argumento z que era obrigatorio</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token function">soma</span><span class="token punctuation">(</span>z<span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span> y<span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">,</span> x<span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre><p>Caso uma função possa ser definida em apenas uma linha podemos usar seguinte síntaxe:</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code>int <span class="token function">soma</span><span class="token punctuation">(</span>int x<span class="token punctuation">,</span> int y<span class="token punctuation">,</span> <span class="token punctuation">[</span>int z<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> x<span class="token operator">+</span>y<span class="token operator">+</span>z<span class="token punctuation">;</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token function">soma</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token function">soma</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="expressões-lambda">Expressões Lambda </h3>
+<p>Algumas vezes precisamos passar uma função como argumento de uma função. Podemos fazer uma variável que é uma função:</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">Function</span> quadrado <span class="token operator">=</span> <span class="token punctuation">(</span>int n<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">print</span><span class="token punctuation">(</span>n<span class="token operator">*</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  quadrado<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>Podemos criar uma função anônima quando passamos como argumentos para uma função:</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span>int<span class="token punctuation">&gt;</span></span> numeros <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  numeros<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token function">print</span><span class="token punctuation">(</span>n<span class="token operator">*</span>n<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>O método <code>forEach</code> recebe uma função que recebe um elemento da lista e retorna nada, e faz isso para cada elemento.</p>
+<h6 id="saída-8">Saída </h6>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>4
+1
+0
+1
+4
+9
+</code></pre><p>.</p>
 
       </div>
       
