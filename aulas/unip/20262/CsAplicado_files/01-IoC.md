@@ -1,4 +1,4 @@
-# Princípio da Inversão de Controle (IoC)
+# Princípio da Inversão de Controle (IoC.)
 
 Inversão de Controle (em inglês [Inversion of Control (IoC)](https://en.wikipedia.org/wiki/Inversion_of_control)) é um princípio de [design de software](https://en.wikipedia.org/wiki/Software_design) com o objetivo de termos [sistemas modulares](https://en.wikipedia.org/wiki/Modular_programming) com [baixo acoplamento](https://en.wikipedia.org/wiki/Coupling_(computer_programming)) onde um framework define o fluxo de controle de módulos feitos pelo programador.
 
