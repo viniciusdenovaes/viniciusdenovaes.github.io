@@ -798,4 +798,62 @@ O método `forEach` recebe uma função que recebe um elemento da lista e retorn
 4
 9
 ```
+
+
+## Classes
+
+Em Dart temos classes:
+
+```dart
+class Aluno{
+  // atributos
+  String ra;
+  String nome;
+  // Constructor, nao precisa de corpo
+  Aluno(this.ra, this.nome);
+  // override do toString
+  @override
+  String toString() {
+    return 'RA: ${ra}, nome: ${nome}';
+  }
+}
+
+void main() {
+  Aluno a = Aluno('123', 'Ana');
+  print(a);
+  a.ra = '122';
+  a.nome = 'Carla';
+  print(a);
+}
+```
+###### Saída
+``` 
+RA: 123, nome: Ana
+RA: 122, nome: Carla
+```
+
+### Constructor com Nome
+
+Em Dart podemos ter outros constructor com outros nome:
+```dart
+class Aluno{
+  String ra;
+  String nome;
+  Aluno(this.ra, this.nome);
+  Aluno.semRa(this.nome, [this.ra='']);
+  @override
+  String toString() {
+    return 'RA: ${ra}, nome: ${nome}';
+  }
+}
+
+void main() {
+  Aluno a = Aluno.semRa('Ana');
+  print(a);
+}
+```
+
+
+
+
 .

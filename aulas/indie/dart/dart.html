@@ -589,6 +589,48 @@ null
 1
 4
 9
+</code></pre><h2 id="classes">Classes </h2>
+<p>Em Dart temos classes:</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">Aluno</span><span class="token punctuation">{</span>
+  <span class="token comment">// atributos</span>
+  <span class="token class-name">String</span> ra<span class="token punctuation">;</span>
+  <span class="token class-name">String</span> nome<span class="token punctuation">;</span>
+  <span class="token comment">// Constructor, nao precisa de corpo</span>
+  <span class="token class-name">Aluno</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>ra<span class="token punctuation">,</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>nome<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// override do toString</span>
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token string-literal"><span class="token string">'RA: </span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">ra</span><span class="token punctuation">}</span></span><span class="token string">, nome: </span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">nome</span><span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">Aluno</span> a <span class="token operator">=</span> <span class="token class-name">Aluno</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'123'</span></span><span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">'Ana'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  a<span class="token punctuation">.</span>ra <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'122'</span></span><span class="token punctuation">;</span>
+  a<span class="token punctuation">.</span>nome <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'Carla'</span></span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h6 id="saída-9">Saída </h6>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>RA: 123, nome: Ana
+RA: 122, nome: Carla
+</code></pre><h3 id="constructor-com-nome">Constructor com Nome </h3>
+<p>Em Dart podemos ter outros constructor com outros nome:</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">Aluno</span><span class="token punctuation">{</span>
+  <span class="token class-name">String</span> ra<span class="token punctuation">;</span>
+  <span class="token class-name">String</span> nome<span class="token punctuation">;</span>
+  <span class="token class-name">Aluno</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>ra<span class="token punctuation">,</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>nome<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token class-name">Aluno</span><span class="token punctuation">.</span><span class="token function">semRa</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>nome<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>ra<span class="token operator">=</span><span class="token string-literal"><span class="token string">''</span></span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token string-literal"><span class="token string">'RA: </span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">ra</span><span class="token punctuation">}</span></span><span class="token string">, nome: </span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">nome</span><span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">Aluno</span> a <span class="token operator">=</span> <span class="token class-name">Aluno</span><span class="token punctuation">.</span><span class="token function">semRa</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Ana'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre><p>.</p>
 
       </div>
