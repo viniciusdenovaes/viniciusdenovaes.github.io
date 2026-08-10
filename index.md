@@ -21,6 +21,7 @@
    - [LFA](aulas/unip/20261/lfa.html) -->
 ##### ADS
  - [Mobile com Flutter e Dart](aulas/unip/20262/mobile_ads.html)
+ - [C# Aplicado](aulas/unip/20262/CsAplicado.html)
 
 ##### Flex
 <!-- - [POO](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20261/poo)
