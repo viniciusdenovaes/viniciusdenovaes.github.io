@@ -20,7 +20,7 @@
    - [CG](aulas/unip/20261/cg.html)
    - [LFA](aulas/unip/20261/lfa.html) -->
 ##### ADS
- - [Mobile com Flutter. e Dart](aulas/unip/20262/mobile_ads.html)
+ - [Mobile com Flutter e Dart](aulas/unip/20262/mobile_ads.html)
  - [C# Aplicado](aulas/unip/20262/CsAplicado.html)
 
 ##### Flex
