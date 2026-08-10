@@ -40,7 +40,7 @@
 <br>
 <br>
 
-### (2026/1
+### 2026/1
 ##### CC e SI
 - Ano 1
    - [DDM](aulas/unip/20261/ddm.html)
