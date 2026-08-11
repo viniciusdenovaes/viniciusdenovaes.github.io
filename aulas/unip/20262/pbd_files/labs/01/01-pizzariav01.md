@@ -22,4 +22,5 @@ Teste as tabelas criadas adicionando pelo menos 3 entradas em cada tabela, tanto
 
 Teste as entradas criadas usando o comando `SELECT` para visualizar todos os dados de cada tabela. (serão 3 comandos `SELECT`)
 
-###### [Resposta](01-resposta.bd)
+###### [Resposta](01-resposta.txt)
+
