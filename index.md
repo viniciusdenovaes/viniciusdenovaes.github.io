@@ -12,8 +12,8 @@
 ### Atuais (2026/2)
 ##### CC e SI
 - Ano 2
-   <!-- - [LPOO (CC e SI)](aulas/unip/20261/lpoo.html)
-   - [AL](aulas/unip/20261/al.html) -->
+   - [Estrutura de Dados](aulas/unip/20262/ed.html)
+   - [Programação de Banco de Dados](aulas/unip/20262/pbd.html)
 
 - Ano 3
    <!-- - [IA](aulas/unip/20261/ia.html)
