@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>dart</title>
+      <title>10.static_final</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -27,29 +27,30 @@
     <body for="html-export">
       <div class="crossnote markdown-preview  ">
       
-<h1 id="dart-crash-course">Dart Crash Course </h1>
-<p>Este curso de Dart é destinado a pessoas que sabem os conceitos de Programação Estruturada e de Programação Orientada a Objetos.</p>
-<p>Aqui serão apresentados os Core Concepts de Dart e serão comparados com as linguagens mais conhecidas.</p>
-<p>Os programas podem ser testados online em <a href="https://dartpad.dev">dartpad.dev</a>.</p>
-<p>Uma documentação exaustiva pode ser encontrada em <a href="https://dart.dev/language">dart.dev</a></p>
-<h2 id="aulas">Aulas </h2>
-<h4 id="parte-1-programação-estruturada">Parte 1: Programação Estruturada </h4>
-<ul>
-<li><a href="aulas/01.hello.html">01. Hello World, Print e String</a></li>
-<li><a href="aulas/02.tipos.html">02. Variáveis, Tipos Numéricos e Booleanos, e Operadores</a></li>
-<li><a href="aulas/03.condicional.html">03. Comandos Condicionais</a></li>
-<li><a href="aulas/04.colecoes.html">04. Estruturas de Dados (Listas, Conjuntos e Maps)</a></li>
-<li><a href="aulas/05.funcoes.html">05. Funções, Expressões <em>lambda</em> e o Elemento <code>null</code></a></li>
-</ul>
-<h4 id="parte-2-programação-orientada-a-objetos">Parte 2: Programação Orientada a Objetos </h4>
-<ul>
-<li><a href="aulas/06.classes.html">06. Classes e Constructor</a></li>
-<li><a href="aulas/07.getter_setter.html">07. Getters e Setters e Inicializadores Tardios</a></li>
-<li><a href="aulas/08.heranca.html">08. Herança, Classe Abstrata e Polimorfismo</a></li>
-<li><a href="aulas/09.mixin_interface.html">09. Interface de Classes e Mixin</a></li>
-<li><a href="aulas/10.static_final.html">10. <em>Keywords</em> <code>static</code> e <code>final</code> para Classes</a></li>
-<li><a href="aulas/11.async.html">11. Componentes Assíncronos: Future e Async Await</a></li>
-</ul>
+<h1 id="keywords-static-e-final-para-classes"><em>Keywords</em> <code>static</code> e <code>final</code> para Classes </h1>
+<h2 id="keyword-final"><em>Keyword</em> <code>final</code> </h2>
+<p>A palavra <code>final</code> para uma <strong>classe</strong> significa que esta classe não pode ser herdada.</p>
+<p>A palavra <code>base</code> para uma classe permite que ela herde de uma classe <code>final</code>.</p>
+<h2 id="keyword-static"><em>Keyword</em> <code>static</code> </h2>
+<p>Um atributo <code>static</code> quer dizer que o atributo pertence à classe e não ao objeto.</p>
+<p>Um método <code>static</code> pertence à classe e só pode usar atributos pertencentes à classe e não ao objeto.</p>
+<h6 id="exemplo-static">Exemplo <code>static</code> </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">Utils</span><span class="token punctuation">{</span>
+  <span class="token keyword keyword-static">static</span> double PI <span class="token operator">=</span> <span class="token number">3.14</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-static">static</span> double <span class="token function">quadrado</span><span class="token punctuation">(</span>double a<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> a<span class="token operator">*</span>a<span class="token punctuation">;</span>
+  <span class="token keyword keyword-static">static</span> double <span class="token function">areaCirculo</span><span class="token punctuation">(</span>double raio<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> raio<span class="token operator">*</span>raio<span class="token operator">*</span>PI<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token class-name">Utils</span><span class="token punctuation">.</span>PI<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token class-name">Utils</span><span class="token punctuation">.</span><span class="token function">quadrado</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token class-name">Utils</span><span class="token punctuation">.</span><span class="token function">areaCirculo</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h6 id="saída">Saída </h6>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>3.14
+4
+12.56
+</code></pre><p>.</p>
 
       </div>
       
