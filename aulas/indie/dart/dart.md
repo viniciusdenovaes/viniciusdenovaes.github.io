@@ -1129,8 +1129,152 @@ Criando um Animal que é um pato
 Quack
 ```
 
-## Mixin
+### Interface (de classe, não é GUI)
 
-Classes não podem herdar de mais de uma classe.
+Classes não podem herdar de mais de uma classe, mas podem implementar várias interfaces (e podem herdar mixin, como veremos abaixo)
+
+```dart
+class Animal{
+  String nome;
+  Animal(this.nome);
+  void dorme()=>print('O $nome dorme');
+  @override
+  String toString() => 'Animal $nome';
+}
+
+abstract class Voavel{
+  void voa();
+}
+
+class Pato extends Animal implements Voavel{
+  String cor;
+  Pato(String aNome, this.cor):super(aNome);
+  @override
+  void voa()=>print('O pato $nome $cor voa');
+  @override
+  String toString() => super.toString() + ': Pato cor $cor';
+}
+
+```
+
+Em Dart qualquer classe é uma interface em potencial, com o detalhe de que se uma classe implementa uma segunda, a primeira **precisa** implementar seus métodos.
+
+```dart
+class Animal{
+  String nome;
+  Animal(this.nome);
+  void dorme()=>print('O $nome dorme');
+  @override
+  String toString() => 'Animal $nome';
+}
+
+class Voavel{
+  void voa() => print('nao sei o que voa');
+}
+
+class Pato extends Animal implements Voavel{
+  String cor;
+  Pato(String aNome, this.cor):super(aNome);
+  @override
+  void voa()=>print('O pato $nome $cor voa');
+  @override
+  String toString() => super.toString() + ': Pato cor $cor';
+}
+
+```
+
+### Mixin
+
+Mixin é um novo tipo de classe que fornece código que pode ser reutilizado em massa através de uma estrutura de hierarquia.
+
+Como foi visto, uma classe não pode herdar de mais de uma classe, mas pode herdar de múltiplos mixin.
+
+###### Exemplo mixin
+```dart
+class Animal{
+  String nome;
+  Animal(this.nome);
+  void dorme()=>print('O $nome dorme');
+  @override
+  String toString() => 'Animal $nome';
+}
+
+mixin Voavel{
+  void voa() => print('nao sei o que voa');
+}
+
+mixin Nadavel{
+  void nada() => print('nao sei o que nada');
+}
+
+mixin Multimidia{
+  void play() => print('toca musica');
+}
+
+mixin Brincavel{
+  void play() => print('brinca');
+}
+
+class Pato extends Animal with Voavel, Nadavel, Multimidia, Brincavel{
+  String cor;
+  Pato(String aNome, this.cor):super(aNome);
+  @override
+  String toString() => super.toString() + ': Pato cor $cor';
+}
+
+void main(){
+  Pato p = Pato('Don', 'Amarelo');
+  p.voa();
+  p.nada();
+  p.play();
+}
+
+```
+
+###### Saída
+```
+nao sei o que nada
+brinca
+```
+
+Mixin também podem ter atributos, e pode obrigar a classe a definir certos atributos.
+
+No exemplo seguinte o mixin obriga `Pato` a ter `nome` e `velocidade`
+
+```dart
+class Animal{
+  String nome;
+  Animal(this.nome);
+  void dorme()=>print('O $nome dorme');
+  @override
+  String toString() => 'Animal $nome';
+}
+
+mixin Voavel{
+  // Atributos do mixin que a classe eh obrigada a ter
+  String get nome;
+  int get velocidade;
+  void voa() => print('O $nome voa a $velocidade km/h');
+}
+
+class Pato extends Animal with Voavel{
+  String cor;
+  int velocidade = 1;
+  Pato(String aNome, this.cor):super(aNome);
+  @override
+  String toString() => super.toString() + ': Pato cor $cor';
+}
+
+void main(){
+  Pato p = Pato('Don', 'Amarelo');
+  p.voa();
+}
+```
+
+###### Saída
+```
+O Don voa a 1 km/h
+```
+
 
 .
