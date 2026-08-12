@@ -647,7 +647,47 @@ RA: 122, nome: Carla
   <span class="token class-name">Aluno</span> a <span class="token operator">=</span> <span class="token class-name">Aluno</span><span class="token punctuation">.</span><span class="token function">semRa</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Ana'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token function">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><h2 id="herança">Herança </h2>
+</code></pre><h3 id="getter-e-setter">Getter e Setter </h3>
+<p>Dart permite que se defina atributos implícitos calculados em tempo real:</p>
+<h6 id="exemplohttpsdartdevlanguagemethodsgetters-and-setters"><a href="https://dart.dev/language/methods#getters-and-setters">Exemplo</a> </h6>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>/// A rectangle in a screen coordinate system,
+/// where the origin `(0, 0)` is in the top-left corner.
+class Rectangle {
+  double left, top, width, height;
+
+  Rectangle(this.left, this.top, this.width, this.height);
+
+  // Define two calculated properties: right and bottom.
+  double get right =&gt; left + width;
+  set right(double value) =&gt; left = value - width;
+  double get bottom =&gt; top + height;
+  set bottom(double value) =&gt; top = value - height;
+}
+
+void main() {
+  var rect = Rectangle(3, 4, 20, 15);
+  assert(rect.left == 3);
+  rect.right = 12;
+  assert(rect.left == -8);
+}
+</code></pre><h3 id="inicializadores-tardios-late">Inicializadores tardios (<em>late</em>) </h3>
+<p>Alguns atributos podem depender da inicialização de outros atributos que serão inicializados apenas no constructor.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code>double initialX <span class="token operator">=</span> <span class="token number">1.5</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Point</span> <span class="token punctuation">{</span>
+  <span class="token comment">// OK, can access declarations that do not depend on `this`:</span>
+  double<span class="token operator">?</span> x <span class="token operator">=</span> initialX<span class="token punctuation">;</span>
+
+  <span class="token comment">// ERROR, can't access `this` in non-`late` initializer:</span>
+  double<span class="token operator">?</span> y <span class="token operator">=</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>x<span class="token punctuation">;</span>
+
+  <span class="token comment">// OK, can access `this` in `late` initializer:</span>
+  late double<span class="token operator">?</span> z <span class="token operator">=</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>x<span class="token punctuation">;</span>
+
+  <span class="token comment">// OK, `this.x` and `this.y` are parameter declarations, not expressions:</span>
+  <span class="token class-name">Point</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>x<span class="token punctuation">,</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="herança">Herança </h3>
 <p>Em Dart também temos herança.</p>
 <p>No próximo exemplo vamos fazer duas classes:</p>
 <ul>
@@ -819,7 +859,9 @@ Quack
 </code></pre><h6 id="saída-13">Saída </h6>
 <pre data-role="codeBlock" data-info="" class="language-text"><code>Criando um Animal que é um pato
 Quack
-</code></pre><p>.</p>
+</code></pre><h2 id="mixin">Mixin </h2>
+<p>Classes não podem herdar de mais de uma classe.</p>
+<p>.</p>
 
       </div>
       

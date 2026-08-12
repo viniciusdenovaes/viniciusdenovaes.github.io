@@ -877,7 +877,58 @@ void main() {
 }
 ```
 
-## Herança
+### Getter e Setter
+
+Dart permite que se defina atributos implícitos calculados em tempo real:
+
+###### [Exemplo](https://dart.dev/language/methods#getters-and-setters)
+``` 
+/// A rectangle in a screen coordinate system,
+/// where the origin `(0, 0)` is in the top-left corner.
+class Rectangle {
+  double left, top, width, height;
+
+  Rectangle(this.left, this.top, this.width, this.height);
+
+  // Define two calculated properties: right and bottom.
+  double get right => left + width;
+  set right(double value) => left = value - width;
+  double get bottom => top + height;
+  set bottom(double value) => top = value - height;
+}
+
+void main() {
+  var rect = Rectangle(3, 4, 20, 15);
+  assert(rect.left == 3);
+  rect.right = 12;
+  assert(rect.left == -8);
+}
+```
+
+### Inicializadores tardios (*late*)
+
+Alguns atributos podem depender da inicialização de outros atributos que serão inicializados apenas no constructor.
+
+```dart
+double initialX = 1.5;
+
+class Point {
+  // OK, can access declarations that do not depend on `this`:
+  double? x = initialX;
+
+  // ERROR, can't access `this` in non-`late` initializer:
+  double? y = this.x;
+
+  // OK, can access `this` in `late` initializer:
+  late double? z = this.x;
+
+  // OK, `this.x` and `this.y` are parameter declarations, not expressions:
+  Point(this.x, this.y);
+}
+```
+
+
+### Herança
 
 Em Dart também temos herança.
 
@@ -1077,4 +1128,9 @@ void main(){
 Criando um Animal que é um pato
 Quack
 ```
+
+## Mixin
+
+Classes não podem herdar de mais de uma classe.
+
 .
