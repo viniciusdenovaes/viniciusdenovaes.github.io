@@ -589,6 +589,22 @@ null
 1
 4
 9
+</code></pre><h6 id="exemplo-2-2">Exemplo 2 </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// List.generate(n, f(index)) gera uma lista de n numeros </span>
+  <span class="token comment">//                            usando a funcao f que recebe </span>
+  <span class="token comment">//                            o indice de cada numero</span>
+  <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span>int<span class="token punctuation">&gt;</span></span> numerosQuadrados <span class="token operator">=</span> <span class="token class-name">List</span><span class="token punctuation">.</span><span class="token function">generate</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>int index<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> index<span class="token operator">*</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>numerosQuadrados<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// List.where(f(n)) retorna um iterador para numeros da lista </span>
+  <span class="token comment">//                  onde a funcao f(n) eh verdadeira</span>
+  <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span>int<span class="token punctuation">&gt;</span></span> numerosQuadradosPares <span class="token operator">=</span> numerosQuadrados<span class="token punctuation">.</span><span class="token function">where</span><span class="token punctuation">(</span><span class="token punctuation">(</span>int n<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span>n<span class="token punctuation">.</span>isEven<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>numerosQuadradosPares<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+<span class="token punctuation">}</span>
+</code></pre><h6 id="saída-9">Saída </h6>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>[0, 1, 4, 9, 16, 25, 36]
+{0, 4, 16, 36}
 </code></pre><h2 id="classes">Classes </h2>
 <p>Em Dart temos classes:</p>
 <pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">Aluno</span><span class="token punctuation">{</span>
@@ -611,7 +627,7 @@ null
   a<span class="token punctuation">.</span>nome <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'Carla'</span></span><span class="token punctuation">;</span>
   <span class="token function">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><h6 id="saída-9">Saída </h6>
+</code></pre><h6 id="saída-10">Saída </h6>
 <pre data-role="codeBlock" data-info="" class="language-text"><code>RA: 123, nome: Ana
 RA: 122, nome: Carla
 </code></pre><h3 id="constructor-com-nome">Constructor com Nome </h3>
@@ -631,6 +647,67 @@ RA: 122, nome: Carla
   <span class="token class-name">Aluno</span> a <span class="token operator">=</span> <span class="token class-name">Aluno</span><span class="token punctuation">.</span><span class="token function">semRa</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Ana'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token function">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
+</code></pre><h2 id="herança">Herança </h2>
+<p>Em Dart também temos herança.</p>
+<p>No próximo exemplo vamos fazer duas classes:</p>
+<ul>
+<li><code>Animal</code>
+<ul>
+<li>com o atributo <code>nome</code></li>
+<li>com o método <code>dorme</code></li>
+</ul>
+</li>
+<li><code>Pato</code>, subclasse de <code>Animal</code>
+<ul>
+<li>com o atributo <code>cor</code></li>
+<li>com o método <code>voa</code></li>
+</ul>
+</li>
+</ul>
+<p>Observe que o <code>Pato</code>, além de ter seus atributos e métodos, tem todos os atributos e métodos herdados da classe <code>Animal</code>.</p>
+<p>Observe que o constructor da subclasse <strong>deve</strong> chamar o constructor da super classe. A sintaxe é a mesma de <code>C#</code> mas usando a palavra <code>super</code>.</p>
+<h6 id="exemplo-animal-pato">Exemplo Animal Pato </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">Animal</span><span class="token punctuation">{</span>
+  <span class="token class-name">String</span> nome<span class="token punctuation">;</span>
+  <span class="token class-name">Animal</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>nome<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-void">void</span> <span class="token function">dorme</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'O </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">nome</span></span><span class="token string"> dorme'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token string-literal"><span class="token string">'Animal </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">nome</span></span><span class="token string">'</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Pato</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Animal</span><span class="token punctuation">{</span>
+  <span class="token class-name">String</span> cor<span class="token punctuation">;</span>
+  <span class="token class-name">Pato</span><span class="token punctuation">(</span><span class="token class-name">String</span> aNome<span class="token punctuation">,</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>cor<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token keyword keyword-super">super</span><span class="token punctuation">(</span>aNome<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-void">void</span> <span class="token function">voa</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'O pato </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">nome</span></span><span class="token string"> </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">cor</span></span><span class="token string"> voa'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token keyword keyword-super">super</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string-literal"><span class="token string">': Pato cor </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">cor</span></span><span class="token string">'</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'\nCriando um Animal'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token class-name">Animal</span> a <span class="token operator">=</span> <span class="token class-name">Animal</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Mili"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  a<span class="token punctuation">.</span><span class="token function">dorme</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'\nCriando um Pato'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token class-name">Pato</span> p <span class="token operator">=</span> <span class="token class-name">Pato</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Don'</span></span><span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">'Amarelo'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  p<span class="token punctuation">.</span><span class="token function">dorme</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  p<span class="token punctuation">.</span><span class="token function">voa</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h6 id="saída-11">Saída </h6>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Criando um Animal
+Animal Mili
+O Mili dorme
+
+Criando um Pato
+Animal Don: Pato cor Amarelo
+O Don dorme
+O pato Don Amarelo voa
 </code></pre><p>.</p>
 
       </div>

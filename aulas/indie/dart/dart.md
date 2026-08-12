@@ -800,6 +800,30 @@ O método `forEach` recebe uma função que recebe um elemento da lista e retorn
 ```
 
 
+###### Exemplo 2
+
+```dart
+void main() {
+  // List.generate(n, f(index)) gera uma lista de n numeros 
+  //                            usando a funcao f que recebe 
+  //                            o indice de cada numero
+  List<int> numerosQuadrados = List.generate(7, (int index) => index*index);
+  print(numerosQuadrados);
+  // List.where(f(n)) retorna um iterador para numeros da lista 
+  //                  onde a funcao f(n) eh verdadeira
+  Set<int> numerosQuadradosPares = numerosQuadrados.where((int n)=>n.isEven).toSet();
+  print(numerosQuadradosPares);
+    
+}
+```
+
+###### Saída
+```
+[0, 1, 4, 9, 16, 25, 36]
+{0, 4, 16, 36}
+```
+
+
 ## Classes
 
 Em Dart temos classes:
@@ -853,7 +877,71 @@ void main() {
 }
 ```
 
+## Herança
 
+Em Dart também temos herança.
 
+No próximo exemplo vamos fazer duas classes: 
+
+- `Animal`
+   - com o atributo `nome`
+   - com o método `dorme`
+- `Pato`, subclasse de `Animal`
+   - com o atributo `cor`
+   - com o método `voa`
+  
+Observe que o `Pato`, além de ter seus atributos e métodos, tem todos os atributos e métodos herdados da classe `Animal`.
+
+Observe que o constructor da subclasse **deve** chamar o constructor da super classe. A sintaxe é a mesma de `C#` mas usando a palavra `super`.
+
+###### Exemplo Animal Pato
+
+```dart
+class Animal{
+  String nome;
+  Animal(this.nome);
+  void dorme()=>print('O $nome dorme');
+  @override
+  String toString() {
+    return 'Animal $nome';
+  }
+}
+
+class Pato extends Animal{
+  String cor;
+  Pato(String aNome, this.cor):super(aNome);
+  void voa()=>print('O pato $nome $cor voa');
+  @override
+  String toString() {
+    return super.toString() + ': Pato cor $cor';
+  }
+}
+
+void main(){
+  print('\nCriando um Animal');
+  Animal a = Animal("Mili");
+  print(a);
+  a.dorme();
+  
+  print('\nCriando um Pato');
+  Pato p = Pato('Don', 'Amarelo');
+  print(p);
+  p.dorme();
+  p.voa();
+}
+```
+
+###### Saída
+
+```
+Criando um Animal
+Animal Mili
+O Mili dorme
+
+Criando um Pato
+Animal Don: Pato cor Amarelo
+O Don dorme
+O pato Don Amarelo voa
+```
 
 .
