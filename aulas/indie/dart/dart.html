@@ -33,145 +33,21 @@
 <p>Os programas podem ser testados online em <a href="https://dartpad.dev">dartpad.dev</a>.</p>
 <p>Uma documentação exaustiva pode ser encontrada em <a href="https://dart.dev/language">dart.dev</a></p>
 <h2 id="aulas">Aulas </h2>
+<h3 id="parte-1-programação-estruturada">Parte 1: Programação Estruturada </h3>
 <ul>
 <li><a href="aulas/01.hello.html">01. Hello World, Print e String</a></li>
 <li><a href="aulas/02.tipos.html">02. Variáveis, Tipos Numéricos e Booleanos, e Operadores</a></li>
 <li><a href="aulas/03.condicional.html">03. Comandos Condicionais</a></li>
 <li><a href="aulas/04.colecoes.html">04. Estruturas de Dados (Listas, Conjuntos e Maps)</a></li>
 <li><a href="aulas/05.funcoes.html">05. Funções, Expressões <em>lambda</em> e o Elemento <code>null</code></a></li>
+</ul>
+<h3 id="parte-2-programação-orientada-a-objetos">Parte 2: Programação Orientada a Objetos </h3>
+<ul>
 <li><a href="aulas/06.classes.html">06. Classes e Constructor</a></li>
+<li><a href="aulas/07.getter_setter.html">07. Getters e Setters e Inicializadores Tardios</a></li>
+<li><a href="aulas/08.heranca.html">08. Herança</a></li>
 </ul>
-<h3 id="getter-e-setter">Getter e Setter </h3>
-<p>Dart permite que se defina atributos implícitos calculados em tempo real:</p>
-<h6 id="exemplohttpsdartdevlanguagemethodsgetters-and-setters"><a href="https://dart.dev/language/methods#getters-and-setters">Exemplo</a> </h6>
-<pre data-role="codeBlock" data-info="" class="language-text"><code>/// A rectangle in a screen coordinate system,
-/// where the origin `(0, 0)` is in the top-left corner.
-class Rectangle {
-  double left, top, width, height;
-
-  Rectangle(this.left, this.top, this.width, this.height);
-
-  // Define two calculated properties: right and bottom.
-  double get right =&gt; left + width;
-  set right(double value) =&gt; left = value - width;
-  double get bottom =&gt; top + height;
-  set bottom(double value) =&gt; top = value - height;
-}
-
-void main() {
-  var rect = Rectangle(3, 4, 20, 15);
-  assert(rect.left == 3);
-  rect.right = 12;
-  assert(rect.left == -8);
-}
-</code></pre><h3 id="inicializadores-tardios-late">Inicializadores tardios (<em>late</em>) </h3>
-<p>Alguns atributos podem depender da inicialização de outros atributos que serão inicializados apenas no constructor.</p>
-<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code>double initialX <span class="token operator">=</span> <span class="token number">1.5</span><span class="token punctuation">;</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Point</span> <span class="token punctuation">{</span>
-  <span class="token comment">// OK, can access declarations that do not depend on `this`:</span>
-  double<span class="token operator">?</span> x <span class="token operator">=</span> initialX<span class="token punctuation">;</span>
-
-  <span class="token comment">// ERROR, can't access `this` in non-`late` initializer:</span>
-  double<span class="token operator">?</span> y <span class="token operator">=</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>x<span class="token punctuation">;</span>
-
-  <span class="token comment">// OK, can access `this` in `late` initializer:</span>
-  late double<span class="token operator">?</span> z <span class="token operator">=</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>x<span class="token punctuation">;</span>
-
-  <span class="token comment">// OK, `this.x` and `this.y` are parameter declarations, not expressions:</span>
-  <span class="token class-name">Point</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>x<span class="token punctuation">,</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre><h3 id="herança">Herança </h3>
-<p>Em Dart também temos herança.</p>
-<p>No próximo exemplo vamos fazer duas classes:</p>
-<ul>
-<li><code>Animal</code>
-<ul>
-<li>com o atributo <code>nome</code></li>
-<li>com o método <code>dorme</code></li>
-</ul>
-</li>
-<li><code>Pato</code>, subclasse de <code>Animal</code>
-<ul>
-<li>com o atributo <code>cor</code></li>
-<li>com o método <code>voa</code></li>
-</ul>
-</li>
-</ul>
-<p>Observe que o <code>Pato</code>, além de ter seus atributos e métodos, tem todos os atributos e métodos herdados da classe <code>Animal</code>.</p>
-<p>Observe que o constructor da subclasse <strong>deve</strong> chamar o constructor da super classe. A sintaxe é a mesma de <code>C#</code> mas usando a palavra <code>super</code>.</p>
-<h6 id="exemplo-animal-pato">Exemplo Animal Pato </h6>
-<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">Animal</span><span class="token punctuation">{</span>
-  <span class="token class-name">String</span> nome<span class="token punctuation">;</span>
-  <span class="token class-name">Animal</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>nome<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword keyword-void">void</span> <span class="token function">dorme</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'O </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">nome</span></span><span class="token string"> dorme'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token metadata function">@override</span>
-  <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword keyword-return">return</span> <span class="token string-literal"><span class="token string">'Animal </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">nome</span></span><span class="token string">'</span></span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Pato</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Animal</span><span class="token punctuation">{</span>
-  <span class="token class-name">String</span> cor<span class="token punctuation">;</span>
-  <span class="token class-name">Pato</span><span class="token punctuation">(</span><span class="token class-name">String</span> aNome<span class="token punctuation">,</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>cor<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token keyword keyword-super">super</span><span class="token punctuation">(</span>aNome<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword keyword-void">void</span> <span class="token function">voa</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'O pato </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">nome</span></span><span class="token string"> </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">cor</span></span><span class="token string"> voa'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token metadata function">@override</span>
-  <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword keyword-return">return</span> <span class="token keyword keyword-super">super</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string-literal"><span class="token string">': Pato cor </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">cor</span></span><span class="token string">'</span></span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'\nCriando um Animal'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token class-name">Animal</span> a <span class="token operator">=</span> <span class="token class-name">Animal</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Mili"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token function">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  a<span class="token punctuation">.</span><span class="token function">dorme</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  
-  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'\nCriando um Pato'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token class-name">Pato</span> p <span class="token operator">=</span> <span class="token class-name">Pato</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Don'</span></span><span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">'Amarelo'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token function">print</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  p<span class="token punctuation">.</span><span class="token function">dorme</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  p<span class="token punctuation">.</span><span class="token function">voa</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre><h6 id="saída">Saída </h6>
-<pre data-role="codeBlock" data-info="" class="language-text"><code>Criando um Animal
-Animal Mili
-O Mili dorme
-
-Criando um Pato
-Animal Don: Pato cor Amarelo
-O Don dorme
-O pato Don Amarelo voa
-</code></pre><h3 id="overriding"><em>Overriding</em> </h3>
-<p>No exemplo anterior fizemos <em>override</em> de um método conhecido: <code>toString</code></p>
-<p>No próximo exemplo, a classe <code>Pato</code> vai fazer <em>override</em> do método <code>dorme</code></p>
-<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">Animal</span><span class="token punctuation">{</span>
-  <span class="token class-name">String</span> nome<span class="token punctuation">;</span>
-  <span class="token class-name">Animal</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>nome<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword keyword-void">void</span> <span class="token function">dorme</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'O </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">nome</span></span><span class="token string"> dorme'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token metadata function">@override</span>
-  <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword keyword-return">return</span> <span class="token string-literal"><span class="token string">'Animal </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">nome</span></span><span class="token string">'</span></span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Pato</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Animal</span><span class="token punctuation">{</span>
-  <span class="token class-name">String</span> cor<span class="token punctuation">;</span>
-  <span class="token class-name">Pato</span><span class="token punctuation">(</span><span class="token class-name">String</span> aNome<span class="token punctuation">,</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>cor<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token keyword keyword-super">super</span><span class="token punctuation">(</span>aNome<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword keyword-void">void</span> <span class="token function">voa</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'O pato </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">nome</span></span><span class="token string"> </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">cor</span></span><span class="token string"> voa'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  
-  <span class="token comment">// Podemos fazer override de qualquer metodo </span>
-  <span class="token comment">//    definido pela superclasse</span>
-  <span class="token comment">//    Lembre de usar a anotacao @override</span>
-  <span class="token metadata function">@override</span> 
-  <span class="token keyword keyword-void">void</span> <span class="token function">dorme</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'O Pato </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">nome</span></span><span class="token string"> </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">cor</span></span><span class="token string"> dorme'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  
-  <span class="token metadata function">@override</span>
-  <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword keyword-return">return</span> <span class="token keyword keyword-super">super</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string-literal"><span class="token string">': Pato cor </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">cor</span></span><span class="token string">'</span></span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre><h3 id="classe-abstrata">Classe Abstrata </h3>
+<h3 id="classe-abstrata">Classe Abstrata </h3>
 <p>Para criar uma classe abstrada precisamos marcar a classe como <em>abstract</em> e poderemos ter método <strong>não implementados</strong>.</p>
 <p>Classes concretas filhas de classes abstratas precisam implementar todos os métodos abstratos dos pais.</p>
 <h6 id="exemplo-classe-abstrata">Exemplo classe abstrata </h6>
@@ -211,7 +87,7 @@ O pato Don Amarelo voa
   <span class="token function">print</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
   p<span class="token punctuation">.</span><span class="token function">fazBarulho</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><h6 id="saída-1">Saída </h6>
+</code></pre><h6 id="saída">Saída </h6>
 <pre data-role="codeBlock" data-info="" class="language-text"><code>Nao podemos criar um objeto Animal neste exemplo
 
 Criando um Pato
@@ -250,7 +126,7 @@ Quack
   <span class="token comment">//                   para um objeto do tipo Pato</span>
 <span class="token punctuation">}</span>
 
-</code></pre><h6 id="saída-2">Saída </h6>
+</code></pre><h6 id="saída-1">Saída </h6>
 <pre data-role="codeBlock" data-info="" class="language-text"><code>Criando um Animal que é um pato
 Quack
 </code></pre><h3 id="interface-de-classe-não-é-gui">Interface (de classe, não é GUI) </h3>
@@ -341,7 +217,7 @@ Quack
 <span class="token punctuation">}</span>
 
 </code></pre><p><strong>OBS:</strong> dois mixin com o mesmo método <code>play</code> foi atribuído, no resultado somente o último foi usado.</p>
-<h6 id="saída-3">Saída </h6>
+<h6 id="saída-2">Saída </h6>
 <pre data-role="codeBlock" data-info="" class="language-text"><code>nao sei o que voa
 nao sei o que nada
 brinca
@@ -374,7 +250,7 @@ brinca
   <span class="token class-name">Pato</span> p <span class="token operator">=</span> <span class="token class-name">Pato</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Don'</span></span><span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">'Amarelo'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   p<span class="token punctuation">.</span><span class="token function">voa</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><h6 id="saída-4">Saída </h6>
+</code></pre><h6 id="saída-3">Saída </h6>
 <pre data-role="codeBlock" data-info="" class="language-text"><code>O Don voa a 1 km/h
 </code></pre><h3 id="keyword-final"><em>Keyword</em> <code>final</code> </h3>
 <p>A palavra <code>final</code> para uma <strong>classe</strong> significa que esta classe não pode ser herdada.</p>
@@ -394,7 +270,7 @@ brinca
   <span class="token function">print</span><span class="token punctuation">(</span><span class="token class-name">Utils</span><span class="token punctuation">.</span><span class="token function">quadrado</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token function">print</span><span class="token punctuation">(</span><span class="token class-name">Utils</span><span class="token punctuation">.</span><span class="token function">areaCirculo</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><h6 id="saída-5">Saída </h6>
+</code></pre><h6 id="saída-4">Saída </h6>
 <pre data-role="codeBlock" data-info="" class="language-text"><code>3.14
 4
 12.56
