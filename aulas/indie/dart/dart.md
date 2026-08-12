@@ -1230,9 +1230,11 @@ void main(){
 }
 
 ```
+**OBS:** dois mixin com o mesmo método `play` foi atribuído, no resultado somente o último foi usado.
 
 ###### Saída
 ```
+nao sei o que voa
 nao sei o que nada
 brinca
 ```
@@ -1276,5 +1278,38 @@ void main(){
 O Don voa a 1 km/h
 ```
 
+### *Keyword* `final`
+
+A palavra `final` para uma **classe** significa que esta classe não pode ser herdada.
+
+A palavra `base` para uma classe permite que ela herde de uma classe `final`.
+
+### *Keyword* `static`
+
+Um atributo `static` quer dizer que o atributo pertence à classe e não ao objeto.
+
+Um método `static` pertence à classe e só pode usar atributos pertencentes à classe e não ao objeto.
+
+###### Exemplo `static`
+```dart
+class Utils{
+  static double PI = 3.14;
+  static double quadrado(double a) => a*a;
+  static double areaCirculo(double raio) => raio*raio*PI;
+}
+
+void main(){
+  print(Utils.PI);
+  print(Utils.quadrado(2));
+  print(Utils.areaCirculo(2));
+}
+```
+
+###### Saída
+```
+3.14
+4
+12.56
+```
 
 .
