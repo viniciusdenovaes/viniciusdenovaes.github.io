@@ -28,7 +28,73 @@
       <div class="crossnote markdown-preview  ">
       
 <h1 id="componentes-assíncronos-future-e-async-await">Componentes Assíncronos: Future e Async Await </h1>
+<p>Eventos <strong>síncronos</strong> são eventos que <strong>ocorrem um depois do outro</strong> e <strong>um só começa depois que o outro</strong> acabar.</p>
+<p>É o normal da programação, como a gente está acostumado a esperar que aconteça.</p>
+<p>Eventos <strong>assíncronos</strong> são eventos que podem acontecer ao mesmo tempo (<strong>em paralelo</strong>), deixando que o sistema faça outras coisas enquanto um evento está calculando uma resposta.</p>
+<p>Nesta seção vamos ver alguns métodos <strong>assíncronos</strong>:</p>
+<h2 id="future">Future </h2>
+<p>A classe <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a> é a classe resultado de uma computação assíncrona.</p>
+<p>No exemplo abaixo usamos o constructor <a href="https://api.flutter.dev/flutter/dart-async/Future/Future.delayed.html">Future.delayed</a> demorar alguns segundos para imprimir a mensagem <code>Download completo</code></p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">fazendoDownload</span><span class="token punctuation">(</span><span class="token class-name">String</span> file<span class="token punctuation">,</span> int time<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Abrindo conexao para fazer download de </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">file</span></span><span class="token string"> por </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">time</span></span><span class="token string"> segundos'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token class-name">Future</span><span class="token punctuation">.</span><span class="token function">delayed</span><span class="token punctuation">(</span>
+    <span class="token class-name">Duration</span><span class="token punctuation">(</span>seconds<span class="token punctuation">:</span> time<span class="token punctuation">)</span><span class="token punctuation">,</span> 
+    <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Download de </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">file</span></span><span class="token string"> terminou depois de </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">time</span></span><span class="token string"> segundos'</span></span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Fechando conexao do download de </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">file</span></span><span class="token string">'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token function">fazendoDownload</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'filmeA'</span></span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">fazendoDownload</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'filmeB'</span></span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">fazendoDownload</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'filmeC'</span></span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+<span class="token punctuation">}</span>
+</code></pre><h6 id="saída">Saída </h6>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Abrindo conexao para fazer download de filmeA por 6 segundos
+Fechando conexao do download de filmeA
+Abrindo conexao para fazer download de filmeB por 10 segundos
+Fechando conexao do download de filmeB
+Abrindo conexao para fazer download de filmeC por 3 segundos
+Fechando conexao do download de filmeC
+Download de filmeC terminou depois de 3 segundos
+Download de filmeA terminou depois de 6 segundos
+Download de filmeB terminou depois de 10 segundos
+</code></pre><p>O <code>Future.delayed</code> vai demorar alguns segundos para imprimir a mensagem, mas <strong>não vai bloquear o resto da função</strong>.</p>
+<p>Mas e se quisermos que alguma parte do resto da função <strong>espere</strong> a finalização de <code>Future</code>? Que espere para fechar a conexão depois que o download for feito, por exemplo.</p>
+<h2 id="await">Await </h2>
+<p>O comando <code>await</code> espera o resultado do objeto <code>Future</code> e bloqueia o resto do método até que o resultado saia.</p>
+<p>Observe que para usar o comando <code>await</code> precisamos marcar o método como <code>async</code>.</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token comment">// para usar o comando await precisamos dizer</span>
+<span class="token comment">//    que o metodo eh async</span>
+<span class="token keyword keyword-void">void</span> <span class="token function">fazendoDownload</span><span class="token punctuation">(</span><span class="token class-name">String</span> file<span class="token punctuation">,</span> int time<span class="token punctuation">)</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Abrindo conexao para fazer download de </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">file</span></span><span class="token string"> por </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">time</span></span><span class="token string"> segundos'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token class-name">Future</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> resultadoFuturo <span class="token operator">=</span> <span class="token class-name">Future</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">.</span><span class="token function">delayed</span><span class="token punctuation">(</span>
+    <span class="token class-name">Duration</span><span class="token punctuation">(</span>seconds<span class="token punctuation">:</span> time<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token string-literal"><span class="token string">'Download de </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">file</span></span><span class="token string"> terminou depois de </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">time</span></span><span class="token string"> segundos'</span></span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// await em um objeto do tipo Future&lt;T&gt;</span>
+  <span class="token comment">//    vai esperar o rsultado, do tipo T</span>
+  <span class="token class-name">String</span> resultado <span class="token operator">=</span> <span class="token keyword keyword-await">await</span> resultadoFuturo<span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>resultado<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Fechando conexao do download de </span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">file</span></span><span class="token string">'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">fazendoDownload</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'filmeA'</span></span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">fazendoDownload</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'filmeB'</span></span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">fazendoDownload</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'filmeC'</span></span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><pre data-role="codeBlock" data-info="" class="language-text"><code>Abrindo conexao para fazer download de filmeA por 6 segundos
+Abrindo conexao para fazer download de filmeB por 10 segundos
+Abrindo conexao para fazer download de filmeC por 3 segundos
+Download de filmeC terminou depois de 3 segundos
+Fechando conexao do download de filmeC
+Download de filmeA terminou depois de 6 segundos
+Fechando conexao do download de filmeA
+Download de filmeB terminou depois de 10 segundos
+Fechando conexao do download de filmeB
+</code></pre>
       </div>
       
       
