@@ -1,4 +1,4 @@
 # Mobile com Dart e Flutter
 
- - [Crash Course de Dart](/aulas/indie/dart/dart.html)
+ - [Crash Course de Dart](/aulas/indie/mobile_flutter/dart/dart.html)
 
