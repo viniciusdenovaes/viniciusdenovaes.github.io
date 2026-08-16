@@ -76,6 +76,30 @@
 <span class="token punctuation">}</span>
 </code></pre><p>Centralizamos o body do Scaffold, criamos um appBar com título centralizado e cor de background azul.</p>
 <p><img src="run03.png" alt="alt text"></p>
+<h2 id="style-do-text">Style do Text </h2>
+<p>Podemos mudar a fonte do texto usando a classe Style:</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">runApp</span><span class="token punctuation">(</span>
+    <span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
+      home<span class="token punctuation">:</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
+        appBar<span class="token punctuation">:</span> <span class="token class-name">AppBar</span><span class="token punctuation">(</span>
+          title<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Meu primeiro App Bar'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          centerTitle<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          backgroundColor<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>cyan<span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+        body<span class="token punctuation">:</span> <span class="token class-name">Center</span><span class="token punctuation">(</span>
+          child<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span>
+            <span class="token string-literal"><span class="token string">'Hello Flutter'</span></span><span class="token punctuation">,</span>
+            style<span class="token punctuation">:</span> <span class="token class-name">TextStyle</span><span class="token punctuation">(</span>color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>deepOrange<span class="token punctuation">,</span> fontSize<span class="token punctuation">:</span> <span class="token number">40</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p><img src="run04.png" alt="run 04"></p>
 <p>.</p>
 
       </div>
