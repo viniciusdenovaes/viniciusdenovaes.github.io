@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>flutter</title>
+      <title>03.images</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -27,13 +27,94 @@
     <body for="html-export">
       <div class="crossnote markdown-preview  ">
       
-<h1 id="flutter">Flutter </h1>
-<h2 id="aulas">Aulas </h2>
+<h1 id="imagens-e-icons">Imagens e Icons </h1>
+<h2 id="imagens">Imagens </h2>
+<p>Para inserir uma imagem em uma tela podemos, entre outros,</p>
 <ul>
-<li><a href="aulas/01/01.default_app.html">01 - Aplicativo Padrão</a></li>
-<li><a href="aulas/02/02.text.html">02 - Primeiro App do Zero: Text, MaterialApp, Scaffold e AppBar</a></li>
-<li><a href="aulas/03/03.images.html">03 - Imagens e Icons</a></li>
+<li>inserir uma imagem da web usando um link</li>
+<li>iserir usando uma imagem salva em uma pasta no projeto.</li>
 </ul>
+<h3 id="imagens-da-web">Imagens da web </h3>
+<p>O mais fácil é fazer à partir de um link da web.</p>
+<p>Comece um projeto novo vazio e, no lugar do texto, coloque uma imagem usando o constructor <code>Image.network(url)</code></p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MainApp</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token keyword keyword-super">super</span><span class="token punctuation">.</span>key<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
+      home<span class="token punctuation">:</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
+        body<span class="token punctuation">:</span> <span class="token class-name">Center</span><span class="token punctuation">(</span>
+          child<span class="token punctuation">:</span> <span class="token class-name">Image</span><span class="token punctuation">.</span><span class="token function">network</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'https://docs.flutter.dev/assets/images/dash/dash-fainting.gif'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="imagens-do-projeto">Imagens do projeto </h3>
+<p>Podemos usar qualquer imagem salva no projeto: por convenção, crie a pasta <code>assets/images</code> na raíz do projeto e coloque suas imagens lá.</p>
+<p><strong>IMPORTANTE:</strong> adicione esta pasta na lista de assets no arquivo <code>pubspec.yaml</code></p>
+<p>O bloco que está assim</p>
+<pre data-role="codeBlock" data-info="yaml" class="language-yaml yaml"><code><span class="token key atrule">flutter</span><span class="token punctuation">:</span>
+  <span class="token key atrule">uses-material-design</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+</code></pre><p>Deve ficar assim</p>
+<pre data-role="codeBlock" data-info="yaml" class="language-yaml yaml"><code><span class="token key atrule">flutter</span><span class="token punctuation">:</span>
+  <span class="token key atrule">uses-material-design</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">assets</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> assets/images/
+</code></pre><p>Se o seu aplicativo estiver rodando você deve reiniciar o aplicativo.</p>
+<p>Coloque as imagens que você usará em <code>assets/images</code> e use o constructor <code>Images.asset(path)</code> para inserir a imagem</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MainApp</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token keyword keyword-super">super</span><span class="token punctuation">.</span>key<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
+      home<span class="token punctuation">:</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
+        body<span class="token punctuation">:</span> <span class="token class-name">Center</span><span class="token punctuation">(</span>
+          child<span class="token punctuation">:</span> <span class="token class-name">Image</span><span class="token punctuation">.</span><span class="token function">asset</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'assets/images/TachiFrida.jpg'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h2 id="icons">Icons </h2>
+<p>Podemos também criar inúmeros ícones já inclusos no Flutter.</p>
+<p>Crie um objeto <code>Icon</code> no lugar da imagem no projeto anterior. Este objeto receberá no constructor um ícone. Escreva <code>Icons.</code> e aperte <code>ctrl+space</code> para ver a infinidade de ícones disponíveis.</p>
+<p>No exemplo abaixo foi escolhido um ícone de compartilhamento, de tamanho 50 na cor laranja:</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MainApp</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token keyword keyword-super">super</span><span class="token punctuation">.</span>key<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
+      home<span class="token punctuation">:</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
+        body<span class="token punctuation">:</span> <span class="token class-name">Center</span><span class="token punctuation">(</span>
+          child<span class="token punctuation">:</span> <span class="token class-name">Icon</span><span class="token punctuation">(</span><span class="token class-name">Icons</span><span class="token punctuation">.</span>share<span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>deepOrangeAccent<span class="token punctuation">,</span>size<span class="token punctuation">:</span> <span class="token number">50</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p><img src="runIcon.png" alt="alt text"></p>
 
       </div>
       
