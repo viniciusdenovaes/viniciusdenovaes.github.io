@@ -1,0 +1,23 @@
+
+ADD COLUMN data_pedido DATETIME DEFAULT CURRENT_TIMESTAMP,
+
+ADD COLUMN data_entrega DATETIME NULL;
+
+
+UPDATE Pedidos
+SET status_pedido = 'Finalizado'
+WHERE data_pedido > '...'
+
+UPDATE Pedidos
+SET data_entrega = CURRENT_TIMESTAMP
+WHERE data_pedido > '...'
+
+-- Para juntar os comandos no mesmo 
+-- E incluir uma verificação se o pedido 
+-- ainda nao foi finalizado
+
+UPDATE Pedidos 
+SET status_pedido = 'Finalizado', 
+    data_entrega = CURRENT_TIMESTAMP 
+WHERE data_pedido > '2026-08-18 00:00:00' 
+  AND status_pedido != 'Finalizado';
