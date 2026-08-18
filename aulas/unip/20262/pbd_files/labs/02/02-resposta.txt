@@ -4,6 +4,9 @@ ADD COLUMN data_pedido DATETIME DEFAULT CURRENT_TIMESTAMP,
 ADD COLUMN data_entrega DATETIME NULL;
 
 
+# Comandos separados para finalizar pedidos
+# que foram feitos depois de uma certa data
+
 UPDATE Pedidos
 SET status_pedido = 'Finalizado'
 WHERE data_pedido > '...'
@@ -12,9 +15,11 @@ UPDATE Pedidos
 SET data_entrega = CURRENT_TIMESTAMP
 WHERE data_pedido > '...'
 
--- Para juntar os comandos no mesmo 
--- E incluir uma verificação se o pedido 
--- ainda nao foi finalizado
+# USE O ANTERIOR OU ESTE, NAO OS DOIS
+
+# Para juntar os comandos no mesmo 
+# E incluir uma verificação se o pedido 
+# ainda nao foi finalizado
 
 UPDATE Pedidos 
 SET status_pedido = 'Finalizado', 
