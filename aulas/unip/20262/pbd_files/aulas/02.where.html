@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>pbd</title>
+      <title>02.where</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -27,18 +27,65 @@
     <body for="html-export">
       <div class="crossnote markdown-preview  ">
       
-<h1 id="linguagem-de-programação-de-banco-de-dados">Linguagem de Programação de Banco de Dados </h1>
-<h2 id="aulas">Aulas </h2>
+<h1 id="select-where">SELECT WHERE </h1>
+<p>Usando o comando <code>WHERE</code> podemos filtrar a pesquisa.</p>
+<h2 id="sintaxe">Sintaxe </h2>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> column1<span class="token punctuation">,</span> column2<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token keyword keyword-FROM">FROM</span> table_name
+<span class="token keyword keyword-WHERE">WHERE</span> condition<span class="token punctuation">;</span>
+</code></pre><p>Seleciona as colunas da tabela obedecendo a condição <code>condition</code>.</p>
+<p>Por exemplo</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword keyword-FROM">FROM</span> Alunos
+<span class="token keyword keyword-WHERE">WHERE</span> ra<span class="token operator">=</span><span class="token string">'A123'</span><span class="token punctuation">;</span>
+</code></pre><p>Seleciona o aluno com ra A123;</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword keyword-FROM">FROM</span> Alunos
+<span class="token keyword keyword-WHERE">WHERE</span> ra<span class="token operator">&lt;&gt;</span><span class="token string">'A123'</span><span class="token punctuation">;</span>
+</code></pre><p>Seleciona <strong>todos os alunos</strong> com ra <strong>diferente</strong> de A123;</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword keyword-FROM">FROM</span> Notas
+<span class="token keyword keyword-WHERE">WHERE</span> np1<span class="token operator">&gt;</span><span class="token number">7</span><span class="token punctuation">;</span>
+</code></pre><p>Seleciona todas as ocorrências em que o aluno tirou mais que 7 na NP1;</p>
+<h2 id="operadores-lógicos-and-or-e-not">Operadores Lógicos (<code>AND</code>, <code>OR</code> e <code>NOT</code>) </h2>
+<p>Podemos combinar condições com operadores lógicos:</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword keyword-FROM">FROM</span> Notas
+<span class="token keyword keyword-WHERE">WHERE</span> np1<span class="token operator">&gt;=</span><span class="token number">7</span> <span class="token operator">AND</span> np2<span class="token operator">&gt;=</span><span class="token number">7</span><span class="token punctuation">;</span>
+</code></pre><p>Seleciona todas as ocorrências em que o aluno tirou uma nota maior ou igual a 7 na NP1 <strong>e</strong> na NP2;</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword keyword-FROM">FROM</span> Notas
+<span class="token keyword keyword-WHERE">WHERE</span> np1<span class="token operator">&gt;=</span><span class="token number">7</span> <span class="token operator">OR</span> np2<span class="token operator">&gt;=</span><span class="token number">7</span><span class="token punctuation">;</span>
+</code></pre><p>Seleciona todas as ocorrências em que o aluno tirou uma nota maior ou igual a 7 na NP1 <strong>ou</strong> na NP2;</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword keyword-FROM">FROM</span> Enderecos
+<span class="token keyword keyword-WHERE">WHERE</span> <span class="token operator">NOT</span> bairro<span class="token operator">=</span>Cambuí<span class="token punctuation">;</span>
+</code></pre><p>Seleciona todos os endereços onde o bairro não é Cambuí.</p>
+<h2 id="between">BETWEEN </h2>
+<p>O comando <code>BETWEEN</code> é a mesma coisa que fazer um intervalo usando <code>AND</code> incluindo os extremos.</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword keyword-FROM">FROM</span> Notas
+<span class="token keyword keyword-WHERE">WHERE</span> np1 <span class="token operator">BETWEEN</span> <span class="token number">7</span> <span class="token operator">AND</span> <span class="token number">9</span><span class="token punctuation">;</span>
+</code></pre><p>Seleciona todas as ocorrências em que o aluno tirou uma nota maior <strong>ou igual</strong> a 7, e menor <strong>ou igual</strong> a 9 na NP1</p>
+<h2 id="like">LIKE </h2>
+<p>O comando <code>LIKE</code> procura padrões no texto, por exemplo</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> Alunos
+<span class="token keyword keyword-WHERE">WHERE</span> nome <span class="token operator">LIKE</span> <span class="token string">'a%'</span><span class="token punctuation">;</span>
+</code></pre><p>Mostra todos os alunos que tem um nome que <strong>começa com a letra</strong> <code>a</code>, ignorando diferença entre caixa alta ou baixa (<em>Case Insensitive</em>)</p>
+<p>Temos os símbolos especiais:</p>
 <ul>
-<li><a href="pbd_files/aulas/01.select.html">Aula 01 - SELECT</a></li>
-<li><a href="pbd_files/aulas/02.where.html">Aula 02 - SELECT WHERE</a></li>
+<li><code>%</code> - quer dizer zero ou mais quaisquer characters</li>
+<li><code>_</code> - exatamente um character</li>
 </ul>
-<h2 id="labs">Labs </h2>
-<ul>
-<li><a href="pbd_files/labs/01/01-pizzariav01.html">Lab 01 DDL (Pizzaria)</a></li>
-<li><a href="pbd_files/labs/02/02-pizzariaV02.html">Lab 02 Pizzaria V02, com DATETIME)</a></li>
-</ul>
-
+<p>Outro exemplo</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> Alunos
+<span class="token keyword keyword-WHERE">WHERE</span> nome <span class="token operator">LIKE</span> <span class="token string">'%ar%'</span><span class="token punctuation">;</span>
+</code></pre><p>Todos nomes que tem a substring <code>ar</code>, pode exemplo Arthur ou Marta.</p>
+<h2 id="in">IN </h2>
+<p>Compara valores dentro de uma lista</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> Alunos
+<span class="token keyword keyword-WHERE">WHERE</span> nome <span class="token operator">IN</span> <span class="token punctuation">(</span><span class="token string">'Ana'</span><span class="token punctuation">,</span><span class="token string">'Maria'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
       </div>
       
       

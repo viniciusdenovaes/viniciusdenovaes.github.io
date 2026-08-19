@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>pbd</title>
+      <title>01.select</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -27,18 +27,20 @@
     <body for="html-export">
       <div class="crossnote markdown-preview  ">
       
-<h1 id="linguagem-de-programação-de-banco-de-dados">Linguagem de Programação de Banco de Dados </h1>
-<h2 id="aulas">Aulas </h2>
-<ul>
-<li><a href="pbd_files/aulas/01.select.html">Aula 01 - SELECT</a></li>
-<li><a href="pbd_files/aulas/02.where.html">Aula 02 - SELECT WHERE</a></li>
-</ul>
-<h2 id="labs">Labs </h2>
-<ul>
-<li><a href="pbd_files/labs/01/01-pizzariav01.html">Lab 01 DDL (Pizzaria)</a></li>
-<li><a href="pbd_files/labs/02/02-pizzariaV02.html">Lab 02 Pizzaria V02, com DATETIME)</a></li>
-</ul>
-
+<h1 id="select">SELECT </h1>
+<p>Nesta aula vamos ver as possibilidades de <em>selecionar</em> dados de <strong>uma</strong> tabela.</p>
+<p>Ainda não veremos como cruzar informações entre duas tabelas, mas sim as formas de visualizar dados de uma única tabela.</p>
+<p>O comando <code>SELECT</code> é usado para fazer uma busca (também chamada de <em>query</em>) por informação em uma tabela.</p>
+<h2 id="sintaxe">Sintaxe </h2>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> column1<span class="token punctuation">,</span> column2<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token keyword keyword-FROM">FROM</span> table_name<span class="token punctuation">;</span>
+</code></pre><p>O comando <code>SELECT</code> é formado pelo nome da colunas que você quer visualizar seguido de <code>FROM</code> e o nome da tabela que você quer fazer a busca.</p>
+<p>Por exemplo:</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> ra<span class="token punctuation">,</span> nome <span class="token keyword keyword-FROM">FROM</span> Alunos<span class="token punctuation">;</span>
+</code></pre><p>Mostra <strong>todas as linhas</strong> e as colunas <code>ra</code> e <code>nome</code> da tabela <code>Alunos</code>.</p>
+<p>Caso você queira mostrar <strong>todas</strong> as colunas, você pode usar</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> Alunos<span class="token punctuation">;</span>
+</code></pre>
       </div>
       
       
