@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>pbd</title>
+      <title>03.orderby</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -27,18 +27,23 @@
     <body for="html-export">
       <div class="crossnote markdown-preview  ">
       
-<h1 id="linguagem-de-programação-de-banco-de-dados">Linguagem de Programação de Banco de Dados </h1>
-<h2 id="aulas">Aulas </h2>
-<ul>
-<li><a href="pbd_files/aulas/01.select.html">Aula 01 - SELECT</a></li>
-<li><a href="pbd_files/aulas/02.where.html">Aula 02 - SELECT WHERE</a></li>
-<li><a href="pbd_files/aulas/03.orderby.html">Aula 03 - SELECT ORDER BY</a></li>
-</ul>
-<h2 id="labs">Labs </h2>
-<ul>
-<li><a href="pbd_files/labs/01/01-pizzariav01.html">Lab 01 DDL (Pizzaria)</a></li>
-<li><a href="pbd_files/labs/02/02-pizzariaV02.html">Lab 02 Pizzaria V02, com DATETIME)</a></li>
-</ul>
+<h1 id="select-order-by">SELECT ORDER BY </h1>
+<p>O comando <code>ORDER BY</code> escolhe um parâmetro para que a sua pesquisa seja ordenada.</p>
+<h2 id="sintaxe">Sintaxe </h2>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> column1<span class="token punctuation">,</span> column2<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token keyword keyword-FROM">FROM</span> table_name
+<span class="token keyword keyword-ORDER">ORDER</span> <span class="token keyword keyword-BY">BY</span> column1<span class="token punctuation">,</span> column2<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword keyword-ASC">ASC</span><span class="token operator">|</span><span class="token keyword keyword-DESC">DESC</span><span class="token punctuation">;</span>
+</code></pre><p>Na sintaxe completa você usar no final do <code>SELECT</code> e pode escolher se quer uma ordenação ascendente (padrão) ou descendente.</p>
+<p>Por exemplo</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> Alunos
+<span class="token keyword keyword-ORDER">ORDER</span> <span class="token keyword keyword-BY">BY</span> nome<span class="token punctuation">;</span>
+</code></pre><p>Os alunos estarão ordenados por <code>nome</code> em ordem ascendente.</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> Alunos
+<span class="token keyword keyword-ORDER">ORDER</span> <span class="token keyword keyword-BY">BY</span> nome <span class="token keyword keyword-DESC">DESC</span><span class="token punctuation">;</span>
+</code></pre><p>Os alunos estarão ordenados por <code>nome</code> em ordem descendente.</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> Alunos
+<span class="token keyword keyword-ORDER">ORDER</span> <span class="token keyword keyword-BY">BY</span> nome <span class="token keyword keyword-DESC">DESC</span><span class="token punctuation">,</span> sobrenome <span class="token keyword keyword-ASC">ASC</span><span class="token punctuation">;</span>
+</code></pre><p>Você pode ordenar por duas colunas, e escolher o sentido de cada uma delas. Neste caso será ordenado, primeiro pelo nome, e depois pelo sobrenome.</p>
 
       </div>
       

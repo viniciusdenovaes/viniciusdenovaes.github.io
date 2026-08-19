@@ -3,6 +3,7 @@
 ## Aulas
  - [Aula 01 - SELECT](pbd_files/aulas/01.select.html)
  - [Aula 02 - SELECT WHERE](pbd_files/aulas/02.where.html)
+ - [Aula 03 - SELECT ORDER BY](pbd_files/aulas/03.orderby.html)
 
 
 ## Labs
