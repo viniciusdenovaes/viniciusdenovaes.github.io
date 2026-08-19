@@ -27,6 +27,8 @@
 <!-- - [POO](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20261/poo)
 -->
 - [ED](aulas/unip/flex/20262/ed/roteiros.html)
+- [ED (alt)](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20262/ed/roteiros.html)
+
 
 ##### Questões Enade
 
