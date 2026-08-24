@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>CsAplicado</title>
+      <title>aula01</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -27,12 +27,146 @@
     <body for="html-export">
       <div class="crossnote markdown-preview  ">
       
-<h1 id="c-aplicado">C# Aplicado </h1>
-<h3 id="princípio-da-inversão-de-controle">Princípio da Inversão de Controle </h3>
+<h1 id="princípio-da-inversão-de-controle-ioc">Princípio da Inversão de Controle (IoC) </h1>
+<p>Inversão de Controle (em inglês <a href="https://en.wikipedia.org/wiki/Inversion_of_control">Inversion of Control (IoC)</a>) é um princípio de <a href="https://en.wikipedia.org/wiki/Software_design">design de software</a> com o objetivo de termos <a href="https://en.wikipedia.org/wiki/Modular_programming">sistemas modulares</a> com <a href="https://en.wikipedia.org/wiki/Coupling_(computer_programming)">baixo acoplamento</a> onde um framework define o fluxo de controle de módulos feitos pelo programador.</p>
+<p>Isto faz com que possamos separar a parte de interface de um programa, da parte lógica.</p>
+<p>A parte de interface podemos usar uma linguagem de marcação, enquanto a parte lógica podemos usar uma progamação voltada a eventos.</p>
+<p>Por <strong>eventos</strong>, podemos entender por exemplo:</p>
 <ul>
-<li><a href="CsAplicado_files/aulas/01/aula01.html">WPF: Janela com Botão</a></li>
+<li>um botão sendo pressionado em um programa;</li>
+<li>uma mensagem sendo enviada em um aplicativo;</li>
+<li>uma compra sendo finalizada em um site.</li>
 </ul>
-<p>.</p>
+<p>Nesta parte do curso vamos tratar de <a href="https://pt.wikipedia.org/wiki/Interface_gr%C3%A1fica_do_utilizador">Interface de Usuário</a> (em inglês <a href="https://en.wikipedia.org/wiki/Graphical_user_interface">Graphical User Interface ou GUI</a>), que é fazer uma interface para que o usuário possa usar o seu programa. Tipicamente faremos uma <strong>janela</strong> com alguns <strong>botões</strong>, <strong>caixa de texto de entrada</strong>, <strong>tabelas</strong>, etc...</p>
+<p>Em C#, usaremos o framework WPF (Windows Presentation Foundation). Para definir o funcionamento de qualquer elemento estas bibliotecas (assim como a maioria das bibliotecas de GUI) usam o princípio de inversão de controle.</p>
+<p>A primeira coisa que devemos aprender é que este padrão separa a lógica de desenhar a interface, da lógica de interação da interface,<br>
+ou seja: vamos desenhar uma interface em uma parte do código e definir funcionamento desta interface em outra parte.</p>
+<p>Mais explicitamente:</p>
+<ol>
+<li>Vamos criar um botão</li>
+<li>Vamos criar uma ação</li>
+<li>Vamos adicionar esta ação no botão criado.</li>
+</ol>
+<h2 id="windows-presentation-foundation-wpf">Windows Presentation Foundation (WPF) </h2>
+<p>WPF é uma ferramenta do Windows para fazer uma interface com o usuário final no Windows. Mas atenção, só funciona no Windows, não funciona no linux nem mac.</p>
+<p>Em WPF temos duas linguagens que funcionam em conjunto:</p>
+<ul>
+<li><code>C#</code>: linguagem de programação orientada a objetos que define o <strong>funcionamento</strong> do programa.</li>
+<li><code>XAML</code>: Linguagem de marcação com o padrão <code>XML</code> que define a parte visual do programa.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>WPF</th>
+<th>Funcionalidade</th>
+<th>Tipo de Linguagem</th>
+<th>Paradigma</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>C#</code></td>
+<td>define o <strong>funcionamento</strong> do programa</td>
+<td>linguagem de programação</td>
+<td>Orientada a objetos</td>
+</tr>
+<tr>
+<td><code>XAML</code></td>
+<td>define a parte visual do programa</td>
+<td>Linguagem de marcação</td>
+<td>padrão <code>XML</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="fazendo-um-programa">Fazendo um programa </h3>
+<p>Vamos fazer um programa minimalista para aprender na prática.</p>
+<h4 id="criando-um-projeto">Criando um Projeto </h4>
+<p>Usando a IDE Visual Studio 2022, crie um projeto usando o template <strong>"WPF App (.NET Framework)"</strong> em <code>C#</code>.</p>
+<p>Dentro da janela de soluções teremos dois arquivos de interesse com um código inicial:</p>
+<h6 id="mainwindowxaml">MainWindow.xaml </h6>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Window</span> <span class="token attr-name"><span class="token namespace">x:</span>Class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>WpfAppUnip01.MainWindow<span class="token punctuation">"</span></span>
+        <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://schemas.microsoft.com/winfx/2006/xaml/presentation<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">xmlns:</span>x</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://schemas.microsoft.com/winfx/2006/xaml<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">xmlns:</span>d</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://schemas.microsoft.com/expression/blend/2008<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">xmlns:</span>mc</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://schemas.openxmlformats.org/markup-compatibility/2006<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">xmlns:</span>local</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>clr-namespace:WpfAppUnip01<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">mc:</span>Ignorable</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>d<span class="token punctuation">"</span></span>
+        <span class="token attr-name">Title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>MainWindow<span class="token punctuation">"</span></span> <span class="token attr-name">Height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>450<span class="token punctuation">"</span></span> <span class="token attr-name">Width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>800<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Grid</span><span class="token punctuation">&gt;</span></span>
+        
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Grid</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Window</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h6 id="mainwindowxamlcs">MainWindow.xaml.cs </h6>
+<pre data-role="codeBlock" data-info="cs" class="language-csharp cs"><code><span class="token keyword keyword-namespace">namespace</span> <span class="token namespace">WpfAppUnip01</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-partial">partial</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">MainWindow</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">Window</span></span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-public">public</span> <span class="token function">MainWindow</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">InitializeComponent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="criando-um-botão">Criando um botão </h4>
+<p>Para criar um elemento devemos:</p>
+<ol>
+<li>Criar este elemento no <code>XAML</code></li>
+<li>Dar um identificador para este elemento no <code>XAML</code></li>
+<li>Criar um objeto no <code>C#</code></li>
+<li>Ligar o objeto do <code>C#</code> com o botão do <code>XAML</code> através do identificador</li>
+</ol>
+<p>Vamos fazer passo a passo.</p>
+<h6 id="criar-um-botão-no-xaml">Criar um botão no <code>XAML</code> </h6>
+<p>Dentro da <em>tag</em> <code>Grid</code> crie um elemento de <code>Button</code> com os atributos</p>
+<ul>
+<li><code>Name="botao"</code>: Define o identificador do botão, para ser ligado ao objeto criado em <code>C#</code></li>
+<li><code>Content="Aperte"</code>: Define o texto escrito dentro do botão</li>
+<li><code>HorizontalAlignment="Center"</code> e <code>VerticalAlignment="Center"</code>: Centraliza o alinhamento do botão</li>
+<li><code>Click="OnClickAperte"</code>: Define a função que ocorrerá quando o botão for clicado.</li>
+</ul>
+<p>Em resumo teremos a seguinte <em>tag</em> <strong>no lugar</strong> da <em>tag</em> <code>Grid</code>:</p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Grid</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span> <span class="token attr-name"><span class="token namespace">x:</span>Name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>botao<span class="token punctuation">"</span></span> <span class="token attr-name">Content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Aperte<span class="token punctuation">"</span></span> <span class="token attr-name">HorizontalAlignment</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Center<span class="token punctuation">"</span></span> <span class="token attr-name">VerticalAlignment</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Center<span class="token punctuation">"</span></span> <span class="token attr-name">Click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>OnClickAperte<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Grid</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h6 id="definir-o-funcionamento-do-botão-no-c">Definir o funcionamento do botão no <code>C#</code> </h6>
+<p>Agora vamos definir o funcionamento do botão no <code>C#</code></p>
+<ol>
+<li>Crie uma variável do tipo <code>Button</code> como atributo da classe <code>MainWindow</code></li>
+<li>No contructor da classe faça com que a variável criada seja uma referência ao botão criado no <code>XAML</code>. Use o comando <code>button = (Button)FindName("botao");</code></li>
+<li>Defina o método com a assinatura <code>private void OnClickAperte(object sender, RoutedEventArgs e)</code>, este deve ter o mesmo nome que foi colocado no atributo <code>Click</code> do botão no <code>XAML</code></li>
+</ol>
+<p>Veja abaixo o código com os 3 comandos:</p>
+<pre data-role="codeBlock" data-info="cs" class="language-csharp cs"><code><span class="token keyword keyword-using">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Windows</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-using">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Windows<span class="token punctuation">.</span>Controls</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-namespace">namespace</span> <span class="token namespace">WpfAppUnip01</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-partial">partial</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">MainWindow</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">Window</span></span> <span class="token punctuation">{</span>
+
+        <span class="token comment">// Primeiro comando:</span>
+        <span class="token comment">//    Cria uma variavel do tipo Button</span>
+        <span class="token class-name">Button</span> button<span class="token punctuation">;</span>
+
+        <span class="token keyword keyword-public">public</span> <span class="token function">MainWindow</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">InitializeComponent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// Segundo comando:</span>
+            <span class="token comment">//    Faz uma referencia deste Button para o Button do XAML</span>
+            button <span class="token operator">=</span> <span class="token punctuation">(</span>Button<span class="token punctuation">)</span><span class="token function">FindName</span><span class="token punctuation">(</span><span class="token string">"botao"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// Terceiro comando:</span>
+        <span class="token comment">//    Cria um metodo com a assinatura private void (object sender, RoutedEventArgs e)</span>
+        <span class="token comment">//    e mesmo nome colocado no atributo Click do XAML</span>
+        <span class="token keyword keyword-private">private</span> <span class="token return-type class-name"><span class="token keyword keyword-void">void</span></span> <span class="token function">OnClickAperte</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword keyword-object">object</span></span> sender<span class="token punctuation">,</span> <span class="token class-name">RoutedEventArgs</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            MessageBox<span class="token punctuation">.</span><span class="token function">Show</span><span class="token punctuation">(</span><span class="token string">"Botao pressionado"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="exercícios">Exercícios </h3>
+<ol>
+<li>Faça um programa que contenha um botão centralizado em uma tela de tamanho 100x150. Quando o botão for pressionado deve aparecer uma caixa de mensagem escrito "botão pressionado"</li>
+</ol>
+<p>Dica: Para escolher a dimensão inicial da tela mude os valores dos atributos <code>Height</code> e <code>Width</code> da tag <code>Window</code></p>
+<ol>
+<li>Faça um programa com um botão posicionado no canto inferior esquerdo da tela. Quando o botão for pressionado a janela deve ser fechada.</li>
+</ol>
+<p>Dica: Para fechar a janela use o comando <code>this.Close()</code></p>
 
       </div>
       
