@@ -58,5 +58,6 @@ Faça as seguintes pesquisas
 - Pesquise todas as pizzas com preço mais barato que 40.
 - Pesquise todas as pizzas com preço entre 40 e 60.
 - Pesquise todas as pizzas que contêm `frango` no nome
+- Liste todas as pizzas em ordem da mais barata para a mais cara.
 
 
