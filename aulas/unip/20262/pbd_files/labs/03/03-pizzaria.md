@@ -43,8 +43,8 @@ CREATE TABLE Pedidos (
 ### Adicionando Dados
 
 Adicione no banco de dados:
-- +3 tipos de pizza, uma `doce` e 2 `salgada`
-- +3 tipos de pizzas `salgadas` de frango, por exemplo:`frango com milho`, `frango teriaki`, etc...
+- +3 tipos de pizza, uma `doce` e 2 `salgada` com preços variando entre 40 e 60
+- +3 tipos de pizzas `salgadas` de frango, por exemplo:`frango com milho`, `frango teriaki`, etc... Com preços variando entre 20 e 40
 - +3 Clientes, com **dois deles morando no mesmo bairro**
 - +6 Pedidos
 
@@ -55,6 +55,8 @@ Faça as seguintes pesquisas
 - Pesquise todos os bairros **diferentes** que ocorrem na tabela de clientes.
 - Pesquise todas as pizzas salgadas
 - Pesquise todas as pizzas que não são salgadas
+- Pesquise todas as pizzas com preço mais barato que 40.
+- Pesquise todas as pizzas com preço entre 40 e 60.
 - Pesquise todas as pizzas que contêm `frango` no nome
 
 
