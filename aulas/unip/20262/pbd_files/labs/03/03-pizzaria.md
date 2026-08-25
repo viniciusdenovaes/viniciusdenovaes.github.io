@@ -53,6 +53,8 @@ Adicione no banco de dados:
 Faça as seguintes pesquisas
 - Selecione todos os dados de todas as tabelas (são 3 comandos separados, 3 resultados diferentes).
 - Pesquise todos os bairros **diferentes** que ocorrem na tabela de clientes.
-- 
+- Pesquise todas as pizzas salgadas
+- Pesquise todas as pizzas que não são salgadas
+- Pesquise todas as pizzas que contêm `frango` no nome
 
 
