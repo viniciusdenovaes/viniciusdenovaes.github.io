@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>pbd</title>
+      <title>03-pizzaria</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -27,18 +27,55 @@
     <body for="html-export">
       <div class="crossnote markdown-preview  ">
       
-<h1 id="linguagem-de-programação-de-banco-de-dados">Linguagem de Programação de Banco de Dados </h1>
-<h2 id="aulas">Aulas </h2>
+<h1 id="treinando-comandos-select">Treinando Comandos <code>SELECT</code> </h1>
+<p>Neste laboratório vamos treinar os comandos <code>SELECT</code> aprendidos em aula.</p>
+<p>Use o banco de dados criado nos últimos labs, caso queira criar um novo use a seguinte esquemática.</p>
+<h6 id="banco-de-dados-pizzaria">Banco de Dados Pizzaria </h6>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-CREATE">CREATE</span> <span class="token keyword keyword-DATABASE">DATABASE</span> <span class="token keyword keyword-IF">IF</span> <span class="token operator">NOT</span> <span class="token keyword keyword-EXISTS">EXISTS</span> Pizzaria<span class="token punctuation">;</span>
+<span class="token keyword keyword-USE">USE</span> Pizzaria<span class="token punctuation">;</span>
+
+<span class="token comment">-- Criação da tabela de Clientes</span>
+<span class="token keyword keyword-CREATE">CREATE</span> <span class="token keyword keyword-TABLE">TABLE</span> Clientes <span class="token punctuation">(</span>
+    id_cliente <span class="token keyword keyword-INT">INT</span> <span class="token keyword keyword-AUTO_INCREMENT">AUTO_INCREMENT</span> <span class="token keyword keyword-PRIMARY">PRIMARY</span> <span class="token keyword keyword-KEY">KEY</span><span class="token punctuation">,</span>
+    nome <span class="token keyword keyword-VARCHAR">VARCHAR</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    telefone <span class="token keyword keyword-VARCHAR">VARCHAR</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    endereco <span class="token keyword keyword-VARCHAR">VARCHAR</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    bairro <span class="token keyword keyword-VARCHAR">VARCHAR</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- Criação da tabela de Pizzas</span>
+<span class="token keyword keyword-CREATE">CREATE</span> <span class="token keyword keyword-TABLE">TABLE</span> Pizzas <span class="token punctuation">(</span>
+    id_pizza <span class="token keyword keyword-INT">INT</span> <span class="token keyword keyword-AUTO_INCREMENT">AUTO_INCREMENT</span> <span class="token keyword keyword-PRIMARY">PRIMARY</span> <span class="token keyword keyword-KEY">KEY</span><span class="token punctuation">,</span>
+    nome <span class="token keyword keyword-VARCHAR">VARCHAR</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    preco <span class="token keyword keyword-DECIMAL">DECIMAL</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    categoria <span class="token keyword keyword-VARCHAR">VARCHAR</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- Criação da tabela de Pedidos com Chaves Estrangeiras</span>
+<span class="token keyword keyword-CREATE">CREATE</span> <span class="token keyword keyword-TABLE">TABLE</span> Pedidos <span class="token punctuation">(</span>
+    id_pedido <span class="token keyword keyword-INT">INT</span> <span class="token keyword keyword-AUTO_INCREMENT">AUTO_INCREMENT</span> <span class="token keyword keyword-PRIMARY">PRIMARY</span> <span class="token keyword keyword-KEY">KEY</span><span class="token punctuation">,</span>
+    id_cliente <span class="token keyword keyword-INT">INT</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    id_pizza <span class="token keyword keyword-INT">INT</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    status_pedido <span class="token keyword keyword-VARCHAR">VARCHAR</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span> <span class="token keyword keyword-DEFAULT">DEFAULT</span> <span class="token string">'EmPreparacao'</span><span class="token punctuation">,</span>
+    data_pedido <span class="token keyword keyword-DATETIME">DATETIME</span> <span class="token keyword keyword-DEFAULT">DEFAULT</span> <span class="token keyword keyword-CURRENT_TIMESTAMP">CURRENT_TIMESTAMP</span><span class="token punctuation">,</span>
+    <span class="token keyword keyword-ADD">ADD</span> <span class="token keyword keyword-COLUMN">COLUMN</span> data_entrega <span class="token keyword keyword-DATETIME">DATETIME</span> <span class="token boolean">NULL</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-CONSTRAINT">CONSTRAINT</span> FK_Cliente <span class="token keyword keyword-FOREIGN">FOREIGN</span> <span class="token keyword keyword-KEY">KEY</span> <span class="token punctuation">(</span>id_cliente<span class="token punctuation">)</span> <span class="token keyword keyword-REFERENCES">REFERENCES</span> Clientes<span class="token punctuation">(</span>id_cliente<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token keyword keyword-CONSTRAINT">CONSTRAINT</span> FK_Pizza <span class="token keyword keyword-FOREIGN">FOREIGN</span> <span class="token keyword keyword-KEY">KEY</span> <span class="token punctuation">(</span>id_pizza<span class="token punctuation">)</span> <span class="token keyword keyword-REFERENCES">REFERENCES</span> Pizzas<span class="token punctuation">(</span>id_pizza<span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="adicionando-dados">Adicionando Dados </h3>
+<p>Adicione no banco de dados:</p>
 <ul>
-<li><a href="pbd_files/aulas/01.select.html">Aula 01 - SELECT</a></li>
-<li><a href="pbd_files/aulas/02.where.html">Aula 02 - SELECT WHERE</a></li>
-<li><a href="pbd_files/aulas/03.orderby.html">Aula 03 - SELECT ORDER BY</a></li>
+<li>+3 tipos de pizza, uma <code>doce</code> e 2 <code>salgada</code></li>
+<li>+3 tipos de pizzas <code>salgadas</code> de frango, por exemplo:<code>frango com milho</code>, <code>frango teriaki</code>, etc...</li>
+<li>+3 Clientes, com <strong>dois deles morando no mesmo bairro</strong></li>
+<li>+6 Pedidos</li>
 </ul>
-<h2 id="labs">Labs </h2>
+<h3 id="pesquisando-dados">Pesquisando dados </h3>
+<p>Faça as seguintes pesquisas</p>
 <ul>
-<li><a href="pbd_files/labs/01/01-pizzariav01.html">Lab 01 DDL (Pizzaria)</a></li>
-<li><a href="pbd_files/labs/02/02-pizzariaV02.html">Lab 02 Pizzaria V02, com DATETIME)</a></li>
-<li><a href="pbd_files/labs/03/03-pizzaria.html">Lab03 SELECT</a></li>
+<li>Selecione todos os dados de todas as tabelas (são 3 comandos separados, 3 resultados diferentes).</li>
+<li>Pesquise todos os bairros <strong>diferentes</strong> que ocorrem na tabela de clientes.</li>
 </ul>
 
       </div>
