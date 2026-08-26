@@ -23,11 +23,8 @@
  - [Mobile com Flutter e Dart](aulas/unip/20262/mobile_ads.html)
  - [C# Aplicado](aulas/unip/20262/CsAplicado.html)
 
-##### Flex
-<!-- - [POO](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20261/poo)
--->
-- [ED](aulas/unip/flex/20262/ed/roteiros.html)
-- [ED (alt)](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20262/ed/roteiros.html)
+##### [Flex](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20262)
+<!-- - [ED](aulas/unip/flex/20262/ed/roteiros.html) -->
 
 
 ##### Questões Enade
