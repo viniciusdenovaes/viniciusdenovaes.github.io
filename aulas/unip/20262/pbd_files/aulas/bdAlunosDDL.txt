@@ -12,12 +12,12 @@ CREATE TABLE Cursos(
 
 CREATE TABLE Notas(
 	id_nota INT AUTO_INCREMENT PRIMARY KEY,
-    id_aluno VARCHAR(3) NOT NULL,
-    id_curso VARCHAR(3) NOT NULL,
+    ra VARCHAR(3) NOT NULL,
+    curso VARCHAR(3) NOT NULL,
     np1 DECIMAL(3, 1) NOT NULL,
     np2 DECIMAL(3, 1) NOT NULL,
-    CONSTRAINT FK_Alunos FOREIGN KEY (id_aluno) REFERENCES Alunos(ra),
-    CONSTRAINT FK_Cursos FOREIGN KEY (id_curso) REFERENCES Cursos(id)
+    CONSTRAINT FK_Alunos FOREIGN KEY (ra) REFERENCES Alunos(ra),
+    CONSTRAINT FK_Cursos FOREIGN KEY (curso) REFERENCES Cursos(id)
 );
 
 INSERT INTO Alunos VALUES ('a12', 'Ana');
@@ -28,13 +28,13 @@ INSERT INTO Alunos VALUES ('d12', 'Dani');
 INSERT INTO Cursos VALUES ('c01', 'Java');
 INSERT INTO Cursos VALUES ('c02', 'Python');
 
-INSERT INTO Notas (id_aluno, id_curso, np1, np2) VALUES ('a12', 'c01', 8, 7);
-INSERT INTO Notas (id_aluno, id_curso, np1, np2) VALUES ('b12', 'c01', 4, 3);
-INSERT INTO Notas (id_aluno, id_curso, np1, np2) VALUES ('c12', 'c01', 9, 8);
-INSERT INTO Notas (id_aluno, id_curso, np1, np2) VALUES ('d12', 'c01', 3, 0);
+INSERT INTO Notas (ra, curso, np1, np2) VALUES ('a12', 'c01', 8, 7);
+INSERT INTO Notas (ra, curso, np1, np2) VALUES ('b12', 'c01', 4, 3);
+INSERT INTO Notas (ra, curso, np1, np2) VALUES ('c12', 'c01', 9, 8);
+INSERT INTO Notas (ra, curso, np1, np2) VALUES ('d12', 'c01', 3, 0);
 
-INSERT INTO Notas (id_aluno, id_curso, np1, np2) VALUES ('a12', 'c02', 7, 8);
-INSERT INTO Notas (id_aluno, id_curso, np1, np2) VALUES ('b12', 'c02', 3, 4);
-INSERT INTO Notas (id_aluno, id_curso, np1, np2) VALUES ('c12', 'c02', 8, 9);
-INSERT INTO Notas (id_aluno, id_curso, np1, np2) VALUES ('d12', 'c02', 7, 10);
+INSERT INTO Notas (ra, curso, np1, np2) VALUES ('a12', 'c02', 7, 8);
+INSERT INTO Notas (ra, curso, np1, np2) VALUES ('b12', 'c02', 3, 4);
+INSERT INTO Notas (ra, curso, np1, np2) VALUES ('c12', 'c02', 8, 9);
+INSERT INTO Notas (ra, curso, np1, np2) VALUES ('d12', 'c02', 7, 10);
 
