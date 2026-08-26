@@ -28,6 +28,7 @@
       <div class="crossnote markdown-preview  ">
       
 <h1 id="select">SELECT </h1>
+<p><a href="https://www.w3schools.com/mysql/mysql_select.asp">fonte</a></p>
 <p>Nesta aula vamos ver as possibilidades de <em>selecionar</em> dados de <strong>uma</strong> tabela.</p>
 <p>Ainda não veremos como cruzar informações entre duas tabelas, mas sim as formas de visualizar dados de uma única tabela.</p>
 <p>O comando <code>SELECT</code> é usado para fazer uma busca (também chamada de <em>query</em>) por informação em uma tabela.</p>
@@ -40,7 +41,25 @@
 </code></pre><p>Mostra <strong>todas as linhas</strong> e as colunas <code>ra</code> e <code>nome</code> da tabela <code>Alunos</code>.</p>
 <p>Caso você queira mostrar <strong>todas</strong> as colunas, você pode usar</p>
 <pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> Alunos<span class="token punctuation">;</span>
-</code></pre>
+</code></pre><h2 id="select-distinct">SELECT DISTINCT </h2>
+<p><a href="https://www.w3schools.com/mysql/mysql_select_distinct.asp">fonte</a></p>
+<p>O <code>SELECT DISTINCT</code> mostra todas as linhas distintas.</p>
+<p>Então o comando</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token keyword keyword-DISTINCT">DISTINCT</span> bairro <span class="token keyword keyword-FROM">FROM</span> Alunos<span class="token punctuation">;</span>
+</code></pre><p>Mostrará todos os bairros <strong>diferentes</strong> da tabela <code>Alunos</code>.</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token keyword keyword-DISTINCT">DISTINCT</span> bairro<span class="token punctuation">,</span> cidade <span class="token keyword keyword-FROM">FROM</span> Alunos<span class="token punctuation">;</span>
+</code></pre><p>Mostrará todos os bairros <strong>e</strong> cidades <strong>diferentes</strong> da tabela <code>Alunos</code>. Note que o mesmo bairro pode aparecer mais de uma vez, assim como a mesma cidade, mas não a mesma dupla de <code>(bairro, cidade)</code></p>
+<h2 id="limit-e-offset">LIMIT e OFFSET </h2>
+<p>Caso o banco de dados tenha muitos dados pode ser que o resultado de uma pesquisa sejam dados demais.</p>
+<p>É possível limitar quantos resultados vão aparecer na tela usando o comando <code>LIMIT</code></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> Alunos
+<span class="token keyword keyword-LIMIT">LIMIT</span> <span class="token number">3</span><span class="token punctuation">;</span>
+</code></pre><p>Este comando limitará o resultado em 3 linhas: mostrará apenas as 3 primeiras linhas.</p>
+<p>Caso você queira pular linhas, você pode usar o comando <code>OFFSET</code></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> Alunos
+<span class="token keyword keyword-LIMIT">LIMIT</span> <span class="token number">3</span> <span class="token keyword keyword-OFFSET">OFFSET</span> <span class="token number">4</span><span class="token punctuation">;</span>
+</code></pre><p>Mostrará apenas 3 alunos à partir do 5 alunos (pulará 4 alunos)</p>
+
       </div>
       
       
