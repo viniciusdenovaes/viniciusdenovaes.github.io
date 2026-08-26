@@ -33,7 +33,7 @@ CREATE TABLE Pedidos (
     id_pizza INT NOT NULL,
     status_pedido VARCHAR(50) DEFAULT 'EmPreparacao',
     data_pedido DATETIME DEFAULT CURRENT_TIMESTAMP,
-    ADD COLUMN data_entrega DATETIME NULL;
+    data_entrega DATETIME NULL;
 
     CONSTRAINT FK_Cliente FOREIGN KEY (id_cliente) REFERENCES Clientes(id_cliente),
     CONSTRAINT FK_Pizza FOREIGN KEY (id_pizza) REFERENCES Pizzas(id_pizza)
