@@ -4,7 +4,8 @@
  - [Aula 01 - SELECT](pbd_files/aulas/01.select.html)
  - [Aula 02 - SELECT WHERE](pbd_files/aulas/02.where.html)
  - [Aula 03 - SELECT ORDER BY](pbd_files/aulas/03.orderby.html)
-
+ - [Aula 04 - Operações Entre Colunas](pbd_files/aulas/04.operacoes.html)
+ - [Aula 05 - Funções de Agregação](pbd_files/aulas/05.agregacao.html)
 
 ## Labs
  - [Lab 01 DDL (Pizzaria)](pbd_files/labs/01/01-pizzariav01.html)

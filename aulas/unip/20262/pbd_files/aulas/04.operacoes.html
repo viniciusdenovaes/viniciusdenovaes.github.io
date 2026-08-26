@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>pbd</title>
+      <title>04.operacoes</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -27,21 +27,342 @@
     <body for="html-export">
       <div class="crossnote markdown-preview  ">
       
-<h1 id="linguagem-de-programação-de-banco-de-dados">Linguagem de Programação de Banco de Dados </h1>
-<h2 id="aulas">Aulas </h2>
-<ul>
-<li><a href="pbd_files/aulas/01.select.html">Aula 01 - SELECT</a></li>
-<li><a href="pbd_files/aulas/02.where.html">Aula 02 - SELECT WHERE</a></li>
-<li><a href="pbd_files/aulas/03.orderby.html">Aula 03 - SELECT ORDER BY</a></li>
-<li><a href="pbd_files/aulas/04.operacoes.html">Aula 04 - Operações Entre Colunas</a></li>
-<li><a href="pbd_files/aulas/05.agregacao.html">Aula 05 - Funções de Agregação</a></li>
-</ul>
-<h2 id="labs">Labs </h2>
-<ul>
-<li><a href="pbd_files/labs/01/01-pizzariav01.html">Lab 01 DDL (Pizzaria)</a></li>
-<li><a href="pbd_files/labs/02/02-pizzariaV02.html">Lab 02 Pizzaria V02, com DATETIME)</a></li>
-<li><a href="pbd_files/labs/03/03-pizzaria.html">Lab03 SELECT</a></li>
-</ul>
+<h1 id="operações-entre-colunasfonte">Operações Entre Colunas<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> </h1>
+<p>Nesta aula vamos falar sobre algumas das operações que podemos fazer entre duas colunas.</p>
+<h2 id="o-banco-de-dados">O Banco de Dados </h2>
+<p>Considere as seguintes tabelas</p>
+<h5 id="alunos">Alunos </h5>
+<table>
+<thead>
+<tr>
+<th>ra</th>
+<th>nome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a12</td>
+<td>Ana</td>
+</tr>
+<tr>
+<td>b12</td>
+<td>Beto</td>
+</tr>
+<tr>
+<td>c12</td>
+<td>Carla</td>
+</tr>
+<tr>
+<td>d12</td>
+<td>Dani</td>
+</tr>
+</tbody>
+</table>
+<h5 id="cursos">Cursos </h5>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>nome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>c01</td>
+<td>Java</td>
+</tr>
+<tr>
+<td>c02</td>
+<td>Python</td>
+</tr>
+</tbody>
+</table>
+<h5 id="notas">Notas </h5>
+<table>
+<thead>
+<tr>
+<th>ra</th>
+<th>curso</th>
+<th>np1</th>
+<th>np2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a12</td>
+<td>c01</td>
+<td>8</td>
+<td>7</td>
+</tr>
+<tr>
+<td>b12</td>
+<td>c01</td>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>c12</td>
+<td>c01</td>
+<td>9</td>
+<td>8</td>
+</tr>
+<tr>
+<td>d12</td>
+<td>c01</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr>
+<td>a12</td>
+<td>c02</td>
+<td>7</td>
+<td>8</td>
+</tr>
+<tr>
+<td>b12</td>
+<td>c02</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>c12</td>
+<td>c02</td>
+<td>8</td>
+<td>9</td>
+</tr>
+<tr>
+<td>d12</td>
+<td>c02</td>
+<td>7</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p>Este banco de dados está definido <a href="bdAlunosDDL.txt">aqui</a></p>
+<h2 id="operações">Operações </h2>
+<p>Podemos fazer operações entre duas colunas.</p>
+<p>Por exemplo, o comando a seguir exibe uma coluna a mais com o resultado da soma das notas de NP1 e NP2</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> ra<span class="token punctuation">,</span> curso<span class="token punctuation">,</span> np1<span class="token punctuation">,</span> np2<span class="token punctuation">,</span> np1 <span class="token operator">+</span> np2 <span class="token keyword keyword-AS">AS</span> soma <span class="token keyword keyword-FROM">FROM</span> Notas<span class="token punctuation">;</span>
+</code></pre><table>
+<thead>
+<tr>
+<th>ra</th>
+<th>curso</th>
+<th>np1</th>
+<th>np2</th>
+<th>soma</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a12</td>
+<td>c01</td>
+<td>8.0</td>
+<td>7.0</td>
+<td>15.0</td>
+</tr>
+<tr>
+<td>b12</td>
+<td>c01</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>c12</td>
+<td>c01</td>
+<td>9.0</td>
+<td>8.0</td>
+<td>17.0</td>
+</tr>
+<tr>
+<td>d12</td>
+<td>c01</td>
+<td>3.0</td>
+<td>0.0</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>a12</td>
+<td>c02</td>
+<td>7.0</td>
+<td>8.0</td>
+<td>15.0</td>
+</tr>
+<tr>
+<td>b12</td>
+<td>c02</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>c12</td>
+<td>c02</td>
+<td>8.0</td>
+<td>9.0</td>
+<td>17.0</td>
+</tr>
+<tr>
+<td>d12</td>
+<td>c02</td>
+<td>7.0</td>
+<td>10.0</td>
+<td>17.0</td>
+</tr>
+</tbody>
+</table>
+<p>O comando a seguir irá calcular a média de cada aluno para cada matéria</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> ra<span class="token punctuation">,</span> curso<span class="token punctuation">,</span> np1<span class="token punctuation">,</span> np2<span class="token punctuation">,</span> <span class="token punctuation">(</span>np1 <span class="token operator">+</span> np2<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span> <span class="token keyword keyword-AS">AS</span> media <span class="token keyword keyword-FROM">FROM</span> Notas<span class="token punctuation">;</span>
+</code></pre><table>
+<thead>
+<tr>
+<th>ra</th>
+<th>curso</th>
+<th>np1</th>
+<th>np2</th>
+<th>media</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a12</td>
+<td>c01</td>
+<td>8.0</td>
+<td>7.0</td>
+<td>7.50000</td>
+</tr>
+<tr>
+<td>b12</td>
+<td>c01</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>3.50000</td>
+</tr>
+<tr>
+<td>c12</td>
+<td>c01</td>
+<td>9.0</td>
+<td>8.0</td>
+<td>8.50000</td>
+</tr>
+<tr>
+<td>d12</td>
+<td>c01</td>
+<td>3.0</td>
+<td>0.0</td>
+<td>1.50000</td>
+</tr>
+<tr>
+<td>a12</td>
+<td>c02</td>
+<td>7.0</td>
+<td>8.0</td>
+<td>7.50000</td>
+</tr>
+<tr>
+<td>b12</td>
+<td>c02</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>3.50000</td>
+</tr>
+<tr>
+<td>c12</td>
+<td>c02</td>
+<td>8.0</td>
+<td>9.0</td>
+<td>8.50000</td>
+</tr>
+<tr>
+<td>d12</td>
+<td>c02</td>
+<td>7.0</td>
+<td>10.0</td>
+<td>8.50000</td>
+</tr>
+</tbody>
+</table>
+<h2 id="least-e-greatest-maior-e-menor">LEAST e GREATEST (Maior e Menor) </h2>
+<p>A função <code>LEAST</code> retorna o menor dos seus argumentos recebidos.</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> ra<span class="token punctuation">,</span> curso<span class="token punctuation">,</span> np1<span class="token punctuation">,</span> np2<span class="token punctuation">,</span> LEAST<span class="token punctuation">(</span>np1<span class="token punctuation">,</span> np2<span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> menor_nota <span class="token keyword keyword-FROM">FROM</span> Notas<span class="token punctuation">;</span>
+</code></pre><table>
+<thead>
+<tr>
+<th>ra</th>
+<th>curso</th>
+<th>np1</th>
+<th>np2</th>
+<th>menor_nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a12</td>
+<td>c01</td>
+<td>8.0</td>
+<td>7.0</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>b12</td>
+<td>c01</td>
+<td>4.0</td>
+<td>3.0</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>c12</td>
+<td>c01</td>
+<td>9.0</td>
+<td>8.0</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>d12</td>
+<td>c01</td>
+<td>3.0</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>a12</td>
+<td>c02</td>
+<td>7.0</td>
+<td>8.0</td>
+<td>7.0</td>
+</tr>
+<tr>
+<td>b12</td>
+<td>c02</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>c12</td>
+<td>c02</td>
+<td>8.0</td>
+<td>9.0</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>d12</td>
+<td>c02</td>
+<td>7.0</td>
+<td>10.0</td>
+<td>7.0</td>
+</tr>
+</tbody>
+</table>
+<p>A função <code>GREATEST</code> retorna o maior.</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://dev.mysql.com/doc/refman/9.7/en/comparison-operators.html">https://dev.mysql.com/doc/refman/9.7/en/comparison-operators.html</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
 
       </div>
       

@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>04.agregacao</title>
+      <title>05.agregacao</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -29,6 +29,7 @@
       
 <h1 id="agregaçãofonte">Agregação<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> </h1>
 <p>Funções de agregação são aplicadas em um conjunto de dados definidos por um grupo.</p>
+<h2 id="o-banco-de-dados">O Banco de Dados </h2>
 <p>Considere as seguintes tabelas</p>
 <h5 id="alunos">Alunos </h5>
 <table>
@@ -264,7 +265,8 @@
 <p>Ao invés de usar uma função para simplesmente calcular a média todas as notas NP1 de todos os cursos e de todos os alunos, podemos calcular a média das notas <strong>para cada aluno</strong>.</p>
 <p>Para fazer isso podemos pedir para <strong>agrupar por alunos</strong>.</p>
 <p>Podemos ver as médias das NP1 de cada <strong>aluno</strong></p>
-<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> ra<span class="token punctuation">,</span> <span class="token function">AVG</span><span class="token punctuation">(</span>np1<span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> medias <span class="token keyword keyword-FROM">FROM</span> Notas <span class="token keyword keyword-GROUP">GROUP</span> <span class="token keyword keyword-BY">BY</span> ra<span class="token punctuation">;</span>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> ra<span class="token punctuation">,</span> <span class="token function">AVG</span><span class="token punctuation">(</span>np1<span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> medias 
+<span class="token keyword keyword-FROM">FROM</span> Notas <span class="token keyword keyword-GROUP">GROUP</span> <span class="token keyword keyword-BY">BY</span> ra<span class="token punctuation">;</span>
 </code></pre><table>
 <thead>
 <tr>
@@ -293,7 +295,8 @@
 </table>
 <p>Ao pedir para <strong>agrupar por ra</strong>, o resultado será separado em grupos definidos pelo ra, e aplicará a função dentro de cada grupo isoladamente.</p>
 <p>Se, por exemplo, você quiser saber a menor nota NP1 de cada aluno:</p>
-<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> ra<span class="token punctuation">,</span> <span class="token function">MIN</span><span class="token punctuation">(</span>np1<span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> minimo <span class="token keyword keyword-FROM">FROM</span> Notas <span class="token keyword keyword-GROUP">GROUP</span> <span class="token keyword keyword-BY">BY</span> ra<span class="token punctuation">;</span>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> ra<span class="token punctuation">,</span> <span class="token function">MIN</span><span class="token punctuation">(</span>np1<span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> minimo 
+<span class="token keyword keyword-FROM">FROM</span> Notas <span class="token keyword keyword-GROUP">GROUP</span> <span class="token keyword keyword-BY">BY</span> ra<span class="token punctuation">;</span>
 </code></pre><table>
 <thead>
 <tr>
@@ -321,7 +324,8 @@
 </tbody>
 </table>
 <p>Se você quiser saber a menor nota NP1 de cada curso:</p>
-<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> curso<span class="token punctuation">,</span> <span class="token function">MIN</span><span class="token punctuation">(</span>np1<span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> minimo <span class="token keyword keyword-FROM">FROM</span> Notas <span class="token keyword keyword-GROUP">GROUP</span> <span class="token keyword keyword-BY">BY</span> curso<span class="token punctuation">;</span>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> curso<span class="token punctuation">,</span> <span class="token function">MIN</span><span class="token punctuation">(</span>np1<span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> minimo 
+<span class="token keyword keyword-FROM">FROM</span> Notas <span class="token keyword keyword-GROUP">GROUP</span> <span class="token keyword keyword-BY">BY</span> curso<span class="token punctuation">;</span>
 </code></pre><table>
 <thead>
 <tr>
@@ -341,7 +345,8 @@
 </tbody>
 </table>
 <p>Se eu quiser contar quantos cursos cada aluno fez:</p>
-<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> ra<span class="token punctuation">,</span> <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token keyword keyword-DISTINCT">DISTINCT</span> curso<span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> qtd_curso <span class="token keyword keyword-FROM">FROM</span> Notas <span class="token keyword keyword-GROUP">GROUP</span> <span class="token keyword keyword-BY">BY</span> ra<span class="token punctuation">;</span>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> ra<span class="token punctuation">,</span> <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token keyword keyword-DISTINCT">DISTINCT</span> curso<span class="token punctuation">)</span> <span class="token keyword keyword-AS">AS</span> qtd_curso 
+<span class="token keyword keyword-FROM">FROM</span> Notas <span class="token keyword keyword-GROUP">GROUP</span> <span class="token keyword keyword-BY">BY</span> ra<span class="token punctuation">;</span>
 </code></pre><table>
 <thead>
 <tr>
