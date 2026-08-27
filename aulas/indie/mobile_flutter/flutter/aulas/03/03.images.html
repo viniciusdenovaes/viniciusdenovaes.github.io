@@ -90,6 +90,46 @@
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
+</code></pre><h3 id="configurações-de-box-fit">Configurações De <em>Box Fit</em> </h3>
+<p>Suponha que a sua imagem tem que caber em um espaço limitado, 200 por 200 por exemplo, existem configurações para configurar como colocar a imagem em um espaço limitante.</p>
+<p><img src="box_fit.png" alt="box fit"></p>
+<ul>
+<li><code>Fill</code>: Redimensiona a imagem para caber completamente no espaço, o que pode distorcer a imagem.</li>
+<li><code>Contain</code>: Redimensiona a imagem para caber no espaço sem distorcer, o que pode deixar algum espaço vazio.</li>
+<li><code>Cover</code>: Redimensiona a imagem para preencher completamente o espaço, sem distorcer, potencialmente cortando parte da imagem.</li>
+<li><code>Fit Width</code>: Redimensiona a imagem para caber em sua largura, deixando espaço vertical vazio.</li>
+<li><code>Fit Height</code>: Redimensiona a imagem para caber em sua altura, deixando espaço horizontal vazio.</li>
+<li><code>None</code>: Sem redimensionamento nem ajuste, mostrando a imagem em seu tamanho original.</li>
+<li><code>Scale Down</code>: Centraliza a imagem e diminui seu tamanho para caber no espaço limite.</li>
+</ul>
+<p>O atributo da imagem se chama <code>fit</code> e pode ter o valor <code>BoxFit.cover</code> por exemplo.</p>
+<p>Exemplo de uso da configuração:</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
+
+<span class="token class-name">String</span> urlKenBike <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'https://raw.githubusercontent.com/viniciusdenovaes/viniciusdenovaes.github.io/ef97590768143d6b219ee3a9bc8127bbd7226125/aulas/indie/mobile_flutter/flutter/aulas/04/kendrickElementBike.png'</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MainApp</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token keyword keyword-super">super</span><span class="token punctuation">.</span>key<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
+      home<span class="token punctuation">:</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
+        body<span class="token punctuation">:</span> <span class="token class-name">Center</span><span class="token punctuation">(</span>
+          child<span class="token punctuation">:</span> <span class="token class-name">Image</span><span class="token punctuation">.</span><span class="token function">network</span><span class="token punctuation">(</span>urlKenBike<span class="token punctuation">,</span> 
+              fit<span class="token punctuation">:</span> <span class="token class-name">BoxFit</span><span class="token punctuation">.</span>cover<span class="token punctuation">,</span>
+              height<span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+              width<span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+            <span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre><h2 id="icons">Icons </h2>
 <p>Podemos também criar inúmeros ícones já inclusos no Flutter.</p>
 <p>Crie um objeto <code>Icon</code> no lugar da imagem no projeto anterior. Este objeto receberá no constructor um ícone. Escreva <code>Icons.</code> e aperte <code>ctrl+space</code> para ver a infinidade de ícones disponíveis.</p>
