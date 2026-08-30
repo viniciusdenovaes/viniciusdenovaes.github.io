@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>03.images</title>
+      <title>04.colunas</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -27,86 +27,26 @@
     <body for="html-export">
       <div class="crossnote markdown-preview  ">
       
-<h1 id="imagens-e-iconsfonte">Imagens e Icons<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> </h1>
-<h2 id="imagens">Imagens </h2>
-<p>Para inserir uma imagem em uma tela podemos, entre outros,</p>
-<ul>
-<li>inserir uma imagem da web usando um link</li>
-<li>iserir usando uma imagem salva em uma pasta no projeto.</li>
-</ul>
-<h3 id="imagens-da-web">Imagens da web </h3>
-<p>O mais fácil é fazer à partir de um link da web.</p>
-<p>Comece um projeto novo vazio e, no lugar do texto, coloque uma imagem usando o constructor <code>Image.network(url)</code></p>
-<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
-
-<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">MainApp</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
-  <span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token keyword keyword-super">super</span><span class="token punctuation">.</span>key<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token metadata function">@override</span>
-  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword keyword-return">return</span> <span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
-      home<span class="token punctuation">:</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
-        body<span class="token punctuation">:</span> <span class="token class-name">Center</span><span class="token punctuation">(</span>
-          child<span class="token punctuation">:</span> <span class="token class-name">Image</span><span class="token punctuation">.</span><span class="token function">network</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'https://docs.flutter.dev/assets/images/dash/dash-fainting.gif'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-        <span class="token punctuation">)</span><span class="token punctuation">,</span>
-      <span class="token punctuation">)</span><span class="token punctuation">,</span>
-    <span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre><h3 id="imagens-do-projeto">Imagens do projeto </h3>
-<p>Podemos usar qualquer imagem salva no projeto: por convenção, crie a pasta <code>assets/images</code> na raíz do projeto e coloque suas imagens lá.</p>
-<p><strong>IMPORTANTE:</strong> adicione esta pasta na lista de assets no arquivo <code>pubspec.yaml</code></p>
-<p>O bloco que está assim</p>
-<pre data-role="codeBlock" data-info="yaml" class="language-yaml yaml"><code><span class="token key atrule">flutter</span><span class="token punctuation">:</span>
-  <span class="token key atrule">uses-material-design</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-</code></pre><p>Deve ficar assim</p>
-<pre data-role="codeBlock" data-info="yaml" class="language-yaml yaml"><code><span class="token key atrule">flutter</span><span class="token punctuation">:</span>
-  <span class="token key atrule">uses-material-design</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-  <span class="token key atrule">assets</span><span class="token punctuation">:</span>
-    <span class="token punctuation">-</span> assets/images/
-</code></pre><p>Se o seu aplicativo estiver rodando você deve reiniciar o aplicativo.</p>
-<p>Coloque as imagens que você usará em <code>assets/images</code> e use o constructor <code>Images.asset(path)</code> para inserir a imagem</p>
-<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
-
-<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">MainApp</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
-  <span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token keyword keyword-super">super</span><span class="token punctuation">.</span>key<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token metadata function">@override</span>
-  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword keyword-return">return</span> <span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
-      home<span class="token punctuation">:</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
-        body<span class="token punctuation">:</span> <span class="token class-name">Center</span><span class="token punctuation">(</span>
-          child<span class="token punctuation">:</span> <span class="token class-name">Image</span><span class="token punctuation">.</span><span class="token function">asset</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'assets/images/TachiFrida.jpg'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-        <span class="token punctuation">)</span><span class="token punctuation">,</span>
-      <span class="token punctuation">)</span><span class="token punctuation">,</span>
-    <span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre><h3 id="configurações-de-box-fit">Configurações De <em>Box Fit</em> </h3>
-<p>Suponha que a sua imagem tem que caber em um espaço limitado, 200 por 200 por exemplo, existem configurações para configurar como colocar a imagem em um espaço limitante.</p>
-<p><img src="box_fit.png" alt="box fit"></p>
-<ul>
-<li><code>Fill</code>: Redimensiona a imagem para caber completamente no espaço, o que pode distorcer a imagem.</li>
-<li><code>Contain</code>: Redimensiona a imagem para caber no espaço sem distorcer, o que pode deixar algum espaço vazio.</li>
-<li><code>Cover</code>: Redimensiona a imagem para preencher completamente o espaço, sem distorcer, potencialmente cortando parte da imagem.</li>
-<li><code>Fit Width</code>: Redimensiona a imagem para caber em sua largura, deixando espaço vertical vazio.</li>
-<li><code>Fit Height</code>: Redimensiona a imagem para caber em sua altura, deixando espaço horizontal vazio.</li>
-<li><code>None</code>: Sem redimensionamento nem ajuste, mostrando a imagem em seu tamanho original.</li>
-<li><code>Scale Down</code>: Centraliza a imagem e diminui seu tamanho para caber no espaço limite.</li>
-</ul>
-<p>O atributo da imagem se chama <code>fit</code> e pode ter o valor <code>BoxFit.cover</code> por exemplo.</p>
-<p>Exemplo de uso da configuração:</p>
+<h1 id="layout-de-linhas-e-colunasfonte">Layout de Linhas e Colunas<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> </h1>
+<p>As <em>Widgeds</em> <code>Column</code>, <code>Row</code> e <code>Stack</code> organizam seus conteúdos, cada uma usando uma lógica própria.</p>
+<p><img src="logicas.png" alt="as 3 logicas"></p>
+<h2 id="colunas">Colunas </h2>
+<p>O <code>Column</code> organiza uma lista de elementos empilhados de cima pra baixo.<br>
+Estes elementos precisam ser colocados como uma lista em seu atributo <code>children</code>.</p>
+<p>O atributo <code>mainAxisAlignment</code> configura como estes elementos serão alinhados. Por exemplo <code>mainAxisAlignment: MainAxisAlignment.spaceEvenly</code> irá deixar um espaço igual entre seus elementos e também no começo e no final.</p>
+<p><img src="columnAxis.png" alt="column axis aligment"></p>
+<p>O atributo <code>crossAxisAlignment</code> configura o alinhamento vertical, por exemplo <code>crossAxisAlignment: CrossAxisAlignment.center</code> alinha seus elementos de forma centralizada.</p>
+<p><img src="columnCross.png" alt="column Cross"></p>
+<p>Observe o seguinte exemplo em que temos um texto pequeno, uma imagem e um texto grande dentro de um <code>Column</code> organizado para ter um espaço igual entre seus elementos e centralizado verticalmente.</p>
+<h6 id="exemplo-column">Exemplo <code>Column</code> </h6>
 <pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
 
 <span class="token class-name">String</span> urlKenBike <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'https://raw.githubusercontent.com/viniciusdenovaes/viniciusdenovaes.github.io/ef97590768143d6b219ee3a9bc8127bbd7226125/aulas/indie/mobile_flutter/flutter/aulas/04/kendrickElementBike.png'</span></span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> lorem <span class="token operator">=</span> 
+<span class="token string-literal"><span class="token string">'''
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.
+'''</span></span><span class="token punctuation">;</span>
 
 <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -119,22 +59,36 @@
   <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword keyword-return">return</span> <span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
       home<span class="token punctuation">:</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
-        body<span class="token punctuation">:</span> <span class="token class-name">Center</span><span class="token punctuation">(</span>
-          child<span class="token punctuation">:</span> <span class="token class-name">Image</span><span class="token punctuation">.</span><span class="token function">network</span><span class="token punctuation">(</span>urlKenBike<span class="token punctuation">,</span> 
-              fit<span class="token punctuation">:</span> <span class="token class-name">BoxFit</span><span class="token punctuation">.</span>cover<span class="token punctuation">,</span>
+        body<span class="token punctuation">:</span> <span class="token class-name">Column</span><span class="token punctuation">(</span>
+          mainAxisAlignment<span class="token punctuation">:</span> <span class="token class-name">MainAxisAlignment</span><span class="token punctuation">.</span>spaceEvenly<span class="token punctuation">,</span>
+          crossAxisAlignment<span class="token punctuation">:</span> <span class="token class-name">CrossAxisAlignment</span><span class="token punctuation">.</span>center<span class="token punctuation">,</span>
+          children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Alguma coisa'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+            <span class="token class-name">Image</span><span class="token punctuation">.</span><span class="token function">network</span><span class="token punctuation">(</span>urlKenBike<span class="token punctuation">,</span> 
+              fit<span class="token punctuation">:</span> <span class="token class-name">BoxFit</span><span class="token punctuation">.</span>fitWidth<span class="token punctuation">,</span>
               height<span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
               width<span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
             <span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span>lorem<span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
         <span class="token punctuation">)</span><span class="token punctuation">,</span>
       <span class="token punctuation">)</span><span class="token punctuation">,</span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre><h2 id="icons">Icons </h2>
-<p>Podemos também criar inúmeros ícones já inclusos no Flutter.</p>
-<p>Crie um objeto <code>Icon</code> no lugar da imagem no projeto anterior. Este objeto receberá no constructor um ícone. Escreva <code>Icons.</code> e aperte <code>ctrl+space</code> para ver a infinidade de ícones disponíveis.</p>
-<p>No exemplo abaixo foi escolhido um ícone de compartilhamento, de tamanho 50 na cor laranja:</p>
-<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
+</code></pre><h6 id="resultado-column">Resultado <code>Column</code> </h6>
+<p><img src="column.png" alt="column"></p>
+<h2 id="row">Row </h2>
+<p>O <code>Row</code> usa a mesma lógica do <code>Column</code>, mas organiza seus elementos de forma horizontal.</p>
+<p><img src="rowAxis.png" alt="rowAxis"></p>
+<p><img src="rowCross.png" alt="rowCross"></p>
+<h6 id="exemplo-row">Exemplo <code>Row</code> </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token class-name">String</span> urlKenBike <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'https://raw.githubusercontent.com/viniciusdenovaes/viniciusdenovaes.github.io/ef97590768143d6b219ee3a9bc8127bbd7226125/aulas/indie/mobile_flutter/flutter/aulas/04/kendrickElementBike.png'</span></span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> lorem <span class="token operator">=</span> 
+<span class="token string-literal"><span class="token string">'''
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.
+'''</span></span><span class="token punctuation">;</span>
 
 <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -147,18 +101,131 @@
   <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword keyword-return">return</span> <span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
       home<span class="token punctuation">:</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
-        body<span class="token punctuation">:</span> <span class="token class-name">Center</span><span class="token punctuation">(</span>
-          child<span class="token punctuation">:</span> <span class="token class-name">Icon</span><span class="token punctuation">(</span><span class="token class-name">Icons</span><span class="token punctuation">.</span>share<span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>deepOrangeAccent<span class="token punctuation">,</span>size<span class="token punctuation">:</span> <span class="token number">50</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        body<span class="token punctuation">:</span> <span class="token class-name">Row</span><span class="token punctuation">(</span>
+          mainAxisAlignment<span class="token punctuation">:</span> <span class="token class-name">MainAxisAlignment</span><span class="token punctuation">.</span>spaceEvenly<span class="token punctuation">,</span>
+          crossAxisAlignment<span class="token punctuation">:</span> <span class="token class-name">CrossAxisAlignment</span><span class="token punctuation">.</span>center<span class="token punctuation">,</span>
+          children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Alguma coisa'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+            <span class="token class-name">Image</span><span class="token punctuation">.</span><span class="token function">network</span><span class="token punctuation">(</span>urlKenBike<span class="token punctuation">,</span> 
+              fit<span class="token punctuation">:</span> <span class="token class-name">BoxFit</span><span class="token punctuation">.</span>fitWidth<span class="token punctuation">,</span>
+              height<span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+              width<span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+            <span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span>lorem<span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
         <span class="token punctuation">)</span><span class="token punctuation">,</span>
       <span class="token punctuation">)</span><span class="token punctuation">,</span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre><p><img src="runIcon.png" alt="alt text"></p>
+</code></pre><h6 id="resultado-row">Resultado <code>Row</code> </h6>
+<p><img src="row.png" alt="row"></p>
+<h2 id="juntando-column-e-row">Juntando <code>Column</code> e <code>Row</code> </h2>
+<p>Podemos juntar mais de um layout, um dentro do outro.</p>
+<p>No exemplo abaixo fizemos uma coluna, em que um dos elementos da coluna é uma linha contendo ícones.</p>
+<p><img src="columnRow.png" alt="columnRow"></p>
+<h6 id="exemplo-column-row">Exemplo <code>Column</code> <code>Row</code> </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
+
+<span class="token class-name">String</span> urlKenBike <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'https://raw.githubusercontent.com/viniciusdenovaes/viniciusdenovaes.github.io/ef97590768143d6b219ee3a9bc8127bbd7226125/aulas/indie/mobile_flutter/flutter/aulas/04/kendrickElementBike.png'</span></span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> lorem <span class="token operator">=</span> 
+<span class="token string-literal"><span class="token string">'''
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.
+'''</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MainApp</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token keyword keyword-super">super</span><span class="token punctuation">.</span>key<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
+      home<span class="token punctuation">:</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
+        body<span class="token punctuation">:</span> <span class="token class-name">Column</span><span class="token punctuation">(</span>
+          mainAxisAlignment<span class="token punctuation">:</span> <span class="token class-name">MainAxisAlignment</span><span class="token punctuation">.</span>spaceEvenly<span class="token punctuation">,</span>
+          crossAxisAlignment<span class="token punctuation">:</span> <span class="token class-name">CrossAxisAlignment</span><span class="token punctuation">.</span>center<span class="token punctuation">,</span>
+          children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Alguma coisa'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+            <span class="token class-name">Image</span><span class="token punctuation">.</span><span class="token function">network</span><span class="token punctuation">(</span>urlKenBike<span class="token punctuation">,</span> 
+              fit<span class="token punctuation">:</span> <span class="token class-name">BoxFit</span><span class="token punctuation">.</span>cover<span class="token punctuation">,</span>
+              height<span class="token punctuation">:</span> <span class="token number">400</span><span class="token punctuation">,</span>
+              width<span class="token punctuation">:</span> <span class="token number">400</span><span class="token punctuation">,</span>
+            <span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token class-name">Row</span><span class="token punctuation">(</span>
+              mainAxisAlignment<span class="token punctuation">:</span> <span class="token class-name">MainAxisAlignment</span><span class="token punctuation">.</span>spaceAround<span class="token punctuation">,</span>
+              crossAxisAlignment<span class="token punctuation">:</span> <span class="token class-name">CrossAxisAlignment</span><span class="token punctuation">.</span>center<span class="token punctuation">,</span>
+              children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                <span class="token class-name">Icon</span><span class="token punctuation">(</span><span class="token class-name">Icons</span><span class="token punctuation">.</span>share<span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>deepOrangeAccent<span class="token punctuation">,</span> size<span class="token punctuation">:</span> <span class="token number">80</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+                <span class="token class-name">Icon</span><span class="token punctuation">(</span><span class="token class-name">Icons</span><span class="token punctuation">.</span>face<span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>deepOrangeAccent<span class="token punctuation">,</span> size<span class="token punctuation">:</span> <span class="token number">80</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+                <span class="token class-name">Icon</span><span class="token punctuation">(</span><span class="token class-name">Icons</span><span class="token punctuation">.</span>plumbing<span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>deepOrangeAccent<span class="token punctuation">,</span> size<span class="token punctuation">:</span> <span class="token number">80</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+                <span class="token class-name">Icon</span><span class="token punctuation">(</span><span class="token class-name">Icons</span><span class="token punctuation">.</span>food_bank<span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>deepOrangeAccent<span class="token punctuation">,</span> size<span class="token punctuation">:</span> <span class="token number">80</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+              <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span>lorem<span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h6 id="resultado-column-row">Resultado <code>Column</code> <code>Row</code> </h6>
+<p><img src="resultadoColumnRow.png" alt="resultadoColumnRow"></p>
+<h2 id="stack">Stack </h2>
+<p>O <em>widget</em> <code>Stack</code> organiza os elementos de forma sobreposta. Cada elemento sobrepõe o anterior.</p>
+<p>Seu atributo <code>alignment</code> configura onde seus elementos serão alinhados, por exemplo <code>alignment: AlignmentGeometry.xy(0, -1),</code> alinha os elementos no horizontalmente no centro e verticalmente no topo.</p>
+<p><img src="stackAligment.png" alt="stackAligment"></p>
+<p>Por exemplo, no próximo exemplo temos uma imagem com uma linha de ícones sobrepostos à imagem.</p>
+<h6 id="exemplo-stack">Exemplo <code>Stack</code> </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MainApp</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token keyword keyword-super">super</span><span class="token punctuation">.</span>key<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
+      home<span class="token punctuation">:</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
+        body<span class="token punctuation">:</span> <span class="token class-name">Column</span><span class="token punctuation">(</span>
+          mainAxisAlignment<span class="token punctuation">:</span> <span class="token class-name">MainAxisAlignment</span><span class="token punctuation">.</span>spaceEvenly<span class="token punctuation">,</span>
+          crossAxisAlignment<span class="token punctuation">:</span> <span class="token class-name">CrossAxisAlignment</span><span class="token punctuation">.</span>center<span class="token punctuation">,</span>
+          children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Alguma coisa'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+            <span class="token class-name">Stack</span><span class="token punctuation">(</span>
+              alignment<span class="token punctuation">:</span> <span class="token class-name">AlignmentGeometry</span><span class="token punctuation">.</span><span class="token function">xy</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                <span class="token class-name">Image</span><span class="token punctuation">.</span><span class="token function">network</span><span class="token punctuation">(</span>urlKenBike<span class="token punctuation">,</span> 
+                  fit<span class="token punctuation">:</span> <span class="token class-name">BoxFit</span><span class="token punctuation">.</span>fitWidth<span class="token punctuation">,</span>
+                <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token class-name">Row</span><span class="token punctuation">(</span>
+                  mainAxisAlignment<span class="token punctuation">:</span> <span class="token class-name">MainAxisAlignment</span><span class="token punctuation">.</span>end<span class="token punctuation">,</span>
+                  crossAxisAlignment<span class="token punctuation">:</span> <span class="token class-name">CrossAxisAlignment</span><span class="token punctuation">.</span>center<span class="token punctuation">,</span>
+                  children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                    <span class="token class-name">Icon</span><span class="token punctuation">(</span><span class="token class-name">Icons</span><span class="token punctuation">.</span>share<span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>deepOrangeAccent<span class="token punctuation">,</span> size<span class="token punctuation">:</span> <span class="token number">80</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+                    <span class="token class-name">Icon</span><span class="token punctuation">(</span><span class="token class-name">Icons</span><span class="token punctuation">.</span>face<span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>deepOrangeAccent<span class="token punctuation">,</span> size<span class="token punctuation">:</span> <span class="token number">80</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+                    <span class="token class-name">Icon</span><span class="token punctuation">(</span><span class="token class-name">Icons</span><span class="token punctuation">.</span>plumbing<span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>deepOrangeAccent<span class="token punctuation">,</span> size<span class="token punctuation">:</span> <span class="token number">80</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+                    <span class="token class-name">Icon</span><span class="token punctuation">(</span><span class="token class-name">Icons</span><span class="token punctuation">.</span>food_bank<span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>deepOrangeAccent<span class="token punctuation">,</span> size<span class="token punctuation">:</span> <span class="token number">80</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+                  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">)</span><span class="token punctuation">,</span> 
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h6 id="resultado-stack">Resultado <code>Stack</code> </h6>
+<p><img src="resultadoStack.png" alt="resultadoStack"></p>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p><a href="https://docs.flutterflow.io/resources/ui/widgets/image/">https://docs.flutterflow.io/resources/ui/widgets/image/</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+<li id="fn1" class="footnote-item"><p><a href="https://docs.flutterflow.io/resources/ui/widgets/composing-widgets/rows-column-stack/">https://docs.flutterflow.io/resources/ui/widgets/composing-widgets/rows-column-stack/</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
