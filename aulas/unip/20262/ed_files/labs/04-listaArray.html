@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>ed</title>
+      <title>04-listaArray</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -27,20 +27,107 @@
     <body for="html-export">
       <div class="crossnote markdown-preview  ">
       
-<h1 id="estruturas-de-dados">Estruturas de Dados </h1>
-<h2 id="labs">Labs </h2>
-<h4 id="capacidade-limitada">Capacidade Limitada </h4>
+<h1 id="lista">Lista </h1>
+<p>Neste lab vamos ver a interface <code>Lista</code>.</p>
+<p>Uma lista é uma coleção de elementos indexados, com índices variando de 0 até o tamanho da lista menos 1.</p>
+<p>Uma lista com 3 elementos tem os índices 0, 1 e 2.</p>
+<p>Em <code>Java</code> temos a interface <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a> com uma infinidade de métodos a serem implementados.</p>
+<p>Neste laboratório vamos implementar apenas alguns:</p>
+<h2 id="interface">Interface </h2>
+<p>Fornecida a seguinte interface:</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">Lista</span><span class="token punctuation">{</span>
+	
+	<span class="token keyword keyword-boolean">boolean</span> <span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-int">int</span> <span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token keyword keyword-int">int</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-void">void</span> <span class="token function">set</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> index<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token keyword keyword-void">void</span> <span class="token function">pushUltimo</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-void">void</span> <span class="token function">pushPrimeiro</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-int">int</span> <span class="token function">popUltimo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-int">int</span> <span class="token function">popPrimeiro</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token keyword keyword-void">void</span> <span class="token function">insert</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> index<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-void">void</span> <span class="token function">removeAt</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-boolean">boolean</span> <span class="token function">removeElement</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-boolean">boolean</span> <span class="token function">contains</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>Você deve fazer a implementação desta coleção, que deve ter as seguintes funcionalidade:</p>
 <ul>
-<li><a href="ed_files/labs/00-bag_sem_iterador.html">Lab00 Estrutura Bag sem Iterador</a></li>
-<li><a href="ed_files/labs/01-pilha_limitada.html">Lab01 Pilha Limitada</a></li>
+<li><code>boolean isEmpty()</code> se ela está vazia</li>
+<li><code>int size()</code> qual é o tamanho dela</li>
+<li><code>int get(int i)</code> retorna o elemento na posição <code>i</code></li>
+<li><code>void set(int index, int element)</code>: coloca o elemento <code>element</code> na posição <code>index</code></li>
+<li><code>void pushUltimo(int e)</code> insere o elemento <code>e</code> na <strong>última</strong> posição</li>
+<li><code>void pushPrimeiro(int e)</code> insere o elemento <code>e</code> na <strong>primeira</strong> posição</li>
+<li><code>int popUltimo()</code>: retorna e retira o elemento da <strong>última</strong> posição</li>
+<li><code>int popPrimeiro()</code> retorna e retira o elemento da <strong>primeira</strong> posição</li>
+<li><code>void insert(int index, int element)</code> insere o elemento <code>element</code> no indice <code>index</code> <strong>sem apagar nenhum elemento da lista</strong>, ou seja, todos elementos da posição <code>index</code> e à direita, serão passados uma posição para a direita.</li>
+<li><code>void removeAt(int index)</code> remove o elemento da posição <code>index</code> passando todos elementos à direita de <code>index</code> uma posição para a esquerda.</li>
+<li><code>boolean removeElement(int element)</code> encontra e remove <strong>a primeira aparição</strong> do elemento <code>element</code>, retorna <code>true</code> caso o elemento tenha sido encontrado e removido.</li>
+<li><code>boolean contains(int element)</code> responde se a lista contem o elemento <code>element</code></li>
 </ul>
-<h4 id="capacidade-dinâmica">Capacidade Dinâmica </h4>
-<ul>
-<li><a href="ed_files/labs/02-pilha_capacidade_dinamica.html">Lab02 Pilha</a></li>
-<li><a href="ed_files/labs/03-fila.html">Lab03 Filas</a></li>
-<li><a href="ed_files/labs/04-listaArray.html">Lab04 Lista com Arrays</a></li>
-</ul>
-<h4 id="lista-ligada">Lista Ligada </h4>
+<p><strong>Dica</strong> Lembre de reutilizar métodos redundates. Como <code>popPrimeiro()</code> pode apenas utilizar o <code>removeAt(0)</code><br>
+<strong>Dica2</strong> Você pode criar métodos para auxiliar outros métodos, por exemplo, um método <code>int indexOf(int element)</code> que retorna o índice de certo elemento, e -1 caso o elemento não esteja presente, pode ajudar nos métodos <code>contains</code> e <code>removeElement</code>.</p>
+<h4 id="teste">Teste </h4>
+<p>Use o <a href="https://github.com/viniciusdenovaes/AulaUnipEstruturasDeDados/blob/3d5cb8d34ef3e9ad19ec0c06662c4d2fe0ba468c/Estudo03Listas/src/teste/TesteListas.java">seguinte teste</a> e compare com a saída:</p>
+<h6 id="saída">Saída </h6>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>
+Testando Lista Array:
+size: 0
+isEmpty? true
+ListaArray[] 
+push ultimo 1 2 3
+size: 3
+isEmpty? false
+ListaArray[1, 2, 3, ] 
+push primeiro 4 5 6
+ListaArray[6, 5, 4, 1, 2, 3, ] 
+pop ultimo: 3
+pop primeiro: 6
+ListaArray[5, 4, 1, 2, ] 
+qual elemento esta na posicao 1? 4
+Colocando o 10 naposicao 1
+ListaArray[5, 10, 1, 2, ] 
+inserindo o 20 na posicao 1
+ListaArray[5, 20, 10, 1, 2, ] 
+lista contem o 30? false
+lista contem o 20? true
+removendo o 20: true
+lista contem o 20? false
+removendo o 20: false
+lista contem o 20? false
+ListaArray[5, 10, 1, 2, ] 
+removendo o elemento na posicao 1
+ListaArray[5, 1, 2, ] 
+</code></pre><h4 id="respostashttpsgithubcomviniciusdenovaesaulaunipestruturasdedadostree3d5cb8d34ef3e9ad19ec0c06662c4d2fe0ba468cestudo03listas"><a href="https://github.com/viniciusdenovaes/AulaUnipEstruturasDeDados/tree/3d5cb8d34ef3e9ad19ec0c06662c4d2fe0ba468c/Estudo03Listas">Respostas</a> </h4>
+<h3 id="desafio-opcional-implementando-iterable">[Desafio Opcional] Implementando <code>Iterable</code> </h3>
+<p>Ampliando o desafio, você pode implementar a interface <code>Iterable</code>, é a interface que possibilita usar o <code>for-each</code> para iterar na sua coleção.</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-for">for</span><span class="token punctuation">(</span><span class="token keyword keyword-var">var</span> e<span class="token operator">:</span> lista<span class="token punctuation">)</span>
+	<span class="token function">sout</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p><strong>Observe</strong> que certas coleções, como conjuntos, maps e árvores, não iteram de outra maneira a não ser pelo iterador.</p>
+<h4 id="bônus-interface-com-iterable">[Bônus] Interface com <code>Iterable</code> </h4>
+<p>Adicione o <code>extends Iterable&lt;Integer&gt;</code> para dizer que a sua <code>Lista</code> é iterável</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">Lista</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Iterable</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>
+	
+	<span class="token keyword keyword-boolean">boolean</span> <span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-int">int</span> <span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token keyword keyword-int">int</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-void">void</span> <span class="token function">set</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> index<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token keyword keyword-void">void</span> <span class="token function">pushUltimo</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-void">void</span> <span class="token function">pushPrimeiro</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-int">int</span> <span class="token function">popUltimo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-int">int</span> <span class="token function">popPrimeiro</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token keyword keyword-void">void</span> <span class="token function">insert</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> index<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-void">void</span> <span class="token function">removeAt</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-boolean">boolean</span> <span class="token function">removeElement</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-boolean">boolean</span> <span class="token function">contains</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h4 id="respostashttpsgithubcomviniciusdenovaesaulaunipestruturasdedadostree3d5cb8d34ef3e9ad19ec0c06662c4d2fe0ba468cestudo03listasiterablesrc"><a href="https://github.com/viniciusdenovaes/AulaUnipEstruturasDeDados/tree/3d5cb8d34ef3e9ad19ec0c06662c4d2fe0ba468c/Estudo03ListasIterable/src">Respostas</a> </h4>
 
       </div>
       

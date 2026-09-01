@@ -7,4 +7,5 @@
 #### Capacidade Dinâmica
 - [Lab02 Pilha](ed_files/labs/02-pilha_capacidade_dinamica.html)
 - [Lab03 Filas](ed_files/labs/03-fila.html)
+- [Lab04 Lista com Arrays](ed_files/labs/04-listaArray.html)
 #### Lista Ligada
