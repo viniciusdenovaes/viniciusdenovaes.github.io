@@ -1,4 +1,4 @@
-# Lista
+# Lista Usando Arrays
 
 Neste lab vamos ver a interface `Lista`.
 
