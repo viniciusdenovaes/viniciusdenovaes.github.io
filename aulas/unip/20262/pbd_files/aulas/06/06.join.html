@@ -45,7 +45,7 @@ html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-
 <tr>
 <th>id</th>
 <th>nome</th>
-<th>id_pais</th>
+<th>country_id</th>
 </tr>
 </thead>
 <tbody>
@@ -103,9 +103,147 @@ html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-
 <p>O comando <code>JOIN</code> sempre retorna uma tabela como combinação de duas tabelas combinadas: todos os dados da primeira tabela cruzados com todos os dados da segunda tabela <strong>filtrados por uma coluna em comum</strong>. Por conta do filtro, o resultado tipicamente não será um produto cartesiano entre as duas tabelas, ou seja, não será cada linha da primeira combinado com cada linha da segunda, será uma porção bem menor.</p>
 <img src="innerJoin.png" style="background-color: white; display: block; margin-left: auto; margin-right: auto;" alt="My Image">
 <p>Aqui vamos tratar 6 tipos de <code>JOIN</code>:</p>
-<ul>
-<li><code>INNER JOIN</code>: O mais comum de todos irá retornar todos os dados que tem um relacionamento</li>
-</ul>
+<h3 id="inner-join">INNER JOIN </h3>
+<p>O mais comum de todos, irá retornar todos os dados que tem um relacionamento.</p>
+<h5 id="sintaxe">Sintaxe </h5>
+<p>Na sintaxe use o <code>SELECT</code> para escolher quais colunas você quer que apareça na tabela resultado. Como será o resultado da combinação de duas tabelas, você deve escolher o nome das colunas seguidas do nome da tabela a qual ela pertence.</p>
+<p>No comando <code>FROM</code> você deve fornecer o nome das duas tabelas que você quer combinar: <code>table1 INNER JOIN table2</code>.</p>
+<p>Por fim você deve especificar por qual coluna as duas tabelas estão relacionadas usando o comando <code>ON</code> especificando a coluna da primeira e da segunda tabela.</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> table1<span class="token punctuation">.</span>column1<span class="token punctuation">,</span> table1<span class="token punctuation">.</span>column2<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span> table2<span class="token punctuation">.</span>column1<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token keyword keyword-FROM">FROM</span> table1
+<span class="token keyword keyword-INNER">INNER</span> <span class="token keyword keyword-JOIN">JOIN</span> table2
+<span class="token keyword keyword-ON">ON</span> table1<span class="token punctuation">.</span>condition_column <span class="token operator">=</span> table2<span class="token punctuation">.</span>condition_column<span class="token punctuation">;</span>
+</code></pre><p>Observe o seguinte exemplo onde listamos cada jogador relacionado com seu país:</p>
+<h6 id="exemplo-inner-join">Exemplo <code>INNER JOIN</code> </h6>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> Players<span class="token punctuation">.</span>nome <span class="token keyword keyword-AS">AS</span> nome_player<span class="token punctuation">,</span> country<span class="token punctuation">.</span>nome <span class="token keyword keyword-AS">AS</span> nome_country<span class="token punctuation">,</span> country<span class="token punctuation">.</span>id<span class="token punctuation">,</span> players<span class="token punctuation">.</span>country_id 
+<span class="token keyword keyword-FROM">FROM</span> Players <span class="token keyword keyword-INNER">INNER</span> <span class="token keyword keyword-JOIN">JOIN</span> Country
+<span class="token keyword keyword-ON">ON</span> Players<span class="token punctuation">.</span>country_id<span class="token operator">=</span>Country<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
+</code></pre><h6 id="resultado-inner-join">Resultado <code>INNER JOIN</code> </h6>
+<table>
+<thead>
+<tr>
+<th>nome_player</th>
+<th>nome_country</th>
+<th>id</th>
+<th>country_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ana</td>
+<td>Brasil</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Beto</td>
+<td>Brasil</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Dani</td>
+<td>Uruguai</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>Perceba que o jogador <code>Carla</code> não tem um país cadastrado com seu <code>id_country</code>, então não aparece esta entrada. Assim como os países <code>Paraguai</code> e <code>Chile</code>, pois estes não têm nenhum jogador relacionado.</p>
+<h3 id="left-join">LEFT JOIN </h3>
+<p>Igual ao <code>INNER JOIN</code>, porém irá manter os dados da tabela da esquerda, mesmo que estes não tenham nenhum relacionamento com dados da direita.</p>
+<h6 id="exemplo-left-join">Exemplo <code>LEFT JOIN</code> </h6>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> Players<span class="token punctuation">.</span>nome <span class="token keyword keyword-AS">AS</span> nome_player<span class="token punctuation">,</span> country<span class="token punctuation">.</span>nome <span class="token keyword keyword-AS">AS</span> nome_country<span class="token punctuation">,</span> country<span class="token punctuation">.</span>id<span class="token punctuation">,</span> players<span class="token punctuation">.</span>country_id 
+<span class="token keyword keyword-FROM">FROM</span> Players <span class="token keyword keyword-LEFT">LEFT</span> <span class="token keyword keyword-JOIN">JOIN</span> Country
+<span class="token keyword keyword-ON">ON</span> Players<span class="token punctuation">.</span>country_id<span class="token operator">=</span>Country<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
+</code></pre><h6 id="resultado-left-join">Resultado <code>LEFT JOIN</code> </h6>
+<table>
+<thead>
+<tr>
+<th>nome_player</th>
+<th>nome_country</th>
+<th>id</th>
+<th>country_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ana</td>
+<td>Brasil</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Beto</td>
+<td>Brasil</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Carla</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Dani</td>
+<td>Uruguai</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>Perceba que mantemos todos os dados da <strong>primeira</strong> tabela, mesmo os que não estão relacionados. O seus dados, que não se encontram na segunda tabela, serão tratados como <code>nulo</code>.</p>
+<h3 id="right-join">RIGHT JOIN </h3>
+<p>Igual ao <code>LEFT JOIN</code>, porém irá manter os dados da tabela da direita ao invés da esquerda.</p>
+<h6 id="exemplo-right-join">Exemplo <code>RIGHT JOIN</code> </h6>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> Players<span class="token punctuation">.</span>nome <span class="token keyword keyword-AS">AS</span> nome_player<span class="token punctuation">,</span> country<span class="token punctuation">.</span>nome <span class="token keyword keyword-AS">AS</span> nome_country<span class="token punctuation">,</span> country<span class="token punctuation">.</span>id<span class="token punctuation">,</span> players<span class="token punctuation">.</span>country_id 
+<span class="token keyword keyword-FROM">FROM</span> Players <span class="token keyword keyword-RIGHT">RIGHT</span> <span class="token keyword keyword-JOIN">JOIN</span> Country
+<span class="token keyword keyword-ON">ON</span> Players<span class="token punctuation">.</span>country_id<span class="token operator">=</span>Country<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
+</code></pre><h6 id="resultado-right-join">Resultado <code>RIGHT JOIN</code> </h6>
+<table>
+<thead>
+<tr>
+<th>nome_player</th>
+<th>nome_country</th>
+<th>id</th>
+<th>country_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ana</td>
+<td>Brasil</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Beto</td>
+<td>Brasil</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Dani</td>
+<td>Uruguai</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>Paraguai</td>
+<td>3</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>Chile</td>
+<td>4</td>
+<td>NULL</td>
+</tr>
+</tbody>
+</table>
+<p>Perceba que mantemos todos os dados da <strong>segunda</strong> tabela, mesmo os que não estão relacionados. O seus dados, que não se encontram na primeira tabela, serão tratados como <code>nulo</code>.</p>
 
       </div>
       
