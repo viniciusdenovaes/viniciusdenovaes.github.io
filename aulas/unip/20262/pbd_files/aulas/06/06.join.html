@@ -151,7 +151,8 @@ html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-
 </table>
 <p>Perceba que o jogador <code>Carla</code> não tem um país cadastrado com seu <code>id_country</code>, então não aparece esta entrada. Assim como os países <code>Paraguai</code> e <code>Chile</code>, pois estes não têm nenhum jogador relacionado.</p>
 <h3 id="left-join">LEFT JOIN </h3>
-<p>Igual ao <code>INNER JOIN</code>, porém irá manter os dados da tabela da esquerda, mesmo que estes não tenham nenhum relacionamento com dados da direita.</p>
+<p>Similar ao <code>INNER JOIN</code>, porém irá manter os dados da tabela da esquerda, mesmo que estes não tenham nenhum relacionamento com dados da direita.</p>
+<img src="leftJoin.png" style="background-color: white; display: block; margin-left: auto; margin-right: auto;" alt="My Image">
 <h6 id="exemplo-left-join">Exemplo <code>LEFT JOIN</code> </h6>
 <pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> Players<span class="token punctuation">.</span>nome <span class="token keyword keyword-AS">AS</span> nome_player<span class="token punctuation">,</span> country<span class="token punctuation">.</span>nome <span class="token keyword keyword-AS">AS</span> nome_country<span class="token punctuation">,</span> country<span class="token punctuation">.</span>id<span class="token punctuation">,</span> players<span class="token punctuation">.</span>country_id 
 <span class="token keyword keyword-FROM">FROM</span> Players <span class="token keyword keyword-LEFT">LEFT</span> <span class="token keyword keyword-JOIN">JOIN</span> Country
@@ -196,6 +197,7 @@ html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-
 <p>Perceba que mantemos todos os dados da <strong>primeira</strong> tabela, mesmo os que não estão relacionados. O seus dados, que não se encontram na segunda tabela, serão tratados como <code>nulo</code>.</p>
 <h3 id="right-join">RIGHT JOIN </h3>
 <p>Igual ao <code>LEFT JOIN</code>, porém irá manter os dados da tabela da direita ao invés da esquerda.</p>
+<img src="rightJoin.png" style="background-color: white; display: block; margin-left: auto; margin-right: auto;" alt="My Image">
 <h6 id="exemplo-right-join">Exemplo <code>RIGHT JOIN</code> </h6>
 <pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> Players<span class="token punctuation">.</span>nome <span class="token keyword keyword-AS">AS</span> nome_player<span class="token punctuation">,</span> country<span class="token punctuation">.</span>nome <span class="token keyword keyword-AS">AS</span> nome_country<span class="token punctuation">,</span> country<span class="token punctuation">.</span>id<span class="token punctuation">,</span> players<span class="token punctuation">.</span>country_id 
 <span class="token keyword keyword-FROM">FROM</span> Players <span class="token keyword keyword-RIGHT">RIGHT</span> <span class="token keyword keyword-JOIN">JOIN</span> Country
@@ -244,6 +246,307 @@ html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-
 </tbody>
 </table>
 <p>Perceba que mantemos todos os dados da <strong>segunda</strong> tabela, mesmo os que não estão relacionados. O seus dados, que não se encontram na primeira tabela, serão tratados como <code>nulo</code>.</p>
+<h3 id="self-join">SELF JOIN </h3>
+<p>Podemos cruzar os dados de uma tabela com ela mesmo.</p>
+<h5 id="sintaxe-1">sintaxe </h5>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> column_name<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+<span class="token keyword keyword-FROM">FROM</span> table1 T1<span class="token punctuation">,</span> table1 T2
+<span class="token keyword keyword-WHERE">WHERE</span> condition<span class="token punctuation">;</span>
+</code></pre><p>Suponha que queremos fazer uma partida com cada jogador contra cada jogador:</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> Players1<span class="token punctuation">.</span>nome <span class="token keyword keyword-AS">AS</span> player1<span class="token punctuation">,</span> Players2<span class="token punctuation">.</span>nome <span class="token keyword keyword-AS">AS</span> player2
+<span class="token keyword keyword-FROM">FROM</span> Players <span class="token keyword keyword-AS">AS</span> Players1<span class="token punctuation">,</span> Players <span class="token keyword keyword-as">as</span> Players2
+<span class="token keyword keyword-WHERE">WHERE</span> Players1<span class="token punctuation">.</span>nome<span class="token operator">&lt;&gt;</span>Players2<span class="token punctuation">.</span>nome<span class="token punctuation">;</span>
+</code></pre><table>
+<thead>
+<tr>
+<th>player1</th>
+<th>player2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Beto</td>
+<td>Ana</td>
+</tr>
+<tr>
+<td>Carla</td>
+<td>Ana</td>
+</tr>
+<tr>
+<td>Dani</td>
+<td>Ana</td>
+</tr>
+<tr>
+<td>Ana</td>
+<td>Beto</td>
+</tr>
+<tr>
+<td>Carla</td>
+<td>Beto</td>
+</tr>
+<tr>
+<td>Dani</td>
+<td>Beto</td>
+</tr>
+<tr>
+<td>Ana</td>
+<td>Carla</td>
+</tr>
+<tr>
+<td>Beto</td>
+<td>Carla</td>
+</tr>
+<tr>
+<td>Dani</td>
+<td>Carla</td>
+</tr>
+<tr>
+<td>Ana</td>
+<td>Dani</td>
+</tr>
+<tr>
+<td>Beto</td>
+<td>Dani</td>
+</tr>
+<tr>
+<td>Carla</td>
+<td>Dani</td>
+</tr>
+</tbody>
+</table>
+<p>Perceba que temos repetições onde temos <code>Ana</code>x<code>Beto</code> e <code>Beto</code>x<code>Ana</code></p>
+<h4 id="retirando-repetições">Retirando repetições </h4>
+<p>Podemos retirar as repetições trocando <code>Players1.nome&lt;&gt;Players2.nome</code> por <code>Players1.nome &lt; Players2.nome</code></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> Players1<span class="token punctuation">.</span>nome <span class="token keyword keyword-AS">AS</span> player1<span class="token punctuation">,</span> Players2<span class="token punctuation">.</span>nome <span class="token keyword keyword-AS">AS</span> player2
+<span class="token keyword keyword-FROM">FROM</span> Players <span class="token keyword keyword-AS">AS</span> Players1<span class="token punctuation">,</span> Players <span class="token keyword keyword-as">as</span> Players2
+<span class="token keyword keyword-WHERE">WHERE</span> Players1<span class="token punctuation">.</span>nome <span class="token operator">&lt;</span> Players2<span class="token punctuation">.</span>nome<span class="token punctuation">;</span>
+</code></pre><table>
+<thead>
+<tr>
+<th>player1</th>
+<th>player2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ana</td>
+<td>Beto</td>
+</tr>
+<tr>
+<td>Ana</td>
+<td>Carla</td>
+</tr>
+<tr>
+<td>Beto</td>
+<td>Carla</td>
+</tr>
+<tr>
+<td>Ana</td>
+<td>Dani</td>
+</tr>
+<tr>
+<td>Beto</td>
+<td>Dani</td>
+</tr>
+<tr>
+<td>Carla</td>
+<td>Dani</td>
+</tr>
+</tbody>
+</table>
+<h3 id="full-outer-join">FULL OUTER JOIN </h3>
+<img src="outerJoin.png" style="background-color: white; display: block; margin-left: auto; margin-right: auto;" alt="My Image">
+<p>Podemos combinar o <code>LEFT</code> e o <code>RIGHT</code> <code>JOIN</code> se quisermos manter tanto dados da primeira, quanto da segunda tabela:</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> Players<span class="token punctuation">.</span>nome <span class="token keyword keyword-AS">AS</span> nome_player<span class="token punctuation">,</span> country<span class="token punctuation">.</span>nome <span class="token keyword keyword-AS">AS</span> nome_country<span class="token punctuation">,</span> country<span class="token punctuation">.</span>id<span class="token punctuation">,</span> players<span class="token punctuation">.</span>country_id 
+<span class="token keyword keyword-FROM">FROM</span> Players <span class="token keyword keyword-RIGHT">RIGHT</span> <span class="token keyword keyword-JOIN">JOIN</span> Country
+<span class="token keyword keyword-ON">ON</span> Players<span class="token punctuation">.</span>country_id<span class="token operator">=</span>Country<span class="token punctuation">.</span>id
+<span class="token keyword keyword-UNION">UNION</span>
+<span class="token keyword keyword-SELECT">SELECT</span> Players<span class="token punctuation">.</span>nome <span class="token keyword keyword-AS">AS</span> nome_player<span class="token punctuation">,</span> country<span class="token punctuation">.</span>nome <span class="token keyword keyword-AS">AS</span> nome_country<span class="token punctuation">,</span> country<span class="token punctuation">.</span>id<span class="token punctuation">,</span> players<span class="token punctuation">.</span>country_id 
+<span class="token keyword keyword-FROM">FROM</span> Players <span class="token keyword keyword-LEFT">LEFT</span> <span class="token keyword keyword-JOIN">JOIN</span> Country
+<span class="token keyword keyword-ON">ON</span> Players<span class="token punctuation">.</span>country_id<span class="token operator">=</span>Country<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
+</code></pre><table>
+<thead>
+<tr>
+<th>nome_player</th>
+<th>nome_country</th>
+<th>id</th>
+<th>country_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ana</td>
+<td>Brasil</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Beto</td>
+<td>Brasil</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Dani</td>
+<td>Uruguai</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>Paraguai</td>
+<td>3</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>Chile</td>
+<td>4</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>Carla</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cross-join">CROSS JOIN </h3>
+<p>O <code>CROSS JOIN</code> cruza os dados das duas tabelas sem precisar de uma coluna em comum.</p>
+<p><strong>OBS:</strong> Muito cuidado ao usar este comando pois o resultado pode ser potencialmente impraticável. Uma tabela de 400 entradas com uma de 500 resultaria em uma de 400x500 entradas, que daria 2*10^5.</p>
+<h5 id="sintaxe-2">Sintaxe </h5>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> column_name<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+<span class="token keyword keyword-FROM">FROM</span> table1
+<span class="token keyword keyword-CROSS">CROSS</span> <span class="token keyword keyword-JOIN">JOIN</span> table2<span class="token punctuation">;</span>
+</code></pre><h6 id="exemplo-cross-join">Exemplo <code>CROSS JOIN</code> </h6>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> Players <span class="token keyword keyword-CROSS">CROSS</span> <span class="token keyword keyword-JOIN">JOIN</span> country<span class="token punctuation">;</span>
+</code></pre><h6 id="resultado-cross-join">Resultado <code>CROSS JOIN</code> </h6>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>nome</th>
+<th>country_id</th>
+<th>id</th>
+<th>nome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Ana</td>
+<td>1</td>
+<td>1</td>
+<td>Brasil</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Beto</td>
+<td>1</td>
+<td>1</td>
+<td>Brasil</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Carla</td>
+<td>5</td>
+<td>1</td>
+<td>Brasil</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Dani</td>
+<td>2</td>
+<td>1</td>
+<td>Brasil</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Ana</td>
+<td>1</td>
+<td>2</td>
+<td>Uruguai</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Beto</td>
+<td>1</td>
+<td>2</td>
+<td>Uruguai</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Carla</td>
+<td>5</td>
+<td>2</td>
+<td>Uruguai</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Dani</td>
+<td>2</td>
+<td>2</td>
+<td>Uruguai</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Ana</td>
+<td>1</td>
+<td>3</td>
+<td>Praguai</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Beto</td>
+<td>1</td>
+<td>3</td>
+<td>Praguai</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Carla</td>
+<td>5</td>
+<td>3</td>
+<td>Praguai</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Dani</td>
+<td>2</td>
+<td>3</td>
+<td>Praguai</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Ana</td>
+<td>1</td>
+<td>4</td>
+<td>Chile</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Beto</td>
+<td>1</td>
+<td>4</td>
+<td>Chile</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Carla</td>
+<td>5</td>
+<td>4</td>
+<td>Chile</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Dani</td>
+<td>2</td>
+<td>4</td>
+<td>Chile</td>
+</tr>
+</tbody>
+</table>
 
       </div>
       
