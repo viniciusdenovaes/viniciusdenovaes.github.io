@@ -1,0 +1,22 @@
+
+CREATE TABLE Country(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE Players(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(20) NOT NULL,
+    country_id INT REFERENCES Country(id)
+);
+
+
+INSERT INTO Country(nome) VALUES ('Brasil');
+INSERT INTO Country(nome) VALUES ('Uruguai');
+INSERT INTO Country(nome) VALUES ('Paraguai');
+INSERT INTO Country(nome) VALUES ('Chile');
+
+INSERT INTO Players(nome, country_id) VALUES ('Ana', 1);
+INSERT INTO Players(nome, country_id) VALUES ('Beto', 1);
+INSERT INTO Players(nome, country_id) VALUES ('Carla', 5);
+INSERT INTO Players(nome, country_id) VALUES ('Dani', 2);

@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>pbd</title>
+      <title>06.join</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="color-scheme" content="light dark">
@@ -34,22 +34,77 @@ html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-
     <body for="html-export">
       <div class="crossnote markdown-preview  ">
       
-<h1 id="linguagem-de-programação-de-banco-de-dados">Linguagem de Programação de Banco de Dados </h1>
-<h2 id="aulas">Aulas </h2>
+<h1 id="join">Join </h1>
+<p>O comando <code>JOIN</code> é usado para combinar dados de duas tabelas <strong>com uma coluna em comum</strong>.</p>
+<p>Este comando é essencial em um banco de dados relacional pois é o comando que relaciona duas (ou mais) tabelas para obtenção dos dados relacionados.</p>
+<h2 id="banco-de-dados">Banco de Dados </h2>
+<p>Considere as seguintes tabelas referentes a jogadores e países.</p>
+<h5 id="players">Players </h5>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>nome</th>
+<th>id_pais</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Ana</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Beto</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Carla</td>
+<td>5</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Dani</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h5 id="country">Country </h5>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>nome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Brasil</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Uruguai</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Paraguai</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Chile</td>
+</tr>
+</tbody>
+</table>
+<p>Este banco de dados está definido <a href="bdPaisesDDL.txt">aqui</a></p>
+<h2 id="tipos-de-join">Tipos de JOIN </h2>
+<p>O comando <code>JOIN</code> sempre retorna uma tabela como combinação de duas tabelas combinadas: todos os dados da primeira tabela cruzados com todos os dados da segunda tabela <strong>filtrados por uma coluna em comum</strong>. Por conta do filtro, o resultado tipicamente não será um produto cartesiano entre as duas tabelas, ou seja, não será cada linha da primeira combinado com cada linha da segunda, será uma porção bem menor.</p>
+<img src="innerJoin.png" style="background-color: white; display: block; margin-left: auto; margin-right: auto;" alt="My Image">
+<p>Aqui vamos tratar 6 tipos de <code>JOIN</code>:</p>
 <ul>
-<li><a href="pbd_files/aulas/01.select.html">Aula 01 - SELECT</a></li>
-<li><a href="pbd_files/aulas/02.where.html">Aula 02 - SELECT WHERE</a></li>
-<li><a href="pbd_files/aulas/03.orderby.html">Aula 03 - SELECT ORDER BY</a></li>
-<li><a href="pbd_files/aulas/04.operacoes.html">Aula 04 - Operações Entre Colunas</a></li>
-<li><a href="pbd_files/aulas/05.agregacao.html">Aula 05 - Funções de Agregação</a></li>
-<li><a href="pbd_files/aulas/06/06.join.html">Aula 06 - Join</a></li>
-</ul>
-<h2 id="labs">Labs </h2>
-<ul>
-<li><a href="pbd_files/labs/01/01-pizzariav01.html">Lab 01 DDL (Pizzaria)</a></li>
-<li><a href="pbd_files/labs/02/02-pizzariaV02.html">Lab 02 Pizzaria V02, com DATETIME)</a></li>
-<li><a href="pbd_files/labs/03/03-pizzaria.html">Lab03 SELECT</a></li>
-<li><a href="pbd_files/labs/04/04-agregacao.html">Lab04 Funções de Agregação</a></li>
+<li><code>INNER JOIN</code>: O mais comum de todos irá retornar todos os dados que tem um relacionamento</li>
 </ul>
 
       </div>

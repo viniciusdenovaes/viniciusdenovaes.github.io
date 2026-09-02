@@ -6,6 +6,7 @@
 - [Aula 03 - SELECT ORDER BY](pbd_files/aulas/03.orderby.html)
 - [Aula 04 - Operações Entre Colunas](pbd_files/aulas/04.operacoes.html)
 - [Aula 05 - Funções de Agregação](pbd_files/aulas/05.agregacao.html)
+- [Aula 06 - Join](pbd_files/aulas/06/06.join.html)
 
 ## Labs
 - [Lab 01 DDL (Pizzaria)](pbd_files/labs/01/01-pizzariav01.html)
