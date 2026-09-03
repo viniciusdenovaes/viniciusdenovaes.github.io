@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.3)  3 SEP 2026 18:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.3)  3 SEP 2026 18:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -336,7 +336,7 @@ L3 programming layer <2024-01-04>
 Here is how much of TeX's memory you used:
  5873 strings out of 474485
  97282 string characters out of 5742319
- 1934542 words of memory out of 5000000
+ 1937542 words of memory out of 5000000
  28107 multiletter control sequences out of 15000+600000
  566872 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -350,7 +350,7 @@ al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/vinicius/
 AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Use
 rs/vinicius/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12
 .pfb>
-Output written on lista01PI.pdf (4 pages, 86761 bytes).
+Output written on lista01PI.pdf (4 pages, 86859 bytes).
 PDF statistics:
  50 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
