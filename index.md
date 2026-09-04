@@ -16,12 +16,12 @@
    - [Programação de Banco de Dados](aulas/unip/20262/pbd.html)
 
 - Ano 3
-   <!-- - [IA](aulas/unip/20261/ia.html)
-   - [CG](aulas/unip/20261/cg.html)
-   - [LFA](aulas/unip/20261/lfa.html) -->
+   - [Aspéctos Teóricos da Computação](aulas/unip/20262/atc.html)
+   - [Cálculo Numérico](aulas/unip/20262/cn.html)
+   - [Processamento de Imagens](aulas/unip/20262/pi.html)
 ##### ADS
- - [Mobile com Flutter e Dart](aulas/unip/20262/mobile_ads.html)
- - [C# Aplicado](aulas/unip/20262/CsAplicado.html)
+- [Mobile com Flutter e Dart](aulas/unip/20262/mobile_ads.html)
+- [C# Aplicado](aulas/unip/20262/CsAplicado.html)
 
 ##### [Flex](https://github.com/viniciusdenovaes/viniciusdenovaes.github.io/tree/master/aulas/unip/flex/20262)
 <!-- - [ED](aulas/unip/flex/20262/ed/roteiros.html) -->
