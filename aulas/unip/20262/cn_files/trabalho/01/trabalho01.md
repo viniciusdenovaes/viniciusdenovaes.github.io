@@ -1,7 +1,9 @@
 # Trabalho 01 de CN: Regressão (Pelo Método dos Quadrados Mínimos)
 
 Para este trabalho você deve receber uma lista de duplas $(x_1, f(x_1)), (x_2, f(x_2)), ..., (x_n, f(x_n))$, com, no mínimo 4 pontos e encontrar uma função $\phi(x) = \alpha_2x^2 + \alpha_1x + \alpha_0$ que minimiza o somatório dos erros
-<center><img src="equation.png" width="190"></center>
+
+<img src="equation.png" width="190" style="background-color: white; display: block; margin-left: auto; margin-right: auto;" alt="My Image">
+
 
 ### Entradas
 
