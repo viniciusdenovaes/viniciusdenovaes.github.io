@@ -1,0 +1,20 @@
+%\incmargin{1em} 
+\linesnumbered \dontprintsemicolon
+\begin{algorithm}[ht!]{
+  \footnotesize
+  \caption{Insertion-Sort$(A)$\label{alg:insertion-sort}}
+
+  \Entrada{Um vetor $A$ de tamanho $n$.}
+  \Saida{O vetor $A$ ordenado.}
+  
+  \Para{$i=1$ \Ate $n$}{
+    $key = A[i]$\;
+    $j=i$\;
+    \Enqto{$j>0$ \textnormal{e} $A[j-1]>key$}{
+      $A[j] = A[j-1]$\;
+      $j--$\;
+    }
+    $A[j] = key$\;
+  }
+}
+\end{algorithm}
