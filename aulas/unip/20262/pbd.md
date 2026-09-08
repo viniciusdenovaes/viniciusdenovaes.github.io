@@ -13,4 +13,5 @@
 - [Lab 02 Pizzaria V02, com DATETIME)](pbd_files/labs/02/02-pizzariaV02.html)
 - [Lab03 SELECT](pbd_files/labs/03/03-pizzaria.html)
 - [Lab04 Funções de Agregação](pbd_files/labs/04/04-agregacao.html)
+- [Lab05 Treinando `Join` Com Duas Tabelas](pbd_files/labs/05/05-join.html)
 
