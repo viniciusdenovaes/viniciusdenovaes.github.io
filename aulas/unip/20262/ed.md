@@ -1,5 +1,19 @@
 # Estruturas de Dados
 
+<!-- 
+
+Bag limitada
+Pilha limitada
+Pilha com array
+Pilha com lista ligada
+Fila com lista ligada
+
+Lista com array e lista ligada
+Ordenação 
+Árvore 🌲🌳🎄
+
+ -->
+
 ## Labs
 #### Capacidade Limitada
 - [Lab00 Estrutura Bag sem Iterador](ed_files/labs/00-bag_sem_iterador.html)
