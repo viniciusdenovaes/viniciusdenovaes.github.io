@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>flutter</title>
+      <title>06.default_project</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -26,17 +26,193 @@
     <body for="html-export">
       <div class="crossnote markdown-preview  ">
       
-<h1 id="flutter">Flutter </h1>
-<h2 id="aulas">Aulas </h2>
-<ul>
-<li><a href="aulas/01/01.default_app.html">01 - Aplicativo Padrão</a></li>
-<li><a href="aulas/02/02.text.html">02 - Primeiro App do Zero: Text, MaterialApp, Scaffold e AppBar</a></li>
-<li><a href="aulas/03/03.images.html">03 - Imagens e Icons</a></li>
-<li><a href="aulas/04/04.colunas.html">04 - Layout de Linhas e Colunas</a></li>
-<li><a href="aulas/05/05.pages.html">05 - Criando Páginas Em Arquivos Separados e Navegação Entre Páginas</a></li>
-<li><a href="aulas/06/06.default_project.html">06 - Recriando o Projeto Inicial e as Diferenças Entre Stateless e Statefull Widgets</a></li>
-</ul>
+<h1 id="recriando-o-projeto-inicial-e-as-diferenças-entre-stateless-e-statefull-widgets">Recriando o Projeto Inicial e as Diferenças Entre Stateless e Statefull Widgets </h1>
+<p>Nesta aula vamos recriar o projeto inicial do contador de vezes que um botão foi pressionado.</p>
+<p>Na primeira parte iremos usar o mesmo <code>StatelessWidget</code> que usamos em todas as aulas. Veremos então que aparentemente o botão não consegue modificar a tela.</p>
+<p>Depois então vamos mudar de <code>StatelessWidget</code> para <code>StatefulWidget</code> e veremos que o botão funcionará.</p>
+<p>O motivo disso é que o <code>StatelessWidget</code> <strong>não atualiza a tela</strong> quando há uma mudança de algum estado da classe, enquanto que o <code>StatefulWidget</code> atualiza.</p>
+<h2 id="anatomia-de-um-statelesswidget">Anatomia de um <code>StatelessWidget</code> </h2>
+<p>Criando um projeto <strong>vazio</strong> podemos ver a seguinte estrutura</p>
+<h6 id="projeto-vazio-de-flutter">Projeto Vazio de Flutter </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
 
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MainApp</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token keyword keyword-super">super</span><span class="token punctuation">.</span>key<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token keyword keyword-const">const</span> <span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
+      home<span class="token punctuation">:</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
+        body<span class="token punctuation">:</span> <span class="token class-name">Center</span><span class="token punctuation">(</span>
+          child<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Hello World!'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p>A função do sistema <code>void runApp(Widget app)</code> recebe qualquer <code>Widget</code> e inicializa o projeto por este.</p>
+<p>Neste caso a classe <code>MainApp</code> é um <code>StatelessWidget</code>, mais especificamente<br>
+<code>abstract class StatelessWidget extends Widget</code>,<br>
+segundo a documentação é "uma widget que não depende da <strong>mudança</strong> de seu estado"<br>
+estado aqui pode ser entendido como os valores de seus atributos.</p>
+<p>O seu método abstrato é <code>Widget build(BuildContext context)</code> que deve retornar os elementos que compõe o <code>MainApp</code></p>
+<h2 id="recriando-aproximadamente-a-primeira-tela-sem-funcionamento">Recriando (<em>aproximadamente</em>) a Primeira Tela Sem Funcionamento </h2>
+<p>Vamos usar o <code>StatelessWidget</code> para recriar o exemplo inicial, mas perceba que <strong>por enquanto não conseguiremos fazer funcionar</strong> antes de migrar para o <code>StatefulWidget</code></p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MainApp</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token keyword keyword-super">super</span><span class="token punctuation">.</span>key<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
+      home<span class="token punctuation">:</span> <span class="token class-name">CounterApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">CounterApp</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span><span class="token punctuation">{</span>
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
+      appBar<span class="token punctuation">:</span> <span class="token class-name">AppBar</span><span class="token punctuation">(</span>
+        title<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Meu App Contador"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        backgroundColor<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>blueAccent<span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      body<span class="token punctuation">:</span> <span class="token class-name">Center</span><span class="token punctuation">(</span>
+        child<span class="token punctuation">:</span> <span class="token class-name">Column</span><span class="token punctuation">(</span>
+          mainAxisSize<span class="token punctuation">:</span> <span class="token class-name">MainAxisSize</span><span class="token punctuation">.</span>min<span class="token punctuation">,</span>
+          children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"O botão foi pressionado"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"0 vezes"</span></span><span class="token punctuation">,</span> style<span class="token punctuation">:</span> <span class="token class-name">TextStyle</span><span class="token punctuation">(</span>fontSize<span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      floatingActionButton<span class="token punctuation">:</span> <span class="token class-name">FloatingActionButton</span><span class="token punctuation">(</span>
+        onPressed<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token keyword keyword-null">null</span><span class="token punctuation">,</span> 
+        child<span class="token punctuation">:</span> <span class="token class-name">Icon</span><span class="token punctuation">(</span><span class="token class-name">Icons</span><span class="token punctuation">.</span>add<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p>Temos somente a aparência do aplicativo, agora vamos <strong>tentar</strong> fazer funcionar: criaremos uma variável (um atributo da classe <code>CounterApp</code>) que aumentará de valor sempre que o botão for pressionado.</p>
+<p>Perceba que o contador aumenta mas a tela não atualiza</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MainApp</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token keyword keyword-super">super</span><span class="token punctuation">.</span>key<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
+      home<span class="token punctuation">:</span> <span class="token class-name">CounterApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">CounterApp</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span><span class="token punctuation">{</span>
+  int count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-void">void</span> <span class="token function">increaseCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    count<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"agora o counter=</span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">count</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
+      appBar<span class="token punctuation">:</span> <span class="token class-name">AppBar</span><span class="token punctuation">(</span>
+        title<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Meu App Contador"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        backgroundColor<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>blueAccent<span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      body<span class="token punctuation">:</span> <span class="token class-name">Center</span><span class="token punctuation">(</span>
+        child<span class="token punctuation">:</span> <span class="token class-name">Column</span><span class="token punctuation">(</span>
+          mainAxisSize<span class="token punctuation">:</span> <span class="token class-name">MainAxisSize</span><span class="token punctuation">.</span>min<span class="token punctuation">,</span>
+          children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"O botão foi pressionado"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"</span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">count</span><span class="token punctuation">}</span></span><span class="token string"> vezes"</span></span><span class="token punctuation">,</span> style<span class="token punctuation">:</span> <span class="token class-name">TextStyle</span><span class="token punctuation">(</span>fontSize<span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      floatingActionButton<span class="token punctuation">:</span> <span class="token class-name">FloatingActionButton</span><span class="token punctuation">(</span>
+        onPressed<span class="token punctuation">:</span> increaseCounter<span class="token punctuation">,</span> 
+        child<span class="token punctuation">:</span> <span class="token class-name">Icon</span><span class="token punctuation">(</span><span class="token class-name">Icons</span><span class="token punctuation">.</span>add<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h2 id="anatomia-de-um-statefulwidget">Anatomia de um <code>StatefulWidget</code> </h2>
+<p>Para que a tela seja modificada precisamos que ela <strong>esteja em um <code>StatefulWidget</code></strong></p>
+<p>Segundo a documentação, um <code>StatefulWidget</code> é uma <code>Widget</code> que tem um estado mutável, ou seja, que pode ser modificado durante seu tempo de vida.</p>
+<p><code>abstract class StatefulWidget extends Widget</code></p>
+<p>Seu método abstrado é <code>State createState()</code> que retorna um <code>State</code>.<br>
+Precisamos que a parte que muda seja um <code>abstract class State&lt;T extends StatefulWidget&gt;</code></p>
+<p>Quando algum atributo for modificado, precisará estar dentro do método <code>setState(fn)</code>, da classe <code>State</code>, que recebe uma função.</p>
+<h2 id="fazendo-a-tela-funcionar">Fazendo a Tela Funcionar </h2>
+<p>Vamos converter o exemplo anterior para um <code>StatefulWidget</code></p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MainApp</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> <span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token keyword keyword-super">super</span><span class="token punctuation">.</span>key<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
+      home<span class="token punctuation">:</span> <span class="token class-name">CounterApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">CounterApp</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatefulWidget</span><span class="token punctuation">{</span>
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">State</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">StatefulWidget</span><span class="token punctuation">&gt;</span></span> <span class="token function">createState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token class-name">CounterAppState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">CounterAppState</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">State</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">CounterApp</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>
+  int count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-void">void</span> <span class="token function">increaseCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    count<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"agora o counter=</span><span class="token interpolation"><span class="token punctuation">$</span><span class="token expression">count</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
+      appBar<span class="token punctuation">:</span> <span class="token class-name">AppBar</span><span class="token punctuation">(</span>
+        title<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Meu App Contador"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        backgroundColor<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>blueAccent<span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      body<span class="token punctuation">:</span> <span class="token class-name">Center</span><span class="token punctuation">(</span>
+        child<span class="token punctuation">:</span> <span class="token class-name">Column</span><span class="token punctuation">(</span>
+          mainAxisSize<span class="token punctuation">:</span> <span class="token class-name">MainAxisSize</span><span class="token punctuation">.</span>min<span class="token punctuation">,</span>
+          children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"O botão foi pressionado"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"</span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">count</span><span class="token punctuation">}</span></span><span class="token string"> vezes"</span></span><span class="token punctuation">,</span> style<span class="token punctuation">:</span> <span class="token class-name">TextStyle</span><span class="token punctuation">(</span>fontSize<span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      floatingActionButton<span class="token punctuation">:</span> <span class="token class-name">FloatingActionButton</span><span class="token punctuation">(</span>
+        onPressed<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token function">setState</span><span class="token punctuation">(</span>increaseCounter<span class="token punctuation">)</span><span class="token punctuation">,</span> 
+        child<span class="token punctuation">:</span> <span class="token class-name">Icon</span><span class="token punctuation">(</span><span class="token class-name">Icons</span><span class="token punctuation">.</span>add<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+<span class="token punctuation">}</span>
+</code></pre>
       </div>
       
       
