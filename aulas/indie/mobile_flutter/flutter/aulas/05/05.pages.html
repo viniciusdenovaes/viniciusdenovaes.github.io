@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>flutter</title>
+      <title>05.pages</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -26,16 +26,301 @@
     <body for="html-export">
       <div class="crossnote markdown-preview  ">
       
-<h1 id="flutter">Flutter </h1>
-<h2 id="aulas">Aulas </h2>
-<ul>
-<li><a href="aulas/01/01.default_app.html">01 - Aplicativo Padrão</a></li>
-<li><a href="aulas/02/02.text.html">02 - Primeiro App do Zero: Text, MaterialApp, Scaffold e AppBar</a></li>
-<li><a href="aulas/03/03.images.html">03 - Imagens e Icons</a></li>
-<li><a href="aulas/04/04.colunas.html">04 - Layout de Linhas e Colunas</a></li>
-<li><a href="aulas/05/05.pages.html">05 - Criando Páginas Em Arquivos Separados e Navegação Entre Páginas</a></li>
-</ul>
+<h1 id="criando-páginas-em-arquivos-separados-e-navegação-entre-páginas">Criando Páginas Em Arquivos Separados e Navegação Entre Páginas </h1>
+<h2 id="fazendo-uma-página-separada">Fazendo Uma Página Separada </h2>
+<p>Para a modularidade do aplicativo é essencial que possamos estruturar as páginas independente de seus conteúdo.</p>
+<p>Nesta aula vamos separar a estrutura de uma página de seu conteúdo.</p>
+<p>Vamos também fabricar outras páginas com a <strong>mesma estrutura</strong> mas <strong>diferentes conteúdos</strong>.</p>
+<h3 id="fazendo-uma-tela-em-um-arquivo-só">Fazendo uma Tela em um arquivo só </h3>
+<p>Considere a seguinte página e separece a sua estrutura, à partir do <code>Scaffold</code> para uma classe em um arquivo separado.</p>
+<h6 id="maindart">main.dart </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
 
+<span class="token class-name">String</span> url <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Parque_Portugal_%2813%29.jpg/1280px-Parque_Portugal_%2813%29.jpg'</span></span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> placeName <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'Parque Portugal'</span></span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> placeText <span class="token operator">=</span> 
+<span class="token string-literal"><span class="token string">'''
+O Parque Portugal (conhecido popularmente como Lagoa do Taquaral ou Parque Taquaral) é um parque no bairro do Taquaral, na Região Leste de Campinas, no estado de São Paulo, no Brasil. É o parque mais famoso da cidade. Junto com o Lago do Café e a Praça Arautos da Paz, forma a mais importante zona de lazer da cidade. O parque recebe diariamente milhares de pessoas, entre moradores da cidade e turistas, principalmente aos finais de semana. No verão, o parque chega a receber 50 000 visitantes em uma semana
+Dentre as atrações do parque, destacam-se sua grande lagoa, uma réplica da Caravela Anunciação, uma linha de bonde elétrico e uma concha acústica, além de pista de saibro para caminhada, ciclovia, cartódromo, quadras de futebol, basquete, vôlei e hóquei e uma ampla área verde. Aos domingos, entre 6 e 13 horas, a avenida ao redor do parque é fechada para veículos, ficando destinada ao ciclismo e lazer.
+'''</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MainApp</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span><span class="token punctuation">{</span>
+  
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
+      home<span class="token punctuation">:</span> <span class="token class-name">HomePage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">HomePage</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span><span class="token punctuation">{</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
+      appBar<span class="token punctuation">:</span> <span class="token class-name">AppBar</span><span class="token punctuation">(</span>title<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span>placeName<span class="token punctuation">,</span> <span class="token punctuation">)</span><span class="token punctuation">,</span> backgroundColor<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>blueGrey<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      body<span class="token punctuation">:</span> <span class="token class-name">Column</span><span class="token punctuation">(</span>
+        children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token class-name">Image</span><span class="token punctuation">.</span><span class="token function">network</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> width<span class="token punctuation">:</span> double<span class="token punctuation">.</span>infinity<span class="token punctuation">,</span> height<span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span> fit<span class="token punctuation">:</span> <span class="token class-name">BoxFit</span><span class="token punctuation">.</span>cover<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+        <span class="token class-name">Text</span><span class="token punctuation">(</span>placeText<span class="token punctuation">)</span><span class="token punctuation">,</span> 
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="separando-a-tela-para-outro-arquivo">Separando a Tela Para Outro Arquivo </h3>
+<p>No próximo exemplo apenas separamos a tela para um arquivo diferente</p>
+<h6 id="maindart-1">main.dart </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:navigation_page_example/places_page.dart'</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MainApp</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span><span class="token punctuation">{</span>
+  
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
+      home<span class="token punctuation">:</span> <span class="token class-name">MyPage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h6 id="places_pagedart">places_page.dart </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
+
+<span class="token class-name">String</span> url <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Parque_Portugal_%2813%29.jpg/1280px-Parque_Portugal_%2813%29.jpg'</span></span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> placeName <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'Parque Portugal'</span></span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> placeText <span class="token operator">=</span> 
+<span class="token string-literal"><span class="token string">'''
+O Parque Portugal (conhecido popularmente como Lagoa do Taquaral ou Parque Taquaral) é um parque no bairro do Taquaral, na Região Leste de Campinas, no estado de São Paulo, no Brasil. É o parque mais famoso da cidade. Junto com o Lago do Café e a Praça Arautos da Paz, forma a mais importante zona de lazer da cidade. O parque recebe diariamente milhares de pessoas, entre moradores da cidade e turistas, principalmente aos finais de semana. No verão, o parque chega a receber 50 000 visitantes em uma semana
+Dentre as atrações do parque, destacam-se sua grande lagoa, uma réplica da Caravela Anunciação, uma linha de bonde elétrico e uma concha acústica, além de pista de saibro para caminhada, ciclovia, cartódromo, quadras de futebol, basquete, vôlei e hóquei e uma ampla área verde. Aos domingos, entre 6 e 13 horas, a avenida ao redor do parque é fechada para veículos, ficando destinada ao ciclismo e lazer.
+'''</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MyPage</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span><span class="token punctuation">{</span>
+  
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
+      appBar<span class="token punctuation">:</span> <span class="token class-name">AppBar</span><span class="token punctuation">(</span>title<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span>placeName<span class="token punctuation">,</span> <span class="token punctuation">)</span><span class="token punctuation">,</span> backgroundColor<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>blueGrey<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      body<span class="token punctuation">:</span> <span class="token class-name">Column</span><span class="token punctuation">(</span>
+        children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+          <span class="token class-name">Image</span><span class="token punctuation">.</span><span class="token function">network</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> width<span class="token punctuation">:</span> double<span class="token punctuation">.</span>infinity<span class="token punctuation">,</span> height<span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span> fit<span class="token punctuation">:</span> <span class="token class-name">BoxFit</span><span class="token punctuation">.</span>cover<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+          <span class="token class-name">Text</span><span class="token punctuation">(</span>placeText<span class="token punctuation">)</span><span class="token punctuation">,</span> 
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="modificando-a-página-para-receber-o-conteúdo">Modificando a Página para Receber o Conteúdo </h3>
+<p>Agora vamos separar a informação (conteúdo) da estrutura da página</p>
+<h6 id="maindart-2">main.dart </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:navigation_page_example/places_page.dart'</span></span><span class="token punctuation">;</span>
+
+<span class="token class-name">String</span> url <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Parque_Portugal_%2813%29.jpg/1280px-Parque_Portugal_%2813%29.jpg'</span></span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> placeName <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'Parque Portugal'</span></span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> placeText <span class="token operator">=</span> 
+<span class="token string-literal"><span class="token string">'''
+O Parque Portugal (conhecido popularmente como Lagoa do Taquaral ou Parque Taquaral) é um parque no bairro do Taquaral, na Região Leste de Campinas, no estado de São Paulo, no Brasil. É o parque mais famoso da cidade. Junto com o Lago do Café e a Praça Arautos da Paz, forma a mais importante zona de lazer da cidade. O parque recebe diariamente milhares de pessoas, entre moradores da cidade e turistas, principalmente aos finais de semana. No verão, o parque chega a receber 50 000 visitantes em uma semana
+Dentre as atrações do parque, destacam-se sua grande lagoa, uma réplica da Caravela Anunciação, uma linha de bonde elétrico e uma concha acústica, além de pista de saibro para caminhada, ciclovia, cartódromo, quadras de futebol, basquete, vôlei e hóquei e uma ampla área verde. Aos domingos, entre 6 e 13 horas, a avenida ao redor do parque é fechada para veículos, ficando destinada ao ciclismo e lazer.
+'''</span></span><span class="token punctuation">;</span>
+
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MainApp</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span><span class="token punctuation">{</span>
+  
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
+      home<span class="token punctuation">:</span> <span class="token class-name">MyPage</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> placeName<span class="token punctuation">,</span> placeText<span class="token punctuation">)</span><span class="token punctuation">,</span> 
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><h6 id="places_pagedart-1">places_page.dart </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MyPage</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span><span class="token punctuation">{</span>
+  
+  <span class="token class-name">String</span> url<span class="token punctuation">;</span>
+  <span class="token class-name">String</span> placeName<span class="token punctuation">;</span>
+  <span class="token class-name">String</span> placeText<span class="token punctuation">;</span>
+
+  <span class="token class-name">MyPage</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>url<span class="token punctuation">,</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>placeName<span class="token punctuation">,</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>placeText<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
+      appBar<span class="token punctuation">:</span> <span class="token class-name">AppBar</span><span class="token punctuation">(</span>title<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span>placeName<span class="token punctuation">,</span> <span class="token punctuation">)</span><span class="token punctuation">,</span> backgroundColor<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>blueGrey<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      body<span class="token punctuation">:</span> <span class="token class-name">Column</span><span class="token punctuation">(</span>
+        children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+          <span class="token class-name">Image</span><span class="token punctuation">.</span><span class="token function">network</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> width<span class="token punctuation">:</span> double<span class="token punctuation">.</span>infinity<span class="token punctuation">,</span> height<span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span> fit<span class="token punctuation">:</span> <span class="token class-name">BoxFit</span><span class="token punctuation">.</span>cover<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+          <span class="token class-name">Text</span><span class="token punctuation">(</span>placeText<span class="token punctuation">)</span><span class="token punctuation">,</span> 
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h2 id="navegando-entre-páginas">Navegando Entre Páginas </h2>
+<p>Agora que sabemos fazer uma página separada de seu conteúdo, podemos fazer múltiplas páginas iguais usando a mesma estrutura e mudando apenas o conteúdo.</p>
+<p>Mas primeiro vamos aprender como navegar entre páginas e vamos fazer um botão para que isto aconteça.</p>
+<p>Para o botão vamos usar o <code>ElevatedButton</code>: um botão com estética trisimensional, onde precisamos setar os atributos <code>onPressed</code> que recebe uma função, e <code>child</code> que recebe o label que o botão terá.</p>
+<p>Para fazer a navegação vamos usar o método <code>Navigator</code> do Flutter. Este método usa o <code>push</code> para carregar uma página por cima da página atual. O <code>push</code> recebe um <code>MaterialPageRoute</code> que contrói a página que queremos abrir.</p>
+<p>Veja o modelo copiado da <a href="https://docs.flutter.dev/ui/navigation">documentação oficial</a>:</p>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code>child<span class="token punctuation">:</span> <span class="token keyword keyword-const">const</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'Open second screen'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+onPressed<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">Navigator</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+    <span class="token class-name">MaterialPageRoute</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token keyword keyword-void">void</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span>
+      builder<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token keyword keyword-const">const</span> <span class="token class-name">SecondScreen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre><h3 id="no-seu-aplicativo">No seu aplicativo </h3>
+<p>Troque o main pelo seguinte main, onde fazemos um botão na tela inicial que irá criar e chamar a segunda página.</p>
+<h6 id="maindart-3">main.dart </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:navigation_page_example/places_page.dart'</span></span><span class="token punctuation">;</span>
+
+<span class="token class-name">String</span> url <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Parque_Portugal_%2813%29.jpg/1280px-Parque_Portugal_%2813%29.jpg'</span></span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> placeName <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'Parque Portugal'</span></span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> placeText <span class="token operator">=</span> 
+<span class="token string-literal"><span class="token string">'''
+O Parque Portugal (conhecido popularmente como Lagoa do Taquaral ou Parque Taquaral) é um parque no bairro do Taquaral, na Região Leste de Campinas, no estado de São Paulo, no Brasil. É o parque mais famoso da cidade. Junto com o Lago do Café e a Praça Arautos da Paz, forma a mais importante zona de lazer da cidade. O parque recebe diariamente milhares de pessoas, entre moradores da cidade e turistas, principalmente aos finais de semana. No verão, o parque chega a receber 50 000 visitantes em uma semana
+Dentre as atrações do parque, destacam-se sua grande lagoa, uma réplica da Caravela Anunciação, uma linha de bonde elétrico e uma concha acústica, além de pista de saibro para caminhada, ciclovia, cartódromo, quadras de futebol, basquete, vôlei e hóquei e uma ampla área verde. Aos domingos, entre 6 e 13 horas, a avenida ao redor do parque é fechada para veículos, ficando destinada ao ciclismo e lazer.
+'''</span></span><span class="token punctuation">;</span>
+
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MainApp</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span><span class="token punctuation">{</span>
+  
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
+      home<span class="token punctuation">:</span> <span class="token class-name">HomePage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">HomePage</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span><span class="token punctuation">{</span>
+  
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
+      body<span class="token punctuation">:</span> <span class="token class-name">Center</span><span class="token punctuation">(</span>
+        child<span class="token punctuation">:</span> <span class="token class-name">Column</span><span class="token punctuation">(</span>
+          mainAxisSize<span class="token punctuation">:</span> <span class="token class-name">MainAxisSize</span><span class="token punctuation">.</span>min<span class="token punctuation">,</span>
+          children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token class-name">ElevatedButton</span><span class="token punctuation">(</span>
+              onPressed<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token class-name">Navigator</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+                <span class="token class-name">MaterialPageRoute</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token keyword keyword-void">void</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span>
+                  builder<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token class-name">MyPage</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> placeName<span class="token punctuation">,</span> placeText<span class="token punctuation">)</span>
+                <span class="token punctuation">)</span>
+              <span class="token punctuation">)</span><span class="token punctuation">,</span> 
+              child<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span>placeName<span class="token punctuation">)</span><span class="token punctuation">,</span> 
+            <span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span> 
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><h2 id="fazendo-múltiplas-páginas">Fazendo Múltiplas Páginas </h2>
+<p>Como exercício faça mais duas páginas com mais dois botões onde o usuário consiga escolher qual página entrar à partir da inicial.</p>
+<h5 id="solução">Solução </h5>
+<h6 id="maindart-4">main.dart </h6>
+<pre data-role="codeBlock" data-info="dart" class="language-dart dart"><code><span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token string-literal"><span class="token string">'package:navigation_page_example/places_page.dart'</span></span><span class="token punctuation">;</span>
+
+<span class="token class-name">String</span> urlTaquaral <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Parque_Portugal_%2813%29.jpg/1280px-Parque_Portugal_%2813%29.jpg'</span></span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> placeNameTaquaral <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'Parque Portugal'</span></span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> placeTextTaquaral <span class="token operator">=</span> 
+<span class="token string-literal"><span class="token string">'''
+O Parque Portugal (conhecido popularmente como Lagoa do Taquaral ou Parque Taquaral) é um parque no bairro do Taquaral, na Região Leste de Campinas, no estado de São Paulo, no Brasil. É o parque mais famoso da cidade. Junto com o Lago do Café e a Praça Arautos da Paz, forma a mais importante zona de lazer da cidade. O parque recebe diariamente milhares de pessoas, entre moradores da cidade e turistas, principalmente aos finais de semana. No verão, o parque chega a receber 50 000 visitantes em uma semana
+Dentre as atrações do parque, destacam-se sua grande lagoa, uma réplica da Caravela Anunciação, uma linha de bonde elétrico e uma concha acústica, além de pista de saibro para caminhada, ciclovia, cartódromo, quadras de futebol, basquete, vôlei e hóquei e uma ampla área verde. Aos domingos, entre 6 e 13 horas, a avenida ao redor do parque é fechada para veículos, ficando destinada ao ciclismo e lazer.
+'''</span></span><span class="token punctuation">;</span>
+
+<span class="token class-name">MyPage</span> pageTaquaral <span class="token operator">=</span> <span class="token class-name">MyPage</span><span class="token punctuation">(</span>urlTaquaral<span class="token punctuation">,</span> placeNameTaquaral<span class="token punctuation">,</span> placeTextTaquaral<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token class-name">String</span> urlEstacao <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Esta%C3%A7%C3%A3o_ferrovi%C3%A1ria_-_centro_cultural_de_Campinas_001.jpg/1280px-Esta%C3%A7%C3%A3o_ferrovi%C3%A1ria_-_centro_cultural_de_Campinas_001.jpg'</span></span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> placeNameEstacao <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'Estação Campinas'</span></span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> placeTextEstacao <span class="token operator">=</span> 
+<span class="token string-literal"><span class="token string">'''
+Estação Cultura “Prefeito Antônio da Costa Santos”, também conhecida como Estação de Campinas, Estação Central de Campinas ou Estação da Fepasa, é a antiga estação ferroviária central da cidade de Campinas, no interior do estado de São Paulo, no Brasil e desde 2002, funciona como um centro cultural.
+Foi eleita, em 2007, uma das Sete Maravilhas da Cidade.
+'''</span></span><span class="token punctuation">;</span>
+
+<span class="token class-name">MyPage</span> pageEstacao <span class="token operator">=</span> <span class="token class-name">MyPage</span><span class="token punctuation">(</span>urlEstacao<span class="token punctuation">,</span> placeNameEstacao<span class="token punctuation">,</span> placeTextEstacao<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+
+<span class="token class-name">String</span> urlMercadao <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Atras_do_Mercad%C3%A3o_-_panoramio.jpg/1280px-Atras_do_Mercad%C3%A3o_-_panoramio.jpg'</span></span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> placeNameMercadao <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'Mercado Municipal'</span></span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> placeTextMercadao <span class="token operator">=</span> 
+<span class="token string-literal"><span class="token string">'''
+Mercado Municipal de Campinas está localizado no centro de Campinas, no interior do estado de São Paulo, no Brasil.
+'''</span></span><span class="token punctuation">;</span>
+
+<span class="token class-name">MyPage</span> pageMercadao <span class="token operator">=</span> <span class="token class-name">MyPage</span><span class="token punctuation">(</span>urlMercadao<span class="token punctuation">,</span> placeNameMercadao<span class="token punctuation">,</span> placeTextMercadao<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">runApp</span><span class="token punctuation">(</span><span class="token class-name">MainApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MainApp</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span><span class="token punctuation">{</span>
+  
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">MaterialApp</span><span class="token punctuation">(</span>
+      home<span class="token punctuation">:</span> <span class="token class-name">HomePage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">HomePage</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">StatelessWidget</span><span class="token punctuation">{</span>
+
+  <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MyPage</span><span class="token punctuation">&gt;</span></span> paginas <span class="token operator">=</span> <span class="token punctuation">[</span>pageTaquaral<span class="token punctuation">,</span> pageEstacao<span class="token punctuation">,</span> pageMercadao<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
+      body<span class="token punctuation">:</span> <span class="token class-name">Center</span><span class="token punctuation">(</span>
+        child<span class="token punctuation">:</span> <span class="token class-name">Column</span><span class="token punctuation">(</span>
+          mainAxisSize<span class="token punctuation">:</span> <span class="token class-name">MainAxisSize</span><span class="token punctuation">.</span>min<span class="token punctuation">,</span>
+          children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token keyword keyword-for">for</span><span class="token punctuation">(</span><span class="token class-name">MyPage</span> p <span class="token keyword keyword-in">in</span> paginas<span class="token punctuation">)</span>
+              <span class="token class-name">ElevatedButton</span><span class="token punctuation">(</span>
+                onPressed<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token class-name">Navigator</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+                  <span class="token class-name">MaterialPageRoute</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token keyword keyword-void">void</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span>
+                    builder<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token class-name">MyPage</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>url<span class="token punctuation">,</span> p<span class="token punctuation">.</span>placeName<span class="token punctuation">,</span> p<span class="token punctuation">.</span>placeText<span class="token punctuation">)</span>
+                  <span class="token punctuation">)</span>
+                <span class="token punctuation">)</span><span class="token punctuation">,</span> 
+                child<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>placeName<span class="token punctuation">)</span><span class="token punctuation">,</span> 
+              <span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span> 
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
       </div>
       
       

@@ -5,5 +5,6 @@
 - [02 - Primeiro App do Zero: Text, MaterialApp, Scaffold e AppBar](aulas/02/02.text.html)
 - [03 - Imagens e Icons](aulas/03/03.images.html)
 - [04 - Layout de Linhas e Colunas](aulas/04/04.colunas.html)
+- [05 - Criando Páginas Em Arquivos Separados e Navegação Entre Páginas](aulas/05/05.pages.html)
 
 
