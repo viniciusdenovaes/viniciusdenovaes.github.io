@@ -7,6 +7,7 @@
 - [Aula 04 - Operações Entre Colunas](pbd_files/aulas/04.operacoes.html)
 - [Aula 05 - Funções de Agregação](pbd_files/aulas/05.agregacao.html)
 - [Aula 06 - Join](pbd_files/aulas/06/06.join.html)
+- [Aula 07 - Views](pbd_files/aulas/07/07.views.html)
 
 ## Labs
 - [Lab 01 DDL (Pizzaria)](pbd_files/labs/01/01-pizzariav01.html)
@@ -14,6 +15,8 @@
 - [Lab03 SELECT](pbd_files/labs/03/03-pizzaria.html)
 - [Lab04 Funções de Agregação](pbd_files/labs/04/04-agregacao.html)
 - [Lab05 Treinando `Join` Com Duas Tabelas](pbd_files/labs/05/05-join.html)
+- [Lab06 Treinando `View` Para Relacionar Três Tabelas](pbd_files/labs/06/06-view.html)
+
 
 
 ## APS
