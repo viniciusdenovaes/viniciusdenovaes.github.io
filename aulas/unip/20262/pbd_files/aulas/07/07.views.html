@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>pbd</title>
+      <title>07.views</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -26,28 +26,195 @@
     <body for="html-export">
       <div class="crossnote markdown-preview  ">
       
-<h1 id="linguagem-de-programação-de-banco-de-dados">Linguagem de Programação de Banco de Dados </h1>
-<h2 id="aulas">Aulas </h2>
-<ul>
-<li><a href="pbd_files/aulas/01.select.html">Aula 01 - SELECT</a></li>
-<li><a href="pbd_files/aulas/02.where.html">Aula 02 - SELECT WHERE</a></li>
-<li><a href="pbd_files/aulas/03.orderby.html">Aula 03 - SELECT ORDER BY</a></li>
-<li><a href="pbd_files/aulas/04.operacoes.html">Aula 04 - Operações Entre Colunas</a></li>
-<li><a href="pbd_files/aulas/05.agregacao.html">Aula 05 - Funções de Agregação</a></li>
-<li><a href="pbd_files/aulas/06/06.join.html">Aula 06 - Join</a></li>
-</ul>
-<h2 id="labs">Labs </h2>
-<ul>
-<li><a href="pbd_files/labs/01/01-pizzariav01.html">Lab 01 DDL (Pizzaria)</a></li>
-<li><a href="pbd_files/labs/02/02-pizzariaV02.html">Lab 02 Pizzaria V02, com DATETIME)</a></li>
-<li><a href="pbd_files/labs/03/03-pizzaria.html">Lab03 SELECT</a></li>
-<li><a href="pbd_files/labs/04/04-agregacao.html">Lab04 Funções de Agregação</a></li>
-<li><a href="pbd_files/labs/05/05-join.html">Lab05 Treinando <code>Join</code> Com Duas Tabelas</a></li>
-</ul>
-<h2 id="aps">APS </h2>
-<ul>
-<li><a href="pbd_files/aps/2026_2_CC_SI_4.pdf">Documento da APS</a></li>
-</ul>
+<h1 id="viewsfonte">Views<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> </h1>
+<p>Uma <code>View</code> é uma tabela virtual baseada no resultado de uma <em>query</em>.<br>
+A <code>View</code> contém linhas e colunas assim como uma tabela, mas seus dados são virtuais, espelhando os dados da tabela real.<br>
+A vantagem de criar uma <code>View</code> é poder criar uma combinação de duas tabelas sem precisar criar uma cópia de uma tabela.</p>
+<h2 id="propriedades">Propriedades </h2>
+<p>Você pode fazer comandos <code>SQL</code> e aplicar funções à uma <code>View</code> como se ela fosse uma tabela real.</p>
+<p>Você pode inclusive modificar dados em uma <code>View</code> que estes dados serão modificados na tabela real, <strong>mas somente se</strong> essa <code>View</code> <strong>não</strong> é resultado de uma função de agregação com o comando <code>GROUPBY</code>.</p>
+<h2 id="sintaxe">Sintaxe </h2>
+<p>Uma <code>View</code> pode ser criada usando o comando <code>CREATE VIEW</code> para criar uma <code>View</code> ou <code>CREATE OR REPLACE VIEW</code> para criar ou substituir uma <code>View</code>.</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-CREATE">CREATE</span> <span class="token keyword keyword-VIEW">VIEW</span> view_name <span class="token keyword keyword-AS">AS</span>
+<span class="token keyword keyword-SELECT">SELECT</span> column1<span class="token punctuation">,</span> column2<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token keyword keyword-FROM">FROM</span> table_name
+<span class="token keyword keyword-WHERE">WHERE</span> condition<span class="token punctuation">;</span>
+</code></pre><pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-CREATE">CREATE</span> <span class="token operator">OR</span> <span class="token keyword keyword-REPLACE">REPLACE</span> <span class="token keyword keyword-VIEW">VIEW</span> view_name <span class="token keyword keyword-AS">AS</span>
+<span class="token keyword keyword-SELECT">SELECT</span> column1<span class="token punctuation">,</span> column2<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token keyword keyword-FROM">FROM</span> table_name
+<span class="token keyword keyword-WHERE">WHERE</span> condition<span class="token punctuation">;</span>
+</code></pre><h2 id="exemplos">Exemplos </h2>
+<p>Considere as seguintes tabelas</p>
+<h5 id="clientes">Clientes </h5>
+<table>
+<thead>
+<tr>
+<th>id_cliente</th>
+<th>nome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Ana</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Beto</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Carla</td>
+</tr>
+</tbody>
+</table>
+<h5 id="pizzas">Pizzas </h5>
+<table>
+<thead>
+<tr>
+<th>id_pizza</th>
+<th>nome</th>
+<th>preco</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Marguerita</td>
+<td>10</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Frango</td>
+<td>20</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Calabresa</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<h5 id="pedidos">Pedidos </h5>
+<table>
+<thead>
+<tr>
+<th>id_pedido</th>
+<th>id_cliente</th>
+<th>id_pizza</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Este banco de dados está definido <a href="ddl.txt">aqui</a></p>
+<h2 id="usando-view-em-uma-query">Usando View em Uma Query </h2>
+<p>O seguinte comando irá criar uma <code>View</code> com pizzas com o preço menor, ou igual, a 30.</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-CREATE">CREATE</span> <span class="token keyword keyword-VIEW">VIEW</span> pizzas_baratas_view <span class="token keyword keyword-AS">AS</span>
+<span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> Pizzas
+<span class="token keyword keyword-WHERE">WHERE</span> preco <span class="token operator">&lt;=</span> <span class="token number">30</span><span class="token punctuation">;</span>
+</code></pre><p>Fazendo a seguinte query podemos ver o resultado</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> pizzas_baratas_view<span class="token punctuation">;</span>
+</code></pre><h6 id="pizzas_baratas_view">pizzas_baratas_view </h6>
+<table>
+<thead>
+<tr>
+<th>id_pizza</th>
+<th>nome</th>
+<th>preco</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Marguerita</td>
+<td>10</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Frango</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<p>Vamos dobrar o preço de todas as pizzas da <code>View</code> <code>pizzas_baratas_view</code></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-UPDATE">UPDATE</span> pizzas_baratas_view 
+<span class="token keyword keyword-SET">SET</span> preco<span class="token operator">=</span><span class="token number">2</span><span class="token operator">*</span>preco<span class="token punctuation">;</span>
+</code></pre><p>Observe o resultado da <code>View</code></p>
+<h6 id="pizzas_baratas_view-1">pizzas_baratas_view </h6>
+<table>
+<thead>
+<tr>
+<th>id_pizza</th>
+<th>nome</th>
+<th>preco</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Marguerita</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<p>Vemos que o preço dobrou e a pizza de Frango ficou mais cara que 30, saindo da <code>View</code></p>
+<p>Observe o resultado da tabela real e veja que as pizzas que estavam na <code>View</code> dobraram de preço enquanto que as que não estavam não dobraram.</p>
+<h6 id="pizzas-1">Pizzas </h6>
+<table>
+<thead>
+<tr>
+<th>id_pizza</th>
+<th>nome</th>
+<th>preco</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Marguerita</td>
+<td>20</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Frango</td>
+<td>40</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Calabresa</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usando-view-com-join">Usando View Com Join </h2>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://www.w3schools.com/mysql/mysql_view.asp">https://www.w3schools.com/mysql/mysql_view.asp</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
 
       </div>
       

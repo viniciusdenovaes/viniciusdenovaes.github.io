@@ -15,3 +15,6 @@
 - [Lab04 Funções de Agregação](pbd_files/labs/04/04-agregacao.html)
 - [Lab05 Treinando `Join` Com Duas Tabelas](pbd_files/labs/05/05-join.html)
 
+
+## APS
+- [Documento da APS](pbd_files/aps/2026_2_CC_SI_4.pdf)

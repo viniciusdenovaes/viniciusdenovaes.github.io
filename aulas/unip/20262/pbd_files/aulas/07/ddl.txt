@@ -1,0 +1,40 @@
+USE bd_pizzaria_napoli;
+
+CREATE TABLE Clientes (
+    id_cliente INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Pizzas (
+    id_pizza INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    preco DECIMAL(10,2) NOT NULL
+);
+
+CREATE TABLE Pedidos (
+    id_pedido INT AUTO_INCREMENT PRIMARY KEY,
+    id_cliente INT NOT NULL,
+    id_pizza INT NOT NULL,
+    
+    CONSTRAINT FK_Cliente FOREIGN KEY (id_cliente) REFERENCES Clientes(id_cliente),
+    CONSTRAINT FK_Pizza FOREIGN KEY (id_pizza) REFERENCES Pizzas(id_pizza)
+);
+
+
+
+
+
+INSERT INTO Clientes(nome) VALUES ('Ana');
+INSERT INTO Clientes(nome) VALUES ('Beto');
+INSERT INTO Clientes(nome) VALUES ('Carla');
+
+INSERT INTO Pizzas(nome, preco) VALUES ('Marguerita', 10);
+INSERT INTO Pizzas(nome, preco) VALUES ('Frango', 20);
+INSERT INTO Pizzas(nome, preco) VALUES ('Calabresa', 40);
+
+INSERT INTO Pedidos(id_cliente, id_pizza) VALUES (1, 1);
+INSERT INTO Pedidos(id_cliente, id_pizza) VALUES (1, 1);
+INSERT INTO Pedidos(id_cliente, id_pizza) VALUES (1, 2);
+INSERT INTO Pedidos(id_cliente, id_pizza) VALUES (2, 1);
+
+
