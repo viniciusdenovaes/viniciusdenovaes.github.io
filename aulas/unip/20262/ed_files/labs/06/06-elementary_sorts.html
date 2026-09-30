@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>ed</title>
+      <title>06-elementary_sorts</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -26,27 +26,58 @@
     <body for="html-export">
       <div class="crossnote markdown-preview  ">
       
-<h1 id="estruturas-de-dados">Estruturas de Dados </h1>
-<h2 id="labs">Labs </h2>
-<h4 id="capacidade-limitada">Capacidade Limitada </h4>
+<h1 id="ordenações-elementares1">Ordenações Elementares<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> </h1>
+<p>Neste laboratório vamos tratar do problema de ordenar um array.</p>
+<p>(<strong>OBS</strong> perceba que não estamos ordenando listas e sim arrays)</p>
+<h2 id="selection-sort">Selection Sort </h2>
+<p>A estratégia do <em>selection sort</em> consiste em sempre selecionar o menor elemento do array e colocar na primeira posição.</p>
+<p>Após cada iteração <em>i</em> se supões que o array está ordenada até o a posição <em>i</em> e o algoritmo é aplicado para a parte do array maior que <em>i</em>.</p>
+<h3 id="o-algoritmo">O Algoritmo </h3>
+<p>Dado um array de tamanho <code>n</code>, repita os seguintes passos para <code>i</code> variando de <code>0</code> a <code>n-1</code></p>
 <ul>
-<li><a href="ed_files/labs/00-bag_sem_iterador.html">Lab00 Estrutura Bag sem Iterador</a></li>
-<li><a href="ed_files/labs/01-pilha_limitada.html">Lab01 Pilha Limitada</a></li>
+<li>Invariante: Se supõe que o array está ordenada até o elemento <code>i</code>, e que todos elementos de <code>i</code> até o final são maiores ou iguais a todos os elementos de <code>0</code> até <code>i</code>.</li>
+<li>Procure o menor elemento da parte de <code>i</code> até o final do array</li>
+<li>Troque o menor elemento encontrado com o elemento da posição <code>i</code></li>
+<li>Observe que agora a invariante se mantém para <code>i+1</code></li>
 </ul>
-<h4 id="capacidade-dinâmica">Capacidade Dinâmica </h4>
+<p>Observe a seguinte imagem representando a ordenação de um array de characteres.</p>
+<p><img src="selection_sort.png" alt="alt text"></p>
+<p>Observe que para cada <code>i</code> a invariante se mantém, e em cada passo ele procura o menor, e este menor troca de lugar com a posição do <code>i</code>.</p>
+<h4 id="características">Características </h4>
+<h5 id="complexidade">Complexidade </h5>
+<p>A complexidade é O(n²), mais especificamente, o algoritmo sempre faz ~n²/2 comparações.</p>
+<h5 id="o-tempo-independe-da-entrada">O tempo independe da entrada </h5>
+<p>Seja qual for a característica do array de entrada, se ela está quase ordenada ou não, o algoritmo sempre terá que procurar o menor elemento para cada <code>i</code>. Sempre fará a mesma quantidade de operações.</p>
+<h5 id="trocas-e-movimentação-é-mínima">Trocas e movimentação é mínima </h5>
+<p>Em cada iteração fazemos a troca entre dois elementos do array.<br>
+Em comparação com o próximo algoritmo, as trocas são mínimas.</p>
+<h2 id="insertion-sort">Insertion Sort </h2>
+<p>A estratégia do <em>insertion sort</em> consiste em supor que parte do array está ordenada, pegar o próximo elemento e inserir este elemento na posição correta da parte ordenada do array.<br>
+Imagine que você tem um deck ordenado de cartas e sempre que você recebe a próxima carta você coloca esta carta na posição correta, para que o deck permaneça ordenado.</p>
+<h3 id="o-algoritmo-1">O Algoritmo </h3>
+<p>Dado um array <code>A</code> de tamanho <code>n</code>, repita os seguintes passos para <code>i</code> variando de <code>0</code> a <code>n-1</code></p>
 <ul>
-<li><a href="ed_files/labs/02-pilha_capacidade_dinamica.html">Lab02 Pilha</a></li>
-<li><a href="ed_files/labs/03-fila.html">Lab03 Filas</a></li>
-<li><a href="ed_files/labs/04-listaArray.html">Lab04 Lista com Arrays</a></li>
+<li>Invariante: Se supõe que o array está ordenada até o elemento <code>i</code>, e que todos elementos de <code>i</code>.</li>
+<li>Pegue o próximo elemento da posição <code>i</code></li>
+<li>Seja <code>j</code> = <code>i</code></li>
+<li>Enquanto <code>A[j]&lt;A[j-1]</code> troque os elementos das posições <code>j</code> e <code>j-1</code></li>
 </ul>
-<h4 id="lista-ligada">Lista Ligada </h4>
-<ul>
-<li><a href="ed_files/labs/05-linkedList.html">Lab05 Lista Ligada</a></li>
-</ul>
-<h4 id="ordenações">Ordenações </h4>
-<ul>
-<li><a href="ed_files/labs/06/06-elementary_sorts.html">Lab05 Lista Ligada</a></li>
-</ul>
+<p>Observe a seguinte imagem representando a ordenação de um array de characteres.</p>
+<p><img src="insertion_sort.png" alt="alt text"></p>
+<p>Observe que para cada <code>i</code> a invariante se mantém, e em cada passo ele faz a operação do <code>ArrayList</code> de inserir o elemento na posição correta. Ou seja, ele translada todos elementos maiores que ele para a direita.</p>
+<h4 id="características-1">Características </h4>
+<h5 id="complexidade-1">Complexidade </h5>
+<p>A complexidade é O(n²), no pior caso imagine que o array está ordenada ao contrário e cada elemento <code>i</code> deve viajar (trocar com seu vizinho) até o início do array.</p>
+<h5 id="o-tempo-depende-da-entrada">O tempo depende da entrada </h5>
+<p>Um array que já está ordenada não precisará fazer <strong>nenhuma troca</strong>. Um array que está quase ordenada só precisará fazer quantidade de trocas da distância de sua posição até a posição correta. Tornando esté algoritmo muito rápido para os arrays quase ordenadas.</p>
+<p><img src="selection_vs_insertion.png" alt="alt text"></p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Esta aula (e imagens) foi retirada do capítulo 2.1 do livro Algorithms 4Ed por Robert Sedgewick e Kevin Wayne <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
 
       </div>
       
