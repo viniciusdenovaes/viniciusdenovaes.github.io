@@ -25,4 +25,4 @@ Ordenação
 #### Lista Ligada
 - [Lab05 Lista Ligada](ed_files/labs/05-linkedList.html)
 #### Ordenações
-- [Lab05 Lista Ligada](ed_files/labs/06/06-elementary_sorts.html)
+- [Lab06 Selection e Insertion Sort](ed_files/labs/06/06-elementary_sorts.html)
