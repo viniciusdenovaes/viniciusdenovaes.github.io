@@ -16,13 +16,14 @@ Ordenação
 
 ## Labs
 #### Capacidade Limitada
-- [Lab00 Estrutura Bag sem Iterador](ed_files/labs/00-bag_sem_iterador.html)
-- [Lab01 Pilha Limitada](ed_files/labs/01-pilha_limitada.html)
+- [Lab00 - Estrutura Bag sem Iterador](ed_files/labs/00-bag_sem_iterador.html)
+- [Lab01 - Pilha Limitada](ed_files/labs/01-pilha_limitada.html)
 #### Capacidade Dinâmica
-- [Lab02 Pilha](ed_files/labs/02-pilha_capacidade_dinamica.html)
-- [Lab03 Filas](ed_files/labs/03-fila.html)
-- [Lab04 Lista com Arrays](ed_files/labs/04-listaArray.html)
+- [Lab02 - Pilha](ed_files/labs/02-pilha_capacidade_dinamica.html)
+- [Lab03 - Filas](ed_files/labs/03-fila.html)
+- [Lab04 - Lista com Arrays](ed_files/labs/04-listaArray.html)
 #### Lista Ligada
-- [Lab05 Lista Ligada](ed_files/labs/05-linkedList.html)
+- [Lab05 - Lista Ligada](ed_files/labs/05-linkedList.html)
 #### Ordenações
-- [Lab06 Selection e Insertion Sort](ed_files/labs/06/06-elementary_sorts.html)
+- [Lab06 - Selection e Insertion Sort](ed_files/labs/06/06-elementary_sorts.html)
+- [Lab07 - Funções Recursivas](ed_files/labs/06/06-elementary_sorts.html)

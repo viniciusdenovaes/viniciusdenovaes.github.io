@@ -1,11 +1,11 @@
 # Linguagem de Programação de Banco de Dados
 
 ## Aulas
-- [Aula 01 - SELECT](pbd_files/aulas/01.select.html)
-- [Aula 02 - SELECT WHERE](pbd_files/aulas/02.where.html)
-- [Aula 03 - SELECT ORDER BY](pbd_files/aulas/03.orderby.html)
-- [Aula 04 - Operações Entre Colunas](pbd_files/aulas/04.operacoes.html)
-- [Aula 05 - Funções de Agregação](pbd_files/aulas/05.agregacao.html)
+- [Aula 01 - SELECT](pbd_files/aulas/01/01.select.html)
+- [Aula 02 - SELECT WHERE](pbd_files/aulas/02/02.where.html)
+- [Aula 03 - SELECT ORDER BY](pbd_files/aulas/03/03.orderby.html)
+- [Aula 04 - Operações Entre Colunas](pbd_files/aulas/04/04.operacoes.html)
+- [Aula 05 - Funções de Agregação](pbd_files/aulas/05/05.agregacao.html)
 - [Aula 06 - Join](pbd_files/aulas/06/06.join.html)
 - [Aula 07 - Views](pbd_files/aulas/07/07.views.html)
 
