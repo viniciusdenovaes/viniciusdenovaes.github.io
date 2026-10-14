@@ -8,6 +8,7 @@
 - [Aula 05 - Funções de Agregação](pbd_files/aulas/05/05.agregacao.html)
 - [Aula 06 - Join](pbd_files/aulas/06/06.join.html)
 - [Aula 07 - Views](pbd_files/aulas/07/07.views.html)
+- [Aula 08 - Propagando modificações de chave estrangeria com `ON CASCADE` ](pbd_files/aulas/08/08.cascade.html)
 
 ## Labs
 - [Lab 01 DDL (Pizzaria)](pbd_files/labs/01/01-pizzariav01.html)

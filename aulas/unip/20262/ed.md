@@ -26,4 +26,5 @@ Ordenação
 - [Lab05 - Lista Ligada](ed_files/labs/05-linkedList.html)
 #### Ordenações
 - [Lab06 - Selection e Insertion Sort](ed_files/labs/06/06-elementary_sorts.html)
-- [Lab07 - Funções Recursivas](ed_files/labs/06/06-elementary_sorts.html)
+#### Funções Recursivas
+- [Lab07 - Funções Recursivas](ed_files/labs/07/07.recursao.html)
