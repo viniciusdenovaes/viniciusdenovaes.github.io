@@ -9,5 +9,6 @@
 - [06 - Recriando o Projeto Inicial e as Diferenças Entre Stateless e Statefull Widgets](aulas/06/06.default_project.html)
 #### Elementos de Entrada
 - [07 - TextField](aulas/07/07.textfield.html)
+- [08 - CheckBox e Radio Buttons](aulas/08/08.check_and_radio.html)
 
 
