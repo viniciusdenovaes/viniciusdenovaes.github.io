@@ -1,0 +1,16 @@
+USE bd_pizzas;
+
+CREATE TABLE Pizzas (
+    id_pizza INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    preco DECIMAL(10,2) NOT NULL
+);
+
+INSERT INTO Pizzas(nome, preco) VALUES ('Marguerita', 10);
+INSERT INTO Pizzas(nome, preco) VALUES ('Frango', 20);
+INSERT INTO Pizzas(nome, preco) VALUES ('Frango com Requeijão', 25);
+INSERT INTO Pizzas(nome, preco) VALUES ('Mussarela', 30);
+INSERT INTO Pizzas(nome, preco) VALUES ('Calabresa', 40);
+INSERT INTO Pizzas(nome, preco) VALUES ('Lombo', 40);
+INSERT INTO Pizzas(nome, preco) VALUES ('Lombo com Abacaxi', 50);
+
