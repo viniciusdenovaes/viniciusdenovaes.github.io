@@ -10,7 +10,7 @@
 - [Aula 07 - Views](pbd_files/aulas/07/07.views.html)
 - [Aula 08 - Propagando modificações de chave estrangeria com `ON ... CASCADE` ](pbd_files/aulas/08/08.cascade.html)
 - [Aula 09 - Procedimentos](pbd_files/aulas/09/09.stored_procedures.html)
-<!-- - [Aula 10 - Triggers](pbd_files/aulas/10) -->
+- [Aula 10 - Triggers](pbd_files/aulas/10/10.trigger.html)
 <!-- - [Aula 11 - Funções](pbd_files/aulas/11) -->
 
 ## Labs

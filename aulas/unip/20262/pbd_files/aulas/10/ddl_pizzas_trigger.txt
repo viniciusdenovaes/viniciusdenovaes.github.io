@@ -1,0 +1,20 @@
+USE bd_pizzas_trigger;
+
+CREATE TABLE Pizzas (
+    id_pizza INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    preco DECIMAL(10,2) NOT NULL,
+    atualizada_em TIMESTAMP DEFAULT NOW()
+);
+
+INSERT INTO Pizzas(nome, preco) VALUES ('Marguerita', 10);
+INSERT INTO Pizzas(nome, preco) VALUES ('Frango', 20);
+INSERT INTO Pizzas(nome, preco) VALUES ('Calabresa', 40);
+
+CREATE TABLE Pizzas_deletadas (
+    id_pizza INT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    preco DECIMAL(10,2) NOT NULL,
+    deletada_em TIMESTAMP DEFAULT NOW()
+);
+
