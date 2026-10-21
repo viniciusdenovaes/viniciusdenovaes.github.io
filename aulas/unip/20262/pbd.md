@@ -9,8 +9,9 @@
 - [Aula 06 - Join](pbd_files/aulas/06/06.join.html)
 - [Aula 07 - Views](pbd_files/aulas/07/07.views.html)
 - [Aula 08 - Propagando modificações de chave estrangeria com `ON ... CASCADE` ](pbd_files/aulas/08/08.cascade.html)
-- [Aula 09 - Procedimentos e Triggers](pbd_files/aulas/09/09.stored_procedures.html)
-<!-- - [Aula 10 - Funções](pbd_files/aulas/10) -->
+- [Aula 09 - Procedimentos](pbd_files/aulas/09/09.stored_procedures.html)
+<!-- - [Aula 10 - Triggers](pbd_files/aulas/10) -->
+<!-- - [Aula 11 - Funções](pbd_files/aulas/11) -->
 
 ## Labs
 - [Lab 01 DDL (Pizzaria)](pbd_files/labs/01/01-pizzariav01.html)
