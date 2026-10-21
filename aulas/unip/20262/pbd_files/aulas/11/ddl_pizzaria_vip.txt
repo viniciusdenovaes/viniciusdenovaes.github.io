@@ -1,0 +1,58 @@
+USE bd_pizzaria_napoli_vip;
+
+CREATE TABLE Clientes (
+    id_cliente INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL, 
+    bairro VARCHAR(30) NOT NULL,
+    vip BOOLEAN DEFAULT 0
+);
+
+CREATE TABLE Pizzas (
+    id_pizza INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    preco DECIMAL(10,2) NOT NULL
+);
+
+CREATE TABLE Pedidos (
+    id_pedido INT AUTO_INCREMENT PRIMARY KEY,
+    id_cliente INT NOT NULL,
+    id_pizza INT NOT NULL,
+    
+    CONSTRAINT FK_Cliente FOREIGN KEY (id_cliente) REFERENCES Clientes(id_cliente),
+    CONSTRAINT FK_Pizza FOREIGN KEY (id_pizza) REFERENCES Pizzas(id_pizza)
+);
+
+
+
+
+
+INSERT INTO Clientes(nome, bairro) VALUES ('Ana', 'SWIFT');
+INSERT INTO Clientes(nome, bairro) VALUES ('Beto', 'CAMBUI');
+INSERT INTO Clientes(nome, bairro) VALUES ('Carla', 'SWIFT');
+
+INSERT INTO Pizzas(nome, preco) VALUES ('Marguerita', 10);
+INSERT INTO Pizzas(nome, preco) VALUES ('Frango', 20);
+INSERT INTO Pizzas(nome, preco) VALUES ('Calabresa', 40);
+
+INSERT INTO Pedidos(id_cliente, id_pizza) VALUES (1, 1);
+INSERT INTO Pedidos(id_cliente, id_pizza) VALUES (1, 1);
+INSERT INTO Pedidos(id_cliente, id_pizza) VALUES (1, 2);
+INSERT INTO Pedidos(id_cliente, id_pizza) VALUES (2, 1);
+
+UPDATE Clientes
+SET vip = 1
+WHERE id_cliente=1;
+
+CREATE VIEW pizzas_pedidas_view AS
+SELECT pedidos.id_pedido AS id_pedido, pedidos.id_cliente AS id_cliente, 
+pizzas.id_pizza AS id_pizza, pizzas.nome AS nome_pizza, pizzas.preco AS preco
+FROM pizzas JOIN pedidos
+ON pizzas.id_pizza=pedidos.id_pizza;
+
+CREATE VIEW pizzas_pedidas_clientes_view AS
+SELECT pizzas_pedidas_view.id_pedido, pizzas_pedidas_view.id_cliente, 
+pizzas_pedidas_view.id_pizza, pizzas_pedidas_view.nome_pizza, pizzas_pedidas_view.preco,
+clientes.nome as nome_cliente, clientes.bairro as bairro ,clientes.vip as vip
+FROM pizzas_pedidas_view JOIN clientes
+ON pizzas_pedidas_view.id_cliente=clientes.id_cliente;
+
